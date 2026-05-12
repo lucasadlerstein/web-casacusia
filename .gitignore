@@ -42,4 +42,4 @@ next-env.d.ts
 # Custom Ignores (Casacusia)
 cloudflared.exe
 /Fotos/
-"Identidad gráfica CASACUSIA_/"
+identidad-grafica-casacusia/
