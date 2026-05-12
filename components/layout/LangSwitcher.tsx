@@ -13,34 +13,24 @@ export function LangSwitcher({ className }: { className?: string }) {
   const router = useRouter();
   const [, startTransition] = useTransition();
 
+  const otherLocale = locales.find((l) => l !== locale);
+  if (!otherLocale) return null;
+
   return (
-    <div className={cn("inline-flex items-center gap-1 text-sm", className)} role="group" aria-label={t("languages")}>
-      {locales.map((loc) => {
-        const active = loc === locale;
-        return (
-          <button
-            key={loc}
-            type="button"
-            lang={loc}
-            aria-current={active ? "page" : undefined}
-            aria-label={localeLabels[loc]}
-            onClick={() => {
-              if (active) return;
-              startTransition(() => {
-                router.replace(pathname, { locale: loc });
-              });
-            }}
-            className={cn(
-              "h-8 px-3 rounded-full font-medium transition-colors",
-              active
-                ? "bg-ink text-white"
-                : "text-ink-soft hover:text-ink hover:bg-surface-tint"
-            )}
-          >
-            {loc.toUpperCase()}
-          </button>
-        );
-      })}
+    <div className={cn("inline-flex items-center", className)} role="group" aria-label={t("languages")}>
+      <button
+        type="button"
+        lang={otherLocale}
+        aria-label={localeLabels[otherLocale]}
+        onClick={() => {
+          startTransition(() => {
+            router.replace(pathname, { locale: otherLocale });
+          });
+        }}
+        className="h-8 px-3 rounded-full text-sm font-medium text-ink-soft hover:text-ink hover:bg-surface-tint transition-colors"
+      >
+        {otherLocale.toUpperCase()}
+      </button>
     </div>
   );
 }
