@@ -18,7 +18,7 @@ export function AllyGrid({ variant = "home" }: Props) {
   // Tier 2: Colaboraron con Casacusia
   const colaboradores = allAliados
     .filter((a) => !sponsorsSlugs.includes(a.slug))
-    .sort(() => Math.random() - 0.5);
+    .sort((a, b) => a.orden - b.orden);
 
   return (
     <Section background="default" ariaLabelledBy="ally-grid-title">

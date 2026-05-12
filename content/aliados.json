@@ -1,504 +1,383 @@
 [
     {
-        "slug":  "marval",
-        "nombre":  "Marval",
-        "logo":  "/aliados/marval-logo-black.png",
-        "web":  "https://www.marval.com/lang=es",
-        "sector":  "Servicios profesionales",
-        "tipoAlianza":  [
-                            "institucional",
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-                                "encuentros"
-                            ],
-        "impacto":  "AsesorÃ­a legal y acompaÃ±amiento institucional.",
-        "destacado":  true,
-        "orden":  7,
-        "desde":  "2025-01",
-        "activo":  true
+        "slug": "marval",
+        "nombre": "Marval",
+        "logo": "/aliados/marval-logo-black.png",
+        "web": "https://www.marval.com/lang=es",
+        "sector": "Servicios profesionales",
+        "tipoAlianza": ["institucional", "servicio"],
+        "proyectoApoyado": ["encuentros"],
+        "impacto": "Asesoría legal y acompañamiento institucional.",
+        "destacado": true,
+        "orden": 7,
+        "desde": "2025-01",
+        "activo": true
     },
     {
-        "slug":  "helen-diller-foundation",
-        "nombre":  "Helen Diller Foundation",
-        "logo":  "/aliados/helen-diller-foundation-e1753726299521-r9fogwlh344g0zwia7ts7m8u2xvvrr78ynyqk191c0.png",
+        "slug": "helen-diller-foundation",
+        "nombre": "Helen Diller Foundation",
+        "logo": "/aliados/helen-diller-foundation-e1753726299521-r9fogwlh344g0zwia7ts7m8u2xvvrr78ynyqk191c0.png",
         "web": "https://dillerfoundation.org/",
-        "sector":  "FundaciÃ³n",
-        "tipoAlianza":  [
-                            "financiera"
-                        ],
-        "proyectoApoyado":  [
-                                "podcast",
-                                "encuentros"
-                            ],
-        "impacto":  "Grant fundacional para sostener programas.",
-        "destacado":  true,
-        "orden":  1,
-        "desde":  "2025-01",
-        "activo":  true
+        "sector": "Fundación",
+        "tipoAlianza": ["financiera"],
+        "proyectoApoyado": ["podcast", "encuentros"],
+        "impacto": "Grant fundacional para sostener programas.",
+        "destacado": true,
+        "orden": 1,
+        "desde": "2025-01",
+        "activo": true
     },
     {
-        "slug":  "mercadopago",
-        "nombre":  "MercadoPago",
-        "logo":  "/aliados/mercadopago-min.png",
-        "web":  "https://mercadopago.com.ar",
-        "sector":  "Fintech",
-        "tipoAlianza":  [
-                            "producto",
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-                                "donaciones"
-                            ],
-        "impacto":  "Infraestructura de cobros y donaciones recurrentes.",
-        "destacado":  true,
-        "orden":  4,
-        "desde":  "2025-02",
-        "activo":  true
+        "slug": "mercadopago",
+        "nombre": "MercadoPago",
+        "logo": "/aliados/mercadopago-min.png",
+        "web": "https://mercadopago.com.ar",
+        "sector": "Fintech",
+        "tipoAlianza": ["producto", "servicio"],
+        "proyectoApoyado": ["donaciones"],
+        "impacto": "Infraestructura de cobros y donaciones recurrentes.",
+        "destacado": true,
+        "orden": 4,
+        "desde": "2025-02",
+        "activo": true
     },
     {
-        "slug":  "carrefour",
-        "nombre":  "Carrefour",
-        "logo":  "/aliados/carrefour-c.png",
-        "web":  "https://www.carrefour.com.ar",
-        "sector":  "Retail",
-        "tipoAlianza":  [
-                            "producto",
-                            "financiera"
-                        ],
-        "proyectoApoyado":  [
-                                "encuentros"
-                            ],
-        "impacto":  "Aporte para encuentros y visibilizaciÃ³n.",
-        "destacado":  true,
-        "orden":  4,
-        "desde":  "2025-03",
-        "activo":  true
+        "slug": "carrefour",
+        "nombre": "Carrefour",
+        "logo": "/aliados/carrefour-c.png",
+        "web": "https://www.carrefour.com.ar",
+        "sector": "Retail",
+        "tipoAlianza": ["producto", "financiera"],
+        "proyectoApoyado": ["encuentros"],
+        "impacto": "Aporte para encuentros y visibilización.",
+        "destacado": true,
+        "orden": 4,
+        "desde": "2025-03",
+        "activo": true
     },
     {
-        "slug":  "arcos-dorados",
-        "nombre":  "Arcos Dorados",
-        "logo":  "/aliados/arcos-dorados-min.png",
-        "sector":  "Retail",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-                                "encuentros"
-                            ],
-        "impacto":  "Catering para encuentros presenciales.",
-        "destacado":  true,
-        "orden":  5,
-        "desde":  "2025-03",
-        "activo":  true
+        "slug": "arcos-dorados",
+        "nombre": "Arcos Dorados",
+        "logo": "/aliados/arcos-dorados-min.png",
+        "sector": "Retail",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": ["encuentros"],
+        "impacto": "Catering para encuentros presenciales.",
+        "destacado": true,
+        "orden": 5,
+        "desde": "2025-03",
+        "activo": true
     },
     {
-        "slug":  "medel-latam",
-        "nombre":  "MEDEL Latam",
-        "logo":  "/aliados/MEDEL-min.png",
-        "sector":  "Salud",
-        "tipoAlianza":  [
-                            "institucional",
-                            "comunicacional"
-                        ],
-        "proyectoApoyado":  [
-                                "podcast"
-                            ],
-        "impacto":  "InformaciÃ³n tÃ©cnica sobre implantes cocleares.",
-        "destacado":  true,
-        "orden":  5,
-        "desde":  "2025-04",
-        "activo":  true
+        "slug": "medel-latam",
+        "nombre": "MEDEL Latam",
+        "logo": "/aliados/MEDEL-min.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional", "comunicacional"],
+        "proyectoApoyado": ["podcast"],
+        "impacto": "Información técnica sobre implantes cocleares.",
+        "destacado": true,
+        "orden": 5,
+        "desde": "2025-04",
+        "activo": true
     },
     {
-        "slug":  "tecnosalud",
-        "nombre":  "Tecnosalud",
-        "logo":  "/aliados/tecnosalud-min.png",
-        "sector":  "Salud",
-        "tipoAlianza":  [
-                            "institucional"
-                        ],
-        "proyectoApoyado":  [
-                                "encuentros"
-                            ],
-        "impacto":  "Alianza institucional en el sector salud.",
-        "destacado":  true,
-        "orden":  7,
-        "desde":  "2025-05",
-        "activo":  true
+        "slug": "tecnosalud",
+        "nombre": "Tecnosalud",
+        "logo": "/aliados/tecnosalud-min.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional"],
+        "proyectoApoyado": ["encuentros"],
+        "impacto": "Alianza institucional en el sector salud.",
+        "destacado": true,
+        "orden": 7,
+        "desde": "2025-05",
+        "activo": true
     },
     {
-        "slug":  "instituto-superior-otorrinolaringologia",
-        "nombre":  "Instituto Superior de OtorrinolaringologÃ­a",
-        "logo":  "/aliados/iso-min.png",
-        "sector":  "Salud",
-        "tipoAlianza":  [
-                            "institucional"
-                        ],
-        "proyectoApoyado":  [
-                                "charlas-corporativas"
-                            ],
-        "impacto":  "CapacitaciÃ³n y referencias profesionales.",
-        "destacado":  false,
-        "orden":  8,
-        "desde":  "2025-02",
-        "activo":  true
+        "slug": "instituto-superior-otorrinolaringologia",
+        "nombre": "Instituto Superior de Otorrinolaringología",
+        "logo": "/aliados/iso-min.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional"],
+        "proyectoApoyado": ["charlas-corporativas"],
+        "impacto": "Capacitación y referencias profesionales.",
+        "destacado": false,
+        "orden": 8,
+        "desde": "2025-02",
+        "activo": true
     },
     {
-        "slug":  "doctored",
-        "nombre":  "DoctoRed",
-        "logo":  "/aliados/doctored.png",
-        "sector":  "Salud",
-        "tipoAlianza":  [
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Servicios digitales de salud.",
-        "destacado":  false,
-        "orden":  9,
-        "desde":  "2025-03",
-        "activo":  true
+        "slug": "doctored",
+        "nombre": "DoctoRed",
+        "logo": "/aliados/doctored.png",
+        "sector": "Salud",
+        "tipoAlianza": ["servicio"],
+        "proyectoApoyado": [],
+        "impacto": "Servicios digitales de salud.",
+        "destacado": false,
+        "orden": 9,
+        "desde": "2025-03",
+        "activo": true
     },
     {
-        "slug":  "fime-bastidores",
-        "nombre":  "FIME Bastidores",
-        "logo":  "/aliados/fime-bastidores.avif",
-        "sector":  "Industria",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Materiales y logÃ­stica.",
-        "destacado":  false,
-        "orden":  10,
-        "desde":  "2025-03",
-        "activo":  true
+        "slug": "fime-bastidores",
+        "nombre": "FIME Bastidores",
+        "logo": "/aliados/fime-bastidores.avif",
+        "sector": "Industria",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": [],
+        "impacto": "Materiales y logística.",
+        "destacado": false,
+        "orden": 10,
+        "desde": "2025-03",
+        "activo": true
     },
     {
-        "slug":  "ong-las-ilusiones",
-        "nombre":  "ONG Las Ilusiones",
-        "logo":  "/images/aliados/placeholder.svg",
-        "sector":  "FundaciÃ³n",
-        "tipoAlianza":  [
-                            "institucional"
-                        ],
-        "proyectoApoyado":  [
-                                "encuentros"
-                            ],
-        "impacto":  "Alianza entre organizaciones del tercer sector.",
-        "destacado":  false,
-        "orden":  11,
-        "desde":  "2025-04",
-        "activo":  true
+        "slug": "ong-las-ilusiones",
+        "nombre": "ONG Las Ilusiones",
+        "logo": "/images/aliados/placeholder.svg",
+        "sector": "Fundación",
+        "tipoAlianza": ["institucional"],
+        "proyectoApoyado": ["encuentros"],
+        "impacto": "Alianza entre organizaciones del tercer sector.",
+        "destacado": false,
+        "orden": 11,
+        "desde": "2025-04",
+        "activo": true
     },
     {
-        "slug":  "parque-de-innovacion",
-        "nombre":  "Parque de InnovaciÃ³n",
-        "logo":  "/aliados/parque-innovacion.jpg",
-        "sector":  "Institucional",
-        "tipoAlianza":  [
-                            "institucional"
-                        ],
-        "proyectoApoyado":  [
-                                "charlas-corporativas"
-                            ],
-        "impacto":  "Espacio para actividades y charlas.",
-        "destacado":  true,
-        "orden":  2,
-        "desde":  "2025-05",
-        "activo":  true
+        "slug": "parque-de-innovacion",
+        "nombre": "Parque de Innovación",
+        "logo": "/aliados/parque-innovacion.jpg",
+        "sector": "Institucional",
+        "tipoAlianza": ["institucional"],
+        "proyectoApoyado": ["charlas-corporativas"],
+        "impacto": "Espacio para actividades y charlas.",
+        "destacado": true,
+        "orden": 2,
+        "desde": "2025-05",
+        "activo": true
     },
     {
-        "slug":  "perfect-print",
-        "nombre":  "Perfect Print",
-        "logo":  "/aliados/perfect-print.jpg",
-        "sector":  "Servicios",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-                                "encuentros"
-                            ],
-        "impacto":  "ImpresiÃ³n de materiales para encuentros.",
-        "destacado":  false,
-        "orden":  13,
-        "desde":  "2025-03",
-        "activo":  true
+        "slug": "perfect-print",
+        "nombre": "Perfect Print",
+        "logo": "/aliados/perfect-print.jpg",
+        "sector": "Servicios",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": ["encuentros"],
+        "impacto": "Impresión de materiales para encuentros.",
+        "destacado": false,
+        "orden": 13,
+        "desde": "2025-03",
+        "activo": true
     },
     {
-        "slug":  "psa",
-        "nombre":  "PSA",
-        "logo":  "/images/aliados/placeholder.svg",
-        "sector":  "Industria",
-        "tipoAlianza":  [
-                            "financiera"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Aporte financiero.",
-        "destacado":  false,
-        "orden":  14,
-        "desde":  "2025-04",
-        "activo":  true
+        "slug": "psa",
+        "nombre": "PSA",
+        "logo": "/images/aliados/placeholder.svg",
+        "sector": "Industria",
+        "tipoAlianza": ["financiera"],
+        "proyectoApoyado": [],
+        "impacto": "Aporte financiero.",
+        "destacado": false,
+        "orden": 14,
+        "desde": "2025-04",
+        "activo": true
     },
     {
-        "slug":  "via-cotone",
-        "nombre":  "Via Cotone",
-        "logo":  "/aliados/via-cotone.jpg",
-        "sector":  "Retail",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Producto para campaÃ±as.",
-        "destacado":  false,
-        "orden":  15,
-        "desde":  "2025-06",
-        "activo":  true
+        "slug": "via-cotone",
+        "nombre": "Via Cotone",
+        "logo": "/aliados/via-cotone.jpg",
+        "sector": "Retail",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": [],
+        "impacto": "Producto para campañas.",
+        "destacado": false,
+        "orden": 15,
+        "desde": "2025-06",
+        "activo": true
     },
     {
-        "slug":  "zafran",
-        "nombre":  "Zafran",
-        "logo":  "/images/aliados/placeholder.svg",
-        "sector":  "Servicios",
-        "tipoAlianza":  [
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Servicios profesionales pro-bono.",
-        "destacado":  false,
-        "orden":  16,
-        "desde":  "2025-06",
-        "activo":  true
+        "slug": "zafran",
+        "nombre": "Zafran",
+        "logo": "/images/aliados/placeholder.svg",
+        "sector": "Servicios",
+        "tipoAlianza": ["servicio"],
+        "proyectoApoyado": [],
+        "impacto": "Servicios profesionales pro-bono.",
+        "destacado": false,
+        "orden": 16,
+        "desde": "2025-06",
+        "activo": true
     },
     {
-        "slug":  "modo",
-        "nombre":  "MODO",
-        "logo":  "/aliados/modo-min.png",
-        "sector":  "Fintech",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-                                "donaciones"
-                            ],
-        "impacto":  "Infraestructura de pagos y donaciones.",
-        "destacado":  true,
-        "orden":  3,
-        "desde":  "2025-05",
-        "activo":  true
+        "slug": "modo",
+        "nombre": "MODO",
+        "logo": "/aliados/modo-min.png",
+        "sector": "Fintech",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": ["donaciones"],
+        "impacto": "Infraestructura de pagos y donaciones.",
+        "destacado": true,
+        "orden": 3,
+        "desde": "2025-05",
+        "activo": true
     },
     {
-        "slug":  "pax-assistance",
-        "nombre":  "Pax Assistance",
-        "logo":  "/aliados/paxassistance-min.png",
-        "sector":  "Servicios",
-        "tipoAlianza":  [
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Asistencia mÃ©dica y de viaje.",
-        "destacado":  false,
-        "orden":  18,
-        "desde":  "2025-05",
-        "activo":  true
+        "slug": "pax-assistance",
+        "nombre": "Pax Assistance",
+        "logo": "/aliados/paxassistance-min.png",
+        "sector": "Servicios",
+        "tipoAlianza": ["servicio"],
+        "proyectoApoyado": [],
+        "impacto": "Asistencia médica y de viaje.",
+        "destacado": false,
+        "orden": 18,
+        "desde": "2025-05",
+        "activo": true
     },
     {
-        "slug":  "infinidad",
-        "nombre":  "Infinidad",
-        "logo":  "/aliados/infinidad-min-scaled.png",
-        "sector":  "Servicios",
-        "tipoAlianza":  [
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Servicios creativos.",
-        "destacado":  false,
-        "orden":  19,
-        "desde":  "2025-06",
-        "activo":  true
+        "slug": "infinidad",
+        "nombre": "Infinidad",
+        "logo": "/aliados/infinidad-min-scaled.png",
+        "sector": "Servicios",
+        "tipoAlianza": ["servicio"],
+        "proyectoApoyado": [],
+        "impacto": "Servicios creativos.",
+        "destacado": false,
+        "orden": 19,
+        "desde": "2025-06",
+        "activo": true
     },
     {
-        "slug":  "amplitone-pediatrico",
-        "nombre":  "Amplitone PediÃ¡trico",
-        "logo":  "/aliados/Amplitone_Pediatrico_sinBorde-min.png",
-        "sector":  "Salud",
-        "tipoAlianza":  [
-                            "institucional"
-                        ],
-        "proyectoApoyado":  [
-                                "red-padres-madres"
-                            ],
-        "impacto":  "Especialistas en audiologÃ­a pediÃ¡trica.",
-        "destacado":  true,
-        "orden":  6,
-        "desde":  "2025-04",
-        "activo":  true
+        "slug": "amplitone-pediatrico",
+        "nombre": "Amplitone Pediátrico",
+        "logo": "/aliados/Amplitone_Pediatrico_sinBorde-min.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional"],
+        "proyectoApoyado": ["red-padres-madres"],
+        "impacto": "Especialistas en audiología pediátrica.",
+        "destacado": true,
+        "orden": 6,
+        "desde": "2025-04",
+        "activo": true
     },
     {
-        "slug":  "calm-es-simple",
-        "nombre":  "CALM es simple",
-        "logo":  "/aliados/calm-min.png",
-        "sector":  "Servicios",
-        "tipoAlianza":  [
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "AcompaÃ±amiento de bienestar.",
-        "destacado":  false,
-        "orden":  21,
-        "desde":  "2025-06",
-        "activo":  true
+        "slug": "calm-es-simple",
+        "nombre": "CALM es simple",
+        "logo": "/aliados/calm-min.png",
+        "sector": "Servicios",
+        "tipoAlianza": ["servicio"],
+        "proyectoApoyado": [],
+        "impacto": "Acompañamiento de bienestar.",
+        "destacado": false,
+        "orden": 21,
+        "desde": "2025-06",
+        "activo": true
     },
     {
-        "slug":  "pinturas-eterna",
-        "nombre":  "Pinturas Eterna",
-        "logo":  "/aliados/eterna-min.png",
-        "sector":  "Industria",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "DonaciÃ³n de productos para espacios.",
-        "destacado":  false,
-        "orden":  22,
-        "desde":  "2025-06",
-        "activo":  true
+        "slug": "pinturas-eterna",
+        "nombre": "Pinturas Eterna",
+        "logo": "/aliados/eterna-min.png",
+        "sector": "Industria",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": [],
+        "impacto": "Donación de productos para espacios.",
+        "destacado": false,
+        "orden": 22,
+        "desde": "2025-06",
+        "activo": true
     },
     {
-        "slug":  "mimo-y-co",
-        "nombre":  "Mimo y Co",
-        "logo":  "/aliados/mimo-min.png",
-        "sector":  "Retail",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-                                "red-padres-madres"
-                            ],
-        "impacto":  "Indumentaria infantil para campaÃ±as.",
-        "destacado":  false,
-        "orden":  23,
-        "desde":  "2025-07",
-        "activo":  true
+        "slug": "mimo-y-co",
+        "nombre": "Mimo y Co",
+        "logo": "/aliados/mimo-min.png",
+        "sector": "Retail",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": ["red-padres-madres"],
+        "impacto": "Indumentaria infantil para campañas.",
+        "destacado": false,
+        "orden": 23,
+        "desde": "2025-07",
+        "activo": true
     },
     {
-        "slug":  "topper",
-        "nombre":  "Topper",
-        "logo":  "/aliados/topper-min.png",
-        "sector":  "Retail",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Indumentaria deportiva.",
-        "destacado":  false,
-        "orden":  24,
-        "desde":  "2025-07",
-        "activo":  true
+        "slug": "topper",
+        "nombre": "Topper",
+        "logo": "/aliados/topper-min.png",
+        "sector": "Retail",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": [],
+        "impacto": "Indumentaria deportiva.",
+        "destacado": false,
+        "orden": 24,
+        "desde": "2025-07",
+        "activo": true
     },
     {
-        "slug":  "filgo",
-        "nombre":  "Filgo",
-        "logo":  "/aliados/filgo.png",
-        "sector":  "Servicios",
-        "tipoAlianza":  [
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Servicios profesionales.",
-        "destacado":  false,
-        "orden":  25,
-        "desde":  "2025-07",
-        "activo":  true
+        "slug": "filgo",
+        "nombre": "Filgo",
+        "logo": "/aliados/filgo.png",
+        "sector": "Servicios",
+        "tipoAlianza": ["servicio"],
+        "proyectoApoyado": [],
+        "impacto": "Servicios profesionales.",
+        "destacado": false,
+        "orden": 25,
+        "desde": "2025-07",
+        "activo": true
     },
     {
-        "slug":  "cabrales",
-        "nombre":  "Cabrales",
-        "logo":  "/aliados/cabrales-min.png",
-        "sector":  "Retail",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-                                "encuentros"
-                            ],
-        "impacto":  "Catering cafÃ© para encuentros.",
-        "destacado":  false,
-        "orden":  26,
-        "desde":  "2025-07",
-        "activo":  true
+        "slug": "cabrales",
+        "nombre": "Cabrales",
+        "logo": "/aliados/cabrales-min.png",
+        "sector": "Retail",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": ["encuentros"],
+        "impacto": "Catering café para encuentros.",
+        "destacado": false,
+        "orden": 26,
+        "desde": "2025-07",
+        "activo": true
     },
     {
-        "slug":  "pam-argentina",
-        "nombre":  "PAM Argentina",
-        "logo":  "/aliados/pam-min.png",
-        "sector":  "Servicios",
-        "tipoAlianza":  [
-                            "servicio"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Alianza profesional.",
-        "destacado":  false,
-        "orden":  27,
-        "desde":  "2025-08",
-        "activo":  true
+        "slug": "pam-argentina",
+        "nombre": "PAM Argentina",
+        "logo": "/aliados/pam-min.png",
+        "sector": "Servicios",
+        "tipoAlianza": ["servicio"],
+        "proyectoApoyado": [],
+        "impacto": "Alianza profesional.",
+        "destacado": false,
+        "orden": 27,
+        "desde": "2025-08",
+        "activo": true
     },
     {
-        "slug":  "a20-indumentaria",
-        "nombre":  "A20 Indumentaria",
-        "logo":  "/aliados/a20indumentaria-min.png",
-        "sector":  "Retail",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Remeras para voluntariado.",
-        "destacado":  false,
-        "orden":  28,
-        "desde":  "2025-08",
-        "activo":  true
+        "slug": "a20-indumentaria",
+        "nombre": "A20 Indumentaria",
+        "logo": "/aliados/a20indumentaria-min.png",
+        "sector": "Retail",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": [],
+        "impacto": "Remeras para voluntariado.",
+        "destacado": false,
+        "orden": 28,
+        "desde": "2025-08",
+        "activo": true
     },
     {
-        "slug":  "basani",
-        "nombre":  "Basani",
-        "logo":  "/aliados/basani-min.png",
-        "sector":  "Industria",
-        "tipoAlianza":  [
-                            "producto"
-                        ],
-        "proyectoApoyado":  [
-
-                            ],
-        "impacto":  "Producto donado.",
-        "destacado":  false,
-        "orden":  29,
-        "desde":  "2025-09",
-        "activo":  true
+        "slug": "basani",
+        "nombre": "Basani",
+        "logo": "/aliados/basani-min.png",
+        "sector": "Industria",
+        "tipoAlianza": ["producto"],
+        "proyectoApoyado": [],
+        "impacto": "Producto donado.",
+        "destacado": false,
+        "orden": 29,
+        "desde": "2025-09",
+        "activo": true
     }
 ]

@@ -9,7 +9,6 @@ import "../globals.css";
 import { locales, type Locale } from "@/lib/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { LumaBanner } from "@/components/sections/LumaBanner";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 
 const inter = Inter({
@@ -89,7 +88,6 @@ export default async function LocaleLayout({
             {children}
           </main>
           <Footer />
-          <LumaBanner />
         </NextIntlClientProvider>
         <OrganizationSchema />
       </body>

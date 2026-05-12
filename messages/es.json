@@ -27,7 +27,7 @@
     "title": "CASACUSIA · Trabajamos para las personas, no para los oídos",
     "description": "Fundación dedicada a acompañar a personas con pérdida auditiva y sus familias. Encuentros, podcast, red de padres y más.",
     "hero": {
-      "eyebrow": "Fundación argentina · desde 2025",
+      "eyebrow": "Comunidad de personas con hipoacusia",
       "title": "No estás solo.",
       "titleLine2": "1 de cada 20 personas tiene hipoacusia.",
       "subtitle": "CASACUSIA es una ONG que acompaña a personas con hipoacusia y a sus familias para que nadie transite la pérdida auditiva en soledad. Generamos comunidad, herramientas y una red que crece todos los días.",
@@ -142,8 +142,8 @@
     }
   },
     "aliados": {
-      "title": "Aliados · Las empresas que hacen posible CASACUSIA",
-      "description": "29 aliados institucionales que apoyan a CASACUSIA. Conocé la historia detrás de cada alianza.",
+      "title": "Aliados · Empresas que hacen posible CASACUSIA",
+      "description": "Más de 29 aliados institucionales apoyan a CASACUSIA con productos, servicios y recursos. Conocé la historia detrás de cada alianza y su impacto.",
       "hero": {
         "eyebrow": "Aliados",
         "title": "Nos apoyan y nos ayudan a crecer",
@@ -186,7 +186,7 @@
       }
     },
     "nosotros": {
-      "title": "Nosotros · Qué es la hipoacusia y por qué existe CASACUSIA",
+      "title": "Nosotros · Qué es CASACUSIA y por qué existe",
       "description": "La hipoacusia es una discapacidad invisible que afecta a 1 de cada 20 personas. Conocé la historia, misión y valores de la Fundación CASACUSIA.",
       "hero": {
         "eyebrow": "Sobre CASACUSIA",
@@ -294,11 +294,11 @@
       },
     "historia": {
       "title": "Historia · Cómo nació CASACUSIA",
-      "description": "Desde la experiencia personal de Lucas hasta la Fundación en enero 2025. El recorrido de CASACUSIA."
+      "description": "Desde la experiencia personal de Lucas Adlerstein con la hipoacusia hasta la creación de la Fundación CASACUSIA en enero 2025. El recorrido completo."
     },
     "legal": {
       "title": "Información legal · CASACUSIA",
-      "description": "Datos institucionales de la Fundación CASACUSIA. Aprobación ARCA para deducción de Impuesto a las Ganancias.",
+      "description": "Datos institucionales, personería jurídica y aprobación ARCA para deducción de Impuesto a las Ganancias de la Fundación CASACUSIA. Transparencia total.",
       "heading": "Información legal",
       "subtitle": "Somos una Fundación con personería jurídica en Argentina."
     }
@@ -313,7 +313,7 @@
     },
     "donar": {
       "title": "Donar · Tu aporte transforma vidas",
-      "description": "Apoyá económicamente a CASACUSIA para que podamos seguir brindando programas gratuitos a la comunidad.",
+      "description": "Apoyá económicamente a CASACUSIA para que podamos seguir brindando encuentros, podcast y programas gratuitos a la comunidad con hipoacusia.",
       "heading": "Cada aporte sostiene esta comunidad.",
       "subtitle": "Tu donación nos permite organizar encuentros, producir el podcast, sostener la Red de Familias y acompañar a cientos de personas por día.",
       "niveles": {
@@ -386,7 +386,7 @@
       }
     },
     "proyectosJuntos": {
-      "title": "Proyectos juntos · Alianzas con empresas e instituciones",
+      "title": "Proyectos juntos · Alianzas con empresas",
       "description": "Charlas, workshops, convenios, investigación y campañas conjuntas. Hay mucho por hacer y volar.",
       "heading": "Para empresas, ONGs, instituciones y profesionales.",
       "subtitle": "Uno de los obstáculos de la discapacidad es cuando nos cuesta pedir. Porque pedir… amplía nuestro campo de acción. Creemos en alianzas que combinan propósito con trabajo serio. Si tu organización quiere hacer algo con nosotros, ¡escribinos!",
