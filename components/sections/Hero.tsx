@@ -9,25 +9,25 @@ export function Hero() {
 
   return (
     <section
-      className="relative min-h-[85vh] flex items-center overflow-hidden"
+      className="group/hero relative min-h-[85vh] flex items-center overflow-hidden"
       aria-label="CASACUSIA: bienvenida"
     >
-      {/* Background photo — foto grupal = lo opuesto a la soledad */}
+      {/* Background photo */}
       <Image
-        src="/fotos/propuestas/casacusia_kids_alta_246.jpg"
+        src="/fotos/propuestas/Casacusia_GZ-21.jpg"
         alt="Comunidad Casacusia reunida"
         fill
-        className="object-cover"
+        className="object-cover transition-transform duration-1000 group-hover/hero:scale-105"
         priority
         quality={85}
       />
 
-      {/* Dark overlay for text contrast */}
-      <div className="absolute inset-0 bg-gradient-to-r from-ink/85 via-ink/70 to-ink/40" />
+      {/* Overlay: oscuro por defecto, se aclara en hover para revelar la foto */}
+      <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/75 to-ink/50 transition-opacity duration-700 group-hover/hero:opacity-40" />
 
-      <div className="container relative z-10 py-20 md:py-28">
+      {/* Contenido: visible por defecto, se desvanece en hover */}
+      <div className="container relative z-10 py-20 md:py-28 transition-opacity duration-700 group-hover/hero:opacity-0">
         <div className="max-w-2xl">
-          {/* H1 */}
           <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl md:text-[4rem] lg:text-[4.5rem]">
             {t("title")}
             <span className="mt-2 block text-verde">{t("titleLine2")}</span>
@@ -37,7 +37,6 @@ export function Hero() {
             {t("subtitle")}
           </p>
 
-          {/* CTAs — solo 2 */}
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/sumate" size="lg">
               {t("ctaPrimary")} <ArrowRight size={18} aria-hidden />
@@ -47,6 +46,11 @@ export function Hero() {
             </Button>
           </div>
         </div>
+      </div>
+
+      {/* Hint en la esquina para invitar a hacer hover */}
+      <div className="absolute bottom-6 right-6 z-10 text-white/40 text-xs font-medium tracking-wider uppercase transition-opacity duration-700 group-hover/hero:opacity-0 hidden md:block">
+        hover para ver la foto →
       </div>
     </section>
   );
