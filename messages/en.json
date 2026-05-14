@@ -95,6 +95,7 @@
       "cta": "See all meetups",
       "sinFecha": "More events coming soon",
       "inscribite": "Sign up",
+      "gratuito": "Free",
       "filtros": {
         "todos": "All",
         "presencial": "In-person",
@@ -139,6 +140,13 @@
       "success": "Thanks! We'll write to you soon.",
       "error": "Something went wrong. Try again in a bit."
     }
+  },
+  "calendario": {
+    "title": "Calendar · Upcoming CASACUSIA meetups",
+    "description": "All upcoming in-person and virtual CASACUSIA meetups. Free, in Argentina and worldwide. Sign up directly.",
+    "eyebrow": "Activity calendar",
+    "heroTitle": "All our meetups",
+    "heroSubtitle": "In-person in Argentina and around the world, virtual so no one is left out, and special meetups for families. All free."
   },
   "aliados": {
     "title": "Allies · The companies that make CASACUSIA possible",

@@ -98,6 +98,7 @@
       "cta": "Ver todos los encuentros",
       "sinFecha": "Próximamente más eventos",
       "inscribite": "Inscribite",
+      "gratuito": "Gratuito",
       "filtros": {
         "todos": "Todos",
         "presencial": "Presencial",
@@ -142,6 +143,13 @@
       "success": "¡Gracias! Te vamos a escribir pronto.",
       "error": "Algo no salió bien. Intentá de nuevo en un rato."
     }
+  },
+  "calendario": {
+    "title": "Calendario · Próximos encuentros CASACUSIA",
+    "description": "Todos los encuentros presenciales y virtuales de CASACUSIA. Gratuitos, en Argentina y el mundo. Inscribite directo desde acá.",
+    "eyebrow": "Calendario de actividades",
+    "heroTitle": "Todos nuestros encuentros",
+    "heroSubtitle": "Presenciales en Argentina y el mundo, virtuales para que nadie quede afuera, y encuentros especiales para familias. Todos gratuitos."
   },
     "aliados": {
       "title": "Aliados · Empresas que hacen posible CASACUSIA",

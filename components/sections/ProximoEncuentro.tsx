@@ -22,6 +22,7 @@ export async function ProximoEncuentro() {
     argentina: t("filtros.argentina"),
     mundo: t("filtros.mundo"),
     inscribite: t("inscribite"),
+    gratuito: t("gratuito"),
   };
 
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Calendar, MapPin, Video, ArrowRight, Globe, Users, Home } from "lucide-react";
+import { Calendar, MapPin, Video, ArrowRight, Globe, Users, Monitor } from "lucide-react";
 import type { LumaEvent, EventTag } from "@/lib/luma";
 
 const LUMA_CALENDAR_URL = "https://lu.ma/hipoacusia";
@@ -12,9 +12,9 @@ type FilterKey = "todos" | EventTag;
 const filterConfig: { key: FilterKey; icon: typeof Calendar }[] = [
   { key: "todos", icon: Calendar },
   { key: "presencial", icon: MapPin },
-  { key: "virtual", icon: Video },
+  { key: "virtual", icon: Monitor },
   { key: "familias", icon: Users },
-  { key: "argentina", icon: Home },
+  { key: "argentina", icon: MapPin },
   { key: "mundo", icon: Globe },
 ];
 
@@ -24,13 +24,21 @@ const cardColors = [
   { border: "border-rosa/30", badge: "bg-rosa text-white" },
 ] as const;
 
-const tagStyles: Record<EventTag, string> = {
-  presencial: "bg-verde/20 text-verde-soft",
-  virtual: "bg-violeta/20 text-violeta-soft",
-  familias: "bg-rosa/20 text-rosa-soft",
-  argentina: "bg-amarillo/20 text-amarillo",
-  mundo: "bg-white/15 text-white/80",
-};
+/** Country code → flag emoji */
+function countryFlag(code: string | null): string {
+  if (!code) return "";
+  const flags: Record<string, string> = {
+    AR: "\u{1F1E6}\u{1F1F7}",
+    MX: "\u{1F1F2}\u{1F1FD}",
+    ES: "\u{1F1EA}\u{1F1F8}",
+    CL: "\u{1F1E8}\u{1F1F1}",
+    CO: "\u{1F1E8}\u{1F1F4}",
+    US: "\u{1F1FA}\u{1F1F8}",
+    BR: "\u{1F1E7}\u{1F1F7}",
+    UY: "\u{1F1FA}\u{1F1FE}",
+  };
+  return flags[code] ?? "";
+}
 
 function formatEventDate(startAt: string, timezone: string) {
   const date = new Date(startAt);
@@ -150,6 +158,7 @@ function EventCard({
   const isVirtual = event.locationType === "online";
   const title = cleanEventTitle(event.title);
   const location = isVirtual ? "Virtual" : (event.city ?? "Por confirmar");
+  const flag = isVirtual ? "" : countryFlag(event.country);
 
   return (
     <a
@@ -164,17 +173,22 @@ function EventCard({
         {day}
       </div>
 
-      {/* Title */}
+      {/* Title with flag/icon */}
       <h3 className="mt-3 font-display text-lg font-bold text-white leading-tight md:text-xl">
+        {isVirtual && <Monitor size={18} className="inline mr-2 text-violeta-soft" />}
+        {flag && <span className="mr-2">{flag}</span>}
         {title || location}
       </h3>
 
-      {/* Tags */}
+      {/* Free badge */}
       <div className="mt-2 flex flex-wrap gap-1.5">
-        {event.tags.map((tag) => (
+        <span className="inline-flex items-center rounded-full bg-verde/20 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-verde-soft">
+          {translations.gratuito}
+        </span>
+        {event.tags.filter(t => t !== "presencial" && t !== "virtual").map((tag) => (
           <span
             key={tag}
-            className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${tagStyles[tag]}`}
+            className="inline-flex items-center rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white/60"
           >
             {translations[tag]}
           </span>
@@ -184,7 +198,7 @@ function EventCard({
       {/* Location & time */}
       <div className="mt-auto pt-4 flex items-center justify-between text-sm text-white/70">
         <span className="inline-flex items-center gap-1.5">
-          {isVirtual ? <Video size={14} /> : <MapPin size={14} />}
+          {isVirtual ? <Monitor size={14} className="text-violeta-soft" /> : <MapPin size={14} />}
           {location}
         </span>
         <span>{time} hs</span>

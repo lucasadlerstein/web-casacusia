@@ -5,7 +5,7 @@
     "subtitulo": "Espacios de comunidad en persona",
     "resumen": "Encuentros en CABA, Misiones, Mendoza, Bariloche, Córdoba, La Plata y Madrid. Para dejar de sentirse solo.",
     "categorias": ["comunidad"],
-    "cta": { "label": "Próximos encuentros", "href": "https://lu.ma/hipoacusia" },
+    "cta": { "label": "Próximos encuentros", "href": "/calendario" },
     "destacado": true,
     "orden": 1
   },
@@ -15,7 +15,7 @@
     "subtitulo": "Conectate desde donde estés",
     "resumen": "Encuentros online por Google Meet para toda la diáspora y el interior.",
     "categorias": ["comunidad"],
-    "cta": { "label": "Conocer más", "href": "https://lu.ma/hipoacusia" },
+    "cta": { "label": "Conocer más", "href": "/calendario" },
     "destacado": true,
     "orden": 2
   },
@@ -40,13 +40,23 @@
     "orden": 4
   },
   {
-    "slug": "charlas-corporativas",
-    "titulo": "Charlas institucionales",
-    "subtitulo": "Empatía, accesibilidad, diversidad",
-    "resumen": "Charlas y workshops para organizaciones, universidades y escuelas.",
-    "categorias": ["sociedad"],
-    "cta": { "label": "Solicitar charla", "href": "/programas/charlas-corporativas" },
+    "slug": "cami",
+    "titulo": "CAMI · Asistente virtual",
+    "subtitulo": "Tu guía en el camino de la hipoacusia",
+    "resumen": "Un asistente que te ayuda a entender tu diagnóstico, conocer tus opciones y conectarte con recursos.",
+    "categorias": ["herramientas"],
+    "cta": { "label": "Próximamente", "href": "/programas" },
     "destacado": true,
     "orden": 5
+  },
+  {
+    "slug": "recursera",
+    "titulo": "Recursera",
+    "subtitulo": "Banco de recursos por etapa",
+    "resumen": "Recursos categorizados por etapas de la pérdida auditiva: diagnóstico, tratamiento, adaptación y más.",
+    "categorias": ["herramientas"],
+    "cta": { "label": "Próximamente", "href": "/programas" },
+    "destacado": true,
+    "orden": 6
   }
 ]

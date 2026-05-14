@@ -21,7 +21,8 @@ const staticRoutes: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/sumate/donar-servicios", priority: 0.7, changefreq: "monthly" },
   { path: "/impacto", priority: 0.7, changefreq: "monthly" },
   { path: "/recursos/faq", priority: 0.8, changefreq: "monthly" },
-  { path: "/contacto", priority: 0.7, changefreq: "yearly" }
+  { path: "/contacto", priority: 0.7, changefreq: "yearly" },
+  { path: "/calendario", priority: 0.9, changefreq: "weekly" }
 ];
 
 function urlFor(path: string, locale: string) {

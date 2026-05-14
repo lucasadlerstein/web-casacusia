@@ -79,6 +79,12 @@ Palabras y conceptos **prohibidos** en cualquier texto de la web:
 
 ---
 
+## Branch de trabajo
+
+Trabajamos siempre sobre `dev`. No pushear directo a `master`.
+
+---
+
 ## Convenciones técnicas
 
 1. **RSC first**: solo `"use client"` cuando hay estado, eventos o APIs de navegador.

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ArrowRight, Users, MonitorSmartphone, HeartHandshake, Mic, Megaphone } from "lucide-react";
+import { ArrowRight, Users, MonitorSmartphone, HeartHandshake, Mic, Bot, BookOpen } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Link } from "@/lib/i18n/navigation";
@@ -28,10 +28,15 @@ const programAssets: Record<string, { photo: string; icon: React.ReactNode; colo
     icon: <Mic size={24} aria-hidden />,
     color: "from-amarillo/80 to-[#B8860B]/90" // dark golden
   },
-  "charlas-corporativas": {
-    photo: "/fotos/sumate-proyectos.jpg",
-    icon: <Megaphone size={24} aria-hidden />,
+  "cami": {
+    photo: "/fotos/propuestas/DSC00009.jpg",
+    icon: <Bot size={24} aria-hidden />,
     color: "from-brand-teal/80 to-brand-teal-dark/90"
+  },
+  "recursera": {
+    photo: "/fotos/taller-adultos.jpg",
+    icon: <BookOpen size={24} aria-hidden />,
+    color: "from-rosa/80 to-rosa-dark/90"
   }
 };
 
