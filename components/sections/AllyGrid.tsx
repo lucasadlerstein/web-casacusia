@@ -35,7 +35,7 @@ export function AllyGrid({ variant = "home" }: Props) {
             <h3 className="text-lg font-display font-bold text-center mb-6 text-ink tracking-tight">{t("nosImpulsan")}</h3>
             <ul className="flex justify-center gap-4 flex-wrap">
               {sponsors.map((a) => (
-                <AliadoCard key={a.slug} aliado={a} size="sponsor" aporteLabel={t("aporte")} />
+                <AliadoCard key={a.slug} aliado={a} size="sponsor" />
               ))}
             </ul>
           </div>
@@ -45,7 +45,7 @@ export function AllyGrid({ variant = "home" }: Props) {
         {colaboradores.length > 0 && (
           <div>
             <h3 className="text-base font-display font-medium text-center mb-6 text-ink-soft">{t("colaboraron")}</h3>
-            <LogoCarousel aliados={colaboradores} aporteLabel={t("aporte")} />
+            <LogoCarousel aliados={colaboradores} />
           </div>
         )}
       </div>
@@ -60,7 +60,7 @@ export function AllyGrid({ variant = "home" }: Props) {
 }
 
 /** Infinite scrolling logo carousel */
-function LogoCarousel({ aliados, aporteLabel }: { aliados: Aliado[]; aporteLabel: string }) {
+function LogoCarousel({ aliados }: { aliados: Aliado[] }) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -103,13 +103,13 @@ function LogoCarousel({ aliados, aporteLabel }: { aliados: Aliado[]; aporteLabel
       style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
     >
       {items.map((a, i) => (
-        <AliadoCard key={`${a.slug}-${i}`} aliado={a} size="carousel" aporteLabel={aporteLabel} />
+        <AliadoCard key={`${a.slug}-${i}`} aliado={a} size="carousel" />
       ))}
     </div>
   );
 }
 
-function AliadoCard({ aliado, size, aporteLabel }: { aliado: Aliado; size: "sponsor" | "carousel"; aporteLabel: string }) {
+function AliadoCard({ aliado, size }: { aliado: Aliado; size: "sponsor" | "carousel" }) {
   const width = size === "sponsor" ? "w-36 md:w-44" : "w-28 md:w-32 flex-shrink-0";
 
   const content = (
@@ -124,19 +124,6 @@ function AliadoCard({ aliado, size, aporteLabel }: { aliado: Aliado; size: "spon
         className={`object-contain opacity-70 group-hover:opacity-100 transition-all duration-300 ${size === "sponsor" ? "p-5" : "p-4"}`}
       />
       <span className="sr-only">{aliado.nombre}</span>
-
-      {/* Tooltip */}
-      <div className="absolute bottom-full left-1/2 mb-3 -translate-x-1/2 w-44 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none group-hover:pointer-events-auto z-50">
-        <div className="relative bg-[#143642] text-white p-3 rounded-2xl shadow-xl text-center">
-          <p className="text-[10px] font-bold text-[#00B980] uppercase tracking-wider mb-1">
-            {aporteLabel}
-          </p>
-          <p className="text-[11px] md:text-xs font-medium leading-snug">
-            {aliado.impacto}
-          </p>
-          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-[#143642]" />
-        </div>
-      </div>
     </div>
   );
 

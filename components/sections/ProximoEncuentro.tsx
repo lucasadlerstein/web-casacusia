@@ -10,7 +10,6 @@ export async function ProximoEncuentro() {
   const events = await getUpcomingEvents();
 
   const translations = {
-    eyebrow: t("eyebrow"),
     title: t("title"),
     body: t("body"),
     cta: t("cta"),
@@ -32,9 +31,6 @@ export async function ProximoEncuentro() {
         <Filamento name="morado" className="-bottom-10 -left-10 w-36 rotate-[15deg]" opacity={15} />
 
         <div className="relative mb-8 max-w-xl">
-          <p className="text-verde-soft/80 text-xs font-bold uppercase tracking-widest mb-3">
-            {translations.eyebrow}
-          </p>
           <h2 id="proximo-title" className="font-display text-3xl font-extrabold tracking-tight text-white md:text-4xl mb-4">
             {translations.title}
           </h2>

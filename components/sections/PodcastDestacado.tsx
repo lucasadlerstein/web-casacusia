@@ -10,7 +10,7 @@ import type { Episodio } from "@/lib/content";
 
 type FilterKey = "ultimos" | "destacados" | "ninos" | "ciencia" | "historias";
 
-const EPISODES_PER_FILTER = 6;
+const EPISODES_PER_FILTER = 4;
 
 const filterConfig: { key: FilterKey; label: string }[] = [
   { key: "ultimos", label: "Últimos" },

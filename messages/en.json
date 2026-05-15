@@ -71,7 +71,7 @@
     },
     "iniciativas": {
       "eyebrow": "Our initiatives",
-      "title": "Impact in action",
+      "title": "Our programs",
       "body": "Our programs are designed to accompany you at every stage, connect stories, generate tools and foster a more conscious and supportive society."
     },
     "impacto": {
@@ -91,7 +91,6 @@
       "title": "Stories that sustain CASACUSIA"
     },
     "proximoEncuentro": {
-      "eyebrow": "Join the next one",
       "title": "Upcoming meetups",
       "body": "In-person in Argentina and around the world, virtual so no one is left out, and special meetups for families. Sign up directly from here.",
       "cta": "See all meetups",
@@ -115,7 +114,7 @@
     },
     "cuatroCaminos": {
       "eyebrow": "Join us",
-      "title": "There is a place for you",
+      "title": "How you can help",
       "body": "It doesn't matter if you are a professional, if you want to donate your time or if you can contribute financially. Every action counts.",
       "donar": "Donate",
       "donarDesc": "Your monthly contribution allows us to sustain the infrastructure and free programs.",

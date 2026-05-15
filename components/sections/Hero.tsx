@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
+import { MouseEvent, useState, useRef, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
@@ -14,17 +14,32 @@ export function Hero() {
   const [isMoving, setIsMoving] = useState(false);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleMouseMove = useCallback(() => {
-    setIsMoving(true);
-    if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => setIsMoving(false), IDLE_TIMEOUT);
+  const clearTimer = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
   }, []);
 
+  const handleMouseMove = useCallback(() => {
+    setIsMoving(true);
+    clearTimer();
+    timerRef.current = setTimeout(() => setIsMoving(false), IDLE_TIMEOUT);
+  }, [clearTimer]);
+
   const handleMouseLeave = useCallback(() => {
-    if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = null;
+    clearTimer();
     setIsMoving(false);
-  }, []);
+  }, [clearTimer]);
+
+  const handleTextMouseMove = useCallback(
+    (e: MouseEvent<HTMLDivElement>) => {
+      e.stopPropagation();
+      clearTimer();
+      setIsMoving(false);
+    },
+    [clearTimer]
+  );
 
   useEffect(() => {
     return () => {
@@ -52,6 +67,8 @@ export function Hero() {
       />
 
       <div
+        onMouseMove={handleTextMouseMove}
+        onMouseEnter={handleTextMouseMove}
         className={`relative z-10 w-full max-w-4xl mx-auto px-6 py-20 md:py-28 text-center transition-all duration-500 ${
           isMoving ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
         }`}
@@ -71,7 +88,7 @@ export function Hero() {
           <Button href="/sumate" size="lg">
             {t("ctaPrimary")} <ArrowRight size={18} aria-hidden />
           </Button>
-          <Button href="/calendario" size="lg" variant="secondary" className="border-white text-white hover:bg-white hover:text-[#143642]">
+          <Button href="/calendario" size="lg" variant="secondary" className="bg-transparent border-white text-white hover:bg-white hover:text-[#143642]">
             {t("ctaSecondary")}
           </Button>
         </div>

@@ -74,7 +74,7 @@
     },
     "iniciativas": {
       "eyebrow": "Nuestras iniciativas",
-      "title": "Impacto en acción",
+      "title": "Nuestros programas",
       "body": "Nuestros programas están diseñados para acompañarte en cada etapa, conectar historias, generar herramientas y fomentar una sociedad más consciente y solidaria."
     },
     "impacto": {
@@ -94,7 +94,6 @@
       "title": "Historias que sostienen CASACUSIA"
     },
     "proximoEncuentro": {
-      "eyebrow": "Sumate al próximo",
       "title": "Próximos encuentros",
       "body": "Presenciales en Argentina y el mundo, virtuales para que nadie quede afuera, y encuentros especiales para familias. Inscribite directo desde acá.",
       "cta": "Ver todos los encuentros",
@@ -118,7 +117,7 @@
     },
     "cuatroCaminos": {
       "eyebrow": "Sumate",
-      "title": "Hay un lugar para vos",
+      "title": "Cómo podés colaborar",
       "body": "No importa si sos profesional, si querés donar tu tiempo o si podés aportar económicamente. Cada acción cuenta.",
       "donar": "Donar",
       "donarDesc": "Tu aporte mensual nos permite sostener la infraestructura y los programas gratuitos.",
