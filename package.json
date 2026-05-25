@@ -4,6 +4,9 @@
   "private": true,
   "description": "CASACUSIA · Nueva web 2026. Fundación argentina que acompaña a personas con hipoacusia.",
   "scripts": {
+    "fotos:manifest": "node scripts/build-fotos-manifest.mjs",
+    "predev": "node scripts/build-fotos-manifest.mjs",
+    "prebuild": "node scripts/build-fotos-manifest.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

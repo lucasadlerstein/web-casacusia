@@ -1,7 +1,15 @@
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import { readdirSync, statSync } from "fs";
-import { join } from "path";
+
+import manifest from "@/content/fotos-manifest.json";
+
+type Photo = {
+  path: string;
+  year: number;
+  month: number;
+  label: string;
+  source: "path" | "mtime";
+};
 
 /** Photos already used in components */
 const USED_PHOTOS = new Set([
@@ -14,74 +22,11 @@ const USED_PHOTOS = new Set([
   "/fotos/propuestas/casacusia_kids_alta_245.jpg",
   "/fotos/propuestas/casacusia_kids_alta_252.jpg",
   "/fotos/sumate-donar.jpg",
+  "/fotos/sumate-comunidad.jpg",
   "/fotos/taller-adultos.jpg",
   "/fotos/taller-ceramica.jpg",
   "/fotos/hero-comunidad.jpg",
 ]);
-
-const IMAGE_EXTENSIONS = new Set([".jpg", ".jpeg", ".png", ".webp"]);
-
-const MESES = [
-  "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-  "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-];
-
-type Photo = {
-  path: string;
-  year: number;
-  month: number;
-  label: string;
-  source: "path" | "mtime";
-};
-
-function formatMonthYear(year: number, month: number): string {
-  return `${MESES[month - 1]} ${year}`;
-}
-
-function extractDate(filePath: string, mtime: Date): { year: number; month: number; label: string; source: "path" | "mtime" } {
-  // Buscar patrón YYYY-MM o YYYY/MM o YYYY_MM en el path
-  const match = filePath.match(/(20\d{2})[-_/](\d{1,2})(?:[-_/]|\.|$)/);
-  if (match) {
-    const year = parseInt(match[1]!, 10);
-    const month = parseInt(match[2]!, 10);
-    if (month >= 1 && month <= 12) {
-      return { year, month, label: formatMonthYear(year, month), source: "path" };
-    }
-  }
-  // Fallback a mtime del archivo
-  const year = mtime.getFullYear();
-  const month = mtime.getMonth() + 1;
-  return { year, month, label: formatMonthYear(year, month), source: "mtime" };
-}
-
-function getPhotosFromDir(dir: string): Photo[] {
-  const publicDir = join(process.cwd(), "public");
-  const fullDir = join(publicDir, dir);
-  const photos: Photo[] = [];
-
-  try {
-    const entries = readdirSync(fullDir);
-    for (const entry of entries) {
-      const fullPath = join(fullDir, entry);
-      const stat = statSync(fullPath);
-      if (stat.isDirectory()) {
-        photos.push(...getPhotosFromDir(join(dir, entry)));
-      } else {
-        const ext = entry.substring(entry.lastIndexOf(".")).toLowerCase();
-        if (IMAGE_EXTENSIONS.has(ext)) {
-          const relativePath = "/" + join(dir, entry);
-          const mtime = stat.mtime;
-          const { year, month, label, source } = extractDate(relativePath, mtime);
-          photos.push({ path: relativePath, year, month, label, source });
-        }
-      }
-    }
-  } catch {
-    // directory doesn't exist
-  }
-
-  return photos;
-}
 
 export default async function FotosPage({
   params,
@@ -91,14 +36,7 @@ export default async function FotosPage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const folders = [
-    "fotos",
-    "fotos-nuevas/fotos",
-    "fotos-nuevas/casacusia-kids-2026-3-001",
-    "fotos-nuevas/eventos",
-    "fotos-nuevas/kids"
-  ];
-  const allPhotos = folders.flatMap((f) => getPhotosFromDir(f));
+  const allPhotos = (manifest as { photos: Photo[] }).photos;
 
   // Agrupar por label "Mes Año"
   const groups: Record<string, { photos: Photo[]; year: number; month: number }> = {};
@@ -109,7 +47,6 @@ export default async function FotosPage({
     groups[photo.label]!.photos.push(photo);
   }
 
-  // Ordenar grupos por año-mes descendente (más reciente primero)
   const sortedGroups = Object.entries(groups).sort((a, b) => {
     const ya = a[1].year * 100 + a[1].month;
     const yb = b[1].year * 100 + b[1].month;
@@ -126,11 +63,10 @@ export default async function FotosPage({
           Las fotos con opacidad reducida ya están en uso. Indicá el número para cambiar alguna.
         </p>
         <p className="text-white/40 text-sm mb-8">
-          Total: {allPhotos.length} fotos · {sortedGroups.length} períodos · Agrupadas por fecha (del path o del archivo).
+          Total: {allPhotos.length} fotos · {sortedGroups.length} períodos · Manifest generado en build.
         </p>
 
         {sortedGroups.map(([label, group]) => {
-          // Dentro de cada grupo, ordenar las fotos: las que tienen fecha por path primero, luego por path alfabético
           const orderedPhotos = [...group.photos].sort((a, b) => a.path.localeCompare(b.path));
           const fromPath = orderedPhotos.filter((p) => p.source === "path").length;
 
