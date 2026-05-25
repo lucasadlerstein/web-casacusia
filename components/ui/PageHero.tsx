@@ -55,7 +55,9 @@ export function PageHero({
       )}
 
       <div className={cn("container relative z-20 max-w-5xl", hasBg && "text-white")}>
-        {eyebrow ? (
+        {/* Eyebrow desactivado por decisión de diseño: vamos directo al título sin titulares pequeños. */}
+        {/* La prop se mantiene por compatibilidad pero no se renderiza. */}
+        {false && eyebrow ? (
           <Eyebrow className={cn("mb-6", (isBrand || hasBg) ? "text-white/80" : "text-verde-dark")}>
             {eyebrow}
           </Eyebrow>
