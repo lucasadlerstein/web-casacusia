@@ -347,32 +347,34 @@
     },
     "historia": {
       "title": "Story · How Casacusia started",
-      "description": "From Lucas Adlerstein's personal experience with hearing loss to the Foundation. The full story.",
+      "description": "Lucas Adlerstein tells how Casacusia was born, from his own experience with hearing loss to founding the foundation.",
       "hero": {
-        "eyebrow": "Story",
-        "title": "My name is Lucas Adlerstein.",
-        "subtitle": "At 15, I lost my hearing and my life changed."
+        "intro": "Hi, my name is Lucas Adlerstein. I founded Casacusia. Today I'm going to tell you the story of the foundation and also mine."
       },
       "actos": [
         {
-          "titulo": "Isolation",
-          "parrafo": "I started drifting away from people. Going to a birthday party or talking to someone I didn't know made me anxious. I quit basketball because I wasn't comfortable: I couldn't hear the coach or understand who and where was asking me for the ball. In high school I did group projects alone."
+          "titulo": "2016 · At 15 I lost my hearing",
+          "parrafo": "I started drifting away from people. Going to a birthday or talking to someone I didn't know made me anxious. I quit basketball because I wasn't comfortable: I couldn't hear the coach or understand who and where was asking me for the ball. In high school I did group projects alone."
         },
         {
-          "titulo": "A false relief, then the fall",
-          "parrafo": "In 2020, what was hard for many was a relief for me. Lockdown took me away from people, and therefore from my hearing loss. The problem was when we went back to normal. It was really hard. I crashed emotionally. I found on Google an auditory implant that I thought could help me. It gave me back hope."
+          "titulo": "2020 · The false relief, then the fall",
+          "parrafo": "Lockdown took me away from people, and therefore from my hearing loss. The problem was when we went back to normal. It was really hard. I crashed emotionally. I found on Google an auditory implant that I thought could help me. It gave me back hope."
         },
         {
-          "titulo": "Starting to share",
-          "parrafo": "A year later I got my life and my smile back. When I got implanted I couldn't find real personal experiences online, so I started sharing mine on social media."
+          "titulo": "2021 · At 20 I got implanted and recovered my hearing",
+          "parrafo": "I got my life and my smile back. When I got implanted I couldn't find real personal experiences online, so I started sharing mine on social media."
         },
         {
           "titulo": "Realizing I wasn't alone",
-          "parrafo": "Doctors began recommending my videos. One day I went viral. A rain of comments and messages turned into conversations. I realized I wasn't alone, I wasn't the only one."
+          "parrafo": "Doctors began recommending my videos. One day I went viral. A rain of comments and messages turned into conversations. What connected us was loneliness and not knowing what to do. Some messages turned into a coffee with people losing their hearing, or with parents whose children were born deaf. I couldn't sustain one-to-one anymore, so I called people to a park. 20 came, then 38, 25, 69 people. Suddenly, in 2024, 473 people had passed through the meetups."
         },
         {
-          "titulo": "From a coffee to a park",
-          "parrafo": "What connected us was loneliness and not knowing what to do. Some messages turned into a coffee with people losing their hearing, or with parents whose children were born deaf. I looked it up: 5% of the world's population. In Argentina, over two million people. I couldn't sustain one-to-one anymore, so I called people to a park. 20 came. Then 38, 25, 69 people. Suddenly, in 2024, 473 people had come to share their experience, to listen, to identify. To see that they weren't alone, that we weren't alone."
+          "titulo": "2025 · Why I founded Casacusia",
+          "parrafo": "At that time I was in my third year of Information Systems Engineering at UTN and worked as a programmer. When exams came or I was traveling, projects stopped. So I decided to found Casacusia as an engine of social projects that connects people with hearing loss and that doesn't depend only on me."
+        },
+        {
+          "titulo": "Today",
+          "parrafo": "People started joining and we created projects, areas, volunteering. We grew, reached cities and professionalized. Today, from one person we are +20 fixed volunteers and 60 rotating ones at events. And this is only its first year."
         }
       ],
       "insight": "For many of us, disability is not the silence: it is the loneliness.",
