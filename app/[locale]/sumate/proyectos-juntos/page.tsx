@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Mic, GraduationCap, Megaphone, Handshake, FlaskConical, Gem } from "lucide-react";
+import { Mic, GraduationCap, Megaphone, Handshake, FlaskConical, Gem, Check, ArrowRight } from "lucide-react";
 
 import { PageHero } from "@/components/ui/PageHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -56,7 +56,62 @@ export default async function ProyectosJuntosPage({ params }: { params: Promise<
         </ul>
       </Section>
 
-      <Section background="tint" ariaLabelledBy="porque-title">
+      <Section background="tint" ariaLabelledBy="convenio-title">
+        <div className="max-w-5xl">
+          <div className="flex flex-wrap items-center gap-3 mb-4">
+            <p className="font-display text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-rosa">
+              {t("convenio.eyebrow")}
+            </p>
+            <span className="inline-flex items-center rounded-full bg-amarillo-soft px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-ink">
+              {t("convenio.borrador")}
+            </span>
+          </div>
+          <h2 id="convenio-title" className="font-display text-3xl md:text-4xl font-extrabold text-ink leading-tight">
+            {t("convenio.title")}
+          </h2>
+          <p className="mt-5 text-lg text-ink-soft leading-relaxed max-w-3xl">
+            {t("convenio.lead")}
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl bg-surface-card border-2 border-verde/40 p-8">
+              <h3 className="font-display text-xl font-bold text-ink mb-5">
+                {t("convenio.pones.title")}
+              </h3>
+              <ul className="space-y-3">
+                {(t.raw("convenio.pones.items") as string[]).map((item, i) => (
+                  <li key={i} className="flex gap-3 text-ink-soft">
+                    <Check size={18} aria-hidden className="text-verde-dark shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl bg-surface-card border-2 border-violeta/40 p-8">
+              <h3 className="font-display text-xl font-bold text-ink mb-5">
+                {t("convenio.recibis.title")}
+              </h3>
+              <ul className="space-y-3">
+                {(t.raw("convenio.recibis.items") as string[]).map((item, i) => (
+                  <li key={i} className="flex gap-3 text-ink-soft">
+                    <Check size={18} aria-hidden className="text-violeta-dark shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-10">
+            <Button href="/contacto?t=empresa" size="lg">
+              {t("convenio.cta")} <ArrowRight size={18} className="ml-1" />
+            </Button>
+          </div>
+        </div>
+      </Section>
+
+      <Section background="default" ariaLabelledBy="porque-title">
         <SectionHeading
           eyebrow={t("porqueHeading")}
           title={<span id="porque-title">{t("porqueSub")}</span>}

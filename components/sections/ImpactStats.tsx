@@ -53,6 +53,7 @@ export function ImpactStats() {
             </div>
           ))}
         </dl>
+
       </div>
     </section>
   );

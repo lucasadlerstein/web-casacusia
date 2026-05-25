@@ -22,17 +22,18 @@
     "recursos": "Recursos",
     "abrirMenu": "Abrir menú",
     "cerrarMenu": "Cerrar menú",
-    "saltarAlContenido": "Saltar al contenido principal"
+    "saltarAlContenido": "Saltar al contenido principal",
+    "prensa": "Prensa"
   },
   "home": {
-    "title": "CASACUSIA · Trabajamos para las personas, no para los oídos",
-    "description": "Fundación dedicada a acompañar a personas con pérdida auditiva y sus familias. Encuentros, podcast, red de padres y más.",
+    "title": "Casacusia · Trabajamos para las personas, no para los oídos",
+    "description": "Fundación dedicada a acompañar a personas con pérdida auditiva (hipoacusia) y sus familias. Encuentros, podcast, red de padres y más.",
     "hero": {
-      "eyebrow": "Comunidad de personas con hipoacusia",
+      "eyebrow": "Comunidad de personas con pérdida auditiva",
       "title": "No estás solo.",
       "titleLine2": "1 de cada 20 personas",
-      "titleLine3": "tiene hipoacusia.",
-      "subtitle": "CASACUSIA es una ONG que acompaña a personas con hipoacusia y a sus familias para que nadie transite la pérdida auditiva en soledad. Generamos comunidad, herramientas y una red que crece todos los días.",
+      "titleLine3": "tiene pérdida auditiva.",
+      "subtitle": "Casacusia es una ONG que acompaña a personas con pérdida auditiva y a sus familias para que nadie la transite en soledad. Generamos comunidad, herramientas y una red que crece todos los días.",
       "ctaPrimary": "Sumate a la comunidad",
       "ctaSecondary": "Próximos encuentros",
       "ctaTertiary": "Doná",
@@ -43,10 +44,42 @@
       }
     },
     "esencia": {
-      "eyebrow": "La discapacidad no es el silencio",
-      "title": "Es la soledad.",
-      "body": "Trabajamos para las personas, no para los oídos. La hipoacusia no se cura: se acepta, se transita, se comparte. Y cuando lo hacemos acompañados, todo se vuelve más fácil.",
-      "cta": "Conocé al equipo"
+      "titleLine1Pre": "La discapacidad no es el",
+      "titleLine1Tachado": "silencio",
+      "titleLine2": "Es la soledad.",
+      "bodyExtra": "La hipoacusia te lleva a aislarte y a no participar de los entornos sociales. A veces la falta de comprensión de las personas nos lleva a alejarnos, y por eso está Casacusia: para que veamos que no somos los únicos, y que podamos compartir y poner en palabras lo que nos pasa.",
+      "cta": "Quiero ser parte",
+      "ctaSecondary": "¿Cuál es la importancia de la hipoacusia?"
+    },
+    "manifiesto": {
+      "cta": "Leer el manifiesto completo"
+    },
+    "encuesta": {
+      "eyebrow": "Una pregunta directa",
+      "titulo": "Hoy, con tu pérdida auditiva, ¿sentís que estás…?",
+      "subtitulo": "Si acompañás a alguien que la transita, contestá pensando en esa persona.",
+      "viviendo": "Viviendo",
+      "sobreviviendo": "Sobreviviendo",
+      "respViviendo": {
+        "titulo": "Qué bueno que estés viviendo.",
+        "body": "Trabajamos todos los días para que más personas con pérdida auditiva dejen de sobrevivir. ¿Querés ayudarnos?",
+        "ctaPrimary": "Sumate a la comunidad",
+        "ctaSecondary": "Compartí tu historia",
+        "ctaDonar": "Donar para que más personas vivan"
+      },
+      "respSobreviviendo": {
+        "titulo": "Te escuchamos. No estás solo.",
+        "body": "La mayoría de nosotros pasó por ahí. Hay tres lugares por donde podés empezar:",
+        "items": [
+          "Conocer a otras personas que están en lo mismo — próximos encuentros virtuales y presenciales.",
+          "Escuchar historias de gente que pasó por algo parecido — el podcast.",
+          "Escribirnos directo — sin apuro, sin formularios."
+        ],
+        "ctaPrimary": "Ver próximos encuentros",
+        "ctaSecondary": "Escuchar el podcast"
+      },
+      "cambiar": "Cambiar mi respuesta",
+      "gracias": "Gracias por contarnos."
     },
     "trust": {
       "tagline": "Una Fundación reconocida",
@@ -74,9 +107,9 @@
       "tecnologico": "Aliado Tecnológico"
     },
     "iniciativas": {
-      "eyebrow": "Nuestras iniciativas",
+      "eyebrow": "",
       "title": "Nuestros programas",
-      "body": "Nuestros programas están diseñados para acompañarte en cada etapa, conectar historias, generar herramientas y fomentar una sociedad más consciente y solidaria."
+      "body": "Buscamos acompañarte en cada etapa, conectar historias y fomentar una sociedad más consciente y solidaria."
     },
     "impacto": {
       "eyebrow": "Nuestro impacto",
@@ -88,17 +121,23 @@
         "familias": "Familias en la Red",
         "episodios": "Episodios de podcast",
         "paises": "Países nos escuchan"
+      },
+      "alcance": {
+        "eyebrow": "Alcance editorial (último mes)",
+        "label": "impresiones en redes",
+        "subtitulo": "Cada vez que aparecemos en el feed de alguien es una persona menos sola."
       }
     },
     "testimonios": {
       "eyebrow": "Lo que nos cuentan",
-      "title": "Historias que sostienen CASACUSIA"
+      "title": "Así se recibe lo que hacemos"
     },
     "proximoEncuentro": {
       "title": "Próximos encuentros",
       "body": "Presenciales en Argentina y el mundo, virtuales para que nadie quede afuera, y encuentros especiales para familias. Inscribite directo desde acá.",
       "cta": "Ver todos los encuentros",
-      "sinFecha": "Próximamente más eventos",
+      "sinFecha": "Estamos coordinando los próximos encuentros. Mirá el calendario en vivo en Luma para no perderte ninguno.",
+      "verEnLuma": "Ver calendario en Luma",
       "inscribite": "Inscribite",
       "gratuito": "Gratuito",
       "filtros": {
@@ -140,6 +179,16 @@
       "subtitle": "Recibí historias, recursos y próximos encuentros. Sin spam, con cariño.",
       "name": "Nombre",
       "email": "Email",
+      "perfil": "¿Quién sos?",
+      "perfilPlaceholder": "Elegí una opción",
+      "perfiles": {
+        "tengo-hipoacusia": "Tengo hipoacusia",
+        "familiar": "Soy familiar de alguien con hipoacusia",
+        "trabajo-hipoacusia": "Trabajo en hipoacusia",
+        "interesado": "Me interesa la temática",
+        "inclusion-diversidad": "Trabajo en inclusión o diversidad",
+        "otro": "Otro"
+      },
       "consent": "Acepto recibir novedades por email.",
       "submit": "Suscribirme",
       "success": "¡Gracias! Te vamos a escribir pronto.",
@@ -147,11 +196,10 @@
     }
   },
   "calendario": {
-    "title": "Calendario · Próximos encuentros CASACUSIA",
-    "description": "Todos los encuentros presenciales y virtuales de CASACUSIA. Gratuitos, en Argentina y el mundo. Inscribite directo desde acá.",
-    "eyebrow": "Calendario de actividades",
-    "heroTitle": "Todos nuestros encuentros",
-    "heroSubtitle": "Presenciales en Argentina y el mundo, virtuales para que nadie quede afuera, y encuentros especiales para familias. Todos gratuitos."
+    "title": "Encuentros · Calendario de Casacusia",
+    "description": "Encuentros presenciales y virtuales de Casacusia. Gratuitos. Inscribite directo desde acá.",
+    "heading": "Próximos encuentros",
+    "intro": "Nos juntamos en parques, salones, casas y por Google Meet. Cada encuentro es un espacio para compartir y dejar de sentirse solo. Son gratuitos y abiertos a personas con hipoacusia, familias y quienes acompañan."
   },
     "aliados": {
       "title": "Aliados · Empresas que hacen posible CASACUSIA",
@@ -198,12 +246,17 @@
       }
     },
     "nosotros": {
-      "title": "Nosotros · Qué es CASACUSIA y por qué existe",
-      "description": "La hipoacusia es una discapacidad invisible que afecta a 1 de cada 20 personas. Conocé la historia, misión y valores de la Fundación CASACUSIA.",
+      "title": "Nosotros · Qué es Casacusia y por qué existe",
+      "description": "La hipoacusia es una discapacidad invisible que afecta a 1 de cada 20 personas. Conocé la historia, misión y valores de la Fundación Casacusia.",
       "hero": {
-        "eyebrow": "Sobre CASACUSIA",
-        "title": "Trabajamos para las personas, no para los oídos.",
-        "subtitle": "¿Te pasó de pensar que eras la única persona con hipoacusia? CASACUSIA nace para mostrarte que somos muchos los que transitamos la hipoacusia. Buscamos transformar cómo cada uno de nosotros se relaciona con su hipoacusia, para que podamos vivir mejor. Buscamos que nadie transite su pérdida auditiva en soledad."
+        "title": "¿Te pasó de pensar que eras la única persona con hipoacusia?",
+        "body": "Casacusia nace para mostrarte que somos muchos los que transitamos la hipoacusia. Buscamos transformar cómo cada uno de nosotros se relaciona con su hipoacusia, para que podamos vivir mejor."
+      },
+      "voluntariosBloque": {
+        "eyebrow": "Quienes ponen el cuerpo",
+        "title": "Algunas personas del equipo",
+        "subtitle": "Son muchos los que sostienen Casacusia. Estos son algunos.",
+        "verMas": "Ver al equipo completo"
       },
       "stats": {
         "title": "¿Qué es la hipoacusia?",
@@ -216,12 +269,12 @@
       },
       "manifiesto": {
         "eyebrow": "Por qué hacemos lo que hacemos",
-        "title": "Vivir, no sobrevivir",
-        "lead": "Entendemos que el mundo no es justo. Pero también creemos que todos nos merecemos una vida plena. No se trata de sobrevivir, se trata de vivir.",
+        "title": "En un mundo que nos enseñan a sobrevivir, nosotros creemos que hay que vivir.",
+        "lead": "Todos nos merecemos una vida plena. No se trata de sobrevivir, se trata de vivir.",
         "p1": "Para eso tenemos que pedir: que nos repitan lo que no escuchamos, que nos cambien de lado, que las personas hagan adaptaciones. Y pedir es difícil. A veces nos aleja de la gente.",
         "p2": "Por no pedir y por no escuchar —porque al no escuchar dejamos de estar presentes— empezamos a aislarnos para no frustrarnos. Dejamos de preguntar, y por ende, de estar.",
         "p3": "Nos alejamos de las personas, de las parejas, de los amigos. Dejamos los deportes, el teatro, el cine en familia. Dejamos de salir, de socializar. Y la vida aislados no es la más linda.",
-        "kicker": "Por eso existe CASACUSIA: para que nadie tenga que elegir entre escuchar y estar."
+        "kicker": "Por eso existe Casacusia: para que nadie tenga que elegir entre escuchar y estar presente."
       },
       "brecha": {
         "eyebrow": "Por qué existe CASACUSIA",
@@ -274,67 +327,64 @@
         }
       },
       "cta": {
-        "title": "Sumate a CASACUSIA",
-        "body": "Hay cuatro formas de ser parte de este movimiento: donar, ser voluntario, hacer proyectos juntos o donar tus servicios como profesional.",
-        "primary": "Ver las 4 formas",
-        "secondary": "Conocé al equipo"
+        "title": "Sumate a Casacusia",
+        "body": "Hay muchas formas de ser parte: con tu aporte económico que sostiene todo lo que hacemos, o con tu tiempo y tus ganas como voluntario.",
+        "primary": "Donar",
+        "secondary": "Ser voluntario"
       },
       "equipo": {
-        "title": "Equipo · Las personas detrás de CASACUSIA",
-        "description": "Conocé al equipo que empuja la Fundación CASACUSIA: Rama, Valen, Melu, Toto, Nico, Manu, Shari, Lucas, Vero y Judi.",
-        "heading": "Las personas que empujan CASACUSIA",
-        "subtitle": "Un equipo interdisciplinario que combina pasión, amor, ambición por un mundo mejor y talento. Buscamos escuchar y ser escuchados. Detrás de cada programa hay una persona que lo cuida.",
-        "fundador": "Fundador",
+        "title": "Equipo · Las personas detrás de Casacusia",
+        "description": "Conocé al equipo y a los voluntarios que sostienen Casacusia: trabajamos para transformar la calidad de vida de las personas y familias con hipoacusia.",
+        "heroEyebrow": "Equipo",
+        "heroTitle": "Las personas que sostienen Casacusia.",
+        "heroSubtitle": "Trabajamos para transformar la calidad de vida de las personas y familias con hipoacusia.",
+        "coreHeading": "Equipo",
+        "coreSub": "Quienes lideran cada área del día a día.",
+        "voluntariosHeading": "Voluntarios",
+        "voluntariosSub": "Más de {count} personas sostienen los programas, los encuentros, la comunicación, el podcast y todo lo que pasa puertas adentro.",
+        "voluntariosFiltro": "Filtrar por área",
         "linkedin": "LinkedIn",
-        "ctaVolHeading": "Sumate al equipo de voluntarios",
-        "ctaVolSub": "Más allá del núcleo hay decenas de voluntarios organizados en comisiones.",
-        "ctaVolLabel": "Conocer voluntariado",
-        "members": {
-          "lucas-adlerstein": {
-            "rol": "Fundador y director",
-            "bio": "Perdió la audición a los 15 años. Creador de contenido y referente en discapacidad auditiva. Fundó CASACUSIA para transformar cómo se vive la hipoacusia."
-          },
-          "rama": {
-            "rol": "Equipo fundador",
-            "bio": "Parte del núcleo que sostiene CASACUSIA desde su inicio. Aporta su visión estratégica y experiencia en el desarrollo de proyectos sociales."
-          },
-          "valen": {
-            "rol": "Comunicación",
-            "bio": "Coordina la comunicación de CASACUSIA. Especialista en medios digitales, relaciones públicas y estrategia de contenidos."
-          },
-          "melu": {
-            "rol": "Coordinación general",
-            "bio": "Cuida que los equipos y proyectos funcionen con claridad. Su formación le permite gestionar operaciones y optimizar procesos internos."
-          },
-          "shari": {
-            "rol": "Líder de Encuentros",
-            "bio": "Lidera los encuentros presenciales y virtuales. Aporta su expertise en dinámicas grupales y contención comunitaria."
-          },
-          "toto": {
-            "rol": "Líder operativo de Encuentros",
-            "bio": "Coordina la operación de los encuentros junto a Shari."
-          },
-          "nico": {
-            "rol": "Head of Fundraising",
-            "bio": "Ingeniero Industrial (ITBA). Lidera la estrategia de fundraising, desarrollando relaciones con donantes y aliados estratégicos para asegurar la sostenibilidad y el crecimiento del impacto social de CASACUSIA."
-          },
-          "manu": {
-            "rol": "Líder de la nueva web 2026",
-            "bio": "Lidera el proyecto de la nueva web. Especializado en desarrollo tecnológico, diseño de producto y experiencia de usuario."
-          },
-          "vero": {
-            "rol": "Equipo",
-            "bio": "Licenciada en Comunicación (UBA) y Coach Ontológica. Con más de 20 años de experiencia en marketing regional para grandes marcas, es co-fundadora de Chaucha y Hormigas Group. Aporta su visión estratégica y humana al equipo."
-          },
-          "judi": {
-            "rol": "Equipo",
-            "bio": "Acompaña y hace posible la misión de CASACUSIA."
-          }
-        }
+        "ctaVolHeading": "¿Querés ser parte?",
+        "ctaVolSub": "Buscamos personas que quieran poner su tiempo y talento al servicio de la comunidad.",
+        "ctaVolLabel": "Quiero ser voluntario"
       },
     "historia": {
-      "title": "Historia · Cómo nació CASACUSIA",
-      "description": "Desde la experiencia personal de Lucas Adlerstein con la hipoacusia hasta la creación de la Fundación CASACUSIA en enero 2025. El recorrido completo."
+      "title": "Historia · Cómo nació Casacusia",
+      "description": "Lucas Adlerstein cuenta cómo nació Casacusia, desde su propia historia con la hipoacusia hasta la creación de la Fundación.",
+      "hero": {
+        "intro": "Hola, mi nombre es Lucas Adlerstein, fundé Casacusia. Hoy te voy a contar la historia de la fundación y también la mía."
+      },
+      "actos": [
+        {
+          "titulo": "2016 · A los 15 años perdí la audición",
+          "parrafo": "Me fui alejando de las personas. Me daba ansiedad ir a un cumpleaños o tener que hablar con alguien que no conocía. Dejé de jugar al básquet porque no estaba cómodo: no escuchaba al entrenador ni entendía quién y dónde me pedían la pelota. En la secundaria, los trabajos grupales los hacía solo."
+        },
+        {
+          "titulo": "2020 · El alivio falso, y después la caída",
+          "parrafo": "La cuarentena me alejó de las personas, y por ende de mi hipoacusia. El problema fue cuando volvimos a la normalidad. Fue muy difícil. Caí anímicamente. Encontré en Google un implante auditivo que, según yo, me podía servir. Me devolvió la esperanza."
+        },
+        {
+          "titulo": "2021 · A los 20 me implanté y recuperé la audición",
+          "parrafo": "Recuperé mi vida y mi sonrisa. Cuando me implantaron no pude encontrar experiencias de personas reales, así que empecé a compartir la mía en redes sociales."
+        },
+        {
+          "titulo": "Descubrir que no estaba solo",
+          "parrafo": "Los médicos empezaron a recomendar mis videos. Un día me hice viral. Lluvia de comentarios y mensajes que se transformaron en conversaciones. Me di cuenta que no estaba solo, que no era el único. Nos conectó el sentimiento de soledad y el no saber qué hacer. Algunos mensajes se transformaron en un café con quienes perdían la audición, o con padres cuyos hijos nacían sordos. No pude sostener el uno a uno, así que convoqué a las personas a un parque. Vinieron 20, que se transformaron en 38, 25, 69 personas. De golpe, en 2024 habían pasado 473 personas por los encuentros."
+        },
+        {
+          "titulo": "2025 · Por qué fundé Casacusia",
+          "parrafo": "En ese momento cursaba 3er año de Ingeniería en Sistemas de la Información en la UTN y trabajaba de programador. Cuando llegaban los exámenes o me iba de viaje, los proyectos se paraban. Así que decidí fundar Casacusia para que sea un motor de proyectos sociales que conecte personas con hipoacusia, y que no dependa solo de mí."
+        },
+        {
+          "titulo": "Hoy",
+          "parrafo": "Empezaron a sumarse personas y fuimos creando proyectos, áreas, voluntariado. Fuimos creciendo, llegando a ciudades y profesionalizándonos. Hoy, de 1 persona ya somos +20 voluntarios fijos y 60 rotativos en eventos. Y esto recién va en su primer año."
+        }
+      ],
+      "insight": "Para muchos, la discapacidad no es el silencio: es la soledad.",
+      "kicker": "Por eso nace Casacusia: para que nadie transite su hipoacusia en soledad.",
+      "ctaTitle": "¿Querés ser parte de esta historia?",
+      "ctaPrimary": "Donar",
+      "ctaSecondary": "Ser voluntario"
     },
     "legal": {
       "title": "Información legal · CASACUSIA",
@@ -439,12 +489,42 @@
         "investigacion": { "title": "Investigación", "desc": "Sobre hipoacusia, calidad de vida y acceso a derechos." },
         "rse": { "title": "RSE con sentido", "desc": "Proyectos con impacto medible, no greenwashing." }
       },
+      "convenio": {
+        "eyebrow": "Convenio de Apoyo · 12 meses",
+        "borrador": "Borrador para revisión interna",
+        "title": "Una alianza personalizada por empresa",
+        "lead": "No hay un paquete único. Cada Convenio de Apoyo se arma con vos según el momento, el rubro y la escala de tu organización. Doce meses, renovable, sin exclusividad.",
+        "pones": {
+          "title": "Lo que elegís poner",
+          "items": [
+            "Aporte económico mensual, único o en USD.",
+            "Productos para encuentros o campañas.",
+            "Servicios pro-bono (legal, contable, infra, diseño, audiovisual).",
+            "Espacios físicos para encuentros.",
+            "Horas profesionales de tu equipo en proyectos puntuales."
+          ]
+        },
+        "recibis": {
+          "title": "Lo que recibís",
+          "items": [
+            "Logo en /aliados/ y en el grid del home.",
+            "Ficha en /aliados/[tu-marca] con los datos de la alianza.",
+            "Mención en redes en hitos clave de Casacusia (lanzamientos, encuentros).",
+            "Charla de Lucas a tu equipo, una vez al año.",
+            "Acompañamiento en generar espacios de diversidad dentro de tu organización.",
+            "Deducción fiscal vía ARCA dentro de los topes vigentes.",
+            "Reporte anual del impacto de tu aporte.",
+            "Posibilidad de campaña conjunta opt-in."
+          ]
+        },
+        "cta": "Coordinar una primera charla"
+      },
       "porqueHeading": "Por qué con CASACUSIA",
       "porqueSub": "Qué aportamos a la alianza",
       "porqueItems": [
         { "title": "Legitimidad experiencial", "desc": "Lucas y el equipo vivimos lo que comunicamos." },
         { "title": "Comunidad activa", "desc": "Audiencia real y comprometida en IG, TikTok, YouTube y podcast." },
-        { "title": "Red territorial", "desc": "Presencia en CABA, Misiones, Mendoza, Bariloche, Córdoba, La Plata y Madrid." },
+        { "title": "Red territorial", "desc": "Presencia en CABA, Misiones, Mendoza, Bariloche, Córdoba, La Plata, Madrid, Málaga y CDMX. 9 ciudades alcanzadas." },
         { "title": "Equipo interdisciplinario", "desc": "Profesionales con rigor + sensibilidad." },
         { "title": "Marca querida", "desc": "Narrativa cálida, humana, sin tecnicismo." }
       ],
@@ -481,44 +561,68 @@
     }
   },
   "programas": {
-    "title": "Programas · Comunidad, herramientas y concientización",
-    "description": "Los programas de CASACUSIA: encuentros presenciales y virtuales, red de familias, podcast Sordo pero no mudo, charlas institucionales.",
+    "title": "Programas de Casacusia",
+    "description": "Encuentros presenciales y virtuales, red de familias, podcast Sordo pero no mudo, CAMI y Recursera.",
+    "heading": "Programas",
+    "verDetalle": "Ver detalle",
+    "proximamente": "Próximamente",
+    "items": {}
+  },
+  "prensa": {
+    "title": "Prensa · Casacusia",
+    "description": "Información institucional, frases para citar, datos y contacto de prensa de la Fundación Casacusia.",
     "hero": {
-      "eyebrow": "Programas",
-      "title": "Los programas de CASACUSIA",
-      "subtitle": "Encuentros, red de familias, podcast y charlas institucionales. Los programas con los que CASACUSIA acompaña a la comunidad."
+      "eyebrow": "Prensa",
+      "title": "Información para medios y comunicación.",
+      "subtitle": "Datos, frases y contacto directo para entrevistar, citar o cubrir el trabajo de la Fundación Casacusia."
     },
-    "items": {
-      "encuentros": {
-        "titulo": "Encuentros presenciales",
-        "subtitulo": "Espacios de comunidad en persona",
-        "resumen": "Encuentros en distintas ciudades para conectar y conocer otras personas con hipoacusia.",
-        "cta": "Próximos encuentros"
-      },
-      "encuentros-virtuales": {
-        "titulo": "Encuentros virtuales",
-        "subtitulo": "Conectate desde donde estés",
-        "resumen": "Encuentros virtuales abiertos a todo el mundo, para conocer historias, compartir experiencias y evacuar dudas.",
-        "cta": "Conocer más"
-      },
-      "red-padres-madres": {
-        "titulo": "Red de familias",
-        "subtitulo": "220+ familias que te entienden",
-        "resumen": "El espacio de familias es para todo tipo de familiares (incluyendo abuelos, tíos, etc.).",
-        "cta": "Sumarse a la red"
-      },
-      "podcast": {
-        "titulo": "Sordo pero no mudo",
-        "subtitulo": "El podcast de CASACUSIA",
-        "resumen": "70 episodios, con entrevistas a personas con hipoacusia y a profesionales de distintos temas.",
-        "cta": "Escuchar episodios"
-      },
-      "charlas-corporativas": {
-        "titulo": "Charlas institucionales",
-        "subtitulo": "Empatía, accesibilidad, diversidad",
-        "resumen": "Charlas y workshops para organizaciones, universidades y escuelas.",
-        "cta": "Solicitar charla"
-      }
+    "quienes": {
+      "title": "¿Qué es Casacusia?",
+      "p1": "Casacusia es una Fundación dedicada a transformar la calidad de vida de las personas y familias con hipoacusia. Trabaja desde tres ejes: generar comunidad, brindar herramientas y fomentar una sociedad más consciente.",
+      "p2": "Su fundador, Lucas Adlerstein, perdió la audición a los 15 años. Casacusia nace para que nadie tenga que elegir entre escuchar y estar.",
+      "fundacion": "Año de fundación",
+      "fundador": "Fundador y director",
+      "web": "Sitio oficial",
+      "contacto": "Email institucional"
+    },
+    "datos": {
+      "title": "Datos actuales",
+      "actualizado": "Actualizado al {fecha}.",
+      "participantes": "Personas que pasaron por encuentros",
+      "encuentros": "Encuentros realizados",
+      "familias": "Familias en la Red de Padres y Madres",
+      "episodios": "Episodios del podcast",
+      "paises": "Países donde nos escuchan",
+      "voluntarios": "Voluntarios activos",
+      "impresiones": "Impresiones en redes (último mes)"
+    },
+    "frases": {
+      "title": "Frases para citar",
+      "subtitulo": "Citables literalmente, atribuibles a Casacusia o a Lucas Adlerstein, su fundador.",
+      "items": [
+        "La discapacidad no es el silencio, es la soledad.",
+        "Trabajamos para las personas, no para los oídos.",
+        "La hipoacusia no se cura: se acepta, se transita, se comparte.",
+        "Que nadie tenga que elegir entre escuchar y estar.",
+        "1 de cada 20 personas en el mundo tiene algún grado de pérdida auditiva.",
+        "Casacusia nace para mostrar que no estamos solos."
+      ]
+    },
+    "recursos": {
+      "title": "Recursos descargables",
+      "subtitulo": "Logos, fotos, fact-sheet y kit institucional. Para uso editorial en medios y publicaciones.",
+      "logos": "Logos en alta resolución",
+      "fotos": "Fotos del fundador y del equipo",
+      "factSheet": "Fact-sheet institucional (PDF)",
+      "equipo": "Bios y créditos del equipo",
+      "proximamente": "Disponible próximamente",
+      "mientras": "Mientras tanto, podés pedirnos cualquiera de estos materiales por mail y los enviamos en el día."
+    },
+    "contacto": {
+      "title": "Escribinos directo.",
+      "body": "Para entrevistas, declaraciones, fact-checking o coordinación de cobertura. Respondemos en menos de 48 horas hábiles.",
+      "cta": "Escribir a prensa",
+      "form": "Ir al formulario de contacto"
     }
   },
   "contacto": {
@@ -538,6 +642,8 @@
         "personal": "Consulta personal",
         "voluntariado": "Voluntariado",
         "prensa": "Prensa / medios",
+        "comunicacion": "Comunicación",
+        "programas": "Programas",
         "empresa": "Empresa / institución",
         "profesional": "Profesional",
         "otro": "Otro"
@@ -555,7 +661,7 @@
     }
   },
   "footer": {
-    "about": "Fundación argentina con el compromiso de mejorar la calidad de vida de las personas con pérdida auditiva desde el encuentro, lo lúdico, la reflexión y el poder humano.",
+    "about": "Trabajamos para transformar la calidad de vida de las personas y familias con hipoacusia.",
     "nav": "Explorar",
     "social": "Conectemos",
     "legal": "Legal",

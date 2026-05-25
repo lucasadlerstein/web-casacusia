@@ -10,6 +10,8 @@ import { locales, type Locale } from "@/lib/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
+import { CountryProvider } from "@/components/country/CountryProvider";
+import { getCountry, hasCountryOverride } from "@/lib/country-server";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,6 +74,8 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
   const tA11y = await getTranslations({ locale, namespace: "a11y" });
+  const country = await getCountry();
+  const isOverride = await hasCountryOverride();
 
   return (
     <html
@@ -83,11 +87,13 @@ export default async function LocaleLayout({
           {tA11y("skipToContent")}
         </a>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <Header />
-          <main id="main" className="flex-1">
-            {children}
-          </main>
-          <Footer />
+          <CountryProvider initialCountry={country} initialOverride={isOverride}>
+            <Header />
+            <main id="main" className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </CountryProvider>
         </NextIntlClientProvider>
         <OrganizationSchema />
       </body>

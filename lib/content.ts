@@ -24,6 +24,13 @@ export const comisiones = [
 ] as const;
 export type Comision = (typeof comisiones)[number];
 
+export const categoriasAuditivas = [
+  "audifonos",
+  "implantes",
+  "centro-medico"
+] as const;
+export type CategoriaAuditiva = (typeof categoriasAuditivas)[number];
+
 const AliadoSchema = z.object({
   slug: z.string(),
   nombre: z.string(),
@@ -31,6 +38,7 @@ const AliadoSchema = z.object({
   web: z.string().url().optional(),
   sector: z.string(),
   tipoAlianza: z.array(z.enum(["financiera", "producto", "servicio", "institucional", "comunicacional"])),
+  categoriaAuditiva: z.enum(categoriasAuditivas).optional(),
   proyectoApoyado: z.array(z.string()),
   impacto: z.string(),
   destacado: z.boolean(),
@@ -117,12 +125,46 @@ const EpisodioSchema = z.object({
 });
 export type Episodio = z.infer<typeof EpisodioSchema>;
 
+export const testimonioAudiencias = [
+  "persona-con-perdida-auditiva",
+  "familia",
+  "profesional",
+  "aliado-curioso"
+] as const;
+export type TestimonioAudiencia = (typeof testimonioAudiencias)[number];
+
+export const testimonioImpactos = [
+  "identificacion",
+  "informacion",
+  "aceptacion",
+  "accion",
+  "orgullo",
+  "pertenencia"
+] as const;
+export type TestimonioImpacto = (typeof testimonioImpactos)[number];
+
+export const testimonioProyectos = [
+  "podcast",
+  "encuentros-presenciales",
+  "encuentros-virtuales",
+  "red-familias",
+  "contenido-redes",
+  "charlas"
+] as const;
+export type TestimonioProyecto = (typeof testimonioProyectos)[number];
+
 const TestimonioSchema = z.object({
   id: z.string(),
   texto: z.string(),
-  autor: z.string(),
-  ubicacion: z.string().optional(),
+  autor: z.string().nullable().optional(),
+  ubicacion: z.string().nullable().optional(),
   contexto: z.string().optional(),
+  fraseDestacada: z.string().optional(),
+  origen: z.string().optional(),
+  audiencia: z.array(z.enum(testimonioAudiencias)).optional(),
+  tipoImpacto: z.array(z.enum(testimonioImpactos)).optional(),
+  proyectosAsociados: z.array(z.enum(testimonioProyectos)).optional(),
+  etapa: z.string().nullable().optional(),
   destacado: z.boolean()
 });
 export type Testimonio = z.infer<typeof TestimonioSchema>;
@@ -136,6 +178,8 @@ const ImpactoSchema = z.object({
   paisesAlcanzados: z.number().optional(),
   voluntariosActivos: z.number(),
   horasDonadasAnuales: z.number(),
+  impresionesUltimoMes: z.number().optional(),
+  comparacionPoblacional: z.string().optional(),
   ultimaActualizacion: z.string()
 });
 export type Impacto = z.infer<typeof ImpactoSchema>;
@@ -158,10 +202,23 @@ const ReconocimientoSchema = z.object({
 });
 export type Reconocimiento = z.infer<typeof ReconocimientoSchema>;
 
-export function getAliados(opts: { destacados?: boolean } = {}): Aliado[] {
-  const all = z.array(AliadoSchema).parse(aliadosData).filter((a) => a.activo);
-  const filtered = opts.destacados ? all.filter((a) => a.destacado) : all;
-  return filtered.sort((a, b) => a.orden - b.orden);
+export function getAliados(opts: {
+  destacados?: boolean;
+  categoriaAuditiva?: CategoriaAuditiva;
+} = {}): Aliado[] {
+  let all = z.array(AliadoSchema).parse(aliadosData).filter((a) => a.activo);
+  if (opts.destacados) all = all.filter((a) => a.destacado);
+  if (opts.categoriaAuditiva) all = all.filter((a) => a.categoriaAuditiva === opts.categoriaAuditiva);
+  return all.sort((a, b) => a.orden - b.orden);
+}
+
+export function getAliadosRedAuditiva(): Record<CategoriaAuditiva, Aliado[]> {
+  const all = getAliados();
+  return {
+    audifonos: all.filter((a) => a.categoriaAuditiva === "audifonos"),
+    implantes: all.filter((a) => a.categoriaAuditiva === "implantes"),
+    "centro-medico": all.filter((a) => a.categoriaAuditiva === "centro-medico")
+  };
 }
 
 export function getAliadoBySlug(slug: string): Aliado | null {
@@ -219,9 +276,17 @@ export function getCategoriasPodcastConConteo(): { categoria: PodcastCategoria; 
     .filter((c) => c.count > 0);
 }
 
-export function getTestimonios(opts: { destacados?: boolean } = {}): Testimonio[] {
-  const all = z.array(TestimonioSchema).parse(testimoniosData);
-  return opts.destacados ? all.filter((t) => t.destacado) : all;
+export function getTestimonios(opts: {
+  destacados?: boolean;
+  proyecto?: TestimonioProyecto;
+  audiencia?: TestimonioAudiencia;
+  limit?: number;
+} = {}): Testimonio[] {
+  let all = z.array(TestimonioSchema).parse(testimoniosData);
+  if (opts.destacados) all = all.filter((t) => t.destacado);
+  if (opts.proyecto) all = all.filter((t) => t.proyectosAsociados?.includes(opts.proyecto!));
+  if (opts.audiencia) all = all.filter((t) => t.audiencia?.includes(opts.audiencia!));
+  return opts.limit ? all.slice(0, opts.limit) : all;
 }
 
 export function getImpacto(): Impacto {

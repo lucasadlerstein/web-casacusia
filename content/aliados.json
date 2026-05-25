@@ -74,12 +74,13 @@
         "logo": "/aliados/MEDEL-min.png",
         "sector": "Salud",
         "tipoAlianza": ["institucional", "comunicacional"],
+        "categoriaAuditiva": "implantes",
         "proyectoApoyado": ["podcast"],
         "impacto": "Información técnica sobre implantes cocleares.",
-        "destacado": true,
+        "destacado": false,
         "orden": 5,
         "desde": "2025-04",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "tecnosalud",
@@ -89,10 +90,10 @@
         "tipoAlianza": ["institucional"],
         "proyectoApoyado": ["encuentros"],
         "impacto": "Alianza institucional en el sector salud.",
-        "destacado": true,
+        "destacado": false,
         "orden": 7,
         "desde": "2025-05",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "instituto-superior-otorrinolaringologia",
@@ -100,6 +101,7 @@
         "logo": "/aliados/iso-min.png",
         "sector": "Salud",
         "tipoAlianza": ["institucional"],
+        "categoriaAuditiva": "centro-medico",
         "proyectoApoyado": ["charlas-corporativas"],
         "impacto": "Capacitación y referencias profesionales.",
         "destacado": false,
@@ -219,8 +221,8 @@
         "tipoAlianza": ["producto"],
         "proyectoApoyado": ["donaciones"],
         "impacto": "Infraestructura de pagos y donaciones.",
-        "destacado": true,
-        "orden": 3,
+        "destacado": false,
+        "orden": 999,
         "desde": "2025-05",
         "activo": true
     },
@@ -256,12 +258,13 @@
         "logo": "/aliados/Amplitone_Pediatrico_sinBorde-min.png",
         "sector": "Salud",
         "tipoAlianza": ["institucional"],
+        "categoriaAuditiva": "audifonos",
         "proyectoApoyado": ["red-padres-madres"],
         "impacto": "Especialistas en audiología pediátrica.",
-        "destacado": true,
+        "destacado": false,
         "orden": 6,
         "desde": "2025-04",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "calm-es-simple",
@@ -352,7 +355,7 @@
         "destacado": false,
         "orden": 27,
         "desde": "2025-08",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "a20-indumentaria",

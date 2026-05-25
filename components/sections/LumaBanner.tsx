@@ -57,7 +57,7 @@ export function LumaBanner() {
 
           <div className="flex items-center gap-3">
             <Button 
-              href="https://lu.ma/hipoacusia" 
+              href="https://luma.com/hipoacusia" 
               className="bg-brand-teal text-ink hover:bg-brand-teal-light w-full py-2.5 text-sm"
               target="_blank"
               rel="noopener noreferrer"

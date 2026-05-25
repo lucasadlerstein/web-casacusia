@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Info, MessageCircle, Mail, Instagram } from "lucide-react";
+import { Info, MessageCircle, Mail, Instagram, Linkedin } from "lucide-react";
 
 import { PageHero } from "@/components/ui/PageHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -83,7 +83,32 @@ export default async function ContactoPage({
                   </div>
                 </a>
               </li>
-
+              <li>
+                <a
+                  href={site.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start gap-3 rounded-2xl bg-surface-card border border-surface-line p-5 hover:border-brand-teal transition-colors"
+                >
+                  <Linkedin size={20} aria-hidden className="text-brand-teal mt-0.5" />
+                  <div>
+                    <p className="font-semibold">LinkedIn</p>
+                    <p className="text-sm text-ink-soft">Fundación Casacusia</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${site.email}`}
+                  className="group flex items-start gap-3 rounded-2xl bg-surface-card border border-surface-line p-5 hover:border-brand-teal transition-colors"
+                >
+                  <Mail size={20} aria-hidden className="text-brand-teal mt-0.5" />
+                  <div>
+                    <p className="font-semibold">Email</p>
+                    <p className="text-sm text-ink-soft">{site.email}</p>
+                  </div>
+                </a>
+              </li>
             </ul>
           </aside>
 

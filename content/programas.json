@@ -2,10 +2,10 @@
   {
     "slug": "encuentros",
     "titulo": "Encuentros presenciales",
-    "subtitulo": "Espacios de comunidad en persona",
-    "resumen": "Encuentros en CABA, Misiones, Mendoza, Bariloche, Córdoba, La Plata y Madrid. Para dejar de sentirse solo.",
+    "subtitulo": "Nos vemos en persona",
+    "resumen": "Encuentros facilitados donde contamos nuestra historia y conocemos a otras personas con pérdida auditiva en distintas ciudades.",
     "categorias": ["comunidad"],
-    "cta": { "label": "Próximos encuentros", "href": "/calendario" },
+    "cta": { "label": "Ver calendario", "href": "/calendario?tag=presencial" },
     "destacado": true,
     "orden": 1
   },
@@ -13,41 +13,51 @@
     "slug": "encuentros-virtuales",
     "titulo": "Encuentros virtuales",
     "subtitulo": "Conectate desde donde estés",
-    "resumen": "Encuentros online por Google Meet para toda la diáspora y el interior.",
+    "resumen": "Veni a compartir experiencias de la hipoacusia, un mundo que muchos vivimos pero que pocos entienden. No es obligatorio hablar, habla quien quiere.",
     "categorias": ["comunidad"],
-    "cta": { "label": "Conocer más", "href": "/calendario" },
+    "cta": { "label": "Ver calendario", "href": "/calendario?tag=virtual" },
     "destacado": true,
     "orden": 2
   },
   {
     "slug": "red-padres-madres",
     "titulo": "Red de familias",
-    "subtitulo": "220+ familias que te entienden",
-    "resumen": "Espacio virtual gratuito para padres y madres de chicos con hipoacusia.",
+    "subtitulo": "Familias que te entienden",
+    "resumen": "Que tu hijo nazca sordo o pierda la audición no es un camino fácil. Por eso te conectamos con familias que viven y vivieron algo similar.",
     "categorias": ["comunidad"],
-    "cta": { "label": "Sumarse a la red", "href": "/programas/red-padres-madres" },
+    "cta": { "label": "Encuentros virtuales de familias", "href": "/calendario?tag=familias" },
     "destacado": true,
     "orden": 3
   },
   {
     "slug": "podcast",
-    "titulo": "Sordo pero no mudo",
-    "subtitulo": "El podcast de CASACUSIA",
-    "resumen": "60+ episodios con transcripción completa. Conversaciones, identificación y aprendizaje.",
+    "titulo": "Podcast",
+    "subtitulo": "Sordo pero no mudo",
+    "resumen": "Conocé historias de personas con hipoacusia y familias, también entrevistas a profesionales de todo tipo. Recomendamos leer el listado de episodios y ver cuál te interesa.",
     "categorias": ["herramientas"],
-    "cta": { "label": "Escuchar episodios", "href": "/podcast" },
+    "cta": { "label": "Ver episodios", "href": "/podcast" },
     "destacado": true,
     "orden": 4
   },
   {
     "slug": "cami",
-    "titulo": "CAMI · Asistente virtual",
-    "subtitulo": "Tu guía en el camino de la hipoacusia",
-    "resumen": "Un asistente que te ayuda a entender tu diagnóstico, conocer tus opciones y conectarte con recursos.",
+    "titulo": "CAMI",
+    "subtitulo": "Asistente virtual",
+    "resumen": "Un asistente virtual que te permite acceder a los recursos que necesites en el momento indicado, resolver tus dudas, acercarte a los proyectos y tener más información.",
     "categorias": ["herramientas"],
-    "cta": { "label": "Próximamente", "href": "/programas" },
+    "cta": { "label": "Probar en Instagram", "href": "https://www.instagram.com/hipoacusico/" },
     "destacado": true,
     "orden": 5
+  },
+  {
+    "slug": "comunidad-whatsapp",
+    "titulo": "Comunidad de WhatsApp",
+    "subtitulo": "Más de 36 grupos",
+    "resumen": "Más de 36 grupos para elegir según tu etapa, ciudad o situación. El espacio donde la comunidad se encuentra día a día.",
+    "categorias": ["comunidad"],
+    "cta": { "label": "Sumarme a la comunidad", "href": "https://chat.whatsapp.com/IUlYFEaFWiBHaFmzwvqL4D" },
+    "destacado": true,
+    "orden": 6
   },
   {
     "slug": "recursera",
@@ -57,6 +67,6 @@
     "categorias": ["herramientas"],
     "cta": { "label": "Próximamente", "href": "/programas" },
     "destacado": true,
-    "orden": 6
+    "orden": 7
   }
 ]

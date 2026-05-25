@@ -4,7 +4,7 @@ import { headers } from "next/headers";
 import { z } from "zod";
 
 const contactSchema = z.object({
-  type: z.enum(["personal", "voluntariado", "prensa", "empresa", "profesional", "otro"]),
+  type: z.enum(["personal", "voluntariado", "prensa", "comunicacion", "empresa", "profesional", "programas", "otro"]),
   name: z.string().min(2).max(120),
   email: z.string().email(),
   phone: z.string().max(40).optional().or(z.literal("")),
@@ -15,6 +15,20 @@ const contactSchema = z.object({
   // Honeypot: must be empty
   website: z.string().max(0).optional().or(z.literal(""))
 });
+
+type ContactType = z.infer<typeof contactSchema>["type"];
+
+/** Routing de destinatarios según el tipo de consulta. */
+const ROUTING: Record<ContactType, { to: string; cc?: string[] }> = {
+  personal:      { to: "lucas@casacusia.org" },
+  voluntariado:  { to: "melu@casacusia.org" },
+  programas:     { to: "melu@casacusia.org" },
+  prensa:        { to: "valen@casacusia.org" },
+  comunicacion:  { to: "valen@casacusia.org" },
+  empresa:       { to: "lucas@casacusia.org", cc: ["vero@casacusia.org", "judi@casacusia.org", "nico@casacusia.org"] },
+  profesional:   { to: "lucas@casacusia.org" },
+  otro:          { to: "lucas@casacusia.org" }
+};
 
 const rateBuckets = new Map<string, { count: number; ts: number }>();
 const WINDOW_MS = 60_000;
@@ -59,11 +73,16 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
     return { ok: true };
   }
 
-  // TODO: Envío real con proveedor (Resend/SendGrid/SMTP). Por ahora queda log server-side.
+  const route = ROUTING[parsed.data.type];
+
+  // TODO: Envío real con proveedor (Resend/SendGrid/SMTP).
+  // Mientras tanto loggeamos el destinatario calculado para verificar el routing.
   console.info("[contact] submission", {
     type: parsed.data.type,
     name: parsed.data.name,
-    email: parsed.data.email.replace(/(.{2}).+(@.+)/, "$1***$2")
+    email: parsed.data.email.replace(/(.{2}).+(@.+)/, "$1***$2"),
+    to: route.to,
+    cc: route.cc ?? []
   });
 
   return { ok: true };

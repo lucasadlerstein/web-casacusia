@@ -10,10 +10,13 @@ import { ProximoEncuentro } from "@/components/sections/ProximoEncuentro";
 import { PodcastDestacado } from "@/components/sections/PodcastDestacado";
 import { CuatroCaminos } from "@/components/sections/CuatroCaminos";
 import { Newsletter } from "@/components/sections/Newsletter";
+import { Testimonial } from "@/components/sections/Testimonial";
+import { ManifiestoHome } from "@/components/sections/ManifiestoHome";
+import { EncuestaViviendo } from "@/components/sections/EncuestaViviendo";
 
 import { buildMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
-import { getEpisodios } from "@/lib/content";
+import { getEpisodios, getTestimonios } from "@/lib/content";
 import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
@@ -40,11 +43,15 @@ export default async function HomePage({
   setRequestLocale(locale);
 
   const episodios = getEpisodios();
+  const testimonios = getTestimonios({ destacados: true });
 
   return (
     <>
       <Hero />
       <Esencia />
+      <ManifiestoHome />
+      <EncuestaViviendo />
+      <Testimonial testimonios={testimonios} />
       <ProximoEncuentro />
       <EjesYProgramas />
       <ImpactStats />

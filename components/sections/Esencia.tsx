@@ -19,29 +19,38 @@ export function Esencia() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Columna Izquierda: Texto */}
           <div className="max-w-xl z-10">
-            <p className="font-display text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-rosa mb-4">
-              {t("eyebrow")}
-            </p>
-
             <h2
               id="esencia-title"
-              className="font-display text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1.1] text-white"
+              className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-white"
             >
-              {t("title")}
+              <span className="block">
+                {t("titleLine1Pre")}{" "}
+                <s className="text-white/40 decoration-rosa decoration-[6px] md:decoration-[8px]">
+                  {t("titleLine1Tachado")}
+                </s>
+              </span>
+              <span className="block mt-2">{t("titleLine2")}</span>
             </h2>
 
             <p className="mt-8 text-lg leading-relaxed text-white/80 md:text-xl font-medium">
-              {t("body")}
+              {t("bodyExtra")}
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-3">
               <Button
-                href="/nosotros/equipo"
+                href="/sumate"
+                size="lg"
+                className="bg-white text-ink hover:bg-white/90"
+              >
+                {t("cta")}
+              </Button>
+              <Button
+                href="/nosotros#que-es-title"
                 variant="secondary"
                 size="lg"
                 className="border-white/20 bg-white/10 text-white backdrop-blur-md hover:bg-white hover:text-ink transition-all duration-300"
               >
-                {t("cta")}
+                {t("ctaSecondary")}
               </Button>
             </div>
           </div>
@@ -54,7 +63,7 @@ export function Esencia() {
             {/* Contenedor principal de la imagen */}
             <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
               <Image
-                src="/fotos/propuestas/Casacusia_GZ-21.jpg"
+                src="/fotos/sumate-comunidad.jpg"
                 alt="Comunidad Casacusia"
                 fill
                 className="object-cover object-center"

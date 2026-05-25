@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 
-import { PageHero } from "@/components/ui/PageHero";
-import { Section } from "@/components/ui/Section";
 import { buildMetadata } from "@/lib/seo";
 import { getUpcomingEvents } from "@/lib/luma";
 import { EventFilterClient } from "@/components/sections/EventFilterClient";
@@ -49,20 +47,62 @@ export default async function CalendarioPage({
     mundo: tFilters("filtros.mundo"),
     inscribite: tFilters("inscribite"),
     gratuito: tFilters("gratuito"),
+    verEnLuma: tFilters("verEnLuma"),
   };
 
   return (
-    <>
-      <PageHero
-        eyebrow={t("eyebrow")}
-        title={t("heroTitle")}
-        subtitle={t("heroSubtitle")}
-      />
-      <Section background="default">
-        <div className="rounded-3xl bg-[#143642] p-8 md:p-12">
-          <EventFilterClient events={events} translations={translations} />
+    <main className="bg-surface-bg">
+      <div className="container max-w-4xl mx-auto px-4 pt-16 pb-20 md:pt-20 md:pb-24">
+        <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-ink">
+          {t("heading")}
+        </h1>
+        <p className="mt-4 text-base md:text-lg text-ink-soft leading-relaxed max-w-2xl">
+          {t("intro")}
+        </p>
+
+        <div className="mt-10">
+          <EventFilterClient
+            events={events}
+            translations={translations}
+            layout="vertical"
+            variant="light"
+          />
         </div>
-      </Section>
-    </>
+
+        {/* Embed Luma como respaldo si no llegamos a cargar eventos */}
+        {events.length === 0 && (
+          <div className="mt-16">
+            <h2 className="font-display text-xl md:text-2xl font-bold text-ink mb-3">
+              Calendario en vivo
+            </h2>
+            <p className="text-ink-soft mb-5">
+              Estos son los eventos directamente desde Luma. Inscribite desde ahí.
+            </p>
+            <div className="overflow-hidden rounded-2xl border border-surface-line bg-white shadow-sm">
+              <iframe
+                src="https://luma.com/embed/calendar/cal-hipoacusia/events"
+                title="Calendario Casacusia en Luma"
+                width="100%"
+                height="600"
+                frameBorder="0"
+                style={{ border: 0 }}
+                aria-label="Calendario de encuentros en Luma"
+              />
+            </div>
+            <p className="mt-3 text-sm text-ink-muted">
+              ¿No ves el calendario?{" "}
+              <a
+                href="https://luma.com/hipoacusia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 hover:text-ink"
+              >
+                Abrilo directo en luma.com/hipoacusia →
+              </a>
+            </p>
+          </div>
+        )}
+      </div>
+    </main>
   );
 }

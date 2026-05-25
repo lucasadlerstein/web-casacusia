@@ -7,15 +7,13 @@ import { Menu, X } from "lucide-react";
 import { Link } from "@/lib/i18n/navigation";
 import { Logo } from "./Logo";
 import { LangSwitcher } from "./LangSwitcher";
+import { CountryIndicator } from "@/components/country/CountryIndicator";
 import { cn } from "@/lib/utils/cn";
 
 const primaryNav = [
   { href: "/nosotros",   key: "nosotros"   },
   { href: "/programas",  key: "programas"  },
-  { href: "/calendario", key: "calendario" },
   { href: "/podcast",    key: "podcast"    },
-  { href: "/aliados",    key: "aliados"    },
-  { href: "/sumate",     key: "sumate"     },
   { href: "/contacto",   key: "contacto"   }
 ] as const;
 
@@ -48,6 +46,7 @@ export function Header() {
 
         {/* Right actions */}
         <div className="ml-auto flex items-center gap-2 md:gap-3">
+          <CountryIndicator />
           <LangSwitcher className="hidden sm:inline-flex" />
 
           {/* Donar — siempre visible, color verde del brand */}
@@ -93,8 +92,11 @@ export function Header() {
               {t(item.key)}
             </Link>
           ))}
-          <div className="mt-3 flex items-center justify-between border-t border-surface-line pt-4">
-            <LangSwitcher />
+          <div className="mt-3 flex items-center justify-between gap-3 border-t border-surface-line pt-4">
+            <div className="flex items-center gap-2">
+              <CountryIndicator compact />
+              <LangSwitcher />
+            </div>
             <Link
               href="/sumate/donar"
               onClick={() => setOpen(false)}

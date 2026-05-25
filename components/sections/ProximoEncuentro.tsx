@@ -22,6 +22,7 @@ export async function ProximoEncuentro() {
     mundo: t("filtros.mundo"),
     inscribite: t("inscribite"),
     gratuito: t("gratuito"),
+    verEnLuma: t("verEnLuma"),
   };
 
   return (

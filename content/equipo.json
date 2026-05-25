@@ -3,110 +3,108 @@
     "slug": "lucas-adlerstein",
     "nombre": "Lucas",
     "apellido": "Adlerstein",
-    "rol": "Fundador y director",
-    "esFundador": true,
+    "rol": "Director",
+    "esFundador": false,
     "foto": "/images/equipo/Lucas.jfif",
-    "bioCorta": "Perdió la audición a los 15 años. Creador de contenido y referente en discapacidad auditiva. Fundó CASACUSIA para transformar cómo se vive la hipoacusia.",
-    "quotePersonal": "La discapacidad no es el silencio, es la soledad.",
+    "bioCorta": "Perdió la audición a los 15 años. Creador de contenido y referente en pérdida auditiva. Lleva adelante Casacusia para transformar cómo se vive la hipoacusia.",
     "linkedin": "https://www.linkedin.com/in/lucasadlerstein",
     "orden": 1
   },
   {
-    "slug": "rama",
-    "nombre": "Rama",
-    "apellido": "",
-    "rol": "Equipo fundador",
-    "esFundador": false,
-    "foto": "/images/equipo/Rama.jfif",
-    "bioCorta": "Parte del núcleo que sostiene CASACUSIA desde su inicio. Aporta su visión estratégica y experiencia en el desarrollo de proyectos sociales.",
-    "linkedin": "https://www.linkedin.com/in/ramirostrauss/",
-    "orden": 2
-  },
-
-  {
     "slug": "valen",
     "nombre": "Valen",
-    "apellido": "",
+    "apellido": "Galeano",
     "rol": "Comunicación",
     "esFundador": false,
     "foto": "/images/equipo/Valen.jfif",
-    "bioCorta": "Coordina la comunicación de CASACUSIA. Especialista en medios digitales, relaciones públicas y estrategia de contenidos.",
+    "bioCorta": "Coordina la comunicación de Casacusia. Especialista en medios digitales, relaciones públicas y estrategia de contenidos.",
     "linkedin": "https://www.linkedin.com/in/valentina-galeano-2a716a19b/",
-    "orden": 4
+    "orden": 2
   },
   {
     "slug": "melu",
     "nombre": "Melu",
-    "apellido": "",
-    "rol": "Coordinación general",
+    "apellido": "Klecki",
+    "rol": "Programas y Voluntariado",
     "esFundador": false,
     "foto": "/images/equipo/Melu.jfif",
-    "bioCorta": "Cuida que los equipos y proyectos funcionen con claridad. Su formación le permite gestionar operaciones y optimizar procesos internos.",
+    "bioCorta": "Cuida que los equipos y los proyectos funcionen con claridad. Coordina los programas y la red de voluntarios.",
     "linkedin": "https://www.linkedin.com/in/melanieklecki/",
-    "orden": 5
+    "orden": 3
   },
   {
     "slug": "shari",
     "nombre": "Shari",
-    "apellido": "",
-    "rol": "Líder de Encuentros",
+    "apellido": "Merin",
+    "rol": "Encuentros presenciales",
     "esFundador": false,
     "foto": "/images/equipo/Shari.jfif",
-    "bioCorta": "Lidera los encuentros presenciales y virtuales. Aporta su expertise en dinámicas grupales y contención comunitaria.",
+    "bioCorta": "Lidera los encuentros presenciales. Aporta su expertise en dinámicas grupales y contención comunitaria.",
     "linkedin": "https://www.linkedin.com/in/sharon-merin/",
-    "orden": 6
+    "orden": 4
+  },
+  {
+    "slug": "manu",
+    "nombre": "Manu",
+    "apellido": "Torres",
+    "rol": "Equipo operativo",
+    "esFundador": false,
+    "foto": "/images/equipo/Manuel.jfif",
+    "bioCorta": "Sostiene la operación del día a día. Especializado en desarrollo tecnológico, diseño de producto y experiencia de usuario.",
+    "linkedin": "https://www.linkedin.com/in/manueltorres02/",
+    "orden": 5
   },
   {
     "slug": "toto",
     "nombre": "Toto",
-    "apellido": "",
-    "rol": "Líder operativo de Encuentros",
+    "apellido": "Blumenkranck",
+    "rol": "Encuentros presenciales",
     "esFundador": false,
     "foto": "/images/equipo/placeholder.svg",
-    "bioCorta": "Coordina la operación de los encuentros junto a Shari.",
+    "bioCorta": "Coordina la operación de los encuentros presenciales junto a Shari.",
+    "orden": 6
+  },
+  {
+    "slug": "rama",
+    "nombre": "Rama",
+    "apellido": "Strauss",
+    "rol": "Estrategia",
+    "esFundador": false,
+    "foto": "/images/equipo/Rama.jfif",
+    "bioCorta": "Parte del núcleo que sostiene Casacusia desde su inicio. Aporta visión estratégica y experiencia en proyectos sociales.",
+    "linkedin": "https://www.linkedin.com/in/ramirostrauss/",
     "orden": 7
   },
   {
     "slug": "nico",
     "nombre": "Nico",
     "apellido": "Bukschtein",
-    "rol": "Head of Fundraising",
+    "rol": "Alianzas",
     "esFundador": false,
     "foto": "/images/equipo/Nico.jfif",
-    "bioCorta": "Ingeniero Industrial (ITBA). Lidera la estrategia de fundraising, desarrollando relaciones con donantes y aliados estratégicos para asegurar la sostenibilidad y el crecimiento del impacto social de CASACUSIA.",
+    "bioCorta": "Ingeniero Industrial (ITBA). Lidera la estrategia de alianzas y fundraising, desarrollando relaciones con donantes y aliados estratégicos.",
     "linkedin": "https://www.linkedin.com/in/nicolasbukschtein/",
     "orden": 8
   },
   {
-    "slug": "manu",
-    "nombre": "Manu",
-    "apellido": "",
-    "rol": "Líder de la nueva web 2026",
-    "esFundador": false,
-    "foto": "/images/equipo/Manuel.jfif",
-    "bioCorta": "Lidera el proyecto de la nueva web. Especializado en desarrollo tecnológico, diseño de producto y experiencia de usuario.",
-    "linkedin": "https://www.linkedin.com/in/manueltorres02/",
-    "orden": 9
-  },
-  {
     "slug": "vero",
     "nombre": "Vero",
-    "apellido": "",
-    "rol": "Equipo",
+    "apellido": "Sheinkmann",
+    "rol": "Alianzas",
     "esFundador": false,
     "foto": "/images/equipo/Vero.jfif",
-    "bioCorta": "Licenciada en Comunicación (UBA) y Coach Ontológica. Con más de 20 años de experiencia en marketing regional para grandes marcas, es co-fundadora de Chaucha y Hormigas Group. Aporta su visión estratégica y humana al equipo.",
+    "bioCorta": "Licenciada en Comunicación (UBA) y Coach Ontológica. Más de 20 años en marketing regional para grandes marcas. Co-fundadora de Chaucha y Hormigas Group.",
     "linkedin": "https://www.linkedin.com/in/veronicascheinkman/",
-    "orden": 10
+    "orden": 9
   },
   {
     "slug": "judi",
     "nombre": "Judi",
-    "apellido": "",
-    "rol": "Equipo",
+    "apellido": "Kaufmann",
+    "rol": "Alianzas",
     "esFundador": false,
     "foto": "/images/equipo/placeholder.svg",
-    "bioCorta": "Acompaña y hace posible la misión de CASACUSIA.",
-    "orden": 11
+    "bioCorta": "Acompaña el desarrollo de alianzas y hace posible la misión de Casacusia.",
+    "orden": 10
   }
 ]

@@ -5,7 +5,12 @@ import { setRequestLocale } from "next-intl/server";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { getProgramas } from "@/lib/content";
+import { Testimonial } from "@/components/sections/Testimonial";
+import {
+  getProgramas,
+  getTestimonios,
+  type TestimonioProyecto
+} from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
@@ -29,6 +34,14 @@ export async function generateMetadata({
   });
 }
 
+/** Mapping de slug de programa a categoría de testimonio. */
+const slugToProyecto: Record<string, TestimonioProyecto | undefined> = {
+  encuentros: "encuentros-presenciales",
+  "encuentros-virtuales": "encuentros-virtuales",
+  "red-padres-madres": "red-familias",
+  podcast: "podcast"
+};
+
 export default async function ProgramaDetailPage({
   params
 }: {
@@ -39,6 +52,9 @@ export default async function ProgramaDetailPage({
   const programa = getProgramas().find((p) => p.slug === slug);
   if (!programa) notFound();
 
+  const proyecto = slugToProyecto[slug];
+  const testimonios = proyecto ? getTestimonios({ proyecto }) : [];
+
   return (
     <>
       <PageHero
@@ -46,11 +62,16 @@ export default async function ProgramaDetailPage({
         title={programa.titulo}
         subtitle={programa.resumen}
       />
+
+      {testimonios.length > 0 && <Testimonial testimonios={testimonios} />}
+
       <Section background="default">
         <div className="max-w-3xl space-y-6 text-ink leading-relaxed">
-          <p className="text-lg text-ink-soft">
-            Esta landing se completa con contenido extendido en Ola 2 (descripción larga del programa, próximos eventos, testimonios, preguntas frecuentes y cómo sumarse).
-          </p>
+          {testimonios.length === 0 && (
+            <p className="text-lg text-ink-soft">
+              Esta landing se completa con más contenido pronto: descripción extendida, próximos eventos, preguntas frecuentes y cómo sumarse.
+            </p>
+          )}
           <div className="pt-4 flex flex-wrap gap-3">
             <Button href="/sumate">Ser parte</Button>
             <Button href="/contacto" variant="secondary">Escribirnos</Button>

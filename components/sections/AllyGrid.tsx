@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -10,15 +7,13 @@ import { getAliados, type Aliado } from "@/lib/content";
 
 type Props = { variant?: "home" | "full" };
 
+const SPONSORS_MES_A_MES = ["marval", "helen-diller-foundation"];
+
 export function AllyGrid({ variant = "home" }: Props) {
   const t = useTranslations("home.aliados");
-  const allAliados = variant === "home" ? getAliados({ destacados: true }) : getAliados();
-
-  const sponsorsSlugs = ["marval", "helen-diller-foundation"];
-  const sponsors = allAliados.filter((a) => sponsorsSlugs.includes(a.slug));
-  const colaboradores = allAliados
-    .filter((a) => !sponsorsSlugs.includes(a.slug))
-    .sort((a, b) => a.orden - b.orden);
+  const allAliados = getAliados();
+  const sponsors = allAliados.filter((a) => SPONSORS_MES_A_MES.includes(a.slug));
+  const resto = allAliados.filter((a) => !SPONSORS_MES_A_MES.includes(a.slug));
 
   return (
     <Section background="default" ariaLabelledBy="ally-grid-title">
@@ -28,24 +23,33 @@ export function AllyGrid({ variant = "home" }: Props) {
         body={t("body")}
       />
 
-      <div className="space-y-10">
-        {/* Tier 1: Nos impulsan — más chicos */}
+      <div className="space-y-12">
+        {/* Nos acompañan mes a mes */}
         {sponsors.length > 0 && (
           <div>
-            <h3 className="text-lg font-display font-bold text-center mb-6 text-ink tracking-tight">{t("nosImpulsan")}</h3>
-            <ul className="flex justify-center gap-4 flex-wrap">
+            <h3 className="text-sm font-display font-bold text-center mb-5 text-ink uppercase tracking-[0.2em]">
+              Nos acompañan mes a mes
+            </h3>
+            <ul className="flex justify-center gap-6 flex-wrap">
               {sponsors.map((a) => (
-                <AliadoCard key={a.slug} aliado={a} size="sponsor" />
+                <li key={a.slug}>
+                  <AliadoCard aliado={a} size="sponsor" />
+                </li>
               ))}
             </ul>
           </div>
         )}
 
-        {/* Tier 2: Colaboraron — carrusel horizontal infinito */}
-        {colaboradores.length > 0 && (
+        {/* Grid completo del resto */}
+        {resto.length > 0 && (
           <div>
-            <h3 className="text-base font-display font-medium text-center mb-6 text-ink-soft">{t("colaboraron")}</h3>
-            <LogoCarousel aliados={colaboradores} />
+            <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 max-w-5xl mx-auto">
+              {resto.map((a) => (
+                <li key={a.slug}>
+                  <AliadoCard aliado={a} size="grid" />
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>
@@ -59,69 +63,22 @@ export function AllyGrid({ variant = "home" }: Props) {
   );
 }
 
-/** Infinite scrolling logo carousel */
-function LogoCarousel({ aliados }: { aliados: Aliado[] }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-
-    let animationId: number;
-    let pos = 0;
-    const speed = 0.5; // px per frame
-
-    function step() {
-      pos += speed;
-      const half = el!.scrollWidth / 2;
-      if (pos >= half) pos = 0;
-      el!.scrollLeft = pos;
-      animationId = requestAnimationFrame(step);
-    }
-
-    animationId = requestAnimationFrame(step);
-
-    const pause = () => cancelAnimationFrame(animationId);
-    const resume = () => { animationId = requestAnimationFrame(step); };
-    el.addEventListener("mouseenter", pause);
-    el.addEventListener("mouseleave", resume);
-
-    return () => {
-      cancelAnimationFrame(animationId);
-      el.removeEventListener("mouseenter", pause);
-      el.removeEventListener("mouseleave", resume);
-    };
-  }, []);
-
-  // Duplicate for seamless loop
-  const items = [...aliados, ...aliados];
-
-  return (
-    <div
-      ref={scrollRef}
-      className="flex gap-4 overflow-hidden"
-      style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }}
-    >
-      {items.map((a, i) => (
-        <AliadoCard key={`${a.slug}-${i}`} aliado={a} size="carousel" />
-      ))}
-    </div>
-  );
-}
-
-function AliadoCard({ aliado, size }: { aliado: Aliado; size: "sponsor" | "carousel" }) {
-  const width = size === "sponsor" ? "w-36 md:w-44" : "w-28 md:w-32 flex-shrink-0";
+function AliadoCard({ aliado, size }: { aliado: Aliado; size: "sponsor" | "grid" }) {
+  const styles = size === "sponsor"
+    ? "w-44 md:w-52 aspect-[3/2]"
+    : "aspect-[3/2]";
+  const padding = size === "sponsor" ? "p-5" : "p-3";
 
   const content = (
     <div
-      className={`group relative flex items-center justify-center aspect-[3/2] rounded-2xl bg-white p-4 shadow-sm hover:shadow-lg transition-all duration-300 ${width}`}
+      className={`group relative flex items-center justify-center rounded-2xl bg-white border border-surface-line p-4 shadow-sm hover:shadow-md hover:border-verde-dark/30 transition-all duration-300 ${styles}`}
       aria-label={`${aliado.nombre} · ${aliado.sector}`}
     >
       <Image
         src={aliado.logo}
         alt={aliado.nombre}
         fill
-        className={`object-contain opacity-70 group-hover:opacity-100 transition-all duration-300 ${size === "sponsor" ? "p-5" : "p-4"}`}
+        className={`object-contain opacity-80 group-hover:opacity-100 transition-opacity ${padding}`}
       />
       <span className="sr-only">{aliado.nombre}</span>
     </div>

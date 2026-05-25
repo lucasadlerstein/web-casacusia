@@ -1,13 +1,29 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Heart, Target, Lightbulb, Users, ShieldCheck, Sparkles, MessageSquare, HandHeart, BookOpen, Globe } from "lucide-react";
+import { Heart, Target, Lightbulb, Users, ShieldCheck, Sparkles, MessageSquare, HandHeart, BookOpen, Globe, ArrowRight } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/ui/Section";
-import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
+import { Link } from "@/lib/i18n/navigation";
+import { CuatroCaminos } from "@/components/sections/CuatroCaminos";
+import { EncuestaViviendo } from "@/components/sections/EncuestaViviendo";
+import { getVoluntarios } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
+
+const VOLUNTARIO_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSco0HoMcPR7RUJbbJsTpTf9b7iwsu0e60slEeJqhcZHEJErrg/viewform";
+
+/** Pick N random unique elements (stable per build). */
+function pickRandom<T>(arr: T[], n: number): T[] {
+  const copy = [...arr];
+  const out: T[] = [];
+  while (out.length < n && copy.length > 0) {
+    const idx = Math.floor(Math.random() * copy.length);
+    out.push(copy.splice(idx, 1)[0]!);
+  }
+  return out;
+}
 
 export async function generateMetadata({
   params
@@ -28,14 +44,21 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "nosotros" });
+  const voluntariosRandom = pickRandom(getVoluntarios(), 4);
 
   return (
     <>
-      <PageHero 
-        eyebrow={t("hero.eyebrow")}
-        title={t("hero.title")}
-        subtitle={t("hero.subtitle")}
-      />
+      {/* 1. Intro: pregunta como título + párrafo abajo */}
+      <section className="bg-surface-bg pt-20 pb-16 md:pt-28 md:pb-24">
+        <div className="container max-w-3xl mx-auto px-4 text-center">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-ink">
+            {t("hero.title")}
+          </h1>
+          <p className="mt-6 text-lg md:text-xl text-ink-soft leading-relaxed">
+            {t("hero.body")}
+          </p>
+        </div>
+      </section>
 
       {/* 2. ¿Qué es la hipoacusia? (Stats Cards) */}
       <Section background="default" ariaLabelledBy="que-es-title" className="pt-10">
@@ -233,6 +256,44 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
         </ul>
       </Section>
 
+      {/* 5.5 Voluntarios random */}
+      {voluntariosRandom.length > 0 && (
+        <Section background="default" ariaLabelledBy="vols-title" className="pb-8">
+          <SectionHeading
+            eyebrow={t("voluntariosBloque.eyebrow")}
+            title={<span id="vols-title">{t("voluntariosBloque.title")}</span>}
+            body={t("voluntariosBloque.subtitle")}
+            className="mx-auto text-center"
+          />
+          <ul className="mt-10 grid gap-5 grid-cols-2 sm:grid-cols-4 max-w-4xl mx-auto">
+            {voluntariosRandom.map((v) => (
+              <li key={v.slug} className="text-center">
+                <div className="relative aspect-square mx-auto w-24 sm:w-28 rounded-full overflow-hidden bg-surface-card border border-surface-line">
+                  <Image
+                    src={v.foto}
+                    alt={v.nombre}
+                    fill
+                    sizes="120px"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mt-3 font-display text-base font-bold text-ink">{v.nombre}</p>
+                {v.ciudad && <p className="text-xs text-ink-muted">{v.ciudad}</p>}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-10 text-center">
+            <Link
+              href="/nosotros/equipo"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-verde-dark hover:underline underline-offset-4"
+            >
+              {t("voluntariosBloque.verMas")}
+              <ArrowRight size={16} aria-hidden />
+            </Link>
+          </div>
+        </Section>
+      )}
+
       {/* 6. CTA Inmersivo */}
       <Section background="dark" ariaLabelledBy="cta-title" className="relative py-24 md:py-32 overflow-hidden">
         {/* Imagen de fondo */}
@@ -258,15 +319,26 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
             {t("cta.body")}
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button href="/sumate" className="bg-white text-ink hover:bg-white/90 shadow-lg text-lg px-8 py-4">
+            <Button href="/sumate/donar" className="bg-white text-ink hover:bg-white/90 shadow-lg text-lg px-8 py-4">
               {t("cta.primary")}
             </Button>
-            <Button href="/nosotros/equipo" variant="secondary" className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/20 text-lg px-8 py-4">
+            <a
+              href={VOLUNTARIO_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-colors text-lg px-8 py-4 font-semibold"
+            >
               {t("cta.secondary")}
-            </Button>
+            </a>
           </div>
         </div>
       </Section>
+
+      {/* 6.5 · Pregunta directa (solo si no la respondió) */}
+      <EncuestaViviendo hideIfAnswered />
+
+      {/* 7. Las 4 formas (completas) */}
+      <CuatroCaminos />
     </>
   );
 }

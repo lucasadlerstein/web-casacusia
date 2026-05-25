@@ -13,7 +13,8 @@ const navLinks = [
   { href: "/impacto", key: "impacto" },
   { href: "/sumate", key: "sumate" },
   { href: "/recursos/faq", key: "recursos" },
-  { href: "/contacto", key: "contacto" }
+  { href: "/contacto", key: "contacto" },
+  { href: "/prensa", key: "prensa" }
 ] as const;
 
 export function Footer() {

@@ -9,9 +9,19 @@ import { Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Filamento } from "@/components/ui/Filamento";
 
+const PERFILES = [
+  "tengo-hipoacusia",
+  "familiar",
+  "trabajo-hipoacusia",
+  "interesado",
+  "inclusion-diversidad",
+  "otro"
+] as const;
+
 const schema = z.object({
   name:    z.string().min(2),
   email:   z.string().email(),
+  perfil:  z.enum(PERFILES, { errorMap: () => ({ message: "Elegí una opción" }) }),
   consent: z.literal(true, { errorMap: () => ({ message: "Requerido" }) }),
   website: z.string().max(0).optional()
 });
@@ -84,6 +94,21 @@ export function Newsletter() {
               aria-invalid={!!errors.email}
               className="h-11 w-full rounded-xl border border-white/20 bg-white/10 px-4 text-white placeholder-white/40 focus:border-white focus:outline-none focus:ring-4 focus:ring-white/25"
             />
+          </label>
+
+          <label className="block sm:col-span-2">
+            <span className="mb-1.5 block text-sm font-medium text-white/90">{t("perfil")}</span>
+            <select
+              {...register("perfil", { required: true })}
+              aria-invalid={!!errors.perfil}
+              defaultValue=""
+              className="h-11 w-full rounded-xl border border-white/20 bg-white/10 px-4 text-white focus:border-white focus:outline-none focus:ring-4 focus:ring-white/25 appearance-none [&>option]:bg-verde-dark [&>option]:text-white"
+            >
+              <option value="" disabled>{t("perfilPlaceholder")}</option>
+              {PERFILES.map((p) => (
+                <option key={p} value={p}>{t(`perfiles.${p}`)}</option>
+              ))}
+            </select>
           </label>
 
           {/* Honeypot */}

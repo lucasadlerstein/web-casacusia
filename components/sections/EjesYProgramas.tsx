@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { ArrowRight, Users, MonitorSmartphone, HeartHandshake, Mic, Bot, BookOpen } from "lucide-react";
+import { ArrowRight, Users, MonitorSmartphone, HeartHandshake, Mic, Bot, BookOpen, MessageCircle } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Link } from "@/lib/i18n/navigation";
@@ -22,6 +22,11 @@ const programAssets: Record<string, { photo: string; icon: React.ReactNode; colo
     photo: "/fotos/propuestas/casacusia_kids_alta_186.jpg",
     icon: <HeartHandshake size={24} aria-hidden />,
     color: "from-rosa/80 to-rosa-dark/90"
+  },
+  "comunidad-whatsapp": {
+    photo: "/fotos/encuentro-patio.jpg",
+    icon: <MessageCircle size={24} aria-hidden />,
+    color: "from-verde/80 to-verde-dark/90"
   },
   "podcast": {
     photo: "/brand/podcast/spnm-alta.jpg",
@@ -48,9 +53,11 @@ export function EjesYProgramas() {
   return (
     <Section background="tint" ariaLabelledBy="ejes-title" className="pt-24 pb-32">
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-rosa mb-4">
-          {t("eyebrow")}
-        </p>
+        {t("eyebrow") && (
+          <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-rosa mb-4">
+            {t("eyebrow")}
+          </p>
+        )}
         <h2 id="ejes-title" className="font-display text-4xl md:text-5xl font-extrabold tracking-tight text-ink">
           {t("title")}
         </h2>

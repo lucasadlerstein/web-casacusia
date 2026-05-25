@@ -4,15 +4,15 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org",
   tagline: "Transitando juntos la hipoacusia",
   foundingDate: "2025-01",
-  email: "hola@casacusia.org",
+  email: "somos@casacusia.org",
   whatsappCommunity: "https://chat.whatsapp.com/IUlYFEaFWiBHaFmzwvqL4D",
   donationUrl: "https://cafe.casacusia.org",
   social: {
     instagram: "https://www.instagram.com/casacusia.ong/",
     tiktok: "https://www.tiktok.com/@casacusia",
     linkedin: "https://www.linkedin.com/company/casacusia",
-    youtube: "https://www.youtube.com/@casacusia",
-    facebook: "https://www.facebook.com/casacusia",
+    youtube: "https://www.youtube.com/@Hipoacusico",
+    facebook: "https://www.facebook.com/people/Casacusia/61573395301782/",
     spotify: "https://open.spotify.com/",
     applePodcasts: "https://podcasts.apple.com/"
   },
