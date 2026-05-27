@@ -8,6 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
 import { Testimonial } from "@/components/sections/Testimonial";
+import { RotatingImage } from "@/components/ui/RotatingImage";
 import {
   getProgramas,
   getTestimonios,
@@ -25,6 +26,8 @@ type CTA = { label: string; href: string; external?: boolean };
 type ProgramaConfig = {
   hero: string;
   foto: string;
+  fotos?: string[];
+  fotosIntervalMs?: number;
   bullets: { icon: typeof Calendar; text: string }[];
   ciudades?: string[];
   ctaPrincipal: CTA;
@@ -58,6 +61,18 @@ const CONFIGS: Record<string, ProgramaConfig> = {
   "encuentros": {
     hero: "Encuentros facilitados en distintas ciudades donde contamos nuestra historia y conocemos a otras personas con pérdida auditiva. Un espacio para escucharnos, identificarnos y entender que no estamos solos.",
     foto: "/fotos/propuestas/Casacusia_GZ-21.jpg",
+    fotos: [
+      "/fotos-nuevas/eventos/bariloche.jpg",
+      "/fotos-nuevas/eventos/casacusia_gz-102.jpg",
+      "/fotos-nuevas/eventos/casacusia_gz-117.jpg",
+      "/fotos-nuevas/eventos/img_4262heic.jpg",
+      "/fotos-nuevas/eventos/img_4652heic.jpg",
+      "/fotos-nuevas/eventos/img_4847heic.jpg",
+      "/fotos-nuevas/eventos/img_6390.jpg",
+      "/fotos-nuevas/eventos/img_7165heic.jpg",
+      "/fotos-nuevas/eventos/img_7290heic.jpg"
+    ],
+    fotosIntervalMs: 4000,
     bullets: [
       { icon: Users, text: "Gratis y abiertos a quien quiera sumarse." },
       { icon: Sparkles, text: "Facilitamos las conversaciones para que todos puedan participar y sentirse cómodos." },
@@ -72,7 +87,7 @@ const CONFIGS: Record<string, ProgramaConfig> = {
   },
   "encuentros-virtuales": {
     hero: "Veni a compartir experiencias de la hipoacusia, un mundo que muchos vivimos pero pocos entienden. No es obligatorio hablar, habla quien quiere.",
-    foto: "/fotos/propuestas/DSC00009.jpg",
+    foto: "/fotos-nuevas/eventos/captura-de-pantalla-2025-12-26-a-las-123513-p-m.jpg",
     bullets: [
       { icon: Calendar, text: "Una vez al mes, por Google Meet." },
       { icon: Users, text: "Conectate desde donde estés, en cualquier ciudad del mundo." },
@@ -218,14 +233,25 @@ export default async function ProgramaDetailPage({
           </div>
 
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-surface-line shadow-md">
-            <Image
-              src={config?.foto ?? "/fotos/hero-comunidad.jpg"}
-              alt={programa.titulo}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
+            {config?.fotos && config.fotos.length > 1 ? (
+              <RotatingImage
+                images={config.fotos}
+                alt={programa.titulo}
+                intervalMs={config.fotosIntervalMs ?? 5000}
+                className="w-full h-full"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            ) : (
+              <Image
+                src={config?.foto ?? "/fotos/hero-comunidad.jpg"}
+                alt={programa.titulo}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            )}
             {config?.proximamente && (
               <div className="absolute top-4 left-4 inline-flex items-center rounded-full bg-ink/85 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm">
                 Próximamente
@@ -331,30 +357,15 @@ export default async function ProgramaDetailPage({
         </Section>
       )}
 
-      {/* CTA final */}
-      <Section background="dark" className="py-16 md:py-20">
-        <div className="max-w-3xl mx-auto text-center text-white">
-          <p className="font-display text-2xl md:text-3xl font-extrabold leading-tight">
-            ¿Querés saber más o no sabés por dónde empezar?
-          </p>
-          <p className="mt-4 text-white/85 leading-relaxed">
-            Escribinos. Te respondemos en menos de 48hs hábiles.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 rounded-full bg-white text-ink hover:bg-white/90 transition-colors text-base px-6 py-3 font-bold"
-            >
-              Ir al contacto
-              <ArrowRight size={16} aria-hidden />
-            </Link>
-            <Link
-              href="/programas"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20 transition-colors text-base px-6 py-3 font-semibold"
-            >
-              Ver todos los programas
-            </Link>
-          </div>
+      {/* Volver a todos los programas */}
+      <Section background="default" className="py-10">
+        <div className="max-w-3xl mx-auto text-center">
+          <Link
+            href="/programas"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-verde-dark hover:underline underline-offset-4"
+          >
+            Ver todos los programas <ArrowRight size={16} aria-hidden />
+          </Link>
         </div>
       </Section>
     </main>

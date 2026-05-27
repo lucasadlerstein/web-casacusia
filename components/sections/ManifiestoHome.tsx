@@ -17,23 +17,17 @@ export function ManifiestoHome() {
       <Filamento name="rosa" className="-bottom-16 -left-8 w-72 rotate-[-18deg]" opacity={10} />
 
       <div className="relative mx-auto max-w-3xl text-center">
-        <p className="font-display text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-verde-dark mb-4">
-          {t("eyebrow")}
-        </p>
-
         <h2
           id="home-manifiesto-title"
-          className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-ink"
+          className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-ink"
         >
-          {t("title")}
+          {t("titlePre")}{" "}
+          <span className="text-rosa">{t("titleColored")}</span>{" "}
+          {t("titlePost")}
         </h2>
 
         <p className="mt-8 text-lg md:text-xl leading-relaxed text-ink-soft font-medium">
           {t("lead")}
-        </p>
-
-        <p className="mt-6 font-display text-2xl md:text-3xl font-bold leading-snug text-ink">
-          {t("kicker")}
         </p>
 
         <div className="mt-10">

@@ -29,12 +29,12 @@
     "title": "Casacusia · Trabajamos para las personas, no para los oídos",
     "description": "Fundación dedicada a acompañar a personas con pérdida auditiva (hipoacusia) y sus familias. Encuentros, podcast, red de padres y más.",
     "hero": {
-      "eyebrow": "Comunidad de personas con pérdida auditiva",
+      "topline": "*para que nadie transite la hipoacusia en soledad.",
       "title": "No estás solo.",
       "titleLine2": "1 de cada 20 personas",
       "titleLine3": "tiene pérdida auditiva.",
-      "subtitle": "Casacusia es una ONG que acompaña a personas con pérdida auditiva y a sus familias para que nadie la transite en soledad. Generamos comunidad, herramientas y una red que crece todos los días.",
-      "ctaPrimary": "Sumate a la comunidad",
+      "subtitle": "Generamos espacios de encuentro, herramientas y una red que crece cada día.",
+      "ctaPrimary": "¿Qué es la hipoacusia?",
       "ctaSecondary": "Próximos encuentros",
       "ctaTertiary": "Doná",
       "stats": {
@@ -47,9 +47,10 @@
       "titleLine1Pre": "La discapacidad no es el",
       "titleLine1Tachado": "silencio",
       "titleLine2": "Es la soledad.",
-      "bodyExtra": "La hipoacusia te lleva a aislarte y a no participar de los entornos sociales. A veces la falta de comprensión de las personas nos lleva a alejarnos, y por eso está Casacusia: para que veamos que no somos los únicos, y que podamos compartir y poner en palabras lo que nos pasa.",
+      "body": "El problema de la hipoacusia no es no oír: es no estar presente. Como es fácil de esconder, dejamos de participar y preguntar para evitar la frustración. Eso nos aleja de las personas y de los entornos sociales.",
+      "bodyExtra": "Por eso existe Casacusia: para que pedir sea normal. Para encontrarte con otras personas que te entiendan y poder compartir lo que nos pasa. En definitiva: ver que no somos los únicos.",
       "cta": "Quiero ser parte",
-      "ctaSecondary": "¿Cuál es la importancia de la hipoacusia?"
+      "ctaDonar": "Quiero donar para que menos personas se sientan solas"
     },
     "manifiesto": {
       "cta": "Leer el manifiesto completo"
@@ -269,12 +270,14 @@
       },
       "manifiesto": {
         "eyebrow": "Por qué hacemos lo que hacemos",
-        "title": "En un mundo que nos enseñan a sobrevivir, nosotros creemos que hay que vivir.",
-        "lead": "Todos nos merecemos una vida plena. No se trata de sobrevivir, se trata de vivir.",
-        "p1": "Para eso tenemos que pedir: que nos repitan lo que no escuchamos, que nos cambien de lado, que las personas hagan adaptaciones. Y pedir es difícil. A veces nos aleja de la gente.",
+        "titlePre": "Nos enseñaron a",
+        "titleColored": "sobrevivir.",
+        "titlePost": "Nosotros creemos que hay que vivir.",
+        "lead": "Todos nos merecemos una vida plena, conectados con otras personas y siendo parte.",
+        "p1": "Para eso tenemos que pedir: que nos repitan lo que no escuchamos, que nos cambien de lado, que las personas hagan adaptaciones. Y pedir tantas veces lo mismo, a veces es difícil. Y no pedir, nos aleja de las personas.",
         "p2": "Por no pedir y por no escuchar —porque al no escuchar dejamos de estar presentes— empezamos a aislarnos para no frustrarnos. Dejamos de preguntar, y por ende, de estar.",
         "p3": "Nos alejamos de las personas, de las parejas, de los amigos. Dejamos los deportes, el teatro, el cine en familia. Dejamos de salir, de socializar. Y la vida aislados no es la más linda.",
-        "kicker": "Por eso existe Casacusia: para que nadie tenga que elegir entre escuchar y estar presente."
+        "kicker": "Parte de la necesidad es la falta de comunidad. Se habla de dos extremos: oír bien o no oír nada, pero hay un abanico enorme en el medio. Mayormente compuesto de personas que pierden la audición de golpe y familias cuyos hijos nacen sordos. ¿Te imaginás que te pase a vos?"
       },
       "brecha": {
         "eyebrow": "Por qué existe CASACUSIA",
@@ -284,10 +287,13 @@
       },
       "horizonte": {
         "title": "Nuestro horizonte",
+        "lead1": "En los encuentros nos dimos cuenta que",
+        "leadHighlight": "escuchar más fuerte no significa que vivas mejor.",
+        "lead2": "Y que no queríamos trabajar por los oídos, sino por las personas. Nos dimos cuenta que la discapacidad no se cura.",
         "mision": {
           "label": "Misión",
           "title": "Transformar la relación de las personas con su pérdida auditiva, para mejorar su calidad de vida.",
-          "body": ""
+          "body": "No buscamos dar audición. Buscamos dar paz, alivianar procesos, dar esperanza. Ser luz."
         },
         "vision": {
           "label": "Visión",
@@ -320,7 +326,6 @@
           "apoyo": { "name": "Apoyo mutuo", "desc": "Nos sostenemos entre todos." },
           "empatia": { "name": "Empatía", "desc": "Escuchar antes de hablar." },
           "simpleza": { "name": "Simpleza", "desc": "Información clara, sin jerga." },
-          "transparencia": { "name": "Transparencia", "desc": "Rendición de cuentas." },
           "respeto": { "name": "Respeto", "desc": "Cada historia importa." },
           "pureza": { "name": "Pureza", "desc": "Decir las cosas como son." },
           "innovacion": { "name": "Innovación", "desc": "Animarnos a lo nuevo." }

@@ -4,7 +4,6 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 
 import { Link } from "@/lib/i18n/navigation";
-import { EncuestaViviendo } from "@/components/sections/EncuestaViviendo";
 import { getProgramas, getTestimonios, type TestimonioProyecto } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -66,15 +65,16 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
   return (
     <main className="bg-surface-bg">
       <div className="container max-w-5xl mx-auto px-4 pt-14 pb-2 md:pt-16">
-        <h1 className="font-display text-2xl md:text-3xl font-extrabold text-ink">
-          {t("heading")}
+        <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">
+          Sumate a nuestros programas
         </h1>
-        <p className="mt-4 font-display italic text-lg md:text-xl text-ink-soft leading-snug max-w-3xl">
+        <p className="mt-3 font-display text-xl md:text-2xl text-ink-soft">
+          La puerta está abierta.
+        </p>
+        <p className="mt-5 font-display italic text-lg md:text-xl text-ink-soft leading-snug max-w-3xl">
           &ldquo;Imaginate pensar toda tu vida que eres el único, y descubrir que hay más personas atravesando lo mismo.&rdquo;
         </p>
       </div>
-
-      <EncuestaViviendo hideIfAnswered />
 
       <div className="container max-w-5xl mx-auto px-4 pb-20 space-y-10 md:space-y-14">
         {programas.map((p, i) => {
@@ -119,13 +119,16 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
                 <p className="mt-4 text-ink-soft leading-relaxed">{p.resumen}</p>
 
                 {testimonios.length > 0 && (
-                  <ul className={`mt-6 space-y-3 p-5 rounded-2xl ${tonoBg[assets.tono]}`}>
-                    {testimonios.map((tt) => (
-                      <li key={tt.id}>
-                        <p className="font-display text-sm md:text-base font-semibold text-ink leading-snug">
-                          “{tt.fraseDestacada ?? tt.texto}”
+                  <ul className="mt-6 space-y-4">
+                    {testimonios.map((tt, idx) => (
+                      <li key={tt.id} className={`relative p-5 rounded-2xl ${tonoBg[assets.tono]} ${idx > 0 ? "mt-4" : ""}`}>
+                        <span aria-hidden className={`absolute -top-1 left-3 font-bubbles text-4xl leading-none ${tonoAccent[assets.tono]} opacity-40 select-none`}>
+                          &ldquo;
+                        </span>
+                        <p className="font-display text-base md:text-lg font-semibold text-ink leading-snug pl-6">
+                          {tt.fraseDestacada ?? tt.texto}
                         </p>
-                        <p className="mt-1 text-xs text-ink-muted">
+                        <p className="mt-2 text-xs text-ink-muted pl-6">
                           — {tt.autor ?? "Mensaje de la comunidad"}
                           {(tt.contexto ?? tt.ubicacion) && ` · ${tt.contexto ?? tt.ubicacion}`}
                         </p>

@@ -7,7 +7,6 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
 import { CuatroCaminos } from "@/components/sections/CuatroCaminos";
-import { EncuestaViviendo } from "@/components/sections/EncuestaViviendo";
 import { getVoluntarios } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -154,35 +153,46 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
         </div>
       </Section>
 
-      {/* 4. Misión y Visión (Gradients) */}
-      <Section background="default" ariaLabelledBy="mv-title">
-        <SectionHeading title={<span id="mv-title">{t("horizonte.title")}</span>} className="mx-auto text-center" />
-        <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+      {/* 4. Misión y Visión */}
+      <Section background="default" ariaLabelledBy="mv-title" className="pt-12 pb-20">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <p className="font-display text-2xl md:text-3xl text-ink-soft leading-snug">
+            {t("horizonte.lead1")}
+          </p>
+          <p className="mt-3 font-display text-3xl md:text-4xl font-extrabold text-ink leading-tight">
+            {t("horizonte.leadHighlight")}
+          </p>
+          <p className="mt-6 text-lg md:text-xl text-ink-soft leading-relaxed">
+            {t("horizonte.lead2")}
+          </p>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
           {/* Misión */}
-          <div className="relative overflow-hidden rounded-3xl p-10 shadow-lg group">
+          <div className="relative overflow-hidden rounded-3xl p-10 shadow-lg">
             <div className="absolute inset-0 bg-gradient-to-br from-verde to-verde-dark" />
-            <div className="absolute inset-0 bg-black/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative z-10 text-white">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-md mb-6 shadow-sm border border-white/30">
                 <Target size={24} aria-hidden />
               </div>
               <h3 className="text-sm uppercase tracking-widest font-bold text-white/80 mb-4">{t("horizonte.mision.label")}</h3>
-              <p className="font-display text-2xl md:text-3xl leading-tight drop-shadow-sm">
-                <strong className="font-bold">Transformar</strong>{" "}
-                <span className="font-normal">la relación de las personas con su pérdida auditiva, para mejorar su calidad de vida.</span>
+              <p className="font-display text-xl md:text-2xl leading-tight font-bold drop-shadow-sm">
+                {t("horizonte.mision.title")}
+              </p>
+              <p className="mt-4 text-base text-white/90 leading-relaxed">
+                {t("horizonte.mision.body")}
               </p>
             </div>
           </div>
           {/* Visión */}
-          <div className="relative overflow-hidden rounded-3xl p-10 shadow-lg group">
+          <div className="relative overflow-hidden rounded-3xl p-10 shadow-lg">
             <div className="absolute inset-0 bg-gradient-to-br from-violeta to-violeta-dark" />
-            <div className="absolute inset-0 bg-black/10 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative z-10 text-white">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-md mb-6 shadow-sm border border-white/30">
                 <Lightbulb size={24} aria-hidden />
               </div>
               <h3 className="text-sm uppercase tracking-widest font-bold text-white/80 mb-4">{t("horizonte.vision.label")}</h3>
-              <p className="font-display text-2xl md:text-3xl leading-tight font-bold drop-shadow-sm">
+              <p className="font-display text-xl md:text-2xl leading-tight font-bold drop-shadow-sm">
                 {t("horizonte.vision.title")}
               </p>
             </div>
@@ -237,7 +247,6 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
             { key: "apoyo", icon: <Heart size={20} />, color: "text-rosa" },
             { key: "empatia", icon: <MessageSquare size={20} />, color: "text-violeta" },
             { key: "simpleza", icon: <Sparkles size={20} />, color: "text-verde" },
-            { key: "transparencia", icon: <ShieldCheck size={20} />, color: "text-verde" },
             { key: "respeto", icon: <Users size={20} />, color: "text-amarillo" },
             { key: "pureza", icon: <Sparkles size={20} />, color: "text-ink" },
             { key: "innovacion", icon: <Lightbulb size={20} />, color: "text-verde" }
@@ -318,24 +327,24 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
           <p className="mt-6 text-white/90 text-lg md:text-xl leading-relaxed drop-shadow-md">
             {t("cta.body")}
           </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button href="/sumate/donar" className="bg-white text-ink hover:bg-white/90 shadow-lg text-lg px-8 py-4">
-              {t("cta.primary")}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            <Button href="/sumate/donar" className="bg-white text-ink hover:bg-white/90 shadow-lg text-base md:text-lg px-6 py-3">
+              Donar
             </Button>
             <a
               href={VOLUNTARIO_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-colors text-lg px-8 py-4 font-semibold"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-colors text-base md:text-lg px-6 py-3 font-semibold"
             >
-              {t("cta.secondary")}
+              Ser voluntario
             </a>
+            <Button href="/sumate/donar?cause=conectar" className="bg-rosa text-white hover:bg-rosa-dark text-base md:text-lg px-6 py-3">
+              Apadrinar a una familia
+            </Button>
           </div>
         </div>
       </Section>
-
-      {/* 6.5 · Pregunta directa (solo si no la respondió) */}
-      <EncuestaViviendo hideIfAnswered />
 
       {/* 7. Las 4 formas (completas) */}
       <CuatroCaminos />

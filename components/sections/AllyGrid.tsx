@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 
-import { Section, SectionHeading } from "@/components/ui/Section";
+import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
+import { Link } from "@/lib/i18n/navigation";
 import { getAliados, type Aliado } from "@/lib/content";
 
 type Props = { variant?: "home" | "full" };
@@ -10,55 +10,94 @@ type Props = { variant?: "home" | "full" };
 const SPONSORS_MES_A_MES = ["marval", "helen-diller-foundation"];
 
 export function AllyGrid({ variant = "home" }: Props) {
-  const t = useTranslations("home.aliados");
   const allAliados = getAliados();
   const sponsors = allAliados.filter((a) => SPONSORS_MES_A_MES.includes(a.slug));
   const resto = allAliados.filter((a) => !SPONSORS_MES_A_MES.includes(a.slug));
 
   return (
     <Section background="default" ariaLabelledBy="ally-grid-title">
-      <SectionHeading
-        eyebrow={t("eyebrow")}
-        title={<span id="ally-grid-title">{t("title")}</span>}
-        body={t("body")}
-      />
+      <div className="max-w-5xl mx-auto">
+        <h2 id="ally-grid-title" className="font-display text-3xl md:text-4xl font-extrabold text-ink text-center mb-12">
+          Instituciones que nos impulsan
+        </h2>
 
-      <div className="space-y-12">
-        {/* Nos acompañan mes a mes */}
-        {sponsors.length > 0 && (
+        <div className="space-y-14">
+          {/* 1. Nos acompañan mes a mes */}
+          {sponsors.length > 0 && (
+            <div>
+              <h3 className="text-sm font-display font-bold text-center mb-5 text-ink uppercase tracking-[0.2em]">
+                Nos acompañan mes a mes
+              </h3>
+              <ul className="flex justify-center gap-6 flex-wrap">
+                {sponsors.map((a) => (
+                  <li key={a.slug}>
+                    <AliadoCard aliado={a} size="sponsor" />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* 2. Red de Empresas que Escuchan */}
           <div>
-            <h3 className="text-sm font-display font-bold text-center mb-5 text-ink uppercase tracking-[0.2em]">
-              Nos acompañan mes a mes
-            </h3>
-            <ul className="flex justify-center gap-6 flex-wrap">
-              {sponsors.map((a) => (
-                <li key={a.slug}>
-                  <AliadoCard aliado={a} size="sponsor" />
+            <div className="text-center mb-6">
+              <h3 className="font-display text-xl md:text-2xl font-extrabold text-ink mb-2">
+                La Red de Empresas que Escuchan
+              </h3>
+              <p className="text-sm text-ink-soft max-w-xl mx-auto">
+                Empresas del rubro auditivo que acompañan a personas con pérdida auditiva. Si conocés alguna que pueda sumarse, escribinos.
+              </p>
+            </div>
+            <ul className="space-y-3 max-w-3xl mx-auto">
+              {[
+                { label: "Audífonos", color: "border-verde-dark/30 bg-verde-soft/30" },
+                { label: "Implantes", color: "border-violeta/30 bg-violeta-soft/30" },
+                { label: "Centros médicos", color: "border-rosa/30 bg-rosa-soft/30" }
+              ].map((cat) => (
+                <li
+                  key={cat.label}
+                  className={`flex items-center justify-between rounded-2xl border-2 ${cat.color} px-5 py-4`}
+                >
+                  <span className="font-display font-bold text-ink">{cat.label}</span>
+                  <span className="text-xs uppercase tracking-wider font-bold text-ink-muted">
+                    Próximamente
+                  </span>
                 </li>
               ))}
             </ul>
+            <p className="mt-6 text-center text-sm text-ink-soft">
+              ¿Tu empresa quiere ser parte?{" "}
+              <Link href="/contacto?t=empresa" className="font-bold text-verde-dark underline underline-offset-4 hover:text-[#0a6b42]">
+                Escribinos →
+              </Link>
+            </p>
           </div>
-        )}
 
-        {/* Grid completo del resto */}
-        {resto.length > 0 && (
-          <div>
-            <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 max-w-5xl mx-auto">
-              {resto.map((a) => (
-                <li key={a.slug}>
-                  <AliadoCard aliado={a} size="grid" />
-                </li>
-              ))}
-            </ul>
+          {/* 3. Empresas que nos acompañaron */}
+          {resto.length > 0 && (
+            <div>
+              <h3 className="text-sm font-display font-bold text-center mb-5 text-ink-soft uppercase tracking-[0.2em]">
+                Empresas que nos acompañaron
+              </h3>
+              <ul className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
+                {resto.map((a) => (
+                  <li key={a.slug}>
+                    <AliadoCard aliado={a} size="grid" />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+        {variant === "home" && (
+          <div className="mt-12 text-center">
+            <Button href="/aliados" variant="secondary">
+              Ver todos los aliados
+            </Button>
           </div>
         )}
       </div>
-
-      {variant === "home" && (
-        <div className="mt-10 text-center">
-          <Button href="/aliados" variant="secondary">{t("cta")}</Button>
-        </div>
-      )}
     </Section>
   );
 }
@@ -71,7 +110,7 @@ function AliadoCard({ aliado, size }: { aliado: Aliado; size: "sponsor" | "grid"
 
   const content = (
     <div
-      className={`group relative flex items-center justify-center rounded-2xl bg-white border border-surface-line p-4 shadow-sm hover:shadow-md hover:border-verde-dark/30 transition-all duration-300 ${styles}`}
+      className={`group relative flex items-center justify-center rounded-2xl bg-white border border-surface-line shadow-sm hover:shadow-md hover:border-verde-dark/30 transition-all duration-300 ${styles}`}
       aria-label={`${aliado.nombre} · ${aliado.sector}`}
     >
       <Image

@@ -1,7 +1,15 @@
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Filamento } from "@/components/ui/Filamento";
-import Image from "next/image";
+import { RotatingImage } from "@/components/ui/RotatingImage";
+import { DonateChoiceButton } from "@/components/ui/DonateChoiceButton";
+
+const FOTOS_ROTACION = [
+  "/fotos/sumate-comunidad.jpg",
+  "/fotos-nuevas/eventos/003a0237.jpg",
+  "/fotos-nuevas/eventos/img_7165heic.jpg",
+  "/fotos/propuestas/casacusia_kids_alta_67.jpg"
+];
 
 export function Esencia() {
   const t = useTranslations("home.esencia");
@@ -24,15 +32,18 @@ export function Esencia() {
               className="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] text-white"
             >
               <span className="block">
-                {t("titleLine1Pre")}{" "}
+                <span className="text-verde">{t("titleLine1Pre")}</span>{" "}
                 <s className="text-white/40 decoration-rosa decoration-[6px] md:decoration-[8px]">
                   {t("titleLine1Tachado")}
                 </s>
               </span>
-              <span className="block mt-2">{t("titleLine2")}</span>
+              <span className="block mt-2 text-amarillo">{t("titleLine2")}</span>
             </h2>
 
-            <p className="mt-8 text-lg leading-relaxed text-white/80 md:text-xl font-medium">
+            <p className="mt-8 text-lg leading-relaxed text-white/85 md:text-xl font-medium">
+              {t("body")}
+            </p>
+            <p className="mt-5 text-lg leading-relaxed text-white/85 md:text-xl font-medium">
               {t("bodyExtra")}
             </p>
 
@@ -44,34 +55,27 @@ export function Esencia() {
               >
                 {t("cta")}
               </Button>
-              <Button
-                href="/nosotros#que-es-title"
-                variant="secondary"
-                size="lg"
-                className="border-white/20 bg-white/10 text-white backdrop-blur-md hover:bg-white hover:text-ink transition-all duration-300"
-              >
-                {t("ctaSecondary")}
-              </Button>
+              <DonateChoiceButton
+                label={t("ctaDonar")}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-rosa text-white hover:bg-rosa-dark transition-colors text-base px-6 py-3 font-bold shadow-md"
+              />
             </div>
           </div>
 
-          {/* Columna Derecha: Imagen */}
+          {/* Columna Derecha: Rotación de imágenes */}
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] mt-10 lg:mt-0">
             {/* Elemento decorativo de fondo */}
             <div className="absolute inset-0 bg-gradient-to-tr from-brand-teal/20 to-verde/20 rounded-3xl transform translate-x-4 translate-y-4 -rotate-3" />
-            
-            {/* Contenedor principal de la imagen */}
+
             <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <Image
-                src="/fotos/sumate-comunidad.jpg"
+              <RotatingImage
+                images={FOTOS_ROTACION}
                 alt="Comunidad Casacusia"
-                fill
-                className="object-cover object-center"
+                intervalMs={6000}
+                className="w-full h-full"
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                quality={85}
               />
-              {/* Overlay suave para mantener el mood dark */}
-              <div className="absolute inset-0 bg-ink/20 mix-blend-multiply" />
+              <div className="absolute inset-0 bg-ink/20 mix-blend-multiply pointer-events-none" />
             </div>
           </div>
         </div>

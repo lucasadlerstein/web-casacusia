@@ -77,7 +77,7 @@ export function Footer() {
         <p>© {year} {site.legalName}. {t("rights")}</p>
         <div className="flex gap-4">
           <Link href="/accesibilidad" className="hover:underline underline-offset-4">{t("accesibilidad")}</Link>
-          <Link href="/nosotros/legal" className="hover:underline underline-offset-4">{t("privacidad")}</Link>
+          <Link href="/contacto" className="hover:underline underline-offset-4">{t("privacidad")}</Link>
         </div>
       </div>
     </footer>

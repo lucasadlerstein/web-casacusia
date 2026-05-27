@@ -73,6 +73,9 @@ export function Hero() {
           isMoving ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
         }`}
       >
+        <p className="mb-6 font-display italic text-base md:text-lg text-amarillo/90 max-w-xl mx-auto">
+          {t("topline")}
+        </p>
         <h1 className="font-display font-extrabold leading-[1.1] tracking-tight text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           {t("title")}
         </h1>
@@ -88,7 +91,7 @@ export function Hero() {
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button href="/sumate" size="lg">
+          <Button href="/nosotros#que-es-title" size="lg">
             {t("ctaPrimary")} <ArrowRight size={18} aria-hidden />
           </Button>
           <Button href="/calendario" size="lg" variant="secondary" className="bg-transparent border-white text-white hover:bg-white hover:text-[#143642]">

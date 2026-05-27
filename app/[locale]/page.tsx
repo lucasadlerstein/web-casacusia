@@ -10,7 +10,7 @@ import { ProximoEncuentro } from "@/components/sections/ProximoEncuentro";
 import { PodcastDestacado } from "@/components/sections/PodcastDestacado";
 import { CuatroCaminos } from "@/components/sections/CuatroCaminos";
 import { Newsletter } from "@/components/sections/Newsletter";
-import { Testimonial } from "@/components/sections/Testimonial";
+import { TestimonioBlocks } from "@/components/sections/TestimonioBlocks";
 import { ManifiestoHome } from "@/components/sections/ManifiestoHome";
 import { EncuestaViviendo } from "@/components/sections/EncuestaViviendo";
 
@@ -51,7 +51,7 @@ export default async function HomePage({
       <Esencia />
       <ManifiestoHome />
       <EncuestaViviendo />
-      <Testimonial testimonios={testimonios} />
+      <TestimonioBlocks testimonios={testimonios} />
       <ProximoEncuentro />
       <EjesYProgramas />
       <ImpactStats />
