@@ -18,16 +18,19 @@ const contactSchema = z.object({
 
 type ContactType = z.infer<typeof contactSchema>["type"];
 
-/** Routing de destinatarios según el tipo de consulta. */
+/** Routing de destinatarios según el tipo de consulta.
+ *  Todos los mensajes llegan a lucas@casacusia.org con copia a manu@casacusia.org
+ *  además del destinatario específico del área. */
+const DEFAULT_CC = ["manu@casacusia.org"];
 const ROUTING: Record<ContactType, { to: string; cc?: string[] }> = {
-  personal:      { to: "lucas@casacusia.org" },
-  voluntariado:  { to: "melu@casacusia.org" },
-  programas:     { to: "melu@casacusia.org" },
-  prensa:        { to: "valen@casacusia.org" },
-  comunicacion:  { to: "valen@casacusia.org" },
-  empresa:       { to: "lucas@casacusia.org", cc: ["vero@casacusia.org", "judi@casacusia.org", "nico@casacusia.org"] },
-  profesional:   { to: "lucas@casacusia.org" },
-  otro:          { to: "lucas@casacusia.org" }
+  personal:      { to: "lucas@casacusia.org", cc: DEFAULT_CC },
+  voluntariado:  { to: "lucas@casacusia.org", cc: [...DEFAULT_CC, "melu@casacusia.org"] },
+  programas:     { to: "lucas@casacusia.org", cc: [...DEFAULT_CC, "melu@casacusia.org"] },
+  prensa:        { to: "lucas@casacusia.org", cc: [...DEFAULT_CC, "valen@casacusia.org"] },
+  comunicacion:  { to: "lucas@casacusia.org", cc: [...DEFAULT_CC, "valen@casacusia.org"] },
+  empresa:       { to: "lucas@casacusia.org", cc: [...DEFAULT_CC, "vero@casacusia.org", "judi@casacusia.org", "nico@casacusia.org"] },
+  profesional:   { to: "lucas@casacusia.org", cc: DEFAULT_CC },
+  otro:          { to: "lucas@casacusia.org", cc: DEFAULT_CC }
 };
 
 const rateBuckets = new Map<string, { count: number; ts: number }>();

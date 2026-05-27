@@ -30,11 +30,27 @@ type ProgramaConfig = {
   fotosIntervalMs?: number;
   bullets: { icon: typeof Calendar; text: string }[];
   ciudades?: string[];
+  paises?: string[];
   ctaPrincipal: CTA;
   ctasExtra?: CTA[];
   proyectoTestimonio?: TestimonioProyecto;
   proximamente?: boolean;
   notaFinal?: string;
+};
+
+const COUNTRY_INFO: Record<string, { name: string; flag: string }> = {
+  AR: { name: "Argentina", flag: "🇦🇷" },
+  MX: { name: "México", flag: "🇲🇽" },
+  BO: { name: "Bolivia", flag: "🇧🇴" },
+  PY: { name: "Paraguay", flag: "🇵🇾" },
+  CL: { name: "Chile", flag: "🇨🇱" },
+  ES: { name: "España", flag: "🇪🇸" },
+  PE: { name: "Perú", flag: "🇵🇪" },
+  US: { name: "Estados Unidos", flag: "🇺🇸" },
+  NL: { name: "Países Bajos", flag: "🇳🇱" },
+  UY: { name: "Uruguay", flag: "🇺🇾" },
+  CO: { name: "Colombia", flag: "🇨🇴" },
+  PA: { name: "Panamá", flag: "🇵🇦" }
 };
 
 export async function generateStaticParams() {
@@ -59,7 +75,7 @@ export async function generateMetadata({
 
 const CONFIGS: Record<string, ProgramaConfig> = {
   "encuentros": {
-    hero: "Encuentros facilitados en distintas ciudades donde contamos nuestra historia y conocemos a otras personas con pérdida auditiva. Un espacio para escucharnos, identificarnos y entender que no estamos solos.",
+    hero: "Encuentros facilitados donde contamos nuestra historia y conocemos a otras personas con pérdida auditiva, para entender que no somos los únicos con pérdida auditiva.",
     foto: "/fotos/propuestas/Casacusia_GZ-21.jpg",
     fotos: [
       "/fotos-nuevas/eventos/bariloche.jpg",
@@ -75,8 +91,8 @@ const CONFIGS: Record<string, ProgramaConfig> = {
     fotosIntervalMs: 4000,
     bullets: [
       { icon: Users, text: "Gratis y abiertos a quien quiera sumarse." },
-      { icon: Sparkles, text: "Facilitamos las conversaciones para que todos puedan participar y sentirse cómodos." },
-      { icon: Calendar, text: "Una vez al mes en cada ciudad. Si no hay en tu ciudad todavía, escribinos." }
+      { icon: Sparkles, text: "Facilitamos las conversaciones para que todos puedan participar." },
+      { icon: Calendar, text: "Muchas personas vienen solas, que eso no te frene." }
     ],
     ciudades: ["CABA", "Madrid", "CDMX", "Bariloche", "Mendoza", "Córdoba", "La Plata", "Posadas", "Málaga"],
     ctaPrincipal: { label: "Ver próximos encuentros", href: "/calendario?tag=presencial" },
@@ -90,9 +106,10 @@ const CONFIGS: Record<string, ProgramaConfig> = {
     foto: "/fotos-nuevas/eventos/captura-de-pantalla-2025-12-26-a-las-123513-p-m.jpg",
     bullets: [
       { icon: Calendar, text: "Una vez al mes, por Google Meet." },
-      { icon: Users, text: "Conectate desde donde estés, en cualquier ciudad del mundo." },
-      { icon: MessageCircle, text: "Hay encuentros generales y especiales para familias." }
+      { icon: Users, text: "Conectate desde donde estés." },
+      { icon: MessageCircle, text: "Muchas personas vienen solas, que eso no te frene." }
     ],
+    paises: ["AR", "MX", "BO", "PY", "CL", "ES", "PE", "US", "NL", "UY", "CO", "PA"],
     ctaPrincipal: { label: "Ver calendario", href: "/calendario?tag=virtual" },
     ctasExtra: [
       { label: "Encuentros para familias", href: "/calendario?tag=familias" },
@@ -101,12 +118,12 @@ const CONFIGS: Record<string, ProgramaConfig> = {
     proyectoTestimonio: "encuentros-virtuales"
   },
   "red-padres-madres": {
-    hero: "Que tu hijo nazca sordo o pierda la audición no es un camino fácil. Por eso te conectamos con familias que viven y vivieron algo similar. Alguien ya vivió lo que vos aún no, y alguien va a vivir lo que vos estás viviendo.",
+    hero: "Espacio virtual gratuito con grupo de WhatsApp para familias de personas con pérdida auditiva. A veces acompañar no es fácil, por eso también nos acompañamos entre nosotros. Alguien ya vivió lo que vos aún no, y alguien va a vivir lo que vos estás viviendo.",
     foto: "/fotos/propuestas/casacusia_kids_alta_186.jpg",
     bullets: [
       { icon: Users, text: "Más de 220 familias en la red, de toda Latinoamérica y España." },
       { icon: MessageCircle, text: "Grupo de WhatsApp activo todos los días: dudas, recursos, anuncios." },
-      { icon: Calendar, text: "Encuentros virtuales mensuales solo para familias." }
+      { icon: Calendar, text: "Encuentros virtuales mensuales solo para familias. Muchas personas vienen solas, que eso no te frene." }
     ],
     ctaPrincipal: { label: "Sumarme al WhatsApp de familias", href: WHATSAPP_PRINCIPAL, external: true },
     ctasExtra: [
@@ -126,19 +143,17 @@ const CONFIGS: Record<string, ProgramaConfig> = {
     proyectoTestimonio: "podcast"
   },
   "cami": {
-    hero: "Un asistente virtual que te permite acceder a los recursos que necesites en el momento indicado, resolver tus dudas, acercarte a los proyectos y tener más información sobre hipoacusia.",
-    foto: "/fotos/propuestas/DSC00009.jpg",
+    hero: "Tenemos mucha información en el podcast, en YouTube, en Instagram, en el blog y en distintos espacios. Queremos que la recibas cuando la necesites. Por eso hacemos que CAMI te la acerque.",
+    foto: "",
     bullets: [
-      { icon: Bot, text: "Disponible 24/7 mientras la integramos a la web." },
-      { icon: Sparkles, text: "Te orienta sobre diagnóstico, dispositivos, trámites como el CUD y los programas de Casacusia." },
-      { icon: MessageCircle, text: "Hoy funciona como piloto en el Instagram @hipoacusico." }
+      { icon: Bot, text: "Hoy revisamos cada respuesta que CAMI sugiere antes de enviarla, para que sea la mejor posible. Por eso todavía no es tan rápida." },
+      { icon: Sparkles, text: "Intentamos responderte en las primeras 24 horas desde que escribís." },
+      { icon: MessageCircle, text: "Cada pregunta que llega nos ayuda a mejorar CAMI." }
     ],
     ctaPrincipal: { label: "Probar en Instagram", href: INSTAGRAM_HIPOACUSICO, external: true },
     ctasExtra: [
       { label: "Sumarme al WhatsApp para enterarme cuando esté en la web", href: WHATSAPP_PRINCIPAL, external: true }
-    ],
-    proximamente: false,
-    notaFinal: "CAMI está en piloto. Tus preguntas nos ayudan a hacerla mejor."
+    ]
   },
   "comunidad-whatsapp": {
     hero: "Más de 36 grupos de WhatsApp para elegir según tu etapa, ciudad o situación. El espacio donde la comunidad se encuentra día a día: dudas, anuncios, novedades y compañía.",
@@ -152,16 +167,15 @@ const CONFIGS: Record<string, ProgramaConfig> = {
     notaFinal: "Estamos preparando el listado completo de los 36 grupos. Mientras tanto, sumate al principal y te derivamos."
   },
   "recursera": {
-    hero: "Un banco de recursos categorizado por etapas de la pérdida auditiva: sospecha, diagnóstico, tratamiento, adaptación y vida con dispositivos. Para que cada persona encuentre lo que necesita en su momento.",
+    hero: "Tenemos mucha información generada en estos años, y queremos que la recibas en el momento adecuado: cuando te lo preguntás, cuando te lo necesitás. Para eso estamos armando la Recursera.",
     foto: "/fotos/taller-adultos.jpg",
     bullets: [
-      { icon: BookOpen, text: "Recursos por etapa de la pérdida auditiva." },
-      { icon: Sparkles, text: "Artículos, guías, videos y derivaciones a profesionales." },
-      { icon: Users, text: "Curados por personas que ya pasaron por ese momento." }
+      { icon: BookOpen, text: "Recursos categorizados por etapas de la pérdida auditiva." },
+      { icon: Sparkles, text: "Artículos, guías y videos curados por personas que ya pasaron por cada momento." },
+      { icon: Users, text: "Pensados para que llegues a la información que necesitás, justo cuando la necesitás." }
     ],
     ctaPrincipal: { label: "Sumarme al WhatsApp para que me avisen", href: WHATSAPP_PRINCIPAL, external: true },
-    proximamente: true,
-    notaFinal: "Estamos armando la Recursera. Si querés colaborar, escribinos."
+    proximamente: true
   }
 };
 
@@ -295,12 +309,28 @@ export default async function ProgramaDetailPage({
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-sm text-ink-muted">
-              ¿No está tu ciudad?{" "}
-              <Link href="/contacto" className="font-bold text-verde-dark underline underline-offset-4 hover:text-[#0a6b42]">
-                Escribinos y vemos cómo armar uno.
-              </Link>
-            </p>
+          </div>
+        </Section>
+      )}
+
+      {/* Países si aplica (virtual) */}
+      {config?.paises && config.paises.length > 0 && (
+        <Section background="tint" className="py-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-xl md:text-2xl font-extrabold text-ink mb-5">
+              Desde dónde se unen
+            </h2>
+            <ul className="flex flex-wrap gap-2">
+              {config.paises.map((p) => {
+                const info = COUNTRY_INFO[p];
+                return (
+                  <li key={p} className="inline-flex items-center gap-2 rounded-full bg-surface-card border border-surface-line px-4 py-2 text-sm font-semibold text-ink">
+                    <span aria-hidden className="text-base leading-none">{info?.flag ?? "🌐"}</span>
+                    {info?.name ?? p}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </Section>
       )}

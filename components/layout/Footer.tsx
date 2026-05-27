@@ -76,7 +76,6 @@ export function Footer() {
       <div className="container mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-surface-bg/70">
         <p>© {year} {site.legalName}. {t("rights")}</p>
         <div className="flex gap-4">
-          <Link href="/accesibilidad" className="hover:underline underline-offset-4">{t("accesibilidad")}</Link>
           <Link href="/contacto" className="hover:underline underline-offset-4">{t("privacidad")}</Link>
         </div>
       </div>

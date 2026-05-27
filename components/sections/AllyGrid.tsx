@@ -7,12 +7,12 @@ import { getAliados, type Aliado } from "@/lib/content";
 
 type Props = { variant?: "home" | "full" };
 
-const SPONSORS_MES_A_MES = ["marval", "helen-diller-foundation"];
+const SPONSORS_IMPULSAN = ["marval", "helen-diller-foundation", "infinidad", "parque-de-innovacion"];
 
 export function AllyGrid({ variant = "home" }: Props) {
   const allAliados = getAliados();
-  const sponsors = allAliados.filter((a) => SPONSORS_MES_A_MES.includes(a.slug));
-  const resto = allAliados.filter((a) => !SPONSORS_MES_A_MES.includes(a.slug));
+  const sponsors = allAliados.filter((a) => SPONSORS_IMPULSAN.includes(a.slug));
+  const resto = allAliados.filter((a) => !SPONSORS_IMPULSAN.includes(a.slug));
 
   return (
     <Section background="default" ariaLabelledBy="ally-grid-title">
@@ -22,13 +22,13 @@ export function AllyGrid({ variant = "home" }: Props) {
         </h2>
 
         <div className="space-y-14">
-          {/* 1. Nos acompañan mes a mes */}
+          {/* 1. Nos impulsan a crecer */}
           {sponsors.length > 0 && (
             <div>
               <h3 className="text-sm font-display font-bold text-center mb-5 text-ink uppercase tracking-[0.2em]">
-                Nos acompañan mes a mes
+                Nos impulsan a crecer
               </h3>
-              <ul className="flex justify-center gap-6 flex-wrap">
+              <ul className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
                 {sponsors.map((a) => (
                   <li key={a.slug}>
                     <AliadoCard aliado={a} size="sponsor" />

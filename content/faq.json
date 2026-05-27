@@ -40,14 +40,6 @@
     "destacada": true
   },
   {
-    "id": "cobertura-obra-social",
-    "pregunta": "¿Los audífonos los cubre la obra social en Argentina?",
-    "respuesta": "Sí. La Ley 24.901 obliga a obras sociales y prepagas a cubrir el 100% de audífonos, implantes cocleares, baterías, moldes y rehabilitación auditiva cuando la persona tiene Certificado Único de Discapacidad (CUD).",
-    "categoria": "obras-sociales",
-    "orden": 6,
-    "destacada": true
-  },
-  {
     "id": "hijo-hipoacusia",
     "pregunta": "Mi hijo fue diagnosticado con hipoacusia, ¿qué hago?",
     "respuesta": "Respirá. Pasos iniciales: (1) confirmar con un equipo ORL + fonoaudiología pediátrica, (2) tramitar el CUD, (3) iniciar cobertura por Ley 24.901, (4) conectar con otras familias. En CASACUSIA existe la Red de Padres y Madres con más de 220 familias.",

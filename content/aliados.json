@@ -107,7 +107,7 @@
         "destacado": false,
         "orden": 8,
         "desde": "2025-02",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "doctored",
@@ -146,7 +146,7 @@
         "destacado": false,
         "orden": 11,
         "desde": "2025-04",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "parque-de-innovacion",
@@ -172,7 +172,7 @@
         "destacado": false,
         "orden": 13,
         "desde": "2025-03",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "psa",
@@ -185,7 +185,7 @@
         "destacado": false,
         "orden": 14,
         "desde": "2025-04",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "via-cotone",
@@ -211,7 +211,7 @@
         "destacado": false,
         "orden": 16,
         "desde": "2025-06",
-        "activo": true
+        "activo": false
     },
     {
         "slug": "modo",

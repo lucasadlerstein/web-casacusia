@@ -8,7 +8,18 @@ import { getAliados, type Aliado } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
-const SPONSORS_MES_A_MES = ["marval", "helen-diller-foundation"];
+/** Logos destacados arriba: nos impulsan a crecer. */
+const SPONSORS_IMPULSAN = ["marval", "helen-diller-foundation", "infinidad", "parque-de-innovacion"];
+
+/** Carrusel de fotos de Casacusia que va al final */
+const FOTOS_GALERIA = [
+  "/fotos-nuevas/eventos/casacusia_gz-102.jpg",
+  "/fotos-nuevas/eventos/casacusia_gz-117.jpg",
+  "/fotos-nuevas/eventos/bariloche.jpg",
+  "/fotos-nuevas/eventos/003a0237.jpg",
+  "/fotos-nuevas/eventos/img_7290heic.jpg",
+  "/fotos-nuevas/eventos/img_6390.jpg"
+];
 
 export async function generateMetadata({
   params
@@ -30,23 +41,20 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
   setRequestLocale(locale);
 
   const allAliados = getAliados();
-  const sponsors = allAliados.filter((a) => SPONSORS_MES_A_MES.includes(a.slug));
-  const resto = allAliados.filter((a) => !SPONSORS_MES_A_MES.includes(a.slug));
+  const sponsors = allAliados.filter((a) => SPONSORS_IMPULSAN.includes(a.slug));
+  const resto = allAliados.filter((a) => !SPONSORS_IMPULSAN.includes(a.slug));
 
   return (
     <main className="bg-surface-bg">
-      {/* Bloque 1: Nos acompañan mes a mes */}
+      {/* Bloque 1: Nos impulsan a crecer */}
       {sponsors.length > 0 && (
         <section className="pt-16 pb-12 md:pt-20">
           <div className="container max-w-5xl mx-auto px-4">
             <h1 className="font-display text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-ink text-center">
-              Nos acompañan mes a mes.
+              Nos impulsan a crecer.
             </h1>
-            <p className="mt-4 text-ink-soft text-center max-w-2xl mx-auto">
-              Empresas y fundaciones que sostienen nuestro trabajo con un aporte regular. Gracias a ellas podemos planear, escalar y llegar más lejos.
-            </p>
 
-            <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <ul className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
               {sponsors.map((a) => (
                 <li key={a.slug}>
                   <SponsorCard aliado={a} />
@@ -63,9 +71,6 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
           <h2 id="todos-title" className="font-display text-2xl md:text-3xl font-extrabold text-ink">
             Todos los aliados
           </h2>
-          <p className="mt-2 text-ink-soft max-w-2xl">
-            Empresas, fundaciones e instituciones que aportan productos, servicios, espacios o tiempo para que Casacusia exista.
-          </p>
 
           <ul className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {resto.map((a) => (
@@ -83,26 +88,45 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
           </p>
         </div>
       </Section>
+
+      {/* Bloque 3: Fotos de Casacusia */}
+      <Section background="default" className="py-12">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-display text-xl md:text-2xl font-extrabold text-ink mb-6 text-center">
+            Casacusia en acción
+          </h2>
+          <ul className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+            {FOTOS_GALERIA.map((src) => (
+              <li key={src} className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-surface-line">
+                <Image
+                  src={src}
+                  alt="Casacusia"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
     </main>
   );
 }
 
 function SponsorCard({ aliado }: { aliado: Aliado }) {
   const card = (
-    <div className="group relative flex items-center justify-center aspect-[5/3] rounded-3xl bg-white border border-surface-line p-6 shadow-sm hover:shadow-lg hover:border-verde-dark/30 transition-all duration-300">
+    <div className="group relative flex items-center justify-center aspect-[5/3] rounded-2xl bg-white border border-surface-line p-5 shadow-sm hover:shadow-md hover:border-verde-dark/30 transition-all duration-300">
       <div className="relative w-full h-full">
         <Image
           src={aliado.logo}
           alt={aliado.nombre}
           fill
-          className="object-contain p-6"
-          sizes="(max-width: 640px) 100vw, 50vw"
+          className="object-contain p-3"
+          sizes="(max-width: 768px) 50vw, 25vw"
         />
       </div>
       <span className="sr-only">{aliado.nombre}</span>
-      <span className="absolute bottom-3 left-3 text-[10px] uppercase tracking-wider font-bold text-ink-muted bg-surface-bg/80 px-2 py-0.5 rounded-full">
-        Mes a mes
-      </span>
     </div>
   );
 

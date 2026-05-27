@@ -1,13 +1,20 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Info, MessageCircle, Mail, Instagram, Linkedin } from "lucide-react";
+import { MessageCircle, Mail, Instagram, Linkedin } from "lucide-react";
 
-import { PageHero } from "@/components/ui/PageHero";
-import { Section, SectionHeading } from "@/components/ui/Section";
+import { Section } from "@/components/ui/Section";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { site } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
+
+const FOTOS_CONTACTO = [
+  "/fotos-nuevas/eventos/casacusia_gz-102.jpg",
+  "/fotos-nuevas/eventos/casacusia_gz-117.jpg",
+  "/fotos-nuevas/eventos/img_6390.jpg",
+  "/fotos-nuevas/eventos/003a0237.jpg"
+];
 
 export async function generateMetadata({
   params
@@ -36,24 +43,22 @@ export default async function ContactoPage({
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "contacto" });
 
-  const allowedTypes = ["personal", "voluntariado", "prensa", "empresa", "profesional", "otro"] as const;
+  const allowedTypes = ["personal", "voluntariado", "prensa", "comunicacion", "empresa", "profesional", "programas", "otro"] as const;
   const initialType = (allowedTypes as readonly string[]).includes(typeParam ?? "") ? (typeParam as string) : "personal";
 
   return (
-    <>
-      <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} />
-
-      <Section background="default" ariaLabelledBy="fast-channels">
-        <div className="rounded-2xl bg-brand-warm-soft border border-brand-warm/20 p-5 md:p-6 mb-10 flex items-start gap-3">
-          <Info size={20} aria-hidden className="text-brand-warm mt-0.5 shrink-0" />
-          <p className="text-ink-soft text-sm md:text-base">{t("honesty")}</p>
+    <main className="bg-surface-bg">
+      <section className="pt-16 pb-8 md:pt-20">
+        <div className="container max-w-5xl mx-auto px-4">
+          <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-ink">
+            Escribinos
+          </h1>
         </div>
+      </section>
 
-        <h2 id="fast-channels" className="sr-only">Canales rápidos y formulario</h2>
-
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+      <Section background="default" className="pt-2 pb-16">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr] max-w-6xl mx-auto">
           <aside className="space-y-4">
-            <SectionHeading title={t("fastChannels")} />
             <ul className="space-y-4">
               <li>
                 <a
@@ -64,8 +69,8 @@ export default async function ContactoPage({
                 >
                   <MessageCircle size={20} aria-hidden className="text-brand-teal mt-0.5" />
                   <div>
-                    <p className="font-semibold">WhatsApp Community</p>
-                    <p className="text-sm text-ink-soft">{t("hero.subtitle").split(". ")[1]}</p>
+                    <p className="font-semibold">Comunidad de WhatsApp</p>
+                    <p className="text-sm text-ink-soft">Sumate a la conversación de todos los días.</p>
                   </div>
                 </a>
               </li>
@@ -113,13 +118,32 @@ export default async function ContactoPage({
           </aside>
 
           <section aria-labelledby="form-title">
-            <h3 id="form-title" className="font-display text-2xl md:text-3xl font-semibold mb-6">
-              {t("writeUs")}
-            </h3>
+            <h2 id="form-title" className="font-display text-2xl md:text-3xl font-semibold mb-6">
+              Contanos brevemente y te respondemos
+            </h2>
             <ContactForm initialType={initialType} />
           </section>
         </div>
       </Section>
-    </>
+
+      {/* Galería de fotos */}
+      <Section background="tint" className="py-12">
+        <div className="max-w-6xl mx-auto">
+          <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+            {FOTOS_CONTACTO.map((src) => (
+              <li key={src} className="relative aspect-square rounded-2xl overflow-hidden border border-surface-line">
+                <Image
+                  src={src}
+                  alt="Casacusia"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+    </main>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
-import { Coffee, Beef, CupSoda, HeartHandshake, Users, Handshake, Gift, ArrowRight, Check } from "lucide-react";
+import { HeartHandshake, Users, Handshake, Gift, ArrowRight, Check, User, UserCheck, UsersRound } from "lucide-react";
 
 import { Link } from "@/lib/i18n/navigation";
 import { Section } from "@/components/ui/Section";
@@ -45,10 +45,10 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
       <section className="pt-16 pb-10 md:pt-20">
         <div className="container max-w-3xl mx-auto px-4 text-center">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.15] tracking-tight text-ink">
-            Cómo podés colaborar
+            Estás acá porque posiblemente te moleste la indiferencia.
           </h1>
           <p className="mt-5 text-lg text-ink-soft leading-relaxed">
-            No importa si sos profesional, si querés donar tu tiempo o si podés aportar económicamente. Cada acción cuenta.
+            Así que te contamos cómo podés colaborar con las personas a través de Casacusia.
           </p>
         </div>
 
@@ -89,19 +89,19 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
 
             <ul className="mt-6 space-y-2 text-sm text-ink">
               <li className="flex items-center gap-2">
-                <Coffee size={16} className="text-verde-dark" aria-hidden /> Café · $4.800/mes
+                <User size={16} className="text-verde-dark" aria-hidden /> Acompañá a una persona · $4.800/mes
               </li>
               <li className="flex items-center gap-2">
-                <CupSoda size={16} className="text-verde-dark" aria-hidden /> Café + Tostón · $12.000/mes
+                <UserCheck size={16} className="text-verde-dark" aria-hidden /> Acompañá a una familia · $12.000/mes
               </li>
               <li className="flex items-center gap-2">
-                <Beef size={16} className="text-verde-dark" aria-hidden /> Tira de Asado · $25.000/mes
+                <UsersRound size={16} className="text-verde-dark" aria-hidden /> Acompañá a un grupo · $25.000/mes
               </li>
             </ul>
             <p className="mt-3 text-xs text-ink-muted">Dalo de baja cuando quieras.</p>
 
             <div className="mt-7 flex flex-wrap gap-3">
-              <Button href="/sumate/donar" size="lg">
+              <Button href="/sumate/donar#planes" size="lg">
                 Ver planes
               </Button>
               <DonateOnceButton variant="ghost" />
@@ -109,7 +109,7 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
           </div>
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-surface-line shadow-md">
             <Image
-              src="/fotos/sumate-donar.jpg"
+              src="/fotos-nuevas/eventos/casacusia_gz-214.jpg"
               alt="Apadriná familias"
               fill
               className="object-cover"
@@ -124,7 +124,7 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-surface-line shadow-md order-2 lg:order-1">
             <Image
-              src="/fotos/grupo-voluntarios.jpg"
+              src="/fotos-nuevas/kids/img_9809jpg.jpg"
               alt="Voluntarios Casacusia"
               fill
               className="object-cover"
@@ -217,7 +217,7 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-surface-line shadow-md order-2 lg:order-1">
             <Image
-              src="/fotos/taller-ceramica.jpg"
+              src="/fotos-nuevas/casacusia-kids-2026-3-001/casacusia_kids_alta_120.jpg"
               alt="Donar servicios"
               fill
               className="object-cover"
