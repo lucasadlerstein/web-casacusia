@@ -8,14 +8,15 @@ import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
 import { TestimonioBlocks } from "@/components/sections/TestimonioBlocks";
+import { GruposWhatsapp } from "@/components/sections/GruposWhatsapp";
 import { RotatingImage } from "@/components/ui/RotatingImage";
 import { EventFilterClient } from "@/components/sections/EventFilterClient";
 import { getUpcomingEvents } from "@/lib/luma";
+import { getPodcastFeed } from "@/lib/podcast";
 import { getTranslations } from "next-intl/server";
 import {
   getProgramas,
   getTestimonios,
-  getEpisodios,
   type TestimonioProyecto
 } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
@@ -159,15 +160,14 @@ const CONFIGS: Record<string, ProgramaConfig> = {
     ]
   },
   "comunidad-whatsapp": {
-    hero: "Más de 36 grupos de WhatsApp para elegir según tu etapa, ciudad o situación. El espacio donde la comunidad se encuentra día a día: dudas, anuncios, novedades y compañía.",
+    hero: "Más de 40 grupos de WhatsApp para elegir según tu etapa, ciudad o situación. El espacio donde la comunidad se encuentra día a día: dudas, anuncios, novedades y compañía.",
     foto: "/fotos/encuentro-patio.jpg",
     bullets: [
       { icon: MessageCircle, text: "Grupos por ciudad, por etapa (recién diagnosticado, con implante, padres, etc.) y por interés." },
       { icon: Users, text: "Todos los grupos son moderados por voluntarios del equipo." },
       { icon: Sparkles, text: "Sumate al grupo principal y te indicamos a cuál más podés sumarte." }
     ],
-    ctaPrincipal: { label: "Sumarme al grupo principal", href: WHATSAPP_PRINCIPAL, external: true },
-    notaFinal: "Estamos preparando el listado completo de los 36 grupos. Mientras tanto, sumate al principal y te derivamos."
+    ctaPrincipal: { label: "Ver todos los grupos", href: "https://linktr.ee/casacusia", external: true }
   },
   "recursera": {
     hero: "Tenemos mucha información generada en estos años, y queremos que la recibas en el momento adecuado: cuando te lo preguntás, cuando te lo necesitás. Para eso estamos armando la Recursera.",
@@ -218,8 +218,9 @@ export default async function ProgramaDetailPage({
     ? getTestimonios({ proyecto: config.proyectoTestimonio, destacados: true })
     : [];
 
-  // Últimos episodios destacados para el programa podcast
-  const episodios = slug === "podcast" ? getEpisodios({ destacados: true, limit: 3 }) : [];
+  // Últimos episodios para el programa podcast — directo del feed (Spotify)
+  const feedPodcast = slug === "podcast" ? await getPodcastFeed() : null;
+  const episodios = feedPodcast?.episodios.slice(0, 3) ?? [];
 
   // Embed de calendario para programas con encuentros (filtrado por tipo)
   const CALENDARIO_TAG: Record<string, "presencial" | "virtual" | "familias"> = {
@@ -374,22 +375,26 @@ export default async function ProgramaDetailPage({
             </h2>
             <ul className="space-y-3">
               {episodios.map((e) => (
-                <li key={e.slug}>
-                  <Link
-                    href={`/podcast/${e.slug}`}
+                <li key={e.guid}>
+                  <a
+                    href={e.link ?? e.audioUrl ?? "/podcast"}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex items-center gap-4 rounded-2xl bg-surface-card border border-surface-line px-5 py-4 hover:border-verde-dark transition-colors"
                   >
-                    <span className="font-display text-2xl font-extrabold text-verde-dark">
-                      #{e.numero}
-                    </span>
+                    {e.numero != null && (
+                      <span className="font-display text-2xl font-extrabold text-verde-dark shrink-0">
+                        #{e.numero}
+                      </span>
+                    )}
                     <div className="flex-1 min-w-0">
                       <p className="font-semibold text-ink line-clamp-1">{e.titulo}</p>
-                      {e.invitado && (
-                        <p className="text-sm text-ink-muted">con {e.invitado.nombre}</p>
+                      {e.duracion && (
+                        <p className="text-sm text-ink-muted">{e.duracion}</p>
                       )}
                     </div>
                     <ArrowRight size={18} className="text-ink-muted group-hover:text-verde-dark transition-colors" aria-hidden />
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -404,6 +409,9 @@ export default async function ProgramaDetailPage({
           </div>
         </Section>
       )}
+
+      {/* Listado de grupos de WhatsApp */}
+      {slug === "comunidad-whatsapp" && <GruposWhatsapp />}
 
       {/* Calendario embebido filtrado por tipo de encuentro */}
       {calendarioTag && calendarioTranslations && (

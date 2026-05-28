@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowRight, HandHeart } from "lucide-react";
 
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
@@ -7,7 +8,7 @@ import { getAliados, type Aliado } from "@/lib/content";
 
 type Props = { variant?: "home" | "full" };
 
-const SPONSORS_IMPULSAN = ["marval", "helen-diller-foundation", "infinidad", "parque-de-innovacion"];
+const SPONSORS_IMPULSAN = ["marval", "helen-diller-foundation"];
 
 export function AllyGrid({ variant = "home" }: Props) {
   const allAliados = getAliados();
@@ -28,12 +29,28 @@ export function AllyGrid({ variant = "home" }: Props) {
               <h3 className="text-sm font-display font-bold text-center mb-5 text-ink uppercase tracking-[0.2em]">
                 Nos impulsan a crecer
               </h3>
-              <ul className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
+              <ul className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto items-stretch">
                 {sponsors.map((a) => (
-                  <li key={a.slug}>
+                  <li key={a.slug} className="flex">
                     <AliadoCard aliado={a} size="sponsor" />
                   </li>
                 ))}
+                <li className="flex">
+                  <Link
+                    href="/contacto?t=empresa"
+                    className="group flex flex-col items-center justify-center text-center gap-2 w-full rounded-2xl border-2 border-dashed border-verde-dark/40 bg-verde-soft/40 px-5 py-7 hover:border-verde-dark hover:bg-verde-soft transition-colors"
+                  >
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-verde-dark text-white">
+                      <HandHeart size={20} aria-hidden />
+                    </span>
+                    <span className="font-display font-extrabold text-verde-dark leading-tight">
+                      Quiero impulsar también
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-xs font-bold text-ink-soft">
+                      Sumá a tu empresa <ArrowRight size={12} aria-hidden className="group-hover:translate-x-0.5 transition-transform" />
+                    </span>
+                  </Link>
+                </li>
               </ul>
             </div>
           )}
@@ -104,7 +121,7 @@ export function AllyGrid({ variant = "home" }: Props) {
 
 function AliadoCard({ aliado, size }: { aliado: Aliado; size: "sponsor" | "grid" }) {
   const styles = size === "sponsor"
-    ? "w-44 md:w-52 aspect-[3/2]"
+    ? "w-full aspect-[3/2]"
     : "aspect-[3/2]";
   const padding = size === "sponsor" ? "p-5" : "p-3";
 
@@ -124,7 +141,7 @@ function AliadoCard({ aliado, size }: { aliado: Aliado; size: "sponsor" | "grid"
   );
 
   return aliado.web ? (
-    <a href={aliado.web} target="_blank" rel="noopener noreferrer" className="block">
+    <a href={aliado.web} target="_blank" rel="noopener noreferrer" className="block w-full">
       {content}
     </a>
   ) : (

@@ -12,7 +12,8 @@ const nextConfig = {
       { protocol: "https", hostname: "i.ytimg.com" },
       { protocol: "https", hostname: "img.youtube.com" },
       { protocol: "https", hostname: "casacusia.org" },
-      { protocol: "https", hostname: "*.casacusia.org" }
+      { protocol: "https", hostname: "*.casacusia.org" },
+      { protocol: "https", hostname: "d3t3ozftmdmh3i.cloudfront.net" }
     ]
   },
   experimental: {

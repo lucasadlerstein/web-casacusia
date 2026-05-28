@@ -1,0 +1,52 @@
+{
+  "linkComunidad": "https://linktr.ee/casacusia",
+  "totalPersonas": 1709,
+  "grupos": [
+    { "nombre": "Buenos Aires", "categoria": "argentina" },
+    { "nombre": "La Plata", "categoria": "argentina" },
+    { "nombre": "Zona Norte (Buenos Aires)", "categoria": "argentina" },
+    { "nombre": "Zona Oeste (Buenos Aires)", "categoria": "argentina" },
+    { "nombre": "Zona Sur (Buenos Aires)", "categoria": "argentina" },
+    { "nombre": "Mar del Plata", "categoria": "argentina" },
+    { "nombre": "Córdoba", "categoria": "argentina" },
+    { "nombre": "Mendoza", "categoria": "argentina" },
+    { "nombre": "Rosario", "categoria": "argentina" },
+    { "nombre": "Santa Fe", "categoria": "argentina" },
+    { "nombre": "Entre Ríos", "categoria": "argentina" },
+    { "nombre": "Chaco", "categoria": "argentina" },
+    { "nombre": "Formosa", "categoria": "argentina" },
+    { "nombre": "Misiones", "categoria": "argentina" },
+    { "nombre": "Salta", "categoria": "argentina" },
+    { "nombre": "Catamarca", "categoria": "argentina" },
+    { "nombre": "San Luis", "categoria": "argentina" },
+    { "nombre": "Neuquén", "categoria": "argentina" },
+    { "nombre": "Río Negro", "categoria": "argentina" },
+    { "nombre": "Bariloche", "categoria": "argentina" },
+    { "nombre": "Tierra del Fuego", "categoria": "argentina" }
+  ],
+  "gruposInternacionales": [
+    { "nombre": "México", "bandera": "🇲🇽" },
+    { "nombre": "Chile", "bandera": "🇨🇱" },
+    { "nombre": "Colombia", "bandera": "🇨🇴" },
+    { "nombre": "Venezuela", "bandera": "🇻🇪" },
+    { "nombre": "Perú", "bandera": "🇵🇪" },
+    { "nombre": "Uruguay", "bandera": "🇺🇾" },
+    { "nombre": "España", "bandera": "🇪🇸" },
+    { "nombre": "Estados Unidos", "bandera": "🇺🇸" }
+  ],
+  "gruposTematicos": [
+    { "nombre": "Usuarios de audífonos" },
+    { "nombre": "Usuarios de implante coclear" },
+    { "nombre": "Familias de la hipoacusia" },
+    { "nombre": "Jóvenes con hipoacusia" },
+    { "nombre": "Hipoacusia súbita" },
+    { "nombre": "Síndrome de Meniere" },
+    { "nombre": "Neuropatía auditiva" },
+    { "nombre": "Músicos con hipoacusia" },
+    { "nombre": "Emprendedores con hipoacusia" },
+    { "nombre": "Empleo / Trabajo" },
+    { "nombre": "Consultas jurídicas" },
+    { "nombre": "LS - Lengua de Señas" },
+    { "nombre": "Difusiones sobre hipoacusia" }
+  ]
+}

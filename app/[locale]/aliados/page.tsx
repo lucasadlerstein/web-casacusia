@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, HandHeart } from "lucide-react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import { Section } from "@/components/ui/Section";
@@ -9,7 +10,7 @@ import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
 /** Logos destacados arriba: nos impulsan a crecer. */
-const SPONSORS_IMPULSAN = ["marval", "helen-diller-foundation", "infinidad", "parque-de-innovacion"];
+const SPONSORS_IMPULSAN = ["marval", "helen-diller-foundation"];
 
 /** Carrusel de fotos de Casacusia que va al final */
 const FOTOS_GALERIA = [
@@ -54,12 +55,28 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
               Nos impulsan a crecer.
             </h1>
 
-            <ul className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl mx-auto">
+            <ul className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto items-stretch">
               {sponsors.map((a) => (
-                <li key={a.slug}>
+                <li key={a.slug} className="flex">
                   <SponsorCard aliado={a} />
                 </li>
               ))}
+              <li className="flex">
+                <Link
+                  href={`/${locale}/contacto?t=empresa`}
+                  className="group flex flex-col items-center justify-center text-center gap-2 w-full rounded-2xl border-2 border-dashed border-verde-dark/40 bg-verde-soft/40 px-5 py-7 hover:border-verde-dark hover:bg-verde-soft transition-colors"
+                >
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-verde-dark text-white">
+                    <HandHeart size={20} aria-hidden />
+                  </span>
+                  <span className="font-display font-extrabold text-verde-dark leading-tight">
+                    Quiero impulsar también
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-ink-soft">
+                    Sumá a tu empresa <ArrowRight size={12} aria-hidden className="group-hover:translate-x-0.5 transition-transform" />
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
         </section>
@@ -116,7 +133,7 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
 
 function SponsorCard({ aliado }: { aliado: Aliado }) {
   const card = (
-    <div className="group relative flex items-center justify-center aspect-[5/3] rounded-2xl bg-white border border-surface-line p-5 shadow-sm hover:shadow-md hover:border-verde-dark/30 transition-all duration-300">
+    <div className="group relative flex items-center justify-center w-full aspect-[5/3] rounded-2xl bg-white border border-surface-line p-5 shadow-sm hover:shadow-md hover:border-verde-dark/30 transition-all duration-300">
       <div className="relative w-full h-full">
         <Image
           src={aliado.logo}
@@ -131,7 +148,7 @@ function SponsorCard({ aliado }: { aliado: Aliado }) {
   );
 
   return aliado.web ? (
-    <a href={aliado.web} target="_blank" rel="noopener noreferrer" aria-label={`${aliado.nombre} — sitio web`} className="block">
+    <a href={aliado.web} target="_blank" rel="noopener noreferrer" aria-label={`${aliado.nombre} — sitio web`} className="block w-full">
       {card}
     </a>
   ) : card;

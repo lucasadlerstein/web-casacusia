@@ -141,13 +141,28 @@ export default async function CalendarioPage({
           <p className="text-center text-xs md:text-sm font-bold uppercase tracking-[0.18em] text-ink-muted mb-5">
             Nos impulsan a crecer
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-6 mb-10">
-            <div className="relative h-12 md:h-14 w-32 md:w-40">
-              <Image src="/aliados/marval-logo-black.png" alt="Marval" fill className="object-contain" sizes="160px" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-3xl mx-auto items-stretch mb-9">
+            <div className="flex items-center justify-center rounded-2xl bg-white border border-surface-line p-6">
+              <div className="relative h-12 md:h-14 w-full">
+                <Image src="/aliados/marval-logo-black.png" alt="Marval" fill className="object-contain" sizes="200px" />
+              </div>
             </div>
-            <div className="relative h-12 md:h-14 w-32 md:w-40">
-              <Image src="/aliados/helen-diller-foundation-e1753726299521-r9fogwlh344g0zwia7ts7m8u2xvvrr78ynyqk191c0.png" alt="Helen Diller Foundation" fill className="object-contain" sizes="160px" />
+            <div className="flex items-center justify-center rounded-2xl bg-white border border-surface-line p-6">
+              <div className="relative h-12 md:h-14 w-full">
+                <Image src="/aliados/helen-diller-foundation-e1753726299521-r9fogwlh344g0zwia7ts7m8u2xvvrr78ynyqk191c0.png" alt="Helen Diller Foundation" fill className="object-contain" sizes="200px" />
+              </div>
             </div>
+            <Link
+              href="/contacto?t=empresa"
+              className="group flex flex-col items-center justify-center text-center gap-2 rounded-2xl border-2 border-dashed border-verde-dark/40 bg-verde-soft/40 px-5 py-6 hover:border-verde-dark hover:bg-verde-soft transition-colors"
+            >
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-verde-dark text-white">
+                <HandHeart size={18} aria-hidden />
+              </span>
+              <span className="font-display font-extrabold text-verde-dark leading-tight text-sm">
+                Quiero impulsar también
+              </span>
+            </Link>
           </div>
           <p className="text-center text-ink-soft text-base md:text-lg leading-relaxed mb-7 max-w-2xl mx-auto">
             Estos encuentros son gratuitos gracias a quienes apoyan a la Fundación. Podés sumarte vos también.
@@ -228,7 +243,7 @@ export default async function CalendarioPage({
                 </a>
               ))}
               <a
-                href="https://open.spotify.com/show/3yYACzNjFNsdGzgcoFB7vp"
+                href="https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="col-span-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-ink text-white px-4 py-3 text-sm font-bold hover:bg-ink-soft transition-colors"

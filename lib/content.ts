@@ -10,6 +10,7 @@ import testimoniosData from "@/content/testimonios.json";
 import impactoData from "@/content/impacto.json";
 import faqsData from "@/content/faq.json";
 import reconocimientosData from "@/content/reconocimientos.json";
+import gruposWhatsappData from "@/content/grupos-whatsapp.json";
 
 export const comisiones = [
   "comunicacion",
@@ -300,4 +301,17 @@ export function getFAQs(opts: { categoria?: string } = {}): FAQ[] {
 
 export function getReconocimientos(): Reconocimiento[] {
   return z.array(ReconocimientoSchema).parse(reconocimientosData);
+}
+
+const GruposWhatsappSchema = z.object({
+  linkComunidad: z.string(),
+  totalPersonas: z.number(),
+  grupos: z.array(z.object({ nombre: z.string(), categoria: z.literal("argentina") })),
+  gruposInternacionales: z.array(z.object({ nombre: z.string(), bandera: z.string() })),
+  gruposTematicos: z.array(z.object({ nombre: z.string() }))
+});
+export type GruposWhatsapp = z.infer<typeof GruposWhatsappSchema>;
+
+export function getGruposWhatsapp(): GruposWhatsapp {
+  return GruposWhatsappSchema.parse(gruposWhatsappData);
 }
