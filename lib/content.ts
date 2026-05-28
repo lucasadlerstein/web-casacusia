@@ -5,7 +5,6 @@ import equipoData from "@/content/equipo.json";
 import voluntariosData from "@/content/voluntarios.json";
 import programasData from "@/content/programas.json";
 import eventosData from "@/content/eventos.json";
-import episodiosData from "@/content/podcast.json";
 import testimoniosData from "@/content/testimonios.json";
 import impactoData from "@/content/impacto.json";
 import faqsData from "@/content/faq.json";
@@ -98,33 +97,6 @@ const EventoSchema = z.object({
   estado: z.enum(["proximo", "realizado", "cancelado"])
 });
 export type Evento = z.infer<typeof EventoSchema>;
-
-export const podcastCategorias = [
-  "historias",
-  "salud",
-  "tecnologia",
-  "bienestar",
-  "derechos",
-  "tips"
-] as const;
-export type PodcastCategoria = (typeof podcastCategorias)[number];
-
-const EpisodioSchema = z.object({
-  slug: z.string(),
-  numero: z.number(),
-  titulo: z.string(),
-  invitado: z.object({ nombre: z.string(), rol: z.string().optional() }).optional(),
-  categoria: z.enum(podcastCategorias),
-  descripcion: z.string(),
-  fechaPublicacion: z.string(),
-  duracion: z.string(),
-  youtubeId: z.string().optional(),
-  spotifyUrl: z.string().url().optional(),
-  applePodcastsUrl: z.string().url().optional(),
-  transcripcion: z.string().optional(),
-  destacado: z.boolean()
-});
-export type Episodio = z.infer<typeof EpisodioSchema>;
 
 export const testimonioAudiencias = [
   "persona-con-perdida-auditiva",
@@ -258,24 +230,6 @@ export function getProximosEventos(opts: { limit?: number } = {}): Evento[] {
   return opts.limit ? all.slice(0, opts.limit) : all;
 }
 
-export function getEpisodios(opts: { limit?: number; destacados?: boolean } = {}): Episodio[] {
-  const all = z
-    .array(EpisodioSchema)
-    .parse(episodiosData)
-    .sort((a, b) => b.numero - a.numero);
-  const filtered = opts.destacados ? all.filter((e) => e.destacado) : all;
-  return opts.limit ? filtered.slice(0, opts.limit) : filtered;
-}
-
-export function getCategoriasPodcastConConteo(): { categoria: PodcastCategoria; count: number }[] {
-  const all = getEpisodios();
-  const counts = new Map<PodcastCategoria, number>();
-  for (const c of podcastCategorias) counts.set(c, 0);
-  for (const e of all) counts.set(e.categoria, (counts.get(e.categoria) ?? 0) + 1);
-  return [...counts.entries()]
-    .map(([categoria, count]) => ({ categoria, count }))
-    .filter((c) => c.count > 0);
-}
 
 export function getTestimonios(opts: {
   destacados?: boolean;

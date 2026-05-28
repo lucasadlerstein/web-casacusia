@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { Link } from "@/lib/i18n/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getUpcomingEvents } from "@/lib/luma";
-import { getEpisodios } from "@/lib/content";
+import { getPodcastFeed } from "@/lib/podcast";
 import { EventFilterClient } from "@/components/sections/EventFilterClient";
 import { PhotoStrip } from "@/components/ui/PhotoStrip";
 import { CountryAwareDonateCTA } from "@/components/ui/CountryAwareDonateCTA";
@@ -58,7 +58,8 @@ export default async function CalendarioPage({
   const t = await getTranslations("calendario");
   const tFilters = await getTranslations("home.proximoEncuentro");
   const events = await getUpcomingEvents();
-  const [episodioDestacado] = getEpisodios({ destacados: true, limit: 1 });
+  const feedPodcast = await getPodcastFeed();
+  const episodioDestacado = feedPodcast?.episodios[0] ?? null;
 
   const translations = {
     title: tFilters("title"),
@@ -202,30 +203,34 @@ export default async function CalendarioPage({
           </h2>
 
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-center">
-            {/* Episodio destacado del podcast */}
+            {/* Último episodio del podcast */}
             {episodioDestacado && (
-              <Link
-                href={`/podcast/${episodioDestacado.slug}`}
+              <a
+                href={episodioDestacado.link ?? episodioDestacado.audioUrl ?? "/podcast"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-5 rounded-3xl bg-violeta-soft border-2 border-violeta/30 p-6 md:p-7 hover:border-violeta-dark transition-colors"
               >
-                <div className="shrink-0 inline-flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-2xl bg-violeta text-white">
-                  <Headphones size={28} aria-hidden />
+                <div className="relative shrink-0 h-16 w-16 md:h-20 md:w-20 rounded-2xl overflow-hidden bg-violeta text-white flex items-center justify-center">
+                  {episodioDestacado.imagen ? (
+                    <Image src={episodioDestacado.imagen} alt={episodioDestacado.titulo} fill className="object-cover" sizes="80px" />
+                  ) : (
+                    <Headphones size={28} aria-hidden />
+                  )}
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-bold uppercase tracking-wider text-violeta-dark mb-1">
-                    Sordo pero no mudo · Episodio destacado
+                    Sordo pero no mudo · Último episodio
                   </p>
                   <p className="font-display text-lg md:text-xl font-bold text-ink leading-snug line-clamp-2">
-                    #{episodioDestacado.numero} · {episodioDestacado.titulo}
+                    {episodioDestacado.numero != null ? `#${episodioDestacado.numero} · ` : ""}{episodioDestacado.titulo}
                   </p>
-                  {episodioDestacado.invitado && (
-                    <p className="mt-1 text-sm text-ink-muted line-clamp-1">
-                      con {episodioDestacado.invitado.nombre}
-                    </p>
+                  {episodioDestacado.duracion && (
+                    <p className="mt-1 text-sm text-ink-muted">{episodioDestacado.duracion}</p>
                   )}
                 </div>
                 <ArrowRight size={20} className="shrink-0 text-violeta-dark group-hover:translate-x-1 transition-transform" aria-hidden />
-              </Link>
+              </a>
             )}
 
             {/* Botones redes */}
