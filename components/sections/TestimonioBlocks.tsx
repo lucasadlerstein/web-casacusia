@@ -34,7 +34,7 @@ function mulberry32(a: number) {
   };
 }
 
-export function TestimonioBlocks({ testimonios }: { testimonios: Testimonio[] }) {
+export function TestimonioBlocks({ testimonios, title }: { testimonios: Testimonio[]; title?: string }) {
   const t = useTranslations("home.testimonios");
   const [seed, setSeed] = useState(0);
   const [hydrated, setHydrated] = useState(false);
@@ -52,7 +52,7 @@ export function TestimonioBlocks({ testimonios }: { testimonios: Testimonio[] })
     <Section background="warm" ariaLabelledBy="testimonios-title" className="relative overflow-hidden py-20 md:py-24">
       <div className="flex items-end justify-between gap-4 mb-10 max-w-5xl mx-auto">
         <h2 id="testimonios-title" className="font-display text-2xl md:text-3xl font-extrabold leading-tight text-ink">
-          {t("title")}
+          {title ?? t("title")}
         </h2>
         <button
           type="button"

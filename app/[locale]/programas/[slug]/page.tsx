@@ -7,8 +7,11 @@ import { ArrowRight, Calendar, MessageCircle, Headphones, MapPin, Users, Sparkle
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
-import { Testimonial } from "@/components/sections/Testimonial";
+import { TestimonioBlocks } from "@/components/sections/TestimonioBlocks";
 import { RotatingImage } from "@/components/ui/RotatingImage";
+import { EventFilterClient } from "@/components/sections/EventFilterClient";
+import { getUpcomingEvents } from "@/lib/luma";
+import { getTranslations } from "next-intl/server";
 import {
   getProgramas,
   getTestimonios,
@@ -212,11 +215,38 @@ export default async function ProgramaDetailPage({
 
   const config = CONFIGS[slug];
   const testimonios = config?.proyectoTestimonio
-    ? getTestimonios({ proyecto: config.proyectoTestimonio, destacados: true }).slice(0, 4)
+    ? getTestimonios({ proyecto: config.proyectoTestimonio, destacados: true })
     : [];
 
   // Últimos episodios destacados para el programa podcast
   const episodios = slug === "podcast" ? getEpisodios({ destacados: true, limit: 3 }) : [];
+
+  // Embed de calendario para programas con encuentros (filtrado por tipo)
+  const CALENDARIO_TAG: Record<string, "presencial" | "virtual" | "familias"> = {
+    "encuentros": "presencial",
+    "encuentros-virtuales": "virtual",
+    "red-padres-madres": "familias"
+  };
+  const calendarioTag = CALENDARIO_TAG[slug];
+  const events = calendarioTag ? await getUpcomingEvents() : [];
+  const tFilters = calendarioTag ? await getTranslations("home.proximoEncuentro") : null;
+  const calendarioTranslations = tFilters
+    ? {
+        title: tFilters("title"),
+        body: tFilters("body"),
+        cta: tFilters("cta"),
+        sinFecha: tFilters("sinFecha"),
+        todos: tFilters("filtros.todos"),
+        presencial: tFilters("filtros.presencial"),
+        virtual: tFilters("filtros.virtual"),
+        familias: tFilters("filtros.familias"),
+        argentina: tFilters("filtros.argentina"),
+        mundo: tFilters("filtros.mundo"),
+        inscribite: tFilters("inscribite"),
+        gratuito: tFilters("gratuito"),
+        verEnLuma: tFilters("verEnLuma")
+      }
+    : null;
 
   return (
     <main className="bg-surface-bg">
@@ -375,8 +405,32 @@ export default async function ProgramaDetailPage({
         </Section>
       )}
 
-      {/* Testimonios filtrados */}
-      {testimonios.length > 0 && <Testimonial testimonios={testimonios} />}
+      {/* Calendario embebido filtrado por tipo de encuentro */}
+      {calendarioTag && calendarioTranslations && (
+        <Section background="default" className="py-12">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-extrabold text-ink mb-2 flex items-center gap-2">
+              <Calendar size={24} aria-hidden className="text-verde-dark" />
+              Próximos encuentros
+            </h2>
+            <p className="text-ink-soft mb-7">
+              Inscribite gratis. Reservás tu lugar en segundos.
+            </p>
+            <EventFilterClient
+              events={events}
+              translations={calendarioTranslations}
+              layout="vertical"
+              variant="light"
+              defaultTag={calendarioTag}
+            />
+          </div>
+        </Section>
+      )}
+
+      {/* Testimonios filtrados — cápsulas de colores */}
+      {testimonios.length > 0 && (
+        <TestimonioBlocks testimonios={testimonios} title="Lo que cuenta la comunidad" />
+      )}
 
       {/* Nota final */}
       {config?.notaFinal && (

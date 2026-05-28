@@ -66,15 +66,17 @@ interface Props {
   translations: Record<string, string>;
   layout?: "horizontal" | "vertical";
   variant?: "dark" | "light";
+  defaultTag?: FilterKey;
 }
 
-export function EventFilterClient({ events, translations, layout = "horizontal", variant = "dark" }: Props) {
+export function EventFilterClient({ events, translations, layout = "horizontal", variant = "dark", defaultTag = "todos" }: Props) {
   const isLight = variant === "light";
   const isVertical = layout === "vertical";
   const searchParams = useSearchParams();
   const initialTag = (() => {
     const t = searchParams.get("tag") as FilterKey | null;
-    return t && VALID_TAGS.has(t) ? t : "todos";
+    if (t && VALID_TAGS.has(t)) return t;
+    return defaultTag;
   })();
   const [activeFilter, setActiveFilter] = useState<FilterKey>(initialTag);
   const [showOtherCountries, setShowOtherCountries] = useState(false);
