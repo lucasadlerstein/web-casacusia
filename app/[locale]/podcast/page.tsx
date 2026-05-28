@@ -5,9 +5,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
-import { PodcastGrid } from "@/components/sections/PodcastGrid";
 import { PodcastFeedGrid } from "@/components/sections/PodcastFeedGrid";
-import { getEpisodios, getCategoriasPodcastConConteo } from "@/lib/content";
 import { getPodcastFeed } from "@/lib/podcast";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -37,15 +35,25 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
   const t = await getTranslations({ locale, namespace: "podcast" });
   const feed = await getPodcastFeed();
 
-  // Fallback: si el RSS no carga, usamos el contenido versionado.
+  // Fallback: si el RSS no carga, mostramos el hero + accesos a las plataformas.
   if (!feed) {
-    const episodios = getEpisodios();
-    const categorias = getCategoriasPodcastConConteo();
     return (
       <>
         <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} tone="brand" />
         <Section background="default">
-          <PodcastGrid episodios={episodios} categorias={categorias} />
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-ink-soft mb-6">
+              Escuchá todos los episodios de “Sordo pero no mudo” en tu plataforma preferida.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href={SPOTIFY_SHOW} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-verde-dark text-white px-6 py-3 text-base font-bold hover:bg-[#0a6b42] transition-colors">
+                <Headphones size={18} aria-hidden /> Spotify
+              </a>
+              <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-surface-card border border-surface-line text-ink px-5 py-3 text-base font-semibold hover:border-verde-dark transition-colors">
+                <Youtube size={18} aria-hidden className="text-rosa-dark" /> YouTube
+              </a>
+            </div>
+          </div>
         </Section>
       </>
     );

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { getEpisodios, getAliados } from "@/lib/content";
+import { getAliados } from "@/lib/content";
 import { locales, defaultLocale } from "@/lib/i18n/config";
 
 const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org";
@@ -44,15 +44,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       alternates: {
         languages: Object.fromEntries(locales.map((l) => [l, urlFor(route.path, l)]))
       }
-    });
-  }
-
-  for (const ep of getEpisodios()) {
-    entries.push({
-      url: urlFor(`/podcast/${ep.slug}`, defaultLocale),
-      lastModified: new Date(ep.fechaPublicacion),
-      changeFrequency: "yearly",
-      priority: 0.7
     });
   }
 
