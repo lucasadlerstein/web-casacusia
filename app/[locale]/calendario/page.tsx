@@ -10,25 +10,29 @@ import { buildMetadata } from "@/lib/seo";
 import { getUpcomingEvents } from "@/lib/luma";
 import { getPodcastFeed } from "@/lib/podcast";
 import { EventFilterClient } from "@/components/sections/EventFilterClient";
-import { PhotoStrip } from "@/components/ui/PhotoStrip";
+import { EventPhotoStrip } from "@/components/sections/EventPhotoStrip";
 import { CountryAwareDonateCTA } from "@/components/ui/CountryAwareDonateCTA";
 import type { Locale } from "@/lib/i18n/config";
 
 const FOTOS_ENCUENTROS = [
   "/fotos-nuevas/eventos/bariloche.jpg",
+  "/fotos-nuevas/eventos/caba.jpg",
+  "/fotos-nuevas/eventos/caba-2.jpg",
+  "/fotos-nuevas/eventos/casacusia_gz-100.jpg",
   "/fotos-nuevas/eventos/casacusia_gz-102.jpg",
+  "/fotos-nuevas/eventos/casacusia_gz-108.jpg",
+  "/fotos-nuevas/eventos/casacusia_gz-113.jpg",
   "/fotos-nuevas/eventos/casacusia_gz-117.jpg",
-  "/fotos-nuevas/eventos/img_4262heic.jpg",
-  "/fotos-nuevas/eventos/img_4652heic.jpg",
-  "/fotos-nuevas/eventos/img_4847heic.jpg",
-  "/fotos-nuevas/eventos/img_6390.jpg",
-  "/fotos-nuevas/eventos/img_7165heic.jpg"
+  "/fotos-nuevas/eventos/casacusia_gz-120.jpg",
+  "/fotos-nuevas/eventos/casacusia_gz-127.jpg",
+  "/fotos-nuevas/eventos/003a0237.jpg",
+  "/fotos-nuevas/eventos/003a0241.jpg"
 ];
 
 const SOCIALES = [
   { icon: Instagram, href: "https://www.instagram.com/hipoacusico/", label: "Instagram", color: "text-rosa-dark" },
   { icon: Music2, href: "https://www.tiktok.com/@hipoacusico", label: "TikTok", color: "text-ink" },
-  { icon: Youtube, href: "https://www.youtube.com/@sordoperonomudo", label: "YouTube", color: "text-rosa-dark" },
+  { icon: Youtube, href: "https://www.youtube.com/@Hipoacusico", label: "YouTube", color: "text-rosa-dark" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/casacusia", label: "LinkedIn", color: "text-violeta-dark" }
 ];
 
@@ -87,17 +91,13 @@ export default async function CalendarioPage({
           {t("intro")}
         </p>
 
-        {/* Línea de fotos de encuentros */}
-        <div className="mt-10">
-          <PhotoStrip photos={FOTOS_ENCUENTROS} alt="Encuentro Casacusia" />
-        </div>
-
         <div className="mt-10">
           <EventFilterClient
             events={events}
             translations={translations}
             layout="vertical"
             variant="light"
+            midSlot={<EventPhotoStrip photos={FOTOS_ENCUENTROS} />}
           />
         </div>
 
@@ -205,10 +205,8 @@ export default async function CalendarioPage({
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-center">
             {/* Último episodio del podcast */}
             {episodioDestacado && (
-              <a
-                href={episodioDestacado.link ?? episodioDestacado.audioUrl ?? "/podcast"}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={`/podcast/${episodioDestacado.slug}`}
                 className="group flex items-center gap-5 rounded-3xl bg-violeta-soft border-2 border-violeta/30 p-6 md:p-7 hover:border-violeta-dark transition-colors"
               >
                 <div className="relative shrink-0 h-16 w-16 md:h-20 md:w-20 rounded-2xl overflow-hidden bg-violeta text-white flex items-center justify-center">
@@ -230,7 +228,7 @@ export default async function CalendarioPage({
                   )}
                 </div>
                 <ArrowRight size={20} className="shrink-0 text-violeta-dark group-hover:translate-x-1 transition-transform" aria-hidden />
-              </a>
+              </Link>
             )}
 
             {/* Botones redes */}
@@ -248,7 +246,7 @@ export default async function CalendarioPage({
                 </a>
               ))}
               <a
-                href="https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5"
+                href="https://www.youtube.com/@Hipoacusico"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="col-span-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-ink text-white px-4 py-3 text-sm font-bold hover:bg-ink-soft transition-colors"

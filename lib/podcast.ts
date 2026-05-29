@@ -8,6 +8,7 @@ export const PODCAST_RSS_URL = "https://anchor.fm/s/e21dd318/podcast/rss";
 
 export interface PodcastEpisode {
   guid: string;
+  slug: string;
   numero: number | null;
   titulo: string;
   descripcion: string;
@@ -16,6 +17,16 @@ export interface PodcastEpisode {
   link: string | null;
   pubDate: string;
   duracion: string | null;
+}
+
+export function slugify(s: string): string {
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 80) || "episodio";
 }
 
 export interface PodcastFeed {
@@ -89,9 +100,12 @@ function parseFeed(xml: string): PodcastFeed {
         ? parseInt(itunesEp, 10)
         : null;
     const titulo = numMatch ? numMatch[2]!.trim() : rawTitle;
+    const baseSlug = slugify(titulo);
+    const slug = numero != null ? `${numero}-${baseSlug}` : baseSlug;
 
     return {
       guid: decode(getTag(block, "guid") ?? `${i}`),
+      slug,
       numero,
       titulo,
       descripcion: decode(getTag(block, "description") ?? getTag(block, "itunes:summary") ?? ""),
@@ -116,4 +130,9 @@ export async function getPodcastFeed(): Promise<PodcastFeed | null> {
   } catch {
     return null;
   }
+}
+
+export async function getPodcastEpisode(slug: string): Promise<PodcastEpisode | null> {
+  const feed = await getPodcastFeed();
+  return feed?.episodios.find((e) => e.slug === slug) ?? null;
 }

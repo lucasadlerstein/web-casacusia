@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { Search, Play, Clock } from "lucide-react";
 
+import { Link } from "@/lib/i18n/navigation";
 import type { PodcastEpisode } from "@/lib/podcast";
 
 const PAGE_SIZE = 18;
@@ -51,13 +52,11 @@ export function PodcastFeedGrid({ episodios }: { episodios: PodcastEpisode[] }) 
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((ep) => (
             <li key={ep.guid}>
-              <a
-                href={ep.link ?? ep.audioUrl ?? "#"}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={`/podcast/${ep.slug}`}
                 className="group flex flex-col h-full rounded-2xl bg-surface-card border border-surface-line overflow-hidden hover:border-verde-dark hover:shadow-md transition-all"
               >
-                <div className="relative aspect-square overflow-hidden bg-surface-tint">
+                <div className="relative aspect-video overflow-hidden bg-surface-tint">
                   {ep.imagen && (
                     <Image
                       src={ep.imagen}
@@ -92,7 +91,7 @@ export function PodcastFeedGrid({ episodios }: { episodios: PodcastEpisode[] }) 
                     )}
                   </div>
                 </div>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

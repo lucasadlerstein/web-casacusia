@@ -9,11 +9,23 @@ import { getAliados, type Aliado } from "@/lib/content";
 type Props = { variant?: "home" | "full" };
 
 const SPONSORS_IMPULSAN = ["marval", "helen-diller-foundation"];
+// Empresas que no mostramos en el grid "nos acompañaron" del home.
+const EXCLUIR_HOME = ["fime-bastidores", "parque-de-innovacion", "carrefour"];
+// Aliado que va fijo en 2da posición del grid.
+const SEGUNDO_FIJO = "infinidad";
 
 export function AllyGrid({ variant = "home" }: Props) {
   const allAliados = getAliados();
   const sponsors = allAliados.filter((a) => SPONSORS_IMPULSAN.includes(a.slug));
-  const resto = allAliados.filter((a) => !SPONSORS_IMPULSAN.includes(a.slug));
+
+  let resto = allAliados.filter(
+    (a) => !SPONSORS_IMPULSAN.includes(a.slug) && !EXCLUIR_HOME.includes(a.slug)
+  );
+  const segundo = resto.find((a) => a.slug === SEGUNDO_FIJO);
+  if (segundo) {
+    resto = resto.filter((a) => a.slug !== SEGUNDO_FIJO);
+    resto.splice(1, 0, segundo);
+  }
 
   return (
     <Section background="default" ariaLabelledBy="ally-grid-title">

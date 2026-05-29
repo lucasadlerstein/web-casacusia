@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
 const SPOTIFY_SHOW = "https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5";
-const YOUTUBE_CHANNEL = "https://www.youtube.com/@sordoperonomudo";
+const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
 const INSTAGRAM = "https://www.instagram.com/hipoacusico/";
 
 export async function generateMetadata({
@@ -88,23 +88,23 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
-                href={SPOTIFY_SHOW}
+                href={YOUTUBE_CHANNEL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-verde-dark text-white hover:bg-[#0a6b42] transition-colors px-6 py-3 text-base font-bold"
               >
-                <Headphones size={18} aria-hidden />
-                Escuchar en Spotify
+                <Youtube size={18} aria-hidden />
+                Escuchar el podcast
                 <ArrowRight size={14} aria-hidden />
               </a>
               <a
-                href={YOUTUBE_CHANNEL}
+                href={SPOTIFY_SHOW}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-surface-card border border-surface-line text-ink hover:border-verde-dark transition-colors px-5 py-3 text-base font-semibold"
               >
-                <Youtube size={18} aria-hidden className="text-rosa-dark" />
-                YouTube
+                <Headphones size={18} aria-hidden className="text-verde-dark" />
+                Spotify
               </a>
               <a
                 href={INSTAGRAM}

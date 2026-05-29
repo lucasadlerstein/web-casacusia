@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef, useEffect, Fragment, type ReactNode } from "react";
 import { useSearchParams } from "next/navigation";
 import { Calendar, MapPin, ArrowRight, Globe, Users, Monitor, ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import type { LumaEvent, EventTag } from "@/lib/luma";
@@ -67,9 +67,11 @@ interface Props {
   layout?: "horizontal" | "vertical";
   variant?: "dark" | "light";
   defaultTag?: FilterKey;
+  /** Slot que se inserta entre el 3er y 4to evento (solo layout vertical). */
+  midSlot?: ReactNode;
 }
 
-export function EventFilterClient({ events, translations, layout = "horizontal", variant = "dark", defaultTag = "todos" }: Props) {
+export function EventFilterClient({ events, translations, layout = "horizontal", variant = "dark", defaultTag = "todos", midSlot }: Props) {
   const isLight = variant === "light";
   const isVertical = layout === "vertical";
   const searchParams = useSearchParams();
@@ -220,9 +222,14 @@ export function EventFilterClient({ events, translations, layout = "horizontal",
         isVertical ? (
           <ul className="space-y-3 mb-8">
             {filteredEvents.map((event, i) => (
-              <li key={event.id}>
-                <EventRow event={event} index={i} translations={translations} variant={variant} />
-              </li>
+              <Fragment key={event.id}>
+                <li>
+                  <EventRow event={event} index={i} translations={translations} variant={variant} />
+                </li>
+                {midSlot && i === Math.min(2, filteredEvents.length - 1) && (
+                  <li className="py-2">{midSlot}</li>
+                )}
+              </Fragment>
             ))}
           </ul>
         ) : (

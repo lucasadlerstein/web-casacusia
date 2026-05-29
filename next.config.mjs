@@ -21,7 +21,6 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      { source: "/podcast/:slug", destination: "/podcast", permanent: true },
       { source: "/colaborar", destination: "/sumate", permanent: true },
       { source: "/voluntarios", destination: "/sumate/voluntariado", permanent: true },
       { source: "/blog", destination: "/recursos/blog", permanent: true },

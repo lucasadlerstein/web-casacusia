@@ -331,7 +331,7 @@ export default async function ProgramaDetailPage({
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-xl md:text-2xl font-extrabold text-ink mb-5 flex items-center gap-2">
               <MapPin size={20} aria-hidden className="text-verde-dark" />
-              Donde nos encontrás
+              Donde estuvimos presentes
             </h2>
             <ul className="flex flex-wrap gap-2">
               {config.ciudades.map((c) => (
@@ -376,10 +376,8 @@ export default async function ProgramaDetailPage({
             <ul className="space-y-3">
               {episodios.map((e) => (
                 <li key={e.guid}>
-                  <a
-                    href={e.link ?? e.audioUrl ?? "/podcast"}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/podcast/${e.slug}`}
                     className="group flex items-center gap-4 rounded-2xl bg-surface-card border border-surface-line px-5 py-4 hover:border-verde-dark transition-colors"
                   >
                     {e.numero != null && (
@@ -394,7 +392,7 @@ export default async function ProgramaDetailPage({
                       )}
                     </div>
                     <ArrowRight size={18} className="text-ink-muted group-hover:text-verde-dark transition-colors" aria-hidden />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

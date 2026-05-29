@@ -44,14 +44,12 @@ export function PodcastDestacado({ episodios }: Props) {
             <ul className="grid gap-4 md:gap-5 sm:grid-cols-2">
               {ultimos.map((ep) => (
                 <li key={ep.guid}>
-                  <a
-                    href={ep.link ?? ep.audioUrl ?? "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/podcast/${ep.slug}`}
                     className="group flex h-full flex-col rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                   >
                     {ep.imagen && (
-                      <div className="relative aspect-[4/3] overflow-hidden">
+                      <div className="relative aspect-video overflow-hidden">
                         <Image
                           src={ep.imagen}
                           alt={ep.titulo}
@@ -83,7 +81,7 @@ export function PodcastDestacado({ episodios }: Props) {
                         </p>
                       )}
                     </div>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
