@@ -62,23 +62,35 @@ export default async function EpisodioPage({
             <ArrowLeft size={16} aria-hidden /> Todos los episodios
           </Link>
 
-          {/* Portada horizontal */}
-          {ep.imagen && (
-            <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-surface-line shadow-md mb-7">
-              <Image
-                src={ep.imagen}
-                alt={ep.titulo}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 768px"
-                priority
+          {/* Video de YouTube embebido, o portada si no hay video */}
+          {ep.youtubeId ? (
+            <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-surface-line shadow-md mb-7 bg-ink">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${ep.youtubeId}`}
+                title={ep.titulo}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
               />
-              {ep.numero != null && (
-                <span className="absolute top-4 left-4 inline-flex items-center rounded-full bg-ink/85 text-white px-3 py-1 text-xs font-bold backdrop-blur-sm">
-                  Episodio #{ep.numero}
-                </span>
-              )}
             </div>
+          ) : (
+            ep.imagen && (
+              <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-surface-line shadow-md mb-7">
+                <Image
+                  src={ep.imagen}
+                  alt={ep.titulo}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 768px"
+                  priority
+                />
+                {ep.numero != null && (
+                  <span className="absolute top-4 left-4 inline-flex items-center rounded-full bg-ink/85 text-white px-3 py-1 text-xs font-bold backdrop-blur-sm">
+                    Episodio #{ep.numero}
+                  </span>
+                )}
+              </div>
+            )
           )}
 
           <h1 className="font-display text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-ink">
@@ -101,7 +113,7 @@ export default async function EpisodioPage({
           {/* Botones de escucha */}
           <div className="mt-7 flex flex-wrap gap-3">
             <a
-              href={YOUTUBE_CHANNEL}
+              href={ep.youtubeId ? `https://www.youtube.com/watch?v=${ep.youtubeId}` : YOUTUBE_CHANNEL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#143642] text-white hover:bg-ink-soft transition-colors px-6 py-3 text-base font-bold"

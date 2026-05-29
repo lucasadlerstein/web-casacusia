@@ -4,7 +4,12 @@
  * Se cachea con ISR (revalidate 1h) igual que el resto de fuentes externas.
  */
 
+import youtubeMap from "@/content/podcast-youtube.json";
+
 export const PODCAST_RSS_URL = "https://anchor.fm/s/e21dd318/podcast/rss";
+export const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
+
+const ytMap = youtubeMap as Record<string, string>;
 
 export interface PodcastEpisode {
   guid: string;
@@ -15,6 +20,7 @@ export interface PodcastEpisode {
   imagen: string | null;
   audioUrl: string | null;
   link: string | null;
+  youtubeId: string | null;
   pubDate: string;
   duracion: string | null;
 }
@@ -103,6 +109,8 @@ function parseFeed(xml: string): PodcastFeed {
     const baseSlug = slugify(titulo);
     const slug = numero != null ? `${numero}-${baseSlug}` : baseSlug;
 
+    const youtubeId = numero != null ? (ytMap[String(numero)] ?? null) : null;
+
     return {
       guid: decode(getTag(block, "guid") ?? `${i}`),
       slug,
@@ -112,6 +120,7 @@ function parseFeed(xml: string): PodcastFeed {
       imagen: getAttr(block, "itunes:image", "href") ?? portada,
       audioUrl: getAttr(block, "enclosure", "url"),
       link: getTag(block, "link"),
+      youtubeId,
       pubDate: getTag(block, "pubDate")?.trim() ?? "",
       duracion: formatDuration(getTag(block, "itunes:duration"))
     };

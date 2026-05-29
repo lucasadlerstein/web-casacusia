@@ -11,6 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
 const ONCE_AR_LINK = "https://link.mercadopago.com.ar/casacusia";
+const PODCAST_MENSUAL_AR_LINK = "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=b2aba9ec10684d2f92829f92f63019d6";
 
 export async function generateMetadata({
   params
@@ -186,17 +187,28 @@ export default async function DonarPage({ params }: { params: Promise<{ locale: 
               <p className="mt-3 text-white/85 text-sm md:text-base">
                 Video super recomendado para que veas la importancia del podcast.
               </p>
-              <div className="mt-6">
+              <div className="mt-6 flex flex-wrap gap-3">
                 <a
-                  href={ONCE_AR_LINK}
+                  href={PODCAST_MENSUAL_AR_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-full bg-white text-ink hover:bg-white/90 transition-colors text-sm px-5 py-2.5 font-bold"
                 >
-                  Donar al podcast
+                  Donar mensual al podcast
                   <ArrowRight size={14} aria-hidden />
                 </a>
+                <a
+                  href={ONCE_AR_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/40 text-white hover:bg-white/10 transition-colors text-sm px-5 py-2.5 font-bold"
+                >
+                  Donar por única vez
+                </a>
               </div>
+              <p className="mt-3 text-white/60 text-xs">
+                Donaciones desde Argentina. Pronto sumamos opciones en USD y MXN.
+              </p>
             </div>
             <div className="relative aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl">
               <iframe

@@ -16,14 +16,16 @@ export function ManifiestoHome() {
       <Filamento name="verde" className="-top-12 right-0 w-56 rotate-[12deg]" opacity={12} />
       <Filamento name="rosa" className="-bottom-16 -left-8 w-72 rotate-[-18deg]" opacity={10} />
 
-      <div className="relative mx-auto max-w-3xl text-center">
+      <div className="relative mx-auto max-w-5xl text-center">
         <h2
           id="home-manifiesto-title"
-          className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] text-ink"
+          className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.15] text-ink text-balance"
         >
-          {t("titlePre")}{" "}
-          <span className="text-rosa">{t("titleColored")}</span>{" "}
-          {t("titlePost")}
+          <span className="md:whitespace-nowrap">
+            {t("titlePre")}{" "}
+            <span className="text-rosa">{t("titleColored")}</span>
+          </span>
+          <span className="block mt-2">{t("titlePost")}</span>
         </h2>
 
         <p className="mt-8 text-lg md:text-xl leading-relaxed text-ink-soft font-medium">
