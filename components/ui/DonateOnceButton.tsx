@@ -3,6 +3,7 @@
 import { HandHeart, ArrowRight } from "lucide-react";
 import { useCountry } from "@/components/country/CountryProvider";
 import { urlDonar } from "@/lib/country";
+import { DONACION_AR } from "@/lib/donaciones";
 
 /**
  * Botón "Donar por única vez" que rutea al checkout correcto según país:
@@ -21,7 +22,7 @@ export function DonateOnceButton({
 }) {
   const { country } = useCountry();
   const href = country === "AR"
-    ? "http://link.mercadopago.com.ar/casacusia"
+    ? DONACION_AR.unicaVez
     : urlDonar(country);
 
   const base = "inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all";

@@ -8,19 +8,18 @@ import { Button } from "@/components/ui/Button";
 import { DonarPanel, type MontoOpcion } from "@/components/sections/DonarPanel";
 import { buildMetadata } from "@/lib/seo";
 import { getTestimonios } from "@/lib/content";
+import { DONACION_AR } from "@/lib/donaciones";
 import type { Locale } from "@/lib/i18n/config";
 
-const ONCE_AR_LINK = "https://link.mercadopago.com.ar/casacusia";
-const PODCAST_MENSUAL_AR_LINK = "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=b2aba9ec10684d2f92829f92f63019d6";
+const ONCE_AR_LINK = DONACION_AR.unicaVez;
+const PODCAST_MENSUAL_AR_LINK = DONACION_AR.podcastMensual;
 
-// Planes de suscripción mensual (MercadoPago). Cada plan cobra su monto fijo.
-// TODO: si se crean planes de $5.000 y $10.000, reemplazar label+href de los dos primeros.
 const MONTOS_ARS: MontoOpcion[] = [
-  { label: "$4.800", href: "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808496e950ee0196ea3b8181008b" },
-  { label: "$12.000", href: "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808496d9dcdf0196ea3c3dfd0733" },
-  { label: "$25.000", href: "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808497f5fac301980fcc676009d6" }
+  { label: "$4.800", href: DONACION_AR.mensual4800 },
+  { label: "$12.000", href: DONACION_AR.mensual12000 },
+  { label: "$25.000", href: DONACION_AR.mensual25000 }
 ];
-const OTRO_MONTO_HREF = "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c93808496d9dcdf0196ea4156350735";
+const OTRO_MONTO_HREF = DONACION_AR.mensualLibre;
 
 const FOTO_HERO = "/fotos-nuevas/eventos/casacusia_gz-21.jpg";
 

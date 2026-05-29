@@ -2,8 +2,9 @@
 
 import { useCountry } from "@/components/country/CountryProvider";
 import { HandHeart, ArrowRight } from "lucide-react";
+import { DONACION_AR } from "@/lib/donaciones";
 
-const LINK_AR = "https://link.mercadopago.com.ar/casacusia";
+const LINK_AR = DONACION_AR.unicaVez;
 const LINK_INTL = "https://donar.casacusia.org";
 
 /**
