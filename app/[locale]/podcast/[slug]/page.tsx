@@ -11,6 +11,7 @@ import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
 const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
+const SPOTIFY_SHOW = "https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5";
 
 export async function generateStaticParams() {
   const feed = await getPodcastFeed();
@@ -120,16 +121,14 @@ export default async function EpisodioPage({
             >
               <Youtube size={18} aria-hidden /> Ver en YouTube
             </a>
-            {ep.link && (
-              <a
-                href={ep.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-verde-dark text-white hover:bg-[#0a6b42] transition-colors px-6 py-3 text-base font-bold"
-              >
-                <Headphones size={18} aria-hidden /> Escuchar en Spotify
-              </a>
-            )}
+            <a
+              href={SPOTIFY_SHOW}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-surface-line bg-surface-card text-ink hover:bg-surface-tint transition-colors px-6 py-3 text-base font-bold"
+            >
+              <Headphones size={18} aria-hidden /> Escuchar en Spotify
+            </a>
           </div>
 
           {/* Reproductor de audio nativo */}

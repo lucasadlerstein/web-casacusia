@@ -49,7 +49,7 @@ export function PodcastDestacado({ episodios }: Props) {
                     className="group flex h-full flex-col rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                   >
                     {ep.imagen && (
-                      <div className="relative aspect-square overflow-hidden">
+                      <div className={`relative ${ep.aspecto === "16:9" ? "aspect-video" : "aspect-square"} overflow-hidden`}>
                         <Image
                           src={ep.imagen}
                           alt={ep.titulo}
