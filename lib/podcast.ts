@@ -67,16 +67,21 @@ function decode(s: string): string {
     .trim();
 }
 
-/** Extrae el número de episodio del título ("Ep. 70", "#70", "Episodio 70"). */
+/** Extrae el número de episodio del título ("70.", "Ep. 70", "#70", "Episodio 70"). */
 function parseNumero(titulo: string): number | null {
-  const m = titulo.match(/(?:ep\.?\s*|episodio\s*|#)\s*(\d{1,3})\b/i);
-  return m ? parseInt(m[1]!, 10) : null;
+  // "Ep. 70" / "Episodio 70" / "#70"
+  const conPrefijo = titulo.match(/(?:ep\.?\s*|episodio\s*|#)\s*(\d{1,3})\b/i);
+  if (conPrefijo) return parseInt(conPrefijo[1]!, 10);
+  // Número pelado al inicio con separador: "70. " / "70 - " / "70) "
+  const alInicio = titulo.match(/^\s*(\d{1,3})\s*[.\-)]\s+/);
+  return alInicio ? parseInt(alInicio[1]!, 10) : null;
 }
 
-/** Saca el branding redundante del título de YouTube. */
+/** Saca el branding y el número de episodio redundantes del título de YouTube. */
 function limpiarTitulo(raw: string): string {
   return decode(raw)
     .replace(/\s*[|–-]\s*sordo pero no mudo.*$/i, "")
+    .replace(/^\s*(?:ep\.?\s*|episodio\s*|#)?\s*\d{1,3}\s*[.\-):]\s+/i, "")
     .replace(/\s*\|\s*$/, "")
     .trim();
 }
