@@ -218,7 +218,7 @@ export default async function ProgramaDetailPage({
     ? getTestimonios({ proyecto: config.proyectoTestimonio, destacados: true })
     : [];
 
-  // Últimos episodios para el programa podcast — directo del feed (Spotify)
+  // Últimos episodios para el programa podcast — directo de la playlist de YouTube
   const feedPodcast = slug === "podcast" ? await getPodcastFeed() : null;
   const episodios = feedPodcast?.episodios.slice(0, 3) ?? [];
 

@@ -13,6 +13,10 @@ import type { Locale } from "@/lib/i18n/config";
 const SPOTIFY_SHOW = "https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5";
 const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
 const INSTAGRAM = "https://www.instagram.com/hipoacusico/";
+// Arte de marca del podcast (la fuente YouTube no provee portada del show).
+const PODCAST_COVER = "/brand/podcast/spnm-alta.jpg";
+const PODCAST_DESC =
+  "Conversaciones, identificación y aprendizaje sobre hipoacusia, en primera persona. Historias reales para que nadie transite su pérdida auditiva en soledad.";
 
 export async function generateMetadata({
   params
@@ -46,11 +50,11 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
               Escuchá todos los episodios de “Sordo pero no mudo” en tu plataforma preferida.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <a href={SPOTIFY_SHOW} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-verde-dark text-white px-6 py-3 text-base font-bold hover:bg-[#0a6b42] transition-colors">
-                <Headphones size={18} aria-hidden /> Spotify
+              <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-verde-dark text-white px-6 py-3 text-base font-bold hover:bg-[#0a6b42] transition-colors">
+                <Youtube size={18} aria-hidden /> YouTube
               </a>
-              <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-surface-card border border-surface-line text-ink px-5 py-3 text-base font-semibold hover:border-verde-dark transition-colors">
-                <Youtube size={18} aria-hidden className="text-rosa-dark" /> YouTube
+              <a href={SPOTIFY_SHOW} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-surface-card border border-surface-line text-ink px-5 py-3 text-base font-semibold hover:border-verde-dark transition-colors">
+                <Headphones size={18} aria-hidden className="text-verde-dark" /> Spotify
               </a>
             </div>
           </div>
@@ -64,18 +68,16 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
       {/* Portada del podcast */}
       <section className="pt-14 pb-10 md:pt-16">
         <div className="container max-w-5xl mx-auto px-4 grid md:grid-cols-[280px_1fr] gap-8 md:gap-12 items-center">
-          {feed.portada && (
-            <div className="relative aspect-square w-48 md:w-full mx-auto rounded-3xl overflow-hidden border border-surface-line shadow-lg">
-              <Image
-                src={feed.portada}
-                alt={feed.titulo}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 12rem, 280px"
-                priority
-              />
-            </div>
-          )}
+          <div className="relative aspect-square w-48 md:w-full mx-auto rounded-3xl overflow-hidden border border-surface-line shadow-lg">
+            <Image
+              src={PODCAST_COVER}
+              alt={feed.titulo}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 12rem, 280px"
+              priority
+            />
+          </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-verde-dark mb-3">
               Podcast · {feed.episodios.length} episodios
@@ -84,7 +86,7 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
               {feed.titulo}
             </h1>
             <p className="mt-4 text-base md:text-lg text-ink-soft leading-relaxed line-clamp-4">
-              {feed.descripcion}
+              {feed.descripcion || PODCAST_DESC}
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <a
@@ -127,7 +129,7 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
             Todos los episodios
           </h2>
           <p className="text-ink-soft mb-8">
-            Elegí el que más te atraviese. Se actualizan automáticamente desde Spotify.
+            Elegí el que más te atraviese. Se actualizan automáticamente desde YouTube.
           </p>
           <PodcastFeedGrid episodios={feed.episodios} />
         </div>

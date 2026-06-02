@@ -1,24 +1,21 @@
 /**
  * Episodios del podcast "Sordo pero no mudo".
  *
- * Fuente PRINCIPAL: playlist de YouTube vía YouTube Data API v3.
- *   Se activa cuando existen las env vars YOUTUBE_API_KEY y YOUTUBE_PLAYLIST_ID.
- * Fallback: feed RSS de Anchor/Spotify (la fuente histórica), por si la API
- *   falla o todavía no están cargadas las env vars.
+ * Fuente ÚNICA: playlist de YouTube vía YouTube Data API v3.
+ *   Requiere las env vars YOUTUBE_API_KEY y YOUTUBE_PLAYLIST_ID.
+ * Spotify/Apple quedan solo como links para quien los prefiera (en la UI),
+ *   ya no son fuente de datos.
  *
- * Todo se cachea con ISR (revalidate 1h) igual que el resto de fuentes externas.
+ * Se cachea con ISR (revalidate 1h) igual que el resto de fuentes externas;
+ * ante un fallo transitorio de la API, Next sigue sirviendo la última versión
+ * generada (stale-while-error).
  */
 
-import youtubeMap from "@/content/podcast-youtube.json";
-
-export const PODCAST_RSS_URL = "https://anchor.fm/s/e21dd318/podcast/rss";
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
 
 const YT_API = "https://www.googleapis.com/youtube/v3";
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
 const YOUTUBE_PLAYLIST_ID = process.env.YOUTUBE_PLAYLIST_ID;
-
-const ytMap = youtubeMap as Record<string, string>;
 
 export interface PodcastEpisode {
   guid: string;
@@ -27,13 +24,20 @@ export interface PodcastEpisode {
   titulo: string;
   descripcion: string;
   imagen: string | null;
-  /** Proporción de la miniatura: "16:9" (YouTube) o "1:1" (portada del RSS). */
+  /** Proporción de la miniatura. Las de YouTube son 16:9. */
   aspecto: "16:9" | "1:1";
   audioUrl: string | null;
   link: string | null;
   youtubeId: string | null;
   pubDate: string;
   duracion: string | null;
+}
+
+export interface PodcastFeed {
+  titulo: string;
+  descripcion: string;
+  portada: string | null;
+  episodios: PodcastEpisode[];
 }
 
 export function slugify(s: string): string {
@@ -44,13 +48,6 @@ export function slugify(s: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 80) || "episodio";
-}
-
-export interface PodcastFeed {
-  titulo: string;
-  descripcion: string;
-  portada: string | null;
-  episodios: PodcastEpisode[];
 }
 
 function decode(s: string): string {
@@ -85,10 +82,6 @@ function limpiarTitulo(raw: string): string {
     .replace(/\s*\|\s*$/, "")
     .trim();
 }
-
-/* ──────────────────────────────────────────────────────────────────────────
-   Fuente YouTube (principal)
-   ────────────────────────────────────────────────────────────────────────── */
 
 /** "PT1H2M3S" → "1:02:03" / "PT37M46S" → "37:46". */
 function formatYouTubeDuration(iso: string | undefined): string | null {
@@ -141,7 +134,7 @@ async function getDuraciones(ids: string[]): Promise<Map<string, string | null>>
   return out;
 }
 
-async function getYouTubeFeed(): Promise<PodcastFeed | null> {
+export async function getPodcastFeed(): Promise<PodcastFeed | null> {
   if (!YOUTUBE_API_KEY || !YOUTUBE_PLAYLIST_ID) return null;
   try {
     const items: YTPlaylistItem[] = [];
@@ -197,111 +190,13 @@ async function getYouTubeFeed(): Promise<PodcastFeed | null> {
       };
     });
 
-    // Más nuevos primero (consistente con el orden histórico del RSS).
+    // Más nuevos primero.
     episodios.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
 
     return { titulo: "Sordo pero no mudo", descripcion: "", portada: null, episodios };
   } catch {
     return null;
   }
-}
-
-/* ──────────────────────────────────────────────────────────────────────────
-   Fuente RSS Anchor/Spotify (fallback)
-   ────────────────────────────────────────────────────────────────────────── */
-
-function getTag(block: string, tag: string): string | null {
-  const re = new RegExp(`<${tag}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tag}>`, "i");
-  const m = block.match(re);
-  return m ? m[1]! : null;
-}
-
-function getAttr(block: string, tag: string, attr: string): string | null {
-  const re = new RegExp(`<${tag}\\b[^>]*\\b${attr}=["']([^"']+)["'][^>]*>`, "i");
-  const m = block.match(re);
-  return m ? m[1]! : null;
-}
-
-/** Formatea itunes:duration (segundos o HH:MM:SS) a "MM:SS" / "HH:MM:SS". */
-function formatDuration(raw: string | null): string | null {
-  if (!raw) return null;
-  const v = raw.trim();
-  if (v.includes(":")) return v;
-  const total = parseInt(v, 10);
-  if (!Number.isFinite(total)) return null;
-  const h = Math.floor(total / 3600);
-  const m = Math.floor((total % 3600) / 60);
-  const s = total % 60;
-  const pad = (n: number) => n.toString().padStart(2, "0");
-  return h > 0 ? `${h}:${pad(m)}:${pad(s)}` : `${m}:${pad(s)}`;
-}
-
-function parseFeed(xml: string): PodcastFeed {
-  const firstItem = xml.indexOf("<item>");
-  const channelXml = firstItem === -1 ? xml : xml.slice(0, firstItem);
-
-  const portada =
-    getAttr(channelXml, "itunes:image", "href") ??
-    getTag(channelXml, "url") ??
-    null;
-
-  const titulo = decode(getTag(channelXml, "title") ?? "Sordo pero no mudo");
-  const descripcion = decode(getTag(channelXml, "description") ?? "");
-
-  const itemBlocks = xml.match(/<item>[\s\S]*?<\/item>/gi) ?? [];
-
-  const episodios: PodcastEpisode[] = itemBlocks.map((block, i) => {
-    const rawTitle = decode(getTag(block, "title") ?? `Episodio ${i + 1}`);
-    const numMatch = rawTitle.match(/^\s*(\d+)\s*[.\-)]\s*(.+)$/);
-    const itunesEp = getTag(block, "itunes:episode");
-    const numero = numMatch
-      ? parseInt(numMatch[1]!, 10)
-      : itunesEp
-        ? parseInt(itunesEp, 10)
-        : null;
-    const titulo = numMatch ? numMatch[2]!.trim() : rawTitle;
-    const baseSlug = slugify(titulo);
-    const slug = numero != null ? `${numero}-${baseSlug}` : baseSlug;
-
-    const youtubeId = numero != null ? (ytMap[String(numero)] ?? null) : null;
-
-    return {
-      guid: decode(getTag(block, "guid") ?? `${i}`),
-      slug,
-      numero,
-      titulo,
-      descripcion: decode(getTag(block, "description") ?? getTag(block, "itunes:summary") ?? ""),
-      imagen: getAttr(block, "itunes:image", "href") ?? portada,
-      aspecto: "1:1",
-      audioUrl: getAttr(block, "enclosure", "url"),
-      link: getTag(block, "link"),
-      youtubeId,
-      pubDate: getTag(block, "pubDate")?.trim() ?? "",
-      duracion: formatDuration(getTag(block, "itunes:duration"))
-    };
-  });
-
-  return { titulo, descripcion, portada, episodios };
-}
-
-async function getRssFeed(): Promise<PodcastFeed | null> {
-  try {
-    const res = await fetch(PODCAST_RSS_URL, { next: { revalidate: 3600 } });
-    if (!res.ok) return null;
-    const xml = await res.text();
-    const feed = parseFeed(xml);
-    return feed.episodios.length > 0 ? feed : null;
-  } catch {
-    return null;
-  }
-}
-
-/* ──────────────────────────────────────────────────────────────────────────
-   API pública
-   ────────────────────────────────────────────────────────────────────────── */
-
-export async function getPodcastFeed(): Promise<PodcastFeed | null> {
-  return (await getYouTubeFeed()) ?? (await getRssFeed());
 }
 
 export async function getPodcastEpisode(slug: string): Promise<PodcastEpisode | null> {
