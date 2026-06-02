@@ -59,6 +59,7 @@ export function Hero() {
         src="/fotos/propuestas/Casacusia_GZ-21.jpg"
         alt="Comunidad Casacusia reunida"
         fill
+        sizes="100vw"
         className={`object-cover transition-all duration-700 ${
           isMoving ? "opacity-100 scale-105" : "opacity-15"
         }`}

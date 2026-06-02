@@ -8,6 +8,9 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
+    // Cachea las imágenes optimizadas 30 días: menos re-optimización y menos
+    // invocaciones de función en visitas repetidas (portadas del podcast, fotos).
+    minimumCacheTTL: 2592000,
     remotePatterns: [
       { protocol: "https", hostname: "i.ytimg.com" },
       { protocol: "https", hostname: "img.youtube.com" },

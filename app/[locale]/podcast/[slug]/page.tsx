@@ -75,13 +75,13 @@ export default async function EpisodioPage({
             </div>
           ) : (
             ep.imagen && (
-              <div className="relative aspect-video w-full rounded-3xl overflow-hidden border border-surface-line shadow-md mb-7">
+              <div className="relative aspect-square w-full max-w-md rounded-3xl overflow-hidden border border-surface-line shadow-md mb-7">
                 <Image
                   src={ep.imagen}
                   alt={ep.titulo}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 768px"
+                  sizes="(max-width: 768px) 100vw, 448px"
                   priority
                 />
                 {ep.numero != null && (

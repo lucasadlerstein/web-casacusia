@@ -311,6 +311,7 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
             src="/fotos/propuestas/casacusia_kids_alta_252.jpg"
             alt={t("cta.title")}
             fill
+            sizes="100vw"
             className="object-cover"
             quality={85}
           />

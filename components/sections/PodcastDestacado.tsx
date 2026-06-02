@@ -49,13 +49,13 @@ export function PodcastDestacado({ episodios }: Props) {
                     className="group flex h-full flex-col rounded-2xl bg-white overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                   >
                     {ep.imagen && (
-                      <div className="relative aspect-video overflow-hidden">
+                      <div className="relative aspect-square overflow-hidden">
                         <Image
                           src={ep.imagen}
                           alt={ep.titulo}
                           fill
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          sizes="(max-width: 640px) 100vw, 50vw"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent opacity-0 group-hover:opacity-60 transition-opacity duration-300" />
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">

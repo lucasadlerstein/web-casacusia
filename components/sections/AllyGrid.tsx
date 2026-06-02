@@ -146,6 +146,7 @@ function AliadoCard({ aliado, size }: { aliado: Aliado; size: "sponsor" | "grid"
         src={aliado.logo}
         alt={aliado.nombre}
         fill
+        sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 220px"
         className={`object-contain opacity-80 group-hover:opacity-100 transition-opacity ${padding}`}
       />
       <span className="sr-only">{aliado.nombre}</span>

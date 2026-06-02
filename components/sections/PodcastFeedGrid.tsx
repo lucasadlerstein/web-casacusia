@@ -56,7 +56,7 @@ export function PodcastFeedGrid({ episodios }: { episodios: PodcastEpisode[] }) 
                 href={`/podcast/${ep.slug}`}
                 className="group flex flex-col h-full rounded-2xl bg-surface-card border border-surface-line overflow-hidden hover:border-verde-dark hover:shadow-md transition-all"
               >
-                <div className="relative aspect-video overflow-hidden bg-surface-tint">
+                <div className="relative aspect-square overflow-hidden bg-surface-tint">
                   {ep.imagen && (
                     <Image
                       src={ep.imagen}
