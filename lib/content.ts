@@ -244,6 +244,12 @@ export function getTestimonios(opts: {
   return opts.limit ? all.slice(0, opts.limit) : all;
 }
 
+/** Devuelve testimonios por id, en el orden pedido (ignora ids inexistentes). */
+export function getTestimoniosByIds(ids: string[]): Testimonio[] {
+  const byId = new Map(z.array(TestimonioSchema).parse(testimoniosData).map((t) => [t.id, t]));
+  return ids.map((id) => byId.get(id)).filter((t): t is Testimonio => Boolean(t));
+}
+
 export function getImpacto(): Impacto {
   return ImpactoSchema.parse(impactoData);
 }

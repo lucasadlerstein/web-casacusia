@@ -5,23 +5,32 @@ import Image from "next/image";
 
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
-import { DonarPanel, type MontoOpcion } from "@/components/sections/DonarPanel";
+import { DonarPanel } from "@/components/sections/DonarPanel";
+import { HeroFotoRotativa } from "@/components/sections/HeroFotoRotativa";
 import { buildMetadata } from "@/lib/seo";
-import { getTestimonios } from "@/lib/content";
+import { getTestimoniosByIds } from "@/lib/content";
 import { DONACION_AR } from "@/lib/donaciones";
 import type { Locale } from "@/lib/i18n/config";
 
 const ONCE_AR_LINK = DONACION_AR.unicaVez;
 const PODCAST_MENSUAL_AR_LINK = DONACION_AR.podcastMensual;
 
-const MONTOS_ARS: MontoOpcion[] = [
-  { label: "$4.800", href: DONACION_AR.mensual4800 },
-  { label: "$12.000", href: DONACION_AR.mensual12000 },
-  { label: "$25.000", href: DONACION_AR.mensual25000 }
+// Fotos horizontales que rotan detrás del título (la derecha queda fija).
+const HERO_FOTOS = [
+  "/fotos-nuevas/eventos/casacusia_gz-21.jpg",
+  "/fotos-nuevas/eventos/img_4846heic.jpg",
+  "/fotos-nuevas/eventos/img_7165heic.jpg"
 ];
-const OTRO_MONTO_HREF = DONACION_AR.mensualLibre;
 
-const FOTO_HERO = "/fotos-nuevas/eventos/casacusia_gz-21.jpg";
+// Los 6 testimonios elegidos para el panel, en orden.
+const TESTIMONIOS_DONAR = [
+  "t-laura-mendoza",
+  "t-pame-implante-cajon",
+  "t-madrid-mama-implante",
+  "t-papa-emi-activacion",
+  "t-marilina-cafe",
+  "t-poderoso-29-anos"
+];
 
 export async function generateMetadata({
   params
@@ -51,40 +60,37 @@ export default async function DonarPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const testimonios = getTestimonios({ destacados: true });
+  const testimonios = getTestimoniosByIds(TESTIMONIOS_DONAR);
+
+  const bajada =
+    "Doná para que más personas con pérdida auditiva puedan mejorar su calidad de vida accediendo a grupos, información y dispositivos.";
 
   return (
     <main className="bg-surface-bg">
-      {/* Split: mensaje + foto a la izquierda, panel de donación a la derecha */}
+      {/* Split: foto rotativa + título a la izquierda, panel de donación a la derecha */}
       <section className="grid lg:grid-cols-2">
-        {/* Izquierda — foto fija + mensaje */}
-        <div className="relative flex items-center min-h-[440px] lg:min-h-[640px] px-6 py-16 md:px-10 lg:px-14">
-          <Image
-            src={FOTO_HERO}
-            alt=""
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/70 to-ink/45" />
-          <div className="relative z-10 max-w-xl text-white">
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1] tracking-tight">
-              No debería ser un privilegio escuchar.
-            </h1>
-            <p className="mt-5 text-base md:text-lg text-white/85 leading-relaxed">
-              Doná para que más personas con pérdida auditiva puedan mejorar su calidad de vida accediendo a grupos, información y dispositivos.
-            </p>
-            <p className="mt-6 font-display text-lg md:text-xl font-bold">
-              ¡Sumate hoy! Tu apoyo lo hace posible.
-            </p>
-          </div>
+        {/* Izquierda — foto rotativa con el título encima */}
+        <div className="flex flex-col">
+          <HeroFotoRotativa fotos={HERO_FOTOS} className="min-h-[360px] flex-1 lg:min-h-[680px]">
+            <div className="max-w-xl text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.45)]">
+              <h1 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
+                No debería ser un privilegio <span className="text-amarillo">escuchar</span>.
+              </h1>
+              {/* En desktop la bajada va sobre la foto; en mobile, debajo de la imagen. */}
+              <p className="mt-5 hidden text-base leading-relaxed text-white md:text-lg lg:block">
+                {bajada}
+              </p>
+            </div>
+          </HeroFotoRotativa>
+          <p className="px-6 py-6 text-base leading-relaxed text-ink-soft md:px-10 lg:hidden">
+            {bajada}
+          </p>
         </div>
 
-        {/* Derecha — panel de donación */}
+        {/* Derecha — panel de donación (fijo) */}
         <div className="flex items-center bg-surface-bg px-6 py-12 md:px-10 lg:px-14">
           <div className="w-full max-w-lg mx-auto">
-            <DonarPanel montos={MONTOS_ARS} otroHref={OTRO_MONTO_HREF} testimonios={testimonios} />
+            <DonarPanel testimonios={testimonios} />
           </div>
         </div>
       </section>
