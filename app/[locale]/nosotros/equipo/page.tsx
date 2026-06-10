@@ -108,15 +108,6 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
           </ul>
         </div>
 
-        {/* Filtros por área se mantienen para voluntarios */}
-        {voluntarios.length > 0 && (
-          <div className="max-w-6xl mx-auto mt-12">
-            <p className="font-display text-base font-bold text-ink-soft mb-4">
-              Filtrar voluntarios por área
-            </p>
-            <VolunteerGrid voluntarios={voluntarios} comisiones={comisiones} />
-          </div>
-        )}
       </Section>
 
       {/* CTA */}

@@ -65,7 +65,10 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
   return (
     <main className="bg-surface-bg">
       <div className="container max-w-5xl mx-auto px-4 pt-14 pb-2 md:pt-16">
-        <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">
+        <p className="font-display text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-verde-dark mb-4">
+          Programas
+        </p>
+        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-ink leading-[1.1] tracking-tight">
           Sumate a nuestros programas
         </h1>
       </div>
