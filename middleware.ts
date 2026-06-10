@@ -51,6 +51,16 @@ export default function middleware(req: NextRequest) {
     }
   }
 
+  // Forzar español por default: next-intl puede redirigir a /en si el
+  // navegador tiene Accept-Language: en. Sobreescribimos el header para
+  // que siempre caiga en español salvo que el middleware ya haya decidido /en.
+  if (!hasLocalePrefix && !userChoseLocale) {
+    const headers = new Headers(req.headers);
+    headers.set("Accept-Language", "es");
+    const rewritten = new NextRequest(req.url, { headers });
+    return intlMiddleware(rewritten);
+  }
+
   return intlMiddleware(req);
 }
 
