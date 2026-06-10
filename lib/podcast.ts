@@ -31,6 +31,8 @@ export interface PodcastEpisode {
   youtubeId: string | null;
   pubDate: string;
   duracion: string | null;
+  /** Cantidad de reproducciones en YouTube. */
+  views: number | null;
 }
 
 export interface PodcastFeed {
@@ -118,17 +120,28 @@ interface YTPlaylistItem {
   contentDetails?: { videoId?: string; videoPublishedAt?: string };
 }
 
-/** Trae la duración de cada video (videos.list, lotes de 50). */
-async function getDuraciones(ids: string[]): Promise<Map<string, string | null>> {
-  const out = new Map<string, string | null>();
+interface VideoMeta { duracion: string | null; views: number | null }
+
+/** Trae duración y views de cada video (videos.list, lotes de 50). */
+async function getVideoMeta(ids: string[]): Promise<Map<string, VideoMeta>> {
+  const out = new Map<string, VideoMeta>();
   for (let i = 0; i < ids.length; i += 50) {
     const lote = ids.slice(i, i + 50);
-    const url = `${YT_API}/videos?part=contentDetails&id=${lote.join(",")}&key=${YOUTUBE_API_KEY}`;
+    const url = `${YT_API}/videos?part=contentDetails,statistics&id=${lote.join(",")}&key=${YOUTUBE_API_KEY}`;
     const res = await fetch(url, { next: { revalidate: 3600 } });
     if (!res.ok) continue;
-    const data = (await res.json()) as { items?: { id: string; contentDetails?: { duration?: string } }[] };
+    const data = (await res.json()) as {
+      items?: {
+        id: string;
+        contentDetails?: { duration?: string };
+        statistics?: { viewCount?: string };
+      }[];
+    };
     for (const it of data.items ?? []) {
-      out.set(it.id, formatYouTubeDuration(it.contentDetails?.duration));
+      out.set(it.id, {
+        duracion: formatYouTubeDuration(it.contentDetails?.duration),
+        views: it.statistics?.viewCount ? parseInt(it.statistics.viewCount, 10) : null
+      });
     }
   }
   return out;
@@ -159,7 +172,7 @@ export async function getPodcastFeed(): Promise<PodcastFeed | null> {
     if (visibles.length === 0) return null;
 
     const ids = visibles.map((it) => it.contentDetails!.videoId!);
-    const duraciones = await getDuraciones(ids);
+    const meta = await getVideoMeta(ids);
 
     const seen = new Map<string, number>();
     const episodios: PodcastEpisode[] = visibles.map((it) => {
@@ -186,7 +199,8 @@ export async function getPodcastFeed(): Promise<PodcastFeed | null> {
         link: `https://www.youtube.com/watch?v=${videoId}`,
         youtubeId: videoId,
         pubDate: sn.publishedAt ?? it.contentDetails?.videoPublishedAt ?? "",
-        duracion: duraciones.get(videoId) ?? null
+        duracion: meta.get(videoId)?.duracion ?? null,
+        views: meta.get(videoId)?.views ?? null
       };
     });
 

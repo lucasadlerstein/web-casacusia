@@ -10,6 +10,17 @@
     "volverAlInicio": "Back to home",
     "cerrar": "Close"
   },
+  "notFound": {
+    "title": "We lost the signal.",
+    "body": "The page you're looking for doesn't exist or was moved. Don't worry, there's always a way back.",
+    "cta": "Back to home"
+  },
+  "errorPage": {
+    "title": "Something went wrong.",
+    "body": "We're working on fixing it. You can try again or go back to the home page.",
+    "retry": "Try again",
+    "home": "Back to home"
+  },
   "nav": {
     "nosotros": "About",
     "programas": "Programs",
@@ -351,7 +362,15 @@
       "linkedin": "LinkedIn",
       "ctaVolHeading": "Want to be part?",
       "ctaVolSub": "We look for people who want to put their time and talent at the service of the community.",
-      "ctaVolLabel": "I want to volunteer"
+      "ctaVolLabel": "I want to volunteer",
+      "ctaVolSecondary": "See the 4 ways to help",
+      "heroH1Before": "The people who",
+      "heroH1After": "Casacusia.",
+      "heroSub": "Leading and being part of an NGO isn't always easy, but the love and conviction are very strong.",
+      "gridTitle": "Team and volunteers",
+      "coreBadge": "Team",
+      "linkedinDe": "{nombre}'s LinkedIn",
+      "rotatingVerbs": "sustain,build,guide,think,feel,empower,breathe"
     },
     "historia": {
       "title": "Story · How Casacusia started",
@@ -570,6 +589,8 @@
     "title": "Casacusia Programs",
     "description": "In-person and virtual meetups, families network, Sordo pero no mudo podcast, CAMI and Recursera.",
     "heading": "Programs",
+    "heroTitle": "Everything we do, in one place",
+    "heroSub": "Meetups, podcast, community, resources. Every program was born from a real need.",
     "verDetalle": "See details",
     "proximamente": "Coming soon",
     "items": {

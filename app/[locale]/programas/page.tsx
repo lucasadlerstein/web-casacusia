@@ -25,7 +25,7 @@ export async function generateMetadata({
 
 const programaAssets: Record<string, { foto: string; tono: "verde" | "violeta" | "rosa" | "amarillo" | "teal" }> = {
   "encuentros":           { foto: "/fotos/propuestas/Casacusia_GZ-21.jpg",       tono: "verde" },
-  "encuentros-virtuales": { foto: "/fotos/propuestas/DSC00009.jpg",              tono: "violeta" },
+  "encuentros-virtuales": { foto: "/fotos-nuevas/eventos/captura-de-pantalla-2025-12-26-a-las-123513-p-m.jpg", tono: "violeta" },
   "red-padres-madres":    { foto: "/fotos/propuestas/casacusia_kids_alta_186.jpg", tono: "rosa" },
   "comunidad-whatsapp":   { foto: "/fotos/encuentro-patio.jpg",                  tono: "verde" },
   "podcast":              { foto: "/brand/podcast/spnm-alta.jpg",                tono: "amarillo" },
@@ -64,14 +64,20 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
   return (
     <main className="bg-surface-bg">
-      <div className="container max-w-5xl mx-auto px-4 pt-14 pb-2 md:pt-16">
-        <p className="font-display text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-verde-dark mb-4">
-          Programas
-        </p>
-        <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-ink leading-[1.1] tracking-tight">
-          Sumate a nuestros programas
-        </h1>
-      </div>
+      {/* Hero con fondo de color */}
+      <section className="bg-gradient-to-b from-verde-soft/60 via-verde-soft/30 to-surface-bg pt-20 pb-14 md:pt-24 md:pb-16">
+        <div className="container max-w-5xl mx-auto px-4 text-center">
+          <p className="font-display text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-verde-dark mb-4">
+            {t("heading")}
+          </p>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-ink leading-[1.1] tracking-tight">
+            {t("heroTitle")}
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-ink-soft max-w-2xl mx-auto leading-relaxed">
+            {t("heroSub")}
+          </p>
+        </div>
+      </section>
 
       <div className="container max-w-5xl mx-auto px-4 pb-20 space-y-10 md:space-y-14">
         {programas.map((p, i) => {

@@ -14,7 +14,7 @@ const programAssets: Record<string, { photo: string; icon: React.ReactNode; colo
     color: "from-verde/80 to-verde-dark/90"
   },
   "encuentros-virtuales": {
-    photo: "/fotos/propuestas/DSC00009.jpg",
+    photo: "/fotos-nuevas/eventos/captura-de-pantalla-2025-12-26-a-las-123513-p-m.jpg",
     icon: <MonitorSmartphone size={24} aria-hidden />,
     color: "from-violeta/80 to-violeta-dark/90"
   },

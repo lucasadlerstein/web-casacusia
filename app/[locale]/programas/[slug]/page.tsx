@@ -22,7 +22,7 @@ import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
 const WHATSAPP_PRINCIPAL = "https://chat.whatsapp.com/IUlYFEaFWiBHaFmzwvqL4D";
-const INSTAGRAM_HIPOACUSICO = "https://www.instagram.com/hipoacusico/";
+const INSTAGRAM_CAMI = "https://www.instagram.com/casacusia.ong/";
 
 type CTA = { label: string; href: string; external?: boolean };
 
@@ -153,7 +153,7 @@ const CONFIGS: Record<string, ProgramaConfig> = {
       { icon: Sparkles, text: "Intentamos responderte en las primeras 24 horas desde que escribís." },
       { icon: MessageCircle, text: "Cada pregunta que llega nos ayuda a mejorar CAMI." }
     ],
-    ctaPrincipal: { label: "Probar en Instagram", href: INSTAGRAM_HIPOACUSICO, external: true },
+    ctaPrincipal: { label: "Probar en Instagram", href: INSTAGRAM_CAMI, external: true },
     ctasExtra: [
       { label: "Sumarme al WhatsApp para enterarme cuando esté en la web", href: WHATSAPP_PRINCIPAL, external: true }
     ]

@@ -10,6 +10,17 @@
     "volverAlInicio": "Volver al inicio",
     "cerrar": "Cerrar"
   },
+  "notFound": {
+    "title": "Perdimos la señal.",
+    "body": "La página que buscás no existe o fue movida. No te preocupes, siempre hay un camino de regreso.",
+    "cta": "Volver al inicio"
+  },
+  "errorPage": {
+    "title": "Algo salió mal.",
+    "body": "Estamos trabajando para solucionarlo. Podés intentar de nuevo o volver al inicio.",
+    "retry": "Intentar de nuevo",
+    "home": "Volver al inicio"
+  },
   "nav": {
     "nosotros": "Nosotros",
     "programas": "Programas",
@@ -353,7 +364,15 @@
         "linkedin": "LinkedIn",
         "ctaVolHeading": "¿Querés ser parte?",
         "ctaVolSub": "Buscamos personas que quieran poner su tiempo y talento al servicio de la comunidad.",
-        "ctaVolLabel": "Quiero ser voluntario"
+        "ctaVolLabel": "Quiero ser voluntario",
+        "ctaVolSecondary": "Ver las 4 formas de colaborar",
+        "heroH1Before": "Las personas que",
+        "heroH1After": "Casacusia.",
+        "heroSub": "Liderar y ser parte de una ONG a veces no es fácil, pero el amor y la convicción son muy fuertes.",
+        "gridTitle": "Equipo y voluntarios",
+        "coreBadge": "Equipo",
+        "linkedinDe": "LinkedIn de {nombre}",
+        "rotatingVerbs": "sostienen,construyen,guionan,piensan,sienten,potencian,respiran"
       },
     "historia": {
       "title": "Historia · Cómo nació Casacusia",
@@ -571,6 +590,8 @@
     "title": "Programas de Casacusia",
     "description": "Encuentros presenciales y virtuales, red de familias, podcast Sordo pero no mudo, CAMI y Recursera.",
     "heading": "Programas",
+    "heroTitle": "Todo lo que hacemos, en un solo lugar",
+    "heroSub": "Encuentros, podcast, comunidad, recursos. Cada programa nació de una necesidad real de la comunidad.",
     "verDetalle": "Ver detalle",
     "proximamente": "Próximamente",
     "items": {

@@ -20,7 +20,7 @@ import type { Locale } from "@/lib/i18n/config";
 
 const VOLUNTARIO_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSco0HoMcPR7RUJbbJsTpTf9b7iwsu0e60slEeJqhcZHEJErrg/viewform";
 
-const ROTATING_VERBS = ["sostienen", "construyen", "guionan", "piensan", "sienten", "potencian", "respiran"];
+// Rotating verbs are loaded from translations in the page component
 
 export async function generateMetadata({
   params
@@ -48,6 +48,11 @@ type PersonaCard = {
   miembro?: MiembroEquipo;
 };
 
+type CardLabels = {
+  coreBadge: string;
+  linkedinDe: string;
+};
+
 export default async function EquipoPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -55,6 +60,11 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
   const equipo = getEquipo();
   const voluntarios = getVoluntarios();
   const comisiones = getComisionesConConteo();
+  const rotatingVerbs = t("rotatingVerbs").split(",");
+  const cardLabels: CardLabels = {
+    coreBadge: t("coreBadge"),
+    linkedinDe: t("linkedinDe", { nombre: "__NAME__" })
+  };
 
   // Mezclamos equipo core + voluntarios en un solo listado uniforme.
   const personas: PersonaCard[] = [
@@ -83,25 +93,25 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
       <section className="bg-surface-bg pt-20 pb-10 md:pt-24 md:pb-14">
         <div className="container max-w-3xl mx-auto px-4 text-center">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-ink">
-            Las personas que<br />
-            <RotatingWord words={ROTATING_VERBS} className="text-verde-dark font-extrabold" /> Casacusia.
+            {t("heroH1Before")}<br />
+            <RotatingWord words={rotatingVerbs} className="text-verde-dark font-extrabold" /> {t("heroH1After")}
           </h1>
           <p className="mt-6 text-lg md:text-xl text-ink-soft leading-relaxed">
-            Liderar y ser parte de una ONG a veces no es fácil, pero el amor y la convicción son muy fuertes.
+            {t("heroSub")}
           </p>
         </div>
       </section>
 
       {/* Grid uniforme equipo + voluntarios */}
       <Section background="default" ariaLabelledBy="grid-title" className="pt-2">
-        <h2 id="grid-title" className="sr-only">Equipo y voluntarios</h2>
+        <h2 id="grid-title" className="sr-only">{t("gridTitle")}</h2>
 
         {/* Filtro por comisión (solo voluntarios) — mantenemos VolunteerGrid para esa parte */}
         <div className="max-w-6xl mx-auto">
           <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
             {personas.map((p) => (
               <li key={p.slug}>
-                <PersonaCardComp persona={p} />
+                <PersonaCardComp persona={p} labels={cardLabels} />
                 {p.miembro && <PersonSchema miembro={p.miembro} />}
               </li>
             ))}
@@ -131,7 +141,7 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
               variant="secondary"
               className="border-white/20 bg-white/10 text-white hover:bg-white/20"
             >
-              Ver las 4 formas de colaborar
+              {t("ctaVolSecondary")}
             </Button>
           </div>
         </div>
@@ -140,7 +150,7 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
   );
 }
 
-function PersonaCardComp({ persona }: { persona: PersonaCard }) {
+function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: CardLabels }) {
   const isPlaceholder = !persona.foto || persona.foto.includes("placeholder");
   const nombreCompleto = persona.apellido ? `${persona.nombre} ${persona.apellido}` : persona.nombre;
   const targetLink = persona.linkedin;
@@ -176,7 +186,7 @@ function PersonaCardComp({ persona }: { persona: PersonaCard }) {
         </p>
         {persona.esCore && (
           <span className="mt-2 inline-flex items-center gap-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
-            Equipo
+            {labels.coreBadge}
           </span>
         )}
         {persona.linkedin && (
@@ -194,7 +204,7 @@ function PersonaCardComp({ persona }: { persona: PersonaCard }) {
         href={targetLink}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={`LinkedIn de ${nombreCompleto}`}
+        aria-label={labels.linkedinDe.replace("__NAME__", nombreCompleto)}
         className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-verde-dark rounded-2xl"
       >
         {inner}

@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { Filamento } from "@/components/ui/Filamento";
 import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
+  const t = useTranslations("notFound");
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-[70vh] px-4 text-center overflow-hidden">
@@ -18,19 +20,19 @@ export default function NotFound() {
           404
         </p>
         <h1 className="mt-4 font-display text-3xl md:text-5xl font-extrabold tracking-tight text-ink">
-          Perdimos la señal.
+          {t("title")}
         </h1>
         <p className="mt-6 text-lg md:text-xl text-ink-soft max-w-md mx-auto leading-relaxed">
-          La página que buscás no existe o fue movida. No te preocupes, siempre hay un camino de regreso.
+          {t("body")}
         </p>
-        
+
         <div className="mt-10">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-verde-dark px-8 text-sm font-bold text-white hover:bg-verde transition-all hover:shadow-lg hover:shadow-verde/20 active:scale-95"
           >
             <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
-            Volver al inicio
+            {t("cta")}
           </Link>
         </div>
       </div>

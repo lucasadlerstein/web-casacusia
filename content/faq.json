@@ -42,7 +42,7 @@
   {
     "id": "hijo-hipoacusia",
     "pregunta": "Mi hijo fue diagnosticado con hipoacusia, ¿qué hago?",
-    "respuesta": "Respirá. Pasos iniciales: (1) confirmar con un equipo ORL + fonoaudiología pediátrica, (2) tramitar el CUD, (3) iniciar cobertura por Ley 24.901, (4) conectar con otras familias. En CASACUSIA existe la Red de Padres y Madres con más de 220 familias.",
+    "respuesta": "Respirá. Pasos iniciales: (1) confirmar con un equipo ORL + fonoaudiología pediátrica, (2) si estás en Argentina, tramitar el CUD (Certificado Único de Discapacidad) e iniciar cobertura por Ley 24.901; si estás en otro país, averiguá los recursos y derechos locales, (3) conectar con otras familias. En CASACUSIA existe la Red de Padres y Madres con más de 220 familias de todo el mundo.",
     "categoria": "familia",
     "orden": 7,
     "destacada": true
@@ -50,7 +50,7 @@
   {
     "id": "donaciones-deducibles",
     "pregunta": "¿Las donaciones a CASACUSIA son deducibles de impuestos?",
-    "respuesta": "Sí. CASACUSIA cuenta con aprobación ARCA para que las empresas puedan deducir sus donaciones del Impuesto a las Ganancias dentro de los topes que establece la normativa vigente.",
+    "respuesta": "Sí, en Argentina. CASACUSIA cuenta con aprobación ARCA para que las empresas puedan deducir sus donaciones del Impuesto a las Ganancias dentro de los topes que establece la normativa vigente.",
     "categoria": "donar",
     "orden": 8,
     "destacada": true

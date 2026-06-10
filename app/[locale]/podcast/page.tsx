@@ -12,7 +12,7 @@ import type { Locale } from "@/lib/i18n/config";
 
 const SPOTIFY_SHOW = "https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5";
 const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
-const INSTAGRAM = "https://www.instagram.com/hipoacusico/";
+const INSTAGRAM = "https://www.instagram.com/SordoPeroNoMudo/";
 // Arte de marca del podcast (la fuente YouTube no provee portada del show).
 const PODCAST_COVER = "/brand/podcast/spnm-alta.jpg";
 const PODCAST_DESC =

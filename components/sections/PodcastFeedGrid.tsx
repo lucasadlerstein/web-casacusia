@@ -2,12 +2,14 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { Search, Play, Clock } from "lucide-react";
+import { Search, Play, Clock, Eye, TrendingUp, CalendarDays } from "lucide-react";
 
 import { Link } from "@/lib/i18n/navigation";
 import type { PodcastEpisode } from "@/lib/podcast";
 
 const PAGE_SIZE = 18;
+
+type SortMode = "recientes" | "populares";
 
 function formatDate(pubDate: string): string {
   const d = new Date(pubDate);
@@ -15,35 +17,82 @@ function formatDate(pubDate: string): string {
   return d.toLocaleDateString("es-AR", { day: "numeric", month: "short", year: "numeric" });
 }
 
+function formatViews(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(n >= 10_000 ? 0 : 1)}K`;
+  return n.toLocaleString("es-AR");
+}
+
 export function PodcastFeedGrid({ episodios }: { episodios: PodcastEpisode[] }) {
   const [query, setQuery] = useState("");
+  const [sort, setSort] = useState<SortMode>("recientes");
   const [visible, setVisible] = useState(PAGE_SIZE);
+
+  const sorted = useMemo(() => {
+    if (sort === "populares") {
+      return [...episodios].sort((a, b) => (b.views ?? 0) - (a.views ?? 0));
+    }
+    return episodios; // ya vienen ordenados por fecha desc
+  }, [episodios, sort]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return episodios;
-    return episodios.filter(
+    if (!q) return sorted;
+    return sorted.filter(
       (e) =>
         e.titulo.toLowerCase().includes(q) ||
         e.descripcion.toLowerCase().includes(q) ||
         (e.numero != null && `${e.numero}`.includes(q))
     );
-  }, [episodios, query]);
+  }, [sorted, query]);
 
   const shown = filtered.slice(0, visible);
 
   return (
     <div>
-      <div className="relative max-w-md mb-8">
-        <Search size={18} aria-hidden className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted" />
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => { setQuery(e.target.value); setVisible(PAGE_SIZE); }}
-          placeholder="Buscar episodio…"
-          aria-label="Buscar episodio"
-          className="w-full rounded-full border border-surface-line bg-surface-card pl-11 pr-4 py-3 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verde-dark"
-        />
+      {/* Controles: búsqueda + filtros */}
+      <div className="flex flex-col sm:flex-row gap-4 mb-8">
+        <div className="relative flex-1 max-w-md">
+          <Search size={18} aria-hidden className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted" />
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => { setQuery(e.target.value); setVisible(PAGE_SIZE); }}
+            placeholder="Buscar episodio…"
+            aria-label="Buscar episodio"
+            className="w-full rounded-full border border-surface-line bg-surface-card pl-11 pr-4 py-3 text-sm text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-verde-dark"
+          />
+        </div>
+        <div className="flex gap-2" role="tablist" aria-label="Ordenar episodios">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={sort === "recientes"}
+            onClick={() => { setSort("recientes"); setVisible(PAGE_SIZE); }}
+            className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-semibold transition-colors ${
+              sort === "recientes"
+                ? "bg-verde-dark text-white"
+                : "bg-surface-card border border-surface-line text-ink-soft hover:border-verde-dark"
+            }`}
+          >
+            <CalendarDays size={14} aria-hidden />
+            Más recientes
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={sort === "populares"}
+            onClick={() => { setSort("populares"); setVisible(PAGE_SIZE); }}
+            className={`inline-flex items-center gap-1.5 rounded-full px-4 py-2.5 text-sm font-semibold transition-colors ${
+              sort === "populares"
+                ? "bg-verde-dark text-white"
+                : "bg-surface-card border border-surface-line text-ink-soft hover:border-verde-dark"
+            }`}
+          >
+            <TrendingUp size={14} aria-hidden />
+            Más escuchados
+          </button>
+        </div>
       </div>
 
       {shown.length === 0 ? (
@@ -87,6 +136,11 @@ export function PodcastFeedGrid({ episodios }: { episodios: PodcastEpisode[] }) 
                     {ep.duracion && (
                       <span className="inline-flex items-center gap-1">
                         <Clock size={12} aria-hidden /> {ep.duracion}
+                      </span>
+                    )}
+                    {ep.views != null && (
+                      <span className="inline-flex items-center gap-1">
+                        <Eye size={12} aria-hidden /> {formatViews(ep.views)}
                       </span>
                     )}
                   </div>
