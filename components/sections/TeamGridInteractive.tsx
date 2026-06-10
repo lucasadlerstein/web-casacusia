@@ -16,7 +16,7 @@ export function TeamGridInteractive({ initialEquipo }: { initialEquipo: MiembroE
 
     const interval = setInterval(() => {
       setTick(t => t + 1);
-      setEquipo((prev) => {
+      setEquipo(() => {
         const nextShuffled = [...initialEquipo].sort(() => Math.random() - 0.5);
         return nextShuffled.slice(0, 6);
       });

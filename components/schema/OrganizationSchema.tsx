@@ -12,7 +12,7 @@ export function OrganizationSchema() {
     description:
       "Fundación argentina que acompaña a personas con hipoacusia y sus familias para que ninguna transite la pérdida auditiva en soledad.",
     url: site.url,
-    logo: `${site.url}/logo.png`,
+    logo: `${site.url}/brand/logos/logo-vertical.png`,
     foundingDate: site.foundingDate,
     email: site.email,
     areaServed: { "@type": "Country", name: "Argentina" },

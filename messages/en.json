@@ -47,8 +47,10 @@
       "titleLine1Pre": "Disability is not the",
       "titleLine1Tachado": "silence",
       "titleLine2": "It's the loneliness.",
+      "body": "The problem with hearing loss is not the lack of hearing: it's not being present. Since it's easy to hide, we stop participating and asking questions to avoid frustration. That pushes us away from people and social environments.",
       "bodyExtra": "Hearing loss leads you to isolate yourself and stop participating in social environments. Sometimes the lack of understanding from others pushes us away. That's why Casacusia exists: so we can see we are not alone, and put our experience into words.",
       "cta": "Why does hearing loss matter?",
+      "ctaDonar": "Donate so fewer people feel alone",
       "ctaSecondary": "Meet the team"
     },
     "manifiesto": {
@@ -56,8 +58,8 @@
     },
     "encuesta": {
       "eyebrow": "A direct question",
-      "titulo": "Today, with your hearing loss, do you feel you are…?",
-      "subtitulo": "If you accompany someone who lives with it, answer thinking of that person.",
+      "titulo": "Today, do you feel you are…?",
+      "subtitulo": "Answer thinking about your life, as you live it today.",
       "viviendo": "Living",
       "sobreviviendo": "Surviving",
       "respViviendo": {
@@ -196,7 +198,7 @@
     "title": "Meetups · Casacusia calendar",
     "description": "Upcoming in-person and virtual Casacusia meetups. Free. Sign up directly.",
     "heading": "Upcoming meetups",
-    "intro": "We gather in parks, halls, homes and on Google Meet. Each meetup is a space to share and stop feeling alone. They are free and open to people with hearing loss, families and those who accompany them."
+    "intro": "We gather in parks, halls, homes and on Google Meet. Each meetup is a space to share and see that you are not the only one. They are free and open to people with hearing loss, families and those who accompany them."
   },
   "aliados": {
     "title": "Allies · The companies that make CASACUSIA possible",
@@ -266,6 +268,9 @@
     },
     "manifiesto": {
       "eyebrow": "Why we do what we do",
+      "titlePre": "We believe life is about",
+      "titleColored": "living,",
+      "titlePost": "not just surviving.",
       "title": "Living, not just surviving",
       "lead": "We know the world isn't fair. But we also believe everyone deserves a full life. It's not about surviving — it's about living.",
       "p1": "And to do that, we have to ask: ask for things to be repeated, ask to switch sides, ask people to make adaptations. Asking is hard. And sometimes it pushes us away from others.",
@@ -281,6 +286,9 @@
     },
     "horizonte": {
       "title": "Our horizon",
+      "lead1": "In the meetups we realized that",
+      "leadHighlight": "hearing louder doesn't mean you live better.",
+      "lead2": "And that we didn't want to work for the ears, but for the people. We realized that disability can't be cured.",
       "mision": {
         "label": "Mission",
         "title": "Transform the relationship of people with their hearing loss, to improve their quality of life.",
@@ -684,6 +692,7 @@
       "message": "Your message",
       "howFound": "How did you hear about us? (optional)",
       "consent": "I agree that CASACUSIA stores this data to reply to my inquiry.",
+      "newsletter": "I want to receive news from CASACUSIA by email.",
       "submit": "Send",
       "success": "Thanks! We'll be in touch soon.",
       "error": "Couldn't send your message. Try again or reach us at our social media."

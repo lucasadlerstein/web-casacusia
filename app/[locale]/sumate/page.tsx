@@ -102,7 +102,7 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
 
             <div className="mt-7 flex flex-wrap gap-3">
               <Button href="/sumate/donar#planes" size="lg">
-                Ver planes
+                Ver formas de apoyar
               </Button>
               <DonateOnceButton variant="ghost" />
             </div>
@@ -119,19 +119,20 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
         </div>
       </Section>
 
-      {/* Sección Voluntario */}
-      <Section id="voluntario" background="tint" ariaLabelledBy="vol-title" className="py-14">
-        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-14 items-center max-w-6xl mx-auto">
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-surface-line shadow-md order-2 lg:order-1">
-            <Image
-              src="/fotos-nuevas/kids/img_9809jpg.jpg"
-              alt="Voluntarios Casacusia"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-          <div className="order-1 lg:order-2">
+      {/* Sección Voluntario — foto de fondo */}
+      <section id="voluntario" className="relative overflow-hidden py-20 md:py-24" aria-labelledby="vol-title">
+        <div className="absolute inset-0">
+          <Image
+            src="/fotos-nuevas/kids/img_9809jpg.jpg"
+            alt="Voluntarios Casacusia"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-15"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-surface-bg via-surface-bg/95 to-surface-bg/80" />
+        <div className="container relative z-10 max-w-6xl mx-auto px-4">
+          <div className="max-w-xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-violeta-soft text-violeta-dark px-3 py-1 text-[10px] font-bold uppercase tracking-wider mb-4">
               <Users size={14} aria-hidden /> Voluntariado
             </div>
@@ -168,7 +169,7 @@ export default async function SumatePage({ params }: { params: Promise<{ locale:
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* Sección Proyectos juntos (empresas) */}
       <Section id="proyectos" background="default" ariaLabelledBy="proy-title" className="py-14">

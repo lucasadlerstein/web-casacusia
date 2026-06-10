@@ -97,6 +97,11 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
         <span>{t("consent")}</span>
       </label>
 
+      <label className="flex items-start gap-2 text-sm">
+        <input type="checkbox" name="newsletter" value="on" className="mt-0.5" />
+        <span>{t("newsletter")}</span>
+      </label>
+
       <div className="flex items-center gap-3">
         <Button type="submit" disabled={isPending}>
           {isPending ? "Enviando…" : t("submit")}

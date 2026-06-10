@@ -33,7 +33,7 @@
       "title": "No estás solo.",
       "titleLine2": "1 de cada 20 personas",
       "titleLine3": "tiene pérdida auditiva.",
-      "subtitle": "Generamos espacios de encuentro, herramientas y una red que crece cada día.",
+      "subtitle": "Generamos espacios de encuentro, herramientas y una red que crece cada día para que juntos vivamos mejor.",
       "ctaPrimary": "¿Qué es la hipoacusia?",
       "ctaSecondary": "Próximos encuentros",
       "ctaTertiary": "Doná",
@@ -50,15 +50,15 @@
       "body": "El problema de la hipoacusia no es no oír: es no estar presente. Como es fácil de esconder, dejamos de participar y preguntar para evitar la frustración. Eso nos aleja de las personas y de los entornos sociales.",
       "bodyExtra": "Por eso existe Casacusia: para que pedir sea normal. Para encontrarte con otras personas que te entiendan y poder compartir lo que nos pasa. En definitiva: ver que no somos los únicos.",
       "cta": "Quiero ser parte",
-      "ctaDonar": "Quiero donar para que menos personas se sientan solas"
+      "ctaDonar": "Quiero donar"
     },
     "manifiesto": {
       "cta": "Leer el manifiesto completo"
     },
     "encuesta": {
       "eyebrow": "Una pregunta directa",
-      "titulo": "Hoy, con tu pérdida auditiva, ¿sentís que estás…?",
-      "subtitulo": "Si acompañás a alguien que la transita, contestá pensando en esa persona.",
+      "titulo": "Hoy, ¿sentís que estás…?",
+      "subtitulo": "Respondé pensando en tu vida, tal como la vivís hoy.",
       "viviendo": "Viviendo",
       "sobreviviendo": "Sobreviviendo",
       "respViviendo": {
@@ -200,7 +200,7 @@
     "title": "Encuentros · Calendario de Casacusia",
     "description": "Encuentros presenciales y virtuales de Casacusia. Gratuitos. Inscribite directo desde acá.",
     "heading": "Próximos encuentros",
-    "intro": "Nos juntamos en parques, salones, casas y por Google Meet. Cada encuentro es un espacio para compartir y dejar de sentirse solo. Son gratuitos y abiertos a personas con hipoacusia, familias y quienes acompañan."
+    "intro": "Nos juntamos en parques, salones, casas y por Google Meet. Cada encuentro es un espacio para compartir y ver que no sos el único. Son gratuitos y abiertos a personas con hipoacusia, familias y quienes acompañan."
   },
     "aliados": {
       "title": "Aliados · Empresas que hacen posible CASACUSIA",
@@ -270,9 +270,10 @@
       },
       "manifiesto": {
         "eyebrow": "Por qué hacemos lo que hacemos",
-        "titlePre": "Nos enseñaron a",
-        "titleColored": "sobrevivir.",
-        "titlePost": "Nosotros creemos que hay que vivir.",
+        "title": "Vivir, no sobrevivir",
+        "titlePre": "Creemos que la vida se trata de",
+        "titleColored": "vivir,",
+        "titlePost": "no de sobrevivir.",
         "lead": "Todos nos merecemos una vida plena, conectados con otras personas y siendo parte.",
         "p1": "Para eso tenemos que pedir: que nos repitan lo que no escuchamos, que nos cambien de lado, que las personas hagan adaptaciones. Y pedir tantas veces lo mismo, a veces es difícil. Y no pedir, nos aleja de las personas.",
         "p2": "Por no pedir y por no escuchar —porque al no escuchar dejamos de estar presentes— empezamos a aislarnos para no frustrarnos. Dejamos de preguntar, y por ende, de estar.",
@@ -326,6 +327,7 @@
           "apoyo": { "name": "Apoyo mutuo", "desc": "Nos sostenemos entre todos." },
           "empatia": { "name": "Empatía", "desc": "Escuchar antes de hablar." },
           "simpleza": { "name": "Simpleza", "desc": "Información clara, sin jerga." },
+          "transparencia": { "name": "Transparencia", "desc": "Puertas abiertas y cuentas claras." },
           "respeto": { "name": "Respeto", "desc": "Cada historia importa." },
           "pureza": { "name": "Pureza", "desc": "Decir las cosas como son." },
           "innovacion": { "name": "Innovación", "desc": "Animarnos a lo nuevo." }
@@ -571,7 +573,38 @@
     "heading": "Programas",
     "verDetalle": "Ver detalle",
     "proximamente": "Próximamente",
-    "items": {}
+    "items": {
+      "encuentros": {
+        "titulo": "Encuentros presenciales",
+        "subtitulo": "Espacios comunitarios presenciales",
+        "resumen": "Encuentros en distintas ciudades para conectar con otras personas con hipoacusia.",
+        "cta": "Próximos encuentros"
+      },
+      "encuentros-virtuales": {
+        "titulo": "Encuentros virtuales",
+        "subtitulo": "Conectate desde donde estés",
+        "resumen": "Encuentros virtuales abiertos al mundo, para escuchar historias, compartir experiencias y preguntar.",
+        "cta": "Conocer más"
+      },
+      "red-padres-madres": {
+        "titulo": "Red de familias",
+        "subtitulo": "220+ familias que te entienden",
+        "resumen": "El espacio de familias es para todo tipo de familiares (incluyendo abuelos, tíos, etc.).",
+        "cta": "Sumarme a la red"
+      },
+      "podcast": {
+        "titulo": "Sordo pero no mudo",
+        "subtitulo": "El podcast de CASACUSIA",
+        "resumen": "70 episodios, con entrevistas a personas con hipoacusia y profesionales sobre distintas temáticas.",
+        "cta": "Escuchar episodios"
+      },
+      "charlas-corporativas": {
+        "titulo": "Charlas institucionales",
+        "subtitulo": "Empatía, accesibilidad, diversidad",
+        "resumen": "Charlas y workshops para organizaciones, universidades y escuelas.",
+        "cta": "Pedir una charla"
+      }
+    }
   },
   "prensa": {
     "title": "Prensa · Casacusia",
@@ -660,6 +693,7 @@
       "message": "Tu mensaje",
       "howFound": "¿Cómo nos conociste? (opcional)",
       "consent": "Acepto que CASACUSIA guarde estos datos para responder mi consulta.",
+      "newsletter": "Quiero recibir novedades de CASACUSIA por email.",
       "submit": "Enviar",
       "success": "¡Gracias! Te vamos a escribir pronto.",
       "error": "No pudimos enviar tu mensaje. Intentá de nuevo en un rato o contactanos por nuestras redes sociales."

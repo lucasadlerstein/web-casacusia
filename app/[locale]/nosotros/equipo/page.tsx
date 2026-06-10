@@ -83,19 +83,11 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
       <section className="bg-surface-bg pt-20 pb-10 md:pt-24 md:pb-14">
         <div className="container max-w-3xl mx-auto px-4 text-center">
           <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-ink">
-            Las personas que{" "}
+            Las personas que<br />
             <RotatingWord words={ROTATING_VERBS} className="text-verde-dark font-extrabold" /> Casacusia.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-ink-soft leading-relaxed">
-            Liderar y ser parte de una ONG a veces no es fácil, pero el amor y la convicción son muy fuertes.{" "}
-            <a
-              href={VOLUNTARIO_FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-bold text-verde-dark underline underline-offset-4 hover:text-[#0a6b42]"
-            >
-              ¿Alguna vez hiciste un voluntariado?
-            </a>
+            Liderar y ser parte de una ONG a veces no es fácil, pero el amor y la convicción son muy fuertes.
           </p>
         </div>
       </section>

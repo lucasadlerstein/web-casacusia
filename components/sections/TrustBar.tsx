@@ -20,6 +20,7 @@ export function TrustBar() {
   useEffect(() => {
     const timer = setInterval(next, 5000);
     return () => clearInterval(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [badges.length]);
 
   return (

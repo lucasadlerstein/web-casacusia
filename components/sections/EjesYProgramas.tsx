@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowRight, Users, MonitorSmartphone, HeartHandshake, Mic, Bot, BookOpen, MessageCircle } from "lucide-react";
 
-import { Section, SectionHeading } from "@/components/ui/Section";
+import { Section } from "@/components/ui/Section";
 import { Link } from "@/lib/i18n/navigation";
 import { getProgramas } from "@/lib/content";
 

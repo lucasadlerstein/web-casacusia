@@ -68,12 +68,6 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
         <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">
           Sumate a nuestros programas
         </h1>
-        <p className="mt-3 font-display text-xl md:text-2xl text-ink-soft">
-          La puerta está abierta.
-        </p>
-        <p className="mt-5 font-display italic text-lg md:text-xl text-ink-soft leading-snug max-w-3xl">
-          &ldquo;Imaginate pensar toda tu vida que eres el único, y descubrir que hay más personas atravesando lo mismo.&rdquo;
-        </p>
       </div>
 
       <div className="container max-w-5xl mx-auto px-4 pb-20 space-y-10 md:space-y-14">
@@ -113,7 +107,7 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
                 <p className={`font-display text-xs font-bold uppercase tracking-[0.2em] ${tonoAccent[assets.tono]}`}>
                   {p.subtitulo}
                 </p>
-                <h2 className="mt-2 font-display text-2xl md:text-3xl font-extrabold text-ink leading-tight">
+                <h2 className={`mt-2 font-display text-2xl md:text-3xl font-extrabold leading-tight ${tonoAccent[assets.tono]}`}>
                   {p.titulo}
                 </h2>
                 <p className="mt-4 text-ink-soft leading-relaxed">{p.resumen}</p>

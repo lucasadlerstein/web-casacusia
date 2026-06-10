@@ -1,12 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { Link } from "@/lib/i18n/navigation";
 import { Filamento } from "@/components/ui/Filamento";
 import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
-  const t = useTranslations("common");
 
   return (
     <div className="relative flex flex-col items-center justify-center min-h-[70vh] px-4 text-center overflow-hidden">

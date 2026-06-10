@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Heart, Target, Lightbulb, Users, ShieldCheck, Sparkles, MessageSquare, HandHeart, BookOpen, Globe, ArrowRight } from "lucide-react";
+import { Heart, Target, Lightbulb, Users, Sparkles, MessageSquare, HandHeart, BookOpen, Globe, ArrowRight } from "lucide-react";
 
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
@@ -59,29 +59,31 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
         </div>
       </section>
 
-      {/* 2. ¿Qué es la hipoacusia? (Stats Cards) */}
+      {/* 2. ¿Qué es la hipoacusia? (Stats Cards) — recuadro con borde */}
       <Section background="default" ariaLabelledBy="que-es-title" className="pt-10">
-        <SectionHeading
-          title={<span id="que-es-title">{t("stats.title")}</span>}
-          body={t("stats.body")}
-          className="mx-auto text-center"
-        />
-        <ul className="mt-12 grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
-          {[
-            { key: "world", bg: "bg-rosa/10", text: "text-rosa-dark" },
-            { key: "argentina", bg: "bg-verde/10", text: "text-verde-dark" },
-            { key: "oms", bg: "bg-violeta/10", text: "text-violeta-dark" }
-          ].map((it) => (
-            <li key={it.key} className={`rounded-3xl p-8 transition-transform hover:-translate-y-1 ${it.bg}`}>
-              <p className={`font-display text-3xl md:text-4xl font-extrabold leading-tight ${it.text}`}>
-                {t(`stats.items.${it.key}.n`)}
-              </p>
-              <p className="mt-3 text-ink-soft text-base">
-                {t(`stats.items.${it.key}.l`)}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <div className="max-w-5xl mx-auto rounded-3xl border-2 border-surface-line bg-surface-card p-8 md:p-12 shadow-sm">
+          <SectionHeading
+            title={<span id="que-es-title">{t("stats.title")}</span>}
+            body={t("stats.body")}
+            className="mx-auto text-center"
+          />
+          <ul className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              { key: "world", bg: "bg-rosa/10", text: "text-rosa-dark" },
+              { key: "argentina", bg: "bg-verde/10", text: "text-verde-dark" },
+              { key: "oms", bg: "bg-violeta/10", text: "text-violeta-dark" }
+            ].map((it) => (
+              <li key={it.key} className={`rounded-2xl p-6 transition-transform hover:-translate-y-1 ${it.bg}`}>
+                <p className={`font-display text-3xl md:text-4xl font-extrabold leading-tight ${it.text}`}>
+                  {t(`stats.items.${it.key}.n`)}
+                </p>
+                <p className="mt-3 text-ink-soft text-base">
+                  {t(`stats.items.${it.key}.l`)}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Section>
 
       {/* 2.5 Manifiesto — "Vivir, no sobrevivir" */}
@@ -154,51 +156,53 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
       </Section>
 
       {/* 4. Misión y Visión */}
-      <Section background="default" ariaLabelledBy="mv-title" className="pt-12 pb-20">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="font-display text-2xl md:text-3xl text-ink-soft leading-snug">
-            {t("horizonte.lead1")}
-          </p>
-          <p className="mt-3 font-display text-3xl md:text-4xl font-extrabold text-ink leading-tight">
-            {t("horizonte.leadHighlight")}
-          </p>
-          <p className="mt-6 text-lg md:text-xl text-ink-soft leading-relaxed">
-            {t("horizonte.lead2")}
-          </p>
+      <section className="relative overflow-hidden bg-ink py-24 md:py-32">
+        {/* Fondo decorativo */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-verde/10 blur-3xl" />
+          <div className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-violeta/10 blur-3xl" />
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-          {/* Misión */}
-          <div className="relative overflow-hidden rounded-3xl p-10 shadow-lg">
-            <div className="absolute inset-0 bg-gradient-to-br from-verde to-verde-dark" />
-            <div className="relative z-10 text-white">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-md mb-6 shadow-sm border border-white/30">
-                <Target size={24} aria-hidden />
+        <div className="container relative z-10 max-w-5xl mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="font-display text-xl md:text-2xl text-white/70 leading-snug">
+              {t("horizonte.lead1")}
+            </p>
+            <p className="mt-3 font-display text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+              {t("horizonte.leadHighlight")}
+            </p>
+            <p className="mt-6 text-lg md:text-xl text-white/60 leading-relaxed max-w-2xl mx-auto">
+              {t("horizonte.lead2")}
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {/* Misión */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-10 md:p-12">
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-verde/20 mb-6">
+                <Target size={28} className="text-verde" aria-hidden />
               </div>
-              <h3 className="text-sm uppercase tracking-widest font-bold text-white/80 mb-4">{t("horizonte.mision.label")}</h3>
-              <p className="font-display text-xl md:text-2xl leading-tight font-bold drop-shadow-sm">
+              <h3 className="text-xs uppercase tracking-[0.2em] font-bold text-verde mb-4">{t("horizonte.mision.label")}</h3>
+              <p className="font-display text-xl md:text-2xl leading-snug font-bold text-white">
                 {t("horizonte.mision.title")}
               </p>
-              <p className="mt-4 text-base text-white/90 leading-relaxed">
+              <p className="mt-4 text-base text-white/70 leading-relaxed">
                 {t("horizonte.mision.body")}
               </p>
             </div>
-          </div>
-          {/* Visión */}
-          <div className="relative overflow-hidden rounded-3xl p-10 shadow-lg">
-            <div className="absolute inset-0 bg-gradient-to-br from-violeta to-violeta-dark" />
-            <div className="relative z-10 text-white">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20 backdrop-blur-md mb-6 shadow-sm border border-white/30">
-                <Lightbulb size={24} aria-hidden />
+            {/* Visión */}
+            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-10 md:p-12">
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-violeta/20 mb-6">
+                <Lightbulb size={28} className="text-violeta" aria-hidden />
               </div>
-              <h3 className="text-sm uppercase tracking-widest font-bold text-white/80 mb-4">{t("horizonte.vision.label")}</h3>
-              <p className="font-display text-xl md:text-2xl leading-tight font-bold drop-shadow-sm">
+              <h3 className="text-xs uppercase tracking-[0.2em] font-bold text-violeta mb-4">{t("horizonte.vision.label")}</h3>
+              <p className="font-display text-xl md:text-2xl leading-snug font-bold text-white">
                 {t("horizonte.vision.title")}
               </p>
             </div>
           </div>
         </div>
-      </Section>
+      </section>
 
       {/* 4.5 Ejes de trabajo */}
       <Section background="default" ariaLabelledBy="ejes-title">

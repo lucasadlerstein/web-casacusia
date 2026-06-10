@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
-import { ArrowRight, Calendar, MessageCircle, Headphones, MapPin, Users, Sparkles, Bot, BookOpen, Mic, Check } from "lucide-react";
+import { ArrowRight, Calendar, MessageCircle, Headphones, MapPin, Users, Sparkles, Bot, BookOpen, Mic } from "lucide-react";
 
 import { Section } from "@/components/ui/Section";
-import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
 import { TestimonioBlocks } from "@/components/sections/TestimonioBlocks";
 import { GruposWhatsapp } from "@/components/sections/GruposWhatsapp";

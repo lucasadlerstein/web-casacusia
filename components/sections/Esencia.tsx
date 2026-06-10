@@ -59,6 +59,7 @@ export function Esencia() {
                 label={t("ctaDonar")}
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-rosa text-white hover:bg-rosa-dark transition-colors text-base px-6 py-3 font-bold shadow-md"
               />
+              <span className="self-center text-sm text-white/60 italic">el valor de un café</span>
             </div>
           </div>
 

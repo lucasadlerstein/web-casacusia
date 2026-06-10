@@ -41,8 +41,6 @@ export default async function ContactoPage({
   const { locale } = await params;
   const { t: typeParam } = await searchParams;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "contacto" });
-
   const allowedTypes = ["personal", "voluntariado", "prensa", "comunicacion", "empresa", "profesional", "programas", "otro"] as const;
   const initialType = (allowedTypes as readonly string[]).includes(typeParam ?? "") ? (typeParam as string) : "personal";
 

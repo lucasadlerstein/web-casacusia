@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { ArrowUpRight, Ear, Heart, Handshake } from "lucide-react";
 
 import { Link } from "@/lib/i18n/navigation";
-import { Section, SectionHeading } from "@/components/ui/Section";
+import { Section } from "@/components/ui/Section";
 
 type Card = {
   titleKey: "cardA" | "cardB" | "cardC";

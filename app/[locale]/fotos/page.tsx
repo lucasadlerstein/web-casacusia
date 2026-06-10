@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: false }
+};
 
 import manifest from "@/content/fotos-manifest.json";
 

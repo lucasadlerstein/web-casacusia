@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { RefreshCw } from "lucide-react";
 
@@ -39,10 +39,19 @@ export function TestimonioBlocks({ testimonios, title }: { testimonios: Testimon
   const [seed, setSeed] = useState(0);
   const [hydrated, setHydrated] = useState(false);
 
+  const refresh = useCallback(() => setSeed((s) => s + 1), []);
+
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 100000));
     setHydrated(true);
   }, []);
+
+  // Auto-rotación cada 12 segundos (todos juntos)
+  useEffect(() => {
+    if (!hydrated) return;
+    const timer = setInterval(refresh, 12000);
+    return () => clearInterval(timer);
+  }, [hydrated, refresh]);
 
   const tres = useMemo(() => pickThree(testimonios, seed), [testimonios, seed]);
 
@@ -56,7 +65,7 @@ export function TestimonioBlocks({ testimonios, title }: { testimonios: Testimon
         </h2>
         <button
           type="button"
-          onClick={() => setSeed((s) => s + 1)}
+          onClick={refresh}
           aria-label="Cambiar testimonios"
           className="inline-flex items-center gap-2 rounded-full bg-surface-card border border-surface-line px-4 py-2 text-sm font-bold text-ink hover:border-verde-dark transition-colors"
           disabled={!hydrated}
@@ -70,7 +79,7 @@ export function TestimonioBlocks({ testimonios, title }: { testimonios: Testimon
         {tres.map((tt, i) => (
           <li
             key={`${tt.id}-${seed}`}
-            className={`relative rounded-3xl border-2 p-7 flex flex-col ${borderCycle[i % borderCycle.length]}`}
+            className={`relative rounded-3xl border-2 p-7 flex flex-col transition-opacity duration-500 ${borderCycle[i % borderCycle.length]}`}
           >
             <span aria-hidden className={`font-bubbles text-5xl leading-none ${accentText[i % accentText.length]} opacity-30 select-none -mt-2`}>
               &ldquo;
