@@ -21,6 +21,37 @@
     "retry": "Try again",
     "home": "Back to home"
   },
+  "header": {
+    "navPrincipal": "Main navigation",
+    "menuMobile": "Mobile menu"
+  },
+  "country": {
+    "detected": "Detected country: {name}. Click to change.",
+    "selectLabel": "Select country",
+    "viewingFrom": "You're viewing from",
+    "explanation": "This affects which events we show you first and which donation link we use.",
+    "restOfWorld": "Rest of the world"
+  },
+  "accesibilidad": {
+    "eyebrow": "Accessibility",
+    "title": "Our accessibility statement",
+    "subtitle": "As a foundation dedicated to a disability, accessibility is a promise for us, not an extra.",
+    "queHacemos": "What we do",
+    "siBarrera": "If you find a barrier",
+    "body1": "This website was built following the <strong>Web Content Accessibility Guidelines (WCAG) 2.2 level AA</strong>. We work so that anyone, with or without a disability, can access information and participate in CASACUSIA.",
+    "items": [
+      "AA-verified color contrast on text and controls.",
+      "Keyboard navigation with always-visible focus and a skip-to-content link.",
+      "Correct HTML semantics: headings, lists, regions, labeled forms.",
+      "Minimum touch target sizes of 44×44 px on controls.",
+      "Respect for prefers-reduced-motion for those who prefer less animation.",
+      "Clear text, short paragraphs, jargon explained when it appears.",
+      "All audio and video include subtitles and full transcription.",
+      "Accessible form validation with messages announced by screen readers."
+    ],
+    "contacto": "Write to us at <link>hola@casacusia.org</link> and we'll address it as soon as possible. Every improvement you suggest helps make the website more useful for more people.",
+    "ultimaRevision": "Last review: {date}."
+  },
   "nav": {
     "nosotros": "About",
     "programas": "Programs",

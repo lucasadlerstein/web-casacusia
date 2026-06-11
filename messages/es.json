@@ -21,6 +21,37 @@
     "retry": "Intentar de nuevo",
     "home": "Volver al inicio"
   },
+  "header": {
+    "navPrincipal": "Navegación principal",
+    "menuMobile": "Menú mobile"
+  },
+  "country": {
+    "detected": "País detectado: {name}. Hacé click para cambiar.",
+    "selectLabel": "Seleccionar país",
+    "viewingFrom": "Estás viendo desde",
+    "explanation": "Esto afecta qué eventos te mostramos primero y a qué link de donación te llevamos.",
+    "restOfWorld": "Resto del mundo"
+  },
+  "accesibilidad": {
+    "eyebrow": "Accesibilidad",
+    "title": "Nuestra declaración de accesibilidad",
+    "subtitle": "Como fundación dedicada a una discapacidad, la accesibilidad es para nosotros una promesa y no un extra.",
+    "queHacemos": "Qué hacemos",
+    "siBarrera": "Si encontrás una barrera",
+    "body1": "Esta web fue construida siguiendo las <strong>Web Content Accessibility Guidelines (WCAG) 2.2 nivel AA</strong>. Trabajamos para que cualquier persona, con o sin discapacidad, pueda acceder a la información y participar de CASACUSIA.",
+    "items": [
+      "Contraste de color verificado AA en texto y controles.",
+      "Navegación por teclado con foco siempre visible y un enlace de salto al contenido.",
+      "Semántica HTML correcta: encabezados, listas, regiones, formularios etiquetados.",
+      "Tamaños mínimos de toque de 44×44 px en controles.",
+      "Respeto a prefers-reduced-motion para quienes prefieren menos animaciones.",
+      "Textos claros, párrafos cortos, jerga explicada cuando aparece.",
+      "Todos los audios y videos cuentan con subtítulos y transcripción completa.",
+      "Formularios con validación accesible y mensajes anunciados por lectores de pantalla."
+    ],
+    "contacto": "Escribinos a <link>hola@casacusia.org</link> y la atendemos lo antes posible. Toda mejora que sugieras nos ayuda a que la web sea más útil para más personas.",
+    "ultimaRevision": "Última revisión: {date}."
+  },
   "nav": {
     "nosotros": "Nosotros",
     "programas": "Programas",

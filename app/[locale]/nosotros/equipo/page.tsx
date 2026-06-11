@@ -6,14 +6,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { PersonSchema } from "@/components/schema/PersonSchema";
-import { VolunteerGrid } from "@/components/sections/VolunteerGrid";
 import { RotatingWord } from "@/components/sections/RotatingWord";
 import {
   getEquipo,
-  getVoluntarios,
-  getComisionesConConteo,
-  type MiembroEquipo,
-  type Voluntario
+  type MiembroEquipo
 } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -58,34 +54,22 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "nosotros.equipo" });
   const equipo = getEquipo();
-  const voluntarios = getVoluntarios();
-  const comisiones = getComisionesConConteo();
   const rotatingVerbs = t("rotatingVerbs").split(",");
   const cardLabels: CardLabels = {
     coreBadge: t("coreBadge"),
     linkedinDe: t("linkedinDe", { nombre: "__NAME__" })
   };
 
-  // Mezclamos equipo core + voluntarios en un solo listado uniforme.
-  const personas: PersonaCard[] = [
-    ...equipo.map((m): PersonaCard => ({
-      slug: m.slug,
-      nombre: m.nombre,
-      apellido: m.apellido,
-      foto: m.foto,
-      area: m.rol,
-      linkedin: m.linkedin,
-      esCore: true,
-      miembro: m
-    })),
-    ...voluntarios.map((v: Voluntario): PersonaCard => ({
-      slug: v.slug,
-      nombre: v.nombre,
-      foto: v.foto,
-      area: v.rolEnComision ?? comisionLabel(v.comision),
-      esCore: false
-    }))
-  ];
+  const personas: PersonaCard[] = equipo.map((m): PersonaCard => ({
+    slug: m.slug,
+    nombre: m.nombre,
+    apellido: m.apellido,
+    foto: m.foto,
+    area: m.rol,
+    linkedin: m.linkedin,
+    esCore: true,
+    miembro: m
+  }));
 
   return (
     <>
@@ -184,11 +168,6 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
         <p className="text-xs md:text-sm text-white/80 leading-snug mt-0.5">
           {persona.area}
         </p>
-        {persona.esCore && (
-          <span className="mt-2 inline-flex items-center gap-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
-            {labels.coreBadge}
-          </span>
-        )}
         {persona.linkedin && (
           <span className="absolute top-3 right-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm text-white">
             <Linkedin size={12} aria-hidden />
@@ -214,17 +193,3 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
   return inner;
 }
 
-function comisionLabel(c: string): string {
-  const map: Record<string, string> = {
-    comunicacion: "Comunicación",
-    encuentros: "Encuentros",
-    podcast: "Podcast",
-    "red-padres": "Red de familias",
-    contenido: "Contenido",
-    fundraising: "Fundraising",
-    tecnologia: "Tecnología",
-    diseno: "Diseño",
-    otro: "Voluntariado"
-  };
-  return map[c] ?? "Voluntariado";
-}

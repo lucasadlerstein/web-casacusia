@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import { ChevronDown, Check, Globe } from "lucide-react";
 import { useCountry } from "./CountryProvider";
 import { PAISES_CONOCIDOS, banderaPais, nombrePais } from "@/lib/country";
@@ -12,6 +13,7 @@ const PAISES_ORDENADOS = Object.entries(PAISES_CONOCIDOS).map(([code, info]) => 
 
 export function CountryIndicator({ compact = false }: { compact?: boolean } = {}) {
   const { country, setCountry, isOverride } = useCountry();
+  const tc = useTranslations("country");
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -42,7 +44,7 @@ export function CountryIndicator({ compact = false }: { compact?: boolean } = {}
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        aria-label={`País detectado: ${name}. Hacé click para cambiar.`}
+        aria-label={tc("detected", { name })}
         className={`inline-flex items-center gap-1.5 rounded-full border border-surface-line bg-surface-card text-ink hover:border-verde/50 transition-colors ${
           compact ? "px-2.5 py-1 text-xs" : "px-3 py-1.5 text-sm"
         }`}
@@ -58,11 +60,11 @@ export function CountryIndicator({ compact = false }: { compact?: boolean } = {}
       {open && (
         <div
           role="listbox"
-          aria-label="Seleccionar país"
+          aria-label={tc("selectLabel")}
           className="absolute right-0 mt-2 w-64 rounded-2xl border border-surface-line bg-surface-card shadow-xl z-50 overflow-hidden"
         >
           <div className="p-3 border-b border-surface-line">
-            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">Estás viendo desde</p>
+            <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">{tc("viewingFrom")}</p>
             <p className="mt-0.5 font-semibold text-ink flex items-center gap-2">
               <span aria-hidden>{flag}</span>
               {name}
@@ -71,7 +73,7 @@ export function CountryIndicator({ compact = false }: { compact?: boolean } = {}
               )}
             </p>
             <p className="mt-1 text-xs text-ink-muted">
-              Esto afecta qué eventos te mostramos primero y a qué link de donación te llevamos.
+              {tc("explanation")}
             </p>
           </div>
 
@@ -113,7 +115,7 @@ export function CountryIndicator({ compact = false }: { compact?: boolean } = {}
                 }`}
               >
                 <Globe size={16} className="text-ink-muted" aria-hidden />
-                <span className="flex-1">Resto del mundo</span>
+                <span className="flex-1">{tc("restOfWorld")}</span>
                 {country === null && <Check size={14} className="text-verde-dark" aria-hidden />}
               </button>
             </li>

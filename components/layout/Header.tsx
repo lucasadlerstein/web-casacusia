@@ -20,6 +20,7 @@ const primaryNav = [
 export function Header() {
   const t = useTranslations("nav");
   const tCommon = useTranslations("common");
+  const tHeader = useTranslations("header");
   const [open, setOpen] = useState(false);
 
   return (
@@ -32,7 +33,7 @@ export function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav aria-label="Navegación principal" className="hidden lg:flex items-center gap-0.5 ml-6">
+        <nav aria-label={tHeader("navPrincipal")} className="hidden lg:flex items-center gap-0.5 ml-6">
           {primaryNav.map((item) => (
             <Link
               key={item.key}
@@ -81,7 +82,7 @@ export function Header() {
         hidden={!open}
         className="lg:hidden border-t border-surface-line bg-surface-bg shadow-md"
       >
-        <nav aria-label="Menú mobile" className="container flex flex-col gap-1 py-4">
+        <nav aria-label={tHeader("menuMobile")} className="container flex flex-col gap-1 py-4">
           {primaryNav.map((item) => (
             <Link
               key={item.key}
