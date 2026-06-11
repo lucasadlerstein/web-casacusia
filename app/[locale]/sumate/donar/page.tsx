@@ -73,18 +73,11 @@ export default async function DonarPage({ params }: { params: Promise<{ locale: 
         <div className="flex flex-col">
           <HeroFotoRotativa fotos={HERO_FOTOS} className="min-h-[360px] flex-1 lg:min-h-[680px]">
             <div className="max-w-xl text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.45)]">
-              <h1 className="font-display text-3xl font-extrabold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
-                No debería ser un privilegio <span className="text-amarillo">escuchar</span>.
-              </h1>
-              {/* En desktop la bajada va sobre la foto; en mobile, debajo de la imagen. */}
-              <p className="mt-5 hidden text-base leading-relaxed text-white md:text-lg lg:block">
-                {bajada}
+              <p className="font-display text-2xl font-extrabold leading-[1.2] tracking-tight text-white md:text-3xl lg:text-4xl">
+                Cada aporte sostiene encuentros, podcast y comunidad para miles de personas.
               </p>
             </div>
           </HeroFotoRotativa>
-          <p className="px-6 py-6 text-base leading-relaxed text-ink-soft md:px-10 lg:hidden">
-            {bajada}
-          </p>
         </div>
 
         {/* Derecha — panel de donación (fijo) */}

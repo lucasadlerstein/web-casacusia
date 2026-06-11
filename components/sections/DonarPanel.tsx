@@ -15,24 +15,39 @@ import type { Testimonio } from "@/lib/content";
 
 export function DonarPanel({ testimonios }: { testimonios: Testimonio[] }) {
   const { country } = useCountry();
-  // País detectado en silencio: AR→ARS, MX→MXN, resto→USD (sin avisar al visitante).
   const [moneda, setMoneda] = useState<Moneda>(() => monedaPorPais(country));
   const cfg = MONEDAS[moneda];
 
   return (
     <div className="bg-surface-card rounded-3xl border border-surface-line shadow-md p-7 md:p-9">
-      {/* 1. Título */}
+      {/* 1. Mensaje emocional primero */}
       <h2 className="font-display text-xl md:text-2xl font-extrabold text-ink leading-snug">
-        ¡Sumate hoy! <span className="text-verde">Tu apoyo lo hace posible.</span>
+        No debería ser un privilegio <span className="text-amarillo-dark">escuchar</span>.
       </h2>
-
-      {/* 2. Label */}
-      <p className="mt-2 text-sm text-ink-soft">
-        Elegí tu aporte mensual. Lo das de baja cuando quieras.
+      <p className="mt-3 text-sm md:text-base text-ink-soft leading-relaxed">
+        Tu aporte mensual permite que más personas con pérdida auditiva accedan a comunidad, información y acompañamiento.
       </p>
 
-      {/* 3. Montos — uno al lado del otro, solo el número + moneda */}
-      <div className="mt-6 grid grid-cols-3 gap-2.5">
+      {/* 2. Testimonios rotativos — refuerzan el porqué */}
+      {testimonios.length > 0 && (
+        <div className="mt-5">
+          <TestimonioRotativo testimonios={testimonios} />
+        </div>
+      )}
+
+      {/* 3. Separador sutil */}
+      <div className="mt-7 mb-6 border-t border-surface-line" />
+
+      {/* 4. Ahora sí: elegí tu aporte */}
+      <p className="font-display text-base font-bold text-ink">
+        Elegí tu aporte mensual
+      </p>
+      <p className="mt-1 text-xs text-ink-muted">
+        Lo das de baja cuando quieras.
+      </p>
+
+      {/* 5. Montos */}
+      <div className="mt-4 grid grid-cols-3 gap-2.5">
         {cfg.montos.map((m) => (
           <a
             key={m.valor}
@@ -60,7 +75,7 @@ export function DonarPanel({ testimonios }: { testimonios: Testimonio[] }) {
         ))}
       </div>
 
-      {/* 4. Toggle de moneda — discreto, centrado */}
+      {/* 6. Toggle de moneda */}
       <div className="mt-4 flex items-center justify-center gap-1">
         {MONEDAS_ORDEN.map((key) => (
           <button
@@ -77,7 +92,7 @@ export function DonarPanel({ testimonios }: { testimonios: Testimonio[] }) {
         ))}
       </div>
 
-      {/* 5. Donar otro monto — como texto */}
+      {/* 7. Donar otro monto */}
       <div className="mt-3 text-center">
         <a
           href={cfg.otroMontoHref}
@@ -89,14 +104,7 @@ export function DonarPanel({ testimonios }: { testimonios: Testimonio[] }) {
         </a>
       </div>
 
-      {/* 6. Testimonios rotativos */}
-      {testimonios.length > 0 && (
-        <div className="mt-7">
-          <TestimonioRotativo testimonios={testimonios} />
-        </div>
-      )}
-
-      {/* 7. Donar por única vez */}
+      {/* 8. Donar por única vez */}
       <div className="mt-6 text-center">
         <a
           href={cfg.unicaVezHref}
@@ -108,7 +116,7 @@ export function DonarPanel({ testimonios }: { testimonios: Testimonio[] }) {
         </a>
       </div>
 
-      {/* 8. Nota de deducción de Ganancias */}
+      {/* 9. Nota de deducción de Ganancias */}
       <p className="mt-5 text-center text-xs leading-relaxed text-ink-muted">
         ¿Donás desde Argentina y querés deducir de Ganancias?{" "}
         <a

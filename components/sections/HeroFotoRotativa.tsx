@@ -29,7 +29,7 @@ export function HeroFotoRotativa({
   }, [fotos.length]);
 
   return (
-    <div className={`relative flex items-start overflow-hidden ${className}`}>
+    <div className={`relative flex items-end overflow-hidden ${className}`}>
       {fotos.map((foto, i) => (
         <Image
           key={foto}
@@ -45,9 +45,9 @@ export function HeroFotoRotativa({
       ))}
       {/* Capa que oscurece toda la foto para dar contraste general */}
       <div className="absolute inset-0 bg-ink/35" />
-      {/* Scrim oscuro detrás del texto: casi negro arriba, difuminado hacia abajo */}
-      <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-ink via-ink/85 to-transparent" />
-      <div className="relative z-10 w-full px-6 pt-16 pb-10 md:px-10 lg:px-14 lg:pt-20">
+      {/* Scrim oscuro detrás del texto: casi negro abajo, difuminado hacia arriba (sin caja dura) */}
+      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-ink via-ink/85 to-transparent" />
+      <div className="relative z-10 w-full px-6 py-10 md:px-10 lg:px-14 lg:pb-16">
         {children}
       </div>
     </div>
