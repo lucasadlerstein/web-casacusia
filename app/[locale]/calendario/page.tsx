@@ -31,7 +31,7 @@ const FOTOS_ENCUENTROS = [
 
 const SOCIALES = [
   { icon: Instagram, href: "https://www.instagram.com/casacusia.ong/", label: "Instagram", color: "text-rosa-dark" },
-  { icon: Music2, href: "https://www.tiktok.com/@hipoacusico", label: "TikTok", color: "text-ink" },
+  { icon: Music2, href: "https://www.tiktok.com/@casacusia", label: "TikTok", color: "text-ink" },
   { icon: Youtube, href: "https://www.youtube.com/@Hipoacusico", label: "YouTube", color: "text-rosa-dark" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/casacusia", label: "LinkedIn", color: "text-violeta-dark" }
 ];

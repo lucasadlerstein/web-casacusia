@@ -8,7 +8,7 @@ import type { PodcastEpisode } from "@/lib/podcast";
 
 const EPISODES_SHOWN = 4;
 
-const YOUTUBE_CHANNEL = "https://www.youtube.com/@hipoacusico";
+const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
 const SPOTIFY_SHOW = "https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5";
 const APPLE = "https://podcasts.apple.com/us/podcast/sordo-pero-no-mudo-hablando-desde-mi-hipoacusia/id1695485167";
 
