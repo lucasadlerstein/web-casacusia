@@ -51,11 +51,13 @@ export type Aliado = z.infer<typeof AliadoSchema>;
 const MiembroSchema = z.object({
   slug: z.string(),
   nombre: z.string(),
-  apellido: z.string(),
+  apellido: z.string().optional(),
   rol: z.string(),
-  esFundador: z.boolean(),
+  equipo: z.string().optional(),
+  esCore: z.boolean().optional(),
+  esFundador: z.boolean().optional(),
   foto: z.string(),
-  bioCorta: z.string(),
+  bioCorta: z.string().optional(),
   quotePersonal: z.string().optional(),
   linkedin: z.string().url().optional(),
   orden: z.number()

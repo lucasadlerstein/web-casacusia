@@ -38,10 +38,11 @@ type PersonaCard = {
   nombre: string;
   apellido?: string;
   foto: string;
-  area: string;
+  rol: string;
+  equipo?: string;
   linkedin?: string;
   esCore: boolean;
-  miembro?: MiembroEquipo;
+  miembro: MiembroEquipo;
 };
 
 type CardLabels = {
@@ -65,9 +66,10 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
     nombre: m.nombre,
     apellido: m.apellido,
     foto: m.foto,
-    area: m.rol,
+    rol: m.rol,
+    equipo: m.equipo,
     linkedin: m.linkedin,
-    esCore: true,
+    esCore: m.esCore ?? false,
     miembro: m
   }));
 
@@ -166,8 +168,13 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
           {nombreCompleto}
         </p>
         <p className="text-xs md:text-sm text-white/80 leading-snug mt-0.5">
-          {persona.area}
+          {persona.rol}
         </p>
+        {persona.equipo && (
+          <span className="mt-1.5 inline-flex items-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
+            {persona.equipo}
+          </span>
+        )}
         {persona.linkedin && (
           <span className="absolute top-3 right-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm text-white">
             <Linkedin size={12} aria-hidden />
