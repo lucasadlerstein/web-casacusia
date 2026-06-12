@@ -7,6 +7,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
 import { CuatroCaminos } from "@/components/sections/CuatroCaminos";
+import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { getVoluntarios } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -353,6 +354,9 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
 
       {/* 7. Las 4 formas (completas) */}
       <CuatroCaminos />
+
+      {/* 8. Red de Empresas que Escuchan */}
+      <AliadosAuditivos />
     </>
   );
 }

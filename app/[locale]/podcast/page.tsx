@@ -10,6 +10,7 @@ import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { getPodcastFeed } from "@/lib/podcast";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
+import type { PodcastCategoria } from "@/lib/podcast";
 
 const SPOTIFY_SHOW = "https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5";
 const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
@@ -34,11 +35,22 @@ export async function generateMetadata({
   });
 }
 
-export default async function PodcastPage({ params }: { params: Promise<{ locale: string }> }) {
+const VALID_CATS = new Set(["historias", "patologias", "tecnicos", "familiares"]);
+
+export default async function PodcastPage({
+  params,
+  searchParams
+}: {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const { locale } = await params;
+  const sp = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "podcast" });
   const feed = await getPodcastFeed();
+  const rawCat = typeof sp.cat === "string" ? sp.cat : undefined;
+  const categoriaInicial = rawCat && VALID_CATS.has(rawCat) ? (rawCat as PodcastCategoria) : undefined;
 
   // Fallback: si el RSS no carga, mostramos el hero + accesos a las plataformas.
   if (!feed) {
@@ -132,7 +144,7 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
           <p className="text-ink-soft mb-8">
             Elegí el que más te atraviese. Se actualizan automáticamente desde YouTube.
           </p>
-          <PodcastFeedGrid episodios={feed.episodios} />
+          <PodcastFeedGrid episodios={feed.episodios} categoriaInicial={categoriaInicial} />
         </div>
       </Section>
 

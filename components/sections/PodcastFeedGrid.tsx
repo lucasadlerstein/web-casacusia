@@ -5,11 +5,20 @@ import Image from "next/image";
 import { Search, Play, Clock, Eye, TrendingUp, CalendarDays } from "lucide-react";
 
 import { Link } from "@/lib/i18n/navigation";
-import type { PodcastEpisode } from "@/lib/podcast";
+import type { PodcastEpisode, PodcastCategoria } from "@/lib/podcast";
+import { PODCAST_CATEGORIAS } from "@/lib/podcast";
 
 const PAGE_SIZE = 18;
 
 type SortMode = "recientes" | "populares";
+
+const CAT_TABS: { key: PodcastCategoria | "todos"; label: string }[] = [
+  { key: "todos",      label: "Todos" },
+  { key: "historias",   label: "Historias" },
+  { key: "patologias",  label: "Patologías" },
+  { key: "tecnicos",    label: "Técnicos" },
+  { key: "familiares",  label: "Familiares" }
+];
 
 function formatDate(pubDate: string): string {
   const d = new Date(pubDate);
@@ -23,34 +32,67 @@ function formatViews(n: number): string {
   return n.toLocaleString("es-AR");
 }
 
-export function PodcastFeedGrid({ episodios }: { episodios: PodcastEpisode[] }) {
+export function PodcastFeedGrid({
+  episodios,
+  categoriaInicial
+}: {
+  episodios: PodcastEpisode[];
+  categoriaInicial?: PodcastCategoria;
+}) {
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<SortMode>("recientes");
+  const [cat, setCat] = useState<PodcastCategoria | "todos">(categoriaInicial ?? "todos");
   const [visible, setVisible] = useState(PAGE_SIZE);
 
   const sorted = useMemo(() => {
     if (sort === "populares") {
       return [...episodios].sort((a, b) => (b.views ?? 0) - (a.views ?? 0));
     }
-    return episodios; // ya vienen ordenados por fecha desc
+    return episodios;
   }, [episodios, sort]);
 
   const filtered = useMemo(() => {
+    let list = sorted;
+    if (cat !== "todos") {
+      list = list.filter((e) => e.categoria === cat);
+    }
     const q = query.trim().toLowerCase();
-    if (!q) return sorted;
-    return sorted.filter(
-      (e) =>
-        e.titulo.toLowerCase().includes(q) ||
-        e.descripcion.toLowerCase().includes(q) ||
-        (e.numero != null && `${e.numero}`.includes(q))
-    );
-  }, [sorted, query]);
+    if (q) {
+      list = list.filter(
+        (e) =>
+          e.titulo.toLowerCase().includes(q) ||
+          e.descripcion.toLowerCase().includes(q) ||
+          (e.numero != null && `${e.numero}`.includes(q))
+      );
+    }
+    return list;
+  }, [sorted, query, cat]);
 
   const shown = filtered.slice(0, visible);
 
   return (
     <div>
-      {/* Controles: búsqueda + filtros */}
+      {/* Categorías */}
+      <div className="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="Filtrar por categoría">
+        {CAT_TABS.map((tab) => (
+          <button
+            key={tab.key}
+            type="button"
+            role="tab"
+            aria-selected={cat === tab.key}
+            onClick={() => { setCat(tab.key); setVisible(PAGE_SIZE); }}
+            className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+              cat === tab.key
+                ? "bg-ink text-white"
+                : "bg-surface-card border border-surface-line text-ink-soft hover:border-ink"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Controles: búsqueda + orden */}
       <div className="flex flex-col sm:flex-row gap-4 mb-8">
         <div className="relative flex-1 max-w-md">
           <Search size={18} aria-hidden className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-muted" />
@@ -127,6 +169,11 @@ export function PodcastFeedGrid({ episodios }: { episodios: PodcastEpisode[] }) 
                   )}
                 </div>
                 <div className="flex flex-col flex-1 p-5">
+                  <div className="mb-2">
+                    <span className="inline-block rounded-full bg-surface-tint px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-ink-muted">
+                      {PODCAST_CATEGORIAS[ep.categoria]}
+                    </span>
+                  </div>
                   <h3 className="font-display text-base md:text-lg font-bold text-ink leading-snug line-clamp-2 group-hover:text-verde-dark transition-colors">
                     {ep.titulo}
                   </h3>

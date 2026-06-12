@@ -5,6 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Headphones, Youtube, ArrowLeft, Calendar, Clock } from "lucide-react";
 
 import { Section } from "@/components/ui/Section";
+import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { Link } from "@/lib/i18n/navigation";
 import { getPodcastFeed, getPodcastEpisode } from "@/lib/podcast";
 import { buildMetadata } from "@/lib/seo";
@@ -151,6 +152,9 @@ export default async function EpisodioPage({
           </div>
         </Section>
       )}
+
+      {/* Red de Empresas que Escuchan */}
+      <AliadosAuditivos />
     </main>
   );
 }
