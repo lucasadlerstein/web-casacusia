@@ -159,8 +159,8 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
         />
       )}
 
-      {/* Gradiente difuminado abajo */}
-      <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-ink/95 via-ink/70 to-transparent pointer-events-none" />
+      {/* Gradiente difuminado abajo — más opaco para legibilidad */}
+      <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-ink via-ink/80 to-transparent pointer-events-none" />
 
       {/* Texto */}
       <div className="absolute inset-x-0 bottom-0 p-4 text-white">
@@ -170,11 +170,6 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
         <p className="text-xs md:text-sm text-white/80 leading-snug mt-0.5">
           {persona.rol}
         </p>
-        {persona.equipo && (
-          <span className="mt-1.5 inline-flex items-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider">
-            {persona.equipo}
-          </span>
-        )}
         {persona.linkedin && (
           <span className="absolute top-3 right-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm text-white">
             <Linkedin size={12} aria-hidden />
