@@ -5,6 +5,7 @@ import { getTranslations } from "next-intl/server";
 import { Instagram, Music2, Youtube, Linkedin, Headphones, ArrowRight, HandHeart, Mic } from "lucide-react";
 
 import { Section } from "@/components/ui/Section";
+import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { Link } from "@/lib/i18n/navigation";
 import { buildMetadata } from "@/lib/seo";
 import { getUpcomingEvents } from "@/lib/luma";
@@ -259,6 +260,8 @@ export default async function CalendarioPage({
           </div>
         </div>
       </Section>
+
+      <AliadosAuditivos />
     </main>
   );
 }

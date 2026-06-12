@@ -6,6 +6,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { PodcastFeedGrid } from "@/components/sections/PodcastFeedGrid";
+import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { getPodcastFeed } from "@/lib/podcast";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -134,6 +135,8 @@ export default async function PodcastPage({ params }: { params: Promise<{ locale
           <PodcastFeedGrid episodios={feed.episodios} />
         </div>
       </Section>
+
+      <AliadosAuditivos />
     </main>
   );
 }

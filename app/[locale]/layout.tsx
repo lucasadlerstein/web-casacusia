@@ -47,7 +47,8 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org"),
     title: { default: t("title"), template: "%s · CASACUSIA" },
-    description: t("description")
+    description: t("description"),
+    keywords: ["hipoacusia", "sordera", "súbita", "pérdida auditiva", "sordo", "hipoacúsico", "casacusia", "implante coclear", "implante", "audífono", "hearing loss", "deaf", "cochlear implant"]
   };
 }
 

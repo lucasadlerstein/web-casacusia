@@ -4,6 +4,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 
 import { Link } from "@/lib/i18n/navigation";
+import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { getProgramas, getTestimonios, type TestimonioProyecto } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -172,6 +173,8 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
           );
         })}
       </div>
+
+      <AliadosAuditivos />
     </main>
   );
 }

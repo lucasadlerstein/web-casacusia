@@ -53,12 +53,12 @@ export type ConfigMoneda = {
 };
 
 /**
- * PLACEHOLDER — links de USD y MXN pendientes (PayPal por monto).
- * Lucas los pasa en breve; mientras tanto apuntamos al portal internacional
- * existente para no romper el flujo. Reemplazar por los links reales de PayPal
- * (3 montos + otro monto + única vez de cada moneda).
+ * PayPal — suscripciones mensuales requieren SDK (plan_ids no funcionan como link directo).
+ * Única vez sí tiene link directo (NCP). Los montos fijos de suscripción
+ * apuntan a la página de única vez hasta integrar el SDK de PayPal.
  */
-const INTL_PENDIENTE = "/sumate/donar";
+const PAYPAL_UNICA_USD = "https://www.paypal.com/ncp/payment/X8AYLS438NKXQ";
+const PAYPAL_UNICA_MXN = "https://www.paypal.com/ncp/payment/WGAZHH4K3D9YQ";
 
 export const MONEDAS: Record<Moneda, ConfigMoneda> = {
   ars: {
@@ -75,26 +75,24 @@ export const MONEDAS: Record<Moneda, ConfigMoneda> = {
   usd: {
     codigo: "USD",
     bandera: "🌎",
-    // TODO: reemplazar INTL_PENDIENTE por los links de PayPal en USD.
     montos: [
-      { valor: "5", href: INTL_PENDIENTE },
-      { valor: "10", href: INTL_PENDIENTE, destacado: true },
-      { valor: "25", href: INTL_PENDIENTE }
+      { valor: "5", href: PAYPAL_UNICA_USD },
+      { valor: "10", href: PAYPAL_UNICA_USD, destacado: true },
+      { valor: "25", href: PAYPAL_UNICA_USD }
     ],
-    otroMontoHref: INTL_PENDIENTE,
-    unicaVezHref: INTL_PENDIENTE
+    otroMontoHref: PAYPAL_UNICA_USD,
+    unicaVezHref: PAYPAL_UNICA_USD
   },
   mxn: {
     codigo: "MXN",
     bandera: "🇲🇽",
-    // TODO: reemplazar INTL_PENDIENTE por los links de PayPal en MXN.
     montos: [
-      { valor: "100", href: INTL_PENDIENTE },
-      { valor: "200", href: INTL_PENDIENTE, destacado: true },
-      { valor: "400", href: INTL_PENDIENTE }
+      { valor: "100", href: PAYPAL_UNICA_MXN },
+      { valor: "200", href: PAYPAL_UNICA_MXN, destacado: true },
+      { valor: "400", href: PAYPAL_UNICA_MXN }
     ],
-    otroMontoHref: INTL_PENDIENTE,
-    unicaVezHref: INTL_PENDIENTE
+    otroMontoHref: PAYPAL_UNICA_MXN,
+    unicaVezHref: PAYPAL_UNICA_MXN
   }
 };
 
