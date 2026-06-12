@@ -7,18 +7,18 @@ export const COUNTRY_COOKIE = "cc-country";
 
 /** Países que conocemos por nombre (para el selector). El sistema acepta cualquier ISO-2. */
 export const PAISES_CONOCIDOS = {
-  AR: { nombre: "Argentina", bandera: "🇦🇷", donar: "https://cafe.casacusia.org" },
-  MX: { nombre: "México", bandera: "🇲🇽", donar: "https://donar.casacusia.org" },
-  ES: { nombre: "España", bandera: "🇪🇸", donar: "https://donar.casacusia.org" },
-  CL: { nombre: "Chile", bandera: "🇨🇱", donar: "https://donar.casacusia.org" },
-  CO: { nombre: "Colombia", bandera: "🇨🇴", donar: "https://donar.casacusia.org" },
-  UY: { nombre: "Uruguay", bandera: "🇺🇾", donar: "https://donar.casacusia.org" },
-  PE: { nombre: "Perú", bandera: "🇵🇪", donar: "https://donar.casacusia.org" },
-  US: { nombre: "Estados Unidos", bandera: "🇺🇸", donar: "https://donar.casacusia.org" },
-  BR: { nombre: "Brasil", bandera: "🇧🇷", donar: "https://donar.casacusia.org" },
-  VE: { nombre: "Venezuela", bandera: "🇻🇪", donar: "https://donar.casacusia.org" },
-  EC: { nombre: "Ecuador", bandera: "🇪🇨", donar: "https://donar.casacusia.org" },
-  PY: { nombre: "Paraguay", bandera: "🇵🇾", donar: "https://donar.casacusia.org" }
+  AR: { nombre: "Argentina", bandera: "🇦🇷", donar: "/sumate/donar" },
+  MX: { nombre: "México", bandera: "🇲🇽", donar: "/sumate/donar" },
+  ES: { nombre: "España", bandera: "🇪🇸", donar: "/sumate/donar" },
+  CL: { nombre: "Chile", bandera: "🇨🇱", donar: "/sumate/donar" },
+  CO: { nombre: "Colombia", bandera: "🇨🇴", donar: "/sumate/donar" },
+  UY: { nombre: "Uruguay", bandera: "🇺🇾", donar: "/sumate/donar" },
+  PE: { nombre: "Perú", bandera: "🇵🇪", donar: "/sumate/donar" },
+  US: { nombre: "Estados Unidos", bandera: "🇺🇸", donar: "/sumate/donar" },
+  BR: { nombre: "Brasil", bandera: "🇧🇷", donar: "/sumate/donar" },
+  VE: { nombre: "Venezuela", bandera: "🇻🇪", donar: "/sumate/donar" },
+  EC: { nombre: "Ecuador", bandera: "🇪🇨", donar: "/sumate/donar" },
+  PY: { nombre: "Paraguay", bandera: "🇵🇾", donar: "/sumate/donar" }
 } as const;
 
 export type CountryCode = keyof typeof PAISES_CONOCIDOS | string;
@@ -45,5 +45,5 @@ export function banderaPais(code: CountryCode | null | undefined): string {
 /** URL de donaciones según el país. */
 export function urlDonar(code: CountryCode | null | undefined): string {
   if (code === "AR") return PAISES_CONOCIDOS.AR.donar;
-  return "https://donar.casacusia.org";
+  return "/sumate/donar";
 }

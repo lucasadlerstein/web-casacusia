@@ -4,7 +4,7 @@ import { CheckCircle2, Home, ArrowRight, Heart, Coffee } from "lucide-react";
 
 import { Filamento } from "@/components/ui/Filamento";
 
-const DONAR_URL = "https://links.casacusia.org/donar";
+const DONAR_URL = "/sumate/donar";
 
 const planes = [
   {

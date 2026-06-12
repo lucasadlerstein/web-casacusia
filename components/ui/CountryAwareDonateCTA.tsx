@@ -5,7 +5,7 @@ import { HandHeart, ArrowRight } from "lucide-react";
 import { DONACION_AR } from "@/lib/donaciones";
 
 const LINK_AR = DONACION_AR.unicaVez;
-const LINK_INTL = "https://donar.casacusia.org";
+const LINK_INTL = "/sumate/donar";
 
 /**
  * Bloque "Hacé clic acá si sos de Argentina o acá si sos de otro lugar del mundo".

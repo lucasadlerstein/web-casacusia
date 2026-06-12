@@ -58,7 +58,7 @@ export type ConfigMoneda = {
  * existente para no romper el flujo. Reemplazar por los links reales de PayPal
  * (3 montos + otro monto + única vez de cada moneda).
  */
-const INTL_PENDIENTE = "https://donar.casacusia.org";
+const INTL_PENDIENTE = "/sumate/donar";
 
 export const MONEDAS: Record<Moneda, ConfigMoneda> = {
   ars: {

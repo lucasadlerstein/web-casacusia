@@ -6,7 +6,7 @@ export const site = {
   foundingDate: "2025-01",
   email: "somos@casacusia.org",
   whatsappCommunity: "https://chat.whatsapp.com/IUlYFEaFWiBHaFmzwvqL4D",
-  donationUrl: "https://cafe.casacusia.org",
+  donationUrl: "/sumate/donar",
   social: {
     instagram: "https://www.instagram.com/casacusia.ong/",
     tiktok: "https://www.tiktok.com/@casacusia",

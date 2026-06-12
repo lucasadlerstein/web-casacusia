@@ -18,7 +18,7 @@ export function CountryDonateHint() {
       <div className="flex-1 min-w-0 text-sm md:text-base text-ink">
         Te detectamos en <strong>{nombrePais(country)}</strong>. Los planes que mostramos abajo están en pesos argentinos.{" "}
         <a
-          href="https://donar.casacusia.org"
+          href="/sumate/donar"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-2 font-bold text-verde-dark hover:text-[#0a6b42]"
