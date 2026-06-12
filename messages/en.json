@@ -90,9 +90,9 @@
       "titleLine1Tachado": "silence",
       "titleLine2": "It's the loneliness.",
       "body": "The problem with hearing loss is not the lack of hearing: it's not being present. Since it's easy to hide, we stop participating and asking questions to avoid frustration. That pushes us away from people and social environments.",
-      "bodyExtra": "Hearing loss leads you to isolate yourself and stop participating in social environments. Sometimes the lack of understanding from others pushes us away. That's why Casacusia exists: so we can see we are not alone, and put our experience into words.",
+      "bodyExtra": "That's why Casacusia exists: so that asking is normal. To meet other people who understand you and share what we go through. In short: to see that we are not the only ones.",
       "cta": "Why does hearing loss matter?",
-      "ctaDonar": "Donate so fewer people feel alone",
+      "ctaDonar": "I want to donate",
       "ctaSecondary": "Meet the team"
     },
     "manifiesto": {
@@ -145,7 +145,10 @@
       "cta": "See all partners",
       "nosImpulsan": "Driving us forward",
       "colaboraron": "Collaborated with CASACUSIA",
-      "aporte": "Contribution"
+      "aporte": "Contribution",
+      "institucional": "Institutional Partner",
+      "estrategico": "Strategic Partner",
+      "tecnologico": "Technology Partner"
     },
     "iniciativas": {
       "eyebrow": "Our initiatives",
@@ -314,11 +317,11 @@
       "titleColored": "living,",
       "titlePost": "not just surviving.",
       "title": "Living, not just surviving",
-      "lead": "We know the world isn't fair. But we also believe everyone deserves a full life. It's not about surviving — it's about living.",
+      "lead": "We all deserve a full life, connected with other people and being part of something.",
       "p1": "And to do that, we have to ask: ask for things to be repeated, ask to switch sides, ask people to make adaptations. Asking is hard. And sometimes it pushes us away from others.",
       "p2": "By not asking and by not hearing —because not hearing means not being fully present— we start to isolate ourselves to avoid the frustration. We stop asking, and therefore, stop being there.",
       "p3": "We drift from people, from partners, from friends. We give up sports, theater, family movies. We stop going out, we stop socializing. And life in isolation isn't the most beautiful life.",
-      "kicker": "That's why Casacusia exists: so that no one has to choose between hearing and being present."
+      "kicker": "Part of the need is the lack of community. People talk about two extremes: hearing well or hearing nothing, but there's a huge spectrum in between. Mostly made up of people who lose their hearing suddenly and families whose children are born deaf. Can you imagine it happening to you?"
     },
     "brecha": {
       "eyebrow": "Why CASACUSIA exists",
@@ -334,7 +337,7 @@
       "mision": {
         "label": "Mission",
         "title": "Transform the relationship of people with their hearing loss, to improve their quality of life.",
-        "body": "We understand the relationship with hearing loss as the way we see our deck of cards."
+        "body": "We don't aim to restore hearing. We aim to bring peace, ease processes, bring hope. Be a light."
       },
       "vision": {
         "label": "Vision",
@@ -724,7 +727,7 @@
     },
     "fastChannels": "Fast channels",
     "writeUs": "Or write to us here",
-    "honesty": "We're a small team and receive many messages. Sometimes we're slow to reply. If it's urgent, try joining the WhatsApp community or reach us on Instagram first.",
+    "honesty": "We're a small team and receive many messages. Sometimes we're slow to reply. If it's urgent, try joining the WhatsApp community or reach us on Instagram. CAMI, our virtual assistant, can answer many of your questions. If you want to share your story and how Casacusia helped you, send it to us on Instagram — we'll read it with joy.",
     "form": {
       "type": "Type of inquiry",
       "types": {
