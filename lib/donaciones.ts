@@ -33,8 +33,10 @@ export type Moneda = "ars" | "usd" | "mxn";
 export type MontoMensual = {
   /** Solo el número, ya formateado para la moneda (sin símbolo). */
   valor: string;
-  /** Link de checkout de la suscripción mensual. */
+  /** Link de checkout de la suscripción mensual (ARS). */
   href: string;
+  /** PayPal plan_id para suscripciones (USD/MXN). */
+  planId?: string;
   /** Marca el monto "Más elegido" (se destaca en el panel). */
   destacado?: boolean;
 };
@@ -46,10 +48,12 @@ export type ConfigMoneda = {
   bandera: string;
   /** Los 3 montos sugeridos (el del medio es el "Más elegido"). */
   montos: MontoMensual[];
-  /** Suscripción mensual con monto libre. */
-  otroMontoHref: string;
+  /** Suscripción mensual con monto libre (solo ARS). */
+  otroMontoHref: string | null;
   /** Donación por única vez. */
   unicaVezHref: string;
+  /** true si usa PayPal SDK en vez de links directos. */
+  usaPayPal?: boolean;
 };
 
 /**
@@ -75,23 +79,25 @@ export const MONEDAS: Record<Moneda, ConfigMoneda> = {
   usd: {
     codigo: "USD",
     bandera: "🌎",
+    usaPayPal: true,
     montos: [
-      { valor: "5", href: PAYPAL_UNICA_USD },
-      { valor: "10", href: PAYPAL_UNICA_USD, destacado: true },
-      { valor: "25", href: PAYPAL_UNICA_USD }
+      { valor: "5", href: PAYPAL_UNICA_USD, planId: "P-3JR998915Y714692LNIM7LDA" },
+      { valor: "10", href: PAYPAL_UNICA_USD, planId: "P-1SY10023BD186664DNIM7LRA", destacado: true },
+      { valor: "25", href: PAYPAL_UNICA_USD, planId: "P-2ET98902J28073350NIM7L6A" }
     ],
-    otroMontoHref: PAYPAL_UNICA_USD,
+    otroMontoHref: null,
     unicaVezHref: PAYPAL_UNICA_USD
   },
   mxn: {
     codigo: "MXN",
     bandera: "🇲🇽",
+    usaPayPal: true,
     montos: [
-      { valor: "100", href: PAYPAL_UNICA_MXN },
-      { valor: "200", href: PAYPAL_UNICA_MXN, destacado: true },
-      { valor: "400", href: PAYPAL_UNICA_MXN }
+      { valor: "100", href: PAYPAL_UNICA_MXN, planId: "P-2C658829LB7063527NIM7OPQ" },
+      { valor: "200", href: PAYPAL_UNICA_MXN, planId: "P-3U881829EE029882NNIM7OYQ", destacado: true },
+      { valor: "400", href: PAYPAL_UNICA_MXN, planId: "P-67L749587A270545GNIM7PAI" }
     ],
-    otroMontoHref: PAYPAL_UNICA_MXN,
+    otroMontoHref: null,
     unicaVezHref: PAYPAL_UNICA_MXN
   }
 };
