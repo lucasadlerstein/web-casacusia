@@ -144,8 +144,8 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
   const inner = (
     <article className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-surface-line bg-surface-card hover:shadow-lg transition-shadow group">
       {isPlaceholder ? (
-        <div className="absolute inset-0 bg-gradient-to-br from-verde-soft via-violeta-soft to-rosa-soft flex items-center justify-center">
-          <span className="font-display font-extrabold text-6xl text-white/80">
+        <div className="absolute inset-0 bg-gradient-to-br from-ink via-[#1a4a5a] to-ink flex items-center justify-center">
+          <span className="font-display font-extrabold text-6xl text-white/30">
             {persona.nombre.charAt(0)}
           </span>
         </div>
