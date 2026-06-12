@@ -62,9 +62,6 @@ export default async function DonarPage({ params }: { params: Promise<{ locale: 
 
   const testimonios = getTestimoniosByIds(TESTIMONIOS_DONAR);
 
-  const bajada =
-    "Doná para que más personas con pérdida auditiva puedan mejorar su calidad de vida accediendo a grupos, información y dispositivos.";
-
   return (
     <main className="bg-surface-bg">
       {/* Split: foto rotativa + título a la izquierda, panel de donación a la derecha */}

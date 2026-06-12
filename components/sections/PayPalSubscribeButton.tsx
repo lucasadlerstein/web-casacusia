@@ -7,10 +7,13 @@ const SDK_SRC = `https://www.paypal.com/sdk/js?client-id=${CLIENT_ID}&vault=true
 
 let sdkPromise: Promise<void> | null = null;
 
+/* eslint-disable @typescript-eslint/no-explicit-any -- PayPal SDK is untyped */
+type PayPalWindow = Window & { paypal?: { Buttons: (opts: any) => { render: (el: HTMLElement) => void } } };
+
 /** Carga el SDK de PayPal una sola vez (lazy). */
 function loadSdk(): Promise<void> {
   if (sdkPromise) return sdkPromise;
-  if (typeof window !== "undefined" && (window as any).paypal) {
+  if (typeof window !== "undefined" && (window as PayPalWindow).paypal) {
     sdkPromise = Promise.resolve();
     return sdkPromise;
   }
@@ -24,6 +27,7 @@ function loadSdk(): Promise<void> {
   });
   return sdkPromise;
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
 
 type Props = {
   planId: string;
@@ -46,10 +50,9 @@ export function PayPalSubscribeButton({ planId, onSuccess }: Props) {
 
     try {
       await loadSdk();
-      const paypal = (window as any).paypal;
+      const paypal = (window as PayPalWindow).paypal;
       if (!paypal?.Buttons) throw new Error("PayPal Buttons not available");
 
-      // Limpiar botón anterior
       containerRef.current.innerHTML = "";
 
       paypal.Buttons({
@@ -60,7 +63,7 @@ export function PayPalSubscribeButton({ planId, onSuccess }: Props) {
           label: "subscribe",
           height: 45
         },
-        createSubscription: (_data: any, actions: any) =>
+        createSubscription: (_data: unknown, actions: { subscription: { create: (opts: { plan_id: string }) => Promise<string> } }) =>
           actions.subscription.create({ plan_id: planId }),
         onApprove: () => {
           onSuccess?.();
