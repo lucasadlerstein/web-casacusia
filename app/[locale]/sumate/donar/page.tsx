@@ -40,10 +40,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "sumate.donar" });
   return buildMetadata({
-    title: t("title"),
-    description: t("description"),
+    title: "Sumate a Casacusia · Doná un café al mes",
+    description: "Juntos, podemos hacer que menos personas se sientan solas. Más de 100 personas donan un café al mes a Casacusia. Queremos ser 150. ¿Te sumás?",
     path: "/sumate/donar",
-    locale: locale as Locale
+    locale: locale as Locale,
+    image: "/images/og/donar.jpg"
   });
 }
 
