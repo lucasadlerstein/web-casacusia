@@ -49,6 +49,7 @@ export async function generateMetadata({
     description: t("description"),
     path: "/calendario",
     locale: locale as Locale,
+    image: "/og-calendario.png",
   });
 }
 

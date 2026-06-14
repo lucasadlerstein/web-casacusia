@@ -53,7 +53,7 @@ export async function GET() {
         >
           <div
             style={{
-              fontSize: 52,
+              fontSize: 50,
               fontWeight: 900,
               color: "white",
               lineHeight: 1.2,
@@ -62,11 +62,11 @@ export async function GET() {
               textShadow: "0 3px 20px rgba(0,0,0,0.6)",
             }}
           >
-            CASACUSIA es la Casa de las Personas con Hipoacusia.
+            Hacé clic y conocé nuestro calendario de programas.
           </div>
           <div
             style={{
-              fontSize: 52,
+              fontSize: 50,
               fontWeight: 900,
               color: "#FFC001",
               lineHeight: 1.2,
@@ -74,7 +74,7 @@ export async function GET() {
               textShadow: "0 3px 20px rgba(0,0,0,0.6)",
             }}
           >
-            ¿Te sumás?
+            ¡Te esperamos!
           </div>
         </div>
       </div>
