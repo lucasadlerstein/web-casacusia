@@ -24,10 +24,10 @@ export async function generateMetadata({
   });
 }
 
-const programaAssets: Record<string, { foto: string; tono: "verde" | "violeta" | "rosa" | "amarillo" | "teal" }> = {
+const programaAssets: Record<string, { foto?: string; youtubeId?: string; tono: "verde" | "violeta" | "rosa" | "amarillo" | "teal" }> = {
   "encuentros":           { foto: "/fotos/propuestas/Casacusia_GZ-21.jpg",       tono: "verde" },
   "encuentros-virtuales": { foto: "/fotos-nuevas/eventos/captura-de-pantalla-2025-12-26-a-las-123513-p-m.jpg", tono: "violeta" },
-  "red-padres-madres":    { foto: "/fotos/propuestas/casacusia_kids_alta_186.jpg", tono: "rosa" },
+  "red-padres-madres":    { youtubeId: "QQSehCQct20",                           tono: "rosa" },
   "comunidad-whatsapp":   { foto: "/fotos/encuentro-patio.jpg",                  tono: "verde" },
   "podcast":              { foto: "/brand/podcast/spnm-alta.jpg",                tono: "amarillo" },
   "cami":                 { foto: "/fotos/propuestas/DSC00009.jpg",              tono: "teal" },
@@ -82,7 +82,7 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
 
       <div className="container max-w-5xl mx-auto px-4 pb-20 space-y-10 md:space-y-14">
         {programas.map((p, i) => {
-          const assets = programaAssets[p.slug] ?? { foto: "/fotos/hero-comunidad.jpg", tono: "teal" as const };
+          const assets = programaAssets[p.slug] ?? { foto: "/fotos/hero-comunidad.jpg", tono: "teal" as const } as { foto?: string; youtubeId?: string; tono: string };
           const proyecto = slugToProyecto[p.slug];
           const testimonios = proyecto ? getTestimonios({ proyecto, destacados: true }).slice(0, 2) : [];
           const isExternal = p.cta.href.startsWith("http");
@@ -96,15 +96,25 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
                 isInverted ? "md:[&>*:first-child]:order-2" : ""
               }`}
             >
-              {/* Imagen */}
+              {/* Imagen o YouTube embed */}
               <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[320px]">
-                <Image
-                  src={assets.foto}
-                  alt={p.titulo}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
+                {assets.youtubeId ? (
+                  <iframe
+                    src={`https://www.youtube.com/embed/${assets.youtubeId}`}
+                    title={p.titulo}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                ) : (
+                  <Image
+                    src={assets.foto!}
+                    alt={p.titulo}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                )}
                 {proximamente && (
                   <div className="absolute top-4 left-4 inline-flex items-center rounded-full bg-ink/85 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-wider backdrop-blur-sm">
                     {t("proximamente")}
