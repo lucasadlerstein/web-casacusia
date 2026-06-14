@@ -11,7 +11,34 @@
  * generada (stale-while-error).
  */
 
+import categoriasData from "@/content/podcast-categorias.json";
+
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
+
+export type PodcastCategoria = "historias" | "patologias" | "tecnicos" | "familiares";
+
+export const PODCAST_CATEGORIAS: Record<PodcastCategoria, string> = {
+  historias:  "Historias de personas",
+  patologias: "Patologías",
+  tecnicos:   "Técnicos",
+  familiares:  "Para familiares"
+};
+
+const catPorNumero = categoriasData.porNumero as Record<string, PodcastCategoria>;
+const keywordFallback = categoriasData.keywordFallback as Record<string, string[]>;
+
+function inferCategoria(numero: number | null, titulo: string): PodcastCategoria {
+  if (numero != null && catPorNumero[String(numero)]) {
+    return catPorNumero[String(numero)]!;
+  }
+  const lower = titulo.toLowerCase();
+  for (const cat of ["tecnicos", "patologias", "familiares"] as const) {
+    if (keywordFallback[cat]?.some((kw) => lower.includes(kw.toLowerCase()))) {
+      return cat;
+    }
+  }
+  return "historias";
+}
 
 const YT_API = "https://www.googleapis.com/youtube/v3";
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
@@ -33,6 +60,8 @@ export interface PodcastEpisode {
   duracion: string | null;
   /** Cantidad de reproducciones en YouTube. */
   views: number | null;
+  /** Categoría temática del episodio. */
+  categoria: PodcastCategoria;
 }
 
 export interface PodcastFeed {
@@ -200,7 +229,8 @@ export async function getPodcastFeed(): Promise<PodcastFeed | null> {
         youtubeId: videoId,
         pubDate: sn.publishedAt ?? it.contentDetails?.videoPublishedAt ?? "",
         duracion: meta.get(videoId)?.duracion ?? null,
-        views: meta.get(videoId)?.views ?? null
+        views: meta.get(videoId)?.views ?? null,
+        categoria: inferCategoria(numero, titulo)
       };
     });
 
