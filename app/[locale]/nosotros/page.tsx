@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
 import { CuatroCaminos } from "@/components/sections/CuatroCaminos";
 import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
-import { getVoluntarios } from "@/lib/content";
+import { getVoluntarios, getEquipo } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
@@ -44,7 +44,12 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "nosotros" });
-  const voluntariosRandom = pickRandom(getVoluntarios(), 4);
+  // Juntamos equipo + voluntarios, solo los que tengan foto real (no placeholder)
+  const conFoto = [
+    ...getEquipo().map((m) => ({ slug: m.slug, nombre: m.nombre, foto: m.foto, ciudad: null as string | null })),
+    ...getVoluntarios().map((v) => ({ slug: v.slug, nombre: v.nombre, foto: v.foto, ciudad: v.ciudad ?? null }))
+  ].filter((p) => !p.foto.includes("placeholder"));
+  const voluntariosRandom = pickRandom(conFoto, 4);
 
   return (
     <>
