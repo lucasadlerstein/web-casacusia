@@ -1,8 +1,26 @@
+import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/lib/i18n/navigation";
 import { CheckCircle2, Home, ArrowRight, Heart, Coffee } from "lucide-react";
 
 import { Filamento } from "@/components/ui/Filamento";
+import { buildMetadata } from "@/lib/seo";
+import type { Locale } from "@/lib/i18n/config";
+
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return buildMetadata({
+    title: "Gracias por tu consulta",
+    description: "Tu mensaje fue enviado. Te contactaremos pronto.",
+    path: "/gracias",
+    locale: locale as Locale,
+    noindex: true
+  });
+}
 
 const DONAR_URL = "/sumate/donar";
 

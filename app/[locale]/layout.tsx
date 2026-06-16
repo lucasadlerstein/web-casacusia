@@ -1,9 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import Script from "next/script";
 import { Inter, Montserrat, Fuzzy_Bubbles } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../globals.css";
 import { locales, type Locale } from "@/lib/i18n/config";
@@ -12,6 +15,8 @@ import { Footer } from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { CountryProvider } from "@/components/country/CountryProvider";
 import { getCountry, hasCountryOverride } from "@/lib/country-server";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -97,6 +102,19 @@ export default async function LocaleLayout({
           </CountryProvider>
         </NextIntlClientProvider>
         <OrganizationSchema />
+        <Analytics />
+        <SpeedInsights />
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
