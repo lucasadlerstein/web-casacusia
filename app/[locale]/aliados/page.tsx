@@ -5,6 +5,7 @@ import { ArrowRight, HandHeart } from "lucide-react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import { Section } from "@/components/ui/Section";
+import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { getAliados, type Aliado } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -106,7 +107,10 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
         </div>
       </Section>
 
-      {/* Bloque 3: Fotos de Casacusia */}
+      {/* Bloque 3: Red de Empresas Auditivas */}
+      <AliadosAuditivos />
+
+      {/* Bloque 4: Fotos de Casacusia */}
       <Section background="default" className="py-12">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-display text-xl md:text-2xl font-extrabold text-ink mb-6 text-center">
