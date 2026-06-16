@@ -136,11 +136,9 @@ function BlockAliados({ aliados }: { aliados: { slug: string; nombre: string; lo
       </div>
       <div className="flex flex-wrap items-center justify-center gap-3">
         {aliados.slice(0, 6).map((a) => (
-          <Link
+          <div
             key={a.slug}
-            href={`/aliados/${a.slug}`}
-            onClick={() => track("aliados", a.slug)}
-            className="relative h-8 w-16 grayscale hover:grayscale-0 transition-all"
+            className="relative h-8 w-16 grayscale"
             title={a.nombre}
           >
             <Image
@@ -150,7 +148,7 @@ function BlockAliados({ aliados }: { aliados: { slug: string; nombre: string; lo
               className="object-contain"
               sizes="64px"
             />
-          </Link>
+          </div>
         ))}
       </div>
       <Link
@@ -158,7 +156,7 @@ function BlockAliados({ aliados }: { aliados: { slug: string; nombre: string; lo
         onClick={() => track("aliados", "ver_todos")}
         className="mt-3 inline-block text-xs font-bold text-verde-dark hover:underline underline-offset-2"
       >
-        Ver todos los aliados
+        Conocé a nuestros aliados
       </Link>
     </SidebarCard>
   );
