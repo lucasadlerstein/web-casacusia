@@ -4,6 +4,7 @@ import { useMemo, type ReactNode } from "react";
 import Image from "next/image";
 import { Heart, CalendarDays, Mail, Users, Handshake } from "lucide-react";
 
+import { Link } from "@/lib/i18n/navigation";
 import { trackEvent } from "@/lib/tracking";
 
 /* ---------- types ---------- */
@@ -48,13 +49,13 @@ function BlockCasacusia() {
         Fundación argentina que acompaña a personas con hipoacusia y sus familias
         para que nadie transite su pérdida auditiva en soledad.
       </p>
-      <a
+      <Link
         href="/nosotros"
         onClick={() => track("casacusia")}
         className="mt-3 inline-block text-xs font-bold text-verde-dark hover:underline underline-offset-2"
       >
         Conocenos
-      </a>
+      </Link>
     </SidebarCard>
   );
 }
@@ -70,13 +71,13 @@ function BlockEventos() {
         Encuentros mensuales presenciales y virtuales, abiertos y gratuitos.
         Compartimos experiencias y nos acompañamos.
       </p>
-      <a
+      <Link
         href="/calendario"
         onClick={() => track("eventos")}
         className="mt-3 inline-block text-xs font-bold text-verde-dark hover:underline underline-offset-2"
       >
         Ver calendario
-      </a>
+      </Link>
     </SidebarCard>
   );
 }
@@ -92,13 +93,13 @@ function BlockNewsletter() {
         Recibí novedades de la fundación, nuevos episodios del podcast
         y recursos sobre hipoacusia.
       </p>
-      <a
+      <Link
         href="/#newsletter"
         onClick={() => track("newsletter")}
         className="mt-3 inline-block text-xs font-bold text-verde-dark hover:underline underline-offset-2"
       >
         Suscribirme
-      </a>
+      </Link>
     </SidebarCard>
   );
 }
@@ -114,13 +115,13 @@ function BlockSumate() {
         Podés ser voluntario/a, donar o acercar servicios profesionales.
         Toda ayuda multiplica el impacto.
       </p>
-      <a
+      <Link
         href="/sumate"
         onClick={() => track("sumate")}
         className="mt-3 inline-block text-xs font-bold text-verde-dark hover:underline underline-offset-2"
       >
         Quiero sumarme
-      </a>
+      </Link>
     </SidebarCard>
   );
 }
@@ -135,7 +136,7 @@ function BlockAliados({ aliados }: { aliados: { slug: string; nombre: string; lo
       </div>
       <div className="flex flex-wrap items-center justify-center gap-3">
         {aliados.slice(0, 6).map((a) => (
-          <a
+          <Link
             key={a.slug}
             href={`/aliados/${a.slug}`}
             onClick={() => track("aliados", a.slug)}
@@ -149,16 +150,16 @@ function BlockAliados({ aliados }: { aliados: { slug: string; nombre: string; lo
               className="object-contain"
               sizes="64px"
             />
-          </a>
+          </Link>
         ))}
       </div>
-      <a
+      <Link
         href="/aliados"
         onClick={() => track("aliados", "ver_todos")}
         className="mt-3 inline-block text-xs font-bold text-verde-dark hover:underline underline-offset-2"
       >
         Ver todos los aliados
-      </a>
+      </Link>
     </SidebarCard>
   );
 }
