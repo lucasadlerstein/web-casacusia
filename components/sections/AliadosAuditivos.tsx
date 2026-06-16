@@ -19,14 +19,9 @@ export function AliadosAuditivos() {
   return (
     <section className="border-t border-surface-line bg-surface-tint py-10">
       <div className="container max-w-5xl mx-auto px-4">
-        <div className="text-center mb-6">
-          <p className="font-display text-xs font-bold uppercase tracking-[0.2em] text-verde-dark mb-1">
-            Red de Empresas que Escuchan
-          </p>
-          <p className="text-sm text-ink-soft">
-            Instituciones del rubro auditivo que nos impulsan a crecer
-          </p>
-        </div>
+        <h2 className="font-display text-xl md:text-2xl font-extrabold text-ink text-center mb-8 max-w-2xl mx-auto leading-tight">
+          Red de Empresas que Escuchan y Acompañan a la Comunidad Casacusia
+        </h2>
 
         <ul className="space-y-3 max-w-3xl mx-auto">
           {CATEGORIAS.map((cat) => {

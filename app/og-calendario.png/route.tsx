@@ -14,11 +14,11 @@ export async function GET() {
         <img src={base64} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "rgba(0,0,0,0.4)" }} />
         <div style={{ position: "relative", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "40px 60px", gap: 12 }}>
-          <div style={{ fontSize: 52, fontWeight: 900, color: "white", lineHeight: 1.2, maxWidth: 900, fontFamily: "system-ui, sans-serif", textShadow: "0 3px 20px rgba(0,0,0,0.6)" }}>
-            CASACUSIA es la Casa de las Personas con Hipoacusia.
+          <div style={{ fontSize: 50, fontWeight: 900, color: "white", lineHeight: 1.2, maxWidth: 900, fontFamily: "system-ui, sans-serif", textShadow: "0 3px 20px rgba(0,0,0,0.6)" }}>
+            Hacé clic y conocé nuestro calendario de programas.
           </div>
-          <div style={{ fontSize: 52, fontWeight: 900, color: "#FFC001", lineHeight: 1.2, fontFamily: "system-ui, sans-serif", textShadow: "0 3px 20px rgba(0,0,0,0.6)" }}>
-            ¿Te sumás?
+          <div style={{ fontSize: 50, fontWeight: 900, color: "#FFC001", lineHeight: 1.2, fontFamily: "system-ui, sans-serif", textShadow: "0 3px 20px rgba(0,0,0,0.6)" }}>
+            ¡Te esperamos!
           </div>
         </div>
       </div>
