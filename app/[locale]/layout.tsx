@@ -17,6 +17,7 @@ import { CountryProvider } from "@/components/country/CountryProvider";
 import { getCountry, hasCountryOverride } from "@/lib/country-server";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+const GADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -111,7 +112,18 @@ export default async function LocaleLayout({
               strategy="afterInteractive"
             />
             <Script id="ga4-init" strategy="afterInteractive">
-              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`}
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');${GADS_ID ? `gtag('config','${GADS_ID}');` : ''}`}
+            </Script>
+          </>
+        )}
+        {!GA_ID && GADS_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GADS_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gads-init" strategy="afterInteractive">
+              {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GADS_ID}');`}
             </Script>
           </>
         )}
