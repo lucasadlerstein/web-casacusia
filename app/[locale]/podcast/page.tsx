@@ -186,9 +186,6 @@ export default async function PodcastPage({
         </div>
       </section>
 
-      {/* Rutas de escucha */}
-      <RutasDeEscuchaPreview />
-
       {/* Grilla de episodios del feed */}
       <Section background="default" className="pb-20">
         <div className="max-w-6xl mx-auto">
