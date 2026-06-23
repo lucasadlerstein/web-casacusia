@@ -18,7 +18,8 @@ const primaryNav: readonly { href: string; key: string; dropdown?: boolean }[] =
   { href: "/contacto",    key: "contacto"   }
 ];
 
-const podcastSubnav = [
+const podcastSubnav: readonly { href: string; label: string; highlight?: boolean }[] = [
+  { href: "/podcast/rutas",          label: "Rutas de escucha", highlight: true },
   { href: "/podcast",                label: "Todos los episodios" },
   { href: "/podcast?cat=historias",  label: "Historias de personas" },
   { href: "/podcast?cat=patologias", label: "Patologías" },
@@ -93,7 +94,12 @@ export function Header() {
                         key={sub.href}
                         href={sub.href}
                         onClick={() => setPodcastOpen(false)}
-                        className="block px-4 py-2.5 text-sm text-ink-soft hover:bg-surface-tint hover:text-ink transition-colors"
+                        className={cn(
+                          "block px-4 py-2.5 text-sm transition-colors hover:bg-surface-tint",
+                          sub.highlight
+                            ? "font-bold text-verde-dark hover:text-verde-dark"
+                            : "text-ink-soft hover:text-ink"
+                        )}
                       >
                         {sub.label}
                       </Link>
@@ -169,7 +175,12 @@ export function Header() {
                         key={sub.href}
                         href={sub.href}
                         onClick={() => { setOpen(false); setMobilePodcastOpen(false); }}
-                        className="block rounded-lg px-3 py-2.5 text-sm text-ink-soft hover:bg-surface-tint hover:text-ink transition-colors"
+                        className={cn(
+                          "block rounded-lg px-3 py-2.5 text-sm transition-colors hover:bg-surface-tint",
+                          sub.highlight
+                            ? "font-bold text-verde-dark hover:text-verde-dark"
+                            : "text-ink-soft hover:text-ink"
+                        )}
                       >
                         {sub.label}
                       </Link>
