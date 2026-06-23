@@ -65,28 +65,27 @@ export default async function DonarPage({ params }: { params: Promise<{ locale: 
 
   return (
     <main className="bg-surface-bg">
-      {/* Split: foto rotativa + título a la izquierda, panel de donación a la derecha */}
+      {/* Split: foto a la izquierda, título + panel de donación a la derecha */}
       <section className="grid lg:grid-cols-2">
-        {/* Izquierda — foto rotativa con el título encima */}
+        {/* Izquierda — foto rotativa (sin texto encima) */}
         <div className="flex flex-col">
           <HeroFotoRotativa fotos={HERO_FOTOS} className="min-h-[320px] flex-1 lg:min-h-[680px]">
-            <div className="max-w-xl text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.45)]">
-              <p className="font-display text-xl font-extrabold leading-[1.2] tracking-tight text-white md:text-3xl lg:text-4xl">
-                Cada aporte sostiene encuentros, podcast y comunidad para miles de personas.
-              </p>
-              <a
-                href="#donar-panel"
-                className="mt-4 inline-block rounded-full bg-amarillo px-6 py-2.5 text-sm font-bold text-ink shadow-lg transition-transform hover:scale-105 lg:hidden"
-              >
-                Dona hoy
-              </a>
-            </div>
+            {/* CTA mobile para scrollear al panel */}
+            <a
+              href="#donar-panel"
+              className="inline-block rounded-full bg-amarillo px-6 py-2.5 text-sm font-bold text-ink shadow-lg transition-transform hover:scale-105 lg:hidden"
+            >
+              Dona hoy
+            </a>
           </HeroFotoRotativa>
         </div>
 
-        {/* Derecha — panel de donación (fijo) */}
-        <div id="donar-panel" className="flex items-center bg-surface-bg px-6 py-12 md:px-10 lg:px-14">
+        {/* Derecha — título + panel de donación */}
+        <div id="donar-panel" className="flex flex-col justify-center bg-surface-bg px-6 py-12 md:px-10 lg:px-14">
           <div className="w-full max-w-lg mx-auto">
+            <p className="font-display text-xl font-extrabold leading-[1.2] tracking-tight text-ink md:text-2xl lg:text-3xl mb-8">
+              Cada aporte sostiene encuentros, podcast y comunidad para miles de personas.
+            </p>
             <DonarPanel testimonios={testimonios} />
           </div>
         </div>
