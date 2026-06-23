@@ -17,7 +17,7 @@ export const site = {
     applePodcasts: "https://podcasts.apple.com/"
   },
   legal: {
-    cuit: "30-71890622-7",
+    cuit: "30-71888922-3",
     personeria: "Personería jurídica aprobada",
     arca: "Aprobación ARCA para deducción de Impuesto a las Ganancias",
     address: "Ciudad Autónoma de Buenos Aires, Argentina"
