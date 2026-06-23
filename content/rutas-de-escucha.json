@@ -1,0 +1,61 @@
+{
+  "_doc": "Rutas de escucha: playlists curadas del podcast 'Sordo pero no mudo'. Cada ruta agrupa episodios por tema. Los episodios se referencian por número.",
+  "rutas": [
+    {
+      "slug": "acufenos-tinnitus",
+      "titulo": "Acúfenos y Tinnitus",
+      "emoji": "🔔",
+      "descripcion": "El acúfeno o tinnitus es la percepción de un sonido que no proviene de ninguna fuente externa: un zumbido, pitido o silbido constante. Afecta a millones de personas y muchas veces viene acompañado de hipoacusia. En estos episodios vas a encontrar experiencias reales, opciones de tratamiento y herramientas para convivir con el ruido.",
+      "episodios": [15, 27, 53, 47, 65]
+    },
+    {
+      "slug": "implante-coclear",
+      "titulo": "Implante coclear: historias y rehabilitación",
+      "emoji": "🦻",
+      "descripcion": "El implante coclear cambia vidas. Estas son las historias de personas que pasaron por la cirugía, la activación y la rehabilitación, contadas en primera persona. También incluye información profesional clave sobre el proceso.",
+      "episodios": [4, 37, 44, 45, 30, 63, 33, 61, 66, 31]
+    },
+    {
+      "slug": "padres-y-madres",
+      "titulo": "Experiencias de padres y madres",
+      "emoji": "💛",
+      "descripcion": "Cuando le diagnostican hipoacusia a un hijo, el mundo se da vuelta. Estos episodios son para vos: mamás, papás y familias que están transitando ese camino. No estás solo/a.",
+      "episodios": [10, 18, 21, 24, 60, 61, 66]
+    },
+    {
+      "slug": "ninos-e-hipoacusia",
+      "titulo": "Niños e hipoacusia",
+      "emoji": "🧒",
+      "descripcion": "Hipoacusia en la infancia: diagnóstico temprano, equipamiento, escolarización y las voces de chicos y familias que lo están transitando.",
+      "episodios": [33, 49, 59, 10, 18, 21, 51]
+    },
+    {
+      "slug": "patologias-auditivas",
+      "titulo": "Patologías auditivas",
+      "emoji": "🩺",
+      "descripcion": "Hipoacusia súbita, otosclerosis, colesteatoma, sordera unilateral, vértigo y más. Episodios con información profesional y experiencias sobre distintas condiciones que afectan la audición.",
+      "episodios": [12, 19, 14, 28, 17, 23, 50, 58]
+    },
+    {
+      "slug": "historias-de-personas",
+      "titulo": "Historias de personas con hipoacusia",
+      "emoji": "🎙️",
+      "descripcion": "Cada persona transita la hipoacusia de una forma única. Acá vas a escuchar relatos en primera persona: cómo se enteraron, cómo lo procesan y cómo siguen adelante.",
+      "episodios": [5, 32, 36, 41, 46, 48, 52, 54, 55, 56, 57, 62, 67]
+    },
+    {
+      "slug": "el-camino-de-lucas",
+      "titulo": "El camino de Lucas",
+      "emoji": "🚶",
+      "descripcion": "Lucas Adlerstein, fundador de Casacusia, comparte su experiencia personal con la hipoacusia bilateral: desde el diagnóstico, la cirugía fallida, el implante coclear y las reflexiones que fueron surgiendo en el camino.",
+      "episodios": [1, 39, 20, 6, 11, 16, 31, 34]
+    },
+    {
+      "slug": "tecnologia-y-audifonos",
+      "titulo": "Tecnología y audífonos",
+      "emoji": "⚙️",
+      "descripcion": "Audífonos, calibración, pilas, leyes, estudios auditivos y todo lo práctico que necesitás saber para tu día a día con equipamiento auditivo.",
+      "episodios": [7, 9, 38, 42, 22, 29, 40, 26]
+    }
+  ]
+}

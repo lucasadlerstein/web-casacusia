@@ -10,6 +10,7 @@ import impactoData from "@/content/impacto.json";
 import faqsData from "@/content/faq.json";
 import reconocimientosData from "@/content/reconocimientos.json";
 import gruposWhatsappData from "@/content/grupos-whatsapp.json";
+import rutasData from "@/content/rutas-de-escucha.json";
 
 export const comisiones = [
   "comunicacion",
@@ -276,4 +277,21 @@ export type GruposWhatsapp = z.infer<typeof GruposWhatsappSchema>;
 
 export function getGruposWhatsapp(): GruposWhatsapp {
   return GruposWhatsappSchema.parse(gruposWhatsappData);
+}
+
+const RutaDeEscuchaSchema = z.object({
+  slug: z.string(),
+  titulo: z.string(),
+  emoji: z.string(),
+  descripcion: z.string(),
+  episodios: z.array(z.number())
+});
+export type RutaDeEscucha = z.infer<typeof RutaDeEscuchaSchema>;
+
+export function getRutasDeEscucha(): RutaDeEscucha[] {
+  return z.array(RutaDeEscuchaSchema).parse(rutasData.rutas);
+}
+
+export function getRutaBySlug(slug: string): RutaDeEscucha | null {
+  return getRutasDeEscucha().find((r) => r.slug === slug) ?? null;
 }
