@@ -12,6 +12,7 @@
  */
 
 import categoriasData from "@/content/podcast-categorias.json";
+import overridesData from "@/content/podcast-overrides.json";
 
 export const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
 
@@ -26,6 +27,7 @@ export const PODCAST_CATEGORIAS: Record<PodcastCategoria, string> = {
 
 const catPorNumero = categoriasData.porNumero as Record<string, PodcastCategoria>;
 const keywordFallback = categoriasData.keywordFallback as Record<string, string[]>;
+const descOverrides = overridesData as Record<string, { descripcion?: string }>;
 
 function inferCategoria(numero: number | null, titulo: string): PodcastCategoria {
   if (numero != null && catPorNumero[String(numero)]) {
@@ -216,12 +218,14 @@ export async function getPodcastFeed(): Promise<PodcastFeed | null> {
       seen.set(base, n);
       const slug = n > 1 ? `${base}-${videoId.slice(0, 4).toLowerCase()}` : base;
 
+      const override = numero != null ? descOverrides[String(numero)] : undefined;
+
       return {
         guid: videoId,
         slug,
         numero,
         titulo,
-        descripcion: decode(sn.description ?? ""),
+        descripcion: override?.descripcion ?? decode(sn.description ?? ""),
         imagen: bestThumb(sn.thumbnails),
         aspecto: "16:9",
         audioUrl: null,
@@ -246,4 +250,12 @@ export async function getPodcastFeed(): Promise<PodcastFeed | null> {
 export async function getPodcastEpisode(slug: string): Promise<PodcastEpisode | null> {
   const feed = await getPodcastFeed();
   return feed?.episodios.find((e) => e.slug === slug) ?? null;
+}
+
+/** Devuelve episodios por número, en el orden pedido (ignora números inexistentes). */
+export async function getPodcastEpisodesByNumero(numeros: number[]): Promise<PodcastEpisode[]> {
+  const feed = await getPodcastFeed();
+  if (!feed) return [];
+  const byNum = new Map(feed.episodios.filter((e) => e.numero != null).map((e) => [e.numero!, e]));
+  return numeros.map((n) => byNum.get(n)).filter((e): e is PodcastEpisode => Boolean(e));
 }

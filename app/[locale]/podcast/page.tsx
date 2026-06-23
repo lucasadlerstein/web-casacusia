@@ -8,7 +8,9 @@ import { Section } from "@/components/ui/Section";
 import { PodcastFeedGrid } from "@/components/sections/PodcastFeedGrid";
 import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { getPodcastFeed } from "@/lib/podcast";
+import { getRutasDeEscucha } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
+import { Link } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/config";
 import type { PodcastCategoria } from "@/lib/podcast";
 
@@ -36,6 +38,55 @@ export async function generateMetadata({
 }
 
 const VALID_CATS = new Set(["historias", "patologias", "tecnicos", "familiares"]);
+
+function RutasDeEscuchaPreview() {
+  const rutas = getRutasDeEscucha();
+  return (
+    <Section background="warm" className="py-12 md:py-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex items-end justify-between mb-6">
+          <div>
+            <h2 className="font-display text-2xl md:text-3xl font-extrabold text-ink">
+              Rutas de escucha
+            </h2>
+            <p className="text-ink-soft mt-1">
+              Playlists temáticas para no arrancar de cero.
+            </p>
+          </div>
+          <Link
+            href="/podcast/rutas"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-verde-dark hover:underline underline-offset-4"
+          >
+            Ver todas <ArrowRight size={14} aria-hidden />
+          </Link>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {rutas.slice(0, 4).map((ruta) => (
+            <Link
+              key={ruta.slug}
+              href={`/podcast/rutas/${ruta.slug}`}
+              className="group flex flex-col rounded-2xl bg-surface-card border border-surface-line p-5 hover:border-verde-dark hover:shadow-md transition-all"
+            >
+              <span className="text-2xl mb-2" aria-hidden>{ruta.emoji}</span>
+              <h3 className="font-display text-base font-extrabold text-ink leading-snug group-hover:text-verde-dark transition-colors">
+                {ruta.titulo}
+              </h3>
+              <p className="mt-1 text-xs text-ink-muted">
+                {ruta.episodios.length} episodios
+              </p>
+            </Link>
+          ))}
+        </div>
+        <Link
+          href="/podcast/rutas"
+          className="sm:hidden inline-flex items-center gap-1.5 text-sm font-bold text-verde-dark hover:underline underline-offset-4 mt-4"
+        >
+          Ver todas las rutas <ArrowRight size={14} aria-hidden />
+        </Link>
+      </div>
+    </Section>
+  );
+}
 
 export default async function PodcastPage({
   params,
@@ -134,6 +185,9 @@ export default async function PodcastPage({
           </div>
         </div>
       </section>
+
+      {/* Rutas de escucha */}
+      <RutasDeEscuchaPreview />
 
       {/* Grilla de episodios del feed */}
       <Section background="default" className="pb-20">

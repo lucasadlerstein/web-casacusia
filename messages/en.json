@@ -287,6 +287,18 @@
       "bienestar": "Well-being and Reflection",
       "derechos": "Rights and Inclusion",
       "tips": "Tips and Daily Life"
+    },
+    "rutas": {
+      "title": "Listening Routes · Sordo pero no mudo",
+      "description": "Themed playlists of our podcast. Pick a topic and listen to curated episodes in order.",
+      "heading": "Listening Routes",
+      "subtitle": "Not sure where to start? Pick a topic that speaks to you and listen to our curated episodes.",
+      "episodios": "episodes",
+      "escuchar": "Listen to route",
+      "volverRutas": "All routes",
+      "volverPodcast": "All episodes",
+      "verEnYoutube": "Watch on YouTube",
+      "escucharEnSpotify": "Listen on Spotify"
     }
   },
   "nosotros": {
@@ -306,9 +318,18 @@
       "title": "What is hearing loss?",
       "body": "Hearing loss is the total or partial decrease in hearing capacity. It can be unilateral or bilateral; mild, moderate, severe or profound. The WHO classifies it as an invisible disability.",
       "items": {
-        "world": { "n": "1 in 20", "l": "People in the world have some degree of hearing loss." },
-        "argentina": { "n": "+2 million", "l": "People in Argentina have hearing loss." },
-        "oms": { "n": "700M", "l": "WHO projection towards 2050 with disabling hearing loss." }
+        "world": {
+          "n": "1 in 20",
+          "l": "People in the world have some degree of hearing loss."
+        },
+        "argentina": {
+          "n": "+2 million",
+          "l": "People in Argentina have hearing loss."
+        },
+        "oms": {
+          "n": "700M",
+          "l": "WHO projection towards 2050 with disabling hearing loss."
+        }
       }
     },
     "manifiesto": {
@@ -367,13 +388,34 @@
       "title": "Our values",
       "body": "The pillars that sustain every project, meeting and decision of the foundation.",
       "items": {
-        "apoyo": { "name": "Mutual support", "desc": "We support each other." },
-        "empatia": { "name": "Empathy", "desc": "Listen before speaking." },
-        "simpleza": { "name": "Simplicity", "desc": "Clear information, no jargon." },
-        "transparencia": { "name": "Transparency", "desc": "Accountability and open doors." },
-        "respeto": { "name": "Respect", "desc": "Every story matters." },
-        "pureza": { "name": "Purity", "desc": "Saying things as they are." },
-        "innovacion": { "name": "Innovation", "desc": "Daring to try the new." }
+        "apoyo": {
+          "name": "Mutual support",
+          "desc": "We support each other."
+        },
+        "empatia": {
+          "name": "Empathy",
+          "desc": "Listen before speaking."
+        },
+        "simpleza": {
+          "name": "Simplicity",
+          "desc": "Clear information, no jargon."
+        },
+        "transparencia": {
+          "name": "Transparency",
+          "desc": "Accountability and open doors."
+        },
+        "respeto": {
+          "name": "Respect",
+          "desc": "Every story matters."
+        },
+        "pureza": {
+          "name": "Purity",
+          "desc": "Saying things as they are."
+        },
+        "innovacion": {
+          "name": "Innovation",
+          "desc": "Daring to try the new."
+        }
       }
     },
     "cta": {
@@ -541,12 +583,30 @@
       "subtitle": "One of the obstacles in disability is when it's hard for us to ask. Because asking… expands our field of action. We believe in alliances that combine purpose with serious work. If your organization wants to do something with us, write to us!",
       "tiposHeading": "Ways of working",
       "tipos": {
-        "charlas": { "title": "Talks", "desc": "For companies, universities and schools about hearing loss, inclusion and empathy." },
-        "workshops": { "title": "Workshops", "desc": "Experiential dynamics to rethink accessibility from day to day." },
-        "campanas": { "title": "Campaigns", "desc": "Awareness, fundraising or joint communication." },
-        "convenios": { "title": "Agreements", "desc": "With universities, professional associations, hospitals and friendly NGOs." },
-        "investigacion": { "title": "Research", "desc": "On hearing loss, quality of life and access to rights." },
-        "rse": { "title": "CSR with meaning", "desc": "Projects with measurable impact, not greenwashing." }
+        "charlas": {
+          "title": "Talks",
+          "desc": "For companies, universities and schools about hearing loss, inclusion and empathy."
+        },
+        "workshops": {
+          "title": "Workshops",
+          "desc": "Experiential dynamics to rethink accessibility from day to day."
+        },
+        "campanas": {
+          "title": "Campaigns",
+          "desc": "Awareness, fundraising or joint communication."
+        },
+        "convenios": {
+          "title": "Agreements",
+          "desc": "With universities, professional associations, hospitals and friendly NGOs."
+        },
+        "investigacion": {
+          "title": "Research",
+          "desc": "On hearing loss, quality of life and access to rights."
+        },
+        "rse": {
+          "title": "CSR with meaning",
+          "desc": "Projects with measurable impact, not greenwashing."
+        }
       },
       "convenio": {
         "eyebrow": "Support Agreement · 12 months",
@@ -581,11 +641,26 @@
       "porqueHeading": "Why with CASACUSIA",
       "porqueSub": "What we bring to the alliance",
       "porqueItems": [
-        { "title": "Experiential legitimacy", "desc": "Lucas and the team live what we communicate." },
-        { "title": "Active community", "desc": "Real and engaged audience on IG, TikTok, YouTube and podcast." },
-        { "title": "Territorial network", "desc": "Presence in CABA, Misiones, Mendoza, Bariloche, Córdoba, La Plata, Madrid, Málaga and Mexico City. 9 cities reached." },
-        { "title": "Interdisciplinary team", "desc": "Professionals with rigor + sensitivity." },
-        { "title": "Beloved brand", "desc": "Warm, human narrative, without technical jargon." }
+        {
+          "title": "Experiential legitimacy",
+          "desc": "Lucas and the team live what we communicate."
+        },
+        {
+          "title": "Active community",
+          "desc": "Real and engaged audience on IG, TikTok, YouTube and podcast."
+        },
+        {
+          "title": "Territorial network",
+          "desc": "Presence in CABA, Misiones, Mendoza, Bariloche, Córdoba, La Plata, Madrid, Málaga and Mexico City. 9 cities reached."
+        },
+        {
+          "title": "Interdisciplinary team",
+          "desc": "Professionals with rigor + sensitivity."
+        },
+        {
+          "title": "Beloved brand",
+          "desc": "Warm, human narrative, without technical jargon."
+        }
       ],
       "ctaHeading": "What do you have in mind?",
       "ctaSub": "Write to us telling us about your organization and what kind of alliance you imagine. We reply in a few business days.",
@@ -600,14 +675,38 @@
       "necesidadesEyebrow": "Where there is a gap",
       "necesidadesHeading": "What we need today",
       "necesidades": {
-        "tecnologia": { "title": "Technology", "desc": "Next.js/frontend development, UX/UI, devops." },
-        "legal": { "title": "Legal", "desc": "Agreements, data privacy, fundraising." },
-        "contable": { "title": "Accounting", "desc": "Balances, grants, ARCA." },
-        "audiovisual": { "title": "Audiovisual", "desc": "Podcast editing, video, transcriptions." },
-        "diseno": { "title": "Graphic design", "desc": "Social media pieces, materials for meetups." },
-        "editorial": { "title": "Editorial", "desc": "Proofreading, SEO writing, ES↔EN translations." },
-        "espacios": { "title": "Physical spaces", "desc": "Meeting rooms in different cities." },
-        "catering": { "title": "Catering / logistics", "desc": "For in-person meetups." }
+        "tecnologia": {
+          "title": "Technology",
+          "desc": "Next.js/frontend development, UX/UI, devops."
+        },
+        "legal": {
+          "title": "Legal",
+          "desc": "Agreements, data privacy, fundraising."
+        },
+        "contable": {
+          "title": "Accounting",
+          "desc": "Balances, grants, ARCA."
+        },
+        "audiovisual": {
+          "title": "Audiovisual",
+          "desc": "Podcast editing, video, transcriptions."
+        },
+        "diseno": {
+          "title": "Graphic design",
+          "desc": "Social media pieces, materials for meetups."
+        },
+        "editorial": {
+          "title": "Editorial",
+          "desc": "Proofreading, SEO writing, ES↔EN translations."
+        },
+        "espacios": {
+          "title": "Physical spaces",
+          "desc": "Meeting rooms in different cities."
+        },
+        "catering": {
+          "title": "Catering / logistics",
+          "desc": "For in-person meetups."
+        }
       },
       "comoFunciona": "How it works",
       "pasos": [

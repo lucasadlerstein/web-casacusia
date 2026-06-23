@@ -1,0 +1,9 @@
+{
+  "_doc": "Overrides de descripciones de episodios del podcast. Reemplazan la descripción que viene de YouTube cuando esta es de baja calidad o tiene formato roto. Clave = número de episodio.",
+  "33": {
+    "descripcion": "Luqui nació sordo y fue implantado bilateralmente con implantes cocleares. Salva perdió la audición después de haber nacido, usa un implante coclear y un audífono.\n\nUn episodio muy especial: divertido, auténtico y distinto al resto. Dos chicos hablando de su vida cotidiana con implantes cocleares, sin filtro.\n\nTemas que tocan: los sonidos que más les gustan, la música, los stickers en los audis, la rehabilitación, el deporte y el agua, los idiomas, la rutina para irse a dormir, superpoderes, lo mejor y lo peor de los audífonos, y un consejo para otros nenes que no quieren usar sus equipos.\n\nGracias a Pepe en las Nubes por coparte."
+  },
+  "34": {
+    "descripcion": "Un episodio distinto: Lucas con el micrófono en el estudio, pensando en voz alta. Un popurrí de temas que incluye reflexiones sobre su primer desfile, momentos del día a día con hipoacusia, y pensamientos sueltos que fueron saliendo."
+  }
+}
