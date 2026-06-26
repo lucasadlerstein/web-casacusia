@@ -65,7 +65,8 @@
     "abrirMenu": "Abrir menú",
     "cerrarMenu": "Cerrar menú",
     "saltarAlContenido": "Saltar al contenido principal",
-    "prensa": "Prensa"
+    "prensa": "Prensa",
+    "blog": "Historias"
   },
   "home": {
     "title": "CASACUSIA: Transitando juntos la hipoacusia",
@@ -865,5 +866,35 @@
     "navigation": "Navegación principal",
     "social": "Redes sociales",
     "languages": "Seleccionar idioma"
+  },
+  "blog": {
+    "metaTitle": "Blog · CASACUSIA",
+    "metaDescription": "Historias en primera persona, información y novedades sobre hipoacusia. Relatos de personas y familias que transitan la pérdida auditiva.",
+    "heroTitle": "Historias que inspiran",
+    "heroSubtitle": "Relatos en primera persona, información y novedades desde la comunidad de personas con hipoacusia.",
+    "buscar": "Buscar en el blog...",
+    "todas": "Todas",
+    "leerMas": "Leer más",
+    "sinResultados": "No encontramos notas con esa búsqueda",
+    "sinResultadosDesc": "Probá con otras palabras o quitá los filtros.",
+    "por": "Por",
+    "volverAlBlog": "Volver al blog",
+    "comentarios": "Comentarios",
+    "sinComentarios": "Todavía no hay comentarios en esta nota.",
+    "comentarEnInstagram": "Dejá tu comentario en Instagram",
+    "comentariosProximamente": "Los comentarios se van a habilitar cuando esta nota se publique en Instagram.",
+    "relacionados": "Otras notas que te pueden interesar",
+    "etiqueta.historias": "Historias",
+    "etiqueta.familias": "Familias",
+    "etiqueta.tecnologia": "Tecnología",
+    "etiqueta.comunidad": "Comunidad",
+    "etiqueta.informacion": "Información",
+    "etiqueta.podcast": "Podcast",
+    "newsletter.titulo": "Recibí historias en tu email",
+    "newsletter.subtitulo": "Novedades, historias y recursos sobre hipoacusia. Sin spam, solo contenido que vale la pena.",
+    "newsletter.nombre": "Tu nombre",
+    "newsletter.email": "Tu email",
+    "newsletter.boton": "Suscribirme",
+    "newsletter.exito": "Te suscribiste. Vas a recibir nuestras historias en tu email."
   }
 }

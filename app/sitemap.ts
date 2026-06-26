@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { getAliados, getProgramas } from "@/lib/content";
+import { getAliados, getProgramas, getBlogPosts } from "@/lib/content";
 import { locales, defaultLocale } from "@/lib/i18n/config";
 import { getPodcastFeed } from "@/lib/podcast";
 
@@ -23,6 +23,7 @@ const staticRoutes: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/contacto", priority: 0.7, changefreq: "yearly" },
   { path: "/calendario", priority: 0.9, changefreq: "weekly" },
   { path: "/impacto", priority: 0.7, changefreq: "monthly" },
+  { path: "/recursos/blog", priority: 0.9, changefreq: "weekly" },
   { path: "/prensa", priority: 0.6, changefreq: "monthly" },
   { path: "/accesibilidad", priority: 0.4, changefreq: "yearly" },
   { path: "/sumate/proyectos-juntos", priority: 0.7, changefreq: "monthly" }
@@ -69,6 +70,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.5
+    });
+  }
+
+  // Blog posts
+  for (const post of getBlogPosts()) {
+    entries.push({
+      url: urlFor(`/recursos/blog/${post.slug}`, defaultLocale),
+      lastModified: new Date(post.fecha),
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: Object.fromEntries(locales.map((l) => [l, urlFor(`/recursos/blog/${post.slug}`, l)]))
+      }
     });
   }
 

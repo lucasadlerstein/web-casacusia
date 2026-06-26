@@ -14,6 +14,7 @@ const primaryNav: readonly { href: string; key: string; dropdown?: boolean }[] =
   { href: "/nosotros",    key: "nosotros"   },
   { href: "/programas",   key: "programas"  },
   { href: "/podcast",     key: "podcast", dropdown: true },
+  { href: "/recursos/blog", key: "blog"    },
   { href: "/calendario",  key: "calendario" },
   { href: "/contacto",    key: "contacto"   }
 ];

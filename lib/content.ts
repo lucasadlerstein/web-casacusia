@@ -11,6 +11,7 @@ import faqsData from "@/content/faq.json";
 import reconocimientosData from "@/content/reconocimientos.json";
 import gruposWhatsappData from "@/content/grupos-whatsapp.json";
 import rutasData from "@/content/rutas-de-escucha.json";
+import blogData from "@/content/blog.json";
 
 export const comisiones = [
   "comunicacion",
@@ -294,4 +295,73 @@ export function getRutasDeEscucha(): RutaDeEscucha[] {
 
 export function getRutaBySlug(slug: string): RutaDeEscucha | null {
   return getRutasDeEscucha().find((r) => r.slug === slug) ?? null;
+}
+
+// ── Blog ──
+
+export const blogEtiquetas = [
+  "historias",
+  "familias",
+  "tecnologia",
+  "comunidad",
+  "informacion",
+  "podcast"
+] as const;
+export type BlogEtiqueta = (typeof blogEtiquetas)[number];
+
+const BlogPostSchema = z.object({
+  slug: z.string(),
+  titulo: z.string(),
+  resumen: z.string(),
+  contenido: z.string(),
+  autor: z.string(),
+  fecha: z.string(),
+  etiquetas: z.array(z.enum(blogEtiquetas)),
+  instagramUrl: z.string().url().optional(),
+  instagramComments: z.array(z.object({
+    usuario: z.string(),
+    texto: z.string(),
+    fecha: z.string().optional()
+  })).optional(),
+  relacionados: z.array(z.string()).optional(),
+  destacado: z.boolean().optional().default(false),
+  publicado: z.boolean().optional().default(true)
+});
+export type BlogPost = z.infer<typeof BlogPostSchema>;
+
+export function getBlogPosts(opts: {
+  etiqueta?: BlogEtiqueta;
+  destacados?: boolean;
+  limit?: number;
+} = {}): BlogPost[] {
+  let all = z.array(BlogPostSchema).parse(blogData).filter((p) => p.publicado);
+  if (opts.etiqueta) all = all.filter((p) => p.etiquetas.includes(opts.etiqueta!));
+  if (opts.destacados) all = all.filter((p) => p.destacado);
+  // Más recientes primero
+  all.sort((a, b) => b.fecha.localeCompare(a.fecha));
+  return opts.limit ? all.slice(0, opts.limit) : all;
+}
+
+export function getBlogPostBySlug(slug: string): BlogPost | null {
+  return z.array(BlogPostSchema).parse(blogData).find((p) => p.slug === slug) ?? null;
+}
+
+export function getBlogRelacionados(post: BlogPost, limit = 3): BlogPost[] {
+  const all = getBlogPosts().filter((p) => p.slug !== post.slug);
+  // Primero los que el autor marcó manualmente
+  if (post.relacionados?.length) {
+    const manual = post.relacionados
+      .map((slug) => all.find((p) => p.slug === slug))
+      .filter((p): p is BlogPost => Boolean(p));
+    if (manual.length >= limit) return manual.slice(0, limit);
+    const rest = all.filter((p) => !manual.includes(p));
+    return [...manual, ...rest.filter((p) => p.etiquetas.some((e) => post.etiquetas.includes(e)))].slice(0, limit);
+  }
+  // Fallback: mismas etiquetas
+  return all
+    .map((p) => ({ post: p, score: p.etiquetas.filter((e) => post.etiquetas.includes(e)).length }))
+    .filter((r) => r.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map((r) => r.post)
+    .slice(0, limit);
 }
