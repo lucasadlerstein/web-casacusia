@@ -888,17 +888,21 @@
     "comentarEnInstagram": "Dejá tu comentario en Instagram",
     "comentariosProximamente": "Los comentarios se van a habilitar cuando esta nota se publique en Instagram.",
     "relacionados": "Otras notas que te pueden interesar",
-    "etiqueta.historias": "Historias",
-    "etiqueta.familias": "Familias",
-    "etiqueta.tecnologia": "Tecnología",
-    "etiqueta.comunidad": "Comunidad",
-    "etiqueta.informacion": "Información",
-    "etiqueta.podcast": "Podcast",
-    "newsletter.titulo": "Recibí historias en tu email",
-    "newsletter.subtitulo": "Novedades, historias y recursos sobre hipoacusia. Sin spam, solo contenido que vale la pena.",
-    "newsletter.nombre": "Tu nombre",
-    "newsletter.email": "Tu email",
-    "newsletter.boton": "Suscribirme",
-    "newsletter.exito": "Te suscribiste. Vas a recibir nuestras historias en tu email."
+    "newsletter": {
+      "titulo": "Recibí historias en tu email",
+      "subtitulo": "Novedades, historias y recursos sobre hipoacusia. Sin spam, solo contenido que vale la pena.",
+      "nombre": "Tu nombre",
+      "email": "Tu email",
+      "boton": "Suscribirme",
+      "exito": "Te suscribiste. Vas a recibir nuestras historias en tu email."
+    },
+    "etiqueta": {
+      "historias": "Historias",
+      "familias": "Familias",
+      "tecnologia": "Tecnología",
+      "comunidad": "Comunidad",
+      "informacion": "Información",
+      "podcast": "Podcast"
+    }
   }
 }

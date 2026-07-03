@@ -890,17 +890,21 @@
     "comentarEnInstagram": "Leave a comment on Instagram",
     "comentariosProximamente": "Comments will be enabled when this post is published on Instagram.",
     "relacionados": "Other posts you might like",
-    "etiqueta.historias": "Stories",
-    "etiqueta.familias": "Families",
-    "etiqueta.tecnologia": "Technology",
-    "etiqueta.comunidad": "Community",
-    "etiqueta.informacion": "Information",
-    "etiqueta.podcast": "Podcast",
-    "newsletter.titulo": "Get stories in your inbox",
-    "newsletter.subtitulo": "Updates, stories, and resources about hearing loss. No spam, only content worth reading.",
-    "newsletter.nombre": "Your name",
-    "newsletter.email": "Your email",
-    "newsletter.boton": "Subscribe",
-    "newsletter.exito": "You're subscribed! You'll receive our stories in your inbox."
+    "newsletter": {
+      "titulo": "Get stories in your inbox",
+      "subtitulo": "Updates, stories, and resources about hearing loss. No spam, only content worth reading.",
+      "nombre": "Your name",
+      "email": "Your email",
+      "boton": "Subscribe",
+      "exito": "You're subscribed! You'll receive our stories in your inbox."
+    },
+    "etiqueta": {
+      "historias": "Stories",
+      "familias": "Families",
+      "tecnologia": "Technology",
+      "comunidad": "Community",
+      "informacion": "Information",
+      "podcast": "Podcast"
+    }
   }
 }
