@@ -14,7 +14,8 @@ const primaryNav: readonly { href: string; key: string; dropdown?: boolean }[] =
   { href: "/nosotros",    key: "nosotros"   },
   { href: "/programas",   key: "programas"  },
   { href: "/podcast",     key: "podcast", dropdown: true },
-  { href: "/recursos/blog", key: "blog"    },
+  // "/recursos/blog" fuera del nav a pedido de Lucas: el blog queda para SEO
+  // y se llega desde los episodios del podcast y links internos.
   { href: "/calendario",  key: "calendario" },
   { href: "/contacto",    key: "contacto"   }
 ];

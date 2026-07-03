@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/nosotros", key: "nosotros" },
   { href: "/programas", key: "programas" },
   { href: "/podcast", key: "podcast" },
+  { href: "/recursos/blog", key: "blog" },
   { href: "/aliados", key: "aliados" },
   { href: "/sumate", key: "sumate" },
   { href: "/recursos/faq", key: "recursos" },
