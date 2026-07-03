@@ -324,6 +324,12 @@ const BlogPostSchema = z.object({
     fecha: z.string().optional()
   })).optional(),
   relacionados: z.array(z.string()).optional(),
+  // Episodio madre del podcast del que deriva esta nota (para CTAs e interlinking)
+  episodio: z.object({
+    slug: z.string(),
+    titulo: z.string(),
+    numero: z.number().optional()
+  }).optional(),
   destacado: z.boolean().optional().default(false),
   publicado: z.boolean().optional().default(true)
 });
@@ -364,4 +370,9 @@ export function getBlogRelacionados(post: BlogPost, limit = 3): BlogPost[] {
     .sort((a, b) => b.score - a.score)
     .map((r) => r.post)
     .slice(0, limit);
+}
+
+// Todas las notas publicadas que derivan de un mismo episodio del podcast
+export function getBlogPostsByEpisodio(episodioSlug: string): BlogPost[] {
+  return getBlogPosts().filter((p) => p.episodio?.slug === episodioSlug);
 }

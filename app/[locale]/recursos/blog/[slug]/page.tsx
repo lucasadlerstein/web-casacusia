@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { ArrowLeft, Calendar, User, Instagram, MessageCircle } from "lucide-react";
+import { ArrowLeft, Calendar, User, Instagram, MessageCircle, Headphones, Play } from "lucide-react";
 
 import { Card } from "@/components/ui/Card";
 import { Section } from "@/components/ui/Section";
 import { ContentSidebar } from "@/components/sections/ContentSidebar";
 import { NewsletterForm } from "@/components/sections/NewsletterForm";
+import { EpisodioCTA } from "@/components/sections/EpisodioCTA";
 import { Link } from "@/lib/i18n/navigation";
-import { getBlogPostBySlug, getBlogPosts, getBlogRelacionados, getAliados } from "@/lib/content";
+import { getBlogPostBySlug, getBlogPosts, getBlogRelacionados, getBlogPostsByEpisodio, getAliados } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import type { BlogPost } from "@/lib/content";
@@ -146,6 +147,25 @@ function renderMarkdown(text: string) {
   });
 }
 
+// Divide el contenido en dos mitades, cortando en un heading cercano al medio,
+// para intercalar el CTA al episodio sin partir una sección.
+function splitForCta(text: string): [string, string] {
+  const blocks = text.split("\n\n");
+  if (blocks.length < 6) return [text, ""];
+  let idx = Math.floor(blocks.length / 2);
+  for (let d = 0; d < 4; d++) {
+    if (blocks[idx + d]?.trim().startsWith("## ")) {
+      idx = idx + d;
+      break;
+    }
+    if (blocks[idx - d]?.trim().startsWith("## ")) {
+      idx = idx - d;
+      break;
+    }
+  }
+  return [blocks.slice(0, idx).join("\n\n"), blocks.slice(idx).join("\n\n")];
+}
+
 function inlineFormat(text: string): string {
   return text
     .replace(/\*\*(.+?)\*\*/g, '<strong class="font-bold text-ink">$1</strong>')
@@ -169,8 +189,14 @@ export default async function BlogPostPage({
   const post = getBlogPostBySlug(slug);
   if (!post) notFound();
 
-  const relacionados = getBlogRelacionados(post);
+  const notasDelEpisodio = post.episodio
+    ? getBlogPostsByEpisodio(post.episodio.slug).filter((p) => p.slug !== post.slug)
+    : [];
+  const relacionados = getBlogRelacionados(post).filter(
+    (r) => !notasDelEpisodio.some((n) => n.slug === r.slug)
+  );
   const jsonLd = buildBlogPostJsonLd(post, locale);
+  const [contenidoA, contenidoB] = post.episodio ? splitForCta(post.contenido) : [post.contenido, ""];
   const aliados = getAliados({ destacados: true }).map((a) => ({
     slug: a.slug,
     nombre: a.nombre,
@@ -212,18 +238,104 @@ export default async function BlogPostPage({
             </h1>
 
             <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-ink-muted">
-              <span className="inline-flex items-center gap-1.5">
-                <User size={14} aria-hidden /> {post.autor}
-              </span>
+              {post.episodio ? (
+                <span className="inline-flex items-center gap-1.5">
+                  <Headphones size={14} aria-hidden />
+                  Fuente:{" "}
+                  <Link
+                    href={`/podcast/${post.episodio.slug}`}
+                    className="font-semibold text-verde-dark underline underline-offset-2 hover:text-verde transition-colors"
+                  >
+                    {post.episodio.numero != null ? `Episodio ${post.episodio.numero} — ` : ""}
+                    {post.episodio.titulo}
+                  </Link>
+                </span>
+              ) : (
+                <span className="inline-flex items-center gap-1.5">
+                  <User size={14} aria-hidden /> {post.autor}
+                </span>
+              )}
               <span className="inline-flex items-center gap-1.5">
                 <Calendar size={14} aria-hidden /> {formatDate(post.fecha)}
               </span>
             </div>
 
-            {/* Contenido */}
+            {/* Contenido, con bloque de origen al episodio madre intercalado */}
             <div className="mt-10 text-base md:text-lg">
-              {renderMarkdown(post.contenido)}
+              {renderMarkdown(contenidoA)}
+              {post.episodio && (
+                <div className="my-10 rounded-2xl bg-verde-dark text-white p-6 md:p-7">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                      <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
+                        <Headphones size={13} aria-hidden />
+                        {post.episodio.numero != null
+                          ? `Episodio ${post.episodio.numero} · Sordo pero no mudo`
+                          : "Sordo pero no mudo"}
+                      </span>
+                      <p className="mt-2.5 font-display font-extrabold leading-snug text-base md:text-lg">
+                        Esta nota nace de: {post.episodio.titulo}
+                      </p>
+                    </div>
+                    <Link
+                      href={`/podcast/${post.episodio.slug}`}
+                      className="inline-flex shrink-0 items-center gap-2 rounded-full bg-amarillo px-5 py-2.5 text-sm font-bold text-ink transition-transform hover:scale-105"
+                    >
+                      <Play size={15} aria-hidden /> Ver el episodio
+                    </Link>
+                  </div>
+                  {notasDelEpisodio.length > 0 && (
+                    <div className="mt-4 border-t border-white/15 pt-4">
+                      <p className="text-[11px] font-bold uppercase tracking-wider text-white/70 mb-2">
+                        Otras notas de este episodio
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {notasDelEpisodio.map((n) => (
+                          <Link
+                            key={n.slug}
+                            href={`/recursos/blog/${n.slug}`}
+                            className="rounded-full bg-white/10 px-3.5 py-1.5 text-xs font-semibold hover:bg-white/25 transition-colors"
+                          >
+                            {n.titulo}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+              {contenidoB && renderMarkdown(contenidoB)}
             </div>
+
+            {/* CTA de cierre al episodio */}
+            {post.episodio && (
+              <EpisodioCTA
+                slug={post.episodio.slug}
+                titulo={post.episodio.titulo}
+                numero={post.episodio.numero}
+              />
+            )}
+
+            {/* Más notas del mismo episodio */}
+            {notasDelEpisodio.length > 0 && (
+              <div className="mt-12">
+                <h2 className="font-display text-2xl font-extrabold text-ink mb-6">
+                  Más notas de este episodio
+                </h2>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {notasDelEpisodio.map((rel) => (
+                    <Link key={rel.slug} href={`/recursos/blog/${rel.slug}`} className="group">
+                      <Card className="h-full hover:shadow-md transition-shadow">
+                        <h3 className="font-display text-base font-extrabold text-ink leading-snug group-hover:text-verde-dark transition-colors">
+                          {rel.titulo}
+                        </h3>
+                        <p className="mt-1.5 text-sm text-ink-soft line-clamp-2">{rel.resumen}</p>
+                      </Card>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Sección de comentarios Instagram */}
             <div className="mt-16 pt-10 border-t border-surface-line">
@@ -301,7 +413,9 @@ export default async function BlogPostPage({
                           {rel.titulo}
                         </h3>
                         <p className="mt-1.5 text-xs text-ink-muted">
-                          {rel.autor} · {formatDate(rel.fecha)}
+                          {rel.episodio?.numero != null
+                            ? `Del episodio ${rel.episodio.numero} · ${formatDate(rel.fecha)}`
+                            : `${rel.autor} · ${formatDate(rel.fecha)}`}
                         </p>
                       </Card>
                     </Link>

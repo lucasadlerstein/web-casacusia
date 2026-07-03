@@ -145,7 +145,9 @@ export function BlogListClient({ posts, labels }: Props) {
 
                 <div className="mt-4 flex items-center justify-between text-xs text-ink-muted">
                   <span>
-                    {labels.por} {post.autor} · {formatDate(post.fecha)}
+                    {post.episodio?.numero != null
+                      ? `Del episodio ${post.episodio.numero} · ${formatDate(post.fecha)}`
+                      : `${labels.por} ${post.autor} · ${formatDate(post.fecha)}`}
                   </span>
                   <span className="font-bold text-verde-dark group-hover:underline">
                     {labels.leerMas} &rarr;
