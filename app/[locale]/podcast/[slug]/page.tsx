@@ -35,7 +35,8 @@ export async function generateMetadata({
     title: `${ep.titulo} · Sordo pero no mudo`,
     description: ep.descripcion.slice(0, 160),
     path: `/podcast/${ep.slug}`,
-    locale: locale as Locale
+    locale: locale as Locale,
+    ...(ep.imagen ? { image: ep.imagen } : {})
   });
 }
 
