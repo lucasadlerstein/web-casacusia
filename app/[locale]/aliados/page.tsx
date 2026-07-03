@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/navigation";
 import { ArrowRight, HandHeart } from "lucide-react";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 
@@ -64,7 +64,7 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
               ))}
               <li className="flex">
                 <Link
-                  href={`/${locale}/contacto?t=empresa`}
+                  href="/contacto?t=empresa"
                   className="group flex flex-col items-center justify-center text-center gap-2 w-full rounded-2xl border-2 border-dashed border-verde-dark/40 bg-verde-soft/40 px-5 py-7 hover:border-verde-dark hover:bg-verde-soft transition-colors"
                 >
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-verde-dark text-white">
@@ -100,7 +100,7 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
 
           <p className="mt-12 text-center text-sm text-ink-muted max-w-xl mx-auto">
             ¿Tu empresa quiere ser parte?{" "}
-            <Link href={`/${locale}/sumate/proyectos-juntos`} className="font-bold text-verde-dark underline underline-offset-4 hover:text-[#0a6b42]">
+            <Link href="/sumate/proyectos-juntos" className="font-bold text-verde-dark underline underline-offset-4 hover:text-[#0a6b42]">
               Conocé cómo →
             </Link>
           </p>
@@ -121,7 +121,7 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
               <li key={src} className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-surface-line">
                 <Image
                   src={src}
-                  alt="Casacusia"
+                  alt="Encuentro presencial de la comunidad Casacusia"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 768px) 50vw, 33vw"

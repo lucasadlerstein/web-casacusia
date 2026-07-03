@@ -160,7 +160,7 @@ export default async function DonarPage({ params }: { params: Promise<{ locale: 
             >
               <Image
                 src={foto}
-                alt="Impacto Casacusia"
+                alt="Personas de la comunidad Casacusia compartiendo un encuentro presencial"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 50vw, 33vw"
