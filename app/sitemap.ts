@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { getAliados, getProgramas, getBlogPosts } from "@/lib/content";
+import { getAliados, getProgramas, getBlogPosts, getRutasDeEscucha } from "@/lib/content";
 import { locales, defaultLocale } from "@/lib/i18n/config";
 import { getPodcastFeed } from "@/lib/podcast";
 
@@ -11,9 +11,9 @@ const staticRoutes: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/nosotros", priority: 0.9, changefreq: "monthly" },
   { path: "/nosotros/equipo", priority: 0.8, changefreq: "monthly" },
   { path: "/nosotros/historia", priority: 0.5, changefreq: "yearly" },
-  { path: "/nosotros/legal", priority: 0.4, changefreq: "yearly" },
   { path: "/programas", priority: 0.9, changefreq: "monthly" },
   { path: "/podcast", priority: 0.9, changefreq: "weekly" },
+  { path: "/podcast/rutas", priority: 0.8, changefreq: "monthly" },
   { path: "/aliados", priority: 0.8, changefreq: "monthly" },
   { path: "/sumate", priority: 0.9, changefreq: "monthly" },
   { path: "/sumate/donar", priority: 0.9, changefreq: "monthly" },
@@ -70,6 +70,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.5
+    });
+  }
+
+  // Rutas de escucha
+  for (const r of getRutasDeEscucha()) {
+    entries.push({
+      url: urlFor(`/podcast/rutas/${r.slug}`, defaultLocale),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: Object.fromEntries(locales.map((l) => [l, urlFor(`/podcast/rutas/${r.slug}`, l)]))
+      }
     });
   }
 
