@@ -64,14 +64,14 @@ function buildBlogPostJsonLd(post: BlogPost, locale: string) {
       "@type": "Organization",
       name: "CASACUSIA",
       url: SITE_URL,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` }
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/logos/logo-vertical.png` }
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     inLanguage: locale === "en" ? "en" : "es",
     isPartOf: {
       "@type": "Blog",
       name: "Blog CASACUSIA",
-      url: `${SITE_URL}/blog`
+      url: `${SITE_URL}/recursos/blog`
     }
   };
 }
