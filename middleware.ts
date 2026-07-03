@@ -33,8 +33,18 @@ const HISPANIC_COUNTRIES: ReadonlySet<string> = new Set([
 
 const intlMiddleware = createMiddleware(routing);
 
+/**
+ * Contenido demo del WordPress anterior que Google todavía rastrea.
+ * Respondemos 410 Gone para que lo saque del índice más rápido que un 404.
+ */
+const LEGACY_GONE = /^\/(campaigns|campaign_category|cmsms_profiles)(\/|$)/;
+
 export default function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname;
+
+  if (LEGACY_GONE.test(path)) {
+    return new NextResponse("Gone", { status: 410 });
+  }
   const hasLocalePrefix = /^\/(es|en)(\/|$)/.test(path);
   const userChoseLocale = req.cookies.has("NEXT_LOCALE");
 
