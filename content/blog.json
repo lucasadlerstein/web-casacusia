@@ -528,5 +528,796 @@
     },
     "destacado": false,
     "publicado": true
+  },
+  {
+    "slug": "rehabilitacion-auditiva-implante-que-es-y-por-que-importa",
+    "titulo": "Rehabilitación auditiva: por qué el implante o el audífono son solo el comienzo",
+    "resumen": "Qué es la rehabilitación auditiva, para qué sirve y por qué potencia cualquier dispositivo. Charla con la fonoaudióloga Hilda Furmanski.",
+    "contenido": "Es muy común escuchar que un implante auditivo o un audífono \"te hacen escuchar\" como por arte de magia. Y sí: la tecnología es maravillosa y a muchas personas les cambia la vida. Pero el dispositivo es solo una parte del camino. Después (y antes) viene un proceso que casi no se cuenta: la rehabilitación auditiva.\n\nEn el cuarto episodio del podcast *Sordo pero no mudo*, Lucas conversó con **Hilda Furmanski**, fonoaudióloga especialista en escucha y lenguaje hablado, terapeuta auditivo-verbal certificada, docente universitaria, integrante del equipo de implantes del Hospital Italiano y presidenta de la Asociación Argentina de Audiología. Un detalle no menor: Hilda fue, además, la profesional que acompañó la propia rehabilitación de Lucas después de su implante.\n\n## ¿Qué es la rehabilitación auditiva?\n\nHilda arranca desarmando el mito de la solución instantánea:\n\n> \"No hay magia, no hay milagros, no hay soluciones auditivas como a veces se escucha en las publicidades. Hay ayudas auditivas: nada restablece la función por completo.\" — Hilda Furmanski\n\nLa rehabilitación auditiva consiste en darle a la persona **estrategias y entrenamiento en tareas específicas** para que su audición vuelva a funcionar de la manera más parecida posible a como lo hacía antes de la pérdida. Dicho en simple: es lo que permite **optimizar el uso** de un implante coclear, un dispositivo de conducción ósea o un audífono.\n\nY hay una aclaración de nomenclatura que Hilda siempre hace: cuando un adulto perdió la audición, se **rehabilita** una función que existía. Cuando un niño nace con hipoacusia y nunca escuchó, se **habilita** por primera vez. Por eso ella suele escribir \"(re)habilitación\".\n\n## No hay un programa universal\n\nLa población con pérdida auditiva es enormemente heterogénea: hay quien perdió la audición de golpe, quien la fue perdiendo durante décadas, quien quiere volver a disfrutar la música y quien solo quiere escuchar mejor la televisión. Por eso la primera etapa del trabajo es entender la **demanda de comunicación** de cada persona: con quién vive, si trabaja, si sale, qué extraña escuchar.\n\n> \"El problema de perder la audición no tiene que ver con escuchar menos, tiene que ver con la vida social básicamente: con poder comunicarse, con estar con tus amigos, con tu familia, con las personas con las que trabajás.\" — Hilda Furmanski\n\nEse es el verdadero objetivo de la rehabilitación: recuperar la vida social, laboral y afectiva, no solamente \"escuchar un poco más\".\n\n## ¿Qué cambia entre hacer rehabilitación y no hacerla?\n\nSegún Hilda, a cualquier persona que use un dispositivo de ayuda le vendría bien alguna forma de rehabilitación, aunque sea breve: asesoramiento, counseling, algunas sesiones. Sin ese acompañamiento, un porcentaje muy alto de pacientes termina abandonando el dispositivo en un cajón.\n\nQuienes no hacen rehabilitación también pueden ir mejorando con el uso, pero el proceso **se potencia enormemente y lleva mucho menos tiempo** con guía profesional. En las sesiones se combinan dos tipos de trabajo: uno **analítico** (distinguir diferencias sutiles entre sonidos, como \"playa\" y \"plaza\") y uno **global** (comprender oraciones, escuchar en medio del ruido, situaciones de la vida real).\n\nAlgo importante: no cualquier fonoaudiólogo puede llevar adelante este trabajo. Se necesita una especialización en dispositivos de ayuda, percepción auditiva y acústica del habla. La buena noticia es que hoy la **teleterapia** funciona igual de bien que la terapia presencial, así que vivir lejos de un especialista ya no es una barrera.\n\n## Empieza antes de la cirugía\n\nUno de los conceptos más potentes del episodio: la rehabilitación no arranca cuando se enciende el dispositivo.\n\n> \"Se cree que la rehabilitación empieza una vez que el dispositivo está encendido. Hay mucho por hacer antes.\" — Hilda Furmanski\n\nEl asesoramiento previo prepara a la persona para lo que viene: que el primer mes va a escuchar raro, que las voces pueden sonar robóticas, que se va a preguntar por qué se operó. Lucas lo vivió en carne propia:\n\n> \"Hay que bajar las expectativas a la activación del dispositivo, porque me quería tirar por la ventana cuando me activaron el implante.\" — Lucas\n\nSaberlo de antemano cambia todo. Y hay algo más que ningún profesional puede reemplazar: el contacto con otras personas que ya pasaron por lo mismo. Esa experiencia compartida, dice Hilda, no se puede suplir de ningún modo. Y es, justamente, una de las razones por las que existe Casacusia.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-25",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "que-es-la-terapia-auditivo-verbal-en-ninos",
+      "rehabilitacion-auditiva-en-adultos-cuanto-dura",
+      "tiempo-de-sordera-por-que-cuanto-antes-mejor"
+    ],
+    "episodio": {
+      "slug": "4-rehabilitacion-auditiva-de-implantes-con-hilda-furmanski-fonoaudiologa-terapia-a",
+      "titulo": "Rehabilitación Auditiva de Implantes — Hilda Furmanski, fonoaudióloga",
+      "numero": 4
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "que-es-la-terapia-auditivo-verbal-en-ninos",
+    "titulo": "¿Qué es la terapia auditivo-verbal y por qué trabaja con los padres?",
+    "resumen": "La terapia auditivo-verbal enseña a las familias a estimular el lenguaje de niños con hipoacusia. Cómo funciona, según la fonoaudióloga Hilda Furmanski.",
+    "contenido": "Cuando un niño nace con hipoacusia y recibe audífonos o un implante coclear, no se trata de \"recuperar\" una audición perdida, sino de algo más grande: **habilitar el canal auditivo para que adquiera el lenguaje**. En el episodio 4 del podcast *Sordo pero no mudo*, la fonoaudióloga **Hilda Furmanski**, terapeuta auditivo-verbal certificada, explicó cómo funciona este enfoque.\n\n## El foco no está en el oído, está en el lenguaje\n\nEn la terapia auditivo-verbal, el trabajo con niños pequeños no apunta a las habilidades auditivas de forma aislada, sino a la adquisición del lenguaje. Y tiene una particularidad: **la sesión es con los padres**, o con quienes estén a cargo del cuidado del niño.\n\n> \"La terapia no es lo que el niño hace en la hora que nos encontramos, es lo que ponen en funcionamiento las personas que están a cargo de su cuidado, todas las horas que el niño está despierto.\" — Hilda Furmanski\n\nPor eso, en general alcanza con **una sesión por semana**, cada quince días, o incluso una vez al mes en bebés muy pequeños. Lo que importa no es la cantidad de sesiones sino lo que la familia hace el resto del tiempo: cómo le habla al niño, cómo le acerca la información, qué estrategias usa en el día a día.\n\n## Recuperar la intuición\n\nHilda describe algo que les pasa a muchas familias: cuando un niño tiene una deficiencia auditiva, los adultos dejan de hacer lo que harían naturalmente. \"¿Para qué le voy a hablar si no me va a escuchar? ¿Para qué le voy a explicar si no me va a entender?\" El trabajo terapéutico consiste, en parte, en **desandar eso** y devolverles herramientas para estimular al niño como lo harían con cualquier otro.\n\nNo hace falta tomar cursos ni hacer nada extraordinario: es guiar y orientar lo que una familia ya sabe hacer.\n\n## ¿Cómo sé si el tratamiento está funcionando?\n\nLa ciencia ya estableció parámetros: un niño implantado tempranamente debería progresar al ritmo de uno con audición típica. Si se implantó al año, a los tres años su lenguaje debería ser el de un niño de dos años de \"edad auditiva\". Hay evaluaciones sistemáticas cada seis meses para verificarlo.\n\nAdemás, Hilda deja una regla de oro para las familias:\n\n> \"Si la familia no conoce los objetivos del tratamiento que el niño está haciendo, el tratamiento que está haciendo no es el adecuado.\" — Hilda Furmanski\n\nLos padres tienen derecho a saber qué se está haciendo, para qué y hacia dónde se quiere llegar. En un programa de terapia auditivo-verbal eso está garantizado por diseño: la familia participa de cada sesión.\n\n## No hay un camino único\n\nHilda también aclara que no todos los niños con hipoacusia necesitan lo mismo. Entre el 40 y el 50 por ciento puede tener otros desafíos además de la sordera, y hay niños que necesitan lengua de señas u otros abordajes. Los programas son a medida de cada niño y de cada familia. Y siempre, subraya, **la que decide es la familia**: la responsabilidad de los profesionales es darle información precisa, concreta y verdadera.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-27",
+    "etiquetas": [
+      "familias",
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "rehabilitacion-auditiva-implante-que-es-y-por-que-importa",
+      "rehabilitacion-auditiva-en-adultos-cuanto-dura",
+      "tiempo-de-sordera-por-que-cuanto-antes-mejor"
+    ],
+    "episodio": {
+      "slug": "4-rehabilitacion-auditiva-de-implantes-con-hilda-furmanski-fonoaudiologa-terapia-a",
+      "titulo": "Rehabilitación Auditiva de Implantes — Hilda Furmanski, fonoaudióloga",
+      "numero": 4
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "rehabilitacion-auditiva-en-adultos-cuanto-dura",
+    "titulo": "Rehabilitación auditiva en adultos: ¿cuánto dura y qué se hace?",
+    "resumen": "Cuánto dura la rehabilitación auditiva en adultos con implante o audífono, qué ejercicios sirven en casa y qué rol cumple la teleterapia.",
+    "contenido": "Una de las dudas más frecuentes de los adultos que reciben un implante coclear o un audífono es qué viene después: ¿cuánto dura la rehabilitación? ¿Hay que ir a terapia durante años? ¿Sirve practicar en casa?\n\nEn el episodio 4 del podcast *Sordo pero no mudo*, la fonoaudióloga **Hilda Furmanski** —quien acompañó la propia rehabilitación de Lucas— las respondió con una idea de fondo: no hay recetas universales, pero sí parámetros claros.\n\n## ¿Cuánto dura?\n\nDepende, sobre todo, del **tiempo de sordera**: cuánto tiempo pasó la persona sin escuchar antes de habilitar el dispositivo.\n\n- Si sos un adulto joven y el tiempo sin escuchar fue breve, el tratamiento también es breve: **de tres a seis meses**, aproximadamente.\n- Si la pérdida fue gradual y pasaron muchos años, puede llevar **uno o dos años** de trabajo, con más práctica en casa.\n- Lo que no pasa, aclara Hilda, es que un adulto esté diez años en tratamiento.\n\nEn el caso de Lucas fueron entre seis y ocho meses: al principio una sesión cada quince días, después una por mes. Y el alta tampoco es rígida: muchas veces la marca el propio paciente cuando siente que recuperó la vida que quería recuperar.\n\n> \"Se trata de restablecer la función auditiva para que el paciente recupere la vida que tenía antes de perder la audición, lo más que pueda.\" — Hilda Furmanski\n\n## ¿Sirve practicar solo en casa?\n\nSí, pero con una condición: **tener una guía**. Lucas le preguntó por el consejo que circula de escuchar audiolibros para estimular el procesamiento auditivo, y Hilda lo validó con matices:\n\n> \"Mi sugerencia sería que escuches el audiolibro de un libro que hayas leído en algún momento, porque escuchar un libro nuevo que no sabés ni de qué se trata es muchísimo más difícil.\" — Hilda Furmanski\n\nLo mismo con la música: conviene empezar por canciones \"ultra mega archiconocidas\", de las que te sabés la letra de memoria. El material demasiado difícil frustra, y el riesgo del ensayo y error sin acompañamiento es que salga mal y la persona termine usando menos el dispositivo, o dejándolo. También suma conectar al dispositivo lo que ya escuchás habitualmente: videos, podcasts, llamadas. Todo aporta, pero no da igual empezar por cualquier lado.\n\n## La teleterapia funciona\n\nOtra barrera que se cayó: ya no hace falta vivir cerca de un especialista. Hilda atiende pacientes de Ushuaia a La Quiaca por videollamada.\n\n> \"La evidencia científica muestra que es tan efectiva la teleterapia como la terapia presencial.\" — Hilda Furmanski\n\nPara los adultos que trabajan o estudian es además una solución práctica: en lugar de suspender medio día para ir al consultorio, se puede hacer una sesión en un hueco de la agenda, con un dispositivo móvil y conexión a internet. Y para las hipoacusias unilaterales es incluso ideal, porque la terapia remota facilita trabajar cada oído por separado.\n\nLa conclusión del episodio es simple: la rehabilitación en adultos no es eterna ni imposible de encajar en la vida cotidiana. Es una inversión acotada de tiempo que multiplica lo que el dispositivo puede darte.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-30",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "rehabilitacion-auditiva-implante-que-es-y-por-que-importa",
+      "que-es-la-terapia-auditivo-verbal-en-ninos",
+      "tiempo-de-sordera-por-que-cuanto-antes-mejor"
+    ],
+    "episodio": {
+      "slug": "4-rehabilitacion-auditiva-de-implantes-con-hilda-furmanski-fonoaudiologa-terapia-a",
+      "titulo": "Rehabilitación Auditiva de Implantes — Hilda Furmanski, fonoaudióloga",
+      "numero": 4
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "tiempo-de-sordera-por-que-cuanto-antes-mejor",
+    "titulo": "Tiempo de sordera y período crítico: por qué cuanto antes, mejor",
+    "resumen": "Qué es el período crítico del lenguaje y por qué el tiempo sin escuchar define las expectativas con un implante o audífono, a cualquier edad.",
+    "contenido": "\"Mi hijo tiene seis años, ¿ya es tarde?\" Es una de las preguntas que más angustia genera en las familias ante un diagnóstico de hipoacusia. En el episodio 4 del podcast *Sordo pero no mudo*, la fonoaudióloga **Hilda Furmanski** dio una respuesta que ordena el tema: nunca es tarde para actuar, pero el tiempo cambia las expectativas.\n\n## Qué es el período crítico\n\nEl sistema nervioso central tiene ventanas de tiempo en las que está especialmente preparado para aprender ciertas funciones.\n\n> \"Hay algo que se llama período crítico o período óptimo, que es un tiempo en el que el sistema nervioso central está preparado para recibir una información y utilizarla de manera efectiva para una función.\" — Hilda Furmanski\n\nPara la audición y el lenguaje, esa ventana es más potente **antes de los tres años** —y cuanto antes, mejor—. Entre los tres y los cinco todavía hay margen para compensar muchas cosas con mucho trabajo. Después, el ritmo de progreso se va reduciendo: no es lo mismo empezar a escuchar a los dos años que a los siete.\n\n## El concepto clave: tiempo de sordera\n\nHilda lo define como el tiempo que pasa desde que se establece la pérdida auditiva hasta que se vuelve a habilitar el canal auditivo. Y la regla vale para todas las edades:\n\n> \"Siempre, cuanto más breve sea el tiempo de sordera, mejor, cualquiera sea la situación.\" — Hilda Furmanski\n\nSi un niño perdió la audición a los cinco años, es mejor que vuelva a escuchar a los seis que a los diez. Si un adulto la perdió a los veinte, es mejor recuperarla a los veintiuno que a los cuarenta. Cuanto más tiempo pasa, menos natural resulta la recepción del sonido, más cuesta adaptarse al dispositivo y más difícil es recuperar funciones. Algunas, incluso, pueden no recuperarse: un niño que nace sin audición en un oído y lo habilita recién a los quince años posiblemente nunca desarrolle la localización de los sonidos.\n\n## ¿Y si ya pasó el tiempo?\n\nEso no significa bajar los brazos. Ante la pregunta de qué hacer si el niño ya tiene seis años, o diez, o veinte, Hilda es tajante: se hace igual. Lo que cambia no es la decisión de actuar, sino las expectativas, que los profesionales deben transmitir con claridad y honestidad.\n\n## Si tenés la sospecha, consultá ya\n\nEl otro mensaje fuerte del episodio va para las familias que intuyen que algo pasa y reciben respuestas tranquilizadoras del estilo \"ya va a hablar\":\n\n> \"Cuando una familia cree que el niño tiene un problema de audición, hay una altísima probabilidad de que lo tenga, porque no hay nadie que conozca más al niño que las personas que están todo el día con él.\" — Hilda Furmanski\n\nSi lo llamás y no se da vuelta, si suena el timbre y no reacciona, si el perro ladra y sigue de largo: consultá. Los estudios auditivos no son invasivos, se pueden hacer a cualquier edad, y la respuesta correcta frente a la duda no es \"quedate tranquilo\", es hacer el diagnóstico. Porque, como dice Hilda, **el tiempo por sí solo no resuelve nada**.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-02",
+    "etiquetas": [
+      "familias",
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "rehabilitacion-auditiva-implante-que-es-y-por-que-importa",
+      "que-es-la-terapia-auditivo-verbal-en-ninos",
+      "rehabilitacion-auditiva-en-adultos-cuanto-dura"
+    ],
+    "episodio": {
+      "slug": "4-rehabilitacion-auditiva-de-implantes-con-hilda-furmanski-fonoaudiologa-terapia-a",
+      "titulo": "Rehabilitación Auditiva de Implantes — Hilda Furmanski, fonoaudióloga",
+      "numero": 4
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "culpa-y-aceptacion-en-la-hipoacusia-charla-con-pablo-vazquez-kunz",
+    "titulo": "Culpa y aceptación en la hipoacusia: una charla sobre biodescodificación con Pablo Vázquez Kunz",
+    "resumen": "Lucas conversa con Pablo Vázquez Kunz sobre culpa, aceptación y autoestima en la hipoacusia, desde la mirada de la biodescodificación.",
+    "contenido": "¿Cuánto pesa la culpa cuando aparece una hipoacusia? ¿La culpa de las madres y los padres, la culpa de pedir que te repitan, la culpa de \"molestar\"? En este episodio, Lucas conversa con **Pablo Vázquez Kunz**, psicólogo y especialista en biodescodificación, autor de varios libros y formador en esta práctica.\n\nAntes de entrar en la charla, una aclaración importante: **la biodescodificación no cuenta con evidencia científica** y no reemplaza ningún diagnóstico ni tratamiento médico. Lo que sigue es la perspectiva del invitado y una conversación honesta sobre algo muy real: las emociones que atraviesan a quienes viven con hipoacusia y a sus familias.\n\n## Una encuesta que duele\n\nLucas compartió en el episodio un dato que lo movilizó:\n\n> \"Yo hice una encuesta a la gente en Instagram y el 73% de las personas dijeron que se sentían culpables por su hipoacusia o la de su hijo.\" — Lucas\n\nSiete de cada diez. Madres que repasan el embarazo buscando qué hicieron \"mal\", padres que se reprochan no haber detectado antes la pérdida auditiva, personas que se sienten una carga por pedir que les repitan. La culpa aparece una y otra vez en la comunidad.\n\nPara Pablo, cargarle culpa a una familia sin fundamento es un daño extra:\n\n> \"Ese padre con culpa, con remordimiento, ¿qué es lo que va a hacer? Va a entrar en estrés. Un padre que entra en estrés, ¿va a poder tener las herramientas para poder ayudar a ese niño o a esa niña? No, va a estar bloqueado.\" — Pablo\n\nMás allá de las explicaciones que propone la biodescodificación —que, insistimos, no tienen respaldo científico—, este punto es valioso: **la culpa paraliza, y una familia paralizada acompaña peor**.\n\n## Aceptar primero\n\nUno de los momentos más potentes de la charla llega cuando Lucas pregunta si conviene ir para atrás a buscar \"el motivo\" de la pérdida auditiva. La respuesta de Pablo sorprende:\n\n> \"A mí me parece más interesante aceptar primero. [...] Lo primero que hago yo: aceptá lo que estás viviendo en este momento. ¿Para qué? Para frenar el estrés, para frenar esa sensación de 'no soy suficiente, no valgo'.\" — Pablo\n\nY Lucas lo baja a lo concreto de la vida con hipoacusia:\n\n> \"Más allá de si frene mi pérdida auditiva o no, si yo lo acepto y lo llevo un poco más leve o amigable, voy a poder vivir mejor.\" — Lucas\n\nAceptar no es resignarse: es dejar de pelearse con uno mismo para poder pedir lo que se necesita. Cambiarse de lugar en la mesa para tener el parlante atrás. Decir \"hablame más fuerte\". Preguntar una cuarta vez sin sonreír para disimular.\n\n## La vergüenza viene después de la culpa\n\nLucas contó algo que muchas personas con hipoacusia conocen bien: preguntar \"¿qué?\" tres veces y, a la cuarta, sonreír y hacer que entendió. Pablo lo conectó con la autoestima:\n\n> \"La mayoría de nuestros miedos nunca suceden, suceden en tu cabeza. Quizás de las 100 personas que vos tuviste miedo de decirle 'che, ¿me podés responder de nuevo?', el 90% estaban dispuestas a responderte 150 veces.\" — Pablo\n\nEl núcleo, para Pablo, es siempre el mismo: la autoestima. Si una madre o un padre acompaña desde la exigencia (\"tiene que avanzar en la terapia, tiene que ser el mejor\"), rompe la autoestima del hijo. Si acompaña desde el amor propio, todo lo demás mejora.\n\n## Estrella o estrellado\n\nHacia el final, Lucas retomó una frase que Pablo suele contar de su padre: \"algunos nacen estrella y otros nacemos estrellados\". Y la dio vuelta con su propia historia:\n\n> \"Yo me estrellé cuando perdí la audición. No fue un lindo camino, pero entre los escombros algo se fue para arriba y agarré eso para compartirlo, para ayudar, para aceptarme, para valorar el silencio.\" — Lucas\n\nDe esta charla no hay que llevarse recetas ni promesas de curación —no las hay—, sino preguntas: ¿cuánta culpa estás cargando que no te corresponde? ¿Qué cambiaría si te trataras con la misma paciencia que le pedís al resto?\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-26",
+    "etiquetas": [
+      "podcast",
+      "comunidad",
+      "informacion"
+    ],
+    "relacionados": [
+      "me-siento-culpable-por-la-hipoacusia-de-mi-hijo",
+      "verguenza-de-pedir-que-te-repitan-como-soltarla",
+      "que-es-la-biodescodificacion-y-que-dice-la-ciencia"
+    ],
+    "episodio": {
+      "slug": "8-biodescodificacion-culpa-y-aceptacion-en-discapacidad-con-pablo-vazquez-kunz",
+      "titulo": "Biodescodificación: culpa y aceptación en discapacidad — Pablo Vázquez Kunz",
+      "numero": 8
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "me-siento-culpable-por-la-hipoacusia-de-mi-hijo",
+    "titulo": "\"Me siento culpable por la hipoacusia de mi hijo\": por qué esa culpa no te corresponde",
+    "resumen": "Muchas madres y padres se sienten culpables por la hipoacusia de su hijo. Por qué esa culpa no ayuda y cómo empezar a soltarla para acompañar mejor.",
+    "contenido": "Si tu hijo o tu hija tiene hipoacusia y alguna vez pensaste \"algo hice mal\", no estás solo ni sola. En una encuesta que Lucas hizo en Instagram, **el 73% de las personas dijo sentirse culpable por su hipoacusia o la de su hijo**. Es un número enorme, y habla de algo que casi nadie pone sobre la mesa.\n\n## De dónde sale esa culpa\n\nLa culpa parental suele agarrarse de cualquier cosa: \"le pasé mis genes\", \"me enfermé durante el embarazo\", \"no me di cuenta a tiempo de que escuchaba menos\". En el episodio 8 del podcast, el psicólogo Pablo Vázquez Kunz —especialista en biodescodificación, una práctica que no cuenta con evidencia científica y cuya mirada compartió como perspectiva personal— fue muy claro sobre el daño que hace cargar esa mochila:\n\n> \"Ese padre con culpa, con remordimiento, ¿qué es lo que va a hacer? Va a entrar en estrés. Un padre que entra en estrés, ¿va a poder tener las herramientas para poder ayudar a ese niño o a esa niña? No, va a estar bloqueado.\" — Pablo\n\nAcá hay algo importante más allá de cualquier teoría: **la culpa no le sirve a tu hijo**. Al contrario. Una madre o un padre bloqueado por el reproche tiene menos energía disponible para lo que sí importa: acompañar, informarse, sostener.\n\n## \"Como si fueran especialistas\"\n\nOtra culpa frecuente es la de no haber detectado antes la pérdida auditiva. Pablo la desarmó con una frase simple:\n\n> \"Muchos padres se sienten culpables por no darse cuenta a tiempo. Claro, como si fuesen culpables, como si fuesen especialistas en la materia también.\" — Pablo\n\nNo sos audióloga. No sos otorrino. Detectar una hipoacusia es tarea de los controles auditivos y de los profesionales; tu tarea es otra, y empieza después.\n\n## Lo que tu hijo aprende de vos\n\nHay un punto de la charla que vale la pena guardar: los chicos no solo escuchan lo que les decimos, absorben cómo vivimos su condición. Si crecen rodeados de culpa y drama, aprenden que su hipoacusia es una tragedia. Si crecen con naturalidad, aprenden otra cosa:\n\n> \"Imaginate los padres que tienen un hijo con hipoacusia, que no se sientan culpables y puedan ver a ese niño, a esa niña con inocencia: le van a enseñar inocencia. El niño y la niña van a vivir su sintomatología desde otra conciencia.\" — Pablo\n\nY cuidado con el otro extremo: la exigencia. Pablo advirtió que presionar para que el hijo sea \"el mejor\" en la terapia, en el colegio o en el deporte también rompe la autoestima, cuando la autoestima es justamente el núcleo que hay que cuidar.\n\n## Por dónde empezar\n\n- **Ponele nombre a la culpa.** Decirla en voz alta —con tu pareja, con otra familia que pasó por lo mismo, con un profesional de salud mental— es el primer paso para soltarla.\n- **Buscá información de calidad.** La culpa crece en la desinformación; entender la hipoacusia la achica.\n- **Conectá con otras familias.** Escuchar a madres y padres que ya recorrieron el camino alivia más que cualquier consejo.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-28",
+    "etiquetas": [
+      "podcast",
+      "familias"
+    ],
+    "relacionados": [
+      "culpa-y-aceptacion-en-la-hipoacusia-charla-con-pablo-vazquez-kunz",
+      "verguenza-de-pedir-que-te-repitan-como-soltarla",
+      "que-es-la-biodescodificacion-y-que-dice-la-ciencia"
+    ],
+    "episodio": {
+      "slug": "8-biodescodificacion-culpa-y-aceptacion-en-discapacidad-con-pablo-vazquez-kunz",
+      "titulo": "Biodescodificación: culpa y aceptación en discapacidad — Pablo Vázquez Kunz",
+      "numero": 8
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "verguenza-de-pedir-que-te-repitan-como-soltarla",
+    "titulo": "¿Te da vergüenza pedir que te repitan? No estás molestando a nadie",
+    "resumen": "Preguntar \"¿qué?\" varias veces y sonreír sin entender: por qué da vergüenza pedir que te repitan con hipoacusia y cómo empezar a pedirlo sin culpa.",
+    "contenido": "Es una escena que cualquier persona con hipoacusia conoce de memoria: hay música de fondo, alguien te habla, preguntás \"¿qué?\" una vez, dos veces, tres veces... y a la cuarta sonreís y asentís, aunque no hayas entendido nada. Lucas lo contó tal cual en el episodio 8 del podcast:\n\n> \"Preguntar tres veces '¿qué?' a una persona que no estoy entendiendo porque hay música... y ya, sonrío a la cuarta vez, porque no te voy de vuelta a preguntar.\" — Lucas\n\n## Vergüenza, culpa y el miedo a molestar\n\nSu invitado, el psicólogo Pablo Vázquez Kunz, conectó esa vergüenza con algo más profundo: la sensación de estar siendo una molestia, de no ser \"correcto\". Y tiró un dato de la vida real que vale oro:\n\n> \"La mayoría de nuestros miedos nunca suceden, suceden en tu cabeza. Quizás de las 100 personas que vos tuviste miedo de decirle 'che, ¿me podés responder de nuevo?', el 90% estaban dispuestas a responderte 150 veces. Pero vos pensabas que la estabas molestando.\" — Pablo\n\nPensalo: ¿cuántas veces alguien te dijo, de verdad, \"qué pesado que sos\" por pedir que te repita? Casi nunca. El juicio está adentro, no afuera. Y sostener esa película mental todos los días, en cada conversación, es agotador.\n\n## Pedir lo que necesitás es un derecho, no un favor\n\nLucas compartió estrategias concretas que hoy usa sin culpa:\n\n- **Cambiarse de lugar en la mesa.** \"Si me siento en un restaurante y tengo un parlante enfrente, necesito tener el parlante atrás. Entonces le pido a la persona que está delante mío: che, por favor, cambiame de lugar, sea quien sea.\"\n- **Avisar de entrada.** Decir \"yo escucho menos, capaz te pido que me repitas\" al empezar una conversación descomprime todo lo que viene después.\n- **Pedir que hablen más fuerte o más despacio**, sin disfrazarlo de chiste ni de disculpa.\n\nY si alguien se ofende por tener que repetir, Pablo fue directo:\n\n> \"El que se ofende porque te tiene que responder, que se vaya... ya sabés que no es una persona que vas a querer tener en tu vida.\" — Pablo\n\n## Mostrarlo también es una forma de militancia\n\nHacia el final del episodio, Lucas contó algo hermoso: ahora, cuando está en reuniones con gente que no lo conoce y se le acaba la pila del implante, la cambia a la vista de todos, a propósito, para que le pregunten qué es eso.\n\n> \"Y ahí empezar a militar por un mundo mejor, donde los problemas sean diferencias y no problemas. Donde sea simplemente 'esto es diferente', y no 'está bien o está mal'.\" — Lucas\n\nCada vez que pedís que te repitan sin pedir perdón, le allanás el camino a la próxima persona con hipoacusia que esté en esa mesa. No estás molestando: estás existiendo.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-01",
+    "etiquetas": [
+      "podcast",
+      "comunidad",
+      "historias"
+    ],
+    "relacionados": [
+      "culpa-y-aceptacion-en-la-hipoacusia-charla-con-pablo-vazquez-kunz",
+      "me-siento-culpable-por-la-hipoacusia-de-mi-hijo",
+      "que-es-la-biodescodificacion-y-que-dice-la-ciencia"
+    ],
+    "episodio": {
+      "slug": "8-biodescodificacion-culpa-y-aceptacion-en-discapacidad-con-pablo-vazquez-kunz",
+      "titulo": "Biodescodificación: culpa y aceptación en discapacidad — Pablo Vázquez Kunz",
+      "numero": 8
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "que-es-la-biodescodificacion-y-que-dice-la-ciencia",
+    "titulo": "¿Qué es la biodescodificación y qué dice la ciencia?",
+    "resumen": "Qué propone la biodescodificación, por qué no tiene evidencia científica y qué se puede rescatar de la conversación sobre emociones y salud auditiva.",
+    "contenido": "En el episodio 8 del podcast, Lucas conversó con el psicólogo Pablo Vázquez Kunz sobre biodescodificación. Como el término genera curiosidad —y también controversia—, acá va una explicación clara de qué es, qué propone y qué lugar darle.\n\n## Qué propone la biodescodificación\n\nSegún explicó Pablo en el episodio, la biodescodificación parte de las llamadas \"cinco leyes biológicas\" formuladas por el médico alemán Ryke Geerd Hamer en los años 80 y 90. La idea central, en palabras del invitado:\n\n> \"Las enfermedades no son enfermedades como nosotros las concebimos, sino que son programas biológicos de emergencia que nuestro inconsciente biológico pone a funcionar porque tenemos un conflicto real o simbólico.\" — Pablo\n\nDesde esa mirada, un síntoma físico —incluida una pérdida auditiva— expresaría un conflicto emocional no resuelto, y tomar conciencia de ese conflicto permitiría frenarlo o revertirlo.\n\n## Qué dice la ciencia\n\nAcá es donde hay que ser muy claros: **la biodescodificación no cuenta con evidencia científica**. Las teorías de Hamer fueron rechazadas por la comunidad médica, y no existen estudios rigurosos que demuestren que los síntomas físicos se originen en conflictos emocionales descodificables, ni que esta práctica pueda detener o revertir una hipoacusia.\n\nLas causas de la pérdida auditiva están bien estudiadas: factores genéticos, infecciones, exposición al ruido, ototoxicidad, envejecimiento, entre otras. Ninguna persona debería abandonar ni retrasar controles audiológicos, audífonos, implantes o rehabilitación por una promesa sin respaldo. Si alguien te ofrece \"sanar\" tu audición o la de tu hijo por esta vía, encendé todas las alarmas.\n\n## Entonces, ¿por qué hablamos de esto en el podcast?\n\nPorque la conversación, más allá de la teoría, tocó temas emocionales muy reales para la comunidad con hipoacusia: la culpa, la vergüenza, la autoestima, la aceptación. Y ahí sí hubo ideas valiosas que no dependen de ninguna teoría alternativa:\n\n> \"Aceptá lo que estás viviendo en este momento. ¿Para qué? Para frenar el estrés, para frenar esa sensación de 'no soy suficiente, no valgo'.\" — Pablo\n\n> \"No puedo cambiar algo que no puedo aceptar.\" — Pablo\n\nQue el estrés sostenido hace daño, que la culpa paraliza a las familias y que la aceptación mejora la calidad de vida son ideas que la psicología convencional también acompaña. Lo emocional importa, y mucho: por eso existen profesionales de salud mental que acompañan procesos de pérdida auditiva.\n\n## En resumen\n\n- La biodescodificación es una práctica sin evidencia científica; conocela como perspectiva, no como tratamiento.\n- Nunca reemplaces controles médicos, audiológicos ni terapias de rehabilitación por prácticas alternativas.\n- Lo rescatable de la charla es el plano emocional: trabajar la culpa, la vergüenza y la autoestima —idealmente con un profesional de salud mental— sí cambia cómo se vive la hipoacusia.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-03",
+    "etiquetas": [
+      "podcast",
+      "informacion"
+    ],
+    "relacionados": [
+      "culpa-y-aceptacion-en-la-hipoacusia-charla-con-pablo-vazquez-kunz",
+      "me-siento-culpable-por-la-hipoacusia-de-mi-hijo",
+      "verguenza-de-pedir-que-te-repitan-como-soltarla"
+    ],
+    "episodio": {
+      "slug": "8-biodescodificacion-culpa-y-aceptacion-en-discapacidad-con-pablo-vazquez-kunz",
+      "titulo": "Biodescodificación: culpa y aceptación en discapacidad — Pablo Vázquez Kunz",
+      "numero": 8
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "otosclerosis-que-es-y-como-se-trata",
+    "titulo": "Otosclerosis: qué es, por qué se pierde audición y cómo se trata",
+    "resumen": "El Dr. Eduardo Hocsman explica qué es la otosclerosis, por qué fija el estribo y cuándo se elige entre audífono y cirugía de estapedectomía.",
+    "contenido": "¿Escuchás mejor en lugares ruidosos que en ambientes silenciosos? ¿Tenés que dejar de masticar para entender lo que te dicen? Esas dos señales, que parecen ilógicas, son típicas de la **otosclerosis**, una de las causas más frecuentes de pérdida auditiva progresiva en adultos jóvenes. En este episodio de *Sordo pero no mudo*, Lucas conversó con el Dr. Eduardo Hocsman, ex jefe de Otología del Hospital de Clínicas, para entender qué es esta patología y qué opciones existen para tratarla.\n\n## Una enfermedad del hueso del oído\n\nLa otosclerosis es una alteración ósea que aparece únicamente en el hueso temporal, donde está el oído.\n\n> \"En realidad es una enfermedad ósea que está localizada en el hueso temporal. Y no existe en otra parte del organismo\", explica el Dr. Hocsman.\n\nEl foco de otosclerosis suele ubicarse en la ventana oval, el \"agujerito\" donde el estribo —el huesecito más chico del cuerpo— transmite la vibración del sonido hacia la cóclea. Cuando ese foco crece, **el estribo se va fijando y se mueve cada vez menos**. El resultado: hipoacusia y, muchas veces, acúfenos.\n\nLa pérdida es lentamente progresiva e insidiosa. Muchas personas la notan recién después de un resfrío que congestiona el oído y hace evidente lo que ya venía pasando. Suele ser **bilateral y asimétrica**: empieza por un oído y con el tiempo aparece en el otro. Se presenta con más frecuencia entre los 15 y los 45 años, algo más en mujeres, y en dos tercios de los casos hay antecedentes familiares.\n\n## ¿Audífono o cirugía? El paciente decide\n\nUno de los mensajes más fuertes del episodio es que la otosclerosis, a diferencia de un tumor o una infección, **no obliga a operar**. Hay dos caminos válidos: el audífono o la cirugía de estapedectomía, en la que se reemplaza el estribo fijado por una prótesis diminuta de menos de un milímetro de diámetro.\n\n> \"Es el paciente el que decide la cirugía. Vos le tenés que dar todo el abanico de posibilidades, o no hacer nada, o la cirugía y decirle cuáles son los pro y los contra de la cirugía, el audífono, cuáles son los pro y los contra, y que sea el paciente que lo decide\", dice el Dr. Hocsman.\n\nDe hecho, antes de hablar de quirófano, el médico manda al paciente a probar audífonos, \"que lo deguste, que lo paladee\". Si queda conforme, puede seguir con el audífono y controlar la evolución con audiometrías anuales. Y si en dos o tres años cambia de idea, la cirugía sigue siendo una opción.\n\n## Los números de la cirugía\n\nLa estapedectomía es una cirugía reglada y segura en manos entrenadas, pero no es inocua:\n\n> \"Hay un 95% de chances de recuperar audición, hay un 3% aproximadamente de quedar igual [...] y aproximadamente hay un 2% de posibilidades de que la audición caiga.\"\n\nPor eso el doctor insiste en hablarlo con total claridad: \"si bien 2 es bajo, si te toca a vos, vos fuiste el 100% para vos\". También es clave elegir bien al cirujano: tiene que ser un otólogo con experiencia en esta cirugía específica, no \"un cirujano ocasional de otosclerosis\".\n\nA favor de la cirugía hay un dato importante: **detiene el proceso de evolución de la enfermedad** en ese oído. En contra, requiere unas tres semanas de reposo y cuidados de por vida frente a los ruidos intensos y los deportes de contacto.\n\n## Cuándo está indicado operar\n\nEn general, un oído está en condiciones de operarse cuando la pérdida conductiva llega a los **30 decibeles o más**. Con menos fijación, paradójicamente, la cirugía puede ser más riesgosa. Y siempre se opera primero el peor oído, nunca el mejor.\n\nSi la enfermedad avanza y afecta el oído interno, el panorama cambia: en hipoacusias severas o profundas por otosclerosis, hoy existe la posibilidad del implante coclear, algo que hace unas décadas no existía.\n\n> \"Es una cirugía que hay que entrar al quirófano detrás del paciente, es el paciente que fija la fecha de cirugía y decide si se quiere operar o no.\"\n\nEsa idea resume el espíritu del episodio: información clara, opciones sobre la mesa y la decisión en manos de quien vive con la hipoacusia.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-26",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "sintomas-de-otosclerosis-como-se-diagnostica",
+      "estapedectomia-recuperacion-y-cuidados-despues-de-la-cirugia",
+      "otosclerosis-y-embarazo-por-que-baja-la-audicion"
+    ],
+    "episodio": {
+      "slug": "23-otosclerosis-y-estapedectomia-dr-eduardo-hocsman",
+      "titulo": "Otosclerosis y estapedectomía — Dr. Eduardo Hocsman",
+      "numero": 23
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "sintomas-de-otosclerosis-como-se-diagnostica",
+    "titulo": "¿Escuchás mejor con ruido de fondo? Síntomas y diagnóstico de la otosclerosis",
+    "resumen": "Escuchar mejor en ambientes ruidosos y peor al masticar son señales típicas de otosclerosis. Cómo se diagnostica: diapasones, audiometría y tomografía.",
+    "contenido": "La otosclerosis tiene síntomas que a primera vista parecen no tener sentido. En el episodio 23 de *Sordo pero no mudo*, el Dr. Eduardo Hocsman, ex jefe de Otología del Hospital de Clínicas, contó cómo se detecta esta patología en el consultorio.\n\n## La paracusia de Weber: escuchar mejor donde hay ruido\n\nHay una pregunta que el doctor suele hacer en la consulta:\n\n> \"¿Dónde escucha más? ¿En un casamiento o en un velatorio? Los pacientes dicen, ah no, en un casamiento donde hay mucha gente, porque ahí me hablan más fuerte y yo escucho mejor.\"\n\nEn la otosclerosis pasa lo contrario que en otras hipoacusias: en ambientes ruidosos la gente levanta la voz y la persona entiende mejor. Otra señal muy característica:\n\n> \"La mayoría de los pacientes con otosclerosis te dice que cuando están comiendo, están masticando y le hablan, tiene que parar de masticar porque si no, no escuchan.\"\n\nEso se llama **paracusia de Weber**, y a Lucas le resonó de inmediato: \"a mí me voló la cabeza cuando lo leí, porque me pasaba 100%\".\n\n## Una pérdida que avanza sin avisar\n\nLa otosclerosis es lentamente progresiva. Muchas personas se dan cuenta después de un resfrío: ya venían con 20 o 25 decibeles de pérdida, la congestión sumó unos decibeles más y ahí se hizo notable. También es habitual que los primeros en notarlo sean los demás: \"te estoy repitiendo varias veces las cosas y no me escuchás\".\n\nSuele ser **bilateral y asimétrica**: empieza por un oído y después aparece en el otro. Junto con la hipoacusia, es frecuente que aparezcan acúfenos.\n\n## Cómo se llega al diagnóstico\n\nEl diagnóstico combina varias piezas:\n\n- **Historia clínica e interrogatorio**: las paracusias, los antecedentes familiares (presentes en dos tercios de los casos) y la evolución de la pérdida.\n- **Diapasones**: con el diapasón de frecuencia 1000, si la persona escucha más por vía ósea (apoyado en el hueso) que por vía aérea, indica una pérdida conductiva de 30 decibeles o más.\n- **Audiometría, logoaudiometría e impedanciometría**: en la otosclerosis el reflejo estapediano da negativo, porque el estribo está fijo y no puede moverse.\n- **Tomografía computada de alta resolución**: en casos de duda permite ver directamente el foco de otosclerosis.\n\n> \"Hace 20 años, cuando las tomografías no tenían la resolución que tienen ahora, no se podía hacer diagnóstico de otosclerosis por tomografía. Hoy prácticamente se puede hacer diagnóstico de otosclerosis por tomografía por la calidad.\"\n\nUn dato llamativo: se estima que el 6,4% de la población tiene focos de otosclerosis en el hueso temporal, pero solo una minoría llega a tener síntomas. Tener el foco no significa tener hipoacusia.\n\nSi notás que escuchás distinto que antes, que entendés mejor con ruido de fondo o que necesitás dejar de masticar para seguir una conversación, vale la pena hacer una consulta con un otorrinolaringólogo y una audiometría.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-28",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "otosclerosis-que-es-y-como-se-trata",
+      "estapedectomia-recuperacion-y-cuidados-despues-de-la-cirugia",
+      "otosclerosis-y-embarazo-por-que-baja-la-audicion"
+    ],
+    "episodio": {
+      "slug": "23-otosclerosis-y-estapedectomia-dr-eduardo-hocsman",
+      "titulo": "Otosclerosis y estapedectomía — Dr. Eduardo Hocsman",
+      "numero": 23
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "estapedectomia-recuperacion-y-cuidados-despues-de-la-cirugia",
+    "titulo": "Estapedectomía: cómo es la cirugía y qué cuidados requiere la recuperación",
+    "resumen": "Cuánto dura la estapedectomía, qué anestesia usa y los cuidados clave: tres semanas de reposo, 60 días sin avión y protección auditiva de por vida.",
+    "contenido": "La estapedectomía es la cirugía que trata la otosclerosis: se retira el estribo fijado y se lo reemplaza por una prótesis diminuta. En el episodio 23 de *Sordo pero no mudo*, el Dr. Eduardo Hocsman, ex jefe de Otología del Hospital de Clínicas, detalló cómo es la operación y, sobre todo, cómo es el después.\n\n## Una cirugía corta, con una prótesis mínima\n\nLa prótesis que reemplaza al estribo mide alrededor de 4,5 milímetros de largo y 0,6 milímetros de diámetro. Las distancias dentro del oído son tan chicas que un desplazamiento de un cuarto de milímetro puede significar 30 o 40 decibeles de pérdida.\n\nLa operación dura **entre 45 minutos y una hora** si todo va bien, y puede hacerse con anestesia general o con anestesia local potenciada: la persona está adormecida pero responde a órdenes simples, sin intubación.\n\n> \"Es una cirugía que no te permite error. Es decir, o sale bien o sale mal\", resume el Dr. Hocsman. Por eso insiste en que la haga un otólogo con experiencia específica en otosclerosis.\n\n## Las tres semanas clave del postoperatorio\n\nEl doctor es muy claro con el reposo:\n\n> \"Son más o menos entre 3 a 4 semanas de un posoperatorio que tiene que disponer de ese tiempo y tiene que ser en un momento que no haya ningún tipo de estrés.\"\n\nNi siquiera home office: la indicación es tomarse licencia y dedicar esas semanas a la recuperación, porque el estrés puede afectar negativamente el resultado. Los cuidados concretos que mencionó en el episodio:\n\n- **No levantar cosas pesadas** las primeras tres semanas (incluye alzar chicos pequeños: hay que organizarse con ayuda).\n- **No tomar mate** las primeras dos o tres semanas, por la succión, que genera presión negativa en el oído medio.\n- **No sonarse la nariz fuerte** y estornudar con la boca abierta, para no mandar aire a presión por la trompa de Eustaquio.\n- **No viajar en avión durante 60 días** como mínimo.\n- Recién a los 15 días se puede hacer una vida relativamente normal, y al mes retomar actividad física.\n\nTambién puede quedar un **gusto metálico** en el lateral de la lengua durante las primeras semanas o meses, porque cerca de la zona operada pasa la cuerda del tímpano. En más del 95% de los casos desaparece solo.\n\n## Cuidados de por vida\n\nAl sacar el estribo se corta el tendón del músculo estapedial, un mecanismo natural de protección frente a ruidos fuertes. Por eso quedan dos reglas permanentes:\n\n> \"El cuidado que tiene que tener de por vida es no estar expuesto a ruidos intensos.\"\n\nEn recitales o boliches, siempre con protección auditiva. Y los **deportes de contacto** (boxeo, kickboxing, rugby) quedan descartados, porque un golpe fuerte puede desplazar la prótesis y obligar a reoperar. Fuera de eso, la vida es normal: el doctor contó que tiene pacientes operados que hasta hacen buceo a 25 o 30 metros sin inconvenientes.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-30",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "otosclerosis-que-es-y-como-se-trata",
+      "sintomas-de-otosclerosis-como-se-diagnostica",
+      "otosclerosis-y-embarazo-por-que-baja-la-audicion"
+    ],
+    "episodio": {
+      "slug": "23-otosclerosis-y-estapedectomia-dr-eduardo-hocsman",
+      "titulo": "Otosclerosis y estapedectomía — Dr. Eduardo Hocsman",
+      "numero": 23
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "otosclerosis-y-embarazo-por-que-baja-la-audicion",
+    "titulo": "Otosclerosis y embarazo: ¿por qué puede bajar la audición?",
+    "resumen": "En el 80% de las mujeres con otosclerosis clínica, el embarazo hace caer la audición. Qué rol juegan las hormonas y qué controles conviene hacer.",
+    "contenido": "Muchas mujeres notan que empezaron a escuchar menos después de un embarazo, y recién años más tarde reciben el diagnóstico: otosclerosis. En el episodio 23 de *Sordo pero no mudo*, el Dr. Eduardo Hocsman, ex jefe de Otología del Hospital de Clínicas, explicó por qué existe esta relación tan marcada.\n\n## Una enfermedad con componente hormonal\n\nLa otosclerosis es una enfermedad ósea del oído que fija el estribo y produce una hipoacusia progresiva. Afecta un poco más a las mujeres, y en su evolución intervienen factores genéticos y hormonales.\n\n> \"Es muy típico que la mujer después de los embarazos, vos le empezás a interrogar y te dice: después del primer parto yo empecé a notar, o después del primer embarazo empecé a notar que la audición caía un poco, y con el segundo ya noté mucho más.\"\n\nEl dato que dio el doctor es contundente:\n\n> \"Yo te diría casi el 80% de las mujeres con otosclerosis clínica y que están embarazadas o tuvieron familia, les va a bajar la audición.\"\n\nEl cambio hormonal del embarazo —el aumento de estrógenos y progesterona— acelera la evolución de la enfermedad. La caída suele ser de tipo conductivo: de 25 decibeles de pérdida se puede pasar a 35 o 40, un salto que socialmente se nota. La buena noticia es que ese componente conductivo se puede resolver, ya sea con cirugía o con un audífono.\n\n## ¿Y los anticonceptivos y los tratamientos de fertilidad?\n\nHace 25 o 30 años, los anticonceptivos orales tenían concentraciones muy altas de estrógenos y progesterona, y sí influían en la otosclerosis. Hoy la situación cambió:\n\n> \"Actualmente con los anticonceptivos orales que hay, que tienen muy baja el porcentaje y la concentración de estrógenos y progesterona, no es una contraindicación para la otosclerosis.\"\n\nLa precaución razonable, según el doctor, es ajustar los controles: si una mujer con otosclerosis toma anticonceptivos orales, conviene hacer la **audiometría cada seis meses en lugar de una vez por año**.\n\nCon los tratamientos de fertilidad la historia es distinta, porque usan dosis hormonales altas. El doctor contó que tuvo pacientes a las que la audición les cayó muchísimo en ese contexto, y que en algunos casos puede convenir conversar si operarse antes de iniciar el tratamiento. Cada situación es particular y se define con el especialista.\n\n## Lo que importa vigilar\n\nMás allá del estribo fijado —que tiene solución quirúrgica o con audífono—, lo central es controlar que el nervio de la audición no se deteriore:\n\n> \"En lo que nos tenemos que fijar mucho es el nervio de la audición, que no vaya cayendo la vía ósea, eso es importante.\"\n\nPor eso, para cualquier persona con otosclerosis, con o sin planes de embarazo, la indicación es la misma: **control audiométrico al menos una vez por año**, y antes si se nota una caída. Detectar los cambios a tiempo permite decidir mejor entre esperar, usar audífono u operar.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-02",
+    "etiquetas": [
+      "informacion",
+      "familias",
+      "podcast"
+    ],
+    "relacionados": [
+      "otosclerosis-que-es-y-como-se-trata",
+      "sintomas-de-otosclerosis-como-se-diagnostica",
+      "estapedectomia-recuperacion-y-cuidados-despues-de-la-cirugia"
+    ],
+    "episodio": {
+      "slug": "23-otosclerosis-y-estapedectomia-dr-eduardo-hocsman",
+      "titulo": "Otosclerosis y estapedectomía — Dr. Eduardo Hocsman",
+      "numero": 23
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "enfermero-sordo-con-implante-coclear-la-historia-de-guillem",
+    "titulo": "Enfermero sordo con implante coclear: la historia de Guillem",
+    "resumen": "Guillem Bodí es enfermero en Barcelona, sordo de nacimiento y usuario de implante coclear. Su historia de hospital, vocación y aceptación.",
+    "contenido": "Guillem Bodí tiene 25 años, es de Valencia y trabaja como enfermero en un hospital de Barcelona. Es sordo de nacimiento y usa un implante coclear desde los dos años. Su historia empieza, literalmente, en un quirófano: cuando nació todavía no había cumplido 24 horas de vida y ya lo estaban operando.\n\n## Cinco años de hospital y un diagnóstico inesperado\n\nGuillem pasó sus primeros cinco años hospitalizado por problemas intestinales graves que los médicos no lograban explicar. En medio de ese proceso, sus padres notaron algo más: lo llamaban por su nombre y él no se daba vuelta.\n\n> \"Mis padres al final se dieron cuenta, este niño es sordo, porque le estamos llamando por su nombre y no me contesta ni se gira la cabeza.\"\n\nAl principio pensaron que la sordera venía de un antibiótico ototóxico que le habían dado en el hospital. Pero un examen genético a toda la familia reveló la verdadera causa: el síndrome de Waardenburg tipo 4, una enfermedad poco frecuente que combina sordera, problemas intestinales, ojos azules, un mechón blanco y faltas de pigmentación en la piel. Guillem era sordo desde el nacimiento.\n\nA los dos años recibió su primer implante coclear, en el Hospital La Fe de Valencia, donde fue uno de los primeros niños implantados. Después vinieron años de rehabilitación: una escuela para niños sordos, una profesora dedicada solo a él y una logopeda que lo acompañó desde los cinco años hasta la universidad.\n\n> \"Ella básicamente es la que más ha hecho en ese papel, es la que más me ha enseñado a escuchar, hablar y todo.\"\n\n## Una vocación que nació en la cama del hospital\n\nCuando Lucas le preguntó por qué eligió enfermería, una profesión donde las mascarillas complican la lectura labial, Guillem no dudó. Creció rodeado de profesionales de la salud que lo cuidaron en los años más críticos de su vida.\n\n> \"Para mí estudiar enfermería es como devolver ese favor a la humanidad o a la gente, como para sentirme conmigo mismo bien.\"\n\nHoy trabaja en urgencias del Hospital Clínic de Barcelona, con plaza fija, viviendo solo a 400 kilómetros de su familia. Y cuando atiende a un paciente con implante coclear o se cruza con un niño implantado por la calle, se acerca a mostrarle el suyo. Las madres, cuenta, se alegran de ver a un adulto que llegó adonde quiso llegar.\n\n## El humor como bandera\n\nGuillem cuenta su vida con una liviandad contagiosa. Como la vez que empezó a usar la conexión bluetooth de su procesador sin avisarle a nadie y atendía llamadas con el teléfono apoyado en la mesa, ante la mirada desconcertada de sus amigos: el sonido le llegaba directo al implante, sin que sonara nada afuera.\n\nO la vez que se quedó sin pilas a las cuatro de la madrugada en un festival de música electrónica y su papá se levantó a llevarle un repuesto. Desde entonces repite un mantra antes de salir de casa: pilas, cartera, móvil.\n\nNo siempre fue así. De chico, el procesador \"de mochilita\" le daba vergüenza en verano, cuando todos se sacaban la remera. El salto a un procesador retroauricular, cerca de los diez años, lo cambió todo.\n\n> \"En los años también creo que ya aprendes a convivir con eso y que llegas a un momento de tu vida que dices que da igual.\"\n\n## \"No sería la persona que soy hoy\"\n\nAl cierre de la charla, Lucas le preguntó si haría algo distinto. La respuesta de Guillem resume su forma de ver la vida:\n\n> \"Si no hubiera pasado por esas cirugías o por ese implante, no sería la persona que soy hoy. Y no tendría todas las cosas que he conseguido hasta el día de hoy.\"\n\nY para los niños y niñas que están por empezar este camino, dejó un mensaje directo:\n\n> \"Le diría que siga adelante, que no es un impedimento en su vida, sino al contrario, es toda una ayuda en su vida, porque eso es lo que le va a ayudar a ser la persona que será en un futuro.\"\n\nUna historia de hospital, vocación y aceptación que demuestra que la hipoacusia no define hasta dónde podés llegar.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-26",
+    "etiquetas": [
+      "historias",
+      "podcast"
+    ],
+    "relacionados": [
+      "trabajar-en-salud-con-hipoacusia-mascarillas-y-lectura-labial",
+      "segundo-implante-coclear-anos-despues-por-que-puede-no-funcionar",
+      "sindrome-de-waardenburg-que-es-y-como-se-relaciona-con-la-sordera"
+    ],
+    "episodio": {
+      "slug": "45-enfermero-sordo-con-implante-coclear-en-espana-guillem-bodi-hipoacusico",
+      "titulo": "Enfermero sordo con implante coclear en España — Guillem Bodi",
+      "numero": 45
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "trabajar-en-salud-con-hipoacusia-mascarillas-y-lectura-labial",
+    "titulo": "¿Se puede trabajar en salud con hipoacusia? Mascarillas, quirófano y lectura labial",
+    "resumen": "Guillem, enfermero sordo con implante coclear, cuenta cómo se maneja en quirófano y urgencias cuando las mascarillas impiden leer los labios.",
+    "contenido": "Trabajar en un hospital siendo una persona con hipoacusia parece un desafío enorme: mascarillas que tapan la boca, ambientes ruidosos, indicaciones que tienen que entenderse a la primera. Guillem Bodí, enfermero sordo con implante coclear que trabaja en Barcelona, demuestra que es posible.\n\n## El obstáculo de las mascarillas\n\nPara muchas personas con hipoacusia, la lectura labial es una herramienta central de comunicación, incluso usando implante o audífonos.\n\n> \"Yo siempre me fijo con la gente en la boca. Yo cuando hablo con la gente no miro a los ojos, yo miro a la boca.\"\n\nEl primer choque fuerte fue en la pandemia, cuando estudiaba enfermería en Valencia: clases enormes, profesores hablando con mascarilla y ningún labio para leer. Fue costoso, cuenta, pero terminó siendo un entrenamiento para lo que venía.\n\n## Quirófano: mascarilla sí o sí\n\nAl terminar la carrera, Guillem empezó a trabajar como instrumentista en quirófano, donde la mascarilla es obligatoria y la concentración es total. Ahí no había forma de leer los labios de nadie.\n\n> \"Muchas veces me decían los nombres y sí que me costaba, y le decía perdón, o qué decía, qué, qué.\"\n\nAlgunos médicos se impacientaban cuando tenían que repetir el nombre de un instrumento tres veces. Su respuesta fue de una honestidad desarmante: \"es lo que hay, no puedo hacer nada\". Pidió repetición sin culpa, todas las veces que hizo falta.\n\n## Urgencias: cuando el equipo ya te conoce\n\nHoy Guillem trabaja en urgencias, sala de hospitalización y UCI, donde ya no se usa mascarilla de forma permanente y la comunicación fluye distinto.\n\n> \"La gente ya me conoce, ya sabe que soy sordo, que quizás alguna palabra me pueda perder, pero ya están acostumbrados y no hay ningún problema.\"\n\nEn los cambios de turno, cuando se hace el pase de pacientes con compañeros que no lo conocen (en un hospital de miles de trabajadores), aplica una estrategia simple: avisa que lleva un implante y se ubica del lado por el que escucha. La reacción habitual es \"ay, perdón, no te preocupes, me pongo aquí\".\n\n## Claves que se desprenden de su experiencia\n\n- **Decirlo abiertamente**: cuando el equipo sabe de la hipoacusia, se adapta con naturalidad.\n- **Ubicarse estratégicamente**: elegir el lugar que deja las voces del lado que mejor escuchás.\n- **Pedir repetición sin culpa**: entender bien una indicación es parte de la seguridad del paciente.\n- **La experiencia propia como fortaleza**: haber sido paciente durante años le dio a Guillem una empatía que hoy vuelca en su trabajo.\n\n> \"Todos los días intento empatizar con la gente, porque claro, yo me pongo en mi lugar de cuando era pequeño. Yo digo, es que hace unos años yo estaba en ese lugar.\"\n\nLa hipoacusia no le cerró las puertas de la salud: le dio una razón para entrar. Como dice él, estudiar enfermería fue su forma de devolver el favor a quienes lo cuidaron.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-29",
+    "etiquetas": [
+      "historias",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "enfermero-sordo-con-implante-coclear-la-historia-de-guillem",
+      "segundo-implante-coclear-anos-despues-por-que-puede-no-funcionar",
+      "sindrome-de-waardenburg-que-es-y-como-se-relaciona-con-la-sordera"
+    ],
+    "episodio": {
+      "slug": "45-enfermero-sordo-con-implante-coclear-en-espana-guillem-bodi-hipoacusico",
+      "titulo": "Enfermero sordo con implante coclear en España — Guillem Bodi",
+      "numero": 45
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "segundo-implante-coclear-anos-despues-por-que-puede-no-funcionar",
+    "titulo": "Segundo implante coclear muchos años después: ¿por qué puede no funcionar?",
+    "resumen": "Guillem recibió su segundo implante coclear 10 años después del primero y nunca logró entender con él. Qué pasa cuando la implantación es tardía.",
+    "contenido": "Guillem Bodí, invitado del episodio 45 del podcast, fue implantado de un oído a los dos años y del otro recién a los 12. Diez años de diferencia que marcaron dos resultados completamente distintos: con el primer implante escucha y trabaja como enfermero; con el segundo, nunca logró entender el habla.\n\n## El cerebro se acostumbra a escuchar de un lado\n\nDurante toda su infancia, Guillem se manejó con un solo oído implantado.\n\n> \"Yo me he defendido durante toda mi infancia en un solo oído. Me he acostumbrado a recibir los oídos tanto de la parte derecha como la izquierda con un solo oído.\"\n\nCuando a los 12 años le colocaron el segundo implante, la experiencia fue frustrante: el sonido le molestaba y sentía una especie de rechazo. No era un problema del dispositivo, que funcionaba correctamente, sino de un cerebro que llevaba una década sin recibir estímulo auditivo por ese lado.\n\n## Años de rehabilitación sin resultado\n\nGuillem no abandonó a la primera. Hizo entre tres y cuatro años de rehabilitación auditiva con el segundo implante, y después siguió intentando de forma intermitente: se lo ponía en casa, leía en voz alta, miraba series para entrenar el oído.\n\n> \"Veía que no conseguía, era como que escuchaba, no llegaba ni el 25% y decía es que no. Yo ya lo sé, que eso es voluntad, ponérselo y rehabilitación, pero es que no veo la necesidad.\"\n\n¿Qué escuchaba con ese implante? Sonido, pero no palabras:\n\n> \"Solo escucho eses, como una mosca.\"\n\nFinalmente tomó una decisión que también es válida: dejar de usarlo. \"Ahí cuando dije pues hasta aquí, listo\", cuenta. Hoy vive y trabaja con un solo implante activo.\n\n## Por qué hoy se implanta distinto\n\nLa experiencia de Guillem refleja algo que la audiología aprendió con los años: existe un período sensible del desarrollo auditivo. Cuanto más tiempo pasa un oído sin estimulación, más difícil es que el cerebro aprenda a interpretar lo que ese oído le manda. Por eso, cuando un bebé nace con sordera bilateral profunda, hoy la tendencia es la implantación bilateral simultánea o con poca diferencia de tiempo.\n\n> \"Me da mucha rabia porque ahora, hoy en día, cuando un niño nace sordo bilateral, ya los implantan de los dos a la vez. Pero claro, en aquel momento nadie sabía eso, éramos los primeros.\"\n\nComo le señaló Lucas en la charla, no fue mala praxis sino desinformación de una época en la que los implantes pediátricos recién empezaban.\n\n## Lo que deja esta historia\n\n- La edad de implantación y el tiempo de deprivación auditiva influyen mucho en el resultado.\n- Un implante que \"funciona\" técnicamente no garantiza comprensión del habla si el cerebro no puede procesar esa señal.\n- Intentar la rehabilitación vale la pena, pero decidir hasta dónde seguir también es un derecho de cada persona.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-01",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "enfermero-sordo-con-implante-coclear-la-historia-de-guillem",
+      "trabajar-en-salud-con-hipoacusia-mascarillas-y-lectura-labial",
+      "sindrome-de-waardenburg-que-es-y-como-se-relaciona-con-la-sordera"
+    ],
+    "episodio": {
+      "slug": "45-enfermero-sordo-con-implante-coclear-en-espana-guillem-bodi-hipoacusico",
+      "titulo": "Enfermero sordo con implante coclear en España — Guillem Bodi",
+      "numero": 45
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "sindrome-de-waardenburg-que-es-y-como-se-relaciona-con-la-sordera",
+    "titulo": "Síndrome de Waardenburg: qué es y cómo se relaciona con la sordera",
+    "resumen": "El síndrome de Waardenburg es una condición genética poco frecuente que puede causar sordera. Qué es, cómo se detecta y la historia de Guillem.",
+    "contenido": "En el episodio 45 del podcast, Guillem Bodí contó que su sordera tiene nombre y apellido: síndrome de Waardenburg tipo 4, una condición genética poco frecuente. Su historia sirve para entender qué es este síndrome y por qué a veces el diagnóstico de la causa de una hipoacusia tarda años en llegar.\n\n## Un diagnóstico que tardó en aparecer\n\nGuillem nació con problemas intestinales graves que lo tuvieron cinco años hospitalizado. En ese contexto, cuando se confirmó su sordera, la primera hipótesis fue que la había causado un antibiótico ototóxico que le dieron durante la internación. Pero la respuesta real llegó con un estudio genético a toda la familia.\n\n> \"Yo tengo un síndrome, un síndrome raro, es una enfermedad muy rara, que es el síndrome de Waardenburg tipo 4.\"\n\nLa sordera no era adquirida: estaba presente desde el nacimiento.\n\n## Qué es el síndrome de Waardenburg\n\nEs una condición genética que afecta el desarrollo de ciertas células durante la gestación, en particular las relacionadas con la pigmentación y con estructuras del oído interno. Sus signos más característicos, tal como los describe el propio Guillem:\n\n> \"Ese síndrome lo que lleva es la sordera, problemas intestinales, los ojos azules, mechón blanco, que cuando yo nací, nací con un mechón blanco, faltas de pigmentación.\"\n\nExisten varios tipos. El tipo 4, que es el de Guillem, suma el compromiso intestinal (por eso sus primeros años de hospital) a los rasgos más conocidos: hipoacusia neurosensorial, ojos muy claros o de distinto color, mechón de pelo blanco y manchas de piel más claras.\n\n## Por qué importa conocer la causa de una hipoacusia\n\nLa historia de Guillem muestra el valor del diagnóstico genético cuando hay una hipoacusia congénita:\n\n- **Orienta el tratamiento**: al confirmar una sordera neurosensorial profunda de nacimiento, se pudo avanzar con el implante coclear a los dos años.\n- **Explica el cuadro completo**: entender que la sordera y los problemas intestinales eran parte de lo mismo evitó seguir buscando causas por separado.\n- **Informa a la familia**: al ser una condición genética, el estudio familiar aporta información valiosa para todos.\n\n## Un síndrome no define una vida\n\nMás allá del nombre raro y del diagnóstico complejo, Guillem hoy tiene 25 años, es enfermero en un hospital de Barcelona, vive solo y comparte su historia en redes para dar visibilidad.\n\n> \"Lo que quiero es dar visibilidad, es decir, que vean todo lo que he conseguido hasta ahora, la edad que tengo y que puedo hacer una vida normal como cualquier otra persona y que no hay ningún tabú ni nada que esconder.\"\n\nSi tu hijo o hija nació con hipoacusia y todavía no conocés la causa, hablarlo con el equipo médico y preguntar por estudios genéticos puede acercarte respuestas.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-03",
+    "etiquetas": [
+      "informacion",
+      "familias",
+      "podcast"
+    ],
+    "relacionados": [
+      "enfermero-sordo-con-implante-coclear-la-historia-de-guillem",
+      "trabajar-en-salud-con-hipoacusia-mascarillas-y-lectura-labial",
+      "segundo-implante-coclear-anos-despues-por-que-puede-no-funcionar"
+    ],
+    "episodio": {
+      "slug": "45-enfermero-sordo-con-implante-coclear-en-espana-guillem-bodi-hipoacusico",
+      "titulo": "Enfermero sordo con implante coclear en España — Guillem Bodi",
+      "numero": 45
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "ninos-con-audifonos-la-charla-de-amaia-y-tomy",
+    "titulo": "Niños con audífonos: Amaia y Tomy cuentan cómo escuchan el mundo",
+    "resumen": "Amaia (8) y Tomy (9) usan audífonos y cuentan en primera persona cómo es su vida: la escuela, los amigos, los deportes y lo que le dirían al país.",
+    "contenido": "Amaia tiene 8 años y Tomy tiene 9. Los dos usan dos audífonos, los dos tienen hipoacusia de causa desconocida desde muy chiquitos, y los dos se sentaron frente al micrófono del podcast a contar su vida con una naturalidad que desarma cualquier prejuicio.\n\n> \"Vinimos a contar cosas sobre nuestros audis para que la gente que quiera saber, sepa\", explicó Amaia apenas empezó la charla.\n\nAmaia tiene hipoacusia desde los dos años y medio; Tomy, desde los tres. Cuando Lucas les preguntó si eso les cambia algo en la vida, la respuesta fue inmediata.\n\n> \"Para mí no. Yo puedo hacer cualquier cosa con ellos\", dijo Amaia.\n\nTomy fue por otro lado: encontró una ventaja. Le gusta que a la noche puede sacarse los audífonos y dormir en silencio total. El perro del vecino, los truenos, el hermanito que llora: nada lo despierta. Su mamá se estresa; él duerme relajado.\n\n## La vida de dos chicos que escuchan distinto\n\nLa charla recorre la vida cotidiana de cualquier chico de primaria, con el detalle de que ellos la viven con audífonos. Tomy juega al fútbol, al handball y al tenis, va a una escuela alemana donde aprende dos idiomas, colecciona azulejos de pileta y está escribiendo una novela policial que se llama *Crimen*. Amaia hace natación y taekwondo, anda en bici con su papá, colecciona cartas de Pokémon y una vez se leyó un libro de 200 páginas en un día.\n\nEn el medio aparecen las estrategias que fueron armando solos: Amaia se saca los audífonos para nadar y le pide al profesor que le explique las consignas antes o que le haga señas desde el borde. Tomy tenía un profesor favorito de natación porque hablaba fuerte y lo escuchaba sin audífonos. Cuando llueve, ella se suelta el pelo para taparse los oídos; él se pone capucha. A veces doble capucha, aporta Lucas.\n\n## Lo que les gustaría decirle a todo el país\n\nEl momento más fuerte del episodio llega cuando Lucas les pregunta qué dirían si pudieran hablarle a toda la Argentina de una vez.\n\n> \"No miren más mal a las personas que son diferentes a vos. Me pone mal ver una persona mirándome así, no me gusta\", dijo Tomy.\n\nTomy cuenta que los chicos más chicos de su escuela lo miran feo, y que él cree que es porque no saben lo que es un audífono. En cambio, en el encuentro de Casacusia donde conoció a Lucas, se sintió distinto: \"Ahí nadie miraba mal a nadie porque todos éramos iguales\".\n\nAmaia eligió otro mensaje, igual de directo:\n\n> \"Diría que sean más pacientes con nosotros, que nos repitan las cosas. Porque si nosotros no escuchamos las cosas, queremos volver a escuchar.\"\n\nY contó que algunas amigas se cansan de repetirle: \"Me dicen: Amaia, no te vamos a poder repetir más\". Lucas les compartió su propia mirada, la de alguien que pasó por lo mismo: \"Yo creo que merecemos que nos repitan las cosas si no las entendemos\".\n\n## Una de cada veinte personas\n\nSobre el final, Lucas les acercó un dato que los sorprendió: en Argentina se estima que unas 2.500.000 personas tienen hipoacusia, una de cada veinte. Eso significa que en cada aula debería haber al menos una persona que escucha distinto. Por eso importa tanto que estas voces circulen: para los papás de un bebé recién diagnosticado, escuchar a Amaia y a Tomy hablar de deportes, novelas, idiomas y pijamadas puede cambiarles la manera de imaginar el futuro de su hijo.\n\nLa charla termina con Tomy preguntando cuántas veces puede volver al podcast y pidiendo probar del otro lado: quiere ser entrevistador. Amaia, que llegó a la grabación porque quería conocer a Lucas después de ver sus videos, se va habiendo contado su historia con sus propias palabras. Que era, al fin y al cabo, la idea de todo esto.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-27",
+    "etiquetas": [
+      "historias",
+      "familias",
+      "podcast"
+    ],
+    "relacionados": [
+      "escuchar-en-el-aula-con-audifonos-microfono-remoto-y-ruido",
+      "me-lo-repetis-hipoacusia-y-amistad-en-la-infancia",
+      "audifonos-en-ninos-agua-deportes-y-cuidados-diarios"
+    ],
+    "episodio": {
+      "slug": "49-ninos-con-audifonos-entrevista-amaia-y-tomy-hipoacusia-infantil",
+      "titulo": "Niños con audífonos — Amaia y Tomy (hipoacusia infantil)",
+      "numero": 49
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "escuchar-en-el-aula-con-audifonos-microfono-remoto-y-ruido",
+    "titulo": "¿Cómo escucha en clase un niño con audífonos? Micrófono remoto, ruido y aula real",
+    "resumen": "Micrófono remoto, videos a todo volumen y aulas ruidosas: qué pasa en la escuela cuando un chico usa audífonos, contado por Amaia y Tomy en el podcast.",
+    "contenido": "Cuando pensamos en un chico con audífonos en la escuela, solemos imaginar que el dispositivo resuelve todo. Pero el aula real tiene ruido, distancia, parlantes rotos y docentes que hablan mientras escriben en el pizarrón. En el episodio 49 del podcast, Amaia (8 años) y Tomy (9) contaron con lujo de detalle cómo es escuchar en clase.\n\n## El micrófono remoto: una ayuda que se usa con criterio\n\nMuchos chicos con audífonos usan un **micrófono remoto**: un dispositivo que se le da al docente para que su voz llegue directo a los audífonos, sin perderse en el ruido del aula. Pero los chicos aprenden rápido cuándo conviene y cuándo no.\n\n> \"Yo le doy el roger a la profe de inglés nomás, porque en primer y tercer grado me tocaron las profes más gritonas. Entonces no se los doy, porque si no me va a tumbar el oído\", contó Amaia.\n\nTomy contó algo parecido: a veces prefiere no dar el micrófono porque escucha muy fuerte y eso lo molesta. La lección es clara: la tecnología ayuda, pero el chico es quien mejor sabe cómo está escuchando, y vale la pena preguntarle.\n\n## Los videos en clase: volumen alto no es igual a entender\n\nUno de los momentos más reveladores de la charla fue cuando Amaia describió los videos que ponen en Ciencias Sociales:\n\n> \"Me ponen explicaciones en video, están al máximo, pero yo no entiendo, porque ponen como una bocina rara en mi salón y no le entiendo bien las palabras que dice.\"\n\nEsto es algo que muchas familias no saben: **subir el volumen no mejora la comprensión** si el sonido está distorsionado o hay reverberancia. Un parlante de mala calidad a todo volumen puede ser peor que una voz clara y cercana. Amaia intentó decírselo a su profesora, pero sintió que no le dieron bolilla. Y como les pasa a muchos chicos, después se olvidó de contarlo en casa.\n\n> \"¿Y eso se lo contás a tus papás?\" — le preguntó Lucas. \"Me olvido. Pero ahora les voy a contar\", respondió ella.\n\n## El pizarrón, los dictados y los bancos lejanos\n\nAmaia también contó que sus compañeros le hablan desde dos o tres bancos de distancia y no los entiende, y que cuando pide que se acerquen, la maestra los reta por moverse. Tomy, en cambio, encontró su propia solución: \"Yo, en vez de decirles que se acerquen, me acerco\". Lucas destacó esa actitud: no esperar siempre que el otro haga el movimiento.\n\n## Qué puede hacer la familia\n\nDe la charla se desprenden ideas concretas para acompañar:\n\n- **Preguntarle al chico** cómo escucha en cada situación: con micrófono remoto, con videos, en el fondo del aula.\n- **Abrir el canal con la escuela**: muchas barreras (un parlante roto, un aula al lado de un sector ruidoso) se resuelven si alguien las nombra.\n- **Hablarlo en equipo**, como resumió Lucas: \"Quizás es a un profesor, quizás a la fonoaudióloga, quizás a mis papás, pero pensar en equipo es más fácil\".\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-29",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "ninos-con-audifonos-la-charla-de-amaia-y-tomy",
+      "me-lo-repetis-hipoacusia-y-amistad-en-la-infancia",
+      "audifonos-en-ninos-agua-deportes-y-cuidados-diarios"
+    ],
+    "episodio": {
+      "slug": "49-ninos-con-audifonos-entrevista-amaia-y-tomy-hipoacusia-infantil",
+      "titulo": "Niños con audífonos — Amaia y Tomy (hipoacusia infantil)",
+      "numero": 49
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "me-lo-repetis-hipoacusia-y-amistad-en-la-infancia",
+    "titulo": "\"¿Me lo repetís?\": hipoacusia y amistad en la infancia",
+    "resumen": "Amigos que se cansan de repetir, bromas que duelen y miradas raras: Amaia y Tomy cuentan cómo viven la amistad los chicos con hipoacusia.",
+    "contenido": "Hay una escena que se repite en la vida de casi todas las personas con hipoacusia, a cualquier edad: pedir que te repitan algo y sentir que del otro lado se acaba la paciencia. En el episodio 49 del podcast, Amaia (8 años) y Tomy (9) la contaron desde el patio de la escuela.\n\n> \"Yo estaba con unas amigas y de repente me dicen: Amaia, no te vamos a poder repetir más, ya es mucho que te lo repetimos. Y yo, como diciendo: miren, escucho mal, por favor, ¿me lo pueden repetir? Y ellas como que se cansan, no tienen paciencia\", contó Amaia.\n\nTomy sumó su versión: tiene un mejor amigo que sabe lo que es la hipoacusia, pero igual a veces le dice \"sordo\" en tono de broma. \"No sé si me lo dicen de chiste, pero a mí no me gusta\", dijo. Y también contó su truco para zafar de la vergüenza de preguntar dos veces:\n\n> \"A la segunda vez les digo sí o no. La mayoría de las veces les digo que sí, porque es positivo.\"\n\nEs una estrategia que muchos adultos con hipoacusia van a reconocer al instante: responder al azar antes que volver a pedir que repitan. Funciona hasta que no funciona.\n\n## Lo que dijo Lucas: merecemos que nos repitan\n\nLucas, que convive con una pérdida auditiva progresiva desde chico, no dejó pasar el tema. Le preguntó a Tomy cuánto tiempo pierde realmente la otra persona en repetir algo. \"¿Medio minuto, un minuto? ¿Y cuánto le cambia la vida a la otra persona en esos 30 segundos?\"\n\n> \"Yo creo que merecemos que nos repitan las cosas si no las entendemos\", cerró Lucas.\n\nY compartió su propio recurso: el humor. Cuando no entiende, repite en voz alta lo que le pareció escuchar, aunque sea un disparate (\"muero por helado\" en lugar de \"estoy arruinado\"), y la risa destraba la conversación.\n\n## Las miradas que pesan más que las palabras\n\nPara Tomy, lo más difícil no son las bromas sino las miradas. Los chicos más chicos de su escuela lo miran \"feo, feo\", y él tiene su hipótesis: lo hacen porque no saben lo que es un audífono. Por eso su mensaje, si pudiera hablarle a todo el país, sería directo: \"No miren más mal a las personas que son diferentes a vos\".\n\nEl contraste lo vivió en un encuentro de la comunidad: \"Ahí nadie miraba mal a nadie, porque todos éramos iguales\". Y también en un kiosco de su club, cuando una chica se le acercó y le preguntó si era hipoacúsico, porque ella también. \"Me gusta hablar con personas con hipoacusia\", resumió.\n\n## Qué podemos aprender los adultos\n\nDe esta charla entre chicos quedan tres ideas que sirven para cualquier familia:\n\n- **Repetir no cuesta nada.** Si un chico pide que le repitan, es porque quiere participar. Cansarse de repetir es dejarlo afuera.\n- **Las bromas sobre la audición no siempre caen bien**, aunque vengan del mejor amigo. Vale la pena preguntar cómo se siente.\n- **Encontrarse con pares transforma.** Estar con otros chicos que también usan audífonos convierte lo \"raro\" en compartido.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-01",
+    "etiquetas": [
+      "comunidad",
+      "historias",
+      "podcast"
+    ],
+    "relacionados": [
+      "ninos-con-audifonos-la-charla-de-amaia-y-tomy",
+      "escuchar-en-el-aula-con-audifonos-microfono-remoto-y-ruido",
+      "audifonos-en-ninos-agua-deportes-y-cuidados-diarios"
+    ],
+    "episodio": {
+      "slug": "49-ninos-con-audifonos-entrevista-amaia-y-tomy-hipoacusia-infantil",
+      "titulo": "Niños con audífonos — Amaia y Tomy (hipoacusia infantil)",
+      "numero": 49
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "audifonos-en-ninos-agua-deportes-y-cuidados-diarios",
+    "titulo": "Audífonos en niños: agua, deportes y cuidados de todos los días",
+    "resumen": "¿Qué pasa con los audífonos en la pileta, la lluvia y el deporte? Amaia y Tomy cuentan sus rutinas reales de cuidado: molde, antihumedad y trucos.",
+    "contenido": "Una de las primeras dudas de cualquier familia cuando un chico empieza a usar audífonos es práctica: ¿qué pasa con el agua, el deporte y el trajín diario? En el episodio 49 del podcast, Amaia (8 años) y Tomy (9) respondieron sin querer todas esas preguntas, contando sus rutinas con total naturalidad.\n\n## Deportes: los audífonos acompañan (casi) todo\n\nEntre los dos suman fútbol, handball, tenis, natación y taekwondo. Y en casi todos, los audífonos van puestos.\n\n> \"Cuando estamos en calentamiento tenemos que poner la cabeza para abajo y se me salen los audis, pero quedan colgando, entonces no pasa nada\", contó Amaia sobre taekwondo.\n\nLa excepción es la pileta: los audífonos convencionales no van al agua. Ahí cada uno armó su sistema. Amaia se los saca y **pide que el profesor le explique las consignas antes de entrar o le haga señas**. Tomy lee los labios y recuerda a su profesor favorito de natación: hablaba fuerte y lo escuchaba sin audífonos.\n\n## Lluvia: el pelo, la capucha y el paraguas\n\n¿Y si llueve con los audífonos puestos? Los chicos tienen resuelto lo que a muchos adultos les genera ansiedad. Amaia se suelta el pelo para que le tape los oídos; Tomy se pone capucha o lleva paraguas. Lucas confesó que él a veces usa doble capucha. Una salpicadura no suele ser un problema; lo que conviene evitar es que se empapen.\n\nEso sí: la ducha es otra historia. Amaia contó entre risas que ya se metió a bañarse tres veces con los audífonos puestos y se dio cuenta porque seguía escuchando los ruidos. \"Sobrevivieron\", aclaró. La sugerencia de Lucas: un cartel en el espejo del baño que diga \"sacarme los audífonos\".\n\n## La rutina de la noche: cajita y antihumedad\n\nLos tres, Amaia, Tomy y Lucas, coincidieron en el mismo ritual nocturno: los audífonos duermen en una cajita con **pastillas o perlitas antihumedad**, que absorben la transpiración y la humedad acumulada durante el día. Es uno de los cuidados más simples y más importantes para alargar la vida útil de los dispositivos. La cajita vive en la mesita de luz o en un mueble fijo: tener siempre el mismo lugar evita perderlos.\n\n## El molde: esa \"pasta\" que se convierte en pelotita\n\nComo los chicos crecen, el molde a medida que va dentro de la oreja se renueva cada tanto. Tomy contó la experiencia con precisión de cronista: te ponen una pasta en la oreja, \"después se convierte en una pelotita que pica porque se pone dura\", y de ahí sale el molde nuevo con la forma exacta de tu oreja. Amaia tiene varios moldes viejos guardados en su casa. Es un trámite indoloro que forma parte de la vida normal de un chico con audífonos.\n\n## Lo que dejan ver estas rutinas\n\nDetrás de cada truco hay algo más grande: dos chicos que conocen sus dispositivos, saben cuidarlos y encontraron la vuelta para que la hipoacusia no les recorte nada. Como dijo Amaia: \"Yo puedo hacer cualquier cosa con ellos\".\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-02",
+    "etiquetas": [
+      "tecnologia",
+      "familias",
+      "podcast"
+    ],
+    "relacionados": [
+      "ninos-con-audifonos-la-charla-de-amaia-y-tomy",
+      "escuchar-en-el-aula-con-audifonos-microfono-remoto-y-ruido",
+      "me-lo-repetis-hipoacusia-y-amistad-en-la-infancia"
+    ],
+    "episodio": {
+      "slug": "49-ninos-con-audifonos-entrevista-amaia-y-tomy-hipoacusia-infantil",
+      "titulo": "Niños con audífonos — Amaia y Tomy (hipoacusia infantil)",
+      "numero": 49
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "como-se-desarrolla-el-lenguaje-en-ninos-con-hipoacusia",
+    "titulo": "¿Cómo se desarrolla el lenguaje en niños con hipoacusia?",
+    "resumen": "La Dra. Verónica Maggio explica cómo se adquiere el lenguaje, qué cambia con la hipoacusia y qué apoyos ayudan a que un niño hable, entienda y piense.",
+    "contenido": "Una de las preguntas que más se repiten entre madres y padres cuando reciben un diagnóstico de hipoacusia es la misma: ¿mi hijo va a poder hablar, pensar, estudiar, expresar lo que siente? En el episodio 51 del podcast, Lucas conversó con la Dra. Verónica Maggio, doctora en Fonoaudiología especializada en lenguaje infantil, para desarmar esa incertidumbre con información clara.\n\n## Un proceso que empieza al nacer\n\nEl lenguaje no aparece de un día para el otro. Es una habilidad que empieza a construirse desde el nacimiento y completa su adquisición alrededor de los 6 años. Durante el primer año de vida ocurre la fase preverbal: el bebé aprende a comunicarse sin hablar, a pedir señalando, a conectarse con su entorno. En paralelo, el cerebro va copiando los sonidos del idioma al que está expuesto.\n\n> \"El lenguaje es una habilidad que no se aprende conscientemente. Es lo que se llama un aprendizaje implícito. El chico está en un entorno donde le hablan y donde pasan cosas. Y el cerebro copia solo la escena asociada a las palabras que acompañan esa escena\", explica la Dra. Maggio.\n\nElla lo resume con una imagen muy gráfica: la escena es lo que pasa todos los días —la mamá que sirve la comida, el vaso de agua sobre la mesa— y el subtítulo son las palabras que los adultos ponen sobre esa escena. El cerebro del niño une las dos cosas y aprende.\n\n## Qué cambia cuando hay hipoacusia\n\nCuando hay una pérdida auditiva, ese aprendizaje deja de ser automático. La Dra. Maggio distingue dos situaciones muy distintas: la hipoacusia prelingual (presente desde el nacimiento o antes de desarrollar el lenguaje) y la postlingual (cuando la pérdida llega después de que el lenguaje ya se construyó).\n\n> \"En cualquier caso en donde hay una dificultad en el desarrollo, el aprendizaje del lenguaje no es implícito. Hay que hacer un esfuerzo por aprender el lenguaje como quien aprende un segundo idioma.\"\n\nEn los casos postlinguales, las conexiones neuronales del lenguaje ya están hechas: el dispositivo auditivo ayuda a oír mejor, pero no hay que construir el lenguaje desde cero. En los prelinguales, en cambio, hacen falta lo que ella llama andamios: apoyos que ayudan a que esas conexiones se generen.\n\n## Los andamios: familia, terapeutas y recursos visuales\n\nLos andamios no son solo técnicas: son también personas. Terapeutas, docentes, madres y padres que rodean al niño. Y del lado de los recursos, tres grandes soportes: la comunicación bimodal (hablar acompañando con gestos), la enseñanza temprana de la lectura y las imágenes.\n\n> \"Un chico hipoacúsico aprende mejor el lenguaje si antes aprende a leer, si lo ve.\"\n\nPor eso en muchos abordajes se enseña a leer y escribir a los 3 años, cuando en el sistema común es a los 6. Lo importante, aclara, es que el soporte no es eterno: se usa hasta que el niño incorpora el lenguaje y después puede comprender solo escuchando.\n\nOtro punto clave es la constancia del entorno. Si el niño aprende los gestos con la fonoaudióloga pero nadie los usa en casa durante la semana, no sirve.\n\n> \"El hecho de que el alrededor lo aprenda es lo que garantiza que después el chico lo use. Ese es el rol de las personas de alrededor: ayudar a que se generalicen los aprendizajes.\"\n\n## Comunicarse es lo primero\n\nUno de los momentos más potentes del episodio es cuando la Dra. Maggio explica qué es lo que realmente frustra a un niño: no es usar gestos ni señas, es no poder comunicarse.\n\n> \"Cuando no puede comunicarse, no puede hablar, no usa gestos, no usa palabras y pasa el tiempo, los problemas de conducta crecen por frustración y por falta de comprensión.\"\n\nEl objetivo siempre es que el vehículo de comunicación sea la palabra hablada. Pero mientras tanto, darle al niño una forma de llegar al otro —la que sea— cambia todo: la conducta, el vínculo y las ganas de aprender.\n\n## Sí, puede desarrollar el lenguaje\n\n¿Y la pregunta del principio? La respuesta de la Dra. Maggio es alentadora: un niño con hipoacusia bilateral profunda, equipado tempranamente, con buena rehabilitación y sin otras complicaciones asociadas, puede desarrollar el lenguaje con normalidad. Cuanto más temprano el diagnóstico y el equipamiento, más posibilidades de un desarrollo típico. El cerebro, como dice ella, es la máquina del lenguaje: la audición es la puerta de entrada, y hoy existen muchas herramientas para abrirla.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-26",
+    "etiquetas": [
+      "informacion",
+      "familias",
+      "podcast"
+    ],
+    "relacionados": [
+      "hitos-del-lenguaje-cuantas-palabras-por-edad",
+      "comunicacion-bimodal-los-gestos-frenan-el-habla",
+      "audicion-lenguaje-y-pensamiento-como-se-conectan"
+    ],
+    "episodio": {
+      "slug": "51-entender-el-lenguaje-y-el-pensamiento-dra-veronica-maggio",
+      "titulo": "Entender el lenguaje y el pensamiento — Dra. Verónica Maggio",
+      "numero": 51
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "hitos-del-lenguaje-cuantas-palabras-por-edad",
+    "titulo": "Hitos del lenguaje: ¿cuántas palabras tiene que decir un niño según su edad?",
+    "resumen": "Primeras palabras a los 18 meses, 50 palabras a los 2 años, frases a los 3. Los hitos del lenguaje infantil según la Dra. Verónica Maggio.",
+    "contenido": "¿A qué edad tendría que decir sus primeras palabras? ¿Cuántas palabras es esperable a los 2 años? Son preguntas que se hacen casi todas las familias, y mucho más cuando hay una hipoacusia diagnosticada o una sospecha. En el episodio 51 del podcast, la Dra. Verónica Maggio, doctora en Fonoaudiología, repasó los hitos del desarrollo típico del lenguaje.\n\n## El primer año: comunicarse sin hablar\n\nAntes de las palabras existe la fase preverbal, que ocupa todo el primer año de vida. Ahí el bebé aprende a conectarse con el entorno, a pedir señalando y a seguir claves visuales. Es donde se desarrolla la intención comunicativa, la base de todo lo que viene después.\n\nMientras tanto, el cerebro va copiando los sonidos del idioma que escucha a su alrededor y ajustando la escucha a ese idioma.\n\n## Los hitos, edad por edad\n\nSegún explicó la Dra. Maggio, en un desarrollo típico:\n\n- **18 meses**: primeras palabras sueltas, relacionadas con lo cotidiano. Mamá, papá, agua, pan, leche, sí, no.\n- **2 años**: alrededor de **50 palabras** y la capacidad de unir dos palabras: \"mamá jugo\", \"papá comer\".\n- **3 años**: frases cortas de tres o cuatro palabras, con artículo y verbo conjugado.\n- **4 años**: frases de seis o siete palabras.\n- **6 años**: el proceso básico se completa.\n\n> \"Un chico de 6 años habla casi como un adulto. Pueden armar frases muy largas, pueden hablar de corrido, no tienen errores en la pronunciación\", describe la Dra. Maggio.\n\nA esa edad, un niño maneja un vocabulario de unas 3.000 palabras. Un adulto que estudió y lee puede llegar a 120.000. La gramática básica y todos los sonidos del idioma ya se adquirieron a los 6 años; después el lenguaje sigue creciendo toda la vida con el estudio y la lectura.\n\n## ¿Y si esos plazos no se cumplen?\n\nCuando hay una hipoacusia, un trastorno del lenguaje, un cuadro vinculado al autismo u otra dificultad del desarrollo, ese proceso de 6 años puede alargarse y necesitar apoyos.\n\n> \"En cualquier caso en donde hay una dificultad en el desarrollo, el aprendizaje del lenguaje no es implícito. Hay que hacer un esfuerzo por aprender el lenguaje como quien aprende un segundo idioma.\"\n\nLa buena noticia es que existen herramientas concretas —terapia fonoaudiológica, comunicación bimodal, lectura temprana, apoyos visuales— y que con diagnóstico y tratamiento tempranos los resultados mejoran mucho. Una señal importante para las familias: si un niño está en tratamiento, tiene que mostrar avances de un año al otro. Si está igual que hace un año o dos, es momento de replantear el abordaje con el equipo profesional.\n\nSi notás que tu hijo no alcanza estos hitos, la consulta temprana con fonoaudiología y una evaluación auditiva son el primer paso. Detectar a tiempo hace la diferencia.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-29",
+    "etiquetas": [
+      "informacion",
+      "familias",
+      "podcast"
+    ],
+    "relacionados": [
+      "como-se-desarrolla-el-lenguaje-en-ninos-con-hipoacusia",
+      "comunicacion-bimodal-los-gestos-frenan-el-habla",
+      "audicion-lenguaje-y-pensamiento-como-se-conectan"
+    ],
+    "episodio": {
+      "slug": "51-entender-el-lenguaje-y-el-pensamiento-dra-veronica-maggio",
+      "titulo": "Entender el lenguaje y el pensamiento — Dra. Verónica Maggio",
+      "numero": 51
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "comunicacion-bimodal-los-gestos-frenan-el-habla",
+    "titulo": "Comunicación bimodal: ¿los gestos frenan el habla en niños con hipoacusia?",
+    "resumen": "Un mito frecuente dice que hacer gestos limita el lenguaje oral. La Dra. Verónica Maggio explica por qué la comunicación bimodal ayuda, no frena.",
+    "contenido": "Es uno de los miedos más comunes entre las familias de niños con hipoacusia: \"si le hago gestos, no va a hablar\". En el episodio 51 del podcast, la Dra. Verónica Maggio, doctora en Fonoaudiología especializada en lenguaje infantil, fue muy clara: eso es un mito.\n\n## Qué es la comunicación bimodal\n\nLa comunicación bimodal consiste en hablar acompañando las palabras con gestos, al mismo tiempo. No es lengua de señas, que es otro idioma con su propia estructura.\n\n> \"No estoy hablando de lengua de signos, que es como otro idioma, sino de acompañar con gestos las palabras. Eso nos ayuda a entender más a cualquiera\", explica la Dra. Maggio.\n\nEl ejemplo que da es muy cotidiano: si viajás a un país donde no conocés el idioma y alguien acompaña lo que dice con un gesto, te da una mano enorme. Al niño con hipoacusia le pasa lo mismo: el gesto le permite asociar mejor los significados sin invalidar el lenguaje oral.\n\n## De dónde viene el mito\n\nDurante décadas, en Argentina la formación era o oralista o gestualista, sin puntos medios. \"Boca o River\", como lo describe la Dra. Maggio. Ese enfrentamiento dejó instalada la idea de que el gesto compite con la palabra.\n\n> \"Recién ahora estamos como empezando a reconocer lo de la comunicación bimodal. Es algo que en los últimos cinco o seis años se está empezando a reconocer. Incluso hay instituciones oralistas que están empezando a incorporar el uso de esta herramienta, porque ven que con la estimulación auditiva pura a veces no aprenden.\"\n\n## El caso de Bastián\n\nEn el episodio, la Dra. Maggio contó la historia de Bastián, un nene con hipoacusia que llegó a su consultorio a los 4 años sin lenguaje funcional: repetía frases completas a la perfección, pero no comprendía nada de lo que decía. La frustración se traducía en serios problemas de conducta.\n\nSus padres al principio se resistían a la comunicación bimodal por miedo a que limitara el habla. Cuando se empezó a trabajar con gestos, agendas visuales y apoyos gráficos, todo cambió.\n\n> \"No fue así, al contrario: le favoreció el desarrollo comprensivo y también la capacidad de expresarse con más recursos.\"\n\nHoy Bastián tiene 8 años, lee y escribe, y aunque su pronunciación todavía es imperfecta, su efectividad comunicativa y su capacidad adaptativa mejoraron enormemente.\n\n## El gesto es un andamio, no una muleta eterna\n\nUn punto clave: los apoyos visuales y gestuales son temporales. Se usan hasta que el niño incorpora el lenguaje y puede comprender solo escuchando. Y para que funcionen, todo el entorno tiene que usarlos: la familia, la maestra, el acompañante. Si el niño solo los ve una hora por semana en el consultorio, no alcanza.\n\nLo que más frustra a un niño no es comunicarse con gestos: es no poder comunicarse de ninguna manera. Darle un vehículo para llegar al otro es siempre el primer paso.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-01",
+    "etiquetas": [
+      "informacion",
+      "familias",
+      "podcast"
+    ],
+    "relacionados": [
+      "como-se-desarrolla-el-lenguaje-en-ninos-con-hipoacusia",
+      "hitos-del-lenguaje-cuantas-palabras-por-edad",
+      "audicion-lenguaje-y-pensamiento-como-se-conectan"
+    ],
+    "episodio": {
+      "slug": "51-entender-el-lenguaje-y-el-pensamiento-dra-veronica-maggio",
+      "titulo": "Entender el lenguaje y el pensamiento — Dra. Verónica Maggio",
+      "numero": 51
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "audicion-lenguaje-y-pensamiento-como-se-conectan",
+    "titulo": "Audición, lenguaje y pensamiento: ¿cómo se conectan en el cerebro?",
+    "resumen": "El lenguaje es la principal herramienta del pensamiento. Cómo la audición ayuda a construirlo y qué pasa cuando falta, según la Dra. Verónica Maggio.",
+    "contenido": "¿Puede pensar con profundidad un niño que no escucha? ¿Puede imaginar, soñar, ponerse en el lugar del otro? En el episodio 51 del podcast, la Dra. Verónica Maggio, doctora en Fonoaudiología, explicó cómo se conectan audición, lenguaje y pensamiento, y por qué esa conexión es central para el desarrollo de cualquier niño.\n\n## El lenguaje construye el pensamiento\n\nLa relación es directa: primero se arma el lenguaje, y sobre esa base se construye el pensamiento.\n\n> \"El lenguaje es la herramienta que ayuda a construir el pensamiento, es la principal herramienta que ayuda a construir el pensamiento, a imaginar las cosas\", explica la Dra. Maggio.\n\nSi el lenguaje no está armado, el pensamiento queda en lo concreto: lo que pasa aquí y ahora. Con el lenguaje desarrollado, en cambio, podemos predecir, hacer hipótesis, viajar en el tiempo con las ideas.\n\n> \"Podés con el lenguaje hablar de cosas que no están, porque pasaron hace millones de años, o de cosas que todavía no existen. Es algo que te permite acceder a un mundo de conocimiento que no tenés con ninguna otra función intelectual.\"\n\nY va más allá del conocimiento: la empatía, ponerle nombre a las emociones, entender los sentimientos del otro. Como dice la Dra. Maggio, todo eso \"va con palabras, va subtitulado\".\n\n## Qué pasa cuando la comprensión falla\n\nLa Dra. Maggio citó un estudio realizado en Inglaterra que siguió durante 10 años a más de 200 chicos con trastorno del desarrollo del lenguaje. Al cabo de ese tiempo, el 30% —sobre todo los que tenían problemas de comprensión— había cambiado de diagnóstico: pasaron a tener una discapacidad intelectual leve.\n\n> \"Mientras más pasa el tiempo sin que la persona comprenda lo que pasa a su alrededor, sin que comprenda el lenguaje oral, las habilidades intelectuales esperables empiezan a decaer.\"\n\nEse dato, aclara, corresponde al trastorno del lenguaje y no a la hipoacusia, pero pinta con claridad el papel del lenguaje en el desarrollo del intelecto. Y refuerza por qué el diagnóstico y la intervención tempranos importan tanto.\n\n## El rol de la audición: la puerta de entrada\n\nLa audición es la vía principal por la que el lenguaje entra al cerebro y va trazando conexiones neuronales. Pero no es la única. En el cerebro existe una zona donde confluyen lo que escuchamos, lo que vemos y el movimiento: la encrucijada temporo-parieto-occipital.\n\n> \"Cuando uno escucha bien, el que más se activa es el componente auditivo. Pero cuando hay alguna adversidad en el desarrollo, uno lo que hace es potenciar los otros dos: el visual y el kinestésico.\"\n\nPor eso un niño con hipoacusia puede construir lenguaje —y por lo tanto pensamiento— apoyándose en la lectura temprana, las imágenes y los gestos, siempre acompañados de la estimulación auditiva. Los tres canales alimentan la misma máquina: el cerebro. La clave está en detectar a tiempo, equipar cuando corresponde y sumar los apoyos que cada niño necesita.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-03",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "como-se-desarrolla-el-lenguaje-en-ninos-con-hipoacusia",
+      "hitos-del-lenguaje-cuantas-palabras-por-edad",
+      "comunicacion-bimodal-los-gestos-frenan-el-habla"
+    ],
+    "episodio": {
+      "slug": "51-entender-el-lenguaje-y-el-pensamiento-dra-veronica-maggio",
+      "titulo": "Entender el lenguaje y el pensamiento — Dra. Verónica Maggio",
+      "numero": 51
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "como-es-un-tratamiento-de-terapia-sonora-para-acufenos",
+    "titulo": "¿Cómo es un tratamiento de terapia sonora para acúfenos? Paso a paso, con la Dra. Magali Legari",
+    "resumen": "Evaluación, elección del sonido, controles y plazos reales: cómo es un tratamiento de terapia sonora para acúfenos según la audióloga Magali Legari.",
+    "contenido": "Poner ruido blanco de una app y esperar que el acúfeno desaparezca no es hacer terapia sonora. Eso quedó claro en la charla entre Lucas y la Dra. Magali Legari, audióloga con 25 años de experiencia acompañando sistemas auditivos, que vino al podcast a contar cómo es de verdad un tratamiento de terapia sonora: con evaluación previa, objetivos claros y seguimiento.\n\n## Qué es (y qué no es) una terapia sonora\n\nLegari lo define así:\n\n> \"Terapia sonora es una forma de utilizar un sonido, una estimulación auditiva, para generar un cambio que tiende a querer ser positivo, en el objetivo de disminuir la percepción de un acúfeno o de la hiperacusia\", explica la Dra. Magali Legari.\n\nLa clave está en que ese sonido se usa de manera **conscientemente cuidada**: qué estímulo, con auriculares o en el ambiente, cuántas horas por día, con qué volumen. Todo eso tiene que estar fundamentado. Poner sonido de fondo desde el celular, sin evaluación ni seguimiento, no es una terapia sonora.\n\n## Primero, evaluar: el acúfeno es un síntoma\n\nAntes de indicar cualquier sonido, hay que entender qué está diciendo ese acúfeno. Legari usa una analogía simple: consultar por un acúfeno es como consultar por un dolor de panza. Nadie espera que el médico resuelva sin evaluar.\n\nEl acúfeno es **multifactorial**: puede acompañar una alteración auditiva, una tensión muscular cercana al oído (bruxismo, cervicales), o incluso avisar de algo que requiere intervención médica. Por eso la evaluación es médica, audiológica y muchas veces interdisciplinaria: otorrinolaringólogo, audiólogo, kinesiólogo, odontólogo, psicólogo.\n\n> \"Se necesita evaluar y ver qué está diciendo ese síntoma\", resume Legari.\n\nY la evaluación audiológica va más allá de la audiometría: se mide la funcionalidad auditiva, la discriminación de palabras en silencio y con ruido, y se hace una **acufenometría** (dónde se localiza el acúfeno, con qué intensidad se compara, si es tono o ruido). El impacto emocional se mide con cuestionarios como el THI (Tinnitus Handicap Inventory), validado al español.\n\n## El tratamiento: como un plan de entrenamiento\n\nUna vez evaluado el paciente, se define el tipo de estímulo (ruido blanco, ruido rosa, sonidos de naturaleza, bandas estrechas para casos específicos), si va solo o combinado con medicación o equipamiento auditivo, y las pautas por escrito: cuánto tiempo, qué volumen, en qué momentos.\n\n> \"Yo les digo: yo soy su entrenadora auditiva, y para eso necesito darle un plan de tratamiento, de entrenamiento. Es un proceso de tres a seis meses\", cuenta Legari.\n\nLos plazos no son caprichosos: los procesos de modulación por estímulo, en cualquier área de la biología, llevan de tres a seis meses. Por eso no hay que esperar grandes cambios en el primer mes. El seguimiento es concreto: control a la semana o a los 15 días para verificar que la pauta se entendió, y luego controles mensuales durante el primer trimestre. Puede hacerse de manera virtual.\n\n## ¿Funciona? ¿Tiene efectos secundarios?\n\nMuchas personas que hacen terapia sonora bajan varios grados de incapacidad en las escalas, y algunas dejan de percibir el acúfeno. Pero no es para cualquier tipo de acúfeno: por eso importa tanto la evaluación previa.\n\n> \"No te puedo traer hoy porcentajes, pero no tengo pacientes que vuelvan estando peor\", dice Legari.\n\nEso sí: la terapia sonora sola no alcanza si hay otra cosa de base. Si alguien necesita tratar una tensión mandibular o tomar una medicación por un origen orgánico y solo se pone sonido, el cambio no va a llegar. El acúfeno se aborda en conjunto.\n\nDurante la charla, Legari también compartió que existe una web app gratuita de estímulos sonoros grabados con calidad controlada, desarrollada con un equipo de ingeniería universitaria, que nació en pandemia y se usa en muchos lugares de Argentina, siempre con la indicación de un profesional que regule qué estímulo y cómo usarlo.\n\nEl mensaje final es esperanzador: hay cada vez más centros y profesionales especializados, y para quien convive con un acúfeno que lo incomoda, hay caminos concretos para probar, evaluarse y encontrar alivio.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-26",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "ruido-blanco-o-ruido-rosa-para-acufenos-diferencias",
+      "acufenos-y-sueno-como-usar-sonido-para-dormir-mejor",
+      "acufenos-y-bruxismo-que-relacion-tienen"
+    ],
+    "episodio": {
+      "slug": "53-terapia-sonora-para-acufenos-o-tinnitus-dra-magali-legari",
+      "titulo": "Terapia sonora para acúfenos o tinnitus — Dra. Magali Legari",
+      "numero": 53
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "ruido-blanco-o-ruido-rosa-para-acufenos-diferencias",
+    "titulo": "¿Ruido blanco o ruido rosa para acúfenos? Diferencias y cómo se usan",
+    "resumen": "Ruido blanco, ruido rosa y sonidos de lluvia para acúfenos: en qué se diferencian, qué volumen usar y por qué no conviene tapar el acúfeno.",
+    "contenido": "Cuando se habla de terapia sonora para acúfenos, aparecen enseguida el ruido blanco y el ruido rosa. Pero ¿son lo mismo? ¿Cuál conviene? En el episodio 53 del podcast, la audióloga Magali Legari explicó las diferencias y, sobre todo, cómo usar estos sonidos sin cometer errores comunes.\n\n## Ruido blanco: muchas neuronas trabajando con poco volumen\n\nEl ruido blanco es el sonido que genera mayor estimulación frecuencial en la cóclea, que Legari compara con un piano que va de los 20 a los 20.000 hertz.\n\n> \"Cuando yo pongo ruido blanco, mayor cantidad de neuronas están trabajando aún con menos volumen, y eso es mucho más eficaz para generar la habituación del acúfeno\", explica la Dra. Magali Legari.\n\nPor eso el ruido blanco es más eficaz que la televisión o la música para \"desdibujar\" el acúfeno: la tele hace trabajar con mucho volumen a unas pocas \"teclas\" del piano auditivo, mientras que el ruido blanco distribuye el estímulo por todo el teclado.\n\n## Ruido rosa: más amable si hay sensibilidad auditiva\n\n> \"El ruido rosa tiene, a diferencia del blanco, un recorte en las frecuencias más agudas. Se hace como más fácil escucharlo, sobre todo si hay hipersensibilidad\", detalla Legari.\n\nPara personas que además del acúfeno tienen mucha sensibilidad al sonido (hiperacusia), el ruido rosa o una etapa previa de desensibilización pueden ser el punto de partida. También sirven los sonidos de la naturaleza: la lluvia bien grabada tiene un espectro bastante cercano al ruido blanco y trabaja sobre muchas neuronas.\n\n## El error más común: querer tapar el acúfeno\n\nAcá viene lo contraintuitivo. La indicación no es subir el volumen hasta dejar de escuchar el acúfeno, sino buscar el **punto de mezcla**: que el sonido y el acúfeno queden aproximadamente al mismo nivel.\n\n> \"La idea es que el volumen nunca sobrepase el acúfeno, y que use tiempos cortos, no tiempos largos\", advierte Legari.\n\n¿Por qué? Algunos acúfenos generan lo que se llama inhibición residual: ponés un sonido que lo tapa, al retirarlo el acúfeno baja, pero después vuelve. Y otros cursan con **efecto rebote**: cuando levantás la intensidad del ruido, el acúfeno \"tiende a querer ganar\" y se levanta también. Esto último puede pasar, por ejemplo, en cuadros como el hidrops o la enfermedad de Ménière, que se detectan con una evaluación médica especializada. Otra razón más para no automedicarse con sonido a volumen alto.\n\n## No cualquier grabación sirve\n\nGrabaciones de ruido blanco hay miles, pero la calidad importa: un archivo comprimido (un MP3 de una plataforma de streaming, por ejemplo) no estimula igual que un sonido grabado con calidad controlada. Y el tipo de estímulo, el volumen y los tiempos de uso los tiene que indicar un profesional que conozca tu evaluación.\n\nEn resumen: ruido blanco para un estímulo amplio, ruido rosa si hay hipersensibilidad, sonidos de lluvia como alternativa natural, siempre al punto de mezcla y con tiempos pautados. El sonido correcto, usado de la manera correcta, hace la diferencia.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-29",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "como-es-un-tratamiento-de-terapia-sonora-para-acufenos",
+      "acufenos-y-sueno-como-usar-sonido-para-dormir-mejor",
+      "acufenos-y-bruxismo-que-relacion-tienen"
+    ],
+    "episodio": {
+      "slug": "53-terapia-sonora-para-acufenos-o-tinnitus-dra-magali-legari",
+      "titulo": "Terapia sonora para acúfenos o tinnitus — Dra. Magali Legari",
+      "numero": 53
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "acufenos-y-sueno-como-usar-sonido-para-dormir-mejor",
+    "titulo": "Acúfenos y sueño: cómo usar el sonido para dormir (y estudiar) mejor",
+    "resumen": "¿El acúfeno no te deja dormir o concentrarte? Cómo usar sonido de fondo, punto de mezcla y cronómetros variables, según la audióloga Magali Legari.",
+    "contenido": "Hay acúfenos que durante el día pasan desapercibidos, pero que aparecen con toda su fuerza en el peor momento: cuando te vas a dormir, cuando te levantás o cuando necesitás concentrarte en silencio. En el episodio 53 del podcast, la audióloga Magali Legari explicó por qué pasa esto y qué se puede hacer.\n\n## ¿Por qué el acúfeno se siente más de noche?\n\nDurante el día, el ruido de la calle o del trabajo mantiene estimulado al sistema auditivo. Pero al entrar en un lugar silencioso, como la habitación antes de dormir, ese estímulo desaparece y el acúfeno gana protagonismo.\n\n> \"¿Qué pasa cuando entran en lugares silenciosos? Un sistema auditivo que por ahí está funcionante para escuchar... pero cuando entro a un lugar como mi habitación, antes de ir a dormir, o cuando me levanto, siento un sh y no sé qué hacer\", describe la Dra. Magali Legari.\n\nY el círculo se retroalimenta: saber que al entrar al cuarto va a estar ese sonido genera alerta, y esa preocupación activa respuestas automáticas del sistema nervioso que sensibilizan la percepción, en lugar de habituarla.\n\n## El sonido basal: un piso sobre el que descansar\n\nLa propuesta es simple de entender: poner un sonido de base (ruido blanco, ruido rosa o sonidos de naturaleza como lluvia), ajustado al **punto de mezcla**, es decir, al mismo nivel que el acúfeno, nunca más fuerte. Ese estímulo hace que el área cerebral auditiva perciba mucho menos el impacto del acúfeno.\n\n> \"Hace un efecto como on-off\", explica Legari. El acúfeno \"se pierde, está como solapado, se hace más difuso. Es más: puede hasta no detectarlo si no lo busca\".\n\nSobre esa base, después se puede sumar la tele, la música o el estudio. Legari contó el caso de una paciente que volvió años después a agradecerle: \"Me recibí de contadora gracias a tu terapia sonora\", porque el ruido blanco le permitió volver a estudiar en silencio sin pelearse con su acúfeno.\n\n## El truco del cronómetro variable\n\nUn detalle poco conocido: conviene usar el sonido en tiempos cortos, con un cronómetro, y no dejarlo horas. Y mejor si el tiempo varía.\n\n> \"Yo les digo que usen cronómetros variables. No uses nunca 30 minutos y 30 minutos, para tratar de engañar a tu cerebro, a que cuando se corte no vaya a ver si está\", cuenta Legari.\n\nEs que el cerebro, apenas se corta el estímulo, tiende a chequear si el acúfeno sigue ahí, y ese chequeo constante es justamente lo que mantiene la percepción activa. Si al cortarse el sonido ya estás enganchado con la tele o la música y te olvidaste del acúfeno, \"bingo\": se generó una ventana en la que el cerebro no lo detecta.\n\n## Antes que nada, evaluarse\n\nEstos recursos pueden acompañar la espera hasta llegar a la consulta, pero no la reemplazan. Un acúfeno que interfiere con el sueño merece una evaluación médica y audiológica completa, porque el tipo de sonido, el volumen y los tiempos correctos dependen de cada caso.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-01",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "como-es-un-tratamiento-de-terapia-sonora-para-acufenos",
+      "ruido-blanco-o-ruido-rosa-para-acufenos-diferencias",
+      "acufenos-y-bruxismo-que-relacion-tienen"
+    ],
+    "episodio": {
+      "slug": "53-terapia-sonora-para-acufenos-o-tinnitus-dra-magali-legari",
+      "titulo": "Terapia sonora para acúfenos o tinnitus — Dra. Magali Legari",
+      "numero": 53
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "acufenos-y-bruxismo-que-relacion-tienen",
+    "titulo": "Acúfenos y bruxismo: ¿qué relación tienen? Los acúfenos somáticos",
+    "resumen": "Bruxismo, mandíbula y cervicales pueden estar detrás de un acúfeno, incluso con audición normal. Qué son los acúfenos somáticos y cómo se evalúan.",
+    "contenido": "¿Puede el bruxismo generar o mantener un acúfeno? Sí, puede. Y es uno de los factores menos conocidos por quienes conviven con ese zumbido. En el episodio 53 del podcast, la audióloga Magali Legari explicó la conexión entre la musculatura de la mandíbula, las cervicales y el sistema auditivo, lo que hoy se conoce como **acúfenos somáticos**.\n\n## El oído no trabaja solo\n\nLa articulación temporomandibular (ATM), la que usamos para masticar, está muy cerca del oído y su musculatura es de las más fuertes del cuerpo. Cuando esa zona está tensionada, por bruxismo, por estrés, por la forma en que vivimos, esa tensión también es información que viaja al cerebro.\n\n> \"La tensión emocional, la forma en que vivimos, hace que la musculatura esta, que por ahí tendría que estar más relajada, tenga un tono muscular más fuerte, y eso es neurotransmisión también\", explica la Dra. Magali Legari.\n\nEl sistema auditivo y estos sistemas no auditivos comparten estaciones de procesamiento en el camino al cerebro. Por eso puede pasar algo llamativo:\n\n> \"Hay personas que perciben acúfenos, que tienen audiciones bastante dentro de parámetros normales, y lo que tienen es un incremento en el tono de la musculatura cercana al oído. Son acúfenos más somáticos, les llamamos ahora\", detalla Legari.\n\nEs decir: podés tener una audiometría normal y aun así percibir un acúfeno cuyo origen está en puntos de gatillo musculares cercanos al oído. Esta línea de trabajo, que interrelaciona lo auditivo con lo no auditivo, tomó especial impulso a partir de la pandemia.\n\n## La experiencia de Lucas\n\nEl tema le toca de cerca al conductor del podcast. Lucas contó que consultó durante mucho tiempo por sus acúfenos y nadie le preguntaba por el bruxismo:\n\n> \"Yo no tenía ni idea de que el bruxismo estaba asociado a eso\", contó Lucas, que recién después de mucho tiempo accedió a una placa de descarga.\n\nLegari aportó un matiz importante: la placa también debe estar bien indicada. Hay placas superiores, inferiores, rígidas y blandas, y una placa mal elegida puede ejercer una fuerza contraria. El bruxismo y la ATM \"son entidades que deben ser evaluadas\", no resueltas con una solución genérica.\n\n## ¿Los acúfenos somáticos se van?\n\nLa pregunta lógica es si estos acúfenos son reversibles. La respuesta de Legari es prudente: no se puede definir sin una evaluación que permita ver si es solo eso o si hay algo más. La evaluación es multidisciplinaria: médica, audiológica y, según el caso, con kinesiólogo, odontólogo o psicólogo. Se revisa cómo está la mandíbula, las cervicales, si la persona hace ejercicio físico y cómo descarga tensiones.\n\nLa buena noticia es que cuando el origen es muscular y se aborda bien (tratamiento de los puntos de gatillo, placa adecuada, y a veces terapia sonora como acompañamiento), hay mucho margen de mejora. Pero si alguien necesita tratar la tensión mandibular y solo se pone sonido, el cambio no llega: hay que trabajar sobre todos los factores a la vez.\n\nSi tenés acúfenos y también bruxás, o sentís tensión en la mandíbula o el cuello, vale la pena llevarlo a la consulta. Puede estar relacionado, o no, pero merece ser evaluado.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-03",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "como-es-un-tratamiento-de-terapia-sonora-para-acufenos",
+      "ruido-blanco-o-ruido-rosa-para-acufenos-diferencias",
+      "acufenos-y-sueno-como-usar-sonido-para-dormir-mejor"
+    ],
+    "episodio": {
+      "slug": "53-terapia-sonora-para-acufenos-o-tinnitus-dra-magali-legari",
+      "titulo": "Terapia sonora para acúfenos o tinnitus — Dra. Magali Legari",
+      "numero": 53
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "ser-interprete-de-lengua-de-senas-la-historia-de-pablo-baldrich",
+    "titulo": "Ser la voz de otro: la historia de Pablo Baldrich, intérprete de lengua de señas",
+    "resumen": "Pablo Baldrich lleva 35 años como intérprete de LSA. Su historia muestra qué significa ser puente entre dos lenguas y por qué la comunicación cambia vidas.",
+    "contenido": "Cuando Pablo Baldrich interpreta a una persona sorda, no traduce palabras: se convierte en su voz. Lo que el público escucha, lo que se lleva a su casa, salió de su boca pero es de otro. En este episodio de Sordo pero no mudo, Lucas conversa con Pablo sobre más de tres décadas de oficio, y sobre lo que la lengua de señas provoca en la vida de las personas.\n\n> \"Es mucha responsabilidad de las dos lenguas.\"\n\n## Un camino que empezó de casualidad\n\nPablo terminó el secundario en 1984 y se anotó en psicología. Una amiga le pidió que la acompañara a una escuela de sordos en San Isidro. Mientras ella hablaba con la directora, él se quedó en el patio. Sonó el timbre, salieron los chicos, y a los diez minutos estaba jugando con ellos en el piso, tratando de explicarles quién era. Ahí mismo preguntó dónde se estudiaba eso.\n\nSe recibió de profesor de sordos en una época en la que el oralismo dominaba la educación y la lengua de señas estaba mal vista. Le enseñaron que había que hablarles a los chicos, no señar. Hasta que empezó a trabajar en una escuela de Quilmes, con alumnos adolescentes que hablaban entre ellos en señas a una velocidad que lo dejó helado. Nadie le había hablado de eso.\n\nLos chicos lo acompañaban a la estación de tren y le enseñaban las primeras señas. Pablo salía al mediodía y a las tres de la tarde seguía ahí.\n\n> \"Seguían contándome cosas de su vida que no se las podían contar a nadie. Esto es lo que provoca una lengua.\"\n\nHay un dato que Pablo remarca y que explica mucho: alrededor del 95% de los chicos sordos tienen padres oyentes. En la mayoría de las casas, nadie maneja una lengua con la que puedan comunicarse de verdad con sus hijos.\n\n## Interpretar no es traducir palabras\n\nPablo cuenta una anécdota que a Lucas lo dejó pensando todo el episodio: interpretaba en la Cámara de Diputados y una legisladora usó la expresión \"tener la vaca atada\". Él, como corresponde, interpretó el sentido: tenerlo seguro, garantizado. Pero la diputada siguió con la metáfora: con qué ataron a esa vaca, dónde estaba parada, si la estaca era firme. Tuvo que retroceder y traer la vaca literal, porque en lengua de señas —como en cualquier lengua— las metáforas no se pasan literales.\n\n> \"Para poder interpretar algo tenés que medianamente entenderlo, qué es lo que quiere decir.\"\n\nLo mismo pasa con las canciones, la poesía o el humor. Pablo participó del equipo que interpretó un recital de Paul McCartney: cinco intérpretes y cinco asesores sordos investigando qué quiso decir cada canción, para concluir que es imposible saberlo con certeza, igual que le pasa a cualquier oyente que canta sin pensar la letra.\n\n## El momento que lo marcó\n\nEn un viaje de egresados a Bariloche, la mitad del micro era de una escuela de sordos. El coordinador del viaje pasó la semana preguntando señas sueltas, sin decir para qué. El último día armó un discurso completo en lengua de señas para despedirse de los chicos, y le pidió a Pablo que pusiera la voz para los oyentes. Pablo se emocionó tanto que casi no podía hablar.\n\n> \"Si yo no hablo, nadie se está enterando de lo que está diciendo este muchacho. Ese momento entendí que el grado de responsabilidad que tiene esto es mortal.\"\n\n## Las lenguas unen\n\nPara Pablo, lo esencial no es la lengua en sí, sino lo que habilita: decir algo y que alguien te entienda, sin pensar cómo lo decís, sin fingir ser algo que no sos.\n\n> \"Las lenguas juntan, las lenguas unen, las lenguas identifican, uno se siente parte de con una lengua.\"\n\nPor eso las asociaciones de sordos se llenan los viernes a la noche: después de una semana de trabajo entre personas que no los entienden, esas dos horas son el lugar donde pueden relajarse y ser. Y por eso, dice Pablo, lo que hace Casacusia con la comunidad de personas con hipoacusia va en la misma dirección: juntarse con pares, compartir, sentirse igual a alguien.\n\nSu mensaje final, si tuviera una cadena nacional, sería simple: que le demos a cada persona la posibilidad de comunicarse y de ser en la lengua que quiera. Porque sin información y sin opciones, nadie puede elegir.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-27",
+    "etiquetas": [
+      "historias",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "como-se-estudia-para-ser-interprete-de-lengua-de-senas-en-argentina",
+      "la-lengua-de-senas-es-un-idioma-y-cambia-en-cada-pais",
+      "que-hace-un-interprete-de-lengua-de-senas-rol-y-etica"
+    ],
+    "episodio": {
+      "slug": "64-ser-interprete-de-lengua-de-senas-pablo-baldrich-experiencia-en-primera-persona",
+      "titulo": "Ser intérprete de lengua de señas — Pablo Baldrich",
+      "numero": 64
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "como-se-estudia-para-ser-interprete-de-lengua-de-senas-en-argentina",
+    "titulo": "¿Cómo se estudia para ser intérprete de lengua de señas en Argentina?",
+    "resumen": "¿Existe una carrera de intérprete de LSA en Argentina? ¿Hay matrícula? Qué implica formarse y por qué la comunidad sorda es parte central del aprendizaje.",
+    "contenido": "Es una pregunta que aparece cada vez más: ¿dónde se estudia para ser intérprete de Lengua de Señas Argentina (LSA)? En el episodio 64 de Sordo pero no mudo, Pablo Baldrich —intérprete con más de tres décadas de trayectoria— cuenta cómo fue su recorrido y cómo cambió la formación con los años.\n\n## Una profesión que se construyó sobre la marcha\n\nCuando Pablo empezó, no existían carreras formales de interpretación en lengua de señas.\n\n> \"Yo soy de los pocos que no he estudiado formalmente en una carrera, porque no existían las carreras. Las carreras se crearon hace 10 años, hace 35 que soy intérprete.\"\n\nSu generación se formó de manera empírica, junto a la propia comunidad sorda. Las pautas del oficio —qué hacer en una prueba escrita, en un juicio, en una consulta médica— se fueron definiendo con la práctica, discutiendo entre intérpretes y personas sordas qué correspondía y qué no.\n\nHoy la situación es distinta: existen tecnicaturas y carreras de interpretación en LSA en universidades e institutos de varias provincias. Lo que todavía no existe es una matrícula habilitante ni un colegio profesional.\n\n> \"No hay colegiado. Ahora se crea una asociación de intérpretes, pero no hay matrícula.\"\n\n## Aprender la lengua es solo el principio\n\nAlgo que Pablo remarca: saber señas no te hace intérprete. Interpretar es pasar sentidos de una lengua a otra en tiempo real, y eso exige entender el concepto antes que la palabra.\n\n> \"Para poder interpretar algo tenés que medianamente entenderlo, qué es lo que quiere decir.\"\n\nPor eso los intérpretes trabajan en equipo y rotan cada 15 o 20 minutos: la demanda cognitiva de escuchar, comprender, buscar el sentido y reformularlo en otra lengua es enorme, y más allá de ese tiempo la atención cae.\n\nTambién existe la especialización por temática. Pablo cuenta que más de una vez se declaró \"incompetente\" frente a un contenido que no dominaba —una clase de filosofía, un texto técnico— y pidió que llamaran a alguien que conociera mejor el tema. Es parte de la ética del oficio.\n\n## La comunidad sorda como maestra\n\nEl mejor consejo que deja el episodio para quien quiera formarse: la lengua viva está en la comunidad. Pablo aprendió sus primeras señas de sus propios alumnos adolescentes, que lo acompañaban a la estación de tren y se quedaban horas contándole cosas.\n\n> \"Aprendí mucho más con ellos, de quedarme todos los días dos horas.\"\n\nY algo que no se aprende en ningún programa: nunca se termina de aprender. Como toda lengua, la LSA cambia, incorpora señas nuevas —igual que el español incorporó \"googlear\" o \"chatear\"— y varía según la región. Formarse como intérprete es entrar en un vínculo de por vida con una lengua y con su comunidad.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-29",
+    "etiquetas": [
+      "informacion",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "ser-interprete-de-lengua-de-senas-la-historia-de-pablo-baldrich",
+      "la-lengua-de-senas-es-un-idioma-y-cambia-en-cada-pais",
+      "que-hace-un-interprete-de-lengua-de-senas-rol-y-etica"
+    ],
+    "episodio": {
+      "slug": "64-ser-interprete-de-lengua-de-senas-pablo-baldrich-experiencia-en-primera-persona",
+      "titulo": "Ser intérprete de lengua de señas — Pablo Baldrich",
+      "numero": 64
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "la-lengua-de-senas-es-un-idioma-y-cambia-en-cada-pais",
+    "titulo": "¿La lengua de señas es un idioma? Sí, y cambia en cada país (y en cada provincia)",
+    "resumen": "La lengua de señas no es universal ni es mímica: es una lengua completa, con gramática propia, metáforas, humor y variedades regionales. Te lo explicamos.",
+    "contenido": "Hay una confusión muy extendida: creer que la lengua de señas es una sola en todo el mundo, o que es una especie de mímica que \"traduce\" el español con las manos. En el episodio 64 de Sordo pero no mudo, el intérprete Pablo Baldrich desarma esos mitos uno por uno.\n\n## Lengua, no lenguaje\n\nLa Lengua de Señas Argentina (LSA) es una lengua completa: tiene gramática propia, distinta a la del español, y una cultura asociada. No es español señado ni un código inventado por oyentes. Usa las manos, pero también la cara y el cuerpo: los rasgos no manuales permiten agregar información a una misma seña.\n\n> \"Esto es una semana, pero digo dos semanas, tres semanas. Te meto el número tres con la seña de semana y ya está.\"\n\nY como toda lengua, sirve para todo: se puede filosofar, hacer chistes, discutir política. Pablo lo resume con una frase que se lleva el episodio:\n\n> \"Con la lengua de señas decís todo lo que quieras decir, pero solamente lo que quieras decir.\"\n\nSi una comunidad nunca necesitó hablar de mitocondrias o del debe y el haber contable, esas señas no existían: se crearon cuando los estudiantes sordos llegaron a la secundaria y las necesitaron. Exactamente igual que el español no tenía \"googlear\" antes de internet.\n\n## Cada país tiene la suya\n\nLa lengua de señas no es universal. Argentina, Uruguay y Colombia tienen lenguas de señas distintas, así como el español y el portugués son idiomas distintos. Y dentro de Argentina hay variedades regionales, igual que en el español hablado.\n\n> \"Hay señas que en Jujuy una seña quiere decir una cosa y en Río Negro otra. La misma seña, como la misma palabra.\"\n\nPablo lo compara con el español del interior: en Córdoba a un tostado le dicen \"Carlitos\", y en muchas provincias la tortita negra es una \"cara sucia\". En Mendoza, donde la vendimia depende del clima, hay señas distintas para lluvia, granizo, aguanieve y chubasco, porque la comunidad las necesita.\n\n## Las metáforas no viajan literales\n\nUn ejemplo brillante del episodio: Pablo interpretaba en el Congreso cuando una diputada dijo que \"no es solamente tener la vaca atada\". Él interpretó el sentido —tenerlo asegurado—, pero la diputada siguió desarrollando la metáfora: con qué ataron la vaca, dónde, si la estaca era firme. Tuvo que volver atrás y traer la vaca literal.\n\n> \"En la lengua de señas no existe tener la vaca atada. Si yo digo la vaca está atada, el Sordo mira y ve una vaca atada.\"\n\nLo mismo pasa entre cualquier par de lenguas: las metáforas, el humor y la poesía se interpretan por el sentido, no palabra por palabra. Entender esto es entender que la lengua de señas es, ni más ni menos, una lengua.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-01",
+    "etiquetas": [
+      "informacion",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "ser-interprete-de-lengua-de-senas-la-historia-de-pablo-baldrich",
+      "como-se-estudia-para-ser-interprete-de-lengua-de-senas-en-argentina",
+      "que-hace-un-interprete-de-lengua-de-senas-rol-y-etica"
+    ],
+    "episodio": {
+      "slug": "64-ser-interprete-de-lengua-de-senas-pablo-baldrich-experiencia-en-primera-persona",
+      "titulo": "Ser intérprete de lengua de señas — Pablo Baldrich",
+      "numero": 64
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "que-hace-un-interprete-de-lengua-de-senas-rol-y-etica",
+    "titulo": "¿Qué hace (y qué no hace) un intérprete de lengua de señas?",
+    "resumen": "El intérprete de lengua de señas no opina, no explica ni corrige: es la voz de otro. Neutralidad, confidencialidad y límites de un rol poco conocido.",
+    "contenido": "Cuando hay un intérprete de lengua de señas en una consulta médica, un juicio o una charla, es común que la gente le hable a él en vez de a la persona sorda: \"preguntale tal cosa\". En el episodio 64 de Sordo pero no mudo, Pablo Baldrich explica por qué eso está mal planteado y cuáles son los límites éticos de su rol.\n\n## El intérprete no es el interlocutor\n\nLa regla básica: la conversación es entre la persona sorda y la otra parte. El intérprete es el puente, no un participante.\n\n> \"Vos preguntale, yo interpreto. El que está hablando con él sos vos, no yo.\"\n\nEso también significa no opinar, no corregir y no agregar. Pablo cuenta una situación límite: en un juicio, una persona sorda que conocía de toda la vida dio una explicación que él sabía que no era cierta. La interpretó igual, sin gestos ni comentarios.\n\n> \"Un Sordo tiene el derecho a mentir igual que cualquier humano. Yo no soy quien para decir nada, yo soy la voz de él para lo que quiera.\"\n\nLa frase, que a Lucas lo dejó pensando el resto del episodio, resume algo profundo: interpretar es devolverle a la persona sorda la autonomía plena sobre su propio discurso, incluso cuando eso incomoda al intérprete.\n\n## Neutralidad, aunque no estés de acuerdo\n\nPablo interpretó el debate por la ley de aborto en el Congreso, una sesión récord de 25 horas. La misma palabra —embrión— debía interpretarse con el sentido que le daba cada orador, según su postura. El intérprete no puede dejar traslucir su opinión ni con la cara.\n\n> \"Tengo que convencerte de lo que está diciendo ella, que es lo que ella quiere, por más que yo no esté de acuerdo.\"\n\n## Confidencialidad absoluta\n\nPor su trabajo, un intérprete conoce información íntima de muchísimas personas: consultas médicas, declaraciones policiales, conflictos familiares. Nada de eso se cuenta, nunca.\n\n> \"Hay cosas de confidencialidad que jamás un intérprete que se precie va a decir qué es lo que pasó, ni quién era, ni qué es lo que dijo.\"\n\n## Interpretar no es traducir\n\nUna distinción útil que deja el episodio: el traductor trabaja con textos, con tiempo para revisar y corregir. El intérprete trabaja en el momento, sin posibilidad de chequeo. Por eso los intérpretes rotan cada 15 o 20 minutos: la exigencia mental de escuchar, comprender el sentido y reformularlo en otra lengua en simultáneo no se sostiene más tiempo con calidad.\n\nConocer estos límites ayuda a todos: a las instituciones que contratan intérpretes, a las familias y a cualquier persona que comparta un espacio con una persona sorda y su intérprete. La consigna es simple: hablale a la persona, no al puente.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-07-02",
+    "etiquetas": [
+      "comunidad",
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "ser-interprete-de-lengua-de-senas-la-historia-de-pablo-baldrich",
+      "como-se-estudia-para-ser-interprete-de-lengua-de-senas-en-argentina",
+      "la-lengua-de-senas-es-un-idioma-y-cambia-en-cada-pais"
+    ],
+    "episodio": {
+      "slug": "64-ser-interprete-de-lengua-de-senas-pablo-baldrich-experiencia-en-primera-persona",
+      "titulo": "Ser intérprete de lengua de señas — Pablo Baldrich",
+      "numero": 64
+    },
+    "destacado": false,
+    "publicado": true
   }
 ]
