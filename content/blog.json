@@ -11,7 +11,12 @@
       "podcast"
     ],
     "destacado": true,
-    "publicado": true
+    "publicado": true,
+    "episodio": {
+      "slug": "19-que-hacer-si-no-funciono-el-tratamiento-de-la-sordera-subita-dra-paula-ontivero",
+      "titulo": "¿Qué hacer si no funcionó el tratamiento de la sordera súbita? — Dra. Paula Ontivero",
+      "numero": 19
+    }
   },
   {
     "slug": "acufenos-tinnitus-que-son-y-como-se-abordan",
@@ -25,7 +30,12 @@
       "podcast"
     ],
     "destacado": false,
-    "publicado": true
+    "publicado": true,
+    "episodio": {
+      "slug": "15-acufenos-o-tinnitus-susana-dominguez-y-yanina-sitzer",
+      "titulo": "Acúfenos o tinnitus — Susana Domínguez y Yanina Sitzer",
+      "numero": 15
+    }
   },
   {
     "slug": "mi-hijo-nacio-sordo-la-historia-de-pau-y-luqui",
@@ -40,7 +50,12 @@
       "podcast"
     ],
     "destacado": true,
-    "publicado": true
+    "publicado": true,
+    "episodio": {
+      "slug": "10-mi-hijo-nacio-sordo-paula-mama-de-luqui",
+      "titulo": "Mi hijo nació sordo — Paula, mamá de Luqui",
+      "numero": 10
+    }
   },
   {
     "slug": "medica-sorda-con-implante-coclear-la-historia-de-juli",
@@ -55,7 +70,12 @@
       "podcast"
     ],
     "destacado": false,
-    "publicado": true
+    "publicado": true,
+    "episodio": {
+      "slug": "44-medica-sorda-con-implante-coclear-juli-cortesini-leavi",
+      "titulo": "Médica sorda con implante coclear — Juli Cortesini Leavi",
+      "numero": 44
+    }
   },
   {
     "slug": "lo-peor-que-me-paso-es-tambien-lo-mejor-historia-lucas",
@@ -69,6 +89,443 @@
       "comunidad",
       "podcast"
     ],
+    "destacado": false,
+    "publicado": true,
+    "episodio": {
+      "slug": "1-lo-peor-que-me-paso-en-la-vida-es-tambien-lo-mejor",
+      "titulo": "Lo peor que me pasó en la vida es también lo mejor",
+      "numero": 1
+    }
+  },
+  {
+    "slug": "sistema-cross-audifonos-que-es-y-para-quien-sirve",
+    "titulo": "¿Qué es el sistema cross de audífonos y para quién sirve?",
+    "resumen": "El sistema cross manda el sonido del oído que no escucha al que sí escucha, vía bluetooth. Cómo funciona, su gran ventaja y sus límites, explicado simple.",
+    "contenido": "Si perdiste toda la audición de un oído, hay una opción que podés probar hoy mismo, sin cirugía y sin compromiso: el **sistema cross**. En el episodio 19 de **Sordo pero no mudo**, la Dra. Paula Ontivero —jefa de otología del Sanatorio Güemes y cirujana de oído— lo explicó con claridad, y acá te lo resumimos.\n\n## Cómo funciona\n\nEl sistema cross son dos aparatos que trabajan en equipo: un **receptor** que se coloca en el oído que no escucha, y un **audífono** en el oído que sí escucha. El receptor capta los sonidos que llegan del lado sordo y los manda, vía bluetooth, al audífono del otro oído.\n\n¿El resultado? No recuperás la audición del oído sordo —eso no lo hace ningún audífono—, pero sí recuperás algo muy valioso: la **sensación de lateralidad**. Volvés a percibir que te hablan desde ese lado, a registrar los sonidos que antes se te perdían por completo.\n\n## Su gran ventaja: se prueba antes de decidir\n\nLo más importante del sistema cross es que **se puede probar sin cirugía**. Vas a una casa de audífonos, te lo colocan y en poco tiempo sentís si te sirve o no. Como dice la Dra. Ontivero, es una forma rápida y reversible de experimentar qué se siente volver a tener información del lado que no escucha.\n\nPor eso suele ser un buen primer paso para muchas personas con sordera de un solo oído (hipoacusia unilateral): antes de evaluar opciones quirúrgicas, probás y comparás.\n\n## Sus límites\n\nEl cross también tiene contras que conviene conocer de antemano:\n\n- **En ambientes ruidosos no es la mejor opción**: la señal del lado sordo se mezcla con el ruido y puede confundir más que ayudar.\n- **Tenés que usar un audífono en el oído bueno**, aunque ese oído escuche perfecto.\n- Es lo que la Dra. Ontivero llama una \"falsa audición\": no rehabilita el oído sordo, usa el otro. Si algún día el oído bueno se deteriora, el cross deja de servir.\n\n## ¿Y si el cross no me convence?\n\nExisten otras dos alternativas para la sordera de un oído: el **implante de conducción ósea** (que transmite el sonido por vibración a través del hueso, sin necesidad de audífono en el oído bueno) y el **implante coclear** (el único que rehabilita de verdad el oído perdido). Cada una tiene sus requisitos y su proceso, y lo ideal es conversarlas con tu otorrinolaringólogo/a.\n\nEn el episodio completo, la Dra. Ontivero compara las tres opciones en profundidad, con ejemplos reales y la experiencia de Lucas en primera persona con su implante de conducción ósea.\n\n---\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-26",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "sordera-subita-que-hacer-si-el-tratamiento-no-funciona"
+    ],
+    "episodio": {
+      "slug": "19-que-hacer-si-no-funciono-el-tratamiento-de-la-sordera-subita-dra-paula-ontivero",
+      "titulo": "¿Qué hacer si no funcionó el tratamiento de la sordera súbita? — Dra. Paula Ontivero",
+      "numero": 19
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "implante-coclear-o-conduccion-osea-diferencias",
+    "titulo": "Implante coclear o conducción ósea: 4 diferencias clave",
+    "resumen": "Uno rehabilita el oído sordo, el otro usa el oído sano. Adaptación, cirugía, requisitos y futuro: las diferencias explicadas por la Dra. Paula Ontivero.",
+    "contenido": "Cuando un oído queda sordo y hay que elegir un dispositivo, dos nombres aparecen enseguida: el **implante coclear** y el **implante de conducción ósea**. Suenan parecido, pero funcionan de maneras completamente distintas. En el episodio 19 de **Sordo pero no mudo**, la Dra. Paula Ontivero —jefa de otología del Sanatorio Güemes y cirujana de oído— explicó las diferencias. Acá las resumimos en cuatro puntos.\n\n## 1. Qué oído usa cada uno\n\nEsta es la diferencia de fondo:\n\n- El **implante de conducción ósea** no usa el oído sordo: transmite el sonido por **vibración a través del hueso del cráneo** hasta la cóclea del oído sano. Es lo que la Dra. Ontivero llama una \"falsa audición\": escuchás lo que llega del lado sordo, pero con el otro oído.\n- El **implante coclear** trabaja sobre el oído que quedó sordo: lleva el sonido como **estimulación eléctrica directamente al nervio auditivo** de ese lado. Es el único que rehabilita de verdad el oído perdido.\n\n## 2. La adaptación: rápida vs. exigente\n\nLa conducción ósea tiene una adaptación rápida y sencilla: el sonido llega a una cóclea sana que ya sabe escuchar. La colocación es simple y además **reversible**: es un pequeño tornillo que se puede retirar.\n\nEl implante coclear, en cambio, exige trabajo. Cuando el otro oído es normal, el cerebro prefiere lo conocido —la Dra. Ontivero lo compara con aprender un idioma de grande— y la rehabilitación puede llevar **más de un año** de fonoaudiología, entrenando el implante sin usar el oído bueno. Quienes hicieron ese camino cuentan que en un momento las dos señales \"se funden\" y escuchar vuelve a ser natural.\n\n## 3. Los requisitos\n\nPara la conducción ósea, la cóclea del oído sano tiene que estar **casi totalmente sana**: es ese oído el que va a hacer todo el trabajo.\n\nPara el implante coclear, el factor clave es el **tiempo de sordera**: un oído que quedó sordo hace poco tiene el nervio activo y responde mejor. Con muchos años de deprivación auditiva —la referencia aproximada son diez— las posibilidades bajan, aunque hay casos especiales que se evalúan uno por uno.\n\n## 4. El futuro\n\nAcá el implante coclear tiene una ventaja única: si algún día le pasa algo al oído bueno —por edad, por enfermedad—, el oído implantado **ya está funcionando**. Con la conducción ósea (y con el sistema cross), en cambio, todo depende de que el oído sano siga sano.\n\n## Entonces, ¿cuál elegir?\n\nNo hay una respuesta universal, y la Dra. Ontivero es clara: la elección es de la persona, no del médico. Depende de tu vida, tu energía disponible para la rehabilitación, tu edad y tu caso clínico. El rol del equipo médico es informar y acompañar la decisión, sea una, sea otra, sea ninguna.\n\nEn el episodio completo, la doctora desarrolla cada opción con ejemplos reales, y Lucas cuenta su propia experiencia con el implante de conducción ósea que usa hace años.\n\n---\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-27",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "sordera-subita-que-hacer-si-el-tratamiento-no-funciona",
+      "sistema-cross-audifonos-que-es-y-para-quien-sirve"
+    ],
+    "episodio": {
+      "slug": "19-que-hacer-si-no-funciono-el-tratamiento-de-la-sordera-subita-dra-paula-ontivero",
+      "titulo": "¿Qué hacer si no funcionó el tratamiento de la sordera súbita? — Dra. Paula Ontivero",
+      "numero": 19
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "duelo-por-la-perdida-auditiva",
+    "titulo": "El duelo por la pérdida auditiva: transitarlo sin saber que empezó",
+    "resumen": "Lucas estuvo un año enojado con la vida sin saber que transitaba un duelo. Ponerle nombre a lo que sentís puede ser el primer paso para estar mejor.",
+    "contenido": "¿Se puede estar transitando un duelo sin saberlo? A Lucas le pasó. En el primer episodio de **Sordo pero no mudo**, el podcast de Casacusia, cuenta cómo el 17 de marzo de 2016, con 15 años, perdió mucha audición de un oído tras una cirugía que no tenía que hacerse. Y cómo, a partir de ese día, algo se le empezó a apagar por dentro sin que él pudiera ponerle nombre.\n\n## No era solo dejar de escuchar\n\nCuando pensamos en la pérdida auditiva, pensamos en el oído. Pero Lucas lo cuenta distinto: lo que se perdía no era solo el sonido.\n\n> \"No sé si perder audición fue la peor, o quizás perder la sonrisa, perder el humor, o perder las ganas de hablar y de conocer gente.\"\n\nLos momentos sociales, que para muchos son un disfrute, se vuelven el lugar donde más se nota lo que falta. Como dice Lucas, si estás solo en tu casa y nadie te habla, prácticamente no tenés ningún problema. El problema aparece cuando querés estar con otros y no podés seguir la conversación.\n\n## Un año enojado con la vida\n\nDurante ese primer año, Lucas tuvo **ataques de enojo** y estuvo, en sus palabras, enojado con la vida. No aceptaba lo que le pasaba, y tampoco quería aceptarlo. Se hacía la pregunta que se hacen tantas personas cuando reciben un diagnóstico inesperado: *¿por qué a mí?* Si la hipoacusia era \"algo de gente grande\", ¿cómo le iba a pasar a él con 15 años?\n\nÉl siempre quiso ser fuerte, y esa fortaleza le tapaba lo que le estaba pasando por dentro: sentimientos y emociones que no encontraban salida.\n\n## La escena del bodegón\n\nHasta que un día, comiendo con su familia en un bodegón de Buenos Aires, después de un ataque de enojo terrible, se frenaron y le dijeron: **\"Lucas, tenés que empezar terapia\"**.\n\n> \"Fue un 17 de marzo de 2017, hacía un año exactamente que había empezado a transitar un duelo sin haberme enterado.\"\n\nUn año exacto. Un duelo entero transitado a ciegas, sin saber que eso que sentía tenía nombre.\n\n## Ponerle nombre ayuda\n\nEsta es quizás la idea más importante que deja el episodio: **la pérdida auditiva también es un duelo emocional**. No es solo un tema médico ni de tecnología. Hay una pérdida real —de una forma de estar en el mundo, de la espontaneidad en lo social, a veces hasta de la sonrisa— y esa pérdida se transita como cualquier duelo: con enojo, con negación, con tiempos propios.\n\nLucas mismo lo dice: cada uno tiene sus tiempos para procesar. No hay una forma correcta de atravesarlo. Pero saber que lo que te pasa es un duelo, y no \"estar mal porque sí\", cambia todo. Permite pedir ayuda, empezar terapia, hablarlo con la familia.\n\nSi vos o alguien que querés está atravesando una pérdida auditiva y anda enojado con la vida, quizás no sea enojo nada más. Quizás sea un duelo que todavía no tiene nombre. Y ponérselo puede ser el primer paso.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-05-28",
+    "etiquetas": [
+      "informacion",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "lo-peor-que-me-paso-es-tambien-lo-mejor-historia-lucas"
+    ],
+    "episodio": {
+      "slug": "1-lo-peor-que-me-paso-en-la-vida-es-tambien-lo-mejor",
+      "titulo": "Lo peor que me pasó en la vida es también lo mejor",
+      "numero": 1
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "probar-un-implante-de-conduccion-osea-antes-de-la-cirugia",
+    "titulo": "Probar un implante de conducción ósea antes de la cirugía",
+    "resumen": "Los implantes de conducción ósea se pueden probar antes de operarse. Lucas pasó de repetir 0 de 25 palabras a 23 de 25 en su primera prueba.",
+    "contenido": "Hay algo que mucha gente no sabe sobre los **implantes de conducción ósea**: se pueden probar antes de la cirugía. Y esa prueba puede cambiar por completo la forma de encarar la decisión.\n\n## ¿Por qué se pueden probar?\n\nLos implantes de conducción ósea **transmiten el sonido a través de vibración**. Como lo explica Lucas en el primer episodio de **Sordo pero no mudo**: el aparatito vibra ahí en la cabeza y te manda el sonido para adentro. Por eso, con una vincha que sostiene el dispositivo contra la cabeza, se puede experimentar cómo se escucharía, sin pasar antes por el quirófano.\n\n## La prueba de Lucas: de 0 a 23 palabras\n\nLucas tenía 19 años, usaba un audífono que ya no le alcanzaba, y cuando lo social dejó de ser virtual después de la cuarentena se dio cuenta de lo mal que escuchaba. Ese lunes fue al otorrino y empezaron a buscar opciones.\n\nUn día fue a hacerse la primera prueba del implante. Le taparon el oído derecho —su oído \"bueno\", aunque también con algo de pérdida— y le leyeron una lista de 25 palabras para que las repitiera con su oído izquierdo.\n\n> \"De esas 25 pude repetir 0 bien de 25. 0 palabras de 25.\"\n\nDespués le pusieron el implante con una vincha y le repitieron otras 25 palabras. Mientras las iba repitiendo, se le empezaron a caer las lágrimas.\n\n> \"Había repetido 23 bien de 25. Pasé de un 0% a un 92%.\"\n\nLo que sintió en ese momento, cuenta, fue que su problema tenía solución. Dos años y medio después, contarlo todavía le devuelve esa misma ilusión.\n\n## Se puede elegir, y eso también es una noticia\n\nDespués de esa primera prueba, Lucas siguió yendo a médicos y se probó otro implante similar, de otra marca pero de la misma tecnología. El sonido era todavía mejor. Después probó un tercero, y volvió a mejorar.\n\nAhí descubrió algo que le cambió el enfoque: ya no era \"querer escuchar\", ahora era **poder elegir escuchar mejor**. Podía comparar qué implante tenía mejor tecnología, cuál se conectaba mejor con el celular, cuál tenía mejor calidad de sonido.\n\n> \"Era como ir a comprarse algo a un negocio que podés elegir diferentes cosas.\"\n\nPara alguien que venía de un año de frustración, pasar de la resignación a la posibilidad de elegir fue, en sus palabras, increíble.\n\n## Lo que te llevás de esta nota\n\n- Los implantes de conducción ósea funcionan por vibración, y por eso **se pueden testear antes de la cirugía**.\n- Una prueba con lista de palabras permite comparar de manera concreta cómo escuchás con y sin el dispositivo.\n- Existen distintas tecnologías y marcas: se puede probar más de una y comparar calidad de sonido y conectividad antes de decidir.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-05-29",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "lo-peor-que-me-paso-es-tambien-lo-mejor-historia-lucas"
+    ],
+    "episodio": {
+      "slug": "1-lo-peor-que-me-paso-en-la-vida-es-tambien-lo-mejor",
+      "titulo": "Lo peor que me pasó en la vida es también lo mejor",
+      "numero": 1
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "despues-del-encendido-calibracion-y-rehabilitacion-auditiva",
+    "titulo": "Después del encendido: calibración y rehabilitación auditiva",
+    "resumen": "El encendido de un implante no es magia: a Lucas lo desilusionó al principio. Después vinieron calibraciones semanales y meses de rehabilitación auditiva.",
+    "contenido": "De los implantes auditivos se suele contar el momento emocionante: la prueba, la cirugía, el encendido. Lo que casi nadie cuenta es lo que viene después. En el primer episodio de **Sordo pero no mudo**, Lucas comparte esa parte del camino, la menos brillante y quizás la más importante.\n\n## Un encendido que desilusiona\n\nEl **encendido** es cuando te colocan por primera vez la parte externa del implante —que se sostiene con un imán y tiene unos micrófonos— y empezás a recibir sonido.\n\nLucas había hecho la prueba del implante casi ocho meses antes, y llegaba al encendido con una ilusión enorme. Con expectativas así de altas, la realidad tenía todo para quedarse corta. Y se quedó corta.\n\n> \"El implante me desilusionó. Yo esperaba que el sonido tenga una buena calidad y no fue así ni por casualidad.\"\n\nHabía un **ruido de fondo muy molesto**, como una lluvia constante. No se fue contento, aunque le dijeron que se iba a acostumbrar y que iba a mejorar.\n\n## Pero ese mismo día, una señal\n\nDespués de la activación, Lucas fue a merendar a lo de su hermano. En un momento, su hermano le dijo algo desde otro piso de la casa. Y Lucas le respondió sin darse cuenta. Su hermano se acercó y le preguntó: \"Che, ¿vos viste de dónde me respondiste?\".\n\nEl sonido no tenía buena calidad, pero el implante estaba funcionando: **estaba escuchando**, que era lo que más le importaba.\n\n## Un mes de calibraciones\n\nPara mejorar la calidad, durante el primer mes Lucas fue **una vez por semana a la fonoaudióloga** a ajustar la configuración del implante con la computadora. Cada sesión era agotadora: un par de horas en el consultorio, describiendo lo que escuchaba, esperando ajustes del software y teniendo que decidir si el cambio era mejor o peor que antes. Muchas veces la diferencia era mínima y costaba percibirla. Es un trabajo que exige máxima concentración y es, en sus palabras, estresante.\n\n## El cerebro también se entrena\n\nDespués de la calibración vino otra etapa: **meses de terapia de rehabilitación auditiva** para aprender a escuchar con ese oído nuevo. Porque el cerebro necesita adaptarse y acostumbrarse a recibir información de un lado que estuvo en silencio.\n\n> \"Hay que esforzarse, la realidad no es magia.\"\n\nY así, entre calibraciones, rehabilitación y constancia, fue apareciendo de a poquito la luz al final del camino.\n\n## Por qué importa saber esto\n\nSi vos o alguien de tu familia está por atravesar un encendido, conocer esta parte del proceso puede evitar una desilusión como la de Lucas. Las expectativas altísimas son entendibles, pero el primer sonido puede no ser el que imaginás. Eso no significa que algo salió mal: significa que empieza una etapa de ajustes y de trabajo, donde la mejora llega de a poco.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-05-30",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "lo-peor-que-me-paso-es-tambien-lo-mejor-historia-lucas"
+    ],
+    "episodio": {
+      "slug": "1-lo-peor-que-me-paso-en-la-vida-es-tambien-lo-mejor",
+      "titulo": "Lo peor que me pasó en la vida es también lo mejor",
+      "numero": 1
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "otoemisiones-acusticas-no-pasa-que-significa",
+    "titulo": "Otoemisiones acústicas: qué significa que tu bebé \"no pasa\" el estudio",
+    "resumen": "Qué es el estudio auditivo del recién nacido, por qué a veces lo minimizan y por qué conviene consultar enseguida. La historia de Pau y Luqui.",
+    "contenido": "Cuando nace un bebé, entre los papeles del alta aparece un estudio que muchas familias ni registran: las **otoemisiones acústicas**. Es una prueba rápida e indolora que se hace en la maternidad para saber si el oído del recién nacido responde al sonido. El resultado suele venir en dos casilleros: \"pasa\" o \"no pasa\".\n\nEn el episodio 10 de **Sordo pero no mudo**, Pau, la mamá de Luqui, contó cómo se enteró de que su hijo había nacido con hipoacusia. Estaba por irse de la clínica, a los dos días del parto, cuando la neonatóloga pasó los papeles del alta como si nada. Entre ellos, dos cuadraditos tildados: **\"no pasa\"** en los dos oídos.\n\n> \"Le dije no, esperá, no me pases este papel, ¿qué es? Y me dijo: son las otoemisiones, pero no te preocupes. Puede ser que tenga líquido amniótico o moco, tenés que repetirlo al mes.\"\n\n## \"Puede ser líquido o moco\": por qué te lo dicen\n\nEs cierto que a veces un recién nacido no pasa las otoemisiones por restos de líquido amniótico o mucosidad en el oído, y que por eso se indica repetir el estudio. El problema es cuando ese \"no te preocupes\" hace que la familia lo deje pasar semanas o meses.\n\nPau hizo otra cosa. No se fue a su casa: **llamó a la pediatra desde el auto, ese mismo día**, y la fue a ver a otro sanatorio. La pediatra revisó a Luqui: no tenía líquido, no tenía moco. Y le hizo la primera pregunta difícil: ¿tenés antecedentes de hipoacusia en la familia?\n\n## Los potenciales evocados: la confirmación\n\nA partir de ahí el camino fue rápido. Repitieron las otoemisiones —tampoco las pasó— y después confirmaron el diagnóstico con **potenciales evocados auditivos**, un estudio que mide cómo responde la vía auditiva al sonido. La familia de Luqui hizo tres, con la esperanza de que alguno dijera lo contrario.\n\n> \"Hicimos tres potenciales evocados y no pasó ninguno. Así que a raíz de eso empezamos a investigar, a averiguar: otorrino, estimuladora, todo lo que nos iban diciendo, porque para nosotros era un mundo totalmente desconocido.\"\n\nGracias a esa reacción inmediata, Luqui tuvo diagnóstico confirmado a días de nacer, y su familia pudo empezar a informarse y armar el equipo de profesionales desde el principio.\n\n## Qué te queda de esta historia\n\n- Si en el alta figura **\"no pasa\"**, preguntá qué significa y qué sigue. No firmes papeles sin entenderlos.\n- Puede ser líquido o moco, sí. Pero eso se verifica: **consultá con tu pediatra cuanto antes** en lugar de esperar a ver qué pasa.\n- El diagnóstico temprano no es un trámite más: es lo que permite empezar a tiempo todo lo que viene después.\n\nComo dice Pau: preocuparse y quedarse en la preocupación no sirve. **Hay que ocuparse.**\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-11",
+    "etiquetas": [
+      "familias",
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "mi-hijo-nacio-sordo-la-historia-de-pau-y-luqui"
+    ],
+    "episodio": {
+      "slug": "10-mi-hijo-nacio-sordo-paula-mama-de-luqui",
+      "titulo": "Mi hijo nació sordo — Paula, mamá de Luqui",
+      "numero": 10
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "activacion-del-implante-coclear-en-bebes-que-esperar",
+    "titulo": "La activación del implante en un bebé: qué esperar de verdad",
+    "resumen": "La activación del implante de Luqui no fue como los videos de internet. Su mamá lo cuenta para que otras familias sepan qué esperar de verdad.",
+    "contenido": "Seguro los viste: videos de bebés en el momento en que les encienden el implante coclear, que sonríen, se emocionan, lloran de alegría. Son hermosos. Y también son la excepción.\n\nEn el episodio 10 de **Sordo pero no mudo**, Pau, la mamá de Luqui —un nene que nació con **hipoacusia bilateral profunda**—, contó cómo fue la activación real del primer implante de su hijo, cuando tenía un año y cuatro meses.\n\n> \"Viste esto que muchas veces te muestran del primer encendido, que es todo fantástico, el chico se ríe y vos decís: quiero esto. Eso no pasa. Eso en la primera activación no pasa. A Lucas no le pasó tampoco.\"\n\n## Cómo fue de verdad\n\nPau lo tenía a upa. Las señales de que Luqui estaba escuchando por primera vez fueron mínimas: **le apretaba un poquito más fuerte la manga del buzo**, y **chupeteaba más fuerte el chupete** cuando había sonido. Eso era todo. La profesional le decía: \"está escuchando, fijate cómo chupetea\".\n\nPara Pau igual fue muy emotivo —lloró, como en tantos momentos de ese camino—, pero quiere que las familias lleguen a ese día sin expectativas de película. De hecho, hoy se lo dice a otras mamás que están por pasar por lo mismo: no esperes \"la\" respuesta de tu hijo. Dale tiempo.\n\n## La primera palabra llegó cuatro meses después\n\nEl implante no es un botón de encendido y apagado: el cerebro necesita tiempo y **rehabilitación auditiva** para aprender a entender los sonidos. En el caso de Luqui, a los dos meses del encendido empezó a reconocer su nombre y darse vuelta. Y **cuatro meses después de empezar a escuchar dijo su primera palabra: \"mamá\"** (bueno, \"ma\", aclara Pau entre risas). Fue implantado a fines de mayo y en septiembre dijo mamá — un avance que los profesionales consideraron muy rápido, y que no todos los casos repiten igual. Como dice Pau: no todos los casos son iguales, y no todos los chicos con hipoacusia son candidatos a implante.\n\n## Antes de todo eso: la cirugía\n\nPau cuenta que la primera cirugía fue de los peores momentos como mamá: acompañó a Luqui hasta el quirófano y le sostuvo la máscara de anestesia mientras él lloraba y pataleaba. Cuando salió deshecha, el otorrino la acompañó hasta donde estaba su marido y le dijo una frase que le resonó durante toda la hora y media de espera:\n\n> \"Vos dejás a tu hijo acá no para que le saquen un órgano, sino para que le recuperen uno.\"\n\nLuqui salió bien, al día siguiente ya corría y jugaba en su casa, y unos veinte días después llegó esa activación silenciosa, sin video viral, con una manga apretada y un chupete. Hoy, con seis años, Luqui les da un beso a sus \"Audis\" antes de dormir.\n\nSi estás por vivir un encendido, que esta historia te acompañe: **lo esperable es poco ruido y mucho proceso**. Y eso también está bien.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-12",
+    "etiquetas": [
+      "familias",
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "mi-hijo-nacio-sordo-la-historia-de-pau-y-luqui"
+    ],
+    "episodio": {
+      "slug": "10-mi-hijo-nacio-sordo-paula-mama-de-luqui",
+      "titulo": "Mi hijo nació sordo — Paula, mamá de Luqui",
+      "numero": 10
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "rehabilitacion-auditiva-infantil-se-hace-en-casa",
+    "titulo": "La rehabilitación auditiva de tu hijo se hace en casa",
+    "resumen": "La lección de Pau, mamá de Luqui: la rehabilitación no son los 40 minutos del consultorio, es el trabajo de todos los días en casa. Cómo lo hicieron ellos.",
+    "contenido": "Hay una idea que angustia a muchas familias: si no pueden pagar más sesiones de rehabilitación por semana, su hijo va a avanzar menos. En el episodio 10 de **Sordo pero no mudo**, Pau —mamá de Luqui, un nene que nació con hipoacusia bilateral profunda y usa implantes cocleares— desarmó esa idea con su propia historia.\n\nLuqui iba **una vez por semana** a rehabilitación con Hilda, su estimuladora. Pau, ansiosa como cualquier mamá, le preguntó si no convenía ir más veces. La respuesta la marcó:\n\n> \"No, me decía Hilda: si viene más veces por semana es que algo no está bien. Vos quedate tranquila que está todo perfecto. Y ahí entendí que la rehabilitación en realidad no es 40 minutos, una hora en el consultorio: es todo el trabajo que nosotros hacemos desde casa.\"\n\n## Estar adentro de la sesión, no en la sala de espera\n\nPau participó de **absolutamente todas las sesiones**. Eso le permitía repetir en casa lo que Hilda trabajaba en el consultorio: probar sonidos, ver cuáles escuchaba mejor, asociar cada sonido con un objeto (la \"a\" larga era el avión, otro sonido era el auto), hasta que Luqui empezó a nombrar las cosas por su nombre.\n\nY no era solo ella: su marido y su mamá —la abuela que cuidaba a Luqui— también participaban. Pau lo dice claro: los chicos pasan muchas horas con abuelos, tíos o cuidadores, y **es muy importante que todos los que lo cuidan sepan cómo estimularlo**.\n\n## El consultorio orienta, la casa estimula\n\nPau llegó a comprar los mismos juegos que Hilda tenía en el consultorio, para seguir la misma línea en casa. Cuando encontraba un juego nuevo, le consultaba si servía para trabajar. Y cuando tenía dudas —¿lo estoy haciendo bien? ¿lo estoy acompañando bien?— le mandaba mensajes y videos. Esas dudas, cuenta, le surgieron millones de veces. Son parte del camino.\n\n> \"La rehabilitación es fantástica, pero no es magia. No es que decís: bueno, listo, voy acá, me quedo tranquila y no hago más nada. Vos vas a que te orienten, a que te digan cómo tenés que hacer las cosas. Pero después el trabajo es en casa.\"\n\nHay algo más que esta familia hizo desde el primer día, antes de cualquier implante: **le hablaron a Luqui como si escuchara**. Le cantaban, le explicaban, le contaban adónde iban. Sabían que no escuchaba, pero la conexión estaba igual.\n\n## Para las familias que no llegan a más sesiones\n\nLucas, el conductor del podcast, contó que una mamá le escribió con culpa porque donde vive no le cubren las terapias y no puede pagar dos por semana. La historia de Pau es una respuesta directa a esa culpa: **el estímulo real está en la vida cotidiana**, en el desayuno, en los juegos, en cada cosa que le contás a tu hijo durante el día. En casa, tu hijo está escuchando muchas más horas que en cualquier consultorio.\n\nA Luqui le dieron el alta de rehabilitación a los cinco años. Hoy va a un colegio bilingüe, habla inglés y juega al fútbol. El consultorio orientó. La casa hizo el resto.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-13",
+    "etiquetas": [
+      "familias",
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "mi-hijo-nacio-sordo-la-historia-de-pau-y-luqui"
+    ],
+    "episodio": {
+      "slug": "10-mi-hijo-nacio-sordo-paula-mama-de-luqui",
+      "titulo": "Mi hijo nació sordo — Paula, mamá de Luqui",
+      "numero": 10
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "hipoacusia-en-el-colegio-como-contarlo",
+    "titulo": "Hipoacusia en el colegio: cómo lo cuenta la mamá de Luqui",
+    "resumen": "Reunión anual con docentes y mensaje en el chat de madres desde el primer día: la estrategia de Pau para que el colegio de Luqui sea un lugar seguro.",
+    "contenido": "Luqui tiene seis años, nació con hipoacusia bilateral profunda y usa implantes cocleares. Va a un colegio bilingüe de chicos oyentes y es **el único alumno implantado en todo el colegio**: jardín, primaria y secundaria. Nunca sufrió bullying, nadie le tiene lástima y, según su mamá, hasta pasa desapercibido.\n\nEso no fue suerte. En el episodio 10 de **Sordo pero no mudo**, Pau contó la estrategia que sostiene desde que Luqui entró al jardín a los dos años: **hablar de la hipoacusia abiertamente, con todos, desde el primer día**.\n\n## Reunión anual con los docentes\n\nCuando Luqui ingresó al colegio, Pau pidió reunión con las maestras y los directivos. Les explicó qué es el implante, cómo es la batería, cómo se desarma, cómo se arma, cómo se pone. Y no fue una vez: **pide reunión todos los años** con los docentes para volver a explicarlo y para hablar del **mini mic**, el micrófono que usa el profe para que Luqui escuche bien aunque haya ruido.\n\n## El chat de madres y padres, usado para algo productivo\n\nLa otra pata fue hablarles a las familias del grado. En salita de dos eran once nenes; Pau escribió en el chat:\n\n> \"Les conté: Lucas tiene hipoacusia bilateral profunda, usa implantes. Les mandé una foto: es esto, de esto depende que Lucas escuche o no. Si él se lo saca, no escucha.\"\n\nLo repitió en salita de tres cuando entraron chicos nuevos, y otra vez en primer grado, cuando se mezclaron los grupos y aparecieron catorce compañeros que no lo conocían. Sin vergüenza, sin ocultarlo, contestando todas las preguntas.\n\n## El resultado: una red de compañeros que cuidan\n\nLo que Pau cosechó con esa apertura se ve en escenas cotidianas que cuenta con orgullo:\n\n- Un día Luqui volvió con el implante dado vuelta: se le había caído y **se lo encontró Juan, un amigo**. Otro día se lo puso Emi, una compañera.\n- Cuando llueve, los amiguitos le avisan: **\"Lucas, tapate, que se te puede mojar\"**.\n- Se olvidó el mini mic en fútbol y la mamá de un compañero la llamó preocupada porque su hijo le decía que Luqui no iba a escuchar.\n\n> \"Los chicos se súper preocupan. Para mí es un súper mimo.\"\n\n## Naturalizar es un ida y vuelta\n\nPau cree que esa aceptación también hace que Luqui quiera sus implantes: se les puso stickers de Messi (antes tenía uno del Hombre Araña), no los esconde atrás del pelo, y cuando fue al campo de deportes y jugaron con chorros de agua, él solo le dio los \"Audis\" al profe para poder mojarse tranquilo. Él los quiere, lo demuestra, y eso hace que el resto también los tome con naturalidad.\n\nNo en todos los colegios pasa lo mismo, y el miedo de las familias es real. Pero la experiencia de Pau deja un camino concreto para compartir: **explicar antes de que pregunten, repetirlo cada año y responder todo sin vergüenza**. La información, dada a tiempo y con naturalidad, convierte a los compañeros en aliados.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-14",
+    "etiquetas": [
+      "familias",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "mi-hijo-nacio-sordo-la-historia-de-pau-y-luqui"
+    ],
+    "episodio": {
+      "slug": "10-mi-hijo-nacio-sordo-paula-mama-de-luqui",
+      "titulo": "Mi hijo nació sordo — Paula, mamá de Luqui",
+      "numero": 10
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "hipoacusia-oculta-audiometria-normal",
+    "titulo": "Hipoacusia oculta: cuando la audiometría da normal pero algo no anda",
+    "resumen": "La audiometría convencional evalúa la zona de la palabra hablada. Qué detectan la audiometría de alta frecuencia y las otoemisiones acústicas.",
+    "contenido": "\"Pero si yo escucho bien, ¿por qué tengo acúfeno?\" Esa pregunta se repite muchísimo en los consultorios. Y la respuesta, muchas veces, está en un lugar donde la audiometría de siempre no llega a mirar.\n\nEn el episodio 15 de **Sordo pero no mudo**, las fonoaudiólogas Susana Domínguez y Yanina Sitzer explicaron por qué un estudio \"normal\" no siempre cuenta toda la historia.\n\n## Lo que la audiometría convencional mira (y lo que no)\n\nLa **audiometría convencional** evalúa la zona de la palabra hablada: las frecuencias que usamos para entendernos en una conversación cotidiana. Si esa zona está bien, el estudio da normal y el médico suele decir \"está todo bien\".\n\nEl problema es que la vía auditiva es más amplia. Como contó Susana, además del rango convencional existe el de **alta frecuencia**, que va de los 8.000 a los 20.000 hertz. Esas frecuencias no aportan a la conversación de todos los días, pero sí sirven para percibir sonidos mucho más agudos. Y ahí, muchas veces, está el daño.\n\n## Los estudios que completan la foto\n\nPara la persona con acúfenos, el estudio básico no alcanza. Las invitadas describen una batería que para estos casos se vuelve básica:\n\n- **Audiometría de alta frecuencia**: es predictiva del daño coclear. Cuando alguien llega con audiometría normal y acúfeno, muchas veces este estudio revela **hipoacusias ocultas** en las frecuencias agudas.\n- **Otoemisiones acústicas**: también predictivas del daño en el oído interno.\n\nSusana lo resumió con un dato contundente:\n\n> \"Yo puedo tener una lesión del 20-30% a nivel de las células del oído interno y no detectarlo en la audiometría, pero sí puedo detectarlo en estos otros estudios.\"\n\nY ese daño, aunque la persona no lo sienta en su vida cotidiana, la corteza auditiva sí lo registra. Cuando a la corteza le falta información en algún nivel frecuencial, genera una respuesta: el zumbido. El acúfeno no es una enfermedad en sí misma, es un **síntoma** de que algo en la vía auditiva está alterado.\n\n## Encontrar la explicación calma\n\nHay algo más que estos estudios aportan, y no es menor: tranquilidad. Muchas personas hacen lo que las invitadas llaman \"doctor shopping\", ir de médico en médico buscando un diagnóstico que no llega, porque no todos los profesionales piden estas pruebas de forma rutinaria.\n\nCuando aparece la explicación, algo cambia. Como dijo Yanina:\n\n> \"Muchas veces entender de dónde viene ese acúfeno... y eso a la persona lo calma, porque entonces no lo tiene porque tiene un tumor o porque tiene algo maligno que no va a poder curar.\"\n\nLas ideas catastróficas que se generan alrededor del síntoma hacen que el zumbido se sienta mucho más grande de lo que en verdad es. Saber qué pasa, y por qué, es el primer paso para estar mejor.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-18",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "acufenos-tinnitus-que-son-y-como-se-abordan"
+    ],
+    "episodio": {
+      "slug": "15-acufenos-o-tinnitus-susana-dominguez-y-yanina-sitzer",
+      "titulo": "Acúfenos o tinnitus — Susana Domínguez y Yanina Sitzer",
+      "numero": 15
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "terapia-sonora-para-acufenos-como-funciona",
+    "titulo": "Terapia sonora para acúfenos: cómo funciona",
+    "resumen": "En qué consiste la terapia sonora para acúfenos, el rol clave del consejo terapéutico y por qué la meta es la habituación, no la resignación.",
+    "contenido": "Si tenés acúfenos, seguramente alguna vez te preguntaste si hay algo para hacer más allá de \"acostumbrarse\". La respuesta es sí. En el episodio 15 de **Sordo pero no mudo**, las fonoaudiólogas Susana Domínguez y Yanina Sitzer contaron cómo trabajan con **terapia sonora**, un abordaje que tiene dos patas: la terapia con sonido propiamente dicha y el consejo terapéutico.\n\n## Qué es la terapia sonora\n\nEs una terapia que se realiza con sonido: se estimula la vía auditiva con un estímulo sonoro, en un **nivel de intensidad y una cantidad de tiempo que se indican según lo que cada persona presenta**. No es para todos igual: no se trabaja de la misma forma con alguien que tiene acúfeno y pérdida auditiva que con alguien que tiene acúfeno sin pérdida auditiva.\n\nY hay un detalle central: el sonido tiene que ser **agradable** para vos. Si el ruido de lluvia te irrita, no va a ser ruido de lluvia. Como explicó Yanina:\n\n> \"Si lo que ponés te irrita más de lo que tenés, no sirve.\"\n\nPor eso los controles y el feedback de cada persona son parte del tratamiento: si algo no funciona, se cambia.\n\n## El consejo terapéutico: la otra pata\n\nAcá está, según las invitadas, buena parte del secreto. El consejo terapéutico trabaja sobre las ideas que la persona tiene sobre su acúfeno, sobre la psicoeducación, sobre toda la información que se le puede dar acerca de su caso en particular. Yanina fue categórica:\n\n> \"Es como el 80% de que el paciente mejore, tiene que ver con ese consejo terapéutico.\"\n\nY al revés también funciona: un mal consejo inicial —como que te digan \"acostumbrate, yo también lo tengo\"— puede empeorar la percepción que alguien tiene de su propio acúfeno y hacer muy difícil salir de esas ideas erróneas.\n\nCada persona tiene su vida, su historia auditiva, su trabajo, su personalidad. Conocer todo eso es parte de la evaluación inicial y del tratamiento, porque permite dar **herramientas reales** a cada quien.\n\n## La meta: habituación, no resignación\n\nEl objetivo final del tratamiento es la **habituación**. Y no es lo mismo que resignarse. Susana lo diferencia con claridad: no se trata de \"acostumbrarse\" o \"convivir con esto\", que conllevan una emoción negativa, sino de habituarse, una capacidad natural del cerebro.\n\nCuando un estímulo no es significativo, el cerebro lo pone a nivel subconsciente y deja de prestarle atención. Es lo que le pasa a quien vive cerca de una vía de tren o de una autopista: en algún momento deja de escucharlo. El cerebro puede lograrlo solo, pero le lleva mucho tiempo —un año, un año y medio—; el tratamiento acompaña y ordena ese camino.\n\nSegún contaron en el episodio, entre un 70 y un 80 por ciento de los pacientes logran esa habituación. Se pueden hacer cosas para estar mejor: no hace falta quedarse en el malestar.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-19",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "acufenos-tinnitus-que-son-y-como-se-abordan"
+    ],
+    "episodio": {
+      "slug": "15-acufenos-o-tinnitus-susana-dominguez-y-yanina-sitzer",
+      "titulo": "Acúfenos o tinnitus — Susana Domínguez y Yanina Sitzer",
+      "numero": 15
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "los-acufenos-empeoran-con-el-tiempo",
+    "titulo": "¿Los acúfenos empeoran con el tiempo?",
+    "resumen": "El zumbido no tiene la capacidad de aumentar progresivamente ni de tapar la palabra. Qué son los moduladores y por qué a veces se percibe más fuerte.",
+    "contenido": "Es uno de los miedos más comunes de quien tiene acúfenos: ¿esto va a ir empeorando? ¿Mañana lo voy a tener más fuerte, y pasado más, hasta que me tape todo? En el episodio 15 de **Sordo pero no mudo**, las fonoaudiólogas Susana Domínguez y Yanina Sitzer trajeron un dato que alivia.\n\n## El zumbido no tiene la capacidad de aumentar\n\nAsí de directo lo dijo Yanina:\n\n> \"El zumbido no tiene la capacidad de aumentar, no es que una persona tiene zumbido y mañana lo va a tener peor, y pasado peor. Puede dar tranquilidad pensar en que no tiene por qué aumentar.\"\n\nDe hecho, cuando se mide el acúfeno con estudios, sus características psicoacústicas están siempre muy cerca del umbral auditivo: suele estar apenas unos 5 decibeles por encima de lo que la persona escucha. **No es tan fuerte como se siente.** Cuando alguien lo percibe fuertísimo, eso responde a características psicoemocionales, no a que el sonido en sí haya crecido. Un acúfeno cercano al umbral puede molestar un montón igual, y esa distinción es clave para trabajarlo.\n\n## Tampoco tapa la comprensión de la palabra\n\nOtro dato que las invitadas remarcaron: si tenés dificultades para entender lo que te dicen, eso obedece a una pérdida auditiva o a un problema de procesamiento auditivo, no al acúfeno. Como resumió Susana:\n\n> \"Así como no tiene la virtud de aumentar, tampoco tiene la virtud de dejar de que comprendas en ruido o que comprendas en la vida diaria.\"\n\nSi el zumbido pareciera estar \"tapando\" la palabra, lo que hay que hacer es detectar esa pérdida auditiva y hacer algo con eso.\n\n## Entonces, ¿por qué a veces lo siento más fuerte?\n\nPorque existen **moduladores**: factores que pueden generar cambios en cómo percibís el acúfeno, en intensidad y en frecuencia. En el episodio mencionaron varios:\n\n- **Estrés y ansiedad**, que junto con el trauma acústico están en el top de los disparadores.\n- **Bruxismo**: apretar la mandíbula al dormir puede hacer que a la mañana lo percibas más fuerte.\n- **Contracturas cervicales**, un mal descanso o hasta la almohada incorrecta.\n- **Problemas de la articulación temporomandibular**, procesos con mocos o mala función tubaria.\n- **Sustancias** que generan hiperactividad en la corteza: café, alcohol, quininas de algunas gaseosas, glutamato.\n\nSon los llamados acúfenos somáticos o somatosonidos: información del sistema muscular y esquelético que comparte núcleos con la vía auditiva y puede incrementar la percepción del zumbido. Mejorando eso —una placa de descanso, kinesiología, actividad física específica— la percepción también puede mejorar.\n\n## La atención también juega\n\nEl otro gran factor es dónde ponés el foco. En el silencio de la noche el acúfeno parece más fuerte, pero en realidad es la falta de contraste con los ruidos ambientales y la atención que le estás poniendo. Si el acúfeno pasa a un nivel de alerta —\"¿qué me pasa?, ¿tengo algo malo?\"— se arma un círculo vicioso del que es difícil salir. Detectar los gatillos y trabajar sobre ellos, en cambio, abre la puerta a estar mejor.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-20",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "acufenos-tinnitus-que-son-y-como-se-abordan"
+    ],
+    "episodio": {
+      "slug": "15-acufenos-o-tinnitus-susana-dominguez-y-yanina-sitzer",
+      "titulo": "Acúfenos o tinnitus — Susana Domínguez y Yanina Sitzer",
+      "numero": 15
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "como-prevenir-acufenos-y-cuidar-la-audicion",
+    "titulo": "Cómo cuidar tus oídos: recitales, auriculares y decibeles",
+    "resumen": "Protectores auditivos en recitales, volumen de auriculares y juguetes que superan los 105 decibeles: prevención auditiva según dos fonoaudiólogas.",
+    "contenido": "El oído no se cambia, no se renueva y no avisa con tiempo. En el episodio 15 de **Sordo pero no mudo**, las fonoaudiólogas Susana Domínguez y Yanina Sitzer dedicaron buena parte de la charla a algo de lo que se habla poco: la **prevención auditiva**. Y dejaron una idea que resume todo. Como dijo Yanina:\n\n> \"El oído es el mismo oído desde que nacés hasta que no estamos más en este mundo, y hay que cuidarlo.\"\n\n## Recitales y lugares ruidosos: protectores para todos\n\nCualquier estímulo sonoro intenso genera una hiperexcitabilidad en las células del oído. Para quien ya tiene acúfenos, eso puede traducirse en percibir el zumbido más fuerte después de una fiesta o un recital. Pero el consejo de las invitadas va más allá:\n\n> \"Lo ideal sería que cualquier persona se ponga protectores auditivos, no importa si tiene o no tiene acúfeno.\"\n\nYanina contó su propia experiencia: en el secundario iba a recitales sin protección, y hoy no va a uno sin protectores, aun sin tener acúfeno, porque el daño por ruido es acumulativo. Susana suma un detalle: cuando le acerca esta idea a un paciente, le dice que su pareja o quien lo acompañe también use filtros, porque **la lesión es para todos**, tengan o no una predisposición.\n\nLos músicos, contaron, consultan cada vez más. Y la respuesta no es prohibirles tocar: es saber con qué decibeles trabajan, cuánto tiempo pueden estar expuestos y protegerse con filtros adecuados.\n\n## Auriculares, consolas y juguetes sonoros\n\nLa exposición no pasa solo por los boliches. Las invitadas mencionaron los auriculares, los celulares y las consolas de juego: las consecuencias que generan en niños y adolescentes las vamos a conocer dentro de unos años.\n\nY hay un dato que sorprende: los **juguetes sonoros**. Susana, que publicó un artículo sobre el tema, contó que muchas guitarritas, pianitos y espaditas con sonido superan los **105 o 110 decibeles**: intensidades traumáticas. ¿Cuánto sería aceptable? Por debajo de **80 decibeles**, para poder usarlo muchas horas sin riesgo.\n\n## Un oído que no fue diseñado para este mundo\n\nSusana lo explica con una imagen: tenemos en el oído músculos que funcionan como una trinchera contra el trauma acústico —el músculo del estribo, el tensor del tímpano—, que se contraen ante sonidos fuertes. Pero en la antigüedad lo más ruidoso que existía era una catarata. Los sonidos de impacto, como una explosión, llegan antes de que esos músculos alcancen a contraerse, y ahí se produce la lesión.\n\nA eso se suman las fábricas y los trabajos en la calle con decibeles muy elevados, donde muchas veces la protección auditiva no está o no se usa.\n\nLa conclusión de las invitadas es simple: cuidate el oído **antes** de tener un acúfeno, antes de que se genere una hipersensibilidad auditiva. No hay tanta información dando vueltas sobre esto, y por eso vale la pena compartirla.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-21",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "acufenos-tinnitus-que-son-y-como-se-abordan"
+    ],
+    "episodio": {
+      "slug": "15-acufenos-o-tinnitus-susana-dominguez-y-yanina-sitzer",
+      "titulo": "Acúfenos o tinnitus — Susana Domínguez y Yanina Sitzer",
+      "numero": 15
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "hipoacusia-unilateral-certificado-discapacidad-argentina",
+    "titulo": "Hipoacusia unilateral: ¿da certificado de discapacidad en Argentina?",
+    "resumen": "En Argentina, la sordera de un solo oído no otorga certificado de discapacidad. Qué implica para la cobertura de dispositivos y por qué no bajar los brazos.",
+    "contenido": "Perdiste la audición de un oído, el tratamiento no funcionó y llegó el momento de pensar en un dispositivo. Ahí aparece un obstáculo que sorprende a muchas familias: **en Argentina, la hipoacusia unilateral no otorga certificado de discapacidad auditiva**.\n\nEn el episodio 19 de **Sordo pero no mudo**, la Dra. Paula Ontivero —jefa de otología del Sanatorio Güemes y cirujana de oído— lo puso en palabras simples:\n\n> \"El acceso no lo consideran una discapacidad, tener un solo oído, en nuestro país. Entonces, si no tenés esa discapacidad, no accedés también a los beneficios y a los derechos que uno tiene por discapacidad auditiva.\"\n\n## Qué significa en la práctica\n\nEl certificado de discapacidad es la llave de acceso a muchos derechos. Sin él, la pelea con las coberturas médicas se vuelve más compleja: la doctora cuenta que a veces hacen de todo, no lo logran, y empiezan lo que ella llama **\"las luchas judiciales\"**.\n\nNo es un capricho local: en muchos países la legislación directamente no contempla el implante unilateral. En países vecinos, en Europa y en Estados Unidos recién comienza. Como se charló en el episodio, la discusión no pasa tanto por la aprobación médica de los dispositivos, sino por **quién pone la plata**: el Estado, la obra social o la prepaga.\n\n## El PMO y sus letras chicas\n\nEn Argentina, los implantes entran por el **Plan Médico Obligatorio (PMO)**, catalogados como implantes permanentes. Pero el PMO tiene sus \"cositas\", como dice la doctora. Una de ellas: **los límites de edad**.\n\n> \"A veces te ponen como límite los 60 años. Una persona de 60 años no solamente es joven, sino que es vital y está en plena actividad laboral. Nosotros tenemos pacientes implantados de 80 años y que están muy bien.\"\n\nPara la Dra. Ontivero, tener estímulo auditivo a cualquier edad hace que la persona esté bien socialmente. Es, dice, \"todo un planteo sociológico también\".\n\n## No te rindas ante la primera negativa\n\nEl mensaje del episodio es claro: que te digan que no una vez no significa que el camino se terminó. Muchas veces carecemos de información sobre nuestros propios derechos, y eso juega en contra.\n\nComo dijo Lucas en la charla: está bueno no darse por vencido, sino **buscar la información** —si hace falta, con un abogado, con un asesor, con quien sea—, porque a veces esa información no nos llega sola y hay que salir a buscarla.\n\nLa doctora cierra con una idea que vale para todo este recorrido:\n\n> \"La información es lo más importante. El acceso lo vamos a encontrar de alguna manera, pero esperanza hay y siempre tenemos algo por hacer.\"\n\nSi estás en esta situación, acercate a tu médico, pedí que te expliquen las opciones y asesorate sobre tus derechos antes de aceptar un no como respuesta final.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-28",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "sordera-subita-que-hacer-si-el-tratamiento-no-funciona"
+    ],
+    "episodio": {
+      "slug": "19-que-hacer-si-no-funciono-el-tratamiento-de-la-sordera-subita-dra-paula-ontivero",
+      "titulo": "¿Qué hacer si no funcionó el tratamiento de la sordera súbita? — Dra. Paula Ontivero",
+      "numero": 19
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "resto-auditivo-que-es-y-cuando-un-audifono-alcanza",
+    "titulo": "Resto auditivo: qué es y cuándo un audífono alcanza",
+    "resumen": "Después de una pérdida auditiva hay que evaluar qué quedó. Qué es el resto auditivo, cuándo es útil y cuándo hay que pensar en otras alternativas.",
+    "contenido": "Cuando un tratamiento por pérdida auditiva termina y no hubo el resultado esperado, el siguiente paso es evaluar **qué audición quedó** en ese oído. De eso depende todo lo que viene después.\n\nEn el episodio 19 de **Sordo pero no mudo**, la Dra. Paula Ontivero —jefa de otología del Sanatorio Güemes y cirujana de oído— lo explicó con una imagen muy gráfica:\n\n> \"Después de un tsunami, vemos qué quedó: puede que se haya salvado algo, puede que no se haya salvado nada de esa audición.\"\n\nEso que se salvó es el **resto auditivo**. Y la pregunta clave no es solo si quedó algo, sino si ese algo sirve.\n\n## ¿Cuándo un resto auditivo es útil?\n\nPara la doctora, un resto auditivo es útil cuando permite **acceder a todos los sonidos del lenguaje** y cuando no queda una asimetría muy grande con el otro oído. La referencia que usa son los **70 decibeles**: más allá de ese umbral, casi no queda función en el oído.\n\nSi el resto es bueno, la solución puede ser más sencilla de lo que imaginás:\n\n> \"Si tenemos un buen resto auditivo, a veces poniendo un audífono mejoramos y logramos el estéreo con el otro oído.\"\n\nEl audífono, en ese caso, **amplifica lo que quedó**: le aumenta la proporción de audición a ese oído y recupera la escucha con los dos lados, que es lo que nos permite ubicar de dónde vienen los sonidos y entender mejor en ambientes ruidosos.\n\n## ¿Y si no quedó nada?\n\nCuando la pérdida fue total, el audífono común ya no tiene con qué trabajar. Ahí entran en juego otras alternativas. La doctora divide los **dispositivos de ayuda auditiva** en tres grandes grupos: los audífonos, los dispositivos de conducción ósea y los implantes cocleares. Cada uno funciona distinto y cada uno tiene su indicación.\n\nUn dato que ayuda a decidir: los audífonos y los dispositivos de conducción ósea **se pueden probar** antes de elegir. Como cuenta la doctora, uno puede ir, probarlo y decir \"me gusta, no me gusta, me sirve, no me sirve\". El implante coclear, en cambio, requiere cirugía y un proceso de rehabilitación, así que la experiencia recién se conoce una vez colocado.\n\n## Cada caso se evalúa de forma individual\n\nNo hay una receta universal. La evaluación depende de la audiometría, de la vida de cada persona, de su entorno y de sus prioridades. La propia doctora lo resume así: a veces es muy artesanal, porque **\"cada paciente es un paciente único\"**, y los casos complejos hasta se discuten entre colegas.\n\nLo importante es saber que, incluso cuando el tratamiento no funcionó, el camino no se termina: hay que medir lo que quedó, entender qué opciones existen y elegir con información.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-29",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "sordera-subita-que-hacer-si-el-tratamiento-no-funciona"
+    ],
+    "episodio": {
+      "slug": "19-que-hacer-si-no-funciono-el-tratamiento-de-la-sordera-subita-dra-paula-ontivero",
+      "titulo": "¿Qué hacer si no funcionó el tratamiento de la sordera súbita? — Dra. Paula Ontivero",
+      "numero": 19
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "vivir-con-un-solo-oido-que-implica",
+    "titulo": "Vivir con un solo oído: lo que nadie te cuenta",
+    "resumen": "Escuchar de un solo lado complica localizar sonidos y entender en el ruido, y puede llevar al aislamiento. Por qué \"escucho bien del otro\" no siempre alcanza.",
+    "contenido": "\"Pero si escuchás bien del otro oído, ¿cuál es el problema?\" Si perdiste la audición de un lado, seguro escuchaste esa frase más de una vez. La realidad es que **vivir con un solo oído tiene dificultades concretas** que desde afuera no se ven.\n\nEn el episodio 19 de **Sordo pero no mudo**, la Dra. Paula Ontivero —jefa de otología del Sanatorio Güemes y cirujana de oído— charló con Lucas Adlerstein sobre qué implica quedarse con un solo oído y qué se puede hacer.\n\n## Lo que se pierde cuando se pierde un lado\n\nEscuchar con los dos oídos no es solo escuchar \"más\": es lo que nos permite **localizar de dónde vienen los sonidos** y **entender en ambientes con ruido**. Con un solo oído, esas dos cosas se complican.\n\nCuánto pesa eso en el día a día depende de la vida de cada persona. Como explica la doctora, alguien que vive en lugares silenciosos quizás no lo sufre tanto. Pero un chico en edad escolar, por ejemplo, pasa sus días en aulas ruidosas, donde entender es un esfuerzo constante. Y también está la pregunta por el futuro: **qué pasa si el otro oído se deteriora con la edad o le pasa algo**.\n\n## Una pérdida que no se ve\n\nHay algo que hace todo más difícil: la hipoacusia es invisible. La Dra. Ontivero lo dijo con una claridad que quedó resonando:\n\n> \"La pérdida auditiva es silenciosa. Cuando nosotros vemos un paciente ciego lo ayudamos enseguida, pero no nos damos cuenta si estamos enfrente de un paciente que es sordo.\"\n\nEl riesgo mayor, para ella, es el **aislamiento social**: personas mayores que van perdiendo audición, no entienden en reuniones con ruido y se van encerrando cada vez más. Por eso insiste en que toda ayuda auditiva apunta a lo mismo:\n\n> \"El tema es la pérdida social, y eso creo que es hacia dónde va siempre la ayuda auditiva: que el paciente no se aísle.\"\n\nLucas lo contó desde su propia experiencia: a veces, en el colectivo, mira para abajo para evitar el contacto visual, porque sabe que si alguien le habla del lado que no escucha va a pasar un mal momento. Son estrategias silenciosas que muchas personas con hipoacusia conocen bien.\n\n## Hay alternativas, y la elección es tuya\n\nLa buena noticia del episodio es que quedarse con un solo oído **no es el final del camino**. Existen dispositivos de ayuda auditiva de distintos tipos, y hasta sistemas de frecuencia modulada (FM) para chicos en edad escolar, donde el docente usa un micrófono y la voz llega directo al oído que escucha.\n\nPero quizás lo más valioso es cómo entiende la doctora el rol del profesional: dar información y acompañar la decisión de cada persona, **\"sea una, sea otra, sea nada también\"**. Porque no siempre lo que otros creen mejor para vos es lo ideal. Y como resume ella: siempre tenemos algo por hacer.\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-30",
+    "etiquetas": [
+      "informacion",
+      "podcast"
+    ],
+    "relacionados": [
+      "sordera-subita-que-hacer-si-el-tratamiento-no-funciona"
+    ],
+    "episodio": {
+      "slug": "19-que-hacer-si-no-funciono-el-tratamiento-de-la-sordera-subita-dra-paula-ontivero",
+      "titulo": "¿Qué hacer si no funcionó el tratamiento de la sordera súbita? — Dra. Paula Ontivero",
+      "numero": 19
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "estudiar-una-carrera-con-hipoacusia-estrategias",
+    "titulo": "Estudiar una carrera con hipoacusia: estrategias que funcionan",
+    "resumen": "Juli Cortesini Leavi estudió medicina con hipoacusia. Sus estrategias: sentarse adelante, pedir que hablen de frente y conocer los propios tiempos.",
+    "contenido": "¿Se puede estudiar una carrera exigente con hipoacusia? Juli Cortesini Leavi, médica pediatra y neonatóloga con implante coclear bilateral, la cursó entera. En el episodio 44 de **Sordo pero no mudo** conversó con Lucas Adlerstein sobre cómo lo hizo, qué le funcionó y qué aprendió en el camino.\n\n## Cuando el aula se vuelve cuesta arriba\n\nJuli notó el cambio en tercer año de la facultad: los debates, los ateneos, las personas que hablaban adelante o detrás de ella se le dificultaban un montón. Cuando dictaban un laboratorio en las prácticas, no llegaba a escucharlo completo y necesitaba que se lo repitieran. Ella misma lo resume: apenas dejás de sentir algo, lo notás. Y ahí aparece la bifurcación que conocen muchas personas con hipoacusia: pedir ayuda o aislarse.\n\n## Estrategias concretas que le funcionaron\n\nCuando Lucas le preguntó qué le diría a alguien que quiere estudiar con hipoacusia, Juli compartió su experiencia:\n\n- **Sentarse adelante** en las clases, para tener mejor acceso a lo que se dice.\n- **Hablar personalmente con el profesor**: pedirle que se dirija de frente y que no esté tanto tiempo de espaldas.\n- **Pedir que repitan** cuando algo no se entendió, sin darle más vueltas.\n- **Conocer los propios tiempos y limitaciones**, porque lo que le sirve a una persona puede no servirle a otra. Como dice ella, es algo muy personal.\n\nY sobre todo, ser claro desde el principio:\n\n> \"Yo creo que cuando uno es claro y conciso es mejor: por ahí sobre aclararlo que no aclarar y esperar que alguien te pregunte.\"\n\n## El riesgo del \"escudo\"\n\nHay una parte de la historia de Juli que vale la pena mirar de cerca. Cuando le proponían juntarse a estudiar, prefería hacerlo sola. Y estudiaba de más para compensar la inseguridad de no saber si había escuchado todo en clase:\n\n> \"Tenía una tendencia a comerme el libro porque tenía que tener herramienta de cómo defenderme. Era como un escudo para mí, para protegerme, para decir: mirá, no es que no te escuché, estudié.\"\n\nEse escudo puede funcionar académicamente, pero esconde algo más: conductas que uno va tomando inconscientemente, como prefiero hacer esto solo, que enmascaran que algo no está bien. Juli lo dice con claridad: reconocerlo ya es un montón.\n\n## La facultad se puede\n\nEl mensaje de Juli no es que sea fácil, sino que es posible:\n\n> \"Yo creo que la facultad se puede hacer siempre y cuando uno conozca sus tiempos, su limitación.\"\n\nSi tenés vocación y estás seguro de que eso es para vos, dice, nada te lo va a impedir. La clave está en tener claridad para pedir lo que necesitás, sin esperar a que el otro adivine. Preguntar no es estar en falta: es la forma más directa de seguir en el aula.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-04",
+    "etiquetas": [
+      "informacion",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "medica-sorda-con-implante-coclear-la-historia-de-juli"
+    ],
+    "episodio": {
+      "slug": "44-medica-sorda-con-implante-coclear-juli-cortesini-leavi",
+      "titulo": "Médica sorda con implante coclear — Juli Cortesini Leavi",
+      "numero": 44
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "encendido-del-implante-coclear-expectativas-reales",
+    "titulo": "El encendido del implante coclear: expectativas reales",
+    "resumen": "Juli esperaba magia en el encendido de su implante coclear y encontró angustia. Tardó seis meses en entender una palabra. Su historia real, sin filtros.",
+    "contenido": "Hay un momento que muchas familias esperan como si fuera una escena de película: el encendido del implante coclear. En el episodio 44 de **Sordo pero no mudo**, Juli Cortesini Leavi —médica pediatra y neonatóloga, usuaria de implante coclear bilateral— le puso palabras reales a esa experiencia. Y su historia sirve para ajustar expectativas.\n\n## El primer encendido: la desilusión\n\nA Juli la operaron del oído derecho en octubre de 2017 y tres meses después le encendieron el implante. No fue lo que esperaba:\n\n> \"El momento del encendido fue como: qué tristeza, o sea, ¿para esto vine? No sabía dónde me estaba metiendo. Mucha angustia, mucha desilusión, porque tenía expectativas muy altas.\"\n\nNadie le había dicho antes que **el implante no es cuestión de magia**. La frustración fue tan fuerte que dejó de usarlo por un mes entero. Hasta que su mamá le dijo una frase que le cambió el rumbo:\n\n> \"Julieta, esto depende de vos, únicamente de vos.\"\n\n## Seis meses para una palabra\n\nSe lo volvió a poner y arrancó el trabajo de verdad. Con rehabilitación, le llevó **seis meses entender una palabra**. Pero ahí pasó algo que describe muy bien cómo funciona este proceso: cuando uno empieza a entender una palabra, después entiende otra, otra y otra. En sus palabras, \"las ruedas giran más fácil\". Lucas lo comparó con los bebés que acumulan palabras y de golpe empiezan a hablar sin parar.\n\n## El segundo implante: otra historia\n\nEn 2020 se implantó el oído izquierdo, y la experiencia fue completamente distinta: al mes se lo encendieron y al mes y medio ya estaba todo genial. El cerebro ya había aprendido el camino.\n\nOtro dato valioso de su recorrido: como su familia vive en La Pampa y ella estaba en Buenos Aires, hizo la **rehabilitación a distancia por videollamada**. Pensó que iba a ser dificultoso, pero funcionó muy bien y avanzó bastante rápido.\n\n## Lo que deja esta historia\n\n- El encendido puede no parecerse en nada a lo que imaginabas, y eso no significa que algo salió mal.\n- La rehabilitación y la constancia son parte central del proceso: el implante no trabaja solo.\n- Los tiempos son personales: a Juli el primer oído le costó muchísimo y el segundo fue rápido.\n- El acompañamiento importa. A veces una frase de alguien cercano destraba lo que meses de frustración no dejaban ver.\n\nHoy Juli usa sus dos implantes, escucha audios y música por conectividad inalámbrica, y cuenta que a los 31 años tuvo su primera experiencia con auriculares. Pero llegar ahí llevó tiempo, trabajo y paciencia. Como dice ella: \"se ve que tenía que aprender a ser paciente\".\n\n*Esta nota tiene fines informativos y no reemplaza la consulta médica. Cada caso es único: consultá con tu especialista de confianza.*",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-05",
+    "etiquetas": [
+      "informacion",
+      "tecnologia",
+      "podcast"
+    ],
+    "relacionados": [
+      "medica-sorda-con-implante-coclear-la-historia-de-juli"
+    ],
+    "episodio": {
+      "slug": "44-medica-sorda-con-implante-coclear-juli-cortesini-leavi",
+      "titulo": "Médica sorda con implante coclear — Juli Cortesini Leavi",
+      "numero": 44
+    },
+    "destacado": false,
+    "publicado": true
+  },
+  {
+    "slug": "trabajar-con-hipoacusia-como-hablarlo-con-tu-equipo",
+    "titulo": "Trabajar con hipoacusia: cómo hablarlo con tu equipo",
+    "resumen": "Juli, médica con implante coclear, contó su situación a su equipo de residencia y pidió ayuda concreta. Qué pasó cuando lo hizo y qué aprendió.",
+    "contenido": "Hablar de la hipoacusia en el trabajo no es fácil. ¿Qué digo? ¿Cuánto cuento? ¿Van a pensar que no puedo? En el episodio 44 de **Sordo pero no mudo**, Juli Cortesini Leavi —médica pediatra y neonatóloga con implante coclear bilateral— contó cómo lo resolvió en uno de los entornos más exigentes que existen: la residencia médica.\n\n## Poner el tema sobre la mesa\n\nJuli llegó a la residencia recién implantada del segundo oído, literalmente aprendiendo a escuchar: estaba en la etapa de las primeras palabras que empezaba a entender. Sonaba el teléfono y no atendía. Los apellidos y domicilios en las historias clínicas se le dificultaban muchísimo. Su decisión fue no esperar a que los demás adivinaran:\n\n> \"Aclaré ahí con mi equipo de compañeros: les dije cuál era el panorama, cuál era la situación, de qué manera ellos me podían ayudar. Si no, no podía con tanto.\"\n\n## Pedir algo concreto\n\nLo interesante es que Juli no pidió ayuda en abstracto: pidió algo puntual. Con el teléfono, explicó que aunque lo escuchara, no sabía si iba a comprender lo que le decían, y atenderlo para después tener que pasárselo a otro era una doble carga. Entonces planteó que **otra persona atendiera el teléfono** mientras ella se ocupaba de otra cosa. Un acuerdo simple, claro y que funcionó para todos.\n\nCon el tiempo, esa exposición constante terminó jugando a favor: ella misma dice que la residencia fue \"una rehabilitación auditiva recontra intensa\", porque estaba permanentemente estimulada.\n\n## El gesto del barbijo\n\nHay una escena de su paso por terapia intensiva pediátrica, en plena pandemia, que resume lo que puede hacer un equipo cuando entiende. Un día Juli llegó al pase de sala —la instancia donde se presentan todos los pacientes al equipo entrante— y encontró a sus colegas sin barbijo. Ella, desconcertada, les pidió que se los pusieran. La respuesta: se los habían sacado para que ella pudiera verles la boca durante el pase, y después retomaban el aislamiento habitual. Ella ni siquiera lo había pedido.\n\n> \"Me sentí muy acompañada, muy contenida. Me re emocioné, no podía parar de llorar.\"\n\nPara Juli fue un gesto enorme, sobre todo en un ambiente donde, como cuenta, no siempre abunda la empatía entre colegas.\n\n## Repetir sin culpa\n\nEl otro aprendizaje llegó de a poco: permitirse no escuchar todo. Juli vivía exigiéndose estar siempre alerta, atenta a todo, hasta que entendió que podía pedir que le repitan sin cargar con culpa:\n\n> \"Ahora cuando pregunto, lo pregunto desde mí, no agarrándome de lo que tengo o lo que me pasa. Pregunto: no escuché, fin.\"\n\nEsa separación —pregunto porque no escuché, no porque soy hipoacúsica— es, en sus palabras, un montón. Y quizás sea el mejor punto de partida para cualquier conversación laboral: hablar claro, pedir cosas concretas y sacarle el peso de encima a algo que es, simplemente, normal.",
+    "autor": "Equipo Casacusia",
+    "fecha": "2026-06-06",
+    "etiquetas": [
+      "informacion",
+      "comunidad",
+      "podcast"
+    ],
+    "relacionados": [
+      "medica-sorda-con-implante-coclear-la-historia-de-juli"
+    ],
+    "episodio": {
+      "slug": "44-medica-sorda-con-implante-coclear-juli-cortesini-leavi",
+      "titulo": "Médica sorda con implante coclear — Juli Cortesini Leavi",
+      "numero": 44
+    },
     "destacado": false,
     "publicado": true
   }
