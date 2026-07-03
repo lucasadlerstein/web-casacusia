@@ -21,7 +21,9 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     path: "/prensa",
-    locale: locale as Locale
+    locale: locale as Locale,
+    // Página en borrador: fuera del índice hasta que Comunicación la apruebe.
+    noindex: true
   });
 }
 

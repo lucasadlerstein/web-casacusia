@@ -9,7 +9,7 @@ import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { ContentSidebar } from "@/components/sections/ContentSidebar";
 import { Link } from "@/lib/i18n/navigation";
 import { getPodcastFeed, getPodcastEpisode } from "@/lib/podcast";
-import { getAliados } from "@/lib/content";
+import { getAliados, getBlogPostsByEpisodio } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 import type { PodcastEpisode } from "@/lib/podcast";
@@ -35,7 +35,8 @@ export async function generateMetadata({
     title: `${ep.titulo} · Sordo pero no mudo`,
     description: ep.descripcion.slice(0, 160),
     path: `/podcast/${ep.slug}`,
-    locale: locale as Locale
+    locale: locale as Locale,
+    ...(ep.imagen ? { image: ep.imagen } : {})
   });
 }
 
@@ -92,6 +93,7 @@ export default async function EpisodioPage({
   if (!ep) notFound();
 
   const fecha = formatDate(ep.pubDate);
+  const notas = getBlogPostsByEpisodio(ep.slug);
 
   const jsonLd = buildEpisodeJsonLd(ep, locale);
   const aliados = getAliados({ destacados: true }).map((a) => ({
@@ -201,6 +203,30 @@ export default async function EpisodioPage({
               <div className="mt-10">
                 <h2 className="font-display text-xl font-extrabold text-ink mb-3">Sobre este episodio</h2>
                 <p className="text-ink-soft leading-relaxed whitespace-pre-line">{ep.descripcion}</p>
+              </div>
+            )}
+
+            {/* Notas del blog derivadas de este episodio */}
+            {notas.length > 0 && (
+              <div className="mt-12 pt-10 border-t border-surface-line">
+                <h2 className="font-display text-2xl font-extrabold text-ink mb-2">
+                  Notas de este episodio
+                </h2>
+                <p className="text-ink-muted text-sm mb-6">
+                  Para leer con calma lo que se conversó en este episodio.
+                </p>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {notas.map((nota) => (
+                    <Link key={nota.slug} href={`/recursos/blog/${nota.slug}`} className="group">
+                      <div className="h-full rounded-2xl bg-surface-card border border-surface-line p-5 hover:shadow-md transition-shadow">
+                        <h3 className="font-display text-base font-extrabold text-ink leading-snug group-hover:text-verde-dark transition-colors">
+                          {nota.titulo}
+                        </h3>
+                        <p className="mt-1.5 text-sm text-ink-soft line-clamp-2">{nota.resumen}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </article>

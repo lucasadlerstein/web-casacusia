@@ -28,7 +28,10 @@ const nextConfig = {
       { source: "/voluntarios", destination: "/sumate/voluntariado", permanent: true },
       { source: "/blog", destination: "/recursos/blog", permanent: true },
       { source: "/inicio/blog", destination: "/recursos/blog", permanent: true },
-      { source: "/inicio/:path*", destination: "/:path*", permanent: true }
+      { source: "/inicio/:path*", destination: "/:path*", permanent: true },
+      // Legacy WordPress: rutas viejas todavía indexadas por Google
+      { source: "/calendar", destination: "/calendario", permanent: true },
+      { source: "/author/:path*", destination: "/nosotros", permanent: true }
     ];
   },
   async headers() {

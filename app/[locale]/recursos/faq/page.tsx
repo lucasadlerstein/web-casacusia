@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
@@ -14,10 +14,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "faq" });
   return buildMetadata({
-    title: "Preguntas frecuentes sobre hipoacusia",
-    description:
-      "Respuestas concretas a las preguntas más frecuentes sobre hipoacusia, dispositivos, donaciones y Casacusia.",
+    title: t("title"),
+    description: t("description"),
     path: "/recursos/faq",
     locale: locale as Locale
   });

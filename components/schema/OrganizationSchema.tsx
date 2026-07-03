@@ -15,7 +15,18 @@ export function OrganizationSchema() {
     logo: `${site.url}/brand/logos/logo-vertical.png`,
     foundingDate: site.foundingDate,
     email: site.email,
-    areaServed: { "@type": "Country", name: "Argentina" },
+    areaServed: [
+      "Argentina",
+      "México",
+      "España",
+      "Chile",
+      "Uruguay",
+      "Perú",
+      "Bolivia",
+      "Colombia",
+      "Paraguay",
+      "Ecuador"
+    ].map((name) => ({ "@type": "Country", name })),
     founder: {
       "@type": "Person",
       name: "Lucas Adlerstein",

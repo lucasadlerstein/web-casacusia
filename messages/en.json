@@ -65,7 +65,8 @@
     "abrirMenu": "Open menu",
     "cerrarMenu": "Close menu",
     "saltarAlContenido": "Skip to main content",
-    "prensa": "Press"
+    "prensa": "Press",
+    "blog": "Stories"
   },
   "home": {
     "title": "CASACUSIA: Walking through hearing loss together",
@@ -867,5 +868,43 @@
     "navigation": "Main navigation",
     "social": "Social media",
     "languages": "Select language"
+  },
+  "faq": {
+    "title": "Frequently asked questions about hearing loss",
+    "description": "Clear answers to the most common questions about hearing loss, devices, donations, and Casacusia."
+  },
+  "blog": {
+    "metaTitle": "Blog · CASACUSIA",
+    "metaDescription": "First-person stories, information, and updates about hearing loss. Stories from people and families navigating hearing impairment.",
+    "heroTitle": "Stories that inspire",
+    "heroSubtitle": "First-person stories, information, and updates from the hearing loss community.",
+    "buscar": "Search the blog...",
+    "todas": "All",
+    "leerMas": "Read more",
+    "sinResultados": "No posts found for that search",
+    "sinResultadosDesc": "Try different keywords or remove the filters.",
+    "por": "By",
+    "volverAlBlog": "Back to blog",
+    "comentarios": "Comments",
+    "sinComentarios": "No comments on this post yet.",
+    "comentarEnInstagram": "Leave a comment on Instagram",
+    "comentariosProximamente": "Comments will be enabled when this post is published on Instagram.",
+    "relacionados": "Other posts you might like",
+    "newsletter": {
+      "titulo": "Get stories in your inbox",
+      "subtitulo": "Updates, stories, and resources about hearing loss. No spam, only content worth reading.",
+      "nombre": "Your name",
+      "email": "Your email",
+      "boton": "Subscribe",
+      "exito": "You're subscribed! You'll receive our stories in your inbox."
+    },
+    "etiqueta": {
+      "historias": "Stories",
+      "familias": "Families",
+      "tecnologia": "Technology",
+      "comunidad": "Community",
+      "informacion": "Information",
+      "podcast": "Podcast"
+    }
   }
 }

@@ -19,8 +19,11 @@ CASACUSIA es una Fundación argentina fundada en enero de 2025 por Lucas Adlerst
 - [Nosotros / Equipo](https://casacusia.org/nosotros/equipo): El equipo que sostiene la Fundación.
 - [Programas](https://casacusia.org/programas): Encuentros, podcast, red de padres, charlas corporativas.
 - [Programas / Red de padres y madres](https://casacusia.org/programas/red-padres-madres): Red virtual con 220+ familias.
-- [Podcast](https://casacusia.org/podcast): Sordo pero no mudo, con transcripción completa.
-- [Aliados](https://casacusia.org/aliados): 29 empresas y fundaciones aliadas.
+- [Podcast](https://casacusia.org/podcast): Sordo pero no mudo — 65+ episodios en primera persona sobre hipoacusia.
+- [Podcast / Rutas de escucha](https://casacusia.org/podcast/rutas): Playlists temáticas de episodios según el momento que atraviesa cada persona.
+- [Blog de historias](https://casacusia.org/recursos/blog): Relatos en primera persona de personas y familias que transitan la pérdida auditiva.
+- [Calendario](https://casacusia.org/calendario): Encuentros presenciales y virtuales, mensuales, gratuitos y abiertos. Inscripción vía Luma.
+- [Aliados](https://casacusia.org/aliados): Empresas y fundaciones que forman parte de la Red de Empresas que Escuchan a Casacusia.
 - [Sumate / Donar](https://casacusia.org/sumate/donar): Donar (mensual, única, USD) · deducción de Ganancias para empresas.
 - [Sumate / Voluntariado](https://casacusia.org/sumate/voluntariado): Equipo de voluntarios por comisiones (hoy cerrado).
 - [Recursos / FAQ](https://casacusia.org/recursos/faq): Preguntas frecuentes sobre hipoacusia, dispositivos, obra social.

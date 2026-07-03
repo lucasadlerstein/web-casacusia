@@ -83,8 +83,50 @@ export default async function CalendarioPage({
     verEnLuma: tFilters("verEnLuma"),
   };
 
+  // JSON-LD de eventos: cada encuentro de Luma como schema.org/Event
+  const eventsJsonLd = events.map((e) => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: e.title,
+    startDate: e.startAt,
+    endDate: e.endAt,
+    eventAttendanceMode:
+      e.locationType === "offline"
+        ? "https://schema.org/OfflineEventAttendanceMode"
+        : "https://schema.org/OnlineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    location:
+      e.locationType === "offline"
+        ? {
+            "@type": "Place",
+            name: e.city ?? "Argentina",
+            address: e.address ?? e.city ?? undefined
+          }
+        : { "@type": "VirtualLocation", url: e.lumaUrl },
+    ...(e.coverUrl ? { image: e.coverUrl } : {}),
+    isAccessibleForFree: true,
+    offers: {
+      "@type": "Offer",
+      price: 0,
+      priceCurrency: "ARS",
+      availability: "https://schema.org/InStock",
+      url: e.lumaUrl
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "CASACUSIA",
+      url: "https://casacusia.org"
+    }
+  }));
+
   return (
     <main className="bg-surface-bg">
+      {eventsJsonLd.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventsJsonLd) }}
+        />
+      )}
       <div className="container max-w-4xl mx-auto px-4 pt-16 pb-12 md:pt-20">
         <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-ink">
           {t("heading")}

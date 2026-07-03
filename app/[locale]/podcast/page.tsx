@@ -14,6 +14,7 @@ import { Link } from "@/lib/i18n/navigation";
 import type { Locale } from "@/lib/i18n/config";
 import type { PodcastCategoria } from "@/lib/podcast";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org";
 const SPOTIFY_SHOW = "https://open.spotify.com/show/6zYhA2pOjN0pxW2XcC8eM5";
 const YOUTUBE_CHANNEL = "https://www.youtube.com/@Hipoacusico";
 const INSTAGRAM = "https://www.instagram.com/SordoPeroNoMudo/";
@@ -127,8 +128,33 @@ export default async function PodcastPage({
     );
   }
 
+  const seriesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    name: "Sordo pero no mudo",
+    description: feed.descripcion || PODCAST_DESC,
+    url: `${SITE_URL}${locale === "es" ? "" : `/${locale}`}/podcast`,
+    image: `${SITE_URL}${PODCAST_COVER}`,
+    inLanguage: "es",
+    webFeed: YOUTUBE_CHANNEL,
+    sameAs: [YOUTUBE_CHANNEL, SPOTIFY_SHOW, INSTAGRAM],
+    author: {
+      "@type": "Person",
+      name: "Lucas Adlerstein"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "CASACUSIA",
+      url: SITE_URL
+    }
+  };
+
   return (
     <main className="bg-surface-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seriesJsonLd) }}
+      />
       {/* Portada del podcast */}
       <section className="pt-14 pb-10 md:pt-16">
         <div className="container max-w-5xl mx-auto px-4 grid md:grid-cols-[280px_1fr] gap-8 md:gap-12 items-center">

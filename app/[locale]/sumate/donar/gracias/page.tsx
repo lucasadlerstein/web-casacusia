@@ -24,7 +24,8 @@ export async function generateMetadata({
     title: "Gracias por sumarte",
     description: "Tu aporte sostiene encuentros, podcast y comunidad para miles de personas con hipoacusia.",
     path: "/sumate/donar/gracias",
-    locale: locale as Locale
+    locale: locale as Locale,
+    noindex: true
   });
 }
 

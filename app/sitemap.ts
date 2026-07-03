@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { getAliados, getProgramas } from "@/lib/content";
+import { getAliados, getProgramas, getBlogPosts, getRutasDeEscucha } from "@/lib/content";
 import { locales, defaultLocale } from "@/lib/i18n/config";
 import { getPodcastFeed } from "@/lib/podcast";
 
@@ -11,9 +11,9 @@ const staticRoutes: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/nosotros", priority: 0.9, changefreq: "monthly" },
   { path: "/nosotros/equipo", priority: 0.8, changefreq: "monthly" },
   { path: "/nosotros/historia", priority: 0.5, changefreq: "yearly" },
-  { path: "/nosotros/legal", priority: 0.4, changefreq: "yearly" },
   { path: "/programas", priority: 0.9, changefreq: "monthly" },
   { path: "/podcast", priority: 0.9, changefreq: "weekly" },
+  { path: "/podcast/rutas", priority: 0.8, changefreq: "monthly" },
   { path: "/aliados", priority: 0.8, changefreq: "monthly" },
   { path: "/sumate", priority: 0.9, changefreq: "monthly" },
   { path: "/sumate/donar", priority: 0.9, changefreq: "monthly" },
@@ -23,7 +23,7 @@ const staticRoutes: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/contacto", priority: 0.7, changefreq: "yearly" },
   { path: "/calendario", priority: 0.9, changefreq: "weekly" },
   { path: "/impacto", priority: 0.7, changefreq: "monthly" },
-  { path: "/prensa", priority: 0.6, changefreq: "monthly" },
+  { path: "/recursos/blog", priority: 0.9, changefreq: "weekly" },
   { path: "/accesibilidad", priority: 0.4, changefreq: "yearly" },
   { path: "/sumate/proyectos-juntos", priority: 0.7, changefreq: "monthly" }
 ];
@@ -69,6 +69,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
       changeFrequency: "yearly",
       priority: 0.5
+    });
+  }
+
+  // Rutas de escucha
+  for (const r of getRutasDeEscucha()) {
+    entries.push({
+      url: urlFor(`/podcast/rutas/${r.slug}`, defaultLocale),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: Object.fromEntries(locales.map((l) => [l, urlFor(`/podcast/rutas/${r.slug}`, l)]))
+      }
+    });
+  }
+
+  // Blog posts
+  for (const post of getBlogPosts()) {
+    entries.push({
+      url: urlFor(`/recursos/blog/${post.slug}`, defaultLocale),
+      lastModified: new Date(post.fecha),
+      changeFrequency: "monthly",
+      priority: 0.7,
+      alternates: {
+        languages: Object.fromEntries(locales.map((l) => [l, urlFor(`/recursos/blog/${post.slug}`, l)]))
+      }
     });
   }
 
