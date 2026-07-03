@@ -867,6 +867,10 @@
     "social": "Redes sociales",
     "languages": "Seleccionar idioma"
   },
+  "faq": {
+    "title": "Preguntas frecuentes sobre hipoacusia",
+    "description": "Respuestas concretas a las preguntas más frecuentes sobre hipoacusia, dispositivos, donaciones y Casacusia."
+  },
   "blog": {
     "metaTitle": "Blog · CASACUSIA",
     "metaDescription": "Historias en primera persona, información y novedades sobre hipoacusia. Relatos de personas y familias que transitan la pérdida auditiva.",

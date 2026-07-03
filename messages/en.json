@@ -869,6 +869,10 @@
     "social": "Social media",
     "languages": "Select language"
   },
+  "faq": {
+    "title": "Frequently asked questions about hearing loss",
+    "description": "Clear answers to the most common questions about hearing loss, devices, donations, and Casacusia."
+  },
   "blog": {
     "metaTitle": "Blog · CASACUSIA",
     "metaDescription": "First-person stories, information, and updates about hearing loss. Stories from people and families navigating hearing impairment.",
