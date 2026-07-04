@@ -1,41 +1,34 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale, getTranslations } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { ArrowLeft, Headphones, Calendar, Play } from "lucide-react";
 
-import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { DonacionCTA } from "@/components/sections/DonacionCTA";
 import { Link } from "@/lib/i18n/navigation";
-import { getBlogPosts, blogEtiquetas, type BlogEtiqueta } from "@/lib/content";
+import { getTemas, getTemaBySlug, getBlogPostsByTema, type Tema } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org";
 
-function isValidTag(tag: string): tag is BlogEtiqueta {
-  return (blogEtiquetas as readonly string[]).includes(tag);
-}
-
 export function generateStaticParams() {
-  return blogEtiquetas.map((tag) => ({ tag }));
+  return getTemas().map((t) => ({ tema: t.slug }));
 }
 
 export async function generateMetadata({
   params
 }: {
-  params: Promise<{ locale: string; tag: string }>;
+  params: Promise<{ locale: string; tema: string }>;
 }): Promise<Metadata> {
-  const { locale, tag } = await params;
-  if (!isValidTag(tag)) return {};
-  const t = await getTranslations({ locale, namespace: "blog" });
-  const tagLabel = t(`etiqueta.${tag}`);
-  const desc = t(`etiquetaPage.desc.${tag}`);
+  const { locale, tema: slug } = await params;
+  const tema = getTemaBySlug(slug);
+  if (!tema) return {};
   return buildMetadata({
-    title: `${tagLabel} — Blog CASACUSIA`,
-    description: desc,
-    path: `/recursos/blog/etiqueta/${tag}`,
+    title: `${tema.nombre} — CASACUSIA`,
+    description: tema.descripcion,
+    path: `/recursos/blog/tema/${tema.slug}`,
     locale: locale as Locale
   });
 }
@@ -46,21 +39,20 @@ function formatDate(fecha: string): string {
   return d.toLocaleDateString("es-AR", { day: "numeric", month: "long", year: "numeric" });
 }
 
-export default async function TagPage({
+export default async function TemaPage({
   params
 }: {
-  params: Promise<{ locale: string; tag: string }>;
+  params: Promise<{ locale: string; tema: string }>;
 }) {
-  const { locale, tag } = await params;
-  if (!isValidTag(tag)) notFound();
+  const { locale, tema: slug } = await params;
+  const tema = getTemaBySlug(slug);
+  if (!tema) notFound();
   setRequestLocale(locale);
 
-  const t = await getTranslations({ locale, namespace: "blog" });
-  const tagLabel = t(`etiqueta.${tag}`);
-  const desc = t(`etiquetaPage.desc.${tag}`);
-  const posts = getBlogPosts({ etiqueta: tag });
+  const posts = getBlogPostsByTema(tema);
+  const allTemas = getTemas();
 
-  // Extraer episodios únicos de los posts con esta etiqueta
+  // Extraer episodios únicos (max 6)
   const episodiosMap = new Map<string, { slug: string; titulo: string; numero?: number; postCount: number }>();
   for (const p of posts) {
     if (p.episodio) {
@@ -77,21 +69,20 @@ export default async function TagPage({
       }
     }
   }
-  const episodios = [...episodiosMap.values()].sort((a, b) => (b.numero ?? 0) - (a.numero ?? 0));
-
-  // Otras etiquetas para navegación cruzada
-  const otherTags = blogEtiquetas.filter((t) => t !== tag);
+  const episodios = [...episodiosMap.values()]
+    .sort((a, b) => (b.numero ?? 0) - (a.numero ?? 0))
+    .slice(0, 6);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${tagLabel} — Blog CASACUSIA`,
-    description: desc,
-    url: `${SITE_URL}/recursos/blog/etiqueta/${tag}`,
+    name: `${tema.nombre} — CASACUSIA`,
+    description: tema.descripcion,
+    url: `${SITE_URL}/recursos/blog/tema/${tema.slug}`,
     isPartOf: {
-      "@type": "Blog",
-      name: "Blog CASACUSIA",
-      url: `${SITE_URL}/recursos/blog`
+      "@type": "WebSite",
+      name: "CASACUSIA",
+      url: SITE_URL
     }
   };
 
@@ -102,47 +93,51 @@ export default async function TagPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
-        title={<>{t("etiquetaPage.heroPrefix")}: <span className="text-verde">{tagLabel}</span></>}
-        subtitle={desc}
-      />
-
-      <Section>
-        <div className="flex items-center justify-between mb-8">
+      {/* Hero */}
+      <section className="bg-surface-tint border-b border-surface-line py-16 md:py-24">
+        <div className="container max-w-5xl">
           <Link
             href="/recursos/blog"
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-verde-dark hover:underline underline-offset-4"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-verde-dark hover:underline underline-offset-4 mb-6"
           >
-            <ArrowLeft size={16} aria-hidden /> {t("etiquetaPage.verBlog")}
+            <ArrowLeft size={16} aria-hidden /> Ver todas las notas
           </Link>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-ink">
+            {tema.nombre}
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-ink-soft leading-relaxed max-w-3xl">
+            {tema.descripcion}
+          </p>
         </div>
+      </section>
 
-        {/* Navegación entre etiquetas */}
-        <div className="flex flex-wrap gap-2 mb-10" role="navigation" aria-label="Etiquetas">
-          {blogEtiquetas.map((otherTag) => (
+      <Section>
+        {/* Navegación entre temas */}
+        <div className="flex flex-wrap gap-2 mb-10" role="navigation" aria-label="Temas">
+          {allTemas.map((t) => (
             <Link
-              key={otherTag}
-              href={`/recursos/blog/etiqueta/${otherTag}`}
+              key={t.slug}
+              href={`/recursos/blog/tema/${t.slug}`}
               className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-                otherTag === tag
+                t.slug === tema.slug
                   ? "bg-verde-dark text-white"
                   : "bg-surface-tint text-ink-soft hover:bg-surface-line hover:text-ink"
               }`}
             >
-              {t(`etiqueta.${otherTag}`)}
+              {t.nombre}
             </Link>
           ))}
         </div>
 
-        {/* Episodios del podcast relacionados */}
+        {/* Episodios del podcast */}
         {episodios.length > 0 && (
           <div className="mb-12">
             <h2 className="font-display text-2xl font-extrabold text-ink mb-6 flex items-center gap-2">
-              <Headphones size={22} aria-hidden />
-              {t("etiquetaPage.episodiosRelacionados")}
+              <Headphones size={22} className="text-verde-dark" aria-hidden />
+              Escuchá sobre {tema.nombre.toLowerCase()}
             </h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {episodios.slice(0, 6).map((ep) => (
+              {episodios.map((ep) => (
                 <Link key={ep.slug} href={`/podcast/${ep.slug}`} className="group">
                   <div className="h-full rounded-2xl bg-gradient-to-br from-ink to-ink-soft p-5 transition-transform hover:scale-[1.02] shadow-md">
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-verde/20 text-verde px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider">
@@ -154,7 +149,7 @@ export default async function TagPage({
                     </h3>
                     <div className="mt-3 flex items-center justify-between">
                       <span className="text-xs text-white/50">
-                        {ep.postCount} {ep.postCount === 1 ? "nota" : "notas"}
+                        {ep.postCount} {ep.postCount === 1 ? "nota relacionada" : "notas relacionadas"}
                       </span>
                       <span className="inline-flex items-center gap-1 text-xs font-bold text-amarillo group-hover:underline">
                         <Play size={12} aria-hidden /> Escuchar
@@ -172,7 +167,7 @@ export default async function TagPage({
 
         {/* Artículos */}
         <h2 className="font-display text-2xl font-extrabold text-ink mb-6">
-          {t("etiquetaPage.articulosNotas")}
+          Artículos sobre {tema.nombre.toLowerCase()}
         </h2>
 
         {posts.length > 0 ? (
@@ -180,20 +175,6 @@ export default async function TagPage({
             {posts.map((post) => (
               <Link key={post.slug} href={`/recursos/blog/${post.slug}`} className="group">
                 <Card className="h-full flex flex-col hover:shadow-md transition-shadow">
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {post.etiquetas.map((etiq) => (
-                      <span
-                        key={etiq}
-                        className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold ${
-                          etiq === tag
-                            ? "bg-verde-dark text-white"
-                            : "bg-verde-soft text-verde-dark"
-                        }`}
-                      >
-                        {t(`etiqueta.${etiq}`)}
-                      </span>
-                    ))}
-                  </div>
                   <h3 className="font-display text-lg font-extrabold text-ink leading-snug group-hover:text-verde-dark transition-colors">
                     {post.titulo}
                   </h3>
@@ -218,7 +199,7 @@ export default async function TagPage({
           </div>
         ) : (
           <p className="text-center py-16 text-ink-soft">
-            Todavía no hay notas con esta etiqueta.
+            Próximamente: artículos sobre {tema.nombre.toLowerCase()}.
           </p>
         )}
       </Section>

@@ -12,6 +12,7 @@ import reconocimientosData from "@/content/reconocimientos.json";
 import gruposWhatsappData from "@/content/grupos-whatsapp.json";
 import rutasData from "@/content/rutas-de-escucha.json";
 import blogData from "@/content/blog.json";
+import temasData from "@/content/temas.json";
 
 export const comisiones = [
   "comunicacion",
@@ -375,4 +376,33 @@ export function getBlogRelacionados(post: BlogPost, limit = 3): BlogPost[] {
 // Todas las notas publicadas que derivan de un mismo episodio del podcast
 export function getBlogPostsByEpisodio(episodioSlug: string): BlogPost[] {
   return getBlogPosts().filter((p) => p.episodio?.slug === episodioSlug);
+}
+
+// ── Temas (páginas temáticas SEO) ──
+
+const TemaSchema = z.object({
+  slug: z.string(),
+  nombre: z.string(),
+  descripcion: z.string(),
+  keywords: z.array(z.string())
+});
+export type Tema = z.infer<typeof TemaSchema>;
+
+let _temasCache: Tema[] | null = null;
+export function getTemas(): Tema[] {
+  if (!_temasCache) _temasCache = z.array(TemaSchema).parse(temasData);
+  return _temasCache;
+}
+
+export function getTemaBySlug(slug: string): Tema | null {
+  return getTemas().find((t) => t.slug === slug) ?? null;
+}
+
+export function getBlogPostsByTema(tema: Tema): BlogPost[] {
+  const all = getBlogPosts();
+  const lowerKeywords = tema.keywords.map((k) => k.toLowerCase());
+  return all.filter((p) => {
+    const haystack = `${p.titulo} ${p.resumen} ${p.contenido}`.toLowerCase();
+    return lowerKeywords.some((kw) => haystack.includes(kw));
+  });
 }

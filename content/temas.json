@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "implante-coclear",
+    "nombre": "Implante coclear",
+    "descripcion": "Todo sobre el implante coclear: qué es, cómo funciona, para quién es, cirugía, rehabilitación y experiencias reales de personas implantadas.",
+    "keywords": ["implante coclear", "implante", "coclear", "implantado", "implantada"]
+  },
+  {
+    "slug": "audifonos",
+    "nombre": "Audífonos",
+    "descripcion": "Información sobre audífonos: tipos, cuándo empezar a usarlos, cómo elegirlos y experiencias de personas que los usan a diario.",
+    "keywords": ["audífono", "audifonos", "audífonos", "audifono", "prótesis auditiva"]
+  },
+  {
+    "slug": "sindrome-de-meniere",
+    "nombre": "Síndrome de Ménière",
+    "descripcion": "Qué es el síndrome de Ménière, cómo se manifiesta, tratamientos disponibles e historias de personas que conviven con esta condición.",
+    "keywords": ["ménière", "meniere", "Ménière", "Meniere"]
+  },
+  {
+    "slug": "hipoacusia-subita",
+    "nombre": "Hipoacusia súbita",
+    "descripcion": "Qué es la hipoacusia súbita, por qué es una urgencia médica, tratamientos y experiencias reales de personas que la transitaron.",
+    "keywords": ["hipoacusia súbita", "hipoacusia subita", "pérdida auditiva súbita", "pérdida súbita"]
+  },
+  {
+    "slug": "sordera-subita",
+    "nombre": "Sordera súbita",
+    "descripcion": "Todo sobre la sordera súbita: causas, síntomas, tratamiento de emergencia y testimonios de personas que perdieron la audición de un momento a otro.",
+    "keywords": ["sordera súbita", "sordera subita", "sordera repentina", "pérdida repentina de audición"]
+  },
+  {
+    "slug": "otosclerosis",
+    "nombre": "Otosclerosis",
+    "descripcion": "Qué es la otosclerosis, cómo afecta la audición, opciones de tratamiento quirúrgico y experiencias de personas diagnosticadas.",
+    "keywords": ["otosclerosis", "otoesclerosis", "estapedectomía", "estapedotomía", "estribo"]
+  },
+  {
+    "slug": "ninos-con-audifono",
+    "nombre": "Niños con audífono",
+    "descripcion": "Acompañamiento para familias de niños con audífonos: adaptación, colegio, juego, cuidados y experiencias de otras familias.",
+    "keywords": ["niño con audífono", "niños con audífono", "nene con audífono", "chico con audífono", "niño con audifonos", "niños con audifonos"]
+  },
+  {
+    "slug": "ninos-con-implante-coclear",
+    "nombre": "Niños con implante coclear",
+    "descripcion": "Todo sobre niños con implante coclear: cirugía, rehabilitación, escolaridad, juego y testimonios de familias que transitaron este camino.",
+    "keywords": ["niño con implante", "niños con implante", "nene con implante", "implante coclear en niños", "implante en niños", "implante infantil"]
+  },
+  {
+    "slug": "hipoacusia-infantil",
+    "nombre": "Hipoacusia infantil",
+    "descripcion": "Información para familias sobre hipoacusia en bebés y niños: detección temprana, diagnóstico, opciones de tratamiento y acompañamiento.",
+    "keywords": ["hipoacusia infantil", "hipoacusia en niños", "hipoacusia en bebés", "bebé con hipoacusia", "sordera infantil", "pérdida auditiva en niños", "neonatal", "screening auditivo"]
+  }
+]
