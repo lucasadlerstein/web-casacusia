@@ -13,6 +13,7 @@ import { locales, type Locale } from "@/lib/i18n/config";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
+import { OutboundTracker } from "@/components/analytics/OutboundTracker";
 import { CountryProvider } from "@/components/country/CountryProvider";
 import { getCountry, hasCountryOverride } from "@/lib/country-server";
 
@@ -103,6 +104,7 @@ export default async function LocaleLayout({
           </CountryProvider>
         </NextIntlClientProvider>
         <OrganizationSchema />
+        <OutboundTracker />
         <Analytics />
         <SpeedInsights />
         {GA_ID && (

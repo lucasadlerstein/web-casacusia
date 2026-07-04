@@ -65,7 +65,6 @@
     "abrirMenu": "Abrir menú",
     "cerrarMenu": "Cerrar menú",
     "saltarAlContenido": "Saltar al contenido principal",
-    "prensa": "Prensa",
     "blog": "Historias"
   },
   "home": {
@@ -756,63 +755,6 @@
         "resumen": "Charlas y workshops para organizaciones, universidades y escuelas.",
         "cta": "Pedir una charla"
       }
-    }
-  },
-  "prensa": {
-    "title": "Prensa · Casacusia",
-    "description": "Información institucional, frases para citar, datos y contacto de prensa de la Fundación Casacusia.",
-    "hero": {
-      "eyebrow": "Prensa",
-      "title": "Información para medios y comunicación.",
-      "subtitle": "Datos, frases y contacto directo para entrevistar, citar o cubrir el trabajo de la Fundación Casacusia."
-    },
-    "quienes": {
-      "title": "¿Qué es Casacusia?",
-      "p1": "Casacusia es una Fundación dedicada a transformar la calidad de vida de las personas y familias con hipoacusia. Trabaja desde tres ejes: generar comunidad, brindar herramientas y fomentar una sociedad más consciente.",
-      "p2": "Su fundador, Lucas Adlerstein, perdió la audición a los 15 años. Casacusia nace para que nadie tenga que elegir entre escuchar y estar.",
-      "fundacion": "Año de fundación",
-      "fundador": "Fundador y director",
-      "web": "Sitio oficial",
-      "contacto": "Email institucional"
-    },
-    "datos": {
-      "title": "Datos actuales",
-      "actualizado": "Actualizado al {fecha}.",
-      "participantes": "Personas que pasaron por encuentros",
-      "encuentros": "Encuentros realizados",
-      "familias": "Familias en la Red de Padres y Madres",
-      "episodios": "Episodios del podcast",
-      "paises": "Países donde nos escuchan",
-      "voluntarios": "Voluntarios activos",
-      "impresiones": "Impresiones en redes (último mes)"
-    },
-    "frases": {
-      "title": "Frases para citar",
-      "subtitulo": "Citables literalmente, atribuibles a Casacusia o a Lucas Adlerstein, su fundador.",
-      "items": [
-        "La discapacidad no es el silencio, es la soledad.",
-        "Trabajamos para las personas, no para los oídos.",
-        "La hipoacusia no se cura: se acepta, se transita, se comparte.",
-        "Que nadie tenga que elegir entre escuchar y estar.",
-        "1 de cada 20 personas en el mundo tiene algún grado de pérdida auditiva.",
-        "Casacusia nace para mostrar que no estamos solos."
-      ]
-    },
-    "recursos": {
-      "title": "Recursos descargables",
-      "subtitulo": "Logos, fotos, fact-sheet y kit institucional. Para uso editorial en medios y publicaciones.",
-      "logos": "Logos en alta resolución",
-      "fotos": "Fotos del fundador y del equipo",
-      "factSheet": "Fact-sheet institucional (PDF)",
-      "equipo": "Bios y créditos del equipo",
-      "proximamente": "Disponible próximamente",
-      "mientras": "Mientras tanto, podés pedirnos cualquiera de estos materiales por mail y los enviamos en el día."
-    },
-    "contacto": {
-      "title": "Escribinos directo.",
-      "body": "Para entrevistas, declaraciones, fact-checking o coordinación de cobertura. Respondemos en menos de 48 horas hábiles.",
-      "cta": "Escribir a prensa",
-      "form": "Ir al formulario de contacto"
     }
   },
   "contacto": {

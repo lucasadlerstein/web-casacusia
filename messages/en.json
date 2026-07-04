@@ -65,7 +65,6 @@
     "abrirMenu": "Open menu",
     "cerrarMenu": "Close menu",
     "saltarAlContenido": "Skip to main content",
-    "prensa": "Press",
     "blog": "Stories"
   },
   "home": {
@@ -758,63 +757,6 @@
         "resumen": "Talks and workshops for organizations, universities and schools.",
         "cta": "Request a talk"
       }
-    }
-  },
-  "prensa": {
-    "title": "Press · Casacusia",
-    "description": "Institutional information, quotable lines, data, and press contact for Fundación Casacusia.",
-    "hero": {
-      "eyebrow": "Press",
-      "title": "Information for media and communicators.",
-      "subtitle": "Data, quotes and direct contact to interview, cite or cover the work of Fundación Casacusia."
-    },
-    "quienes": {
-      "title": "What is Casacusia?",
-      "p1": "Casacusia is a foundation dedicated to transforming the quality of life of people and families with hearing loss. It works across three axes: building community, providing tools, and fostering a more conscious society.",
-      "p2": "Its founder, Lucas Adlerstein, lost his hearing at age 15. Casacusia exists so that no one has to choose between hearing and being there.",
-      "fundacion": "Founding year",
-      "fundador": "Founder and director",
-      "web": "Official site",
-      "contacto": "Institutional email"
-    },
-    "datos": {
-      "title": "Current numbers",
-      "actualizado": "Updated as of {fecha}.",
-      "participantes": "People who attended meetups",
-      "encuentros": "Meetups held",
-      "familias": "Families in the Parents Network",
-      "episodios": "Podcast episodes",
-      "paises": "Countries where we are heard",
-      "voluntarios": "Active volunteers",
-      "impresiones": "Social impressions (last month)"
-    },
-    "frases": {
-      "title": "Quotable lines",
-      "subtitulo": "Verbatim quotes attributable to Casacusia or Lucas Adlerstein, founder.",
-      "items": [
-        "Disability is not the silence, it is the loneliness.",
-        "We work for the people, not the ears.",
-        "Hearing loss is not cured: it is accepted, lived through, and shared.",
-        "So no one has to choose between hearing and being there.",
-        "1 in 20 people in the world has some degree of hearing loss.",
-        "Casacusia exists to show that we are not alone."
-      ]
-    },
-    "recursos": {
-      "title": "Downloadable assets",
-      "subtitulo": "Logos, photos, fact-sheet and institutional kit. For editorial use in media and publications.",
-      "logos": "High-resolution logos",
-      "fotos": "Founder and team photos",
-      "factSheet": "Institutional fact-sheet (PDF)",
-      "equipo": "Team bios and credits",
-      "proximamente": "Coming soon",
-      "mientras": "In the meantime, you can request any of these materials by email and we'll send them the same day."
-    },
-    "contacto": {
-      "title": "Write to us directly.",
-      "body": "For interviews, statements, fact-checking or coverage coordination. We reply within 48 business hours.",
-      "cta": "Email press",
-      "form": "Go to contact form"
     }
   },
   "contacto": {
