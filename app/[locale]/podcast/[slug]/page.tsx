@@ -8,6 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { AliadosAuditivos } from "@/components/sections/AliadosAuditivos";
 import { ContentSidebar } from "@/components/sections/ContentSidebar";
 import { Link } from "@/lib/i18n/navigation";
+import { DonacionCTA } from "@/components/sections/DonacionCTA";
 import { getPodcastFeed, getPodcastEpisode } from "@/lib/podcast";
 import { getAliados, getBlogPostsByEpisodio } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
@@ -205,6 +206,9 @@ export default async function EpisodioPage({
                 <p className="text-ink-soft leading-relaxed whitespace-pre-line">{ep.descripcion}</p>
               </div>
             )}
+
+            {/* CTA de donación */}
+            <DonacionCTA />
 
             {/* Notas del blog derivadas de este episodio */}
             {notas.length > 0 && (

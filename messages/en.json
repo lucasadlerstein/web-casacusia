@@ -905,6 +905,20 @@
       "comunidad": "Community",
       "informacion": "Information",
       "podcast": "Podcast"
+    },
+    "etiquetaPage": {
+      "heroPrefix": "All about",
+      "verBlog": "See all posts",
+      "episodiosRelacionados": "Podcast episodes",
+      "articulosNotas": "Articles & notes",
+      "desc": {
+        "historias": "First-person stories from people with hearing loss and their families. Real experiences that inspire and accompany.",
+        "familias": "Information and support for families going through a loved one's hearing loss. Parenting, communication and decisions.",
+        "tecnologia": "Everything about hearing aids, cochlear implants, hearing tests and technology for hearing.",
+        "comunidad": "The power of connecting with others who understand. Meetups, support networks and shared spaces.",
+        "informacion": "Clear, accessible information about hearing loss, diagnosis, treatments and rights.",
+        "podcast": "Notes born from real conversations on the podcast Sordo pero no mudo."
+      }
     }
   }
 }

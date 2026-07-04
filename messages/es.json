@@ -903,6 +903,20 @@
       "comunidad": "Comunidad",
       "informacion": "Información",
       "podcast": "Podcast"
+    },
+    "etiquetaPage": {
+      "heroPrefix": "Todo sobre",
+      "verBlog": "Ver todas las notas",
+      "episodiosRelacionados": "Episodios del podcast",
+      "articulosNotas": "Artículos y notas",
+      "desc": {
+        "historias": "Relatos en primera persona de personas con hipoacusia y sus familias. Experiencias reales que inspiran y acompañan.",
+        "familias": "Información y acompañamiento para familias que transitan la hipoacusia de un ser querido. Crianza, comunicación y decisiones.",
+        "tecnologia": "Todo sobre audífonos, implantes cocleares, estudios auditivos y tecnología al servicio de la audición.",
+        "comunidad": "La fuerza de encontrarse con otros que entienden. Encuentros, redes de apoyo y espacios compartidos.",
+        "informacion": "Información clara y accesible sobre hipoacusia, diagnóstico, tratamientos y derechos. Sin tecnicismos innecesarios.",
+        "podcast": "Notas que nacen de conversaciones reales en el podcast Sordo pero no mudo."
+      }
     }
   }
 }

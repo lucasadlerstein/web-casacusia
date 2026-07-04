@@ -8,6 +8,7 @@ import { Section } from "@/components/ui/Section";
 import { ContentSidebar } from "@/components/sections/ContentSidebar";
 import { NewsletterForm } from "@/components/sections/NewsletterForm";
 import { EpisodioCTA } from "@/components/sections/EpisodioCTA";
+import { DonacionCTA } from "@/components/sections/DonacionCTA";
 import { Link } from "@/lib/i18n/navigation";
 import { getBlogPostBySlug, getBlogPosts, getBlogRelacionados, getBlogPostsByEpisodio, getAliados } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
@@ -224,12 +225,13 @@ export default async function BlogPostPage({
             {/* Etiquetas */}
             <div className="flex flex-wrap gap-2 mb-4">
               {post.etiquetas.map((tag) => (
-                <span
+                <Link
                   key={tag}
-                  className="inline-block rounded-full bg-verde-soft px-3 py-1 text-xs font-semibold text-verde-dark"
+                  href={`/recursos/blog/etiqueta/${tag}`}
+                  className="inline-block rounded-full bg-verde-soft px-3 py-1 text-xs font-semibold text-verde-dark hover:bg-verde-dark hover:text-white transition-colors"
                 >
                   {t(`etiqueta.${tag}`)}
-                </span>
+                </Link>
               ))}
             </div>
 
@@ -315,6 +317,9 @@ export default async function BlogPostPage({
                 numero={post.episodio.numero}
               />
             )}
+
+            {/* CTA de donación */}
+            <DonacionCTA />
 
             {/* Más notas del mismo episodio */}
             {notasDelEpisodio.length > 0 && (
