@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-import { getAliados, getProgramas, getBlogPosts, getRutasDeEscucha } from "@/lib/content";
+import { getAliados, getProgramas, getBlogPosts, getRutasDeEscucha, blogEtiquetas, getTemas } from "@/lib/content";
 import { locales, defaultLocale } from "@/lib/i18n/config";
 import { getPodcastFeed } from "@/lib/podcast";
 
@@ -81,6 +81,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
       alternates: {
         languages: Object.fromEntries(locales.map((l) => [l, urlFor(`/podcast/rutas/${r.slug}`, l)]))
+      }
+    });
+  }
+
+  // Blog tag pages
+  for (const tag of blogEtiquetas) {
+    entries.push({
+      url: urlFor(`/recursos/blog/etiqueta/${tag}`, defaultLocale),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: {
+        languages: Object.fromEntries(locales.map((l) => [l, urlFor(`/recursos/blog/etiqueta/${tag}`, l)]))
+      }
+    });
+  }
+
+  // Blog tema pages (SEO topic hubs)
+  for (const tema of getTemas()) {
+    entries.push({
+      url: urlFor(`/recursos/blog/tema/${tema.slug}`, defaultLocale),
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+      alternates: {
+        languages: Object.fromEntries(locales.map((l) => [l, urlFor(`/recursos/blog/tema/${tema.slug}`, l)]))
       }
     });
   }

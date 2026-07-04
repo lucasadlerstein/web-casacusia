@@ -6,6 +6,7 @@ import { Heart, CalendarDays, Mail, Users, Handshake } from "lucide-react";
 
 import { Link } from "@/lib/i18n/navigation";
 import { trackEvent } from "@/lib/tracking";
+import { DonacionCTA } from "@/components/sections/DonacionCTA";
 
 /* ---------- types ---------- */
 
@@ -191,7 +192,13 @@ export function ContentSidebar({ aliados = [] }: ContentSidebarProps) {
 
   return (
     <aside className="flex flex-col gap-4" aria-label="Contenido relacionado">
-      {blocks.map((b) => (
+      {blocks.slice(0, 2).map((b) => (
+        <div key={b.id} data-sidebar-block={b.id}>
+          {b.content}
+        </div>
+      ))}
+      <DonacionCTA variant="sidebar" />
+      {blocks.slice(2).map((b) => (
         <div key={b.id} data-sidebar-block={b.id}>
           {b.content}
         </div>
