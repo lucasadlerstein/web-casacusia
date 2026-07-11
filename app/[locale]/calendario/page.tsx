@@ -83,41 +83,59 @@ export default async function CalendarioPage({
     verEnLuma: tFilters("verEnLuma"),
   };
 
-  // JSON-LD de eventos: cada encuentro de Luma como schema.org/Event
-  const eventsJsonLd = events.map((e) => ({
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: e.title,
-    startDate: e.startAt,
-    endDate: e.endAt,
-    eventAttendanceMode:
+  // JSON-LD de eventos: cada encuentro de Luma como schema.org/Event.
+  // La API pública de Luma no expone descripción por evento, así que la
+  // sintetizamos a partir de los datos disponibles para cumplir con los
+  // campos recomendados de Google (description, performer, offers.validFrom).
+  const nowIso = new Date().toISOString();
+  const eventsJsonLd = events.map((e) => {
+    const description =
       e.locationType === "offline"
-        ? "https://schema.org/OfflineEventAttendanceMode"
-        : "https://schema.org/OnlineEventAttendanceMode",
-    eventStatus: "https://schema.org/EventScheduled",
-    location:
-      e.locationType === "offline"
-        ? {
-            "@type": "Place",
-            name: e.city ?? "Argentina",
-            address: e.address ?? e.city ?? undefined
-          }
-        : { "@type": "VirtualLocation", url: e.lumaUrl },
-    ...(e.coverUrl ? { image: e.coverUrl } : {}),
-    isAccessibleForFree: true,
-    offers: {
-      "@type": "Offer",
-      price: 0,
-      priceCurrency: "ARS",
-      availability: "https://schema.org/InStock",
-      url: e.lumaUrl
-    },
-    organizer: {
-      "@type": "Organization",
-      name: "CASACUSIA",
-      url: "https://casacusia.org"
-    }
-  }));
+        ? `${e.title}. Encuentro presencial de Casacusia en ${e.city ?? "Argentina"} para personas con hipoacusia y sus familias. Participación gratuita con inscripción previa.`
+        : `${e.title}. Encuentro virtual de Casacusia para personas con hipoacusia y sus familias, abierto a todo el mundo. Participación gratuita con inscripción previa.`;
+
+    return {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: e.title,
+      description,
+      startDate: e.startAt,
+      endDate: e.endAt,
+      eventAttendanceMode:
+        e.locationType === "offline"
+          ? "https://schema.org/OfflineEventAttendanceMode"
+          : "https://schema.org/OnlineEventAttendanceMode",
+      eventStatus: "https://schema.org/EventScheduled",
+      location:
+        e.locationType === "offline"
+          ? {
+              "@type": "Place",
+              name: e.city ?? "Argentina",
+              address: e.address ?? e.city ?? undefined
+            }
+          : { "@type": "VirtualLocation", url: e.lumaUrl },
+      ...(e.coverUrl ? { image: e.coverUrl } : {}),
+      isAccessibleForFree: true,
+      offers: {
+        "@type": "Offer",
+        price: 0,
+        priceCurrency: "ARS",
+        availability: "https://schema.org/InStock",
+        url: e.lumaUrl,
+        validFrom: nowIso
+      },
+      performer: {
+        "@type": "Organization",
+        name: "CASACUSIA",
+        url: "https://casacusia.org"
+      },
+      organizer: {
+        "@type": "Organization",
+        name: "CASACUSIA",
+        url: "https://casacusia.org"
+      }
+    };
+  });
 
   return (
     <main className="bg-surface-bg">
