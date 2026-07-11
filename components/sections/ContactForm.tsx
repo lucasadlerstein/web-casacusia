@@ -19,6 +19,10 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
   const router = useRouter();
   const [state, formAction, isPending] = useActionState(submitContact, initial);
 
+  const errClass = " border-feedback-warn focus:border-feedback-warn focus:ring-feedback-warn/30";
+  const fieldClass = (field: string, base: string) =>
+    state.fieldErrors?.[field] ? base + errClass : base;
+
   useEffect(() => {
     if (state.ok) {
       router.push("/gracias");
@@ -42,7 +46,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
       <div className="grid gap-5 md:grid-cols-2">
         <label className="block">
           <span className="block text-sm font-medium mb-1">{t("name")}</span>
-          <input type="text" name="name" required autoComplete="name" minLength={2} className={inputBase} />
+          <input type="text" name="name" required autoComplete="name" minLength={2} className={fieldClass("name", inputBase)} />
           {state.fieldErrors?.name ? (
             <span className="block text-xs text-feedback-warn mt-1" role="alert">
               {state.fieldErrors.name}
@@ -51,7 +55,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
         </label>
         <label className="block">
           <span className="block text-sm font-medium mb-1">{t("email")}</span>
-          <input type="email" name="email" required autoComplete="email" className={inputBase} />
+          <input type="email" name="email" required autoComplete="email" className={fieldClass("email", inputBase)} />
           {state.fieldErrors?.email ? (
             <span className="block text-xs text-feedback-warn mt-1" role="alert">
               {state.fieldErrors.email}
@@ -73,7 +77,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
 
       <label className="block">
         <span className="block text-sm font-medium mb-1">{t("message")}</span>
-        <textarea name="message" required minLength={10} rows={5} className={textareaBase} />
+        <textarea name="message" required minLength={10} rows={5} className={fieldClass("message", textareaBase)} />
         {state.fieldErrors?.message ? (
           <span className="block text-xs text-feedback-warn mt-1" role="alert">
             {state.fieldErrors.message}
@@ -92,10 +96,23 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
         <input type="text" name="website" tabIndex={-1} autoComplete="off" />
       </label>
 
-      <label className="flex items-start gap-2 text-sm">
-        <input type="checkbox" name="consent" value="on" required className="mt-0.5" />
-        <span>{t("consent")}</span>
-      </label>
+      <div>
+        <label className="flex items-start gap-2 text-sm">
+          <input
+            type="checkbox"
+            name="consent"
+            value="on"
+            required
+            className={state.fieldErrors?.consent ? "mt-0.5 accent-feedback-warn" : "mt-0.5"}
+          />
+          <span>{t("consent")}</span>
+        </label>
+        {state.fieldErrors?.consent ? (
+          <span className="block text-xs text-feedback-warn mt-1 ml-6" role="alert">
+            Necesitamos tu consentimiento para poder responderte.
+          </span>
+        ) : null}
+      </div>
 
       <label className="flex items-start gap-2 text-sm">
         <input type="checkbox" name="newsletter" value="on" className="mt-0.5" />
