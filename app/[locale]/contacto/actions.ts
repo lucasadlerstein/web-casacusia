@@ -51,11 +51,25 @@ function checkRate(ip: string): boolean {
   return true;
 }
 
+export type ContactValues = {
+  type?: string;
+  name?: string;
+  email?: string;
+  phone?: string;
+  location?: string;
+  message?: string;
+  howFound?: string;
+};
+
 export type ContactState = {
   ok?: boolean;
   error?: "rate_limit" | "validation_failed" | "send_failed";
   fieldErrors?: Record<string, string>;
+  /** Valores enviados, para repoblar el form si el envío falla. */
+  values?: ContactValues;
 };
+
+const str = (v: FormDataEntryValue | undefined) => (typeof v === "string" ? v : "");
 
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
 /** Dirección remitente: debe estar sobre un dominio verificado en Resend. */
@@ -147,11 +161,22 @@ async function sendContactEmail(data: ContactPayload, route: { to: string; cc?: 
 }
 
 export async function submitContact(_prev: ContactState, formData: FormData): Promise<ContactState> {
+  const raw = Object.fromEntries(formData.entries());
+  // Valores para repoblar el form ante cualquier error (no incluye checkboxes).
+  const values: ContactValues = {
+    type: str(raw.type),
+    name: str(raw.name),
+    email: str(raw.email),
+    phone: str(raw.phone),
+    location: str(raw.location),
+    message: str(raw.message),
+    howFound: str(raw.howFound)
+  };
+
   const h = await headers();
   const ip = h.get("x-forwarded-for") ?? "unknown";
-  if (!checkRate(ip)) return { error: "rate_limit" };
+  if (!checkRate(ip)) return { error: "rate_limit", values };
 
-  const raw = Object.fromEntries(formData.entries());
   const parsed = contactSchema.safeParse(raw);
 
   if (!parsed.success) {
@@ -160,7 +185,7 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
       const key = String(issue.path[0] ?? "form");
       fieldErrors[key] = issue.message;
     }
-    return { error: "validation_failed", fieldErrors };
+    return { error: "validation_failed", fieldErrors, values };
   }
 
   if (parsed.data.website && parsed.data.website.length > 0) {
@@ -169,8 +194,8 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
 
   const sent = await sendContactEmail(parsed.data, { to: CONTACT_TO, cc: CONTACT_CC });
   if (!sent) {
-    // No fingimos éxito: el usuario ve el error y puede reintentar.
-    return { error: "send_failed" };
+    // No fingimos éxito: el usuario ve el error y puede reintentar sin reescribir.
+    return { error: "send_failed", values };
   }
 
   return { ok: true };

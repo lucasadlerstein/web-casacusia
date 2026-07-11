@@ -33,7 +33,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
     <form action={formAction} className="grid gap-5" noValidate>
       <label className="block">
         <span className="block text-sm font-medium mb-1">{t("type")}</span>
-        <select name="type" defaultValue={initialType} required className={inputBase}>
+        <select name="type" defaultValue={state.values?.type || initialType} required className={inputBase}>
           <option value="personal">{t("types.personal")}</option>
           <option value="voluntariado">{t("types.voluntariado")}</option>
           <option value="prensa">{t("types.prensa")}</option>
@@ -46,7 +46,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
       <div className="grid gap-5 md:grid-cols-2">
         <label className="block">
           <span className="block text-sm font-medium mb-1">{t("name")}</span>
-          <input type="text" name="name" required autoComplete="name" minLength={2} className={fieldClass("name", inputBase)} />
+          <input type="text" name="name" required autoComplete="name" minLength={2} defaultValue={state.values?.name} className={fieldClass("name", inputBase)} />
           {state.fieldErrors?.name ? (
             <span className="block text-xs text-feedback-warn mt-1" role="alert">
               {state.fieldErrors.name}
@@ -55,7 +55,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
         </label>
         <label className="block">
           <span className="block text-sm font-medium mb-1">{t("email")}</span>
-          <input type="email" name="email" required autoComplete="email" className={fieldClass("email", inputBase)} />
+          <input type="email" name="email" required autoComplete="email" defaultValue={state.values?.email} className={fieldClass("email", inputBase)} />
           {state.fieldErrors?.email ? (
             <span className="block text-xs text-feedback-warn mt-1" role="alert">
               {state.fieldErrors.email}
@@ -67,17 +67,17 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
       <div className="grid gap-5 md:grid-cols-2">
         <label className="block">
           <span className="block text-sm font-medium mb-1">{t("phone")}</span>
-          <input type="tel" name="phone" autoComplete="tel" className={inputBase} />
+          <input type="tel" name="phone" autoComplete="tel" defaultValue={state.values?.phone} className={inputBase} />
         </label>
         <label className="block">
           <span className="block text-sm font-medium mb-1">{t("location")}</span>
-          <input type="text" name="location" autoComplete="address-level2" className={inputBase} />
+          <input type="text" name="location" autoComplete="address-level2" defaultValue={state.values?.location} className={inputBase} />
         </label>
       </div>
 
       <label className="block">
         <span className="block text-sm font-medium mb-1">{t("message")}</span>
-        <textarea name="message" required minLength={10} rows={5} className={fieldClass("message", textareaBase)} />
+        <textarea name="message" required minLength={10} rows={5} defaultValue={state.values?.message} className={fieldClass("message", textareaBase)} />
         {state.fieldErrors?.message ? (
           <span className="block text-xs text-feedback-warn mt-1" role="alert">
             {state.fieldErrors.message}
@@ -87,7 +87,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
 
       <label className="block">
         <span className="block text-sm font-medium mb-1">{t("howFound")}</span>
-        <input type="text" name="howFound" className={inputBase} />
+        <input type="text" name="howFound" defaultValue={state.values?.howFound} className={inputBase} />
       </label>
 
       {/* Honeypot */}
