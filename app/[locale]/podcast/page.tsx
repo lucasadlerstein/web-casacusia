@@ -23,6 +23,25 @@ const PODCAST_COVER = "/brand/podcast/spnm-alta.jpg";
 const PODCAST_DESC =
   "Conversaciones, identificación y aprendizaje sobre hipoacusia, en primera persona. Historias reales para que nadie transite su pérdida auditiva en soledad.";
 
+function ConductorLine({ t }: { t: Awaited<ReturnType<typeof getTranslations>> }) {
+  return (
+    <p className="mt-2 text-sm text-ink-muted">
+      {t.rich("conductorLine", {
+        link: (chunks) => (
+          <a
+            href="https://hipoacusico.com.ar/quien-soy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-verde-dark hover:underline underline-offset-2"
+          >
+            {chunks}
+          </a>
+        )
+      })}
+    </p>
+  );
+}
+
 export async function generateMetadata({
   params
 }: {
@@ -111,9 +130,12 @@ export default async function PodcastPage({
         <PageHero eyebrow={t("hero.eyebrow")} title={t("hero.title")} subtitle={t("hero.subtitle")} tone="brand" />
         <Section background="default">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="text-ink-soft mb-6">
+            <p className="text-ink-soft mb-2">
               Escuchá todos los episodios de “Sordo pero no mudo” en tu plataforma preferida.
             </p>
+            <div className="mb-6 flex justify-center">
+              <ConductorLine t={t} />
+            </div>
             <div className="flex flex-wrap justify-center gap-3">
               <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-verde-dark text-white px-6 py-3 text-base font-bold hover:bg-[#0a6b42] transition-colors">
                 <Youtube size={18} aria-hidden /> YouTube
@@ -178,6 +200,7 @@ export default async function PodcastPage({
             <p className="mt-4 text-base md:text-lg text-ink-soft leading-relaxed line-clamp-4">
               {feed.descripcion || PODCAST_DESC}
             </p>
+            <ConductorLine t={t} />
             <div className="mt-7 flex flex-wrap gap-3">
               <a
                 href={YOUTUBE_CHANNEL}

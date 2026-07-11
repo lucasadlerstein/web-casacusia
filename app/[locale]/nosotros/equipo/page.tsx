@@ -98,6 +98,16 @@ export default async function EquipoPage({ params }: { params: Promise<{ locale:
             {personas.map((p) => (
               <li key={p.slug}>
                 <PersonaCardComp persona={p} labels={cardLabels} />
+                {p.miembro?.web && (
+                  <a
+                    href={p.miembro.web}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-1.5 block text-center text-[11px] font-semibold text-verde-dark hover:underline underline-offset-2"
+                  >
+                    hipoacusico.com.ar
+                  </a>
+                )}
                 {p.miembro && <PersonSchema miembro={p.miembro} />}
               </li>
             ))}
