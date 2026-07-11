@@ -63,6 +63,7 @@ const MiembroSchema = z.object({
   bioCorta: z.string().optional(),
   quotePersonal: z.string().optional(),
   linkedin: z.string().url().optional(),
+  web: z.string().url().optional(),
   orden: z.number()
 });
 export type MiembroEquipo = z.infer<typeof MiembroSchema>;

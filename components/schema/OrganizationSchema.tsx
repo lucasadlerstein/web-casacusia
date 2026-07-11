@@ -30,7 +30,8 @@ export function OrganizationSchema() {
     founder: {
       "@type": "Person",
       name: "Lucas Adlerstein",
-      sameAs: [site.social.linkedin]
+      url: "https://hipoacusico.com.ar",
+      sameAs: ["https://instagram.com/hipoacusico", "https://www.linkedin.com/in/lucasadlerstein"]
     },
     member: equipo.map((m) => ({
       "@type": "Person",

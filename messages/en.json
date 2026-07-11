@@ -280,6 +280,7 @@
     "episodio": "Episode",
     "con": "with",
     "conTranscripcion": "with transcript",
+    "conductorLine": "Hosted by <link>Lucas Adlerstein</link>, founder of CASACUSIA.",
     "categorias": {
       "historias": "Stories and Testimonials",
       "salud": "Health and Specialists",
@@ -452,7 +453,7 @@
       "title": "Story · How Casacusia started",
       "description": "Lucas Adlerstein tells how Casacusia was born, from his own experience with hearing loss to founding the foundation.",
       "hero": {
-        "intro": "Hi, my name is Lucas Adlerstein. I founded Casacusia. Today I'm going to tell you the story of the foundation and also mine."
+        "intro": "Hi, my name is <link>Lucas Adlerstein</link>. I founded Casacusia. Today I'm going to tell you the story of the foundation and also mine."
       },
       "actos": [
         {

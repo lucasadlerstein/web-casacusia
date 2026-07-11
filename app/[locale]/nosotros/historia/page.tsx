@@ -55,7 +55,18 @@ export default async function HistoriaPage({ params }: { params: Promise<{ local
               />
             </div>
             <p className="font-display text-2xl md:text-3xl lg:text-4xl font-bold leading-snug text-ink">
-              {t("hero.intro")}
+              {t.rich("hero.intro", {
+                link: (chunks) => (
+                  <a
+                    href="https://hipoacusico.com.ar/quien-soy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-2 underline-offset-4 hover:text-verde-dark transition-colors"
+                  >
+                    {chunks}
+                  </a>
+                )
+              })}
             </p>
           </div>
         </div>

@@ -279,6 +279,7 @@
     "episodio": "Episodio",
     "con": "con",
     "conTranscripcion": "con transcripción",
+    "conductorLine": "Conducido por <link>Lucas Adlerstein</link>, fundador de CASACUSIA.",
     "categorias": {
       "historias": "Historias y Testimonios",
       "salud": "Salud y Especialistas",
@@ -451,7 +452,7 @@
       "title": "Historia · Cómo nació Casacusia",
       "description": "Lucas Adlerstein cuenta cómo nació Casacusia, desde su propia historia con la hipoacusia hasta la creación de la Fundación.",
       "hero": {
-        "intro": "Hola, mi nombre es Lucas Adlerstein, fundé Casacusia. Hoy te voy a contar la historia de la fundación y también la mía."
+        "intro": "Hola, mi nombre es <link>Lucas Adlerstein</link>, fundé Casacusia. Hoy te voy a contar la historia de la fundación y también la mía."
       },
       "actos": [
         {
