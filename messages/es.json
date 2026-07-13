@@ -58,7 +58,8 @@
     "podcast": "Podcast",
     "aliados": "Aliados",
     "impacto": "Impacto",
-    "calendario": "Encuentros",
+    "calendario": "Calendario",
+    "tienda": "Tienda solidaria",
     "sumate": "Sumate",
     "contacto": "Contacto",
     "recursos": "Recursos",
@@ -243,6 +244,41 @@
     "description": "Encuentros presenciales y virtuales de Casacusia. Gratuitos. Inscribite directo desde acá.",
     "heading": "Próximos encuentros",
     "intro": "Nos juntamos en parques, salones, casas y por Google Meet. Cada encuentro es un espacio para compartir y ver que no sos el único. Son gratuitos y abiertos a personas con hipoacusia, familias y quienes acompañan."
+  },
+  "tienda": {
+    "title": "Tienda solidaria · Productos a beneficio de Casacusia",
+    "description": "Vaso térmico, Cartas Neguá, cartuchera, bolsa y piluso. Todos los productos son a beneficio de la fundación: sostienen nuestros programas para transitar la hipoacusia con herramientas y acompañados.",
+    "hero": {
+      "titulo": "Tienda solidaria",
+      "subtitulo": "Todos los productos son a beneficio de la fundación. Con cada compra sostenés nuestros programas y ayudás a que más personas transiten la hipoacusia con herramientas y acompañadas.",
+      "nota": "La compra se hace en Mercado Libre, con envíos a todo el país."
+    },
+    "productos": {
+      "heading": "Nuestros productos",
+      "comprar": "Comprar en Mercado Libre",
+      "proximamente": "Próximamente",
+      "aBeneficio": "A beneficio"
+    },
+    "negua": {
+      "eyebrow": "El favorito de la comunidad",
+      "heading": "Cartas Neguá: una dinámica para escucharnos mejor",
+      "historia": "El nombre viene de un cuento de Eduardo Galeano sobre un pueblo donde las personas podían verse como fueguitos. Cada carta es una chispa para ver nuestro fuego y el de los demás.",
+      "detalle": "50 cartas con preguntas que invitan a conversaciones profundas y a mirar la accesibilidad desde un lugar cercano. Naipes españoles con palos propios, para que también puedas jugar a lo que quieras. No hace falta saber de discapacidad: el juego enseña mientras jugás.",
+      "regla": "Juzgar es la única forma de perder.",
+      "paraQuien": "Para amigos y familia, escuelas, equipos de trabajo y recién conocidos.",
+      "cta": "Conseguir el mazo",
+      "palos": {
+        "oro": "Pila de Oro",
+        "basto": "Micrófono de Basto",
+        "espada": "Audífono de Espada",
+        "copa": "Copa de Cóclea"
+      }
+    },
+    "verTodo": {
+      "heading": "¿Querés ver todo lo que hay?",
+      "body": "Nuestra tienda oficial vive en Mercado Libre. Ahí está el catálogo completo, con precios, stock y envíos.",
+      "cta": "Ver toda la tienda"
+    }
   },
   "aliados": {
     "title": "Aliados · Empresas que hacen posible CASACUSIA",

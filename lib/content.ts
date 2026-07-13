@@ -13,6 +13,7 @@ import gruposWhatsappData from "@/content/grupos-whatsapp.json";
 import rutasData from "@/content/rutas-de-escucha.json";
 import blogData from "@/content/blog.json";
 import temasData from "@/content/temas.json";
+import tiendaData from "@/content/tienda.json";
 
 export const comisiones = [
   "comunicacion",
@@ -397,6 +398,35 @@ export function getTemas(): Tema[] {
 
 export function getTemaBySlug(slug: string): Tema | null {
   return getTemas().find((t) => t.slug === slug) ?? null;
+}
+
+const ProductoTiendaSchema = z.object({
+  slug: z.string(),
+  nombre: z.string(),
+  tagline: z.string().optional(),
+  descripcion: z.string(),
+  precioARS: z.number().optional(),
+  imagen: z.string().optional(),
+  link: z.string().url().optional(),
+  color: z.enum(["verde", "violeta", "amarillo", "rosa", "naranja", "magenta"]),
+  destacado: z.boolean().optional(),
+  proximamente: z.boolean().optional(),
+  orden: z.number()
+});
+export type ProductoTienda = z.infer<typeof ProductoTiendaSchema>;
+
+const TiendaSchema = z.object({
+  tiendaCompleta: z.string().url(),
+  productos: z.array(ProductoTiendaSchema)
+});
+export type Tienda = z.infer<typeof TiendaSchema>;
+
+export function getTienda(): Tienda {
+  const tienda = TiendaSchema.parse(tiendaData);
+  return {
+    ...tienda,
+    productos: [...tienda.productos].sort((a, b) => a.orden - b.orden)
+  };
 }
 
 export function getBlogPostsByTema(tema: Tema): BlogPost[] {
