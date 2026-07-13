@@ -131,14 +131,14 @@ export default async function TiendaPage({
           {productos.map((p) => {
             const card = (
               <>
-                <div className={cn("relative aspect-[4/3] overflow-hidden", softBg[p.color])}>
+                <div className={cn("relative aspect-square overflow-hidden rounded-t-2xl", softBg[p.color])}>
                   {p.imagen ? (
                     <Image
                       src={p.imagen}
                       alt={p.nombre}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-contain p-4 transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
                     />
                   ) : (
                     <div className="flex h-full items-center justify-center">
