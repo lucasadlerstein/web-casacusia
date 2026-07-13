@@ -58,7 +58,8 @@
     "podcast": "Podcast",
     "aliados": "Partners",
     "impacto": "Impact",
-    "calendario": "Meetups",
+    "calendario": "Calendar",
+    "tienda": "Charity store",
     "sumate": "Join us",
     "contacto": "Contact",
     "recursos": "Resources",
@@ -244,6 +245,41 @@
     "description": "Upcoming in-person and virtual Casacusia meetups. Free. Sign up directly.",
     "heading": "Upcoming meetups",
     "intro": "We gather in parks, halls, homes and on Google Meet. Each meetup is a space to share and see that you are not the only one. They are free and open to people with hearing loss, families and those who accompany them."
+  },
+  "tienda": {
+    "title": "Charity store · Products that support Casacusia",
+    "description": "Thermal cup, Neguá cards, pencil case, tote bag and bucket hat. Every product supports the foundation's programs so more people can navigate hearing loss with tools and company.",
+    "hero": {
+      "titulo": "Charity store",
+      "subtitulo": "Every product supports the foundation. With each purchase you sustain our programs and help more people navigate hearing loss with tools and company.",
+      "nota": "Purchases are made on Mercado Libre, with shipping across Argentina."
+    },
+    "productos": {
+      "heading": "Our products",
+      "comprar": "Buy on Mercado Libre",
+      "proximamente": "Coming soon",
+      "aBeneficio": "For a cause"
+    },
+    "negua": {
+      "eyebrow": "The community favorite",
+      "heading": "Neguá Cards: a game to listen to each other better",
+      "historia": "The name comes from an Eduardo Galeano story about a town where people could see each other as little fires. Each card is a spark to see our own fire and everyone else's.",
+      "detalle": "50 cards with questions that invite deep conversations and a closer look at accessibility. A Spanish deck with its own suits, so you can also play any card game you like. No disability knowledge needed: the game teaches while you play.",
+      "regla": "Judging is the only way to lose.",
+      "paraQuien": "For friends and family, schools, work teams and people who just met.",
+      "cta": "Get the deck",
+      "palos": {
+        "oro": "Coin of Gold",
+        "basto": "Microphone of Clubs",
+        "espada": "Hearing Aid of Swords",
+        "copa": "Cochlea Cup"
+      }
+    },
+    "verTodo": {
+      "heading": "Want to see everything?",
+      "body": "Our official store lives on Mercado Libre, with the full catalog, prices, stock and shipping.",
+      "cta": "See the full store"
+    }
   },
   "aliados": {
     "title": "Allies · The companies that make CASACUSIA possible",

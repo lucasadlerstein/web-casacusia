@@ -1,0 +1,70 @@
+{
+  "tiendaCompleta": "https://www.mercadolibre.com.ar/pagina/casacusia",
+  "productos": [
+    {
+      "slug": "cartas-negua",
+      "nombre": "Cartas Neguá",
+      "tagline": "Conversaciones profundas",
+      "descripcion": "50 naipes con preguntas para escucharnos mejor. Una excusa para encontrarnos, vernos y hablar de lo que importa, inspirada en el cuento de los fueguitos de Eduardo Galeano.",
+      "precioARS": 25000,
+      "imagen": "/tienda/cartas-negua.webp",
+      "link": "https://www.mercadolibre.com.ar/cartas-negua-casacusia--conversaciones-profundas/up/MLAU3676940575",
+      "color": "violeta",
+      "destacado": true,
+      "orden": 1
+    },
+    {
+      "slug": "vaso-termico",
+      "nombre": "Vaso térmico Casacusia Pro",
+      "tagline": "Pampero, color bayo",
+      "descripcion": "Para el mate, el café o lo que te acompañe todos los días. Modelo Pampero con la marca de la fundación.",
+      "precioARS": 25000,
+      "imagen": "/tienda/vaso-termico.webp",
+      "link": "https://www.mercadolibre.com.ar/vaso-termico-casacusia-pro--pampero-bayo/up/MLAU3676872817?pdp_filters=item_id%3AMLA2681068568",
+      "color": "verde",
+      "orden": 2
+    },
+    {
+      "slug": "cartuchera",
+      "nombre": "Cartuchera Casacusia",
+      "tagline": "Compra solidaria",
+      "descripcion": "Para los lápices, los audífonos, las pilas o lo que quieras tener siempre a mano.",
+      "precioARS": 11000,
+      "imagen": "/tienda/cartuchera.webp",
+      "link": "https://www.mercadolibre.com.ar/cartuchera-casacusia--compra-solidaria-a-beneficio/up/MLAU3675987079?pdp_filters=item_id%3AMLA2678294624",
+      "color": "rosa",
+      "orden": 3
+    },
+    {
+      "slug": "bolsa-solidaria",
+      "nombre": "Bolsa solidaria Casacusia",
+      "tagline": "Con manija de 30 cm",
+      "descripcion": "De tela, liviana y resistente. Ideal para las compras de todos los días y para llevar la causa con vos.",
+      "precioARS": 10000,
+      "imagen": "/tienda/bolsa-solidaria.webp",
+      "link": "https://www.mercadolibre.com.ar/bolsa-solidaria-casacusia-con-manija-de-30cm/up/MLAU3685219236?pdp_filters=item_id%3AMLA2681057946",
+      "color": "amarillo",
+      "orden": 4
+    },
+    {
+      "slug": "piluso",
+      "nombre": "Piluso Casacusia",
+      "tagline": "Sombrero solidario, negro",
+      "descripcion": "El clásico piluso, en negro. Para el sol, los encuentros y llevar a Casacusia a todos lados.",
+      "precioARS": 10000,
+      "imagen": "/tienda/piluso.webp",
+      "link": "https://www.mercadolibre.com.ar/piluso-casacusia--sombrero-solidario-negro/up/MLAU3682719057",
+      "color": "naranja",
+      "orden": 5
+    },
+    {
+      "slug": "muneca",
+      "nombre": "Muñeca Casacusia",
+      "tagline": "Próximamente",
+      "descripcion": "Se viene una muñeca muy especial. Muy pronto en la tienda.",
+      "color": "magenta",
+      "proximamente": true,
+      "orden": 6
+    }
+  ]
+}
