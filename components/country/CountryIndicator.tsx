@@ -49,11 +49,8 @@ export function CountryIndicator({ compact = false }: { compact?: boolean } = {}
           compact ? "px-2.5 py-1 text-xs" : "px-3 py-1.5 text-sm"
         }`}
       >
+        {/* Solo bandera: el nombre del país y el estado manual/auto viven en el dropdown */}
         <span aria-hidden className="text-base leading-none">{flag}</span>
-        {!compact && <span className="font-medium hidden sm:inline">{name}</span>}
-        {isOverride && !compact && (
-          <span className="text-[9px] uppercase tracking-wider text-ink-muted ml-0.5 hidden sm:inline">manual</span>
-        )}
         <ChevronDown size={compact ? 12 : 14} aria-hidden className={`transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
 

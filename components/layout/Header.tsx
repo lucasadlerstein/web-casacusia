@@ -16,8 +16,7 @@ const primaryNav: readonly { href: string; key: string; dropdown?: boolean }[] =
   { href: "/podcast",     key: "podcast", dropdown: true },
   // "/recursos/blog" fuera del nav a pedido de Lucas: el blog queda para SEO
   // y se llega desde los episodios del podcast y links internos.
-  { href: "/calendario",  key: "calendario" },
-  { href: "/contacto",    key: "contacto"   }
+  { href: "/calendario",  key: "calendario" }
 ];
 
 const podcastSubnav: readonly { href: string; label: string; highlight?: boolean }[] = [
@@ -126,6 +125,18 @@ export function Header() {
           <CountryIndicator />
           <LangSwitcher className="hidden sm:inline-flex" />
 
+          {/* Tienda solidaria — CTA violeta, reemplaza al link de contacto */}
+          <Link
+            href="/tienda"
+            className={cn(
+              "hidden md:inline-flex h-9 items-center justify-center gap-2 rounded-full px-5 text-sm font-bold",
+              "bg-violeta text-white hover:bg-violeta-dark transition-colors",
+              "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-violeta/30"
+            )}
+          >
+            {t("tienda")}
+          </Link>
+
           {/* Donar — siempre visible, color verde del brand */}
           <Link
             href="/sumate/donar"
@@ -201,6 +212,13 @@ export function Header() {
               </Link>
             )
           )}
+          <Link
+            href="/tienda"
+            onClick={() => setOpen(false)}
+            className="mt-1 block rounded-lg px-4 py-3 text-base font-bold text-violeta hover:bg-violeta-soft transition-colors"
+          >
+            {t("tienda")}
+          </Link>
           <div className="mt-3 flex items-center justify-between gap-3 border-t border-surface-line pt-4">
             <div className="flex items-center gap-2">
               <CountryIndicator compact />
