@@ -146,6 +146,8 @@ export default async function PodcastPage({
             </div>
           </div>
         </Section>
+        {/* La Red se muestra siempre, aunque el feed no cargue. */}
+        <AliadosAuditivos />
       </>
     );
   }
