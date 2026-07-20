@@ -44,7 +44,11 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
 
   const allAliados = getAliados();
   const sponsors = allAliados.filter((a) => SPONSORS_IMPULSAN.includes(a.slug));
-  const resto = allAliados.filter((a) => !SPONSORS_IMPULSAN.includes(a.slug));
+  // "Todos los aliados" excluye a los destacados de arriba y a las empresas de la
+  // Red auditiva (audífonos/implantes), que ya se muestran en su propia franja.
+  const resto = allAliados.filter(
+    (a) => !SPONSORS_IMPULSAN.includes(a.slug) && !a.categoriaAuditiva
+  );
 
   return (
     <main className="bg-surface-bg">
@@ -83,7 +87,10 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
         </section>
       )}
 
-      {/* Bloque 2: Todos los demás */}
+      {/* Bloque 2: Red de Empresas Auditivas */}
+      <AliadosAuditivos />
+
+      {/* Bloque 3: Todos los demás */}
       <Section background="tint" ariaLabelledBy="todos-title" className="py-16">
         <div className="max-w-6xl mx-auto">
           <h2 id="todos-title" className="font-display text-2xl md:text-3xl font-extrabold text-ink">
@@ -106,9 +113,6 @@ export default async function AliadosPage({ params }: { params: Promise<{ locale
           </p>
         </div>
       </Section>
-
-      {/* Bloque 3: Red de Empresas Auditivas */}
-      <AliadosAuditivos />
 
       {/* Bloque 4: Fotos de Casacusia */}
       <Section background="default" className="py-12">
