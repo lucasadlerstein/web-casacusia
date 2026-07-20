@@ -22,7 +22,15 @@ export function buildMetadata({
   image = DEFAULT_OG_IMAGE,
   noindex = false
 }: BuildMetadataOptions): Metadata {
-  const canonical = `${SITE_URL}${normalizePath(path)}`;
+  // El canonical tiene que ser auto-referencial por idioma: si la página en
+  // inglés declara como canónica a la española, Google la excluye del índice
+  // ("Página alternativa con etiqueta canónica adecuada") y el /en nunca se
+  // indexa, contradiciendo al hreflang del sitemap.
+  const cleanPath = normalizePath(stripLocalePrefix(path));
+  const suffix = cleanPath === "/" ? "" : cleanPath;
+  const esUrl = `${SITE_URL}${suffix}`;
+  const enUrl = `${SITE_URL}/en${suffix}`;
+  const canonical = locale === "en" ? enUrl : esUrl;
   const finalImage = image.startsWith("http") ? image : `${SITE_URL}${image}`;
 
   return {
@@ -32,9 +40,9 @@ export function buildMetadata({
     alternates: {
       canonical,
       languages: {
-        es: `${SITE_URL}${normalizePath(stripLocalePrefix(path))}`,
-        en: `${SITE_URL}/en${normalizePath(stripLocalePrefix(path))}`,
-        "x-default": `${SITE_URL}${normalizePath(stripLocalePrefix(path))}`
+        es: esUrl,
+        en: enUrl,
+        "x-default": esUrl
       }
     },
     robots: noindex ? { index: false, follow: false } : { index: true, follow: true },
