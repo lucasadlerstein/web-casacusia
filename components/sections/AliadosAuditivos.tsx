@@ -3,13 +3,13 @@ import { Link } from "@/lib/i18n/navigation";
 import { getAliadosRedAuditiva, type CategoriaAuditiva } from "@/lib/content";
 
 const CATEGORIAS: { key: CategoriaAuditiva; label: string; color: string }[] = [
-  { key: "audifonos",     label: "Audífonos",       color: "border-verde-dark/30 bg-verde-soft/30" },
-  { key: "implantes",     label: "Implantes",       color: "border-violeta/30 bg-violeta-soft/30" },
-  { key: "centro-medico", label: "Centros médicos", color: "border-rosa/30 bg-rosa-soft/30" }
+  { key: "audifonos", label: "de audífonos",          color: "border-verde-dark/30 bg-verde-soft/30" },
+  { key: "implantes", label: "de implantes auditivos", color: "border-violeta/30 bg-violeta-soft/30" }
 ];
 
 /**
- * Franja compacta con los logos de aliados auditivos (implantes, audífonos, centros médicos).
+ * Franja compacta con los logos de aliados auditivos (audífonos, implantes).
+ * La etiqueta de la categoría va por fuera y arriba del recuadro; los logos, centrados.
  * Muestra "Próximamente" cuando no hay empresas activas en una categoría.
  * Se reutiliza en programas, podcast, calendario, nosotros, etc.
  */
@@ -23,36 +23,49 @@ export function AliadosAuditivos() {
           Red de Empresas que Escuchan y Acompañan a la Comunidad Casacusia
         </h2>
 
-        <ul className="space-y-3 max-w-3xl mx-auto">
+        <ul className="space-y-6 max-w-3xl mx-auto">
           {CATEGORIAS.map((cat) => {
             const empresas = porCategoria[cat.key];
             const hayEmpresas = empresas.length > 0;
 
             return (
-              <li
-                key={cat.key}
-                className={`rounded-2xl border-2 ${cat.color} px-5 py-4`}
-              >
+              <li key={cat.key}>
+                <p className="mb-2 text-center font-display font-bold text-ink">{cat.label}</p>
+
                 {hayEmpresas ? (
-                  <div className="flex flex-col gap-3">
-                    <span className="font-display font-bold text-ink">{cat.label}</span>
-                    <div className="flex flex-wrap items-center gap-6">
-                      {empresas.map((a) => (
-                        <div key={a.slug} className="flex flex-col items-center gap-1">
-                          {a.web ? (
-                            <a href={a.web} target="_blank" rel="noopener noreferrer" className="block grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100">
-                              <Image src={a.logo} alt={a.nombre} width={100} height={40} className="h-8 md:h-10 w-auto object-contain" />
-                            </a>
-                          ) : (
-                            <Image src={a.logo} alt={a.nombre} width={100} height={40} className="h-8 md:h-10 w-auto object-contain opacity-70" />
-                          )}
-                        </div>
-                      ))}
+                  <div className={`rounded-2xl border-2 ${cat.color} px-6 py-6`}>
+                    <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                      {empresas.map((a) => {
+                        const img = (
+                          <Image
+                            src={a.logo}
+                            alt={a.nombre}
+                            width={911}
+                            height={315}
+                            className="h-12 md:h-14 w-auto object-contain"
+                          />
+                        );
+                        return (
+                          <div key={a.slug} className="flex items-center justify-center">
+                            {a.web ? (
+                              <a
+                                href={a.web}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="block transition-transform hover:scale-105"
+                              >
+                                {img}
+                              </a>
+                            ) : (
+                              img
+                            )}
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 ) : (
-                  <div className="flex items-center justify-between">
-                    <span className="font-display font-bold text-ink">{cat.label}</span>
+                  <div className={`rounded-2xl border-2 ${cat.color} px-6 py-6 flex items-center justify-center`}>
                     <span className="text-xs uppercase tracking-wider font-bold text-ink-muted">
                       Próximamente
                     </span>

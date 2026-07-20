@@ -70,30 +70,31 @@
     },
     {
         "slug": "medel-latam",
-        "nombre": "MEDEL Latam",
-        "logo": "/aliados/MEDEL-min.png",
+        "nombre": "MED-EL",
+        "logo": "/aliados/medel.png",
         "sector": "Salud",
         "tipoAlianza": ["institucional", "comunicacional"],
         "categoriaAuditiva": "implantes",
         "proyectoApoyado": ["podcast"],
-        "impacto": "Información técnica sobre implantes cocleares.",
+        "impacto": "Implantes auditivos.",
         "destacado": false,
-        "orden": 5,
+        "orden": 30,
         "desde": "2025-04",
-        "activo": false
+        "activo": true
     },
     {
         "slug": "tecnosalud",
         "nombre": "Tecnosalud",
-        "logo": "/aliados/tecnosalud-min.png",
+        "logo": "/aliados/tecnosalud.png",
         "sector": "Salud",
         "tipoAlianza": ["institucional"],
+        "categoriaAuditiva": "implantes",
         "proyectoApoyado": ["encuentros"],
-        "impacto": "Alianza institucional en el sector salud.",
+        "impacto": "Implantes auditivos.",
         "destacado": false,
-        "orden": 7,
+        "orden": 31,
         "desde": "2025-05",
-        "activo": false
+        "activo": true
     },
     {
         "slug": "instituto-superior-otorrinolaringologia",
@@ -382,6 +383,48 @@
         "destacado": false,
         "orden": 29,
         "desde": "2025-09",
+        "activo": true
+    },
+    {
+        "slug": "amplitone",
+        "nombre": "Amplitone",
+        "logo": "/aliados/amplitone.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional"],
+        "categoriaAuditiva": "audifonos",
+        "proyectoApoyado": [],
+        "impacto": "Audífonos y soluciones auditivas.",
+        "destacado": false,
+        "orden": 32,
+        "desde": "2025-07",
+        "activo": true
+    },
+    {
+        "slug": "auditron",
+        "nombre": "Auditron",
+        "logo": "/aliados/auditron.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional"],
+        "categoriaAuditiva": "audifonos",
+        "proyectoApoyado": [],
+        "impacto": "Audífonos y soluciones auditivas.",
+        "destacado": false,
+        "orden": 33,
+        "desde": "2025-07",
+        "activo": true
+    },
+    {
+        "slug": "audisonic",
+        "nombre": "Audisonic",
+        "logo": "/aliados/audisonic.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional"],
+        "categoriaAuditiva": "audifonos",
+        "proyectoApoyado": [],
+        "impacto": "Audífonos y soluciones auditivas.",
+        "destacado": false,
+        "orden": 34,
+        "desde": "2025-07",
         "activo": true
     }
 ]
