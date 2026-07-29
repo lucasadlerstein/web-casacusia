@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 
@@ -10,16 +11,6 @@ type Props = {
   voluntarios: Voluntario[];
   comisiones: { comision: Comision; count: number }[];
 };
-
-const avatarGradients = [
-  "bg-gradient-to-br from-verde to-verde-dark",
-  "bg-gradient-to-br from-violeta to-violeta-dark",
-  "bg-gradient-to-br from-rosa to-rosa-dark",
-  "bg-gradient-to-br from-brand-teal to-brand-teal-dark",
-  "bg-gradient-to-br from-blue-500 to-blue-700",
-  "bg-gradient-to-br from-amber-400 to-orange-600",
-  "bg-gradient-to-br from-fuchsia-500 to-purple-700"
-];
 
 export function VolunteerGrid({ voluntarios, comisiones }: Props) {
   const t = useTranslations("sumate.voluntariado");
@@ -32,7 +23,12 @@ export function VolunteerGrid({ voluntarios, comisiones }: Props) {
 
   return (
     <div>
-      <div role="group" aria-label={t("filterLabel")} className="flex flex-wrap gap-2">
+      <div
+        role="group"
+        aria-label={t("filterLabel")}
+        className="flex gap-2 overflow-x-auto snap-x pb-2 -mx-4 px-4 [&::-webkit-scrollbar]:hidden sm:flex-wrap sm:justify-center sm:overflow-visible sm:mx-0 sm:px-0 sm:pb-0"
+        style={{ scrollbarWidth: "none" }}
+      >
         <FilterChip active={active === "all"} onClick={() => setActive("all")}>
           {t("filterAll")} · {voluntarios.length}
         </FilterChip>
@@ -44,33 +40,33 @@ export function VolunteerGrid({ voluntarios, comisiones }: Props) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="mt-10 text-ink-soft">{t("noResults")}</p>
+        <p className="mt-10 text-center text-ink-soft">{t("noResults")}</p>
       ) : (
-        <ul className="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-0 border-t border-l border-surface-line">
-          {filtered.map((v, i) => {
-            const grad = avatarGradients[i % avatarGradients.length];
+        <ul className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+          {filtered.map((v) => {
+            const nombreCompleto = v.apellido ? `${v.nombre} ${v.apellido}` : v.nombre;
             return (
-              <li 
-                key={v.slug} 
-                className="group relative aspect-square border-r border-b border-surface-line overflow-hidden cursor-default"
-              >
-                {/* Background / Avatar */}
-                <div className={cn(
-                  "absolute inset-0 flex items-center justify-center transition-transform duration-700 group-hover:scale-110",
-                  grad
-                )}>
-                  <span className="font-display font-extrabold text-4xl text-white drop-shadow-md opacity-40 group-hover:opacity-20 transition-opacity">
-                    {v.nombre.charAt(0)}
-                  </span>
-                </div>
-                
-                {/* Overlay on Hover */}
-                <div className="absolute inset-0 bg-ink/80 flex flex-col items-center justify-center p-4 text-center opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-[2px] translate-y-2 group-hover:translate-y-0">
-                  <p className="font-bold text-white text-sm md:text-base leading-tight">{v.nombre}</p>
-                  <span className="mt-2 inline-flex items-center px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-[9px] uppercase font-bold text-white tracking-wider">
-                    {t(`commission.${v.comision}`)}
-                  </span>
-                </div>
+              <li key={v.slug}>
+                <article className="group relative aspect-[4/5] rounded-2xl overflow-hidden border border-surface-line bg-surface-card">
+                  <Image
+                    src={v.foto}
+                    alt={nombreCompleto}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-ink via-ink/80 to-transparent pointer-events-none" />
+
+                  <div className="absolute inset-x-0 bottom-0 p-4 text-white">
+                    <p className="font-display font-bold text-base md:text-lg leading-tight">
+                      {nombreCompleto}
+                    </p>
+                    <p className="text-xs md:text-sm text-white/80 leading-snug mt-0.5">
+                      {v.rolEnComision ?? t(`commission.${v.comision}`)}
+                    </p>
+                  </div>
+                </article>
               </li>
             );
           })}
@@ -95,7 +91,7 @@ function FilterChip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "h-10 px-5 rounded-full text-sm font-bold transition-all duration-300 border shadow-sm",
+        "h-10 shrink-0 snap-start whitespace-nowrap px-5 rounded-full text-sm font-bold transition-all duration-300 border shadow-sm",
         active
           ? "bg-ink text-white border-ink scale-105"
           : "bg-surface-card text-ink-soft border-surface-line hover:border-brand-teal hover:text-brand-teal hover:bg-brand-teal/5"

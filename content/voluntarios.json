@@ -1,26 +1,182 @@
 [
-  { "slug": "vol-01", "nombre": "María", "foto": "/images/voluntarios/placeholder.svg", "comision": "encuentros", "ciudad": "CABA" },
-  { "slug": "vol-02", "nombre": "Pablo", "foto": "/images/voluntarios/placeholder.svg", "comision": "red-padres", "ciudad": "Córdoba" },
-  { "slug": "vol-03", "nombre": "Pau", "foto": "/images/voluntarios/placeholder.svg", "comision": "red-padres", "ciudad": "Mendoza" },
-  { "slug": "vol-04", "nombre": "Chichi", "foto": "/images/voluntarios/placeholder.svg", "comision": "red-padres", "ciudad": "Rosario" },
-  { "slug": "vol-05", "nombre": "Flor", "foto": "/images/voluntarios/placeholder.svg", "comision": "red-padres", "ciudad": "La Plata" },
-  { "slug": "vol-06", "nombre": "Vero", "foto": "/images/voluntarios/placeholder.svg", "comision": "otro", "rolEnComision": "Red de acompañamiento", "ciudad": "CABA" },
-  { "slug": "vol-07", "nombre": "Belén", "foto": "/images/voluntarios/placeholder.svg", "comision": "otro", "ciudad": "Bariloche" },
-  { "slug": "vol-08", "nombre": "Paola", "foto": "/images/voluntarios/placeholder.svg", "comision": "otro", "ciudad": "CABA" },
-  { "slug": "vol-09", "nombre": "Juan", "foto": "/images/voluntarios/placeholder.svg", "comision": "podcast", "ciudad": "CABA" },
-  { "slug": "vol-10", "nombre": "Sofía", "foto": "/images/voluntarios/placeholder.svg", "comision": "podcast", "ciudad": "CABA" },
-  { "slug": "vol-11", "nombre": "Lucas", "foto": "/images/voluntarios/placeholder.svg", "comision": "podcast", "ciudad": "CABA" },
-  { "slug": "vol-12", "nombre": "Camila", "foto": "/images/voluntarios/placeholder.svg", "comision": "comunicacion", "ciudad": "CABA" },
-  { "slug": "vol-13", "nombre": "Tomás", "foto": "/images/voluntarios/placeholder.svg", "comision": "comunicacion", "ciudad": "Rosario" },
-  { "slug": "vol-14", "nombre": "Martina", "foto": "/images/voluntarios/placeholder.svg", "comision": "contenido", "ciudad": "CABA" },
-  { "slug": "vol-15", "nombre": "Nacho", "foto": "/images/voluntarios/placeholder.svg", "comision": "contenido", "ciudad": "Madrid" },
-  { "slug": "vol-16", "nombre": "Diego", "foto": "/images/voluntarios/placeholder.svg", "comision": "fundraising", "ciudad": "CABA" },
-  { "slug": "vol-17", "nombre": "Clara", "foto": "/images/voluntarios/placeholder.svg", "comision": "fundraising", "ciudad": "CABA" },
-  { "slug": "vol-18", "nombre": "Manu", "foto": "/images/voluntarios/placeholder.svg", "comision": "tecnologia", "ciudad": "CABA" },
-  { "slug": "vol-19", "nombre": "Axel", "foto": "/images/voluntarios/placeholder.svg", "comision": "tecnologia", "ciudad": "La Plata" },
-  { "slug": "vol-20", "nombre": "Lucía", "foto": "/images/voluntarios/placeholder.svg", "comision": "diseno", "ciudad": "CABA" },
-  { "slug": "vol-21", "nombre": "Agus", "foto": "/images/voluntarios/placeholder.svg", "comision": "diseno", "ciudad": "Córdoba" },
-  { "slug": "vol-22", "nombre": "Mer", "foto": "/images/voluntarios/placeholder.svg", "comision": "encuentros", "ciudad": "Mendoza" },
-  { "slug": "vol-23", "nombre": "Flor C.", "foto": "/images/voluntarios/placeholder.svg", "comision": "encuentros", "ciudad": "Misiones" },
-  { "slug": "vol-24", "nombre": "Gonza", "foto": "/images/voluntarios/placeholder.svg", "comision": "encuentros", "ciudad": "Bariloche" }
+  {
+    "slug": "lucas-adlerstein",
+    "nombre": "Lucas",
+    "apellido": "Adlerstein",
+    "foto": "/images/voluntarios/lucas-adlerstein.jpg",
+    "comision": "direccion",
+    "rolEnComision": "Dirección General",
+    "orden": 1
+  },
+  {
+    "slug": "melu-klecki",
+    "nombre": "Melu",
+    "apellido": "Klecki",
+    "foto": "/images/voluntarios/melu-klecki.jpg",
+    "comision": "direccion",
+    "rolEnComision": "Dirección de Programas y Voluntariado",
+    "orden": 2
+  },
+  {
+    "slug": "rama-strauss",
+    "nombre": "Rama",
+    "apellido": "Strauss",
+    "foto": "/images/voluntarios/rama-strauss.jpg",
+    "comision": "direccion",
+    "rolEnComision": "Acompañamiento Estratégico",
+    "orden": 3
+  },
+  {
+    "slug": "valen-galeano",
+    "nombre": "Valen",
+    "apellido": "Galeano",
+    "foto": "/images/voluntarios/valen-galeano.jpg",
+    "comision": "comunicacion",
+    "rolEnComision": "Coordinación de Comunicación",
+    "orden": 4
+  },
+  {
+    "slug": "ana-pettinari",
+    "nombre": "Ana Caren",
+    "apellido": "Pettinari",
+    "foto": "/images/voluntarios/ana-pettinari.jpg",
+    "comision": "comunicacion",
+    "rolEnComision": "Comunicación",
+    "orden": 5
+  },
+  {
+    "slug": "anahi-gomez-martinez",
+    "nombre": "Anahí",
+    "apellido": "Gómez Martínez",
+    "foto": "/images/voluntarios/anahi-gomez-martinez.jpg",
+    "comision": "comunicacion",
+    "rolEnComision": "Contenido de RRSS",
+    "orden": 6
+  },
+  {
+    "slug": "shari-merin",
+    "nombre": "Shari",
+    "apellido": "Merin",
+    "foto": "/images/voluntarios/shari-merin.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Coordinación y facilitación de Encuentros",
+    "orden": 7
+  },
+  {
+    "slug": "flor-tobal",
+    "nombre": "Flor",
+    "apellido": "Tobal",
+    "foto": "/images/voluntarios/flor-tobal.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Facilitación de Encuentros",
+    "orden": 8
+  },
+  {
+    "slug": "lucia-petrikovich",
+    "nombre": "Lucia",
+    "apellido": "Petrikovich",
+    "foto": "/images/voluntarios/lucia-petrikovich.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Facilitación de Encuentros",
+    "orden": 9
+  },
+  {
+    "slug": "paula-raccone",
+    "nombre": "Paula",
+    "apellido": "Raccone",
+    "foto": "/images/voluntarios/paula-raccone.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Facilitación de Encuentros",
+    "orden": 10
+  },
+  {
+    "slug": "teresita-bestani",
+    "nombre": "Teresita",
+    "apellido": "Bestani",
+    "foto": "/images/voluntarios/teresita-bestani.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Facilitación de Encuentros",
+    "orden": 11
+  },
+  {
+    "slug": "julieta-rivera-lopez",
+    "nombre": "Julieta",
+    "apellido": "Rivera Lopez",
+    "foto": "/images/voluntarios/julieta-rivera-lopez.jpg",
+    "comision": "podcast",
+    "rolEnComision": "Producción del Podcast SPNM",
+    "orden": 12
+  },
+  {
+    "slug": "cynthia-bonesse",
+    "nombre": "Cynthia",
+    "apellido": "Bonesse",
+    "foto": "/images/voluntarios/cynthia-bonesse.jpg",
+    "comision": "podcast",
+    "rolEnComision": "Edición de video Podcast SPNM",
+    "orden": 13
+  },
+  {
+    "slug": "fede-romanut",
+    "nombre": "Fede",
+    "apellido": "Romanut",
+    "foto": "/images/voluntarios/fede-romanut.jpg",
+    "comision": "podcast",
+    "rolEnComision": "Edición de audio Podcast SPNM",
+    "orden": 14
+  },
+  {
+    "slug": "lucas-garcia",
+    "nombre": "Lucas",
+    "apellido": "Garcia",
+    "foto": "/images/voluntarios/lucas-garcia.jpg",
+    "comision": "contenido",
+    "rolEnComision": "Creación de contenido",
+    "orden": 15
+  },
+  {
+    "slug": "luciana-perez",
+    "nombre": "Luciana",
+    "apellido": "Perez",
+    "foto": "/images/voluntarios/luciana-perez.jpg",
+    "comision": "diseno",
+    "rolEnComision": "Diseño gráfico",
+    "orden": 16
+  },
+  {
+    "slug": "nico-bukchstein",
+    "nombre": "Nico",
+    "apellido": "Bukchstein",
+    "foto": "/images/voluntarios/nico-bukchstein.jpg",
+    "comision": "fundraising",
+    "rolEnComision": "Alianzas y FR",
+    "orden": 17
+  },
+  {
+    "slug": "vero-scheinkman",
+    "nombre": "Vero",
+    "apellido": "Scheinkman",
+    "foto": "/images/voluntarios/vero-scheinkman.jpg",
+    "comision": "fundraising",
+    "rolEnComision": "Alianzas y FR",
+    "orden": 18
+  },
+  {
+    "slug": "manu-torres",
+    "nombre": "Manu",
+    "apellido": "Torres",
+    "foto": "/images/voluntarios/manu-torres.jpg",
+    "comision": "tecnologia",
+    "rolEnComision": "Tecnología y Operaciones",
+    "orden": 19
+  },
+  {
+    "slug": "meli-baran",
+    "nombre": "Meli",
+    "apellido": "Baran",
+    "foto": "/images/voluntarios/meli-baran.jpg",
+    "comision": "tecnologia",
+    "rolEnComision": "Desarrollo IT y Facilitación de Encuentros",
+    "orden": 20
+  }
 ]

@@ -602,6 +602,7 @@
       "filterAll": "All",
       "noResults": "No volunteers to show.",
       "commission": {
+        "direccion": "Leadership",
         "comunicacion": "Communications",
         "encuentros": "Meetups",
         "podcast": "Podcast",

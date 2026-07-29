@@ -16,6 +16,7 @@ import temasData from "@/content/temas.json";
 import tiendaData from "@/content/tienda.json";
 
 export const comisiones = [
+  "direccion",
   "comunicacion",
   "encuentros",
   "podcast",
@@ -72,10 +73,12 @@ export type MiembroEquipo = z.infer<typeof MiembroSchema>;
 const VoluntarioSchema = z.object({
   slug: z.string(),
   nombre: z.string(),
+  apellido: z.string().optional(),
   foto: z.string(),
   comision: z.enum(comisiones),
   rolEnComision: z.string().optional(),
-  ciudad: z.string().optional()
+  ciudad: z.string().optional(),
+  orden: z.number()
 });
 export type Voluntario = z.infer<typeof VoluntarioSchema>;
 
@@ -210,7 +213,7 @@ export function getEquipo(): MiembroEquipo[] {
 }
 
 export function getVoluntarios(opts: { comision?: Comision } = {}): Voluntario[] {
-  const all = z.array(VoluntarioSchema).parse(voluntariosData);
+  const all = z.array(VoluntarioSchema).parse(voluntariosData).sort((a, b) => a.orden - b.orden);
   return opts.comision ? all.filter((v) => v.comision === opts.comision) : all;
 }
 

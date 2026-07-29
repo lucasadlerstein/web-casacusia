@@ -6,6 +6,7 @@ import { ArrowRight, Users } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/lib/i18n/navigation";
+import { VolunteerGrid } from "@/components/sections/VolunteerGrid";
 import { getVoluntarios, getComisionesConConteo } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 import type { Locale } from "@/lib/i18n/config";
@@ -32,6 +33,8 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
   setRequestLocale(locale);
   const voluntarios = getVoluntarios();
   const comisiones = getComisionesConConteo();
+  // Dirección no se cuenta como área de voluntariado en el copy del hero
+  const areasVoluntariado = comisiones.filter((c) => c.comision !== "direccion");
 
   return (
     <>
@@ -57,7 +60,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
             Sumate como voluntario.
           </h1>
           <p className="mt-5 text-lg text-white/80 leading-relaxed">
-            {voluntarios.length}+ personas ya sostienen Casacusia desde {comisiones.length} áreas distintas: encuentros, podcast, red de familias, comunicación, contenido, fundraising, tecnología y diseño. Sumate al equipo.
+            {voluntarios.length}+ personas ya sostienen Casacusia desde {areasVoluntariado.length} áreas distintas: comunicación, encuentros, podcast, contenido, diseño, fundraising y tecnología. Sumate al equipo.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -80,6 +83,24 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
           </div>
         </div>
       </section>
+
+      <Section background="default" ariaLabelledBy="quienes-title" className="py-14">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="font-display text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-rosa mb-4">
+            Conocé a quienes ponen el cuerpo
+          </p>
+          <h2 id="quienes-title" className="font-display text-2xl md:text-3xl font-extrabold text-ink">
+            Las personas que sostienen Casacusia
+          </h2>
+          <p className="mt-4 text-ink-soft leading-relaxed">
+            Cada encuentro, cada episodio y cada mensaje que respondemos pasa por sus manos.
+          </p>
+        </div>
+
+        <div className="mt-10 max-w-6xl mx-auto">
+          <VolunteerGrid voluntarios={voluntarios} comisiones={comisiones} />
+        </div>
+      </Section>
 
       <Section background="tint" ariaLabelledBy="como-title" className="py-14">
         <div className="max-w-3xl mx-auto">
@@ -109,7 +130,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
 
       <Section background="default" className="py-12">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-ink-soft mb-5">¿Querés ver primero quiénes ya forman parte?</p>
+          <p className="text-ink-soft mb-5">¿Querés conocer al equipo completo?</p>
           <Button href="/nosotros/equipo" variant="secondary" size="lg">
             Conocer al equipo y voluntarios →
           </Button>

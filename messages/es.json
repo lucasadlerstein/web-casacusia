@@ -600,6 +600,7 @@
       "filterAll": "Todos",
       "noResults": "No hay voluntarios para mostrar.",
       "commission": {
+        "direccion": "Dirección",
         "comunicacion": "Comunicación",
         "encuentros": "Encuentros",
         "podcast": "Podcast",
