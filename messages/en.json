@@ -237,7 +237,8 @@
       "consent": "I agree to receive news by email.",
       "submit": "Subscribe",
       "success": "Thanks! We'll write to you soon.",
-      "error": "Something went wrong. Try again in a bit."
+      "error": "Something went wrong. Try again in a bit.",
+      "errorEmail": "We couldn't verify that email. Please check that it's spelled correctly."
     }
   },
   "calendario": {

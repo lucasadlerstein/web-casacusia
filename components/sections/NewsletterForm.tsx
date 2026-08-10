@@ -1,8 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useCallback, useEffect, useRef } from "react";
 import { Mail } from "lucide-react";
-import { suscribirNewsletter } from "@/app/actions/newsletter";
+import { suscribirNewsletter, type Result } from "@/app/actions/newsletter";
 
 type Props = {
   labels: {
@@ -16,7 +16,20 @@ type Props = {
 };
 
 export function NewsletterForm({ labels }: Props) {
-  const [state, action, pending] = useActionState(suscribirNewsletter, null);
+  /** Momento en que el form quedó montado: un envío instantáneo es un bot. */
+  const mountedAt = useRef<number | null>(null);
+  useEffect(() => {
+    mountedAt.current = Date.now();
+  }, []);
+
+  const submit = useCallback(async (prev: Result | null, formData: FormData) => {
+    if (mountedAt.current !== null) {
+      formData.set("elapsed", String(Date.now() - mountedAt.current));
+    }
+    return suscribirNewsletter(prev, formData);
+  }, []);
+
+  const [state, action, pending] = useActionState(submit, null);
 
   if (state?.ok) {
     return (
@@ -34,8 +47,10 @@ export function NewsletterForm({ labels }: Props) {
       </div>
       <p className="text-sm text-ink-soft mb-5">{labels.subtitulo}</p>
 
-      <form action={action} className="space-y-3">
-        {/* Honeypot */}
+      <form action={action} className="relative space-y-3">
+        {/* Honeypots. Dos trampas complementarias: una invisible por opacidad y
+            otra fuera de pantalla, para cubrir bots que descarten cada caso.
+            Ambas quedan fuera del foco y del árbol de accesibilidad. */}
         <input
           type="text"
           name="website"
@@ -44,6 +59,12 @@ export function NewsletterForm({ labels }: Props) {
           aria-hidden="true"
           className="absolute opacity-0 h-0 w-0 pointer-events-none"
         />
+        <div className="absolute left-[-9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+          <label>
+            <span>Sitio de tu organización</span>
+            <input type="text" name="organizacion_url" tabIndex={-1} autoComplete="off" />
+          </label>
+        </div>
 
         <input
           type="text"
