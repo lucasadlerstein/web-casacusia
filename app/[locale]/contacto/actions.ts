@@ -1,7 +1,10 @@
 "use server";
 
 import { headers } from "next/headers";
+import { checkBotId } from "botid/server";
 import { z } from "zod";
+
+import { assessSpam, type SpamAssessment } from "@/lib/antispam";
 
 const contactSchema = z.object({
   type: z.enum(["personal", "voluntariado", "prensa", "comunicacion", "empresa", "profesional", "programas", "otro"]),
@@ -11,9 +14,7 @@ const contactSchema = z.object({
   location: z.string().max(120).optional().or(z.literal("")),
   message: z.string().min(10).max(4000),
   howFound: z.string().max(200).optional().or(z.literal("")),
-  consent: z.literal("on"),
-  // Honeypot: must be empty
-  website: z.string().max(0).optional().or(z.literal(""))
+  consent: z.literal("on")
 });
 
 type ContactType = z.infer<typeof contactSchema>["type"];
@@ -35,9 +36,17 @@ const TYPE_LABELS: Record<ContactType, string> = {
 const CONTACT_TO = "somos@casacusia.org";
 const CONTACT_CC = ["lucas@casacusia.org"];
 
+/** Rate limit best-effort: vive en memoria de la instancia, así que frena
+ *  ráfagas de un mismo cliente pero no un ataque distribuido. La defensa real
+ *  contra bots es BotID + las heurísticas de lib/antispam.ts. */
 const rateBuckets = new Map<string, { count: number; ts: number }>();
 const WINDOW_MS = 60_000;
 const LIMIT = 3;
+
+/** x-forwarded-for puede traer una cadena de IPs: la del cliente es la primera. */
+function clientIp(forwardedFor: string | null): string {
+  return forwardedFor?.split(",")[0]?.trim() || "unknown";
+}
 
 function checkRate(ip: string): boolean {
   const now = Date.now();
@@ -84,7 +93,7 @@ function esc(s: string): string {
 
 type ContactPayload = z.infer<typeof contactSchema>;
 
-function buildEmail(data: ContactPayload) {
+function buildEmail(data: ContactPayload, spam: SpamAssessment) {
   const label = TYPE_LABELS[data.type];
   const rows: [string, string | undefined][] = [
     ["Tipo", label],
@@ -94,15 +103,36 @@ function buildEmail(data: ContactPayload) {
     ["Ubicación", data.location || undefined],
     ["Cómo nos encontró", data.howFound || undefined]
   ];
+
+  const spamText = spam.isSpam
+    ? [
+        "",
+        `⚠️ Marcado como probable spam (puntaje ${spam.score}):`,
+        ...spam.reasons.map((r) => `  · ${r}`),
+        ""
+      ]
+    : [];
+
   const text = [
+    ...spamText,
     ...rows.filter(([, v]) => v).map(([k, v]) => `${k}: ${v}`),
     "",
     "Mensaje:",
     data.message
   ].join("\n");
 
+  const spamHtml = spam.isSpam
+    ? `<div style="padding:12px 16px;margin-bottom:16px;background:#FFF3CD;border-left:4px solid #FFC001;border-radius:8px">
+         <strong>Marcado como probable spam</strong> (puntaje ${spam.score})
+         <ul style="margin:8px 0 0;padding-left:20px">
+           ${spam.reasons.map((r) => `<li>${esc(r)}</li>`).join("")}
+         </ul>
+       </div>`
+    : "";
+
   const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;color:#143642;max-width:600px">
+      ${spamHtml}
       <h2 style="color:#563AB3;margin:0 0 16px">Nuevo mensaje desde la web · ${esc(label)}</h2>
       <table style="border-collapse:collapse;width:100%;margin-bottom:16px">
         ${rows
@@ -116,18 +146,23 @@ function buildEmail(data: ContactPayload) {
       <div style="padding:12px 16px;background:#FFF9F2;border-radius:8px;white-space:pre-wrap">${esc(data.message)}</div>
     </div>`;
 
-  return { subject: `[Casacusia web] ${label} — ${data.name}`, text, html };
+  const prefix = spam.isSpam ? "[SPAM?] " : "";
+  return { subject: `${prefix}[Casacusia web] ${label} — ${data.name}`, text, html };
 }
 
 /** Envía el mail vía la API REST de Resend, con un reintento ante fallo transitorio. */
-async function sendContactEmail(data: ContactPayload, route: { to: string; cc?: string[] }): Promise<boolean> {
+async function sendContactEmail(
+  data: ContactPayload,
+  route: { to: string; cc?: string[] },
+  spam: SpamAssessment
+): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("[contact] RESEND_API_KEY no configurada — mail NO enviado");
     return false;
   }
 
-  const { subject, text, html } = buildEmail(data);
+  const { subject, text, html } = buildEmail(data, spam);
   const body = JSON.stringify({
     from: FROM_EMAIL,
     to: [route.to],
@@ -135,7 +170,10 @@ async function sendContactEmail(data: ContactPayload, route: { to: string; cc?: 
     reply_to: data.email,
     subject,
     text,
-    html
+    html,
+    // Header propio: permite armar un filtro en el cliente de correo sin
+    // depender del prefijo del asunto.
+    headers: { "X-Casacusia-Spam": spam.isSpam ? `yes score=${spam.score}` : "no" }
   });
 
   for (let attempt = 1; attempt <= 2; attempt++) {
@@ -174,8 +212,15 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
   };
 
   const h = await headers();
-  const ip = h.get("x-forwarded-for") ?? "unknown";
-  if (!checkRate(ip)) return { error: "rate_limit", values };
+  if (!checkRate(clientIp(h.get("x-forwarded-for")))) return { error: "rate_limit", values };
+
+  // BotID (Vercel): detección invisible de automatización, incluidos headless
+  // browsers. Le devolvemos éxito al bot para no darle señal de que lo cazamos.
+  const { isBot } = await checkBotId();
+  if (isBot) {
+    console.warn("[contact] descartado por BotID");
+    return { ok: true };
+  }
 
   const parsed = contactSchema.safeParse(raw);
 
@@ -188,11 +233,20 @@ export async function submitContact(_prev: ContactState, formData: FormData): Pr
     return { error: "validation_failed", fieldErrors, values };
   }
 
-  if (parsed.data.website && parsed.data.website.length > 0) {
-    return { ok: true };
+  const elapsedRaw = Number(str(raw.elapsed));
+  const spam = await assessSpam({
+    name: parsed.data.name,
+    email: parsed.data.email,
+    message: parsed.data.message,
+    elapsedMs: Number.isFinite(elapsedRaw) && elapsedRaw > 0 ? elapsedRaw : null,
+    honeypots: [str(raw.website), str(raw.organizacion_url)]
+  });
+
+  if (spam.isSpam) {
+    console.warn(`[contact] probable spam (score ${spam.score}): ${spam.reasons.join(" | ")}`);
   }
 
-  const sent = await sendContactEmail(parsed.data, { to: CONTACT_TO, cc: CONTACT_CC });
+  const sent = await sendContactEmail(parsed.data, { to: CONTACT_TO, cc: CONTACT_CC }, spam);
   if (!sent) {
     // No fingimos éxito: el usuario ve el error y puede reintentar sin reescribir.
     return { error: "send_failed", values };

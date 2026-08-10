@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect } from "react";
+import { useActionState, useCallback, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/Button";
@@ -17,7 +17,22 @@ const textareaBase =
 export function ContactForm({ initialType = "personal" }: { initialType?: string }) {
   const t = useTranslations("contacto.form");
   const router = useRouter();
-  const [state, formAction, isPending] = useActionState(submitContact, initial);
+
+  /** Momento en que el form quedó montado, para medir cuánto tardó el envío.
+   *  Un submit instantáneo es señal de automatización. */
+  const mountedAt = useRef<number | null>(null);
+  useEffect(() => {
+    mountedAt.current = Date.now();
+  }, []);
+
+  const action = useCallback(async (prev: ContactState, formData: FormData) => {
+    if (mountedAt.current !== null) {
+      formData.set("elapsed", String(Date.now() - mountedAt.current));
+    }
+    return submitContact(prev, formData);
+  }, []);
+
+  const [state, formAction, isPending] = useActionState(action, initial);
 
   const errClass = " border-feedback-warn focus:border-feedback-warn focus:ring-feedback-warn/30";
   const fieldClass = (field: string, base: string) =>
@@ -30,7 +45,7 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
   }, [state.ok, router]);
 
   return (
-    <form action={formAction} className="grid gap-5" noValidate>
+    <form action={formAction} className="relative grid gap-5" noValidate>
       <label className="block">
         <span className="block text-sm font-medium mb-1">{t("type")}</span>
         <select name="type" defaultValue={state.values?.type || initialType} required className={inputBase}>
@@ -90,11 +105,21 @@ export function ContactForm({ initialType = "personal" }: { initialType?: string
         <input type="text" name="howFound" defaultValue={state.values?.howFound} className={inputBase} />
       </label>
 
-      {/* Honeypot */}
-      <label className="hidden" aria-hidden>
+      {/* Honeypots. Dos trampas complementarias:
+          - "website" con display:none, atrapa bots que no interpretan CSS.
+          - "organizacion_url" fuera de pantalla pero visible para el motor de
+            render, atrapa bots que descartan lo que está en display:none.
+          Ambos quedan fuera del foco y del árbol de accesibilidad. */}
+      <label className="hidden" aria-hidden="true">
         <span>Website</span>
         <input type="text" name="website" tabIndex={-1} autoComplete="off" />
       </label>
+      <div className="absolute left-[-9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label>
+          <span>Sitio de tu organización</span>
+          <input type="text" name="organizacion_url" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
 
       <div>
         <label className="flex items-start gap-2 text-sm">
