@@ -236,7 +236,8 @@
       "consent": "Acepto recibir novedades por email.",
       "submit": "Suscribirme",
       "success": "¡Gracias! Te vamos a escribir pronto.",
-      "error": "Algo no salió bien. Intentá de nuevo en un rato."
+      "error": "Algo no salió bien. Intentá de nuevo en un rato.",
+      "errorEmail": "No pudimos verificar ese email. Revisá que esté bien escrito."
     }
   },
   "calendario": {
@@ -600,6 +601,7 @@
       "filterAll": "Todos",
       "noResults": "No hay voluntarios para mostrar.",
       "commission": {
+        "direccion": "Dirección",
         "comunicacion": "Comunicación",
         "encuentros": "Encuentros",
         "podcast": "Podcast",

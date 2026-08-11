@@ -1,12 +1,19 @@
 import { NextResponse } from "next/server";
+import { checkBotId } from "botid/server";
 import { z } from "zod";
+
+import { assessSubscriber } from "@/lib/antispam";
 
 const schema = z.object({
   name: z.string().min(2).max(120),
   email: z.string().email(),
   perfil: z.string().max(60).optional(),
   consent: z.literal(true),
-  website: z.string().max(0).optional()
+  /** Milisegundos que tardó en completarse el form. */
+  elapsed: z.number().optional(),
+  /** Campos trampa: ver los honeypots de components/sections/Newsletter.tsx. */
+  website: z.string().optional(),
+  organizacion_url: z.string().optional()
 });
 
 const rateBuckets = new Map<string, { count: number; ts: number }>();
@@ -29,9 +36,18 @@ const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 export async function POST(req: Request) {
-  const ip = req.headers.get("x-forwarded-for") ?? "unknown";
+  // x-forwarded-for puede traer una cadena de IPs: la del cliente es la primera.
+  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   if (!checkRate(ip)) {
     return NextResponse.json({ error: "rate_limit" }, { status: 429 });
+  }
+
+  // BotID (Vercel): detección invisible de automatización. Le devolvemos éxito
+  // al bot para no darle señal de que lo cazamos.
+  const { isBot } = await checkBotId();
+  if (isBot) {
+    console.warn("[newsletter] descartado por BotID");
+    return NextResponse.json({ ok: true });
   }
 
   let body: unknown;
@@ -46,12 +62,23 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "validation_failed" }, { status: 400 });
   }
 
-  // Honeypot
-  if (parsed.data.website && parsed.data.website.length > 0) {
-    return NextResponse.json({ ok: true });
-  }
-
   const { name, email, perfil } = parsed.data;
+
+  const verdict = await assessSubscriber({
+    name,
+    email,
+    elapsedMs: parsed.data.elapsed ?? null,
+    honeypots: [parsed.data.website ?? "", parsed.data.organizacion_url ?? ""]
+  });
+
+  if (!verdict.ok) {
+    console.warn(`[newsletter] rechazado (${verdict.reason}): ${verdict.detail}`);
+    // Al bot le simulamos éxito; el email inválido sí se le informa a la
+    // persona, que puede corregirlo y reintentar.
+    return verdict.reason === "bot"
+      ? NextResponse.json({ ok: true })
+      : NextResponse.json({ error: "undeliverable_email" }, { status: 400 });
+  }
 
   // Store in Supabase
   if (SUPABASE_URL && SUPABASE_SERVICE_KEY) {

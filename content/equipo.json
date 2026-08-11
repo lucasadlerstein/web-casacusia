@@ -6,7 +6,7 @@
     "rol": "Dirección General",
     "equipo": "Motor CA",
     "esCore": true,
-    "foto": "/images/equipo/Lucas-Adlerstein.jpg",
+    "foto": "/images/voluntarios/lucas-adlerstein.jpg",
     "bioCorta": "Perdió la audición a los 15 años. Creador de contenido y referente en pérdida auditiva. Lleva adelante Casacusia para transformar cómo se vive la hipoacusia.",
     "linkedin": "https://www.linkedin.com/in/lucasadlerstein",
     "web": "https://hipoacusico.com.ar/quien-soy",
@@ -16,10 +16,10 @@
     "slug": "valen-galeano",
     "nombre": "Valen",
     "apellido": "Galeano",
-    "rol": "Comunicación",
+    "rol": "Coordinación de Comunicación",
     "equipo": "Motor CA",
     "esCore": true,
-    "foto": "/images/equipo/Valen.jpg",
+    "foto": "/images/voluntarios/valen-galeano.jpg",
     "bioCorta": "Coordina la comunicación de Casacusia. Especialista en medios digitales, relaciones públicas y estrategia de contenidos.",
     "linkedin": "https://www.linkedin.com/in/valentina-galeano-2a716a19b/",
     "orden": 2
@@ -31,7 +31,7 @@
     "rol": "Dirección de Programas y Voluntariado",
     "equipo": "Motor CA",
     "esCore": true,
-    "foto": "/images/equipo/Melu.jpg",
+    "foto": "/images/voluntarios/melu-klecki.jpg",
     "bioCorta": "Cuida que los equipos y los proyectos funcionen con claridad. Coordina los programas y la red de voluntarios.",
     "linkedin": "https://www.linkedin.com/in/melanieklecki/",
     "orden": 3
@@ -43,7 +43,7 @@
     "rol": "Alianzas y FR",
     "equipo": "Alianzas y FR",
     "esCore": true,
-    "foto": "/images/equipo/Nico.jpg",
+    "foto": "/images/voluntarios/nico-bukchstein.jpg",
     "bioCorta": "Ingeniero Industrial (ITBA). Lidera la estrategia de alianzas y fundraising, desarrollando relaciones con donantes y aliados estratégicos.",
     "linkedin": "https://www.linkedin.com/in/nicolasbukschtein/",
     "orden": 4
@@ -65,7 +65,7 @@
     "rol": "Alianzas y FR",
     "equipo": "Alianzas y FR",
     "esCore": true,
-    "foto": "/images/equipo/Vero.jpg",
+    "foto": "/images/voluntarios/vero-scheinkman.jpg",
     "bioCorta": "Licenciada en Comunicación (UBA) y Coach Ontológica. Más de 20 años en marketing regional para grandes marcas.",
     "linkedin": "https://www.linkedin.com/in/veronicascheinkman/",
     "orden": 6
@@ -77,7 +77,7 @@
     "rol": "Acompañamiento Estratégico",
     "equipo": "Motor CA",
     "esCore": true,
-    "foto": "/images/equipo/Rama.jpg",
+    "foto": "/images/voluntarios/rama-strauss.jpg",
     "bioCorta": "Parte del núcleo que sostiene Casacusia desde su inicio. Aporta visión estratégica y experiencia en proyectos sociales.",
     "linkedin": "https://www.linkedin.com/in/ramirostrauss/",
     "orden": 7
@@ -86,10 +86,10 @@
     "slug": "shari-merin",
     "nombre": "Shari",
     "apellido": "Merin",
-    "rol": "Líder de proyecto",
+    "rol": "Coordinación y facilitación de Encuentros",
     "equipo": "Encuentros presenciales",
     "esCore": true,
-    "foto": "/images/equipo/Shari.jpg",
+    "foto": "/images/voluntarios/shari-merin.jpg",
     "bioCorta": "Lidera los encuentros presenciales. Aporta su expertise en dinámicas grupales y contención comunitaria.",
     "linkedin": "https://www.linkedin.com/in/sharon-merin/",
     "orden": 8
@@ -98,73 +98,61 @@
     "slug": "toto-blumenkratz",
     "nombre": "Toto",
     "apellido": "Blumenkratz",
-    "rol": "Líder operativo",
+    "rol": "Coordinación y facilitación de Encuentros",
     "equipo": "Encuentros presenciales",
     "esCore": true,
     "foto": "/images/equipo/placeholder.svg",
     "orden": 9
   },
   {
-    "slug": "manu-torres",
-    "nombre": "Manu",
-    "apellido": "Torres",
-    "rol": "Desarrollo y tecnología",
-    "equipo": "Tecnología",
-    "esCore": true,
-    "foto": "/images/equipo/Manuel.jpg",
-    "bioCorta": "Sostiene la operación del día a día. Especializado en desarrollo tecnológico, diseño de producto y experiencia de usuario.",
-    "linkedin": "https://www.linkedin.com/in/manueltorres02/",
-    "orden": 10
-  },
-  {
     "slug": "meli-baran",
     "nombre": "Meli",
     "apellido": "Baran",
-    "rol": "Desarrolladora",
+    "rol": "Desarrollo IT y Facilitación de Encuentros",
     "equipo": "Tecnología",
     "esCore": false,
-    "foto": "/images/equipo/placeholder.svg",
-    "orden": 11
+    "foto": "/images/voluntarios/meli-baran.jpg",
+    "orden": 10
   },
   {
     "slug": "julieta-rivera-lopez",
     "nombre": "Julieta",
     "apellido": "Rivera Lopez",
-    "rol": "Productora del podcast",
+    "rol": "Producción del Podcast SPNM",
     "equipo": "Podcast SPNM",
     "esCore": false,
-    "foto": "/images/equipo/placeholder.svg",
-    "orden": 12
+    "foto": "/images/voluntarios/julieta-rivera-lopez.jpg",
+    "orden": 11
   },
   {
-    "slug": "cyn-bonesse",
-    "nombre": "Cyn",
+    "slug": "cynthia-bonesse",
+    "nombre": "Cynthia",
     "apellido": "Bonesse",
-    "rol": "Edición de video",
+    "rol": "Edición de video Podcast SPNM",
     "equipo": "Podcast SPNM",
     "esCore": false,
-    "foto": "/images/equipo/placeholder.svg",
-    "orden": 13
+    "foto": "/images/voluntarios/cynthia-bonesse.jpg",
+    "orden": 12
   },
   {
     "slug": "fede-romanut",
     "nombre": "Fede",
     "apellido": "Romanut",
-    "rol": "Edición de audio",
+    "rol": "Edición de audio Podcast SPNM",
     "equipo": "Podcast SPNM",
     "esCore": false,
-    "foto": "/images/equipo/placeholder.svg",
-    "orden": 14
+    "foto": "/images/voluntarios/fede-romanut.jpg",
+    "orden": 13
   },
   {
     "slug": "lucas-garcia",
     "nombre": "Lucas",
     "apellido": "Garcia",
-    "rol": "Creador de contenido",
+    "rol": "Creación de contenido",
     "equipo": "Redes CA",
     "esCore": false,
-    "foto": "/images/equipo/placeholder.svg",
-    "orden": 15
+    "foto": "/images/voluntarios/lucas-garcia.jpg",
+    "orden": 14
   },
   {
     "slug": "luciana-perez",
@@ -173,26 +161,149 @@
     "rol": "Diseño gráfico",
     "equipo": "Redes CA",
     "esCore": false,
-    "foto": "/images/equipo/placeholder.svg",
+    "foto": "/images/voluntarios/luciana-perez.jpg",
+    "orden": 15
+  },
+  {
+    "slug": "anahi-gomez-martinez",
+    "nombre": "Anahí",
+    "apellido": "Gómez Martínez",
+    "rol": "Contenido de RRSS",
+    "equipo": "Redes CA",
+    "esCore": false,
+    "foto": "/images/voluntarios/anahi-gomez-martinez.jpg",
     "orden": 16
   },
   {
-    "slug": "anahi",
-    "nombre": "Anahí",
-    "rol": "Contenido de RRSS",
-    "equipo": "Redes CA",
+    "slug": "freddy-lujan",
+    "nombre": "Freddy",
+    "apellido": "Lujan",
+    "rol": "Comunicación y Marketing",
+    "equipo": "Comunicación",
     "esCore": false,
     "foto": "/images/equipo/placeholder.svg",
     "orden": 17
   },
   {
+    "slug": "ana-pettinari",
+    "nombre": "Ana Caren",
+    "apellido": "Pettinari",
+    "rol": "Comunicación",
+    "equipo": "Comunicación",
+    "esCore": false,
+    "foto": "/images/voluntarios/ana-pettinari.jpg",
+    "orden": 18
+  },
+  {
+    "slug": "flor-tobal",
+    "nombre": "Flor",
+    "apellido": "Tobal",
+    "rol": "Facilitación de Encuentros",
+    "equipo": "Encuentros presenciales",
+    "esCore": false,
+    "foto": "/images/voluntarios/flor-tobal.jpg",
+    "orden": 19
+  },
+  {
+    "slug": "lucia-petrikovich",
+    "nombre": "Lucia",
+    "apellido": "Petrikovich",
+    "rol": "Facilitación de Encuentros",
+    "equipo": "Encuentros presenciales",
+    "esCore": false,
+    "foto": "/images/voluntarios/lucia-petrikovich.jpg",
+    "orden": 20
+  },
+  {
     "slug": "pablo-lewcowicz",
     "nombre": "Pablo",
     "apellido": "Lewcowicz",
-    "rol": "Facilitador",
-    "equipo": "Red de Familiares",
+    "rol": "Eventos",
+    "equipo": "Eventos",
     "esCore": false,
     "foto": "/images/equipo/placeholder.svg",
-    "orden": 18
+    "orden": 21
+  },
+  {
+    "slug": "chichi-dancheff",
+    "nombre": "Chichi",
+    "apellido": "Dancheff",
+    "rol": "Facilitación de Encuentros",
+    "equipo": "Encuentros presenciales",
+    "esCore": false,
+    "foto": "/images/equipo/placeholder.svg",
+    "orden": 22
+  },
+  {
+    "slug": "paula-raccone",
+    "nombre": "Paula",
+    "apellido": "Raccone",
+    "rol": "Facilitación de Encuentros",
+    "equipo": "Encuentros presenciales",
+    "esCore": false,
+    "foto": "/images/voluntarios/paula-raccone.jpg",
+    "orden": 23
+  },
+  {
+    "slug": "teresita-bestani",
+    "nombre": "Teresita",
+    "apellido": "Bestani",
+    "rol": "Facilitación de Encuentros",
+    "equipo": "Encuentros presenciales",
+    "esCore": false,
+    "foto": "/images/voluntarios/teresita-bestani.jpg",
+    "orden": 24
+  },
+  {
+    "slug": "dafna-kaplan",
+    "nombre": "Dafna",
+    "apellido": "Kaplan",
+    "rol": "Facilitación de Encuentros",
+    "equipo": "Encuentros presenciales",
+    "esCore": false,
+    "foto": "/images/equipo/placeholder.svg",
+    "orden": 25
+  },
+  {
+    "slug": "manu-torres",
+    "nombre": "Manu",
+    "apellido": "Torres",
+    "rol": "Tecnología y Operaciones",
+    "equipo": "Tecnología",
+    "esCore": true,
+    "foto": "/images/voluntarios/manu-torres.jpg",
+    "bioCorta": "Sostiene la operación del día a día. Especializado en desarrollo tecnológico, diseño de producto y experiencia de usuario.",
+    "linkedin": "https://www.linkedin.com/in/manueltorres02/",
+    "orden": 26
+  },
+  {
+    "slug": "fernanda-neder",
+    "nombre": "Fernanda",
+    "apellido": "Neder",
+    "rol": "Coordinación de Eventos",
+    "equipo": "Eventos",
+    "esCore": false,
+    "foto": "/images/equipo/placeholder.svg",
+    "orden": 27
+  },
+  {
+    "slug": "bruno-ibanez",
+    "nombre": "Bruno",
+    "apellido": "Ibañez",
+    "rol": "Eventos",
+    "equipo": "Eventos",
+    "esCore": false,
+    "foto": "/images/equipo/placeholder.svg",
+    "orden": 28
+  },
+  {
+    "slug": "cami-neiman",
+    "nombre": "Cami",
+    "apellido": "Neiman",
+    "rol": "Eventos",
+    "equipo": "Eventos",
+    "esCore": false,
+    "foto": "/images/equipo/placeholder.svg",
+    "orden": 29
   }
 ]

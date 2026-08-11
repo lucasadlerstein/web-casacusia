@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -23,13 +23,22 @@ const schema = z.object({
   email:   z.string().email(),
   perfil:  z.enum(PERFILES, { errorMap: () => ({ message: "Elegí una opción" }) }),
   consent: z.literal(true, { errorMap: () => ({ message: "Requerido" }) }),
-  website: z.string().max(0).optional()
+  // Honeypots: ver el bloque de trampas más abajo. No los validamos acá a
+  // propósito — que lleguen al servidor, que es quien los evalúa y loguea.
+  website: z.string().optional(),
+  organizacion_url: z.string().optional()
 });
 type FormValues = z.infer<typeof schema>;
 
 export function Newsletter() {
   const t = useTranslations("home.newsletter");
-  const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
+  const [status, setStatus] = useState<"idle" | "ok" | "err" | "email">("idle");
+
+  /** Momento en que el form quedó montado: un envío instantáneo es un bot. */
+  const mountedAt = useRef<number | null>(null);
+  useEffect(() => {
+    mountedAt.current = Date.now();
+  }, []);
 
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormValues>();
 
@@ -39,9 +48,16 @@ export function Newsletter() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+        body: JSON.stringify({
+          ...data,
+          elapsed: mountedAt.current !== null ? Date.now() - mountedAt.current : undefined
+        })
       });
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        setStatus(body?.error === "undeliverable_email" ? "email" : "err");
+        return;
+      }
       setStatus("ok");
       reset();
     } catch {
@@ -73,7 +89,7 @@ export function Newsletter() {
         </h2>
         <p className="mt-3 text-white/80">{t("subtitle")}</p>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="mt-8 grid gap-4 sm:grid-cols-2" noValidate>
+        <form onSubmit={handleSubmit(onSubmit)} className="relative mt-8 grid gap-4 sm:grid-cols-2" noValidate>
           <label className="block">
             <span className="mb-1.5 block text-sm font-medium text-white/90">{t("name")}</span>
             <input
@@ -111,10 +127,18 @@ export function Newsletter() {
             </select>
           </label>
 
-          {/* Honeypot */}
-          <label className="hidden" aria-hidden>
+          {/* Honeypots. Dos trampas complementarias: una con display:none y
+              otra fuera de pantalla pero renderizada, para cubrir bots que
+              descarten cada caso. Ambas fuera del foco y de accesibilidad. */}
+          <label className="hidden" aria-hidden="true">
             <input type="text" tabIndex={-1} autoComplete="off" {...register("website")} />
           </label>
+          <div className="absolute left-[-9999px] top-0 h-0 w-0 overflow-hidden" aria-hidden="true">
+            <label>
+              <span>Sitio de tu organización</span>
+              <input type="text" tabIndex={-1} autoComplete="off" {...register("organizacion_url")} />
+            </label>
+          </div>
 
           <label className="sm:col-span-2 flex items-start gap-2.5 text-sm text-white/80">
             <input type="checkbox" required {...register("consent")} className="mt-0.5 accent-white" />
@@ -132,6 +156,9 @@ export function Newsletter() {
             </Button>
             {status === "ok" && (
               <p role="status" className="text-sm font-medium text-white">{t("success")}</p>
+            )}
+            {status === "email" && (
+              <p role="alert" className="text-sm text-white/80">{t("errorEmail")}</p>
             )}
             {status === "err" && (
               <p role="alert" className="text-sm text-white/80">{t("error")}</p>

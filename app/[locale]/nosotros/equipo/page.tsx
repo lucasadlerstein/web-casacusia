@@ -172,6 +172,13 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
       {/* Gradiente difuminado abajo — más opaco para legibilidad */}
       <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-ink via-ink/80 to-transparent pointer-events-none" />
 
+      {/* Badge de LinkedIn — anclado a la tarjeta, no al bloque de texto */}
+      {persona.linkedin && (
+        <span className="absolute top-3 right-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm text-white">
+          <Linkedin size={12} aria-hidden />
+        </span>
+      )}
+
       {/* Texto */}
       <div className="absolute inset-x-0 bottom-0 p-4 text-white">
         <p className="font-display font-bold text-base md:text-lg leading-tight">
@@ -180,11 +187,6 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
         <p className="text-xs md:text-sm text-white/80 leading-snug mt-0.5">
           {persona.rol}
         </p>
-        {persona.linkedin && (
-          <span className="absolute top-3 right-3 inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm text-white">
-            <Linkedin size={12} aria-hidden />
-          </span>
-        )}
       </div>
     </article>
   );

@@ -1,6 +1,9 @@
 "use server";
 
+import { checkBotId } from "botid/server";
 import { z } from "zod";
+
+import { assessSubscriber } from "@/lib/antispam";
 
 const SENDER_API = "https://api.sender.net/v2";
 const SENDER_TOKEN = process.env.SENDER_API_TOKEN;
@@ -11,9 +14,19 @@ const schema = z.object({
   email: z.string().email("Ingresá un email válido")
 });
 
-type Result = { ok: true } | { ok: false; error: string };
+export type Result = { ok: true } | { ok: false; error: string };
+
+const str = (v: FormDataEntryValue | null) => (typeof v === "string" ? v : "");
 
 export async function suscribirNewsletter(_prev: Result | null, formData: FormData): Promise<Result> {
+  // BotID (Vercel): detección invisible de automatización. Le simulamos éxito
+  // al bot para no darle señal de que lo cazamos.
+  const { isBot } = await checkBotId();
+  if (isBot) {
+    console.warn("[newsletter] descartado por BotID");
+    return { ok: true };
+  }
+
   const parsed = schema.safeParse({
     nombre: formData.get("nombre"),
     email: formData.get("email")
@@ -30,11 +43,18 @@ export async function suscribirNewsletter(_prev: Result | null, formData: FormDa
 
   const { nombre, email } = parsed.data;
 
-  // Honeypot: si viene el campo "website" lleno, es bot
-  const honeypot = formData.get("website");
-  if (honeypot) {
-    // Simulamos éxito para no alertar al bot
-    return { ok: true };
+  const elapsed = Number(str(formData.get("elapsed")));
+  const verdict = await assessSubscriber({
+    name: nombre,
+    email,
+    elapsedMs: Number.isFinite(elapsed) && elapsed > 0 ? elapsed : null,
+    honeypots: [str(formData.get("website")), str(formData.get("organizacion_url"))]
+  });
+
+  if (!verdict.ok) {
+    console.warn(`[newsletter] rechazado (${verdict.reason}): ${verdict.detail}`);
+    if (verdict.reason === "bot") return { ok: true };
+    return { ok: false, error: "No pudimos verificar ese email. Revisá que esté bien escrito." };
   }
 
   try {
