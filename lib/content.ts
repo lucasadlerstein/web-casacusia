@@ -25,6 +25,7 @@ export const comisiones = [
   "fundraising",
   "tecnologia",
   "diseno",
+  "eventos",
   "otro"
 ] as const;
 export type Comision = (typeof comisiones)[number];

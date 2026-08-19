@@ -60,7 +60,7 @@ export default async function VoluntariadoPage({ params }: { params: Promise<{ l
             Sumate como voluntario.
           </h1>
           <p className="mt-5 text-lg text-white/80 leading-relaxed">
-            {voluntarios.length}+ personas ya sostienen Casacusia desde {areasVoluntariado.length} áreas distintas: comunicación, encuentros, podcast, contenido, diseño, fundraising y tecnología. Sumate al equipo.
+            {voluntarios.length}+ personas ya sostienen Casacusia desde {areasVoluntariado.length} áreas distintas: comunicación, encuentros, podcast, contenido, diseño, fundraising, tecnología y eventos. Sumate al equipo.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
