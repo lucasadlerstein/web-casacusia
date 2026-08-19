@@ -54,13 +54,31 @@
     "orden": 6
   },
   {
+    "slug": "freddy-lujan",
+    "nombre": "Freddy",
+    "apellido": "Lujan",
+    "foto": "/images/voluntarios/freddy-lujan.jpg",
+    "comision": "comunicacion",
+    "rolEnComision": "Comunicación y Marketing",
+    "orden": 7
+  },
+  {
     "slug": "shari-merin",
     "nombre": "Shari",
     "apellido": "Merin",
     "foto": "/images/voluntarios/shari-merin.jpg",
     "comision": "encuentros",
     "rolEnComision": "Coordinación y facilitación de Encuentros",
-    "orden": 7
+    "orden": 8
+  },
+  {
+    "slug": "toto-blumenkrantz",
+    "nombre": "Toto",
+    "apellido": "Blumenkrantz",
+    "foto": "/images/voluntarios/toto-blumenkrantz.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Coordinación y facilitación de Encuentros",
+    "orden": 9
   },
   {
     "slug": "flor-tobal",
@@ -69,7 +87,7 @@
     "foto": "/images/voluntarios/flor-tobal.jpg",
     "comision": "encuentros",
     "rolEnComision": "Facilitación de Encuentros",
-    "orden": 8
+    "orden": 10
   },
   {
     "slug": "lucia-petrikovich",
@@ -78,7 +96,7 @@
     "foto": "/images/voluntarios/lucia-petrikovich.jpg",
     "comision": "encuentros",
     "rolEnComision": "Facilitación de Encuentros",
-    "orden": 9
+    "orden": 11
   },
   {
     "slug": "paula-raccone",
@@ -87,7 +105,7 @@
     "foto": "/images/voluntarios/paula-raccone.jpg",
     "comision": "encuentros",
     "rolEnComision": "Facilitación de Encuentros",
-    "orden": 10
+    "orden": 12
   },
   {
     "slug": "teresita-bestani",
@@ -96,7 +114,25 @@
     "foto": "/images/voluntarios/teresita-bestani.jpg",
     "comision": "encuentros",
     "rolEnComision": "Facilitación de Encuentros",
-    "orden": 11
+    "orden": 13
+  },
+  {
+    "slug": "chichi-dancheff",
+    "nombre": "Chichi",
+    "apellido": "Dancheff",
+    "foto": "/images/voluntarios/chichi-dancheff.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Facilitación de Encuentros",
+    "orden": 14
+  },
+  {
+    "slug": "dafna-kaplan",
+    "nombre": "Dafna",
+    "apellido": "Kaplan",
+    "foto": "/images/voluntarios/dafna-kaplan.jpg",
+    "comision": "encuentros",
+    "rolEnComision": "Facilitación de Encuentros",
+    "orden": 15
   },
   {
     "slug": "julieta-rivera-lopez",
@@ -105,16 +141,16 @@
     "foto": "/images/voluntarios/julieta-rivera-lopez.jpg",
     "comision": "podcast",
     "rolEnComision": "Producción del Podcast SPNM",
-    "orden": 12
+    "orden": 16
   },
   {
-    "slug": "cynthia-bonesse",
-    "nombre": "Cynthia",
-    "apellido": "Bonesse",
-    "foto": "/images/voluntarios/cynthia-bonesse.jpg",
+    "slug": "cyn-bonsegundo",
+    "nombre": "Cyn",
+    "apellido": "Bonsegundo",
+    "foto": "/images/voluntarios/cyn-bonsegundo.jpg",
     "comision": "podcast",
     "rolEnComision": "Edición de video Podcast SPNM",
-    "orden": 13
+    "orden": 17
   },
   {
     "slug": "fede-romanut",
@@ -123,7 +159,7 @@
     "foto": "/images/voluntarios/fede-romanut.jpg",
     "comision": "podcast",
     "rolEnComision": "Edición de audio Podcast SPNM",
-    "orden": 14
+    "orden": 18
   },
   {
     "slug": "lucas-garcia",
@@ -132,7 +168,7 @@
     "foto": "/images/voluntarios/lucas-garcia.jpg",
     "comision": "contenido",
     "rolEnComision": "Creación de contenido",
-    "orden": 15
+    "orden": 19
   },
   {
     "slug": "luciana-perez",
@@ -141,16 +177,25 @@
     "foto": "/images/voluntarios/luciana-perez.jpg",
     "comision": "diseno",
     "rolEnComision": "Diseño gráfico",
-    "orden": 16
+    "orden": 20
   },
   {
-    "slug": "nico-bukchstein",
+    "slug": "nico-bukschtein",
     "nombre": "Nico",
-    "apellido": "Bukchstein",
-    "foto": "/images/voluntarios/nico-bukchstein.jpg",
+    "apellido": "Bukschtein",
+    "foto": "/images/voluntarios/nico-bukschtein.jpg",
     "comision": "fundraising",
     "rolEnComision": "Alianzas y FR",
-    "orden": 17
+    "orden": 21
+  },
+  {
+    "slug": "judi-kaufmann",
+    "nombre": "Judi",
+    "apellido": "Kaufmann",
+    "foto": "/images/voluntarios/judi-kaufmann.jpg",
+    "comision": "fundraising",
+    "rolEnComision": "Alianzas y FR",
+    "orden": 22
   },
   {
     "slug": "vero-scheinkman",
@@ -159,7 +204,7 @@
     "foto": "/images/voluntarios/vero-scheinkman.jpg",
     "comision": "fundraising",
     "rolEnComision": "Alianzas y FR",
-    "orden": 18
+    "orden": 23
   },
   {
     "slug": "manu-torres",
@@ -168,7 +213,7 @@
     "foto": "/images/voluntarios/manu-torres.jpg",
     "comision": "tecnologia",
     "rolEnComision": "Tecnología y Operaciones",
-    "orden": 19
+    "orden": 24
   },
   {
     "slug": "meli-baran",
@@ -177,6 +222,33 @@
     "foto": "/images/voluntarios/meli-baran.jpg",
     "comision": "tecnologia",
     "rolEnComision": "Desarrollo IT y Facilitación de Encuentros",
-    "orden": 20
+    "orden": 25
+  },
+  {
+    "slug": "fer-neder",
+    "nombre": "Fer",
+    "apellido": "Neder",
+    "foto": "/images/voluntarios/fer-neder.jpg",
+    "comision": "eventos",
+    "rolEnComision": "Coordinación de Eventos",
+    "orden": 26
+  },
+  {
+    "slug": "pablo-lewkowicz",
+    "nombre": "Pablo",
+    "apellido": "Lewkowicz",
+    "foto": "/images/voluntarios/pablo-lewkowicz.jpg",
+    "comision": "eventos",
+    "rolEnComision": "Eventos",
+    "orden": 27
+  },
+  {
+    "slug": "cami-neiman",
+    "nombre": "Cami",
+    "apellido": "Neiman",
+    "foto": "/images/voluntarios/cami-neiman.jpg",
+    "comision": "eventos",
+    "rolEnComision": "Eventos",
+    "orden": 28
   }
 ]
