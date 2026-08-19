@@ -306,15 +306,5 @@
     "foto": "/images/voluntarios/cami-neiman.jpg",
     "linkedin": "https://www.linkedin.com/in/camilaneiman/",
     "orden": 28
-  },
-  {
-    "slug": "bruno-ibanez",
-    "nombre": "Bruno",
-    "apellido": "Ibañez",
-    "rol": "Eventos",
-    "equipo": "Eventos",
-    "esCore": false,
-    "foto": "/images/equipo/placeholder.svg",
-    "orden": 29
   }
 ]
