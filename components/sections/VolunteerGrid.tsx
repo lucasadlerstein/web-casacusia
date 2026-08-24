@@ -62,9 +62,7 @@ export function VolunteerGrid({ voluntarios, comisiones }: Props) {
                     <p className="font-display font-bold text-base md:text-lg leading-tight">
                       {nombreCompleto}
                     </p>
-                    <p className="text-xs md:text-sm text-white/80 leading-snug mt-0.5">
-                      {v.rolEnComision ?? t(`commission.${v.comision}`)}
-                    </p>
+                    {/* Rol oculto por ahora — el dato sigue en content/voluntarios.json */}
                   </div>
                 </article>
               </li>
