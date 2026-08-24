@@ -28,7 +28,7 @@
   },
   {
     "slug": "valen-galeano",
-    "nombre": "Valen",
+    "nombre": "Valentina",
     "apellido": "Galeano",
     "foto": "/images/voluntarios/valen-galeano.jpg",
     "comision": "comunicacion",
@@ -37,7 +37,7 @@
   },
   {
     "slug": "ana-pettinari",
-    "nombre": "Ana Caren",
+    "nombre": "Ana",
     "apellido": "Pettinari",
     "foto": "/images/voluntarios/ana-pettinari.jpg",
     "comision": "comunicacion",
@@ -241,14 +241,5 @@
     "comision": "eventos",
     "rolEnComision": "Eventos",
     "orden": 27
-  },
-  {
-    "slug": "cami-neiman",
-    "nombre": "Cami",
-    "apellido": "Neiman",
-    "foto": "/images/voluntarios/cami-neiman.jpg",
-    "comision": "eventos",
-    "rolEnComision": "Eventos",
-    "orden": 28
   }
 ]
