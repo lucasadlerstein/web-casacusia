@@ -38,7 +38,7 @@
   },
   {
     "slug": "valen-galeano",
-    "nombre": "Valen",
+    "nombre": "Valentina",
     "apellido": "Galeano",
     "rol": "Coordinación de Comunicación",
     "equipo": "Motor CA",
@@ -50,7 +50,7 @@
   },
   {
     "slug": "ana-pettinari",
-    "nombre": "Ana Caren",
+    "nombre": "Ana",
     "apellido": "Pettinari",
     "rol": "Comunicación",
     "equipo": "Comunicación",
@@ -295,16 +295,5 @@
     "foto": "/images/voluntarios/pablo-lewkowicz.jpg",
     "linkedin": "https://www.linkedin.com/in/pablo-lewkowicz/",
     "orden": 27
-  },
-  {
-    "slug": "cami-neiman",
-    "nombre": "Cami",
-    "apellido": "Neiman",
-    "rol": "Eventos",
-    "equipo": "Eventos",
-    "esCore": false,
-    "foto": "/images/voluntarios/cami-neiman.jpg",
-    "linkedin": "https://www.linkedin.com/in/camilaneiman/",
-    "orden": 28
   }
 ]
