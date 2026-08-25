@@ -184,9 +184,7 @@ function PersonaCardComp({ persona, labels }: { persona: PersonaCard; labels: Ca
         <p className="font-display font-bold text-base md:text-lg leading-tight">
           {nombreCompleto}
         </p>
-        <p className="text-xs md:text-sm text-white/80 leading-snug mt-0.5">
-          {persona.rol}
-        </p>
+        {/* Rol oculto por ahora — el dato sigue en content/equipo.json */}
       </div>
     </article>
   );
