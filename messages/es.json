@@ -900,5 +900,23 @@
         "podcast": "Notas que nacen de conversaciones reales en el podcast Sordo pero no mudo."
       }
     }
+  },
+  "expoModal": {
+    "eyebrow": "Expo Hipoacusia 2026",
+    "title": "Registrate gratis a la Expo Hipoacusia 2026",
+    "fecha": "Sábado 17 de octubre de 2026 · 11 a 19 h",
+    "lugar": "Universidad Torcuato Di Tella, CABA",
+    "body": "Vení a aprender sobre pérdida auditiva, descubrir soluciones y conocer a otras personas con hipoacusia.",
+    "modalidad": "Podés anotarte para venir presencial o verlo online.",
+    "cta": "Registrate acá"
+  },
+  "expoBanner": {
+    "mensajes": [
+      "Clic acá para participar de la Expo Hipoacusia 2026 · Gratuito en la Universidad Di Tella, CABA",
+      "Gratuito presencial en CABA o para ver online",
+      "No te pierdas la posibilidad de conocer a cientos de personas con hipoacusia",
+      "Vení a conferencias, talleres y encuentros para vivir mejor",
+      "Vení a conocer a todas las empresas de audífonos e implantes juntas, en un mismo lugar"
+    ]
   }
 }

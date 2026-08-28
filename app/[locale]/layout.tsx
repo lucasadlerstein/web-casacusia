@@ -15,6 +15,8 @@ import { Footer } from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { OutboundTracker } from "@/components/analytics/OutboundTracker";
 import { CountryProvider } from "@/components/country/CountryProvider";
+import { ExpoHipoacusiaModal } from "@/components/sections/ExpoHipoacusiaModal";
+import { ExpoHipoacusiaBanner } from "@/components/sections/ExpoHipoacusiaBanner";
 import { getCountry, hasCountryOverride } from "@/lib/country-server";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -96,11 +98,13 @@ export default async function LocaleLayout({
         </a>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <CountryProvider initialCountry={country} initialOverride={isOverride}>
+            <ExpoHipoacusiaBanner />
             <Header />
             <main id="main" className="flex-1">
               {children}
             </main>
             <Footer />
+            <ExpoHipoacusiaModal />
           </CountryProvider>
         </NextIntlClientProvider>
         <OrganizationSchema />
