@@ -902,5 +902,23 @@
         "podcast": "Notes born from real conversations on the podcast Sordo pero no mudo."
       }
     }
+  },
+  "expoModal": {
+    "eyebrow": "Expo Hipoacusia 2026",
+    "title": "Register for free to Expo Hipoacusia 2026",
+    "fecha": "Saturday, October 17, 2026 · 11 am to 7 pm",
+    "lugar": "Universidad Torcuato Di Tella, Buenos Aires",
+    "body": "Come learn about hearing loss, discover solutions and meet other people with hearing loss.",
+    "modalidad": "You can sign up to attend in person or watch online.",
+    "cta": "Register here"
+  },
+  "expoBanner": {
+    "mensajes": [
+      "Click here to join Expo Hipoacusia 2026 · Free at Universidad Di Tella, Buenos Aires",
+      "Free in person in Buenos Aires or watch online",
+      "Don't miss the chance to meet hundreds of people with hearing loss",
+      "Come to talks, workshops and meetups to live better",
+      "Meet every hearing aid and cochlear implant company together, all in one place"
+    ]
   }
 }

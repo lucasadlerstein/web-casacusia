@@ -14,6 +14,10 @@
   --color-magenta:  #BF35C2;   /* punto magenta (diversidad)               */
   --color-lavanda:  #A86CC1;   /* punto lavanda (escucha activa)           */
 
+  /* ── Acento de campaña: Expo Hipoacusia 2026 ─────────────── */
+  --color-amatista:      #B462CC;
+  --color-amatista-soft: #F6ECF9;
+
   /* ── Versiones accesibles para texto sobre blanco ────────── */
   /* Verde oscuro → 4.6:1 sobre blanco (AA ✓) */
   --color-verde-dark:    #0E8C57;

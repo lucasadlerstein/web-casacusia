@@ -24,6 +24,10 @@ const config: Config = {
         magenta:  "var(--color-magenta)",
         lavanda:  "var(--color-lavanda)",
 
+        /* ── Acento de campaña: Expo Hipoacusia 2026 ── */
+        amatista:        "var(--color-amatista)",
+        "amatista-soft": "var(--color-amatista-soft)",
+
         /* ── Variantes accesibles ── */
         "verde-dark":   "var(--color-verde-dark)",
         "violeta-dark": "var(--color-violeta-dark)",
