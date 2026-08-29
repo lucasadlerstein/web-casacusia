@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Link } from "@/lib/i18n/navigation";
+import { ShuffleOrder } from "@/components/ui/ShuffleOrder";
 import { getAliadosRedAuditiva, type CategoriaAuditiva } from "@/lib/content";
 
 const CATEGORIAS: { key: CategoriaAuditiva; label: string; color: string }[] = [
@@ -11,6 +12,7 @@ const CATEGORIAS: { key: CategoriaAuditiva; label: string; color: string }[] = [
  * Franja compacta con los logos de aliados auditivos (audífonos, implantes).
  * La etiqueta de la categoría va por fuera y arriba del recuadro; los logos, centrados.
  * Muestra "Próximamente" cuando no hay empresas activas en una categoría.
+ * El orden de los logos se mezcla en cada carga: ningún Aliado queda fijo primero.
  * Se reutiliza en programas, podcast, calendario, nosotros, etc.
  */
 export function AliadosAuditivos() {
@@ -34,7 +36,7 @@ export function AliadosAuditivos() {
 
                 {hayEmpresas ? (
                   <div className={`rounded-2xl border-2 ${cat.color} px-6 py-6`}>
-                    <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                    <ShuffleOrder className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
                       {empresas.map((a) => {
                         const img = (
                           <Image
@@ -46,14 +48,12 @@ export function AliadosAuditivos() {
                           />
                         );
                         return (
-                          <div key={a.slug} className="flex items-center justify-center">
+                          <div
+                            key={a.slug}
+                            className="flex items-center justify-center transition-transform duration-300 motion-safe:hover:scale-105"
+                          >
                             {a.web ? (
-                              <a
-                                href={a.web}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block transition-transform hover:scale-105"
-                              >
+                              <a href={a.web} target="_blank" rel="noopener noreferrer" className="block">
                                 {img}
                               </a>
                             ) : (
@@ -62,7 +62,7 @@ export function AliadosAuditivos() {
                           </div>
                         );
                       })}
-                    </div>
+                    </ShuffleOrder>
                   </div>
                 ) : (
                   <div className={`rounded-2xl border-2 ${cat.color} px-6 py-6 flex items-center justify-center`}>
