@@ -349,15 +349,16 @@
     {
         "slug": "pam-argentina",
         "nombre": "PAM Argentina",
-        "logo": "/aliados/pam-min.png",
-        "sector": "Servicios",
-        "tipoAlianza": ["servicio"],
+        "logo": "/aliados/pam-horizontal.png",
+        "sector": "Salud",
+        "tipoAlianza": ["institucional"],
+        "categoriaAuditiva": "implantes",
         "proyectoApoyado": [],
-        "impacto": "Alianza profesional.",
+        "impacto": "Implantes auditivos, conducción ósea y audífonos.",
         "destacado": false,
-        "orden": 27,
-        "desde": "2025-08",
-        "activo": false
+        "orden": 32,
+        "desde": "2026-08",
+        "activo": true
     },
     {
         "slug": "a20-indumentaria",
