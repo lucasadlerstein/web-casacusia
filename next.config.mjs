@@ -25,6 +25,37 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // ── QR de la lona 3×2 de la Expo ──────────────────────────────────
+      // Estas dos URLs ya están impresas en la cartelería: el path es fijo y
+      // el código se adapta a él, nunca al revés. Si cambia el link de
+      // Mercado Pago se edita acá (o la variable de entorno) y se redeploya,
+      // pero no se reimprime nada.
+      // 302 a propósito: es un destino que puede cambiar, no queremos que
+      // los navegadores ni Google lo cacheen como permanente.
+      {
+        source: "/sumate/donar/qr/mensual-libre",
+        destination: process.env.LINK_MP_QR_MENSUAL_LIBRE ?? "https://mpago.la/2egULqJ",
+        statusCode: 302
+      },
+      {
+        source: "/sumate/donar/qr/unico-libre",
+        destination:
+          process.env.LINK_MP_QR_UNICO_LIBRE ?? "https://link.mercadopago.com.ar/casacusia",
+        statusCode: 302
+      },
+      // Mismos QR con prefijo de idioma, por si alguien llega desde /en.
+      {
+        source: "/:locale(es|en)/sumate/donar/qr/mensual-libre",
+        destination: process.env.LINK_MP_QR_MENSUAL_LIBRE ?? "https://mpago.la/2egULqJ",
+        statusCode: 302
+      },
+      {
+        source: "/:locale(es|en)/sumate/donar/qr/unico-libre",
+        destination:
+          process.env.LINK_MP_QR_UNICO_LIBRE ?? "https://link.mercadopago.com.ar/casacusia",
+        statusCode: 302
+      },
+
       { source: "/colaborar", destination: "/sumate", permanent: true },
       { source: "/voluntarios", destination: "/sumate/voluntariado", permanent: true },
       { source: "/blog", destination: "/recursos/blog", permanent: true },
