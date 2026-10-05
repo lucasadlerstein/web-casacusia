@@ -13,7 +13,7 @@ export function Dato({ dato }: { dato: AlaParContent["dato"] }) {
           <p className="font-onest text-[6.5rem] font-extrabold leading-[0.85] tracking-[-0.05em] text-alapar-ambar sm:text-[8rem] md:text-[10rem]">
             {dato.numero}
           </p>
-          <p className="mt-4 max-w-md font-onest text-2xl font-extrabold leading-tight tracking-[-0.02em] sm:text-3xl">
+          <p className="mt-4 max-w-md font-onest text-2xl font-extrabold leading-tight tracking-[-0.02em] sm:text-[1.875rem]">
             {dato.texto}
           </p>
           <p className="mt-5 max-w-md text-lg leading-relaxed text-alapar-crema/80">

@@ -6,7 +6,7 @@ export function Sostener({ sostener }: { sostener: AlaParContent["sostener"] }) 
     <section className="bg-alapar-azul-soft">
       <div className="container grid gap-10 py-20 md:grid-cols-[1fr_1fr] md:gap-16 md:py-28">
         <div>
-          <h2 className="font-onest text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] text-alapar-azul sm:text-4xl md:text-[2.75rem]">
+          <h2 className="font-onest text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] text-alapar-azul sm:text-[2.5rem] md:text-[2.75rem]">
             {sostener.titulo}
           </h2>
           <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-soft">{sostener.texto}</p>

@@ -456,7 +456,7 @@ const AlaParSchema = z.object({
     ctaPar: CtaSchema,
     ilustracionAlt: z.string()
   }),
-  momento: z.object({ titulo: z.string(), parrafos: z.array(z.string()).min(1) }),
+  momento: z.object({ titulo: z.string(), parrafos: z.array(z.string()).min(1), fotoAlt: z.string() }),
   contraste: z.object({
     titulo: z.string(),
     labelSolo: z.string(),
@@ -482,8 +482,8 @@ const AlaParSchema = z.object({
     pasos: z.array(z.object({ titulo: z.string(), texto: z.string() })).min(1)
   }),
   roles: z.object({
-    titulo: z.string(),
-    frase: z.string(),
+    fraseInicio: z.string(),
+    fraseDestacada: z.string(),
     esTitulo: z.string(),
     es: z.array(z.string()).min(1),
     noEsTitulo: z.string(),
@@ -492,7 +492,12 @@ const AlaParSchema = z.object({
   }),
   paraVos: z.object({
     titulo: z.string(),
-    acompanado: z.object({ titulo: z.string(), items: z.array(z.string()).min(1), cta: CtaSchema }),
+    acompanado: z.object({
+      titulo: z.string(),
+      itemDestacado: z.string(),
+      items: z.array(z.string()).min(1),
+      cta: CtaSchema
+    }),
     par: z.object({
       titulo: z.string(),
       items: z.array(z.string()).min(1),
@@ -506,7 +511,8 @@ const AlaParSchema = z.object({
     acompanado: z.object({ titulo: z.string(), texto: z.string(), ctaContacto: CtaSchema, ctaEncuentros: CtaSchema }),
     par: z.object({ titulo: z.string(), texto: z.string(), ctaContacto: CtaSchema }),
     hrefContacto: z.string(),
-    hrefEncuentros: z.string()
+    hrefEncuentros: z.string(),
+    fotos: z.array(z.object({ src: z.string(), alt: z.string() })).min(1)
   }),
   sostener: z.object({
     titulo: z.string(),

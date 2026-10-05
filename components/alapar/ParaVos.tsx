@@ -16,14 +16,18 @@ export function ParaVos({ paraVos }: { paraVos: AlaParContent["paraVos"] }) {
   return (
     <section className="bg-alapar-crema">
       <div className="container py-20 md:py-28">
-        <h2 className="text-center font-onest text-3xl font-extrabold tracking-[-0.02em] text-alapar-cereza sm:text-4xl md:text-[3rem]">
+        <h2 className="text-center font-onest text-3xl font-extrabold tracking-[-0.02em] text-alapar-cereza sm:text-[2.5rem] md:text-[3rem]">
           {paraVos.titulo}
         </h2>
 
         <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-2">
           <article className="flex flex-col rounded-[2rem] bg-alapar-naranja-soft p-8 md:p-10">
-            <h3 className="font-onest text-2xl font-extrabold text-alapar-cereza md:text-3xl">{paraVos.acompanado.titulo}</h3>
+            <h3 className="font-onest text-2xl font-extrabold text-alapar-cereza md:text-[1.875rem]">{paraVos.acompanado.titulo}</h3>
             <ul className="mt-6 space-y-3">
+              <li className="flex gap-3 text-base font-bold leading-relaxed text-alapar-cereza md:text-lg">
+                <Check color="naranja" />
+                <span>{paraVos.acompanado.itemDestacado}</span>
+              </li>
               {paraVos.acompanado.items.map((t) => (
                 <li key={t} className="flex gap-3 text-base leading-relaxed text-ink md:text-lg">
                   <Check color="naranja" />
@@ -37,7 +41,7 @@ export function ParaVos({ paraVos }: { paraVos: AlaParContent["paraVos"] }) {
           </article>
 
           <article className="flex flex-col rounded-[2rem] bg-alapar-rosa-soft p-8 md:p-10">
-            <h3 className="font-onest text-2xl font-extrabold text-alapar-cereza md:text-3xl">{paraVos.par.titulo}</h3>
+            <h3 className="font-onest text-2xl font-extrabold text-alapar-cereza md:text-[1.875rem]">{paraVos.par.titulo}</h3>
             <ul className="mt-6 space-y-3">
               {paraVos.par.items.map((t) => (
                 <li key={t} className="flex gap-3 text-base leading-relaxed text-ink md:text-lg">

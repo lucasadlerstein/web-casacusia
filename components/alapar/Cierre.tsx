@@ -9,7 +9,7 @@ export function Cierre({ cierre, footer }: { cierre: AlaParContent["cierre"]; fo
       <div className="container relative pb-10 pt-20 md:pt-28">
         <div className="mx-auto max-w-4xl text-center">
           <Image src="/alapar/pares.png" alt="" width={877} height={449} className="mx-auto h-auto w-40 md:w-56" />
-          <p className="mt-8 font-onest text-3xl font-extrabold leading-[1.12] tracking-[-0.02em] sm:text-4xl md:text-[3.5rem]">
+          <p className="mt-8 font-onest text-3xl font-extrabold leading-[1.12] tracking-[-0.02em] sm:text-[2.5rem] md:text-[3.5rem]">
             {cierre.frase}
           </p>
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">

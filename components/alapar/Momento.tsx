@@ -1,13 +1,14 @@
+import Image from "next/image";
 import type { AlaParContent } from "@/lib/content";
 import { Anillos } from "./Deco";
 
 export function Momento({ momento }: { momento: AlaParContent["momento"] }) {
   return (
     <section className="relative overflow-hidden bg-alapar-cereza text-alapar-crema">
-      <Anillos className="absolute -right-20 -top-20 z-0 w-56 text-alapar-rosa/35 md:w-80" />
-      <div className="container relative py-20 md:py-28">
-        <div className="max-w-3xl">
-          <h2 className="font-onest text-3xl font-extrabold leading-[1.05] tracking-[-0.02em] sm:text-4xl md:text-[3.25rem]">
+      <Anillos className="absolute -left-24 -bottom-24 z-0 w-64 text-alapar-rosa/30 md:w-96" />
+      <div className="container relative grid items-center gap-10 py-20 md:grid-cols-[1.15fr_0.85fr] md:gap-16 md:py-28">
+        <div>
+          <h2 className="font-onest text-3xl font-extrabold leading-[1.05] tracking-[-0.02em] text-alapar-crema sm:text-[2.5rem] md:text-[3.25rem]">
             {momento.titulo}
           </h2>
           <div className="mt-8 space-y-5 text-lg leading-relaxed text-alapar-crema/85 md:text-[1.35rem] md:leading-[1.6]">
@@ -18,6 +19,19 @@ export function Momento({ momento }: { momento: AlaParContent["momento"] }) {
             ))}
           </div>
         </div>
+
+        <figure className="relative mx-auto w-full max-w-sm md:max-w-none">
+          <div className="absolute -right-3 -top-3 h-full w-full rounded-[2rem] bg-alapar-rosa/70" aria-hidden="true" />
+          <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
+            <Image
+              src="/alapar/foto-abrazo.jpg"
+              alt={momento.fotoAlt}
+              fill
+              sizes="(min-width: 768px) 38vw, 90vw"
+              className="object-cover"
+            />
+          </div>
+        </figure>
       </div>
     </section>
   );

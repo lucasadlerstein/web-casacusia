@@ -6,7 +6,7 @@ export function ComoFunciona({ como }: { como: AlaParContent["comoFunciona"] }) 
     <section className="bg-alapar-crema">
       <div className="container py-20 md:py-28">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-          <h2 className="font-onest text-3xl font-extrabold tracking-[-0.02em] text-alapar-cereza sm:text-4xl md:text-[3rem]">
+          <h2 className="font-onest text-3xl font-extrabold tracking-[-0.02em] text-alapar-cereza sm:text-[2.5rem] md:text-[3rem]">
             {como.titulo}
           </h2>
           <p className="text-lg text-ink-soft md:text-xl">{como.intro}</p>

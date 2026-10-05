@@ -21,11 +21,12 @@
     "parrafos": [
       "Llega el diagnóstico. El tuyo, el de tu hijo, el de tu mamá. Aparecen palabras nuevas: audiometría, audífono, implante. Y una pregunta que nadie responde del todo: ¿y ahora cómo sigo?",
       "Muchos de nosotros pasamos por ahí. Sabemos cuánto alivia encontrar a alguien que lo entienda sin que tengas que explicarlo."
-    ]
+    ],
+    "fotoAlt": "Dos personas de Casacusia se abrazan en un encuentro; una lleva una remera que dice \"Estoy para escucharte\""
   },
   "contraste": {
-    "titulo": "La diferencia entre transitarlo solo y transitarlo A la Par.",
-    "labelSolo": "Solo",
+    "titulo": "La diferencia entre transitarlo {solo} y transitarlo {par}.",
+    "labelSolo": "solo",
     "labelPar": "A la Par",
     "items": [
       {
@@ -38,7 +39,7 @@
       },
       {
         "solo": "Elegís un dispositivo con miedo a equivocarte.",
-        "par": "Conocés cómo le fue a alguien que ya eligió."
+        "par": "Conocés cómo le fue a alguien que ya eligió. Y tenés toda una red a disposición, si hace falta."
       },
       {
         "solo": "Explicás todo el tiempo lo que te pasa.",
@@ -86,8 +87,8 @@
     ]
   },
   "roles": {
-    "titulo": "Qué es y qué no es ser Par",
-    "frase": "Ser Par no es reemplazar a un terapeuta, audiólogo ni a la familia. Es caminar al lado de alguien que ya pasó por ahí.",
+    "fraseInicio": "A la Par no reemplaza a un terapeuta, a un audiólogo ni a la familia.",
+    "fraseDestacada": "Es caminar al lado de alguien que ya pasó por ahí.",
     "esTitulo": "Un Par",
     "es": [
       "Escucha y genera un espacio de confianza.",
@@ -119,7 +120,8 @@
         "Sos mayor de edad.",
         "Querés conversar con alguien que ya pasó por algo parecido."
       ],
-      "cta": "Quiero acompañamiento"
+      "cta": "Quiero acompañamiento",
+      "itemDestacado": "No tenés seguridad de cómo avanzar."
     },
     "par": {
       "titulo": "Querés ser Par",
@@ -152,7 +154,17 @@
       "ctaContacto": "Quiero ser Par"
     },
     "hrefContacto": "/contacto?t=programas",
-    "hrefEncuentros": "/calendario"
+    "hrefEncuentros": "/calendario",
+    "fotos": [
+      {
+        "src": "/alapar/foto-pares.jpg",
+        "alt": "Dos voluntarias de Casacusia sonríen abrazadas en un encuentro al aire libre"
+      },
+      {
+        "src": "/alapar/foto-red.jpg",
+        "alt": "El grupo de voluntarios y voluntarias de Casacusia posa junto en un patio"
+      }
+    ]
   },
   "sostener": {
     "titulo": "Lo que sostiene el programa es la estructura.",

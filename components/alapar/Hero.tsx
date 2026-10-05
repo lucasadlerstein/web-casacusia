@@ -15,7 +15,7 @@ export function Hero({ hero }: { hero: AlaParContent["hero"] }) {
             <span className="h-2 w-2 rounded-full bg-alapar-naranja" aria-hidden="true" />
             {hero.etiqueta}
           </p>
-          <h1 className="alapar-rise mt-6 font-onest text-[2.4rem] font-extrabold leading-[1.02] tracking-[-0.03em] text-alapar-cereza [animation-delay:80ms] sm:text-5xl md:text-[3.9rem] lg:text-[4.4rem]">
+          <h1 className="alapar-rise mt-6 font-onest text-[2.4rem] font-extrabold leading-[1.02] tracking-[-0.03em] text-alapar-cereza [animation-delay:80ms] sm:text-[3rem] md:text-[3.9rem] lg:text-[4.4rem]">
             {hero.titulo}
           </h1>
           <p className="alapar-rise mt-6 max-w-xl text-lg leading-relaxed text-ink-soft [animation-delay:160ms] md:text-xl">

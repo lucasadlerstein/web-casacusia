@@ -6,10 +6,10 @@ export function Roles({ roles }: { roles: AlaParContent["roles"] }) {
     <section className="relative overflow-hidden bg-alapar-azul text-alapar-crema">
       <Estallido className="absolute -right-20 -top-20 z-0 w-48 text-alapar-ambar/70 md:w-72" />
       <div className="container relative py-20 md:py-28">
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-alapar-ambar">{roles.titulo}</p>
-        <blockquote className="mt-4 max-w-4xl font-onest text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] sm:text-4xl md:text-[3.1rem]">
-          {roles.frase}
-        </blockquote>
+        <h2 className="max-w-4xl font-onest text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] text-alapar-crema sm:text-[2.5rem] md:text-[3.1rem]">
+          {roles.fraseInicio}{" "}
+          <span className="text-alapar-ambar">{roles.fraseDestacada}</span>
+        </h2>
 
         <div className="mt-12 grid gap-6 md:mt-16 md:grid-cols-2">
           <div className="rounded-3xl bg-alapar-crema p-7 text-ink md:p-9">
