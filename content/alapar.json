@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "A la Par · Acompañamiento entre personas con hipoacusia",
+    "description": "A la Par es el programa de Casacusia de acompañamiento 1 a 1, gratuito, entre personas que conviven con hipoacusia y sus familias. Quien ya transitó el camino, acompaña a quien lo empieza."
+  },
+  "nav": {
+    "logoAlt": "A la Par, por Casacusia",
+    "ctaAcompanado": "Quiero acompañamiento",
+    "ctaPar": "Quiero ser Par"
+  },
+  "hero": {
+    "etiqueta": "Acompañamiento 1 a 1 · Gratuito",
+    "titulo": "Quien ya transitó el camino de la hipoacusia, acompaña a quien lo empieza.",
+    "bajada": "A la Par es un programa de acompañamiento entre personas que conviven con hipoacusia y sus familias. Formamos Duplas: alguien que conoce el camino desde su propia experiencia y alguien que lo está empezando.",
+    "ctaAcompanado": "Quiero acompañamiento",
+    "ctaPar": "Quiero ser Par",
+    "ilustracionAlt": "Dos figuras, una naranja y una rosa, tomadas de la mano con los brazos en alto"
+  },
+  "momento": {
+    "titulo": "Hay un momento en que el mundo empieza a sonar distinto.",
+    "parrafos": [
+      "Llega el diagnóstico. El tuyo, el de tu hijo, el de tu mamá. Aparecen palabras nuevas: audiometría, audífono, implante. Y una pregunta que nadie responde del todo: ¿y ahora cómo sigo?",
+      "Muchos de nosotros pasamos por ahí. Sabemos cuánto alivia encontrar a alguien que lo entienda sin que tengas que explicarlo."
+    ]
+  },
+  "contraste": {
+    "titulo": "La diferencia entre transitarlo solo y transitarlo A la Par.",
+    "labelSolo": "Solo",
+    "labelPar": "A la Par",
+    "items": [
+      {
+        "solo": "Googleás a las tres de la mañana.",
+        "par": "Le preguntás a alguien que ya googleó eso mismo."
+      },
+      {
+        "solo": "No sabés si lo que sentís es normal.",
+        "par": "Escuchás \"a mí me pasó igual\"."
+      },
+      {
+        "solo": "Elegís un dispositivo con miedo a equivocarte.",
+        "par": "Conocés cómo le fue a alguien que ya eligió."
+      },
+      {
+        "solo": "Explicás todo el tiempo lo que te pasa.",
+        "par": "Conversás con alguien que no necesita explicación."
+      },
+      {
+        "solo": "Te sentís la única persona a la que le pasa.",
+        "par": "Sos parte de una Red."
+      }
+    ],
+    "cierreLinea1": "No somos un programa de hipoacusia.",
+    "cierreLinea2": "Somos un programa de personas."
+  },
+  "dato": {
+    "numero": "62",
+    "texto": "personas con hipoacusia ya se anotaron para acompañar a otras.",
+    "detalle": "A la Par es la estructura que faltaba para que puedan hacerlo con formación, marco y supervisión.",
+    "testimonio": {
+      "placeholder": true,
+      "cita": "La primera vez que hablé con alguien que ya había pasado por el implante dejé de sentir que estaba inventando todo sola. No me dijo qué hacer. Me contó cómo fue. Eso me alcanzó para dormir esa noche.",
+      "autor": "Carolina",
+      "rol": "Acompañada, 41 años, hipoacusia súbita hace un año"
+    }
+  },
+  "comoFunciona": {
+    "titulo": "Cómo funciona",
+    "intro": "Es simple, y por eso lo cuidamos mucho.",
+    "pasos": [
+      {
+        "titulo": "Nos contás tu momento",
+        "texto": "Un primer contacto corto y una charla con el equipo para entender dónde estás parado: hace cuánto, con qué, para quién."
+      },
+      {
+        "titulo": "Hacemos el Matching",
+        "texto": "Lo hacen personas, no un algoritmo. Buscamos un Par que ya haya transitado algo parecido: por etapa, por dispositivo, por edad."
+      },
+      {
+        "titulo": "Se forma la Dupla",
+        "texto": "Un Par y un Acompañado conversan de forma presencial o virtual, al ritmo que acuerden, durante varios meses."
+      },
+      {
+        "titulo": "Acompañamos a quienes acompañan",
+        "texto": "Cada Par tiene formación, espacios de intercambio con la Red de Pares y supervisión. Nadie acompaña solo."
+      }
+    ]
+  },
+  "roles": {
+    "titulo": "Qué es y qué no es ser Par",
+    "frase": "Ser Par no es reemplazar a un terapeuta, audiólogo ni a la familia. Es caminar al lado de alguien que ya pasó por ahí.",
+    "esTitulo": "Un Par",
+    "es": [
+      "Escucha y genera un espacio de confianza.",
+      "Comparte su experiencia cuando puede ser útil, siempre al servicio del Acompañado.",
+      "Acompaña preguntas, dudas y momentos del proceso.",
+      "Ayuda a identificar recursos y alternativas.",
+      "Cuida con confidencialidad y respeto todo lo que el Acompañado le cuenta."
+    ],
+    "noEsTitulo": "Un Par no",
+    "noEs": [
+      "Diagnostica ni indica tratamientos.",
+      "Sugiere cambios de medicación, dispositivos o tratamientos.",
+      "Hace terapia ni toma decisiones por el Acompañado.",
+      "Promete resultados.",
+      "Se convierte en la única fuente de apoyo."
+    ],
+    "acompanado": {
+      "titulo": "Y el Acompañado",
+      "texto": "Es protagonista de su propio proceso. Trae sus preguntas, decide qué quiere compartir, define sus próximos pasos y puede decir si algo no le resulta cómodo o útil. No es paciente ni beneficiario: es una persona conversando con otra."
+    }
+  },
+  "paraVos": {
+    "titulo": "A la Par es para vos si…",
+    "acompanado": {
+      "titulo": "Querés acompañamiento",
+      "items": [
+        "Tenés hipoacusia hace poco, o la pérdida auditiva se te volvió un tema hace poco.",
+        "Sos familiar o cuidás a alguien que convive con hipoacusia.",
+        "Sos mayor de edad.",
+        "Querés conversar con alguien que ya pasó por algo parecido."
+      ],
+      "cta": "Quiero acompañamiento"
+    },
+    "par": {
+      "titulo": "Querés ser Par",
+      "items": [
+        "Convivís con hipoacusia, o cuidás a alguien que la tiene, y ya transitaste parte del camino.",
+        "Sos mayor de edad.",
+        "Querés formarte para acompañar a otra persona desde tu experiencia.",
+        "Podés sostener un vínculo durante varios meses."
+      ],
+      "recibisTitulo": "Qué recibís",
+      "recibis": [
+        "Formación con marco ético y clínico.",
+        "Una Red de Pares con quien intercambiar.",
+        "Supervisión y acompañamiento del equipo."
+      ],
+      "cta": "Quiero ser Par"
+    }
+  },
+  "sumate": {
+    "titulo": "Sumate a A la Par",
+    "acompanado": {
+      "titulo": "Si querés acompañamiento",
+      "texto": "Estamos formando a los primeros Pares. Si nos escribís hoy, te anotamos, te avisamos en cuanto haya una Dupla para vos y, mientras tanto, te esperamos en los encuentros presenciales y virtuales de Casacusia. Ahí ya hay gente que pasó por lo mismo.",
+      "ctaContacto": "Escribinos",
+      "ctaEncuentros": "Ver próximos encuentros"
+    },
+    "par": {
+      "titulo": "Si querés ser Par",
+      "texto": "La inscripción está abierta todo el año. Nos contás tu historia, conversamos, y si el momento es el indicado te sumás a la próxima formación.",
+      "ctaContacto": "Quiero ser Par"
+    },
+    "hrefContacto": "/contacto?t=programas",
+    "hrefEncuentros": "/calendario"
+  },
+  "sostener": {
+    "titulo": "Lo que sostiene el programa es la estructura.",
+    "texto": "Cada Par formado acompaña a varias personas a lo largo del tiempo, y muchos Acompañados se vuelven Pares. Lo que hace posible ese ciclo es la selección, la formación y la supervisión. Eso es lo que buscamos sostener.",
+    "opciones": [
+      {
+        "titulo": "Instituciones y empresas",
+        "texto": "Si querés apoyar la formación de Pares o un ciclo completo de acompañamientos, conversemos.",
+        "cta": "Quiero apoyar A la Par",
+        "href": "/contacto?t=empresa"
+      },
+      {
+        "titulo": "Profesionales",
+        "texto": "Si trabajás en salud auditiva, salud mental o trabajo social y querés sumarte a la formación y supervisión de los Pares, te necesitamos.",
+        "cta": "Quiero sumarme a la formación",
+        "href": "/contacto?t=profesional"
+      }
+    ]
+  },
+  "cierre": {
+    "frase": "Acompañá para que nadie transite solo la hipoacusia.",
+    "ctaAcompanado": "Quiero acompañamiento",
+    "ctaPar": "Quiero ser Par"
+  },
+  "footer": {
+    "programaDe": "Un programa de",
+    "casacusia": "Casacusia",
+    "hrefCasacusia": "/",
+    "email": "somos@casacusia.org",
+    "instagram": "@casacusia.ong",
+    "hrefInstagram": "https://www.instagram.com/casacusia.ong/"
+  }
+}

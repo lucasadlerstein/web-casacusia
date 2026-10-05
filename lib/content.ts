@@ -14,6 +14,7 @@ import rutasData from "@/content/rutas-de-escucha.json";
 import blogData from "@/content/blog.json";
 import temasData from "@/content/temas.json";
 import tiendaData from "@/content/tienda.json";
+import alaparData from "@/content/alapar.json";
 
 export const comisiones = [
   "direccion",
@@ -440,4 +441,90 @@ export function getBlogPostsByTema(tema: Tema): BlogPost[] {
     const haystack = `${p.titulo} ${p.resumen} ${p.contenido}`.toLowerCase();
     return lowerKeywords.some((kw) => haystack.includes(kw));
   });
+}
+
+/* ── Landing A la Par ─────────────────────────────────────────── */
+const CtaSchema = z.string().min(1);
+const AlaParSchema = z.object({
+  meta: z.object({ title: z.string(), description: z.string() }),
+  nav: z.object({ logoAlt: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema }),
+  hero: z.object({
+    etiqueta: z.string(),
+    titulo: z.string(),
+    bajada: z.string(),
+    ctaAcompanado: CtaSchema,
+    ctaPar: CtaSchema,
+    ilustracionAlt: z.string()
+  }),
+  momento: z.object({ titulo: z.string(), parrafos: z.array(z.string()).min(1) }),
+  contraste: z.object({
+    titulo: z.string(),
+    labelSolo: z.string(),
+    labelPar: z.string(),
+    items: z.array(z.object({ solo: z.string(), par: z.string() })).min(1),
+    cierreLinea1: z.string(),
+    cierreLinea2: z.string()
+  }),
+  dato: z.object({
+    numero: z.string(),
+    texto: z.string(),
+    detalle: z.string(),
+    testimonio: z.object({
+      placeholder: z.boolean().optional(),
+      cita: z.string(),
+      autor: z.string(),
+      rol: z.string()
+    })
+  }),
+  comoFunciona: z.object({
+    titulo: z.string(),
+    intro: z.string(),
+    pasos: z.array(z.object({ titulo: z.string(), texto: z.string() })).min(1)
+  }),
+  roles: z.object({
+    titulo: z.string(),
+    frase: z.string(),
+    esTitulo: z.string(),
+    es: z.array(z.string()).min(1),
+    noEsTitulo: z.string(),
+    noEs: z.array(z.string()).min(1),
+    acompanado: z.object({ titulo: z.string(), texto: z.string() })
+  }),
+  paraVos: z.object({
+    titulo: z.string(),
+    acompanado: z.object({ titulo: z.string(), items: z.array(z.string()).min(1), cta: CtaSchema }),
+    par: z.object({
+      titulo: z.string(),
+      items: z.array(z.string()).min(1),
+      recibisTitulo: z.string(),
+      recibis: z.array(z.string()).min(1),
+      cta: CtaSchema
+    })
+  }),
+  sumate: z.object({
+    titulo: z.string(),
+    acompanado: z.object({ titulo: z.string(), texto: z.string(), ctaContacto: CtaSchema, ctaEncuentros: CtaSchema }),
+    par: z.object({ titulo: z.string(), texto: z.string(), ctaContacto: CtaSchema }),
+    hrefContacto: z.string(),
+    hrefEncuentros: z.string()
+  }),
+  sostener: z.object({
+    titulo: z.string(),
+    texto: z.string(),
+    opciones: z.array(z.object({ titulo: z.string(), texto: z.string(), cta: CtaSchema, href: z.string() })).min(1)
+  }),
+  cierre: z.object({ frase: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema }),
+  footer: z.object({
+    programaDe: z.string(),
+    casacusia: z.string(),
+    hrefCasacusia: z.string(),
+    email: z.string().email(),
+    instagram: z.string(),
+    hrefInstagram: z.string().url()
+  })
+});
+export type AlaParContent = z.infer<typeof AlaParSchema>;
+
+export function getAlaPar(): AlaParContent {
+  return AlaParSchema.parse(alaparData);
 }
