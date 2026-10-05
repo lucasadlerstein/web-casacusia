@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { RotatingImage } from "@/components/ui/RotatingImage";
 import type { AlaParContent } from "@/lib/content";
 import { Anillos } from "./Deco";
 
@@ -22,15 +22,14 @@ export function Momento({ momento }: { momento: AlaParContent["momento"] }) {
 
         <figure className="relative mx-auto w-full max-w-sm md:max-w-none">
           <div className="absolute -right-3 -top-3 h-full w-full rounded-[2rem] bg-alapar-rosa/70" aria-hidden="true" />
-          <div className="relative aspect-[3/4] overflow-hidden rounded-[2rem]">
-            <Image
-              src="/alapar/foto-abrazo.jpg"
-              alt={momento.fotoAlt}
-              fill
-              sizes="(min-width: 768px) 38vw, 90vw"
-              className="object-cover"
-            />
-          </div>
+          {/* Crossfade lento entre fotos de encuentros; con prefers-reduced-motion queda la primera */}
+          <RotatingImage
+            images={momento.fotos.map((f) => f.src)}
+            alt={momento.fotos[0]?.alt ?? ""}
+            intervalMs={4500}
+            sizes="(min-width: 768px) 38vw, 90vw"
+            className="aspect-[3/4] overflow-hidden rounded-[2rem]"
+          />
         </figure>
       </div>
     </section>

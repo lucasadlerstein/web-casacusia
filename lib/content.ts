@@ -456,7 +456,11 @@ const AlaParSchema = z.object({
     ctaPar: CtaSchema,
     ilustracionAlt: z.string()
   }),
-  momento: z.object({ titulo: z.string(), parrafos: z.array(z.string()).min(1), fotoAlt: z.string() }),
+  momento: z.object({
+    titulo: z.string(),
+    parrafos: z.array(z.string()).min(1),
+    fotos: z.array(z.object({ src: z.string(), alt: z.string() })).min(1)
+  }),
   contraste: z.object({
     titulo: z.string(),
     labelSolo: z.string(),
