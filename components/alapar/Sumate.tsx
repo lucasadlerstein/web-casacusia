@@ -34,7 +34,7 @@ export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
             <h3 className="font-onest text-2xl font-extrabold text-alapar-crema">{sumate.par.titulo}</h3>
             <p className="mt-4 text-lg leading-relaxed text-alapar-crema/85">{sumate.par.texto}</p>
             <div className="mt-7">
-              <AlaParButton href={sumate.hrefContacto} variant="ambar" size="lg">{sumate.par.ctaContacto}</AlaParButton>
+              <AlaParButton href={sumate.hrefFormPar} variant="ambar" size="lg">{sumate.par.ctaContacto}</AlaParButton>
             </div>
           </article>
         </div>

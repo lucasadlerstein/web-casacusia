@@ -59,7 +59,7 @@ export function ParaVos({ paraVos }: { paraVos: AlaParContent["paraVos"] }) {
               ))}
             </ul>
             <div className="mt-auto pt-8">
-              <AlaParButton href="#sumate" variant="cereza" size="lg">{paraVos.par.cta}</AlaParButton>
+              <AlaParButton href={paraVos.par.href} variant="cereza" size="lg">{paraVos.par.cta}</AlaParButton>
             </div>
           </article>
         </div>

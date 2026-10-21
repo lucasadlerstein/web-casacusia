@@ -14,7 +14,7 @@ export function Cierre({ cierre, footer }: { cierre: AlaParContent["cierre"]; fo
           </p>
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
             <AlaParButton href="#sumate" variant="ambar" size="lg">{cierre.ctaAcompanado}</AlaParButton>
-            <AlaParButton href="#sumate" variant="outlineLight" size="lg">{cierre.ctaPar}</AlaParButton>
+            <AlaParButton href={cierre.hrefPar} variant="outlineLight" size="lg">{cierre.ctaPar}</AlaParButton>
           </div>
         </div>
 

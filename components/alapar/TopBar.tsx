@@ -14,7 +14,7 @@ export function TopBar({ nav }: { nav: AlaParContent["nav"] }) {
           </span>
         </a>
         <nav aria-label="Acciones" className="flex items-center gap-2">
-          <AlaParButton href="#sumate" variant="outline" className="hidden whitespace-nowrap sm:inline-flex">
+          <AlaParButton href={nav.hrefPar} variant="outline" className="hidden whitespace-nowrap sm:inline-flex">
             {nav.ctaPar}
           </AlaParButton>
           <AlaParButton href="#sumate" variant="cereza" className="whitespace-nowrap px-4 text-sm sm:px-5 sm:text-[0.95rem]">

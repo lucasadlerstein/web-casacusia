@@ -447,13 +447,14 @@ export function getBlogPostsByTema(tema: Tema): BlogPost[] {
 const CtaSchema = z.string().min(1);
 const AlaParSchema = z.object({
   meta: z.object({ title: z.string(), description: z.string() }),
-  nav: z.object({ logoAlt: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema }),
+  nav: z.object({ logoAlt: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema, hrefPar: z.string().url() }),
   hero: z.object({
     etiqueta: z.string(),
     titulo: z.string(),
     bajada: z.string(),
     ctaAcompanado: CtaSchema,
     ctaPar: CtaSchema,
+    hrefPar: z.string().url(),
     ilustracionAlt: z.string()
   }),
   momento: z.object({
@@ -465,9 +466,7 @@ const AlaParSchema = z.object({
     titulo: z.string(),
     labelSolo: z.string(),
     labelPar: z.string(),
-    hintHover: z.string(),
-    hintTouch: z.string(),
-    items: z.array(z.object({ etiqueta: z.string(), solo: z.string(), par: z.string() })).min(1),
+    items: z.array(z.object({ solo: z.string(), par: z.string() })).min(1),
     cierreLinea1: z.string(),
     cierreLinea2: z.string()
   }),
@@ -509,7 +508,8 @@ const AlaParSchema = z.object({
       items: z.array(z.string()).min(1),
       recibisTitulo: z.string(),
       recibis: z.array(z.string()).min(1),
-      cta: CtaSchema
+      cta: CtaSchema,
+      href: z.string().url()
     })
   }),
   sumate: z.object({
@@ -518,6 +518,7 @@ const AlaParSchema = z.object({
     par: z.object({ titulo: z.string(), texto: z.string(), ctaContacto: CtaSchema }),
     hrefContacto: z.string(),
     hrefEncuentros: z.string(),
+    hrefFormPar: z.string().url(),
     fotos: z.array(z.object({ src: z.string(), alt: z.string() })).min(1)
   }),
   sostener: z.object({
@@ -525,7 +526,7 @@ const AlaParSchema = z.object({
     texto: z.string(),
     opciones: z.array(z.object({ titulo: z.string(), texto: z.string(), cta: CtaSchema, href: z.string() })).min(1)
   }),
-  cierre: z.object({ frase: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema }),
+  cierre: z.object({ frase: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema, hrefPar: z.string().url() }),
   footer: z.object({
     programaDe: z.string(),
     casacusia: z.string(),

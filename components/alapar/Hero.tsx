@@ -16,7 +16,15 @@ export function Hero({ hero }: { hero: AlaParContent["hero"] }) {
             {hero.etiqueta}
           </p>
           <h1 className="alapar-rise mt-6 font-onest text-[2.4rem] font-extrabold leading-[1.02] tracking-[-0.03em] text-alapar-cereza [animation-delay:80ms] sm:text-[3rem] md:text-[3.9rem] lg:text-[4.4rem]">
-            {hero.titulo}
+            {hero.titulo.split(/(\{[^}]+\})/).map((parte, i) =>
+              parte.startsWith("{") ? (
+                <span key={i} className="bg-gradient-to-r from-alapar-naranja to-alapar-rosa bg-clip-text text-transparent">
+                  {parte.slice(1, -1)}
+                </span>
+              ) : (
+                parte
+              )
+            )}
           </h1>
           <p className="alapar-rise mt-6 max-w-xl text-lg leading-relaxed text-ink-soft [animation-delay:160ms] md:text-xl">
             {hero.bajada}
@@ -25,7 +33,7 @@ export function Hero({ hero }: { hero: AlaParContent["hero"] }) {
             <AlaParButton href="#sumate" variant="cereza" size="lg">
               {hero.ctaAcompanado}
             </AlaParButton>
-            <AlaParButton href="#sumate" variant="outline" size="lg">
+            <AlaParButton href={hero.hrefPar} variant="outline" size="lg">
               {hero.ctaPar}
             </AlaParButton>
           </div>

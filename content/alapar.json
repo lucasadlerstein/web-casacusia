@@ -1,20 +1,22 @@
 {
   "meta": {
-    "title": "A la Par · Acompañamiento entre personas con hipoacusia",
+    "title": "A la Par: acompañamiento entre pares para personas con hipoacusia",
     "description": "A la Par es el programa de Casacusia de acompañamiento 1 a 1, gratuito, entre personas que conviven con hipoacusia y sus familias. Quien transita la hipoacusia hace mucho, acompaña a quien recién empieza."
   },
   "nav": {
     "logoAlt": "A la Par, por Casacusia",
     "ctaAcompanado": "Quiero acompañamiento",
-    "ctaPar": "Quiero acompañar"
+    "ctaPar": "Quiero acompañar",
+    "hrefPar": "https://forms.gle/mgxPXWm4yXoSSRLu7"
   },
   "hero": {
-    "etiqueta": "Acompañamiento 1 a 1 · Gratuito",
-    "titulo": "Quien transita la hipoacusia hace mucho, acompaña a quien recién empieza.",
+    "etiqueta": "Acompañamiento entre pares para personas con hipoacusia · Gratuito",
+    "titulo": "Quien transita la hipoacusia hace mucho, {acompaña} a quien recién empieza.",
     "bajada": "A la Par es un programa de acompañamiento entre personas que conviven con hipoacusia y sus familias. Formamos Duplas: alguien que conoce el camino desde su propia experiencia y alguien que lo está empezando.",
     "ctaAcompanado": "Quiero acompañamiento",
     "ctaPar": "Quiero acompañar",
-    "ilustracionAlt": "Dos figuras, una naranja y una rosa, tomadas de la mano con los brazos en alto"
+    "ilustracionAlt": "Dos figuras, una naranja y una rosa, tomadas de la mano con los brazos en alto",
+    "hrefPar": "https://forms.gle/mgxPXWm4yXoSSRLu7"
   },
   "momento": {
     "titulo": "Hay un momento en que el mundo empieza a sonar distinto.",
@@ -37,31 +39,24 @@
     "titulo": "La diferencia entre transitarlo {solo} y transitarlo {par}.",
     "labelSolo": "En soledad",
     "labelPar": "A la Par",
-    "hintHover": "Pasá el mouse para verlo A la Par",
-    "hintTouch": "Tocá para verlo A la Par",
     "items": [
       {
-        "etiqueta": "A las tres de la mañana",
         "solo": "Googleás a las tres de la mañana.",
         "par": "Te encontrás a tomar unos mates y conversar con alguien que ya tiene experiencia."
       },
       {
-        "etiqueta": "¿Es normal?",
         "solo": "No sabés si lo que sentís es normal.",
         "par": "Escuchás: \"a mí me pasó algo parecido\"."
       },
       {
-        "etiqueta": "Elegir un dispositivo",
         "solo": "Elegís un dispositivo con miedo a equivocarte.",
         "par": "Conocés cómo le fue a alguien que ya eligió. Y tenés toda una red a disposición, si hace falta."
       },
       {
-        "etiqueta": "Explicar",
         "solo": "Explicás todo el tiempo lo que te pasa.",
         "par": "Conversás con alguien que no necesita explicación."
       },
       {
-        "etiqueta": "Sentirse en soledad",
         "solo": "Te sentís la única persona a la que le pasa.",
         "par": "Sos parte de una Red."
       }
@@ -153,7 +148,8 @@
         "Una Red de Pares con quien intercambiar.",
         "Supervisión y acompañamiento del equipo."
       ],
-      "cta": "Quiero acompañar"
+      "cta": "Quiero acompañar",
+      "href": "https://forms.gle/mgxPXWm4yXoSSRLu7"
     }
   },
   "sumate": {
@@ -166,8 +162,8 @@
     },
     "par": {
       "titulo": "Si querés acompañar",
-      "texto": "La inscripción está abierta todo el año. Nos contás tu historia, conversamos, y si el momento es el indicado te sumás a la próxima formación como Par.",
-      "ctaContacto": "Quiero acompañar"
+      "texto": "La inscripción está abierta todo el año. Completás un formulario corto, conversamos, y si el momento es el indicado te sumás a la próxima formación como Par.",
+      "ctaContacto": "Completar el formulario"
     },
     "hrefContacto": "/contacto?t=programas",
     "hrefEncuentros": "/calendario",
@@ -180,7 +176,8 @@
         "src": "/alapar/foto-red.jpg",
         "alt": "El grupo de voluntarios y voluntarias de Casacusia posa junto en un patio"
       }
-    ]
+    ],
+    "hrefFormPar": "https://forms.gle/mgxPXWm4yXoSSRLu7"
   },
   "sostener": {
     "titulo": "Lo que sostiene el programa es la estructura.",
@@ -203,7 +200,8 @@
   "cierre": {
     "frase": "Acompañá para que nadie transite la hipoacusia en soledad.",
     "ctaAcompanado": "Quiero acompañamiento",
-    "ctaPar": "Quiero acompañar"
+    "ctaPar": "Quiero acompañar",
+    "hrefPar": "https://forms.gle/mgxPXWm4yXoSSRLu7"
   },
   "footer": {
     "programaDe": "Un programa de",
