@@ -13,7 +13,7 @@ export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
         </h2>
 
         <div className="mt-8 grid grid-cols-[1.2fr_1fr] gap-3 md:mt-12 md:gap-4">
-          {sumate.fotos.map((f, i) => (
+          {sumate.fotos.map((f) => (
             <div key={f.src} className="relative aspect-[16/10] overflow-hidden rounded-[1.5rem]">
               <Image src={f.src} alt={f.alt} fill sizes="(min-width: 768px) 50vw, 60vw" className="object-cover" />
             </div>
