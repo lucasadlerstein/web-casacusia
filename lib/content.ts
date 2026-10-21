@@ -465,7 +465,9 @@ const AlaParSchema = z.object({
     titulo: z.string(),
     labelSolo: z.string(),
     labelPar: z.string(),
-    items: z.array(z.object({ solo: z.string(), par: z.string() })).min(1),
+    hintHover: z.string(),
+    hintTouch: z.string(),
+    items: z.array(z.object({ etiqueta: z.string(), solo: z.string(), par: z.string() })).min(1),
     cierreLinea1: z.string(),
     cierreLinea2: z.string()
   }),
