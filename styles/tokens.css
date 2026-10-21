@@ -33,6 +33,29 @@
   --color-rosa-soft:     #FFE3EC;
   --color-naranja-soft:  #FFF0E8;
 
+
+  /* ══ Programa A la Par (manual de marca propio) ══════════════ */
+  --alapar-cereza:   #911B47;
+  --alapar-ambar:    #FFC001;
+  --alapar-azul:     #4F4495;
+  --alapar-crema:    #FFF9F2;
+  --alapar-rosa:     #F44475;
+  --alapar-naranja:  #EA5921;
+  /* derivados: cereza más oscura para fondos profundos, tints para superficies */
+  --alapar-cereza-deep: #6E1335;
+  --alapar-rosa-soft:   #FDE4EC;
+  --alapar-ambar-soft:  #FFF3CC;
+  --alapar-azul-soft:   #ECEAF5;
+  --alapar-naranja-soft:#FCE6DC;
+  /* canales RGB para modificadores de opacidad en Tailwind (bg-alapar-cereza/10) */
+  --alapar-cereza-rgb:      145 27 71;
+  --alapar-cereza-deep-rgb: 110 19 53;
+  --alapar-ambar-rgb:       255 192 1;
+  --alapar-azul-rgb:        79 68 149;
+  --alapar-crema-rgb:       255 249 242;
+  --alapar-rosa-rgb:        244 68 117;
+  --alapar-naranja-rgb:     234 89 33;
+
   /* ══ Ink (texto) ════════════════════════════════════════════ */
   --color-ink:        #143642;   /* navy del wordmark CASACUSIA — AAA ✓   */
   --color-ink-soft:   #2E5060;   /* cuerpo secundario                     */

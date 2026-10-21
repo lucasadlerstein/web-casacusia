@@ -27,7 +27,8 @@ const staticRoutes: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/recursos/blog", priority: 0.9, changefreq: "weekly" },
   { path: "/accesibilidad", priority: 0.4, changefreq: "yearly" },
   { path: "/sumate/proyectos-juntos", priority: 0.7, changefreq: "monthly" },
-  { path: "/comunidad", priority: 0.9, changefreq: "monthly" }
+  { path: "/comunidad", priority: 0.9, changefreq: "monthly" },
+  { path: "/alapar", priority: 0.9, changefreq: "monthly" }
 ];
 
 function urlFor(path: string, locale: string) {

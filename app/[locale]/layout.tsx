@@ -10,13 +10,9 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../globals.css";
 import { locales, type Locale } from "@/lib/i18n/config";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { OutboundTracker } from "@/components/analytics/OutboundTracker";
 import { CountryProvider } from "@/components/country/CountryProvider";
-import { ExpoHipoacusiaModal } from "@/components/sections/ExpoHipoacusiaModal";
-import { ExpoHipoacusiaBanner } from "@/components/sections/ExpoHipoacusiaBanner";
 import { getCountry, hasCountryOverride } from "@/lib/country-server";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
@@ -68,6 +64,11 @@ export const viewport: Viewport = {
   maximumScale: 5
 };
 
+/**
+ * Layout raíz por idioma: html/body, fuentes, providers y analytics.
+ * Header, Footer y banners viven en `(site)/layout.tsx`; las landings
+ * autónomas (ej. `(landing)/alapar`) traen su propio cromo.
+ */
 export default async function LocaleLayout({
   children,
   params
@@ -98,13 +99,7 @@ export default async function LocaleLayout({
         </a>
         <NextIntlClientProvider messages={messages} locale={locale}>
           <CountryProvider initialCountry={country} initialOverride={isOverride}>
-            <ExpoHipoacusiaBanner />
-            <Header />
-            <main id="main" className="flex-1">
-              {children}
-            </main>
-            <Footer />
-            <ExpoHipoacusiaModal />
+            {children}
           </CountryProvider>
         </NextIntlClientProvider>
         <OrganizationSchema />

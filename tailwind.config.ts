@@ -40,6 +40,21 @@ const config: Config = {
         "rosa-soft":     "var(--color-rosa-soft)",
         "naranja-soft":  "var(--color-naranja-soft)",
 
+        /* ── Programa A la Par ── */
+        alapar: {
+          cereza:         "rgb(var(--alapar-cereza-rgb) / <alpha-value>)",
+          "cereza-deep":  "rgb(var(--alapar-cereza-deep-rgb) / <alpha-value>)",
+          ambar:          "rgb(var(--alapar-ambar-rgb) / <alpha-value>)",
+          "ambar-soft":   "var(--alapar-ambar-soft)",
+          azul:           "rgb(var(--alapar-azul-rgb) / <alpha-value>)",
+          "azul-soft":    "var(--alapar-azul-soft)",
+          crema:          "rgb(var(--alapar-crema-rgb) / <alpha-value>)",
+          rosa:           "rgb(var(--alapar-rosa-rgb) / <alpha-value>)",
+          "rosa-soft":    "var(--alapar-rosa-soft)",
+          naranja:        "rgb(var(--alapar-naranja-rgb) / <alpha-value>)",
+          "naranja-soft": "var(--alapar-naranja-soft)"
+        },
+
         /* ── Ink ── */
         ink: {
           DEFAULT: "var(--color-ink)",
@@ -68,7 +83,8 @@ const config: Config = {
       fontFamily: {
         sans:    ["var(--font-sans)",    "system-ui", "sans-serif"],
         display: ["var(--font-display)", "var(--font-sans)", "system-ui", "sans-serif"],
-        bubbles: ["var(--font-bubbles)", "cursive"]
+        bubbles: ["var(--font-bubbles)", "cursive"],
+        onest:   ["var(--font-onest)", "var(--font-display)", "system-ui", "sans-serif"]
       },
 
       fontSize: {

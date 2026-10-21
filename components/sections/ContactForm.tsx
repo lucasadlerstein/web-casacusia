@@ -4,7 +4,7 @@ import { useActionState, useCallback, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/Button";
-import { submitContact, type ContactState } from "@/app/[locale]/contacto/actions";
+import { submitContact, type ContactState } from "@/app/[locale]/(site)/contacto/actions";
 import { useRouter } from "@/lib/i18n/navigation";
 
 const initial: ContactState = {};

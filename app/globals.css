@@ -65,6 +65,20 @@
     -webkit-box-decoration-break: clone;
   }
 
+
+  /* ── Landing A la Par ─────────────────────────────────────── */
+  .alapar-dots {
+    background-image: radial-gradient(rgba(145, 27, 71, 0.10) 1.2px, transparent 1.3px);
+    background-size: 22px 22px;
+  }
+  .alapar-rise {
+    animation: alapar-rise 700ms var(--ease-out) both;
+  }
+  @keyframes alapar-rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
   .cursor-megaphone {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M11 5L6 9H2v6h4l5 4V5z'></path><path d='M19.07 4.93a10 10 0 0 1 0 14.14'></path><path d='M15.54 8.46a5 5 0 0 1 0 7.07'></path></svg>") 16 16, auto;
   }

@@ -44,6 +44,16 @@ Palabras y conceptos **prohibidos** en cualquier texto de la web:
 - "Sponsors" / "Patrocinadores" — usar *"Aliados"*
 - Promesas de outcomes específicos a empresas (leads, ventas, ROI)
 
+### Lenguaje sin género (regla para TODA la web y comunicación de Casacusia)
+
+Seguir las [orientaciones de la ONU para un lenguaje inclusivo en cuanto al género](https://www.un.org/es/gender-inclusive-language/guidelines.shtml). Nunca usar el masculino genérico cuando hay alternativa:
+
+- Reformular con sustantivos colectivos o neutros: *"las personas que…"*, *"quienes…"*, *"la comunidad"*, *"el equipo"*.
+- Evitar adjetivos y participios con género: *"transitar la hipoacusia en soledad"* en vez de *"transitar solo la hipoacusia"*; *"muchas de las personas que hacemos Casacusia"* en vez de *"muchos de nosotros"*.
+- Nombrar roles por la función, no por la persona: *"la terapia"*, *"la consulta audiológica"* en vez de *"un terapeuta"*, *"un audiólogo"*.
+- Cuando no hay forma neutra, desdoblar: *"tu hija o tu hijo"*. No usar "x", "@" ni "e" como marca de género.
+- Los nombres propios de programas (Par, Pares, Red de Pares) se mantienen. Para la contraparte preferir *"la persona acompañada"* antes que el masculino genérico.
+
 ### Nomenclatura confirmada
 
 | Concepto | Cómo lo decimos |
