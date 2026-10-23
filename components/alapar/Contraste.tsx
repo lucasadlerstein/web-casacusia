@@ -55,7 +55,7 @@ function FiguraDupla() {
   );
 }
 
-export function Contraste({ contraste, apoyo }: { contraste: AlaParContent["contraste"]; apoyo: AlaParContent["apoyo"] }) {
+export function Contraste({ contraste }: { contraste: AlaParContent["contraste"] }) {
   return (
     <section className="bg-alapar-crema">
       <div className="container py-20 md:py-28">
@@ -109,11 +109,6 @@ export function Contraste({ contraste, apoyo }: { contraste: AlaParContent["cont
             ))}
           </ol>
         </div>
-      </div>
-
-      {/* Quien financia el piloto: solo el logo */}
-      <div className="container pb-16 md:pb-24">
-        <Image src={apoyo.logo} alt={apoyo.logoAlt} width={784} height={800} className="mx-auto h-36 w-auto md:h-44" />
       </div>
 
       {/* La frase fuerte del programa: banda propia, a todo el ancho */}
