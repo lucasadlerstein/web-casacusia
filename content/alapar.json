@@ -245,10 +245,7 @@
     "cerrar": "Cerrar"
   },
   "apoyo": {
-    "etiqueta": "Con el apoyo de",
-    "texto": "A la Par es un piloto financiado por Acompaña BA Discapacidad, del Gobierno de la Ciudad de Buenos Aires.",
-    "logoAlt": "Acompaña BA Discapacidad, Gobierno de la Ciudad de Buenos Aires",
-    "logo": "/alapar/acompana-ba.png",
-    "logoBlanco": "/alapar/acompana-ba-blanco.png"
+    "logoAlt": "Acompaña BA Discapacidad",
+    "logo": "/alapar/acompana-ba.png"
   }
 }

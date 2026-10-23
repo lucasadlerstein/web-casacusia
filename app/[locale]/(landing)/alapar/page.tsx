@@ -65,14 +65,14 @@ export default async function AlaParPage({ params }: { params: Promise<{ locale:
       <TopBar nav={c.nav} />
       <Hero hero={c.hero} />
       <Momento momento={c.momento} />
-      <Contraste contraste={c.contraste} />
+      <Contraste contraste={c.contraste} apoyo={c.apoyo} />
       <Dato dato={c.dato} />
       <ComoFunciona como={c.comoFunciona} />
       <Roles roles={c.roles} />
       <ParaVos paraVos={c.paraVos} />
       <Sumate sumate={c.sumate} />
-      <Sostener sostener={c.sostener} apoyo={c.apoyo} />
-      <Cierre cierre={c.cierre} footer={c.footer} apoyo={c.apoyo} />
+      <Sostener sostener={c.sostener} />
+      <Cierre cierre={c.cierre} footer={c.footer} />
       </AcompanamientoProvider>
     </>
   );
