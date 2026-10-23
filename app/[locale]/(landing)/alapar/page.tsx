@@ -71,8 +71,8 @@ export default async function AlaParPage({ params }: { params: Promise<{ locale:
       <Roles roles={c.roles} />
       <ParaVos paraVos={c.paraVos} />
       <Sumate sumate={c.sumate} />
-      <Sostener sostener={c.sostener} />
-      <Cierre cierre={c.cierre} footer={c.footer} />
+      <Sostener sostener={c.sostener} apoyo={c.apoyo} />
+      <Cierre cierre={c.cierre} footer={c.footer} apoyo={c.apoyo} />
       </AcompanamientoProvider>
     </>
   );
