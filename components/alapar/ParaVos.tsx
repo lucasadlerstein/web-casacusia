@@ -1,5 +1,6 @@
 import type { AlaParContent } from "@/lib/content";
 import { AlaParButton } from "./AlaParButton";
+import { AcompanamientoButton } from "./AcompanamientoModal";
 
 function Check({ color }: { color: "naranja" | "rosa" }) {
   const cls = color === "naranja" ? "bg-alapar-naranja" : "bg-alapar-rosa";
@@ -36,7 +37,7 @@ export function ParaVos({ paraVos }: { paraVos: AlaParContent["paraVos"] }) {
               ))}
             </ul>
             <div className="mt-auto pt-8">
-              <AlaParButton href="#sumate" variant="cereza" size="lg">{paraVos.acompanado.cta}</AlaParButton>
+              <AcompanamientoButton variant="cereza" size="lg">{paraVos.acompanado.cta}</AcompanamientoButton>
             </div>
           </article>
 

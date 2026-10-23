@@ -526,6 +526,23 @@ const AlaParSchema = z.object({
     texto: z.string(),
     opciones: z.array(z.object({ titulo: z.string(), texto: z.string(), cta: CtaSchema, href: z.string() })).min(1)
   }),
+  modal: z.object({
+    titulo: z.string(),
+    texto: z.string(),
+    labelNombre: z.string(),
+    labelEmail: z.string(),
+    placeholderEmail: z.string(),
+    labelParaQuien: z.string(),
+    opciones: z.array(z.object({ value: z.enum(["vos", "familiar"]), label: z.string() })).min(1),
+    cta: CtaSchema,
+    enviando: z.string(),
+    ctaEncuentros: CtaSchema,
+    hrefEncuentros: z.string(),
+    privacidad: z.string(),
+    gracias: z.object({ titulo: z.string(), texto: z.string() }),
+    errores: z.object({ email: z.string(), rate: z.string(), generico: z.string() }),
+    cerrar: z.string()
+  }),
   cierre: z.object({ frase: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema, hrefPar: z.string().url() }),
   footer: z.object({
     programaDe: z.string(),

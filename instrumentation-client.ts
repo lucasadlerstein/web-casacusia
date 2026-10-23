@@ -22,6 +22,9 @@ initBotId({
     { path: "/recursos/blog", method: "POST" },
     { path: "/recursos/blog/*", method: "POST" },
     { path: "/en/recursos/blog", method: "POST" },
-    { path: "/en/recursos/blog/*", method: "POST" }
+    { path: "/en/recursos/blog/*", method: "POST" },
+    // Lista de espera de A la Par: server action disparada desde la landing
+    { path: "/alapar", method: "POST" },
+    { path: "/en/alapar", method: "POST" }
   ]
 });

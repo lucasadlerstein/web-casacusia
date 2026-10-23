@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { AlaParContent } from "@/lib/content";
 import { AlaParButton } from "./AlaParButton";
+import { AcompanamientoButton } from "./AcompanamientoModal";
 
 export function TopBar({ nav }: { nav: AlaParContent["nav"] }) {
   return (
@@ -17,9 +18,9 @@ export function TopBar({ nav }: { nav: AlaParContent["nav"] }) {
           <AlaParButton href={nav.hrefPar} variant="outline" className="hidden whitespace-nowrap sm:inline-flex">
             {nav.ctaPar}
           </AlaParButton>
-          <AlaParButton href="#sumate" variant="cereza" className="whitespace-nowrap px-4 text-sm sm:px-5 sm:text-[0.95rem]">
+          <AcompanamientoButton variant="cereza" className="whitespace-nowrap px-4 text-sm sm:px-5 sm:text-[0.95rem]">
             {nav.ctaAcompanado}
-          </AlaParButton>
+          </AcompanamientoButton>
         </nav>
       </div>
     </header>
