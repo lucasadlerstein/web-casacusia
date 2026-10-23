@@ -14,7 +14,6 @@ import { X } from "lucide-react";
 import { useLocale } from "next-intl";
 
 import type { AlaParContent } from "@/lib/content";
-import { Link } from "@/lib/i18n/navigation";
 import { sumarseAEspera, type EsperaState } from "@/app/actions/alapar";
 import { alaParButtonClasses, type AlaParSize, type AlaParVariant } from "./AlaParButton";
 
@@ -124,11 +123,8 @@ function ModalBody({ modal, cerrar }: { modal: ModalContent; cerrar: () => void 
             {modal.gracias.titulo}
           </h2>
           <p className="mt-3 text-base leading-relaxed text-ink-soft">{modal.gracias.texto}</p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link href={modal.hrefEncuentros} className={alaParButtonClasses("cereza", "lg")}>
-              {modal.ctaEncuentros}
-            </Link>
-            <button type="button" onClick={cerrar} className={alaParButtonClasses("outline", "lg")}>
+          <div className="mt-6">
+            <button type="button" onClick={cerrar} className={alaParButtonClasses("cereza", "lg")}>
               {modal.cerrar}
             </button>
           </div>
@@ -203,13 +199,10 @@ function ModalBody({ modal, cerrar }: { modal: ModalContent; cerrar: () => void 
             </p>
           )}
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-6">
             <button type="submit" disabled={pending} className={alaParButtonClasses("cereza", "lg")}>
               {pending ? modal.enviando : modal.cta}
             </button>
-            <Link href={modal.hrefEncuentros} className={alaParButtonClasses("outline", "lg")}>
-              {modal.ctaEncuentros}
-            </Link>
           </div>
           <p className="mt-4 text-xs text-ink-muted">{modal.privacidad}</p>
         </form>

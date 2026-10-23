@@ -213,7 +213,7 @@
   },
   "modal": {
     "titulo": "Estamos formando a los primeros Pares.",
-    "texto": "Dejanos tu email y te escribimos en cuanto haya una Dupla para vos. Mientras tanto, te invitamos a nuestros encuentros: ahí ya hay gente que pasó por lo mismo.",
+    "texto": "Dejá tu email así te contamos cuando podamos acompañarte.",
     "labelNombre": "Tu nombre (opcional)",
     "labelEmail": "Tu email",
     "placeholderEmail": "nombre@ejemplo.com",
@@ -230,12 +230,10 @@
     ],
     "cta": "Avisame cuando esté listo",
     "enviando": "Enviando…",
-    "ctaEncuentros": "Ver próximos encuentros",
-    "hrefEncuentros": "/calendario",
-    "privacidad": "Solo usamos tu email para avisarte de A la Par. Nada más.",
+    "privacidad": "Solo usamos tu email para avisarte de A la Par.",
     "gracias": {
       "titulo": "Listo, te avisamos.",
-      "texto": "Ya tenemos tu email. En cuanto haya una Dupla para vos te escribimos. Mientras tanto, te esperamos en los encuentros presenciales y virtuales de Casacusia."
+      "texto": "En cuanto haya una Dupla para vos, te escribimos."
     },
     "errores": {
       "email": "Revisá el email: parece que no está bien escrito.",
