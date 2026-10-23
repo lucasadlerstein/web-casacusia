@@ -64,8 +64,8 @@ export default async function AlaParPage({ params }: { params: Promise<{ locale:
       <AcompanamientoProvider modal={c.modal}>
       <TopBar nav={c.nav} />
       <Hero hero={c.hero} />
-      <Momento momento={c.momento} />
-      <Contraste contraste={c.contraste} apoyo={c.apoyo} />
+      <Momento momento={c.momento} apoyo={c.apoyo} />
+      <Contraste contraste={c.contraste} />
       <Dato dato={c.dato} />
       <ComoFunciona como={c.comoFunciona} />
       <Roles roles={c.roles} />

@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { RotatingImage } from "@/components/ui/RotatingImage";
 import type { AlaParContent } from "@/lib/content";
 import { Anillos } from "./Deco";
 
-export function Momento({ momento }: { momento: AlaParContent["momento"] }) {
+export function Momento({ momento, apoyo }: { momento: AlaParContent["momento"]; apoyo: AlaParContent["apoyo"] }) {
   return (
     <section className="relative overflow-hidden bg-alapar-cereza text-alapar-crema">
       <Anillos className="absolute -left-24 -bottom-24 z-0 w-64 text-alapar-rosa/30 md:w-96" />
@@ -18,6 +19,8 @@ export function Momento({ momento }: { momento: AlaParContent["momento"] }) {
               </p>
             ))}
           </div>
+          {/* Quien financia el piloto */}
+          <Image src={apoyo.logo} alt={apoyo.logoAlt} width={784} height={800} className="mt-10 h-28 w-auto md:mt-12 md:h-32" />
         </div>
 
         <figure className="relative mx-auto w-full max-w-sm md:max-w-none">
