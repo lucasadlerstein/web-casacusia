@@ -4,7 +4,7 @@ import { Link } from "@/lib/i18n/navigation";
 import { AlaParButton } from "./AlaParButton";
 import { AcompanamientoButton } from "./AcompanamientoModal";
 
-export function Cierre({ cierre, footer, apoyo }: { cierre: AlaParContent["cierre"]; footer: AlaParContent["footer"]; apoyo: AlaParContent["apoyo"] }) {
+export function Cierre({ cierre, footer }: { cierre: AlaParContent["cierre"]; footer: AlaParContent["footer"] }) {
   return (
     <section className="relative overflow-hidden bg-alapar-cereza text-alapar-crema">
       <div className="container relative pb-10 pt-20 md:pt-28">
@@ -20,18 +20,12 @@ export function Cierre({ cierre, footer, apoyo }: { cierre: AlaParContent["cierr
         </div>
 
         <footer className="mt-20 flex flex-col items-center gap-4 border-t border-alapar-crema/15 pt-8 text-sm text-alapar-crema/75 md:flex-row md:justify-between">
-          <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
-            <p>
-              {footer.programaDe}{" "}
-              <Link href={footer.hrefCasacusia} className="font-bold text-alapar-crema underline-offset-4 hover:underline">
-                {footer.casacusia}
-              </Link>
-            </p>
-            <p className="flex items-center gap-3">
-              <span>{apoyo.etiqueta}</span>
-              <Image src={apoyo.logoBlanco} alt={apoyo.logoAlt} width={784} height={800} className="h-16 w-auto" />
-            </p>
-          </div>
+          <p>
+            {footer.programaDe}{" "}
+            <Link href={footer.hrefCasacusia} className="font-bold text-alapar-crema underline-offset-4 hover:underline">
+              {footer.casacusia}
+            </Link>
+          </p>
           <p className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
             <a href={`mailto:${footer.email}`} className="hover:text-alapar-crema hover:underline underline-offset-4">{footer.email}</a>
             <a href={footer.hrefInstagram} target="_blank" rel="noopener noreferrer" className="hover:text-alapar-crema hover:underline underline-offset-4">
