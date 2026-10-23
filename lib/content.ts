@@ -536,8 +536,6 @@ const AlaParSchema = z.object({
     opciones: z.array(z.object({ value: z.enum(["vos", "familiar"]), label: z.string() })).min(1),
     cta: CtaSchema,
     enviando: z.string(),
-    ctaEncuentros: CtaSchema,
-    hrefEncuentros: z.string(),
     privacidad: z.string(),
     gracias: z.object({ titulo: z.string(), texto: z.string() }),
     errores: z.object({ email: z.string(), rate: z.string(), generico: z.string() }),
