@@ -543,6 +543,13 @@ const AlaParSchema = z.object({
     errores: z.object({ email: z.string(), rate: z.string(), generico: z.string() }),
     cerrar: z.string()
   }),
+  apoyo: z.object({
+    etiqueta: z.string(),
+    texto: z.string(),
+    logoAlt: z.string(),
+    logo: z.string(),
+    logoBlanco: z.string()
+  }),
   cierre: z.object({ frase: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema, hrefPar: z.string().url() }),
   footer: z.object({
     programaDe: z.string(),
