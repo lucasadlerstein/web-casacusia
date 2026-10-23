@@ -15,6 +15,7 @@ import { ParaVos } from "@/components/alapar/ParaVos";
 import { Sumate } from "@/components/alapar/Sumate";
 import { Sostener } from "@/components/alapar/Sostener";
 import { Cierre } from "@/components/alapar/Cierre";
+import { AcompanamientoProvider } from "@/components/alapar/AcompanamientoModal";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org";
 
@@ -60,6 +61,7 @@ export default async function AlaParPage({ params }: { params: Promise<{ locale:
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <AcompanamientoProvider modal={c.modal}>
       <TopBar nav={c.nav} />
       <Hero hero={c.hero} />
       <Momento momento={c.momento} />
@@ -71,6 +73,7 @@ export default async function AlaParPage({ params }: { params: Promise<{ locale:
       <Sumate sumate={c.sumate} />
       <Sostener sostener={c.sostener} />
       <Cierre cierre={c.cierre} footer={c.footer} />
+      </AcompanamientoProvider>
     </>
   );
 }

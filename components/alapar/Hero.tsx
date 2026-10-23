@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { AlaParContent } from "@/lib/content";
 import { AlaParButton } from "./AlaParButton";
+import { AcompanamientoButton } from "./AcompanamientoModal";
 import { Estallido, Arcos } from "./Deco";
 
 export function Hero({ hero }: { hero: AlaParContent["hero"] }) {
@@ -30,9 +31,9 @@ export function Hero({ hero }: { hero: AlaParContent["hero"] }) {
             {hero.bajada}
           </p>
           <div className="alapar-rise mt-8 flex flex-col gap-3 [animation-delay:240ms] sm:flex-row">
-            <AlaParButton href="#sumate" variant="cereza" size="lg">
+            <AcompanamientoButton variant="cereza" size="lg">
               {hero.ctaAcompanado}
-            </AlaParButton>
+            </AcompanamientoButton>
             <AlaParButton href={hero.hrefPar} variant="outline" size="lg">
               {hero.ctaPar}
             </AlaParButton>

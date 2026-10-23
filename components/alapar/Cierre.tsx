@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { AlaParContent } from "@/lib/content";
 import { Link } from "@/lib/i18n/navigation";
 import { AlaParButton } from "./AlaParButton";
+import { AcompanamientoButton } from "./AcompanamientoModal";
 
 export function Cierre({ cierre, footer }: { cierre: AlaParContent["cierre"]; footer: AlaParContent["footer"] }) {
   return (
@@ -13,7 +14,7 @@ export function Cierre({ cierre, footer }: { cierre: AlaParContent["cierre"]; fo
             {cierre.frase}
           </p>
           <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-            <AlaParButton href="#sumate" variant="ambar" size="lg">{cierre.ctaAcompanado}</AlaParButton>
+            <AcompanamientoButton variant="ambar" size="lg">{cierre.ctaAcompanado}</AcompanamientoButton>
             <AlaParButton href={cierre.hrefPar} variant="outlineLight" size="lg">{cierre.ctaPar}</AlaParButton>
           </div>
         </div>

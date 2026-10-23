@@ -157,7 +157,7 @@
     "acompanado": {
       "titulo": "Si querés acompañamiento",
       "texto": "Estamos formando a los primeros Pares. Si nos escribís hoy, te anotamos, te avisamos en cuanto haya una Dupla para vos y, mientras tanto, te esperamos en los encuentros presenciales y virtuales de Casacusia. Ahí ya hay gente que pasó por lo mismo.",
-      "ctaContacto": "Escribinos",
+      "ctaContacto": "Dejanos tu email",
       "ctaEncuentros": "Ver próximos encuentros"
     },
     "par": {
@@ -210,5 +210,38 @@
     "email": "somos@casacusia.org",
     "instagram": "@casacusia.ong",
     "hrefInstagram": "https://www.instagram.com/casacusia.ong/"
+  },
+  "modal": {
+    "titulo": "Estamos formando a los primeros Pares.",
+    "texto": "Dejanos tu email y te escribimos en cuanto haya una Dupla para vos. Mientras tanto, te invitamos a nuestros encuentros: ahí ya hay gente que pasó por lo mismo.",
+    "labelNombre": "Tu nombre (opcional)",
+    "labelEmail": "Tu email",
+    "placeholderEmail": "nombre@ejemplo.com",
+    "labelParaQuien": "¿El acompañamiento es para…?",
+    "opciones": [
+      {
+        "value": "vos",
+        "label": "Para mí"
+      },
+      {
+        "value": "familiar",
+        "label": "Para alguien de mi familia"
+      }
+    ],
+    "cta": "Avisame cuando esté listo",
+    "enviando": "Enviando…",
+    "ctaEncuentros": "Ver próximos encuentros",
+    "hrefEncuentros": "/calendario",
+    "privacidad": "Solo usamos tu email para avisarte de A la Par. Nada más.",
+    "gracias": {
+      "titulo": "Listo, te avisamos.",
+      "texto": "Ya tenemos tu email. En cuanto haya una Dupla para vos te escribimos. Mientras tanto, te esperamos en los encuentros presenciales y virtuales de Casacusia."
+    },
+    "errores": {
+      "email": "Revisá el email: parece que no está bien escrito.",
+      "rate": "Demasiados intentos seguidos. Probá de nuevo en un minuto.",
+      "generico": "No pudimos guardar tu email. Probá de nuevo o escribinos a somos@casacusia.org."
+    },
+    "cerrar": "Cerrar"
   }
 }

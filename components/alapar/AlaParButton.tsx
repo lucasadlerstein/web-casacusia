@@ -2,8 +2,10 @@ import type { ReactNode } from "react";
 import { Link } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils/cn";
 
-type Variant = "cereza" | "ambar" | "outline" | "outlineLight";
-type Size = "md" | "lg";
+export type AlaParVariant = "cereza" | "ambar" | "outline" | "outlineLight";
+export type AlaParSize = "md" | "lg";
+type Variant = AlaParVariant;
+type Size = AlaParSize;
 
 const base =
   "inline-flex items-center justify-center gap-2 rounded-full font-onest font-extrabold tracking-tight " +
@@ -22,6 +24,11 @@ const sizes: Record<Size, string> = {
   md: "h-11 min-h-[44px] px-5 text-[0.95rem]",
   lg: "h-14 min-h-[52px] px-7 text-base md:text-lg"
 };
+
+/** Clases del botón, para usarlas en un <button> nativo (ej. abrir el modal). */
+export function alaParButtonClasses(variant: Variant = "cereza", size: Size = "md", className?: string): string {
+  return cn(base, variants[variant], sizes[size], className);
+}
 
 export function AlaParButton({
   href,

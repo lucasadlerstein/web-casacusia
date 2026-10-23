@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { AlaParContent } from "@/lib/content";
 import { AlaParButton } from "./AlaParButton";
+import { AcompanamientoButton } from "./AcompanamientoModal";
 import { Arcos } from "./Deco";
 
 export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
@@ -25,7 +26,7 @@ export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
             <h3 className="font-onest text-2xl font-extrabold text-ink">{sumate.acompanado.titulo}</h3>
             <p className="mt-4 text-lg leading-relaxed text-ink-soft">{sumate.acompanado.texto}</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <AlaParButton href={sumate.hrefContacto} variant="cereza" size="lg">{sumate.acompanado.ctaContacto}</AlaParButton>
+              <AcompanamientoButton variant="cereza" size="lg">{sumate.acompanado.ctaContacto}</AcompanamientoButton>
               <AlaParButton href={sumate.hrefEncuentros} variant="outline" size="lg">{sumate.acompanado.ctaEncuentros}</AlaParButton>
             </div>
           </article>
