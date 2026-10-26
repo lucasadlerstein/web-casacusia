@@ -542,6 +542,22 @@ const AlaParSchema = z.object({
     cerrar: z.string()
   }),
   apoyo: z.object({ logoAlt: z.string(), logo: z.string() }),
+  preguntas: z.object({ texto: z.string(), cta: z.string(), email: z.string().email() }),
+  webinar: z.object({
+    etiqueta: z.string(),
+    titulo: z.string(),
+    texto: z.string(),
+    inicio: z.string().datetime(),
+    fin: z.string().datetime(),
+    meet: z.string().url(),
+    ctaMeet: CtaSchema,
+    ctaAgendar: CtaSchema,
+    calendarTitulo: z.string(),
+    calendarDetalle: z.string(),
+    cerrar: z.string(),
+    /** A los cuántos milisegundos de llegar a la página se abre el modal. */
+    delayMs: z.number().int().nonnegative()
+  }),
   cierre: z.object({ frase: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema, hrefPar: z.string().url() }),
   footer: z.object({
     programaDe: z.string(),

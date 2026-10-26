@@ -245,5 +245,24 @@
   "apoyo": {
     "logoAlt": "Acompaña BA Discapacidad",
     "logo": "/alapar/acompana-ba-blanco.png"
+  },
+  "webinar": {
+    "etiqueta": "Charla informativa",
+    "titulo": "¿Tenés dudas sobre ser Par?",
+    "texto": "Hacemos una charla virtual para responderlas. Jueves 19 de noviembre, de 19 a 20 h (hora Argentina).",
+    "inicio": "2026-11-19T22:00:00Z",
+    "fin": "2026-11-19T23:00:00Z",
+    "meet": "https://meet.google.com/ebw-hwgd-zpp",
+    "ctaMeet": "Entrar a la charla",
+    "ctaAgendar": "Agendar",
+    "calendarTitulo": "A la Par · Charla informativa para quienes quieren ser Pares",
+    "calendarDetalle": "Charla virtual de Casacusia para responder dudas de quienes quieren acompañar como Pares en A la Par. Entrá por Google Meet: https://meet.google.com/ebw-hwgd-zpp",
+    "cerrar": "Ahora no",
+    "delayMs": 10000
+  },
+  "preguntas": {
+    "texto": "¿Tenés preguntas sobre A la Par?",
+    "cta": "Escribinos a somos@casacusia.org",
+    "email": "somos@casacusia.org"
   }
 }

@@ -1,6 +1,7 @@
 import type { AlaParContent } from "@/lib/content";
 import { AlaParButton } from "./AlaParButton";
 import { AcompanamientoButton } from "./AcompanamientoModal";
+import { WebinarAviso } from "./WebinarAviso";
 
 function Check({ color }: { color: "naranja" | "rosa" }) {
   const cls = color === "naranja" ? "bg-alapar-naranja" : "bg-alapar-rosa";
@@ -13,7 +14,7 @@ function Check({ color }: { color: "naranja" | "rosa" }) {
   );
 }
 
-export function ParaVos({ paraVos }: { paraVos: AlaParContent["paraVos"] }) {
+export function ParaVos({ paraVos, webinar }: { paraVos: AlaParContent["paraVos"]; webinar: AlaParContent["webinar"] }) {
   return (
     <section className="bg-alapar-crema">
       <div className="container py-20 md:py-28">
@@ -59,6 +60,7 @@ export function ParaVos({ paraVos }: { paraVos: AlaParContent["paraVos"] }) {
                 </li>
               ))}
             </ul>
+            <WebinarAviso webinar={webinar} className="mt-7" />
             <div className="mt-auto pt-8">
               <AlaParButton href={paraVos.par.href} variant="cereza" size="lg">{paraVos.par.cta}</AlaParButton>
             </div>

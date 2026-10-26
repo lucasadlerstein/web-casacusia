@@ -1,10 +1,20 @@
 import Image from "next/image";
 import type { AlaParContent } from "@/lib/content";
 import { AlaParButton } from "./AlaParButton";
+import { Mail } from "lucide-react";
 import { AcompanamientoButton } from "./AcompanamientoModal";
+import { WebinarAviso } from "./WebinarAviso";
 import { Arcos } from "./Deco";
 
-export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
+export function Sumate({
+  sumate,
+  webinar,
+  preguntas
+}: {
+  sumate: AlaParContent["sumate"];
+  webinar: AlaParContent["webinar"];
+  preguntas: AlaParContent["preguntas"];
+}) {
   return (
     <section id="sumate" className="relative scroll-mt-20 overflow-hidden bg-white">
       <Arcos className="absolute -bottom-6 -left-10 z-0 w-48 text-alapar-ambar md:w-72" />
@@ -37,8 +47,21 @@ export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
             <div className="mt-7">
               <AlaParButton href={sumate.hrefFormPar} variant="ambar" size="lg">{sumate.par.ctaContacto}</AlaParButton>
             </div>
+            <WebinarAviso webinar={webinar} className="mt-7 border-alapar-ambar/60" />
           </article>
         </div>
+
+        {/* Preguntas: canal directo al equipo */}
+        <p className="mt-8 flex flex-col items-center justify-center gap-2 text-center text-base text-ink-soft sm:flex-row md:mt-10 md:text-lg">
+          <span>{preguntas.texto}</span>
+          <a
+            href={`mailto:${preguntas.email}?subject=${encodeURIComponent("Consulta sobre A la Par")}`}
+            className="inline-flex items-center gap-2 font-bold text-alapar-cereza underline decoration-alapar-rosa/50 decoration-2 underline-offset-4 hover:decoration-alapar-cereza"
+          >
+            <Mail size={18} aria-hidden="true" />
+            {preguntas.cta}
+          </a>
+        </p>
       </div>
     </section>
   );
