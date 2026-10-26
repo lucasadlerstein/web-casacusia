@@ -5,25 +5,9 @@ import { CalendarPlus, Video } from "lucide-react";
 
 import type { AlaParContent } from "@/lib/content";
 import { cn } from "@/lib/utils/cn";
+import { calendarUrl } from "./webinar";
 
 type Webinar = AlaParContent["webinar"];
-
-/** Fecha ISO → formato compacto de Google Calendar (20261119T220000Z). */
-function gcalDate(iso: string): string {
-  return iso.replace(/[-:]/g, "").replace(/\.\d{3}/, "");
-}
-
-function calendarUrl(w: Webinar): string {
-  const params = new URLSearchParams({
-    action: "TEMPLATE",
-    text: w.calendarTitulo,
-    dates: `${gcalDate(w.inicio)}/${gcalDate(w.fin)}`,
-    details: w.calendarDetalle,
-    location: w.meet,
-    ctz: "America/Argentina/Buenos_Aires"
-  });
-  return `https://calendar.google.com/calendar/render?${params.toString()}`;
-}
 
 /**
  * Aviso de la charla informativa para futuros Pares.
