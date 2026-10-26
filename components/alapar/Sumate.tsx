@@ -2,9 +2,10 @@ import Image from "next/image";
 import type { AlaParContent } from "@/lib/content";
 import { AlaParButton } from "./AlaParButton";
 import { AcompanamientoButton } from "./AcompanamientoModal";
+import { WebinarAviso } from "./WebinarAviso";
 import { Arcos } from "./Deco";
 
-export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
+export function Sumate({ sumate, webinar }: { sumate: AlaParContent["sumate"]; webinar: AlaParContent["webinar"] }) {
   return (
     <section id="sumate" className="relative scroll-mt-20 overflow-hidden bg-white">
       <Arcos className="absolute -bottom-6 -left-10 z-0 w-48 text-alapar-ambar md:w-72" />
@@ -37,6 +38,7 @@ export function Sumate({ sumate }: { sumate: AlaParContent["sumate"] }) {
             <div className="mt-7">
               <AlaParButton href={sumate.hrefFormPar} variant="ambar" size="lg">{sumate.par.ctaContacto}</AlaParButton>
             </div>
+            <WebinarAviso webinar={webinar} className="mt-7 border-alapar-ambar/60" />
           </article>
         </div>
       </div>
