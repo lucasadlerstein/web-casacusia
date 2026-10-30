@@ -8,27 +8,9 @@ import { calendarUrl } from "./webinar";
 
 type Webinar = AlaParContent["webinar"];
 
-const STORAGE_KEY = "alapar-webinar-visto";
-
-function yaVisto(): boolean {
-  try {
-    return sessionStorage.getItem(STORAGE_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-function marcarVisto() {
-  try {
-    sessionStorage.setItem(STORAGE_KEY, "1");
-  } catch {
-    /* sin storage: el modal puede volver a aparecer en la próxima carga */
-  }
-}
-
 /**
  * Modal de la charla informativa para futuros Pares.
- * - Se abre a los `delayMs` de llegar, una sola vez por sesión.
+ * - Se abre a los `delayMs` de llegar, en cada visita, hasta el día de la charla.
  * - Si en ese momento hay otro <dialog> abierto (ej. "Quiero acompañamiento"), no aparece.
  * - No aparece una vez pasada la charla.
  */
@@ -36,7 +18,7 @@ export function WebinarModal({ webinar }: { webinar: Webinar }) {
   const ref = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
-    if (Date.now() > new Date(webinar.fin).getTime() || yaVisto()) return;
+    if (Date.now() > new Date(webinar.fin).getTime()) return;
 
     const timeout = setTimeout(() => {
       const el = ref.current;
@@ -44,7 +26,6 @@ export function WebinarModal({ webinar }: { webinar: Webinar }) {
       // acompañamiento: no le ofrecemos la charla para ser Par.
       if (!el || el.open || document.querySelector("dialog[open]")) return;
       el.showModal();
-      marcarVisto();
     }, webinar.delayMs);
 
     return () => clearTimeout(timeout);
