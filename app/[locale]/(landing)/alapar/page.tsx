@@ -17,6 +17,7 @@ import { Sostener } from "@/components/alapar/Sostener";
 import { Cierre } from "@/components/alapar/Cierre";
 import { AcompanamientoProvider } from "@/components/alapar/AcompanamientoModal";
 import { WebinarModal } from "@/components/alapar/WebinarModal";
+import { WebinarAviso } from "@/components/alapar/WebinarAviso";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org";
 
@@ -65,6 +66,7 @@ export default async function AlaParPage({ params }: { params: Promise<{ locale:
       <AcompanamientoProvider modal={c.modal}>
       <TopBar nav={c.nav} />
       <Hero hero={c.hero} />
+      <WebinarAviso webinar={c.webinar} variant="banda" />
       <Momento momento={c.momento} apoyo={c.apoyo} />
       <Contraste contraste={c.contraste} />
       <Dato dato={c.dato} />
