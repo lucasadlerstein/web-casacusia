@@ -92,6 +92,9 @@ const ProgramaSchema = z.object({
   categorias: z.array(z.enum(["comunidad", "herramientas", "sociedad"])),
   cta: z.object({ label: z.string(), href: z.string() }),
   destacado: z.boolean(),
+  // Programas con landing propia (p. ej. /alapar): no tienen página en /programas/[slug]
+  landing: z.string().optional(),
+  nuevo: z.boolean().optional(),
   orden: z.number()
 });
 export type Programa = z.infer<typeof ProgramaSchema>;

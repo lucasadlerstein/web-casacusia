@@ -8,6 +8,11 @@ import { getProgramas } from "@/lib/content";
 
 // Mapeo manual de fotos e íconos para cada programa basado en su slug
 const programAssets: Record<string, { photo: string; icon: React.ReactNode; color: string }> = {
+  "alapar": {
+    photo: "/alapar/momento-abrazo.jpg",
+    icon: <HeartHandshake size={24} aria-hidden />,
+    color: "from-alapar-cereza/80 to-alapar-cereza-deep/90"
+  },
   "encuentros": {
     photo: "/fotos/propuestas/Casacusia_GZ-21.jpg",
     icon: <Users size={24} aria-hidden />,
@@ -48,7 +53,10 @@ const programAssets: Record<string, { photo: string; icon: React.ReactNode; colo
 export function EjesYProgramas() {
   const t = useTranslations("home.iniciativas");
   const tItems = useTranslations("programas.items");
-  const programas = getProgramas();
+  const todos = getProgramas();
+  // El programa nuevo va destacado arriba, a lo ancho; el resto en la grilla
+  const nuevo = todos.find((p) => p.nuevo);
+  const programas = todos.filter((p) => p !== nuevo);
 
   return (
     <Section background="tint" ariaLabelledBy="ejes-title" className="pt-24 pb-32">
@@ -65,6 +73,50 @@ export function EjesYProgramas() {
           {t("body")}
         </p>
       </div>
+
+      {nuevo && (
+        <article className="group relative mb-8 grid overflow-hidden rounded-3xl bg-alapar-cereza shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-alapar-cereza/20 md:grid-cols-[1.15fr_1fr]">
+          <div className="flex flex-col justify-center p-8 md:p-12">
+            <p className="inline-flex w-fit items-center rounded-full bg-alapar-ambar px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink">
+              {t("nuevoPrograma")}
+            </p>
+            <h3 className="mt-5 font-display text-3xl md:text-4xl font-extrabold leading-tight text-alapar-crema">
+              {nuevo.titulo}
+              <span className="mt-1 block text-lg md:text-xl font-semibold text-alapar-crema/80">
+                {nuevo.subtitulo}
+              </span>
+            </h3>
+            <p className="mt-5 text-lg leading-relaxed text-alapar-crema/90">
+              {nuevo.resumen}
+            </p>
+            <div className="mt-8">
+              <Link
+                href={nuevo.landing ?? nuevo.cta.href}
+                className="inline-flex items-center gap-2 rounded-full bg-alapar-crema px-6 py-3 font-bold text-alapar-cereza transition-colors hover:bg-white after:absolute after:inset-0"
+              >
+                {nuevo.cta.label}
+                <ArrowRight size={18} aria-hidden />
+              </Link>
+            </div>
+          </div>
+          <div className="relative order-first min-h-[220px] md:order-none md:min-h-[380px]">
+            <Image
+              src={programAssets[nuevo.slug]?.photo ?? "/fotos/hero-comunidad.jpg"}
+              alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 45vw"
+              className="object-cover object-[center_30%] transition-transform duration-700 group-hover:scale-105"
+            />
+            <Image
+              src="/alapar/logo-crema.png"
+              alt=""
+              width={1081}
+              height={1081}
+              className="absolute bottom-4 right-4 h-20 w-20 md:bottom-5 md:right-5 md:h-28 md:w-28 drop-shadow-lg"
+            />
+          </div>
+        </article>
+      )}
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {programas.map((p) => {

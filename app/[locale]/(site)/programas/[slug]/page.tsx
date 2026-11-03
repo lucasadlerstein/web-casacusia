@@ -5,7 +5,7 @@ import { setRequestLocale } from "next-intl/server";
 import { ArrowRight, Calendar, MessageCircle, Headphones, MapPin, Users, Sparkles, Bot, BookOpen, Mic } from "lucide-react";
 
 import { Section } from "@/components/ui/Section";
-import { Link } from "@/lib/i18n/navigation";
+import { Link, redirect } from "@/lib/i18n/navigation";
 import { TestimonioBlocks } from "@/components/sections/TestimonioBlocks";
 import { GruposWhatsapp } from "@/components/sections/GruposWhatsapp";
 import { RotatingImage } from "@/components/ui/RotatingImage";
@@ -57,7 +57,9 @@ const COUNTRY_INFO: Record<string, { name: string; flag: string }> = {
 };
 
 export async function generateStaticParams() {
-  return getProgramas().map((p) => ({ slug: p.slug }));
+  return getProgramas()
+    .filter((p) => !p.landing)
+    .map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -211,6 +213,8 @@ export default async function ProgramaDetailPage({
   setRequestLocale(locale);
   const programa = getProgramas().find((p) => p.slug === slug);
   if (!programa) notFound();
+  // Los programas con landing propia viven fuera de /programas
+  if (programa.landing) redirect({ href: programa.landing, locale });
 
   const config = CONFIGS[slug];
   const testimonios = config?.proyectoTestimonio

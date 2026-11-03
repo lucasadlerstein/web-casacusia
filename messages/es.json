@@ -153,7 +153,8 @@
     "iniciativas": {
       "eyebrow": "",
       "title": "Nuestros programas",
-      "body": "Buscamos acompañarte en cada etapa, conectar historias y fomentar una sociedad más consciente y solidaria."
+      "body": "Buscamos acompañarte en cada etapa, conectar historias y fomentar una sociedad más consciente y solidaria.",
+      "nuevoPrograma": "Nuevo programa"
     },
     "impacto": {
       "eyebrow": "Nuestro impacto",
@@ -795,7 +796,8 @@
         "resumen": "Charlas y workshops para organizaciones, universidades y escuelas.",
         "cta": "Pedir una charla"
       }
-    }
+    },
+    "nuevo": "Nuevo"
   },
   "contacto": {
     "title": "Contacto · Escribinos según tu consulta",
