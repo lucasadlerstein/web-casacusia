@@ -24,7 +24,8 @@ export async function generateMetadata({
   });
 }
 
-const programaAssets: Record<string, { foto?: string; youtubeId?: string; tono: "verde" | "violeta" | "rosa" | "amarillo" | "teal" }> = {
+const programaAssets: Record<string, { foto?: string; youtubeId?: string; tono: "verde" | "violeta" | "rosa" | "amarillo" | "teal" | "alapar" }> = {
+  "alapar":               { foto: "/alapar/momento-abrazo.jpg",                 tono: "alapar" },
   "encuentros":           { foto: "/fotos/propuestas/Casacusia_GZ-21.jpg",       tono: "verde" },
   "encuentros-virtuales": { foto: "/fotos-nuevas/eventos/captura-de-pantalla-2025-12-26-a-las-123513-p-m.jpg", tono: "violeta" },
   "red-padres-madres":    { youtubeId: "QQSehCQct20",                           tono: "rosa" },
@@ -46,7 +47,8 @@ const tonoBg: Record<string, string> = {
   violeta:  "bg-violeta-soft",
   rosa:     "bg-rosa-soft",
   amarillo: "bg-amarillo-soft",
-  teal:     "bg-brand-teal-soft"
+  teal:     "bg-brand-teal-soft",
+  alapar:   "bg-alapar-rosa-soft"
 };
 
 const tonoAccent: Record<string, string> = {
@@ -54,7 +56,8 @@ const tonoAccent: Record<string, string> = {
   violeta:  "text-violeta-dark",
   rosa:     "text-rosa-dark",
   amarillo: "text-ink-soft",
-  teal:     "text-brand-teal-dark"
+  teal:     "text-brand-teal-dark",
+  alapar:   "text-alapar-cereza"
 };
 
 export default async function ProgramasPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -120,6 +123,11 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
                     {t("proximamente")}
                   </div>
                 )}
+                {p.nuevo && (
+                  <div className="absolute top-4 left-4 inline-flex items-center rounded-full bg-alapar-ambar text-ink px-3 py-1 text-[10px] font-bold uppercase tracking-wider">
+                    {t("nuevo")}
+                  </div>
+                )}
               </div>
 
               {/* Contenido */}
@@ -171,12 +179,14 @@ export default async function ProgramasPage({ params }: { params: Promise<{ loca
                       <ArrowRight size={14} aria-hidden />
                     </Link>
                   )}
-                  <Link
-                    href={`/programas/${p.slug}`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-soft hover:text-ink underline underline-offset-4"
-                  >
-                    {t("verDetalle")}
-                  </Link>
+                  {!p.landing && (
+                    <Link
+                      href={`/programas/${p.slug}`}
+                      className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-soft hover:text-ink underline underline-offset-4"
+                    >
+                      {t("verDetalle")}
+                    </Link>
+                  )}
                 </div>
               </div>
             </article>

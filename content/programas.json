@@ -1,5 +1,17 @@
 [
   {
+    "slug": "alapar",
+    "titulo": "A la Par",
+    "subtitulo": "Acompañamiento entre pares",
+    "resumen": "Quien transita la hipoacusia hace mucho, acompaña a quien recién empieza. Un programa gratuito de acompañamiento 1 a 1 entre personas con hipoacusia y sus familias. Estamos formando a los primeros Pares.",
+    "categorias": ["comunidad"],
+    "cta": { "label": "Conocer A la Par", "href": "/alapar" },
+    "destacado": true,
+    "landing": "/alapar",
+    "nuevo": true,
+    "orden": 0
+  },
+  {
     "slug": "encuentros",
     "titulo": "Encuentros presenciales",
     "subtitulo": "Nos vemos en persona",

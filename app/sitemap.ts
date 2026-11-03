@@ -54,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Programas individuales
-  for (const p of getProgramas()) {
+  for (const p of getProgramas().filter((p) => !p.landing)) {
     entries.push({
       url: urlFor(`/programas/${p.slug}`, defaultLocale),
       lastModified: now,
