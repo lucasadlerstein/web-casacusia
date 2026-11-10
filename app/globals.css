@@ -84,3 +84,9 @@
   }
 
 }
+
+/* Experiencia inmersiva: los botones que llevan a una parte de la página bajan
+   de forma suave (con movimiento reducido, tokens.css lo anula). */
+html:has([data-viaje]) {
+  scroll-behavior: smooth;
+}

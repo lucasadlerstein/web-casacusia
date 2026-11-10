@@ -56,6 +56,13 @@
   --alapar-rosa-rgb:        244 68 117;
   --alapar-naranja-rgb:     234 89 33;
 
+  /* ══ Landing Experiencia Inmersiva (identidad oscura) ════════ */
+  --exp-noche:      #05080A;   /* fondo: la sala a oscuras            */
+  --exp-noche-rgb:  5 8 10;
+  --exp-panel-rgb:  16 23 28;  /* tarjetas sobre el fondo             */
+  --exp-crema:      #FFF9F2;
+  --exp-crema-rgb:  255 249 242;
+
   /* ══ Ink (texto) ════════════════════════════════════════════ */
   --color-ink:        #143642;   /* navy del wordmark CASACUSIA — AAA ✓   */
   --color-ink-soft:   #2E5060;   /* cuerpo secundario                     */

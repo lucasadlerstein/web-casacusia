@@ -15,6 +15,7 @@ import blogData from "@/content/blog.json";
 import temasData from "@/content/temas.json";
 import tiendaData from "@/content/tienda.json";
 import alaparData from "@/content/alapar.json";
+import experienciaData from "@/content/experiencia-inmersiva.json";
 
 export const comisiones = [
   "direccion",
@@ -575,4 +576,148 @@ export type AlaParContent = z.infer<typeof AlaParSchema>;
 
 export function getAlaPar(): AlaParContent {
   return AlaParSchema.parse(alaparData);
+}
+
+/* ── Landing Experiencia Inmersiva ────────────────────────────── */
+export const experienciaAcentos = ["crema", "verde", "amatista", "rosa", "amarillo"] as const;
+export type ExperienciaAcento = (typeof experienciaAcentos)[number];
+/** Cómo se degrada la frase en cada estación del recorrido. */
+export const experienciaEfectos = ["clara", "atenuada", "recortada", "unLado", "lejana"] as const;
+export type ExperienciaEfecto = (typeof experienciaEfectos)[number];
+
+const TituloTextoSchema = z.object({ titulo: z.string(), texto: z.string() });
+const ExperienciaSchema = z.object({
+  meta: z.object({ title: z.string(), description: z.string() }),
+  demo: z.object({ aviso: z.string(), detalle: z.string() }),
+  acceso: z.object({
+    etiqueta: z.string(),
+    titulo: z.string(),
+    texto: z.string(),
+    campo: z.string(),
+    boton: z.string(),
+    entrando: z.string(),
+    errorClave: z.string(),
+    errorIntentos: z.string(),
+    sinConfigurar: z.string()
+  }),
+  nav: z.object({ logoAlt: z.string(), cta: CtaSchema }),
+  hero: z.object({
+    etiqueta: z.string(),
+    titulo: z.string(),
+    subtitulo: z.string(),
+    bajada: z.string(),
+    ctaRecorrido: CtaSchema,
+    ctaLlevar: CtaSchema
+  }),
+  viaje: z.object({
+    frase: z.string(),
+    fraseEtiqueta: z.string(),
+    sonido: z.object({
+      archivo: z.string(),
+      activar: z.string(),
+      apagar: z.string(),
+      aviso: z.string(),
+      cargando: z.string(),
+      error: z.string()
+    }),
+    estaciones: z
+      .array(
+        z.object({
+          id: z.string(),
+          lugar: z.string(),
+          titulo: z.string(),
+          efecto: z.enum(experienciaEfectos),
+          acento: z.enum(experienciaAcentos),
+          texto: z.string(),
+          descripcionAccesible: z.string(),
+          /** Ilustración animada que acompaña al título de la estación. */
+          animacion: z.enum(["oido"]).optional()
+        })
+      )
+      .min(1),
+    rumiacion: z.object({
+      lugar: z.string(),
+      titulo: z.string(),
+      pensamientos: z.array(z.string()).min(1),
+      texto: z.string()
+    }),
+    llegada: z.object({ lugar: z.string(), titulo: z.string(), texto: z.string() })
+  }),
+  muestra: z.object({ etiqueta: z.string(), titulo: z.string(), texto: z.string(), boton: z.string(), nota: z.string() }),
+  voces: z.object({
+    titulo: z.string(),
+    intro: z.string(),
+    grupos: z
+      .array(
+        z.object({
+          titulo: z.string(),
+          acento: z.enum(experienciaAcentos),
+          citas: z.array(z.object({ cita: z.string(), quien: z.string() })).min(1)
+        })
+      )
+      .min(1)
+  }),
+  formato: z.object({
+    titulo: z.string(),
+    intro: z.string(),
+    pasos: z.array(TituloTextoSchema.extend({ tiempo: z.string() })).min(1),
+    paraQuien: z.string()
+  }),
+  espacios: z.object({
+    titulo: z.string(),
+    intro: z.string(),
+    items: z.array(TituloTextoSchema).min(1),
+    fechasTitulo: z.string(),
+    fechas: z.array(z.object({ mes: z.string(), motivo: z.string() })).min(1),
+    beneficio: z.string()
+  }),
+  sala: z.object({
+    titulo: z.string(),
+    intro: z.string(),
+    requisitos: z.array(TituloTextoSchema).min(1),
+    sinSonidoTitulo: z.string(),
+    sinSonidoTexto: z.string(),
+    sinSonidoCta: CtaSchema
+  }),
+  sumate: z.object({
+    titulo: z.string(),
+    intro: z.string(),
+    modos: z
+      .array(z.object({ id: z.enum(["llevar", "avisar", "presentar"]), titulo: z.string(), texto: z.string(), boton: z.string() }))
+      .min(1),
+    campos: z.object({
+      nombre: z.string(),
+      email: z.string(),
+      ciudad: z.string(),
+      ciudadAyuda: z.string(),
+      tipoEspacio: z.string(),
+      tiposEspacio: z.array(z.string()).min(1),
+      organizacion: z.string(),
+      emailDestino: z.string(),
+      emailDestinoAyuda: z.string(),
+      vinculo: z.string(),
+      vinculos: z.array(z.string()).min(1),
+      motivo: z.string(),
+      elegir: z.string()
+    }),
+    enviando: z.string(),
+    nota: z.string(),
+    ok: z.object({ llevar: z.string(), avisar: z.string(), presentar: z.string() }),
+    errores: z.object({ validacion: z.string(), email: z.string(), rate: z.string(), generico: z.string() }),
+    /** Mensaje que la persona envía desde su propio correo al área de su trabajo. */
+    mensaje: z.object({ boton: z.string(), asunto: z.string(), cuerpo: z.string() })
+  }),
+  cierre: z.object({
+    frase: z.string(),
+    cta: CtaSchema,
+    creditos: z.string(),
+    programaDe: z.string(),
+    casacusia: z.string(),
+    hrefCasacusia: z.string()
+  })
+});
+export type ExperienciaContent = z.infer<typeof ExperienciaSchema>;
+
+export function getExperiencia(): ExperienciaContent {
+  return ExperienciaSchema.parse(experienciaData);
 }
