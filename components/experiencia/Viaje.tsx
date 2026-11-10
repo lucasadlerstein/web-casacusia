@@ -91,7 +91,6 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
             <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.02em] text-exp-crema sm:text-5xl md:text-6xl">
               {e.titulo}
             </h2>
-            {e.animacion === "oido" && <OndasOido />}
             <Frase
               frase={viaje.frase}
               efecto={e.efecto}
@@ -99,6 +98,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
               descripcion={e.descripcionAccesible}
             />
             <p className="max-w-2xl text-lg leading-relaxed text-exp-crema/80 md:text-xl">{e.texto}</p>
+            {e.animacion === "oido" && <OndasOido />}
           </Panel>
         ))}
 

@@ -22,14 +22,16 @@ type Mezcla = {
   corte: number;
   /** De -1 (solo oído izquierdo) a 1 (solo derecho). */
   paneo: number;
+  /** Cuánto sube y baja el volumen solo (0 = estable). */
+  vaiven?: number;
 };
 
 const CLARA: Mezcla = { volumen: 0.9, corte: 16000, paneo: 0 };
 
 const MEZCLAS: Record<string, Mezcla> = {
   clara: CLARA,
-  // Conductiva: llega todo, pero bajito y tapado.
-  atenuada: { volumen: 0.16, corte: 2200, paneo: 0 },
+  // Conductiva: llega todo, pero bajito, tapado y con vaivén.
+  atenuada: { volumen: 0.17, corte: 2200, paneo: 0, vaiven: 0.11 },
   // Neurosensorial: el volumen está, se pierden los agudos (las consonantes).
   recortada: { volumen: 0.85, corte: 850, paneo: 0 },
   // Unilateral: un solo oído. El derecho es el que se apaga, igual que en el fondo.
@@ -48,6 +50,8 @@ type Audio = {
   filtros: [BiquadFilterNode, BiquadFilterNode];
   ganancia: GainNode;
   paneo: StereoPannerNode;
+  /** Profundidad del vaivén de volumen. */
+  vaiven: GainNode;
   maestro: GainNode;
 };
 
@@ -101,6 +105,7 @@ export function ViajeSonido({ sonido }: { sonido: ExperienciaContent["viaje"]["s
       for (const filtro of audio.filtros) filtro.frequency.setTargetAtTime(corte, ahora, 0.08);
       audio.ganancia.gain.setTargetAtTime(mezclar(a.volumen, b.volumen, t), ahora, 0.08);
       audio.paneo.pan.setTargetAtTime(mezclar(a.paneo, b.paneo, t), ahora, 0.08);
+      audio.vaiven.gain.setTargetAtTime(mezclar(a.vaiven ?? 0, b.vaiven ?? 0, t), ahora, 0.08);
     }
     const pedir = () => {
       if (!cuadro) cuadro = requestAnimationFrame(aplicar);
@@ -157,12 +162,19 @@ export function ViajeSonido({ sonido }: { sonido: ExperienciaContent["viaje"]["s
         }
         const ganancia = ctx.createGain();
         ganancia.gain.value = 0;
+        // Un oscilador muy lento que sube y baja el volumen (mismo ritmo que las letras).
+        const onda = ctx.createOscillator();
+        onda.frequency.value = 1.1 / (2 * Math.PI);
+        const vaiven = ctx.createGain();
+        vaiven.gain.value = 0;
+        onda.connect(vaiven).connect(ganancia.gain);
+        onda.start();
         const paneo = ctx.createStereoPanner();
         const maestro = ctx.createGain();
         maestro.gain.value = 0;
         fuente.connect(filtros[0]).connect(filtros[1]).connect(ganancia).connect(paneo).connect(maestro).connect(ctx.destination);
         fuente.start();
-        audio = { ctx, filtros, ganancia, paneo, maestro };
+        audio = { ctx, filtros, ganancia, paneo, vaiven, maestro };
         audioRef.current = audio;
       } catch {
         void ctx.close();

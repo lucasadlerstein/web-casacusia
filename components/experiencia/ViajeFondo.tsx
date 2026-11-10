@@ -89,10 +89,13 @@ const azar = (i: number) => {
 };
 
 /** Cuánto llega cada letra a su lugar (0 = se queda en la espiral) y cómo se ve al llegar. */
-function llegada(efecto: string, letra: Letra): { llega: number; alfa: number; escala: number } {
+function llegada(efecto: string, letra: Letra, segundos: number): { llega: number; alfa: number; escala: number } {
   switch (efecto) {
-    case "atenuada":
-      return { llega: 1, alfa: 0.3, escala: 0.9 };
+    case "atenuada": {
+      // Conductiva: llega todo, pero débil y con vaivén, como un oído que se tapa y se destapa.
+      const vaiven = 0.5 + 0.5 * Math.sin(segundos * 1.1);
+      return { llega: 1, alfa: 0.1 + 0.36 * vaiven * vaiven, escala: 0.9 };
+    }
     case "recortada":
       return { llega: letra.aguda ? 0 : 1, alfa: 1, escala: 1 };
     case "unLado":
@@ -305,7 +308,7 @@ export function ViajeFondo() {
         const casaX = cx + Math.cos(angulo) * radio;
         const casaY = cy + Math.sin(angulo) * radio;
 
-        const destino = llegada(frase.efecto, letra);
+        const destino = llegada(frase.efecto, letra, segundos);
         // Salen de a una, en orden de lectura.
         const orden = total > 1 ? j / (total - 1) : 0;
         const k = suave(acotar(cercania * 1.6 - orden * 0.6)) * destino.llega;
