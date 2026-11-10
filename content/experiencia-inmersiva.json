@@ -1,0 +1,334 @@
+{
+  "meta": {
+    "title": "¿Cómo oye quien no oye? Una experiencia inmersiva de Casacusia sobre la sordera e hipoacusia",
+    "description": "17 minutos a oscuras para oír como oye una persona con sordera, hipoacusia o pérdida auditiva, y después conversar sobre lo que nos pasó. Llevala a tu empresa, tu escuela o tu institución."
+  },
+  "demo": {
+    "aviso": "Versión demo",
+    "detalle": "Versión de trabajo para el equipo: todavía no es pública."
+  },
+  "acceso": {
+    "etiqueta": "Versión de trabajo",
+    "titulo": "Esta página todavía no es pública",
+    "texto": "Estamos terminando de armarla con el equipo. Si te compartieron la clave, ingresala para verla.",
+    "campo": "Clave",
+    "boton": "Entrar",
+    "entrando": "Entrando…",
+    "errorClave": "Esa clave no es correcta. Probá de nuevo.",
+    "errorIntentos": "Demasiados intentos. Esperá un minuto y probá de nuevo.",
+    "sinConfigurar": "La página todavía no está habilitada. Falta configurar la clave de acceso."
+  },
+  "nav": {
+    "logoAlt": "Casacusia, ir al inicio de la página",
+    "cta": "Llevarla a mi espacio"
+  },
+  "hero": {
+    "etiqueta": "Experiencia inmersiva · 17 minutos · Sala a oscuras",
+    "titulo": "¿Cómo oye quien no oye?",
+    "subtitulo": "Una experiencia inmersiva de Casacusia sobre la sordera e hipoacusia.",
+    "bajada": "Para ponerte en el lugar de quien no oye, primero tenés que oír así. Bajá y seguí el camino del sonido hacia adentro.",
+    "ctaRecorrido": "Empezar el recorrido",
+    "ctaLlevar": "Llevarla a mi espacio"
+  },
+  "viaje": {
+    "frase": "¿Pasás a buscarme el sábado a las siete?",
+    "fraseEtiqueta": "La misma frase",
+    "sonido": {
+      "archivo": "/experiencia/frase-demo.mp3",
+      "activar": "Activar sonido",
+      "apagar": "Silenciar",
+      "aviso": "Mejor con auriculares",
+      "cargando": "Cargando el sonido…",
+      "error": "No pudimos cargar el sonido. Probá de nuevo."
+    },
+    "estaciones": [
+      {
+        "id": "sonido",
+        "lugar": "Afuera",
+        "titulo": "Una frase cualquiera",
+        "efecto": "clara",
+        "acento": "crema",
+        "texto": "Alguien te habla. El sonido viaja por el aire, entra por la oreja y sigue camino hacia adentro. Cuando todo funciona, ni lo pensás.",
+        "descripcionAccesible": "La frase se lee completa y nítida.",
+        "animacion": "oido"
+      },
+      {
+        "id": "conductiva",
+        "lugar": "Oído externo y medio",
+        "titulo": "Sordera conductiva",
+        "efecto": "atenuada",
+        "acento": "verde",
+        "texto": "El sonido no logra pasar. Llega más débil, como si viniera de otra habitación. Lo propio (masticar, tu voz) se oye fuerte; lo de afuera, suave.",
+        "descripcionAccesible": "La frase se ve entera pero muy tenue, y por momentos casi desaparece, como un sonido que llega con poco volumen y va y viene."
+      },
+      {
+        "id": "neurosensorial",
+        "lugar": "Cóclea y nervio auditivo",
+        "titulo": "Sordera neurosensorial",
+        "efecto": "recortada",
+        "acento": "amatista",
+        "texto": "Se oye la voz, pero cuesta entender las palabras. Lo más común es perder primero los agudos: la p, la k, la t, la ch, la f, la s y la z desaparecen.",
+        "descripcionAccesible": "A la frase le faltan casi todas las consonantes agudas: quedan las vocales y pocas letras más, y ya no se entiende."
+      },
+      {
+        "id": "unilateral",
+        "lugar": "Un solo oído",
+        "titulo": "Sordera unilateral",
+        "efecto": "unLado",
+        "acento": "rosa",
+        "texto": "Un oído oye y el otro oye poco o nada. Lo que llega del lado afectado se pierde, y no se sabe de dónde viene el sonido: ¿adelante, atrás, izquierda, derecha?",
+        "descripcionAccesible": "La mitad izquierda de la frase se lee bien y la mitad derecha se desvanece hasta desaparecer."
+      },
+      {
+        "id": "bilateral",
+        "lugar": "Los dos oídos",
+        "titulo": "Sordera bilateral",
+        "efecto": "lejana",
+        "acento": "amarillo",
+        "texto": "Cuando la pérdida está en los dos oídos no hay un lado bueno hacia donde girar la cabeza. Cada conversación pide atención completa, todo el día.",
+        "descripcionAccesible": "La frase se ve tenue, borrosa y además le faltan consonantes: casi no queda nada para entender."
+      }
+    ],
+    "rumiacion": {
+      "lugar": "La cabeza",
+      "titulo": "Y mientras tanto, por dentro",
+      "pensamientos": [
+        "¿Pregunto de nuevo?",
+        "Ya pregunté dos veces.",
+        "Mejor sonrío y asiento.",
+        "¿De qué se están riendo?",
+        "¿Se habrán dado cuenta?",
+        "Qué cansancio."
+      ],
+      "texto": "Esto también es pérdida auditiva: la fatiga, la frustración y quedarse afuera de la conversación. No se ve, y casi nunca se cuenta."
+    },
+    "llegada": {
+      "lugar": "El cuerpo",
+      "titulo": "Leerlo no alcanza. Hay que oírlo.",
+      "texto": "En la sala se apagan las luces y durante 17 minutos oís escenas de todos los días como las oye una persona con sordera o hipoacusia. Después se prenden las luces y conversamos."
+    }
+  },
+  "muestra": {
+    "etiqueta": "Muy pronto",
+    "titulo": "Un minuto y medio para probarla",
+    "texto": "Estamos preparando una muestra de la experiencia para escuchar acá mismo. Vas a necesitar auriculares y un lugar tranquilo.",
+    "boton": "Escuchar la muestra",
+    "nota": "Disponible próximamente"
+  },
+  "voces": {
+    "titulo": "Lo que pasó cuando se prendieron las luces",
+    "intro": "La presentamos por primera vez en la Expo Hipoacusia. Esto escribieron después quienes la vivieron.",
+    "grupos": [
+      {
+        "titulo": "Quienes oyen, entendieron",
+        "acento": "verde",
+        "citas": [
+          {
+            "cita": "Lo que lloré al entender por lo que pasan y no nos damos cuenta.",
+            "quien": "Visitante de la Expo"
+          },
+          {
+            "cita": "Ponerse en los zapatos de otros fue impactante. Es una experiencia que debería llevarse a los colegios.",
+            "quien": "Visitante de la Expo"
+          },
+          {
+            "cita": "Nos hace compartir y entender mucho mejor a nuestro familiar.",
+            "quien": "Familiar de una persona con hipoacusia"
+          }
+        ]
+      },
+      {
+        "titulo": "Quienes viven con pérdida auditiva encontraron su voz",
+        "acento": "amatista",
+        "citas": [
+          {
+            "cita": "Es la primera vez que siento que tuvo voz todo lo que con palabras no puedo explicar.",
+            "quien": "Persona con hipoacusia"
+          },
+          {
+            "cita": "Fue exteriorizar lo que por años traté de explicar que sucedía en mi cabeza.",
+            "quien": "Persona con implante coclear"
+          },
+          {
+            "cita": "Me vi reflejada y entendí cómo normalicé durante tantos años el gran esfuerzo que hago para poder escuchar y entender.",
+            "quien": "Persona con hipoacusia"
+          }
+        ]
+      }
+    ]
+  },
+  "formato": {
+    "titulo": "Una hora que cambia cómo nos escuchamos",
+    "intro": "17 minutos de experiencia y 40 de conversación. Llevamos la experiencia lista para proyectar y facilitamos el diálogo.",
+    "pasos": [
+      {
+        "tiempo": "17 min",
+        "titulo": "Oír",
+        "texto": "Sala a oscuras, sonido estéreo. Cuatro escenas cotidianas oídas con cuatro pérdidas auditivas distintas."
+      },
+      {
+        "tiempo": "En pantalla",
+        "titulo": "Entender",
+        "texto": "Después de cada escena se explica, de forma simple, qué pasó en el oído y por qué se oyó así."
+      },
+      {
+        "tiempo": "40 min",
+        "titulo": "Dialogar",
+        "texto": "Qué nos generó, qué nos pasó por el cuerpo y por el corazón. Hablan quienes oyen y quienes no."
+      },
+      {
+        "tiempo": "Al salir",
+        "titulo": "Hacer",
+        "texto": "Cada grupo se lleva gestos concretos para que nadie quede afuera de la conversación."
+      }
+    ],
+    "paraQuien": "Está pensada para personas oyentes. Y muchas personas con hipoacusia la eligen para que su familia, sus amistades y su trabajo entiendan lo que viven."
+  },
+  "espacios": {
+    "titulo": "¿A dónde la llevamos?",
+    "intro": "A cualquier lugar donde haya personas dispuestas a escuchar distinto.",
+    "items": [
+      {
+        "titulo": "Empresas",
+        "texto": "Una actividad de inclusión lista para usar: una charla interna, una jornada de diversidad, un encuentro con clientes."
+      },
+      {
+        "titulo": "Escuelas y universidades",
+        "texto": "Para que estudiantes y docentes entiendan cómo oye quien se sienta en el aula con sordera o hipoacusia."
+      },
+      {
+        "titulo": "Gobierno e instituciones",
+        "texto": "Para equipos que atienden al público, diseñan políticas o quieren abrir la conversación sobre discapacidades que no se ven."
+      },
+      {
+        "titulo": "Celebraciones y grupos",
+        "texto": "Un cumpleaños o un encuentro distinto, para compartir con tu gente algo que cuesta explicar con palabras."
+      }
+    ],
+    "fechasTitulo": "Tres momentos del año que la piden",
+    "fechas": [
+      {
+        "mes": "Marzo",
+        "motivo": "Mes de la audición"
+      },
+      {
+        "mes": "Septiembre",
+        "motivo": "Mes de la sordera"
+      },
+      {
+        "mes": "Diciembre",
+        "motivo": "Mes de la discapacidad"
+      }
+    ],
+    "beneficio": "Toda función privada es a beneficio de Casacusia: sostiene los encuentros, la Recursera y el acompañamiento a personas con pérdida auditiva y sus familias."
+  },
+  "sala": {
+    "titulo": "Lo que necesita la sala",
+    "intro": "Oscuridad, pantalla y buen sonido. Sirve desde 15 hasta 300 butacas.",
+    "requisitos": [
+      {
+        "titulo": "Que se pueda oscurecer",
+        "texto": "Como un cine, un microcine o una sala audiovisual."
+      },
+      {
+        "titulo": "Pantalla o proyector",
+        "texto": "De buen tamaño, para que los textos se lean desde el fondo."
+      },
+      {
+        "titulo": "Sonido estéreo",
+        "texto": "Con buena acústica. Es el corazón de la experiencia."
+      },
+      {
+        "titulo": "Silencio afuera",
+        "texto": "Sin ruidos del exterior durante los 17 minutos."
+      },
+      {
+        "titulo": "Una hora en total",
+        "texto": "17 minutos de experiencia y 40 de conversación."
+      }
+    ],
+    "sinSonidoTitulo": "¿Tu sala no tiene buen sonido?",
+    "sinSonidoTexto": "Anotate igual. Estamos buscando la forma de hacerlo posible y, cuando la encontremos, nos contactamos con vos.",
+    "sinSonidoCta": "Anotarme"
+  },
+  "sumate": {
+    "titulo": "Vivila, llevala o hacela llegar",
+    "intro": "Elegí lo que querés hacer y dejanos tus datos.",
+    "modos": [
+      {
+        "id": "llevar",
+        "titulo": "Llevarla a mi espacio",
+        "texto": "Tengo una empresa, escuela, institución o sala en mente.",
+        "boton": "Quiero coordinar una función"
+      },
+      {
+        "id": "avisar",
+        "titulo": "Avisarme cuando haya función",
+        "texto": "Quiero vivirla con alguien cuando llegue a mi ciudad.",
+        "boton": "Avisenme"
+      },
+      {
+        "id": "presentar",
+        "titulo": "Presentarla en mi trabajo",
+        "texto": "Quiero que llegue a Personas, Diversidad o Sustentabilidad de mi organización.",
+        "boton": "Preparar el mensaje"
+      }
+    ],
+    "campos": {
+      "nombre": "Tu nombre",
+      "email": "Tu email",
+      "ciudad": "Tu ciudad",
+      "ciudadAyuda": "Así sabemos dónde hay ganas de vivirla.",
+      "tipoEspacio": "¿Qué tipo de espacio es?",
+      "tiposEspacio": [
+        "Empresa",
+        "Escuela privada",
+        "Escuela pública",
+        "Universidad",
+        "Gobierno o institución pública",
+        "Organización social",
+        "Celebración o grupo",
+        "Otro"
+      ],
+      "organizacion": "Nombre de la organización",
+      "emailDestino": "Email del área a la que querés que llegue",
+      "emailDestinoAyuda": "Te armamos un mensaje para que lo envíes desde tu correo.",
+      "vinculo": "¿Cuál es tu vínculo con la hipoacusia? (opcional)",
+      "vinculos": [
+        "Tengo sordera, hipoacusia o pérdida auditiva",
+        "Alguien de mi familia o cercano",
+        "Trabajo en salud o educación",
+        "Ninguno, me interesa el tema",
+        "Prefiero no decirlo"
+      ],
+      "motivo": "¿Por qué querés llevarla? (opcional)",
+      "elegir": "Elegí una opción"
+    },
+    "enviando": "Enviando…",
+    "nota": "Usamos tus datos solo para contactarte por esta experiencia.",
+    "ok": {
+      "llevar": "¡Gracias! Recibimos tu pedido. Te vamos a escribir para coordinar los detalles.",
+      "avisar": "¡Listo! Te vamos a avisar cuando haya una función en tu ciudad.",
+      "presentar": "¡Gracias! Te dejamos el mensaje listo para que lo envíes desde tu correo."
+    },
+    "errores": {
+      "validacion": "Revisá los datos: necesitamos tu nombre, un email válido y tu ciudad.",
+      "email": "Ese email no parece recibir correo. ¿Lo revisás?",
+      "rate": "Recibimos varios envíos seguidos. Esperá un minuto y probá de nuevo.",
+      "generico": "No pudimos guardar tus datos. Probá de nuevo en un rato o escribinos a somos@casacusia.org."
+    },
+    "mensaje": {
+      "boton": "Abrir el mensaje en mi correo",
+      "asunto": "Una experiencia para ponernos en el lugar de quien no oye",
+      "cuerpo": "Hola:\n\nQuiero acercarles una propuesta de Fundación Casacusia: «¿Cómo oye quien no oye?», una experiencia inmersiva sobre la sordera e hipoacusia. Son 17 minutos en una sala a oscuras, oyendo escenas de todos los días como las oye una persona con pérdida auditiva, y después una conversación abierta de 40 minutos.\n\nMe gustaría que la vivamos en nuestro espacio de trabajo. Acá está toda la información:\n{url}\n\nGracias,\n{nombre}"
+    }
+  },
+  "cierre": {
+    "frase": "Después de oír así, no escuchás igual.",
+    "cta": "Llevarla a mi espacio",
+    "creditos": "Una experiencia de Casacusia, creada por Valentino Fama y Beltrán Bunge.",
+    "programaDe": "Una iniciativa de",
+    "casacusia": "Fundación Casacusia",
+    "hrefCasacusia": "/"
+  }
+}

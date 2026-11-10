@@ -55,6 +55,13 @@ const config: Config = {
           "naranja-soft": "var(--alapar-naranja-soft)"
         },
 
+        /* ── Landing Experiencia Inmersiva ── */
+        exp: {
+          noche: "rgb(var(--exp-noche-rgb) / <alpha-value>)",
+          panel: "rgb(var(--exp-panel-rgb) / <alpha-value>)",
+          crema: "rgb(var(--exp-crema-rgb) / <alpha-value>)"
+        },
+
         /* ── Ink ── */
         ink: {
           DEFAULT: "var(--color-ink)",
@@ -122,10 +129,23 @@ const config: Config = {
         marquee: {
           "0%":   { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" }
+        },
+        // Experiencia inmersiva: una onda de sonido que viaja hacia la oreja…
+        "exp-onda": {
+          "0%":   { transform: "translateX(0) scale(0.6)", opacity: "0" },
+          "20%":  { opacity: "1" },
+          "75%":  { opacity: "0.8" },
+          "100%": { transform: "translateX(112px) scale(1.15)", opacity: "0" }
+        },
+        // …y los puntos que siguen camino hacia adentro.
+        "exp-flujo": {
+          to: { strokeDashoffset: "-16" }
         }
       },
       animation: {
-        marquee: "marquee 20s linear infinite"
+        marquee: "marquee 20s linear infinite",
+        "exp-onda": "exp-onda 2.4s linear infinite",
+        "exp-flujo": "exp-flujo 1.2s linear infinite"
       }
     }
   },
