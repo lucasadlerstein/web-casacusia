@@ -558,6 +558,8 @@ const AlaParSchema = z.object({
     ctaAgendar: CtaSchema,
     calendarTitulo: z.string(),
     calendarDetalle: z.string(),
+    // Invitación del evento real en Google Calendar; si falta, se arma un link con los datos de arriba
+    agendarUrl: z.string().url().optional(),
     cerrar: z.string(),
     /** A los cuántos milisegundos de llegar a la página se abre el modal. */
     delayMs: z.number().int().nonnegative()

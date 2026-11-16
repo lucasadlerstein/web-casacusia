@@ -9,6 +9,7 @@ function gcalDate(iso: string): string {
 
 /** Link a Google Calendar con el evento de la charla ya cargado. */
 export function calendarUrl(w: Webinar): string {
+  if (w.agendarUrl) return w.agendarUrl;
   const params = new URLSearchParams({
     action: "TEMPLATE",
     text: w.calendarTitulo,
