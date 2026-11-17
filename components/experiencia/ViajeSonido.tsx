@@ -198,6 +198,9 @@ export function ViajeSonido({ sonido }: { sonido: ExperienciaContent["viaje"]["s
     setEstado("apagado");
   }, []);
 
+  // Sin grabación no hay botón: la voz real la aportan Valentino y Beltrán.
+  if (!sonido.archivo) return null;
+
   const sonando = estado === "sonando";
   const etiqueta = sonando ? sonido.apagar : estado === "cargando" ? sonido.cargando : sonido.activar;
 

@@ -1,18 +1,16 @@
 "use server";
 
-import { cookies, headers } from "next/headers";
+import { headers } from "next/headers";
 import { checkBotId } from "botid/server";
 import { z } from "zod";
 
 import { assessSubscriber } from "@/lib/antispam";
-import { COOKIE_ACCESO, DIAS_ACCESO, estadoAcceso, validarClave } from "@/lib/experiencia-acceso";
 
 /**
  * Landing /experiencia-inmersiva.
  *
- * - `entrar`: valida la clave de acceso mientras la página es solo para el equipo.
- * - `anotarse`: guarda a quien se anota en Supabase (tabla `experiencia_interesados`)
- *   y avisa por mail al buzón del equipo.
+ * `anotarse` guarda a quien se anota en Supabase (tabla `experiencia_interesados`)
+ * y avisa por mail al buzón del equipo.
  */
 
 function limitador(limite: number, ventanaMs = 60_000) {
@@ -33,30 +31,6 @@ function limitador(limite: number, ventanaMs = 60_000) {
 async function ipDeLaVisita(): Promise<string> {
   const h = await headers();
   return h.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-}
-
-/* ── Acceso con clave ─────────────────────────────────────────── */
-
-export type AccesoState = { error?: "clave" | "rate_limit" };
-
-const intentosDeClave = limitador(8);
-
-export async function entrar(_prev: AccesoState, formData: FormData): Promise<AccesoState> {
-  if (!intentosDeClave(await ipDeLaVisita())) return { error: "rate_limit" };
-
-  const intento = formData.get("clave");
-  const valor = typeof intento === "string" ? validarClave(intento) : null;
-  if (!valor) return { error: "clave" };
-
-  (await cookies()).set(COOKIE_ACCESO, valor, {
-    httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
-    sameSite: "lax",
-    path: "/",
-    maxAge: DIAS_ACCESO * 24 * 60 * 60
-  });
-  // Al cambiar la cookie, Next vuelve a renderizar la página, ya abierta.
-  return {};
 }
 
 /* ── Formulario ───────────────────────────────────────────────── */
@@ -190,8 +164,6 @@ async function avisarEquipo(data: Datos): Promise<void> {
 
 export async function anotarse(_prev: AnotarseState, formData: FormData): Promise<AnotarseState> {
   if (!envios(await ipDeLaVisita())) return { error: "rate_limit" };
-  // Mientras la página tenga clave, el formulario también.
-  if ((await estadoAcceso()) !== "abierto") return { error: "validation_failed" };
 
   const parsed = schema.safeParse(Object.fromEntries(formData.entries()));
   const exito = (d: Pick<Datos, "modo" | "nombre" | "emailDestino">): AnotarseState => ({
