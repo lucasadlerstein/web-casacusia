@@ -3,21 +3,6 @@
     "title": "¿Cómo oye quien no oye? Una experiencia inmersiva de Casacusia sobre la sordera e hipoacusia",
     "description": "17 minutos a oscuras para oír como oye una persona con sordera, hipoacusia o pérdida auditiva, y después conversar sobre lo que nos pasó. Llevala a tu empresa, tu escuela o tu institución."
   },
-  "demo": {
-    "aviso": "Versión demo",
-    "detalle": "Versión de trabajo para el equipo: todavía no es pública."
-  },
-  "acceso": {
-    "etiqueta": "Versión de trabajo",
-    "titulo": "Esta página todavía no es pública",
-    "texto": "Estamos terminando de armarla con el equipo. Si te compartieron la clave, ingresala para verla.",
-    "campo": "Clave",
-    "boton": "Entrar",
-    "entrando": "Entrando…",
-    "errorClave": "Esa clave no es correcta. Probá de nuevo.",
-    "errorIntentos": "Demasiados intentos. Esperá un minuto y probá de nuevo.",
-    "sinConfigurar": "La página todavía no está habilitada. Falta configurar la clave de acceso."
-  },
   "nav": {
     "logoAlt": "Casacusia, ir al inicio de la página",
     "cta": "Llevarla a mi espacio"
@@ -34,7 +19,7 @@
     "frase": "¿Pasás a buscarme el sábado a las siete?",
     "fraseEtiqueta": "La misma frase",
     "sonido": {
-      "archivo": "/experiencia/frase-demo.mp3",
+      "archivo": "",
       "activar": "Activar sonido",
       "apagar": "Silenciar",
       "aviso": "Mejor con auriculares",

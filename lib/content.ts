@@ -590,18 +590,6 @@ export type ExperienciaEfecto = (typeof experienciaEfectos)[number];
 const TituloTextoSchema = z.object({ titulo: z.string(), texto: z.string() });
 const ExperienciaSchema = z.object({
   meta: z.object({ title: z.string(), description: z.string() }),
-  demo: z.object({ aviso: z.string(), detalle: z.string() }),
-  acceso: z.object({
-    etiqueta: z.string(),
-    titulo: z.string(),
-    texto: z.string(),
-    campo: z.string(),
-    boton: z.string(),
-    entrando: z.string(),
-    errorClave: z.string(),
-    errorIntentos: z.string(),
-    sinConfigurar: z.string()
-  }),
   nav: z.object({ logoAlt: z.string(), cta: CtaSchema }),
   hero: z.object({
     etiqueta: z.string(),
@@ -615,6 +603,7 @@ const ExperienciaSchema = z.object({
     frase: z.string(),
     fraseEtiqueta: z.string(),
     sonido: z.object({
+      /** Grabación de la frase. Vacío = sin botón de sonido (hasta tener una voz real). */
       archivo: z.string(),
       activar: z.string(),
       apagar: z.string(),

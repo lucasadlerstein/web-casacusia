@@ -5,7 +5,7 @@ import { Bloque, Rotulo, botonClases, estiloAcento } from "./ui";
 
 type C = ExperienciaContent;
 
-export function TopBar({ nav, demo }: { nav: C["nav"]; demo: C["demo"] }) {
+export function TopBar({ nav }: { nav: C["nav"] }) {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-exp-crema/10 bg-exp-noche/75 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between gap-3">
@@ -14,12 +14,6 @@ export function TopBar({ nav, demo }: { nav: C["nav"]; demo: C["demo"] }) {
           <Image src="/brand/logos/letras-blanco.png" alt="" width={884} height={106} className="h-3 w-auto sm:h-3.5" priority />
         </a>
         <div className="flex items-center gap-3">
-          <span
-            title={demo.detalle}
-            className="hidden rounded-full border border-amarillo/50 px-3 py-1 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-amarillo sm:inline"
-          >
-            {demo.aviso}
-          </span>
           <a href="#sumate" className={botonClases("lleno", "min-h-[40px] whitespace-nowrap px-3.5 text-[0.8rem] sm:px-4 sm:text-sm")}>
             {nav.cta}
           </a>
