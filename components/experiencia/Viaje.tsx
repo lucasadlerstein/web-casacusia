@@ -34,7 +34,7 @@ function Panel({
       data-acento={acento}
       data-efecto={efecto}
       style={estiloAcento(acento)}
-      className={cn("flex min-h-[112svh] scroll-mt-16 items-center py-24", className)}
+      className={cn("flex min-h-[112svh] scroll-mt-28 items-center py-24 md:scroll-mt-16", className)}
     >
       <div className="container">
         {/* Un velo oscuro detrás del texto para que el fondo nunca le gane a la lectura. */}
@@ -61,7 +61,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
       </div>
 
       <div className="relative -mt-[100svh]">
-        <Panel id="inicio" acento="crema" efecto="clara" className="min-h-[100svh] pt-28">
+        <Panel id="inicio" acento="crema" efecto="clara" className="min-h-[100svh] pt-36 md:pt-28">
           <Rotulo>{hero.etiqueta}</Rotulo>
           <h1 className="mt-6 font-display font-extrabold tracking-[-0.03em] text-exp-crema">
             <span className="block text-[2.9rem] leading-[0.98] sm:text-7xl md:text-[5.5rem]">{hero.titulo}</span>

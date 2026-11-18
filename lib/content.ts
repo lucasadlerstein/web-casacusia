@@ -586,11 +586,19 @@ export type ExperienciaAcento = (typeof experienciaAcentos)[number];
 /** Cómo se degrada la frase en cada estación del recorrido. */
 export const experienciaEfectos = ["clara", "atenuada", "recortada", "unLado", "lejana"] as const;
 export type ExperienciaEfecto = (typeof experienciaEfectos)[number];
+/** Color de papel de cada post-it de la pared de voces. */
+export const experienciaPapeles = ["amarillo", "rosa", "verde", "amatista"] as const;
+export type ExperienciaPapel = (typeof experienciaPapeles)[number];
 
 const TituloTextoSchema = z.object({ titulo: z.string(), texto: z.string() });
 const ExperienciaSchema = z.object({
   meta: z.object({ title: z.string(), description: z.string() }),
-  nav: z.object({ logoAlt: z.string(), cta: CtaSchema }),
+  nav: z.object({
+    logoAlt: z.string(),
+    seccionesLabel: z.string(),
+    links: z.array(z.object({ href: z.string(), label: z.string() })).min(1),
+    cta: CtaSchema
+  }),
   hero: z.object({
     etiqueta: z.string(),
     titulo: z.string(),
@@ -638,15 +646,18 @@ const ExperienciaSchema = z.object({
   voces: z.object({
     titulo: z.string(),
     intro: z.string(),
-    grupos: z
-      .array(
-        z.object({
-          titulo: z.string(),
-          acento: z.enum(experienciaAcentos),
-          citas: z.array(z.object({ cita: z.string(), quien: z.string() })).min(1)
-        })
-      )
-      .min(1)
+    citas: z.array(z.object({ cita: z.string(), quien: z.string(), papel: z.enum(experienciaPapeles) })).min(1),
+    /** El último post-it: invita a dejar el propio como comentario en Instagram. */
+    dejar: z.object({
+      titulo: z.string(),
+      texto: z.string(),
+      boton: CtaSchema,
+      modalTitulo: z.string(),
+      modalTexto: z.string(),
+      ir: CtaSchema,
+      volver: CtaSchema,
+      href: z.string().url()
+    })
   }),
   formato: z.object({
     titulo: z.string(),

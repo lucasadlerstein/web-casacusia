@@ -59,7 +59,11 @@ const config: Config = {
         exp: {
           noche: "rgb(var(--exp-noche-rgb) / <alpha-value>)",
           panel: "rgb(var(--exp-panel-rgb) / <alpha-value>)",
-          crema: "rgb(var(--exp-crema-rgb) / <alpha-value>)"
+          crema: "rgb(var(--exp-crema-rgb) / <alpha-value>)",
+          "papel-amarillo": "var(--exp-papel-amarillo)",
+          "papel-rosa":     "var(--exp-papel-rosa)",
+          "papel-verde":    "var(--exp-papel-verde)",
+          "papel-amatista": "var(--exp-papel-amatista)"
         },
 
         /* ── Ink ── */

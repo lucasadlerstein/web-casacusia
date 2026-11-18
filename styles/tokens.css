@@ -62,6 +62,11 @@
   --exp-panel-rgb:  16 23 28;  /* tarjetas sobre el fondo             */
   --exp-crema:      #FFF9F2;
   --exp-crema-rgb:  255 249 242;
+  /* papeles de los post-its (tintes de los filamentos, legibles con tinta encima) */
+  --exp-papel-amarillo: #FFE68A;
+  --exp-papel-rosa:     #FFC9D8;
+  --exp-papel-verde:    #BFF0DA;
+  --exp-papel-amatista: #E6CDF0;
 
   /* ══ Ink (texto) ════════════════════════════════════════════ */
   --color-ink:        #143642;   /* navy del wordmark CASACUSIA — AAA ✓   */
