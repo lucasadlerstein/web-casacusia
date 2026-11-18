@@ -1,8 +1,10 @@
 import Image from "next/image";
-import type { ExperienciaContent } from "@/lib/content";
+import type { ExperienciaContent, ExperienciaPapel } from "@/lib/content";
 import { Link } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils/cn";
 import { DejarVoz } from "./DejarVoz";
+import { Icono } from "./Iconos";
+import { Prender } from "./Prender";
 import { Bloque, Rotulo, botonClases, t } from "./ui";
 
 type C = ExperienciaContent;
@@ -68,7 +70,7 @@ export function Muestra({ muestra }: { muestra: C["muestra"] }) {
 }
 
 /** Papel de cada post-it y una inclinación distinta para que parezcan pegados a mano. */
-const PAPEL: Record<C["voces"]["citas"][number]["papel"], string> = {
+const PAPEL: Record<ExperienciaPapel, string> = {
   amarillo: "bg-exp-papel-amarillo",
   rosa: "bg-exp-papel-rosa",
   verde: "bg-exp-papel-verde",
@@ -76,9 +78,20 @@ const PAPEL: Record<C["voces"]["citas"][number]["papel"], string> = {
 };
 const INCLINACION = ["-rotate-2", "rotate-1", "-rotate-1", "rotate-2", "-rotate-[1.5deg]", "rotate-[0.5deg]"] as const;
 
+/** La cinta que sostiene cada post-it. */
+function Cinta() {
+  return (
+    <span
+      aria-hidden="true"
+      className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] bg-white/55 shadow-sm"
+    />
+  );
+}
+
 export function Voces({ voces }: { voces: C["voces"] }) {
   return (
-    <Bloque id="voces" tono="luz" titulo={voces.titulo} intro={voces.intro}>
+    <Bloque id="voces" tono="luz" titulo={voces.titulo} resaltar={voces.tituloResaltado} intro={voces.intro}>
+      <Prender />
       <ul className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9">
         {voces.citas.map((c, i) => (
           <li
@@ -89,10 +102,7 @@ export function Voces({ voces }: { voces: C["voces"] }) {
               INCLINACION[i % INCLINACION.length]
             )}
           >
-            <span
-              aria-hidden="true"
-              className="absolute left-1/2 top-0 h-6 w-24 -translate-x-1/2 -translate-y-1/2 rotate-[-3deg] bg-white/55 shadow-sm"
-            />
+            <Cinta />
             <blockquote className="font-bubbles text-[1.2rem] leading-snug text-ink">{c.cita}</blockquote>
             <p className="mt-4 font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ink-soft">{c.quien}</p>
           </li>
@@ -105,21 +115,57 @@ export function Voces({ voces }: { voces: C["voces"] }) {
   );
 }
 
+/** Desfase vertical de cada post-it del formato, para que el hilo suba y baje. */
+const DESFASE = ["lg:mt-0", "lg:mt-14", "lg:mt-4", "lg:mt-16"] as const;
+
 export function Formato({ formato }: { formato: C["formato"] }) {
   return (
     <Bloque id="formato" titulo={formato.titulo} intro={formato.intro}>
-      <ol className={cn("mt-12 grid gap-px overflow-hidden rounded-2xl border bg-[color:var(--linea)] sm:grid-cols-2 lg:grid-cols-4", t.linea)}>
-        {formato.pasos.map((p, i) => (
-          <li key={p.titulo} className={cn("p-6 md:p-7", t.fondo)}>
-            <Rotulo className="text-amarillo">
-              {String(i + 1).padStart(2, "0")} · {p.tiempo}
-            </Rotulo>
-            <h3 className={cn("mt-4 font-display text-2xl font-extrabold", t.tinta)}>{p.titulo}</h3>
-            <p className={cn("mt-3 leading-relaxed", t.suave)}>{p.texto}</p>
-          </li>
-        ))}
-      </ol>
-      <p className={cn("mt-8 max-w-3xl border-l-2 border-verde pl-5 text-lg leading-relaxed", t.suave)}>
+      <div className="relative mt-14">
+        {/* El hilo que une los cuatro post-its: a lo ancho en pantallas grandes… */}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+          className="absolute inset-x-0 top-0 hidden h-28 w-full text-amarillo lg:block"
+        >
+          <path
+            d="M12.5 10 C 25 10, 25 60, 37.5 60 S 50 24, 62.5 24 S 75 68, 87.5 68"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeDasharray="4 5"
+            vectorEffect="non-scaling-stroke"
+          />
+        </svg>
+        {/* …y vertical, a la izquierda, en celular. */}
+        <span aria-hidden="true" className="absolute bottom-10 left-5 top-6 border-l-2 border-dashed border-amarillo lg:hidden" />
+        <ol className="relative grid gap-9 lg:grid-cols-4 lg:gap-6">
+          {formato.pasos.map((p, i) => (
+            <li key={p.titulo} className={cn("relative pl-14 lg:pl-0", DESFASE[i % DESFASE.length])}>
+              <span
+                aria-hidden="true"
+                className="absolute left-0 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-amarillo font-display text-sm font-extrabold text-exp-noche lg:left-1/2 lg:top-0 lg:-translate-x-1/2 lg:-translate-y-[calc(100%+0.5rem)]"
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div
+                className={cn(
+                  "relative rounded-sm p-6 pt-8 text-ink shadow-[0_18px_34px_-16px_rgb(0_0_0/0.7)] transition-transform duration-300 ease-out motion-safe:hover:rotate-0 motion-safe:hover:scale-[1.02]",
+                  PAPEL[p.papel],
+                  INCLINACION[(i + 1) % INCLINACION.length]
+                )}
+              >
+                <Cinta />
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-ink-soft">{p.tiempo}</p>
+                <h3 className="mt-2 font-bubbles text-[1.75rem] font-bold leading-tight text-ink">{p.titulo}</h3>
+                <p className="mt-2 font-bubbles text-[1.1rem] leading-snug text-ink">{p.texto}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <p className={cn("mt-14 max-w-3xl border-l-2 border-verde pl-5 text-lg leading-relaxed", t.suave)}>
         {formato.paraQuien}
       </p>
     </Bloque>
@@ -132,6 +178,7 @@ export function Espacios({ espacios }: { espacios: C["espacios"] }) {
       <ul className="mt-12 grid gap-4 sm:grid-cols-2">
         {espacios.items.map((it) => (
           <li key={it.titulo} className={cn("rounded-2xl border p-6 md:p-7", t.linea, t.sup)}>
+            <Icono nombre={it.icono} className="mb-4 h-9 w-9 text-verde-dark" />
             <h3 className={cn("font-display text-xl font-extrabold", t.tinta)}>{it.titulo}</h3>
             <p className={cn("mt-2 leading-relaxed", t.suave)}>{it.texto}</p>
           </li>
@@ -160,7 +207,7 @@ export function Sala({ sala }: { sala: C["sala"] }) {
         <ul className="flex flex-col">
           {sala.requisitos.map((r) => (
             <li key={r.titulo} className={cn("flex gap-4 border-t py-5 first:border-t-0 first:pt-0", t.linea)}>
-              <span aria-hidden="true" className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-verde" />
+              <Icono nombre={r.icono} className="mt-0.5 h-7 w-7 shrink-0 text-verde" />
               <p className={cn("leading-relaxed", t.suave)}>
                 <strong className={cn("font-bold", t.tinta)}>{r.titulo}.</strong> {r.texto}
               </p>

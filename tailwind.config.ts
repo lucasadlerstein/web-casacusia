@@ -144,12 +144,29 @@ const config: Config = {
         // …y los puntos que siguen camino hacia adentro.
         "exp-flujo": {
           to: { strokeDashoffset: "-16" }
+        },
+        // La luz que se prende: un velo oscuro que titila y se va.
+        "exp-prender": {
+          "0%": { opacity: "1" },
+          "9%": { opacity: "0" },
+          "14%": { opacity: "1" },
+          "22%": { opacity: "0" },
+          "27%": { opacity: "0.8" },
+          "33%": { opacity: "0" },
+          "100%": { opacity: "0" }
+        },
+        // El resaltado del título parpadea como un tubo que arranca.
+        "exp-titilar": {
+          "0%, 12%, 24%": { opacity: "0.35" },
+          "6%, 18%, 30%, 100%": { opacity: "1" }
         }
       },
       animation: {
         marquee: "marquee 20s linear infinite",
         "exp-onda": "exp-onda 2.4s linear infinite",
-        "exp-flujo": "exp-flujo 1.2s linear infinite"
+        "exp-flujo": "exp-flujo 1.2s linear infinite",
+        "exp-prender": "exp-prender 1.6s steps(1, end) both",
+        "exp-titilar": "exp-titilar 1.8s steps(1, end) both"
       }
     }
   },

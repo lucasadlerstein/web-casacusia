@@ -589,6 +589,12 @@ export type ExperienciaEfecto = (typeof experienciaEfectos)[number];
 /** Color de papel de cada post-it de la pared de voces. */
 export const experienciaPapeles = ["amarillo", "rosa", "verde", "amatista"] as const;
 export type ExperienciaPapel = (typeof experienciaPapeles)[number];
+/** Íconos de línea de las secciones "¿A dónde la llevamos?" y "Lo que necesita la sala". */
+export const experienciaIconos = [
+  "empresa", "escuela", "gobierno", "celebracion",
+  "oscuridad", "pantalla", "sonido", "silencio", "tiempo"
+] as const;
+export type ExperienciaIcono = (typeof experienciaIconos)[number];
 
 const TituloTextoSchema = z.object({ titulo: z.string(), texto: z.string() });
 const ExperienciaSchema = z.object({
@@ -645,6 +651,8 @@ const ExperienciaSchema = z.object({
   muestra: z.object({ etiqueta: z.string(), titulo: z.string(), texto: z.string(), boton: z.string(), nota: z.string() }),
   voces: z.object({
     titulo: z.string(),
+    /** Parte del título que se resalta en amarillo (la luz que se prende). */
+    tituloResaltado: z.string(),
     intro: z.string(),
     citas: z.array(z.object({ cita: z.string(), quien: z.string(), papel: z.enum(experienciaPapeles) })).min(1),
     /** El último post-it: invita a dejar el propio como comentario en Instagram. */
@@ -662,13 +670,13 @@ const ExperienciaSchema = z.object({
   formato: z.object({
     titulo: z.string(),
     intro: z.string(),
-    pasos: z.array(TituloTextoSchema.extend({ tiempo: z.string() })).min(1),
+    pasos: z.array(TituloTextoSchema.extend({ tiempo: z.string(), papel: z.enum(experienciaPapeles) })).min(1),
     paraQuien: z.string()
   }),
   espacios: z.object({
     titulo: z.string(),
     intro: z.string(),
-    items: z.array(TituloTextoSchema).min(1),
+    items: z.array(TituloTextoSchema.extend({ icono: z.enum(experienciaIconos) })).min(1),
     fechasTitulo: z.string(),
     fechas: z.array(z.object({ mes: z.string(), motivo: z.string() })).min(1),
     beneficio: z.string()
@@ -676,7 +684,7 @@ const ExperienciaSchema = z.object({
   sala: z.object({
     titulo: z.string(),
     intro: z.string(),
-    requisitos: z.array(TituloTextoSchema).min(1),
+    requisitos: z.array(TituloTextoSchema.extend({ icono: z.enum(experienciaIconos) })).min(1),
     sinSonidoTitulo: z.string(),
     sinSonidoTexto: z.string(),
     sinSonidoCta: CtaSchema

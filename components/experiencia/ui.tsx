@@ -103,6 +103,7 @@ export function Bloque({
   tono = "noche",
   rotulo,
   titulo,
+  resaltar,
   intro,
   children,
   className
@@ -111,21 +112,34 @@ export function Bloque({
   tono?: Tono;
   rotulo?: string;
   titulo: string;
+  /** Parte del título resaltada en amarillo, como con marcador. */
+  resaltar?: string;
   intro?: string;
   children: ReactNode;
   className?: string;
 }) {
+  const corte = resaltar ? titulo.indexOf(resaltar) : -1;
   return (
     <section
       id={id}
       style={tonoEstilo(tono)}
-      className={cn("scroll-mt-28 py-20 md:scroll-mt-20 md:py-28", t.fondo, t.tinta, tono !== "luz" && cn("border-t", t.linea), className)}
+      className={cn("relative scroll-mt-28 py-20 md:scroll-mt-20 md:py-28", t.fondo, t.tinta, tono !== "luz" && cn("border-t", t.linea), className)}
     >
       <div className="container">
         <div className="max-w-3xl">
           {rotulo && <Rotulo className="mb-4">{rotulo}</Rotulo>}
           <h2 className={cn("font-display text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] sm:text-4xl md:text-5xl", t.tinta)}>
-            {titulo}
+            {corte >= 0 && resaltar ? (
+              <>
+                {titulo.slice(0, corte)}
+                <mark className="rounded-md bg-amarillo px-2 text-exp-noche motion-safe:animate-exp-titilar [box-decoration-break:clone]">
+                  {resaltar}
+                </mark>
+                {titulo.slice(corte + resaltar.length)}
+              </>
+            ) : (
+              titulo
+            )}
           </h2>
           {intro && <p className={cn("mt-5 text-lg leading-relaxed md:text-xl", t.suave)}>{intro}</p>}
         </div>
