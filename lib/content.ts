@@ -416,16 +416,22 @@ const ProductoTiendaSchema = z.object({
   descripcion: z.string(),
   precioARS: z.number().optional(),
   imagen: z.string().optional(),
+  /** Galería del producto destacado, en orden de aparición. */
+  imagenes: z.array(z.string()).optional(),
   link: z.string().url().optional(),
   color: z.enum(["verde", "violeta", "amarillo", "rosa", "naranja", "magenta"]),
   destacado: z.boolean().optional(),
   proximamente: z.boolean().optional(),
+  cuotasSinInteres: z.number().int().positive().optional(),
+  envioNacional: z.boolean().optional(),
   orden: z.number()
 });
 export type ProductoTienda = z.infer<typeof ProductoTiendaSchema>;
 
 const TiendaSchema = z.object({
   tiendaCompleta: z.string().url(),
+  /** Link de compra común a todos los productos (lista solidaria en Mercado Libre). */
+  linkCompra: z.string().url(),
   productos: z.array(ProductoTiendaSchema)
 });
 export type Tienda = z.infer<typeof TiendaSchema>;
@@ -716,6 +722,19 @@ const ExperienciaSchema = z.object({
     errores: z.object({ validacion: z.string(), email: z.string(), rate: z.string(), generico: z.string() }),
     /** Mensaje que la persona envía desde su propio correo al área de su trabajo. */
     mensaje: z.object({ boton: z.string(), asunto: z.string(), cuerpo: z.string() })
+  }),
+  facilita: z.object({
+    etiqueta: z.string(),
+    nombre: z.string(),
+    rol: z.string(),
+    parrafos: z.array(z.string()).min(1),
+    foto: z.string(),
+    fotoAlt: z.string()
+  }),
+  preguntas: z.object({
+    titulo: z.string(),
+    intro: z.string(),
+    items: z.array(z.object({ pregunta: z.string(), respuesta: z.string() })).min(1)
   }),
   cierre: z.object({
     frase: z.string(),
