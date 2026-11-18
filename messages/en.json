@@ -250,7 +250,7 @@
   },
   "tienda": {
     "title": "Charity store · Products that support Casacusia",
-    "description": "Thermal cup, Neguá cards, pencil case, tote bag and bucket hat. Every product supports the foundation's programs so more people can navigate hearing loss with tools and company.",
+    "description": "Soni, the baby doll with a cochlear implant, Neguá cards, thermal cup, pencil case, tote bag and bucket hat. Every product supports the foundation's programs so more people can navigate hearing loss with tools and company.",
     "hero": {
       "titulo": "Charity store",
       "subtitulo": "Every product supports the foundation. With each purchase you sustain our programs and help more people navigate hearing loss with tools and company.",
@@ -260,7 +260,25 @@
       "heading": "Our products",
       "comprar": "Buy on Mercado Libre",
       "proximamente": "Coming soon",
-      "aBeneficio": "For a cause"
+      "aBeneficio": "For a cause",
+      "destacado": "Featured",
+      "envio": "Shipping across Argentina",
+      "cuotas": "{n} interest-free installments"
+    },
+    "soni": {
+      "eyebrow": "Featured product",
+      "heading": "Soni: a baby doll with a cochlear implant",
+      "body": "Soni was born so that children with hearing loss can see themselves in their toys. A baby doll wearing a cochlear implant, just like many people in our community, to play with, to explain, and to make the implant part of everyday life.",
+      "detalle": "Comes with a red Casacusia hoodie, a striped tee and pants. A gift for the family, the clinic or the classroom.",
+      "envio": "Shipping across Argentina",
+      "cuotas": "{n} interest-free installments",
+      "beneficio": "Supports Casacusia",
+      "cta": "Buy Soni on Mercado Libre",
+      "alt": {
+        "0": "A girl with a cochlear implant holds Soni in her arms",
+        "1": "Soni in profile, with the cochlear implant behind the ear",
+        "2": "Soni from the front, in the red Casacusia hoodie and striped tee"
+      }
     },
     "negua": {
       "eyebrow": "The community favorite",

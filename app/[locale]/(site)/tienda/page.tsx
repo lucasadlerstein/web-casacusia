@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { ExternalLink, Sparkles, Store, HandHeart } from "lucide-react";
+import { CreditCard, ExternalLink, HandHeart, Sparkles, Store, Truck } from "lucide-react";
 
 import { Section, SectionHeading, Eyebrow } from "@/components/ui/Section";
 import { PageHero } from "@/components/ui/PageHero";
@@ -65,7 +65,10 @@ export default async function TiendaPage({
 
   const t = await getTranslations("tienda");
   const { productos, tiendaCompleta } = getTienda();
-  const negua = productos.find((p) => p.destacado);
+  const soni = productos.find((p) => p.destacado && p.link);
+  const negua = productos.find((p) => p.slug === "cartas-negua");
+  const galeria = soni?.imagenes ?? (soni?.imagen ? [soni.imagen] : []);
+  const [fotoPrincipal, ...fotosSecundarias] = galeria;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -75,28 +78,40 @@ export default async function TiendaPage({
     url: `${SITE_URL}/tienda`,
     itemListElement: productos
       .filter((p) => p.link)
-      .map((p, i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        item: {
-          "@type": "Product",
-          name: p.nombre,
-          description: p.descripcion,
-          ...(p.imagen ? { image: `${SITE_URL}${p.imagen}` } : {}),
-          url: p.link,
-          ...(p.precioARS
-            ? {
-                offers: {
-                  "@type": "Offer",
-                  price: p.precioARS,
-                  priceCurrency: "ARS",
-                  url: p.link,
-                  seller: { "@type": "NGO", name: "Fundación Casacusia" }
+      .map((p, i) => {
+        const imagenes = p.imagenes ?? (p.imagen ? [p.imagen] : []);
+        return {
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "Product",
+            name: p.nombre,
+            description: p.descripcion,
+            ...(imagenes.length ? { image: imagenes.map((src) => `${SITE_URL}${src}`) } : {}),
+            url: p.link,
+            ...(p.precioARS
+              ? {
+                  offers: {
+                    "@type": "Offer",
+                    price: p.precioARS,
+                    priceCurrency: "ARS",
+                    url: p.link,
+                    availability: "https://schema.org/InStock",
+                    ...(p.envioNacional
+                      ? {
+                          shippingDetails: {
+                            "@type": "OfferShippingDetails",
+                            shippingDestination: { "@type": "DefinedRegion", addressCountry: "AR" }
+                          }
+                        }
+                      : {}),
+                    seller: { "@type": "NGO", name: "Fundación Casacusia" }
+                  }
                 }
-              }
-            : {})
-        }
-      }))
+              : {})
+          }
+        };
+      })
   };
 
   return (
@@ -124,11 +139,97 @@ export default async function TiendaPage({
         }
       />
 
+      {/* Soni, producto destacado */}
+      {soni?.link && (
+        <Section background="warm" ariaLabel={t("soni.heading")}>
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            {/* Galería: una foto grande y dos chicas apiladas */}
+            {fotoPrincipal && (
+              <div className="grid grid-cols-[3fr_2fr] gap-3 sm:gap-4">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-surface-card shadow-lg">
+                  <Image
+                    src={fotoPrincipal}
+                    alt={t("soni.alt.0")}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 60vw, 30vw"
+                    className="object-cover"
+                  />
+                </div>
+                {fotosSecundarias.length > 0 && (
+                  <div className="grid grid-rows-2 gap-3 sm:gap-4">
+                    {fotosSecundarias.map((src, i) => (
+                      <div
+                        key={src}
+                        className="relative overflow-hidden rounded-2xl bg-surface-card shadow-md"
+                      >
+                        <Image
+                          src={src}
+                          alt={t(`soni.alt.${i + 1}`)}
+                          fill
+                          sizes="(max-width: 1024px) 40vw, 20vw"
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div>
+              <Eyebrow className="mb-3 text-verde-dark">{t("soni.eyebrow")}</Eyebrow>
+              <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight text-ink md:text-4xl">
+                {t("soni.heading")}
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-ink-soft">{t("soni.body")}</p>
+              <p className="mt-3 leading-relaxed text-ink-soft">{t("soni.detalle")}</p>
+
+              <ul className="mt-6 flex flex-wrap gap-2">
+                {soni.envioNacional && (
+                  <li className="inline-flex items-center gap-2 rounded-full border border-surface-line bg-surface-card px-4 py-2 text-sm font-semibold text-ink">
+                    <Truck size={16} aria-hidden className="text-verde-dark" />
+                    {t("soni.envio")}
+                  </li>
+                )}
+                {soni.cuotasSinInteres && (
+                  <li className="inline-flex items-center gap-2 rounded-full border border-surface-line bg-surface-card px-4 py-2 text-sm font-semibold text-ink">
+                    <CreditCard size={16} aria-hidden className="text-verde-dark" />
+                    {t("soni.cuotas", { n: soni.cuotasSinInteres })}
+                  </li>
+                )}
+                <li className="inline-flex items-center gap-2 rounded-full border border-surface-line bg-surface-card px-4 py-2 text-sm font-semibold text-ink">
+                  <HandHeart size={16} aria-hidden className="text-verde-dark" />
+                  {t("soni.beneficio")}
+                </li>
+              </ul>
+
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                {soni.precioARS && (
+                  <span className="font-display text-3xl font-extrabold text-ink">
+                    {precioARS(soni.precioARS, locale)}
+                  </span>
+                )}
+                <Button href={soni.link} target="_blank" rel="noopener noreferrer" size="lg">
+                  {t("soni.cta")}
+                  <ExternalLink size={16} aria-hidden />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Section>
+      )}
+
       {/* Grilla de productos */}
       <Section ariaLabel={t("productos.heading")}>
         <SectionHeading title={t("productos.heading")} />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {productos.map((p) => {
+            const badge = p.proximamente
+              ? t("productos.proximamente")
+              : p.destacado
+                ? t("productos.destacado")
+                : t("productos.aBeneficio");
             const card = (
               <>
                 <div className={cn("relative aspect-square overflow-hidden rounded-t-2xl", softBg[p.color])}>
@@ -151,14 +252,30 @@ export default async function TiendaPage({
                       accentText[p.color]
                     )}
                   >
-                    {p.proximamente ? t("productos.proximamente") : t("productos.aBeneficio")}
+                    {badge}
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <h3 className="font-display text-lg font-bold text-ink">{p.nombre}</h3>
                   {p.tagline && <p className={cn("mt-0.5 text-sm font-semibold", accentText[p.color])}>{p.tagline}</p>}
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">{p.descripcion}</p>
-                  <div className="mt-4 flex items-center justify-between border-t border-surface-line pt-4">
+                  {(p.envioNacional || p.cuotasSinInteres) && (
+                    <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs font-semibold text-ink-soft">
+                      {p.envioNacional && (
+                        <li className="inline-flex items-center gap-1.5">
+                          <Truck size={14} aria-hidden className="text-verde-dark" />
+                          {t("productos.envio")}
+                        </li>
+                      )}
+                      {p.cuotasSinInteres && (
+                        <li className="inline-flex items-center gap-1.5">
+                          <CreditCard size={14} aria-hidden className="text-verde-dark" />
+                          {t("productos.cuotas", { n: p.cuotasSinInteres })}
+                        </li>
+                      )}
+                    </ul>
+                  )}
+                  <div className="mt-auto flex items-center justify-between border-t border-surface-line pt-4">
                     {p.precioARS ? (
                       <span className="font-display text-xl font-extrabold text-ink">
                         {precioARS(p.precioARS, locale)}
@@ -203,7 +320,7 @@ export default async function TiendaPage({
         </div>
       </Section>
 
-      {/* Cartas Neguá, destacado */}
+      {/* Cartas Neguá, la historia del mazo */}
       {negua?.link && (
         <Section background="tint" ariaLabel={t("negua.heading")}>
           <div className="grid items-center gap-10 lg:grid-cols-2">

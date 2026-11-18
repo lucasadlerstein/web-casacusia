@@ -26,6 +26,10 @@
       {
         "href": "#sala",
         "label": "La sala"
+      },
+      {
+        "href": "#preguntas",
+        "label": "Preguntas"
       }
     ],
     "cta": "Llevarla a mi espacio"
@@ -363,6 +367,51 @@
       "asunto": "Una experiencia para ponernos en el lugar de quien no oye",
       "cuerpo": "Hola:\n\nQuiero acercarles una propuesta de Fundación Casacusia: «¿Cómo oye quien no oye?», una experiencia inmersiva sobre la sordera e hipoacusia. Son 17 minutos en una sala a oscuras, oyendo escenas de todos los días como las oye una persona con pérdida auditiva, y después una conversación abierta de 40 minutos.\n\nMe gustaría que la vivamos en nuestro espacio de trabajo. Acá está toda la información:\n{url}\n\nGracias,\n{nombre}"
     }
+  },
+  "facilita": {
+    "etiqueta": "Quién facilita",
+    "nombre": "Lucas Adlerstein",
+    "rol": "Fundador de Casacusia · Host de la experiencia",
+    "parrafos": [
+      "A los 15 años perdió por completo la audición de un oído y a los 19, la mitad del otro. A los 20, con la tecnología, recuperó el sonido y empezó a contar lo que le pasaba. De esa historia nació la Fundación Casacusia.",
+      "En la función es quien entra a la sala con tu equipo: presenta la experiencia, facilita la conversación de después y responde, en primera persona, lo que no se puede explicar con palabras."
+    ],
+    "foto": "/experiencia/lucas-facilita.jpg",
+    "fotoAlt": "Lucas Adlerstein hablando con un micrófono frente a una pantalla, durante una charla."
+  },
+  "preguntas": {
+    "titulo": "Preguntas frecuentes",
+    "intro": "Lo que nos suelen preguntar antes de reservar una función.",
+    "items": [
+      {
+        "pregunta": "¿Es para personas oyentes?",
+        "respuesta": "Sí. Está pensada para que quien oye entienda, con el cuerpo, cómo oye una persona con sordera o hipoacusia. Y muchas personas con pérdida auditiva la eligen para vivirla junto a su familia, sus amistades o su trabajo."
+      },
+      {
+        "pregunta": "¿Cuánto dura?",
+        "respuesta": "Una hora en total: 17 minutos de experiencia a oscuras y 40 minutos de conversación con las luces prendidas."
+      },
+      {
+        "pregunta": "¿Cuántas personas pueden participar?",
+        "respuesta": "Desde 15 hasta 300, según la sala. Lo importante es que todas estén dentro del alcance del sonido estéreo."
+      },
+      {
+        "pregunta": "¿Qué necesito tener?",
+        "respuesta": "Una sala que se pueda oscurecer, una pantalla o proyector y buen sonido estéreo. Nosotros llevamos la experiencia lista para proyectar y facilitamos la conversación."
+      },
+      {
+        "pregunta": "¿Y si mi sala no tiene buen sonido?",
+        "respuesta": "Anotate igual. Estamos buscando la forma de hacerlo posible y, cuando la encontremos, nos contactamos con vos."
+      },
+      {
+        "pregunta": "¿Cuánto cuesta?",
+        "respuesta": "Toda función privada es a beneficio de Casacusia. El valor depende del tipo de espacio (escuelas, empresas, gobierno e instituciones): contanos cuál es el tuyo en el formulario y te lo pasamos."
+      },
+      {
+        "pregunta": "¿La hacen fuera de Buenos Aires?",
+        "respuesta": "Queremos que llegue a todo el país. Contanos tu ciudad en el formulario: así sabemos dónde hay ganas de vivirla y organizamos las funciones según la demanda."
+      }
+    ]
   },
   "cierre": {
     "frase": "Después de oír así, no escuchás igual.",

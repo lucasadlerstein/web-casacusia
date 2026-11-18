@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils/cn";
 import { DejarVoz } from "./DejarVoz";
 import { Icono } from "./Iconos";
 import { Prender } from "./Prender";
-import { Bloque, Rotulo, botonClases, t } from "./ui";
+import { Bloque, Rotulo, botonClases, t, tonoEstilo } from "./ui";
 
 type C = ExperienciaContent;
 
@@ -222,6 +222,68 @@ export function Sala({ sala }: { sala: C["sala"] }) {
           </a>
         </aside>
       </div>
+    </Bloque>
+  );
+}
+
+export function Facilita({ facilita }: { facilita: C["facilita"] }) {
+  return (
+    <section
+      id="facilita"
+      style={tonoEstilo("luz")}
+      className={cn("scroll-mt-28 py-20 md:scroll-mt-20 md:py-28", t.fondo, t.tinta)}
+    >
+      <div className="container grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] md:gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+        <div className={cn("relative mx-auto w-full max-w-sm overflow-hidden rounded-3xl rotate-[-1.5deg] shadow-[0_24px_40px_-20px_rgb(20_54_66/0.5)]", INCLINACION[0])}>
+          <Image
+            src={facilita.foto}
+            alt={facilita.fotoAlt}
+            width={928}
+            height={1066}
+            sizes="(min-width: 768px) 24rem, 90vw"
+            className="h-auto w-full object-cover"
+          />
+          <span
+            aria-hidden="true"
+            className="absolute left-1/2 top-0 h-7 w-28 -translate-x-1/2 -translate-y-1/2 rotate-[-4deg] bg-amarillo/90 shadow-sm"
+          />
+        </div>
+        <div>
+          <Rotulo>{facilita.etiqueta}</Rotulo>
+          <h2 className={cn("mt-4 font-display text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] sm:text-4xl md:text-5xl", t.tinta)}>
+            {facilita.nombre}
+          </h2>
+          <p className="mt-3 font-display text-lg font-bold text-verde-dark">{facilita.rol}</p>
+          {facilita.parrafos.map((p) => (
+            <p key={p} className={cn("mt-5 text-lg leading-relaxed", t.suave)}>
+              {p}
+            </p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Preguntas({ preguntas }: { preguntas: C["preguntas"] }) {
+  return (
+    <Bloque id="preguntas" tono="panel" titulo={preguntas.titulo} intro={preguntas.intro}>
+      <dl className={cn("mt-10 max-w-3xl divide-y border-y", t.linea, "divide-[color:var(--linea)]")}>
+        {preguntas.items.map((it) => (
+          <details key={it.pregunta} className="group">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 py-5 [&::-webkit-details-marker]:hidden">
+              <dt className="font-display text-lg font-bold md:text-xl">{it.pregunta}</dt>
+              <span
+                aria-hidden="true"
+                className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-amarillo text-amarillo transition-transform duration-200 group-open:rotate-45"
+              >
+                +
+              </span>
+            </summary>
+            <dd className={cn("pb-6 pr-10 leading-relaxed", t.suave)}>{it.respuesta}</dd>
+          </details>
+        ))}
+      </dl>
     </Bloque>
   );
 }
