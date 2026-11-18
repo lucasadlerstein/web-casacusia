@@ -63,10 +63,10 @@
   --exp-crema:      #FFF9F2;
   --exp-crema-rgb:  255 249 242;
   /* papeles de los post-its (tintes de los filamentos, legibles con tinta encima) */
-  --exp-papel-amarillo: #FFE68A;
-  --exp-papel-rosa:     #FFC9D8;
-  --exp-papel-verde:    #BFF0DA;
-  --exp-papel-amatista: #E6CDF0;
+  --exp-papel-amarillo: #FFC001;
+  --exp-papel-rosa:     #F77D9A;
+  --exp-papel-verde:    #61CEA2;
+  --exp-papel-amatista: #CB91DB;
 
   /* ══ Ink (texto) ════════════════════════════════════════════ */
   --color-ink:        #143642;   /* navy del wordmark CASACUSIA — AAA ✓   */

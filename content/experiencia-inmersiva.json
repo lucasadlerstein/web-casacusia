@@ -125,6 +125,7 @@
   },
   "voces": {
     "titulo": "Lo que pasó cuando se prendieron las luces",
+    "tituloResaltado": "se prendieron las luces",
     "intro": "La presentamos por primera vez en la Expo Hipoacusia. Esto escribieron después quienes la vivieron, oigan o no.",
     "citas": [
       {
@@ -191,22 +192,26 @@
       {
         "tiempo": "17 min",
         "titulo": "Oír",
-        "texto": "Sala a oscuras, sonido estéreo. Cuatro escenas cotidianas oídas con cuatro pérdidas auditivas distintas."
+        "texto": "Sala a oscuras, sonido estéreo. Cuatro escenas cotidianas oídas con cuatro pérdidas auditivas distintas.",
+        "papel": "amarillo"
       },
       {
         "tiempo": "En pantalla",
         "titulo": "Entender",
-        "texto": "Después de cada escena se explica, de forma simple, qué pasó en el oído y por qué se oyó así."
+        "texto": "Después de cada escena se explica, de forma simple, qué pasó en el oído y por qué se oyó así.",
+        "papel": "verde"
       },
       {
         "tiempo": "40 min",
         "titulo": "Dialogar",
-        "texto": "Qué nos generó, qué nos pasó por el cuerpo y por el corazón. Hablan quienes oyen y quienes no."
+        "texto": "Qué nos generó, qué nos pasó por el cuerpo y por el corazón. Hablan quienes oyen y quienes no.",
+        "papel": "rosa"
       },
       {
         "tiempo": "Al salir",
         "titulo": "Hacer",
-        "texto": "Cada grupo se lleva gestos concretos para que nadie quede afuera de la conversación."
+        "texto": "Cada grupo se lleva gestos concretos para que nadie quede afuera de la conversación.",
+        "papel": "amatista"
       }
     ],
     "paraQuien": "Está pensada para personas oyentes. Y muchas personas con hipoacusia la eligen para que su familia, sus amistades y su trabajo entiendan lo que viven."
@@ -217,19 +222,23 @@
     "items": [
       {
         "titulo": "Empresas",
-        "texto": "Una actividad de inclusión lista para usar: una charla interna, una jornada de diversidad, un encuentro con clientes."
+        "texto": "Una actividad de inclusión lista para usar: una charla interna, una jornada de diversidad, un encuentro con clientes.",
+        "icono": "empresa"
       },
       {
         "titulo": "Escuelas y universidades",
-        "texto": "Para que estudiantes y docentes entiendan cómo oye quien se sienta en el aula con sordera o hipoacusia."
+        "texto": "Para que estudiantes y docentes entiendan cómo oye quien se sienta en el aula con sordera o hipoacusia.",
+        "icono": "escuela"
       },
       {
         "titulo": "Gobierno e instituciones",
-        "texto": "Para equipos que atienden al público, diseñan políticas o quieren abrir la conversación sobre discapacidades que no se ven."
+        "texto": "Para equipos que atienden al público, diseñan políticas o quieren abrir la conversación sobre discapacidades que no se ven.",
+        "icono": "gobierno"
       },
       {
         "titulo": "Celebraciones y grupos",
-        "texto": "Un cumpleaños o un encuentro distinto, para compartir con tu gente algo que cuesta explicar con palabras."
+        "texto": "Un cumpleaños o un encuentro distinto, para compartir con tu gente algo que cuesta explicar con palabras.",
+        "icono": "celebracion"
       }
     ],
     "fechasTitulo": "Tres momentos del año que la piden",
@@ -255,23 +264,28 @@
     "requisitos": [
       {
         "titulo": "Que se pueda oscurecer",
-        "texto": "Como un cine, un microcine o una sala audiovisual."
+        "texto": "Como un cine, un microcine o una sala audiovisual.",
+        "icono": "oscuridad"
       },
       {
         "titulo": "Pantalla o proyector",
-        "texto": "De buen tamaño, para que los textos se lean desde el fondo."
+        "texto": "De buen tamaño, para que los textos se lean desde el fondo.",
+        "icono": "pantalla"
       },
       {
         "titulo": "Sonido estéreo",
-        "texto": "Con buena acústica. Es el corazón de la experiencia."
+        "texto": "Con buena acústica. Es el corazón de la experiencia.",
+        "icono": "sonido"
       },
       {
         "titulo": "Silencio afuera",
-        "texto": "Sin ruidos del exterior durante los 17 minutos."
+        "texto": "Sin ruidos del exterior durante los 17 minutos.",
+        "icono": "silencio"
       },
       {
         "titulo": "Una hora en total",
-        "texto": "17 minutos de experiencia y 40 de conversación."
+        "texto": "17 minutos de experiencia y 40 de conversación.",
+        "icono": "tiempo"
       }
     ],
     "sinSonidoTitulo": "¿Tu sala no tiene buen sonido?",
