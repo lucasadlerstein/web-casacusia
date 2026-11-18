@@ -5,6 +5,29 @@
   },
   "nav": {
     "logoAlt": "Casacusia, ir al inicio de la página",
+    "seccionesLabel": "Secciones de la página",
+    "links": [
+      {
+        "href": "#sonido",
+        "label": "El recorrido"
+      },
+      {
+        "href": "#voces",
+        "label": "Voces"
+      },
+      {
+        "href": "#formato",
+        "label": "Cómo es"
+      },
+      {
+        "href": "#espacios",
+        "label": "Dónde"
+      },
+      {
+        "href": "#sala",
+        "label": "La sala"
+      }
+    ],
     "cta": "Llevarla a mi espacio"
   },
   "hero": {
@@ -102,45 +125,64 @@
   },
   "voces": {
     "titulo": "Lo que pasó cuando se prendieron las luces",
-    "intro": "La presentamos por primera vez en la Expo Hipoacusia. Esto escribieron después quienes la vivieron.",
-    "grupos": [
+    "intro": "La presentamos por primera vez en la Expo Hipoacusia. Esto escribieron después quienes la vivieron, oigan o no.",
+    "citas": [
       {
-        "titulo": "Quienes oyen, entendieron",
-        "acento": "verde",
-        "citas": [
-          {
-            "cita": "Lo que lloré al entender por lo que pasan y no nos damos cuenta.",
-            "quien": "Visitante de la Expo"
-          },
-          {
-            "cita": "Ponerse en los zapatos de otros fue impactante. Es una experiencia que debería llevarse a los colegios.",
-            "quien": "Visitante de la Expo"
-          },
-          {
-            "cita": "Nos hace compartir y entender mucho mejor a nuestro familiar.",
-            "quien": "Familiar de una persona con hipoacusia"
-          }
-        ]
+        "cita": "Lo que lloré al entender por lo que pasan y no nos damos cuenta.",
+        "quien": "Visitante de la Expo",
+        "papel": "verde"
       },
       {
-        "titulo": "Quienes viven con pérdida auditiva encontraron su voz",
-        "acento": "amatista",
-        "citas": [
-          {
-            "cita": "Es la primera vez que siento que tuvo voz todo lo que con palabras no puedo explicar.",
-            "quien": "Persona con hipoacusia"
-          },
-          {
-            "cita": "Fue exteriorizar lo que por años traté de explicar que sucedía en mi cabeza.",
-            "quien": "Persona con implante coclear"
-          },
-          {
-            "cita": "Me vi reflejada y entendí cómo normalicé durante tantos años el gran esfuerzo que hago para poder escuchar y entender.",
-            "quien": "Persona con hipoacusia"
-          }
-        ]
+        "cita": "Es la primera vez que siento que tuvo voz todo lo que con palabras no puedo explicar de mi discapacidad.",
+        "quien": "Persona con hipoacusia",
+        "papel": "amatista"
+      },
+      {
+        "cita": "Ponerse en los zapatos de otra persona fue impactante. Es una experiencia que debería llevarse a los colegios.",
+        "quien": "Visitante de la Expo",
+        "papel": "amarillo"
+      },
+      {
+        "cita": "Vivirla fue como volver a atravesar lo que era mi vida antes del implante. Fue exteriorizar lo que por años traté de explicar que sucedía en mi cabeza.",
+        "quien": "Persona con implante coclear",
+        "papel": "rosa"
+      },
+      {
+        "cita": "Nos hace compartir y entender mucho mejor a nuestro familiar.",
+        "quien": "Familiar de una persona con hipoacusia",
+        "papel": "verde"
+      },
+      {
+        "cita": "Me vi reflejada y entendí cómo normalicé durante tantos años el gran esfuerzo que hago para poder escuchar y entender.",
+        "quien": "Persona con hipoacusia",
+        "papel": "amarillo"
+      },
+      {
+        "cita": "Salí emocionada hasta las lágrimas, y no exagero. Me encantaría que puedan vivirlo más personas.",
+        "quien": "Persona con hipoacusia",
+        "papel": "amatista"
+      },
+      {
+        "cita": "Me encantaría volver a verla y poder mostrársela a mi familia y amistades para que entiendan lo que vivo.",
+        "quien": "Persona con hipoacusia",
+        "papel": "rosa"
+      },
+      {
+        "cita": "Me gustaría traer la experiencia a Misiones.",
+        "quien": "Desde Misiones",
+        "papel": "verde"
       }
-    ]
+    ],
+    "dejar": {
+      "titulo": "¿La viviste?",
+      "texto": "Dejá tu post-it en esta pared.",
+      "boton": "Escribir el mío",
+      "modalTitulo": "Vas a entrar a una publicación de Instagram",
+      "modalTexto": "Dejanos en un comentario lo que sentiste. Lo leemos y lo sumamos a esta pared.",
+      "ir": "Ir a Instagram",
+      "volver": "Ahora no",
+      "href": "https://www.instagram.com/p/DfTHdzeoGbm/"
+    }
   },
   "formato": {
     "titulo": "Una hora que cambia cómo nos escuchamos",
