@@ -249,17 +249,35 @@
   },
   "tienda": {
     "title": "Tienda solidaria · Productos a beneficio de Casacusia",
-    "description": "Vaso térmico, Cartas Neguá, cartuchera, bolsa y piluso. Todos los productos son a beneficio de la fundación: sostienen nuestros programas para transitar la hipoacusia con herramientas y acompañados.",
+    "description": "Soni, el bebote con implante coclear, Cartas Neguá, vaso térmico, cartuchera, bolsa y piluso. Todos los productos son a beneficio de la fundación: sostienen nuestros programas para transitar la hipoacusia con herramientas y en compañía.",
     "hero": {
       "titulo": "Tienda solidaria",
       "subtitulo": "Todos los productos son a beneficio de la fundación. Con cada compra sostenés nuestros programas y ayudás a que más personas transiten la hipoacusia con herramientas y acompañadas.",
-      "nota": "La compra se hace en Mercado Libre, con envíos a todo el país."
+      "nota": "La compra se hace en Mercado Libre, con envío a todo el país."
     },
     "productos": {
       "heading": "Nuestros productos",
       "comprar": "Comprar en Mercado Libre",
       "proximamente": "Próximamente",
-      "aBeneficio": "A beneficio"
+      "aBeneficio": "A beneficio",
+      "destacado": "Destacado",
+      "envio": "Envío a todo el país",
+      "cuotas": "{n} cuotas sin interés"
+    },
+    "soni": {
+      "eyebrow": "Producto destacado",
+      "heading": "Soni: un bebote con implante coclear",
+      "body": "Soni nació para que las infancias con hipoacusia se vean en sus juguetes. Un bebote con el implante coclear puesto, igual que el de muchas personas de nuestra comunidad, para jugar, para explicar y para que el implante sea parte de la vida de todos los días.",
+      "detalle": "Viene con buzo rojo de Casacusia, remera a rayas y pantalón. Un regalo para la familia, para el consultorio o para la escuela.",
+      "envio": "Envío a todo el país",
+      "cuotas": "{n} cuotas sin interés",
+      "beneficio": "A beneficio de Casacusia",
+      "cta": "Comprar Soni en Mercado Libre",
+      "alt": {
+        "0": "Una niña con implante coclear sostiene a Soni en brazos",
+        "1": "Soni de perfil, con el implante coclear detrás de la oreja",
+        "2": "Soni de frente, con el buzo rojo de Casacusia y la remera a rayas"
+      }
     },
     "negua": {
       "eyebrow": "El favorito de la comunidad",
