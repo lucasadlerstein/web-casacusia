@@ -568,7 +568,11 @@ const AlaParSchema = z.object({
     agendarUrl: z.string().url().optional(),
     cerrar: z.string(),
     /** A los cuántos milisegundos de llegar a la página se abre el modal. */
-    delayMs: z.number().int().nonnegative()
+    delayMs: z.number().int().nonnegative(),
+    /** Grabación: reemplaza al aviso una vez pasada la charla. */
+    grabacion: z
+      .object({ etiqueta: z.string(), texto: z.string(), cta: CtaSchema, url: z.string().url() })
+      .optional()
   }),
   cierre: z.object({ frase: z.string(), ctaAcompanado: CtaSchema, ctaPar: CtaSchema, hrefPar: z.string().url() }),
   footer: z.object({

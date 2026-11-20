@@ -259,7 +259,13 @@
     "calendarTitulo": "A la Par · Charla informativa para quienes quieren ser Pares",
     "calendarDetalle": "Charla virtual de Casacusia para responder dudas de quienes quieren acompañar como Pares en A la Par. Entrá por Google Meet: https://meet.google.com/ktc-drdk-ooz",
     "cerrar": "Ahora no",
-    "delayMs": 10000
+    "delayMs": 10000,
+    "grabacion": {
+      "etiqueta": "Charla informativa · Grabación",
+      "texto": "Si te perdiste la charla, podés verla grabada. Contamos qué es A la Par y cómo es acompañar como Par.",
+      "cta": "Ver la charla",
+      "url": "https://youtu.be/lP6uf08tC20"
+    }
   },
   "preguntas": {
     "texto": "¿Tenés preguntas sobre A la Par?",
