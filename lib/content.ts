@@ -428,7 +428,16 @@ const ProductoTiendaSchema = z.object({
 });
 export type ProductoTienda = z.infer<typeof ProductoTiendaSchema>;
 
+const PasoRelatoSchema = z.object({
+  imagen: z.string(),
+  /** Punto de la foto (en %) al que se acerca la cámara y cuánto. */
+  foco: z.object({ x: z.number(), y: z.number(), escala: z.number() }).optional()
+});
+export type PasoRelato = z.infer<typeof PasoRelatoSchema>;
+
 const TiendaSchema = z.object({
+  /** Relato de Soni al scrollear: una foto (o un acercamiento) por paso. */
+  relatoSoni: z.array(PasoRelatoSchema),
   tiendaCompleta: z.string().url(),
   /** Link de compra común a todos los productos (lista solidaria en Mercado Libre). */
   linkCompra: z.string().url(),

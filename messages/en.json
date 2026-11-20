@@ -265,6 +265,33 @@
       "envio": "Shipping across Argentina",
       "cuotas": "{n} interest-free installments"
     },
+    "relato": {
+      "label": "Meet Soni",
+      "hint": "Scroll to meet Soni",
+      "saltar": "Go to the store",
+      "pasos": {
+        "0": {
+          "titulo": "Hi, I'm Soni.",
+          "texto": "A baby doll like any other, with a hoodie, a striped tee and a wish to be held.",
+          "alt": "Soni from the front, in the zipped red Casacusia hoodie"
+        },
+        "1": {
+          "titulo": "I have a cochlear implant.",
+          "texto": "I wear it every day, like many people in the Casacusia community. It's right here, behind the ear.",
+          "alt": "Soni in profile, in a striped tee with the cochlear implant behind the ear"
+        },
+        "2": {
+          "titulo": "This is the sound processor.",
+          "texto": "The part behind the ear picks up sound. The round coil is held by a magnet and sends the signal to the implant inside. It comes off and goes back on, like a coat.",
+          "alt": "Close-up of the sound processor of Soni's implant, behind the ear"
+        },
+        "3": {
+          "titulo": "So children can see themselves in their toys.",
+          "texto": "Soni exists to play, to explain, and to make the implant part of everyday life. And to support the foundation's programs.",
+          "alt": "A girl with a cochlear implant holds Soni in her arms"
+        }
+      }
+    },
     "soni": {
       "eyebrow": "Featured product",
       "heading": "Soni: a baby doll with a cochlear implant",
