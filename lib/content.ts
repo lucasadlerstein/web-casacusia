@@ -560,6 +560,21 @@ const AlaParSchema = z.object({
     errores: z.object({ email: z.string(), rate: z.string(), generico: z.string() }),
     cerrar: z.string()
   }),
+  /** Página a la que llega quien deja su email en la lista de espera. */
+  bienvenida: z.object({
+    meta: z.object({ title: z.string(), description: z.string() }),
+    etiqueta: z.string(),
+    titulo: z.string(),
+    parrafos: z.array(z.string()).min(1),
+    encuentrosTitulo: z.string(),
+    presencial: z.string(),
+    virtual: z.string(),
+    inscribirme: CtaSchema,
+    sinEncuentros: z.string(),
+    ctaCalendario: CtaSchema,
+    hrefCalendario: z.string(),
+    volver: z.string()
+  }),
   apoyo: z.object({ logoAlt: z.string(), logo: z.string() }),
   preguntas: z.object({ texto: z.string(), cta: z.string(), email: z.string().email() }),
   webinar: z.object({
