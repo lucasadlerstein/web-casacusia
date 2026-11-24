@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils/cn";
 
 /**
  * La cabeza que acompaña el recorrido: queda fija mientras las estaciones
@@ -8,7 +9,7 @@ import { useEffect, useState } from "react";
  * texto en pantallas grandes; en celular es chica y va arriba a la derecha.
  */
 
-type Estado = { efecto: string; lado: "izq" | "der" };
+type Estado = { efecto: string; leyenda: string };
 
 /** Cuánto se ve cada oreja (izquierda, derecha) y cómo, por efecto. */
 const OREJAS: Record<string, { izq: number; der: number; tapon: number; ondas: number }> = {
@@ -22,7 +23,7 @@ const OREJAS: Record<string, { izq: number; der: number; tapon: number; ondas: n
 };
 
 export function Cabeza() {
-  const [estado, setEstado] = useState<Estado>({ efecto: "clara", lado: "izq" });
+  const [estado, setEstado] = useState<Estado>({ efecto: "clara", leyenda: "" });
 
   useEffect(() => {
     const paneles = Array.from(document.querySelectorAll<HTMLElement>("[data-viaje] [data-estacion]"));
@@ -32,7 +33,7 @@ export function Cabeza() {
         for (const e of entradas) {
           if (!e.isIntersecting) continue;
           const el = e.target as HTMLElement;
-          setEstado({ efecto: el.dataset.efecto ?? "clara", lado: el.dataset.lado === "der" ? "der" : "izq" });
+          setEstado({ efecto: el.dataset.efecto ?? "clara", leyenda: el.dataset.cabeza ?? "" });
         }
       },
       { rootMargin: "-45% 0px -45% 0px", threshold: 0 }
@@ -46,11 +47,7 @@ export function Cabeza() {
 
   return (
     <div
-      className={
-        "absolute right-4 top-28 w-20 md:top-24 md:w-28 lg:top-1/2 lg:w-[min(22vw,280px)] lg:-translate-y-1/2 " +
-        "transition-[left,right] duration-700 ease-out " +
-        (estado.lado === "der" ? "lg:left-[14%] lg:right-auto" : "lg:left-auto lg:right-[14%]")
-      }
+      className="absolute right-4 top-28 w-20 md:top-24 md:w-28 lg:left-1/2 lg:right-auto lg:top-1/2 lg:w-[min(20vw,260px)] lg:-translate-x-1/2 lg:-translate-y-1/2"
       data-efecto={estado.efecto}
     >
       <svg viewBox="0 0 200 220" className="h-auto w-full" fill="none" stroke="rgb(var(--exp-crema-rgb) / 0.8)" strokeWidth={2.5}>
@@ -83,6 +80,33 @@ export function Cabeza() {
           <circle cx="150" cy="30" r="4" /><circle cx="166" cy="16" r="7" /><circle cx="186" cy="0" r="10" />
         </g>
       </svg>
+      {/* Lo que llega a cada oído, sin números: la pérdida auditiva no se mide así de simple. */}
+      <div className="mt-2 hidden lg:block">
+        <div className="flex items-center justify-between gap-3">
+          <Barra nivel={o.izq} recortada={estado.efecto === "recortada"} />
+          <Barra nivel={o.der} recortada={estado.efecto === "recortada"} />
+        </div>
+        <p
+          className={cn(
+            "mt-3 text-center font-mono text-[0.7rem] uppercase tracking-[0.2em] text-exp-crema/60 transition-opacity duration-500",
+            estado.leyenda ? "opacity-100" : "opacity-0"
+          )}
+        >
+          {estado.leyenda || "\u00a0"}
+        </p>
+      </div>
     </div>
+  );
+}
+
+/** Una barra por oído: cuánto del sonido llega. Con pérdida de agudos, la barra queda punteada. */
+function Barra({ nivel, recortada }: { nivel: number; recortada: boolean }) {
+  return (
+    <span className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-exp-crema/15">
+      <span
+        className={cn("absolute inset-y-0 left-0 rounded-full bg-exp-crema/80 transition-[width] duration-700 ease-out", recortada && "bg-[repeating-linear-gradient(90deg,rgb(var(--exp-crema-rgb)/0.8)_0_6px,transparent_6px_10px)]")}
+        style={{ width: `${Math.round(nivel * 100)}%` }}
+      />
+    </span>
   );
 }
