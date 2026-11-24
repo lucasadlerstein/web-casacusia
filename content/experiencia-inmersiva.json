@@ -63,7 +63,8 @@
         "acento": "crema",
         "texto": "Alguien te habla. El sonido viaja por el aire, entra por la oreja y sigue camino hacia adentro. Cuando todo funciona, ni lo pensás.",
         "descripcionAccesible": "La frase se lee completa y nítida.",
-        "animacion": "oido"
+        "animacion": "oido",
+        "cabeza": "Llega todo"
       },
       {
         "id": "conductiva",
@@ -72,7 +73,8 @@
         "efecto": "atenuada",
         "acento": "verde",
         "texto": "El sonido no logra pasar. Llega más débil, como si viniera de otra habitación. Lo propio (masticar, tu voz) se oye fuerte; lo de afuera, suave.",
-        "descripcionAccesible": "La frase se ve entera pero muy tenue, y por momentos casi desaparece, como un sonido que llega con poco volumen y va y viene."
+        "descripcionAccesible": "La frase se ve entera pero muy tenue, y por momentos casi desaparece, como un sonido que llega con poco volumen y va y viene.",
+        "cabeza": "Llega tapado"
       },
       {
         "id": "neurosensorial",
@@ -81,7 +83,8 @@
         "efecto": "recortada",
         "acento": "amatista",
         "texto": "Se oye la voz, pero cuesta entender las palabras. Lo más común es perder primero los agudos: la p, la k, la t, la ch, la f, la s y la z desaparecen.",
-        "descripcionAccesible": "A la frase le faltan casi todas las consonantes agudas: quedan las vocales y pocas letras más, y ya no se entiende."
+        "descripcionAccesible": "A la frase le faltan casi todas las consonantes agudas: quedan las vocales y pocas letras más, y ya no se entiende.",
+        "cabeza": "Se pierden los agudos"
       },
       {
         "id": "unilateral",
@@ -90,7 +93,8 @@
         "efecto": "unLado",
         "acento": "rosa",
         "texto": "Un oído oye y el otro oye poco o nada. Lo que llega del lado afectado se pierde, y no se sabe de dónde viene el sonido: ¿adelante, atrás, izquierda, derecha?",
-        "descripcionAccesible": "La mitad izquierda de la frase se lee bien y la mitad derecha se desvanece hasta desaparecer."
+        "descripcionAccesible": "La mitad izquierda de la frase se lee bien y la mitad derecha se desvanece hasta desaparecer.",
+        "cabeza": "Un oído no oye"
       },
       {
         "id": "bilateral",
@@ -99,7 +103,8 @@
         "efecto": "lejana",
         "acento": "amarillo",
         "texto": "Cuando la pérdida está en los dos oídos no hay un lado bueno hacia donde girar la cabeza. Cada conversación pide atención completa, todo el día.",
-        "descripcionAccesible": "La frase se ve tenue, borrosa y además le faltan consonantes: casi no queda nada para entender."
+        "descripcionAccesible": "La frase se ve tenue, borrosa y además le faltan consonantes: casi no queda nada para entender.",
+        "cabeza": "Los dos oyen poco"
       }
     ],
     "rumiacion": {
@@ -180,6 +185,10 @@
       }
     ],
     "verMas": "Ver más voces",
+    "luz": {
+      "prender": "Prender la luz",
+      "apagar": "Apagar la luz"
+    },
     "dejar": {
       "titulo": "¿La viviste?",
       "texto": "Dejá tu post-it en esta pared.",
@@ -305,18 +314,21 @@
       {
         "id": "llevar",
         "titulo": "Llevarla a mi espacio",
+        "resaltado": "mi espacio",
         "texto": "Tengo una empresa, escuela, institución o sala en mente.",
         "boton": "Quiero coordinar una función"
       },
       {
         "id": "avisar",
         "titulo": "Avisarme cuando haya función",
+        "resaltado": "Avisarme",
         "texto": "Quiero vivirla con alguien cuando llegue a mi ciudad.",
         "boton": "Avisenme"
       },
       {
         "id": "presentar",
         "titulo": "Presentarla en mi trabajo",
+        "resaltado": "Presentarla",
         "texto": "Quiero que llegue a Personas, Diversidad o Sustentabilidad de mi organización.",
         "boton": "Preparar el mensaje"
       }

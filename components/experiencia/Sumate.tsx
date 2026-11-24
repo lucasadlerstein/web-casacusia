@@ -19,6 +19,21 @@ const campo =
   "mt-2 w-full rounded-xl border border-exp-crema/25 bg-exp-noche px-4 py-3 text-base text-exp-crema placeholder:text-exp-crema/40 " +
   "focus:border-amarillo focus:outline-none focus:ring-2 focus:ring-amarillo/40";
 
+/** El color de cada modo: la palabra clave del título va pintada. */
+const COLOR_MODO: Record<Modo, string> = { llevar: "text-amarillo", avisar: "text-verde", presentar: "text-amatista" };
+
+function Resaltado({ texto, parte, color }: { texto: string; parte: string; color: string }) {
+  const i = texto.indexOf(parte);
+  if (i < 0) return <>{texto}</>;
+  return (
+    <>
+      {texto.slice(0, i)}
+      <span className={color}>{parte}</span>
+      {texto.slice(i + parte.length)}
+    </>
+  );
+}
+
 function Campo({ etiqueta, ayuda, children }: { etiqueta: string; ayuda?: string; children: (id: string) => ReactNode }) {
   const id = useId();
   return (
@@ -108,7 +123,9 @@ export function SumateFormulario({ sumate, url }: { sumate: Sumate; url: string 
                       )}
                     />
                     <span>
-                      <span className="block font-display font-extrabold text-exp-crema max-sm:text-sm sm:text-lg">{m.titulo}</span>
+                      <span className="block font-display font-extrabold text-exp-crema max-sm:text-sm sm:text-lg">
+                        <Resaltado texto={m.titulo} parte={m.resaltado} color={COLOR_MODO[m.id]} />
+                      </span>
                       <span className="mt-1 block leading-relaxed text-exp-crema/70 max-sm:hidden">{m.texto}</span>
                     </span>
                   </span>

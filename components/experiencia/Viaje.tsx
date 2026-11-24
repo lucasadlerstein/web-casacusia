@@ -21,6 +21,7 @@ function Panel({
   efecto,
   lado = "izq",
   ancho = "angosto",
+  cabeza,
   children,
   className
 }: {
@@ -31,6 +32,8 @@ function Panel({
   /** De qué lado va el texto en pantallas grandes: alternan para que el ojo siga el camino. */
   lado?: "izq" | "der";
   ancho?: "angosto" | "amplio";
+  /** Leyenda que muestra la cabeza en esta estación. */
+  cabeza?: string;
   children: ReactNode;
   className?: string;
 }) {
@@ -41,12 +44,13 @@ function Panel({
       data-acento={acento}
       data-efecto={efecto}
       data-lado={lado}
+      data-cabeza={cabeza}
       style={estiloAcento(acento)}
       className={cn("flex min-h-[78svh] scroll-mt-28 items-center py-14 md:min-h-[70svh] md:scroll-mt-16 md:py-20", className)}
     >
       <div className={cn("container flex", lado === "der" && "lg:justify-end")}>
         {/* Un velo oscuro detrás del texto para que el fondo nunca le gane a la lectura. */}
-        <div data-lectura="" className={cn("relative w-full", ancho === "amplio" ? "max-w-3xl" : "max-w-3xl lg:max-w-[46%]")}>
+        <div data-lectura="" className={cn("relative w-full", ancho === "amplio" ? "max-w-3xl" : "max-w-3xl lg:max-w-[38%]")}>
           <div
             aria-hidden="true"
             className="absolute -inset-x-6 -inset-y-10 -z-10 rounded-[3rem] bg-exp-noche/70 blur-2xl"
@@ -92,7 +96,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
         </Panel>
 
         {viaje.estaciones.map((e, i) => (
-          <Panel key={e.id} id={e.id} acento={e.acento} efecto={e.efecto} lado={i % 2 === 0 ? "der" : "izq"}>
+          <Panel key={e.id} id={e.id} acento={e.acento} efecto={e.efecto} lado={i % 2 === 0 ? "der" : "izq"} cabeza={e.cabeza}>
             <Rotulo>
               <span className="text-[color:var(--acento)]">{numero(i + 1)}</span>
               <span className="mx-2 text-exp-crema/30">·</span>

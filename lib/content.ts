@@ -657,7 +657,9 @@ const ExperienciaSchema = z.object({
           texto: z.string(),
           descripcionAccesible: z.string(),
           /** Ilustración animada que acompaña al título de la estación. */
-          animacion: z.enum(["oido"]).optional()
+          animacion: z.enum(["oido"]).optional(),
+          /** Leyenda corta que muestra la cabeza fija en esta estación. */
+          cabeza: z.string().optional()
         })
       )
       .min(1),
@@ -678,6 +680,8 @@ const ExperienciaSchema = z.object({
     citas: z.array(z.object({ cita: z.string(), quien: z.string(), papel: z.enum(experienciaPapeles) })).min(1),
     /** Botón que despliega el resto de los post-its en celular. */
     verMas: CtaSchema,
+    /** El interruptor de la pared: apagada, el puntero es una linterna. */
+    luz: z.object({ prender: CtaSchema, apagar: CtaSchema }),
     /** El último post-it: invita a dejar el propio como comentario en Instagram. */
     dejar: z.object({
       titulo: z.string(),
@@ -716,7 +720,16 @@ const ExperienciaSchema = z.object({
     titulo: z.string(),
     intro: z.string(),
     modos: z
-      .array(z.object({ id: z.enum(["llevar", "avisar", "presentar"]), titulo: z.string(), texto: z.string(), boton: z.string() }))
+      .array(
+        z.object({
+          id: z.enum(["llevar", "avisar", "presentar"]),
+          titulo: z.string(),
+          /** Parte del título que va a color. */
+          resaltado: z.string(),
+          texto: z.string(),
+          boton: z.string()
+        })
+      )
       .min(1),
     campos: z.object({
       nombre: z.string(),

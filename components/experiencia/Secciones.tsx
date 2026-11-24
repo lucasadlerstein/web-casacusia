@@ -6,6 +6,7 @@ import { BotonSumate } from "./BotonSumate";
 import { DejarVoz } from "./DejarVoz";
 import { VerMas } from "./VerMas";
 import { Icono } from "./Iconos";
+import { LuzPared } from "./LuzPared";
 import { Prender } from "./Prender";
 import { Bloque, Rotulo, botonClases, t, tonoEstilo } from "./ui";
 
@@ -89,7 +90,8 @@ export function Voces({ voces }: { voces: C["voces"] }) {
   return (
     <Bloque id="voces" tono="luz" titulo={voces.titulo} resaltar={voces.tituloResaltado} intro={voces.intro}>
       <Prender />
-      <ul id="voces-pared" className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9">
+      <LuzPared prender={voces.luz.prender} apagar={voces.luz.apagar} />
+      <ul id="voces-pared" className="mt-6 grid gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-9">
         {voces.citas.map((c, i) => (
           <li
             key={c.cita}
