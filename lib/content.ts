@@ -736,15 +736,9 @@ const ExperienciaSchema = z.object({
       email: z.string(),
       ciudad: z.string(),
       ciudadAyuda: z.string(),
-      tipoEspacio: z.string(),
-      tiposEspacio: z.array(z.string()).min(1),
       organizacion: z.string(),
       emailDestino: z.string(),
-      emailDestinoAyuda: z.string(),
-      vinculo: z.string(),
-      vinculos: z.array(z.string()).min(1),
-      motivo: z.string(),
-      elegir: z.string()
+      emailDestinoAyuda: z.string()
     }),
     enviando: z.string(),
     cerrar: z.string(),

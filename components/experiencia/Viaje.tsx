@@ -50,7 +50,7 @@ function Panel({
     >
       <div className={cn("container flex", lado === "der" && "lg:justify-end")}>
         {/* Un velo oscuro detrás del texto para que el fondo nunca le gane a la lectura. */}
-        <div data-lectura="" className={cn("relative w-full", ancho === "amplio" ? "max-w-3xl" : "max-w-3xl lg:max-w-[38%]")}>
+        <div data-lectura="" className={cn("relative w-full", ancho === "amplio" ? "max-w-3xl" : "max-w-3xl lg:max-w-[52%]")}>
           <div
             aria-hidden="true"
             className="absolute -inset-x-6 -inset-y-10 -z-10 rounded-[3rem] bg-exp-noche/70 blur-2xl"
@@ -96,7 +96,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
         </Panel>
 
         {viaje.estaciones.map((e, i) => (
-          <Panel key={e.id} id={e.id} acento={e.acento} efecto={e.efecto} lado={i % 2 === 0 ? "der" : "izq"} cabeza={e.cabeza}>
+          <Panel key={e.id} id={e.id} acento={e.acento} efecto={e.efecto} cabeza={e.cabeza}>
             <Rotulo>
               <span className="text-[color:var(--acento)]">{numero(i + 1)}</span>
               <span className="mx-2 text-exp-crema/30">·</span>
@@ -116,7 +116,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
           </Panel>
         ))}
 
-        <Panel id="por-dentro" acento="crema" efecto="rumia" lado={viaje.estaciones.length % 2 === 0 ? "der" : "izq"}>
+        <Panel id="por-dentro" acento="crema" efecto="rumia">
           <Rotulo>
             <span className="text-exp-crema">{numero(total - 1)}</span>
             <span className="mx-2 text-exp-crema/30">·</span>
@@ -140,7 +140,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
           <p className="max-w-2xl text-lg leading-relaxed text-exp-crema/80 md:text-xl">{viaje.rumiacion.texto}</p>
         </Panel>
 
-        <Panel id="oirlo" acento="rosa" efecto="latido" lado={viaje.estaciones.length % 2 === 0 ? "izq" : "der"}>
+        <Panel id="oirlo" acento="rosa" efecto="latido">
           <Rotulo>
             <span className="text-[color:var(--acento)]">{numero(total)}</span>
             <span className="mx-2 text-exp-crema/30">·</span>

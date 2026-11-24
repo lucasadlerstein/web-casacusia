@@ -267,29 +267,6 @@ export function Facilita({ facilita }: { facilita: C["facilita"] }) {
   );
 }
 
-export function Preguntas({ preguntas }: { preguntas: C["preguntas"] }) {
-  return (
-    <Bloque id="preguntas" tono="panel" titulo={preguntas.titulo} intro={preguntas.intro}>
-      <dl className={cn("mt-10 max-w-3xl divide-y border-y", t.linea, "divide-[color:var(--linea)]")}>
-        {preguntas.items.map((it) => (
-          <details key={it.pregunta} className="group">
-            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 py-5 [&::-webkit-details-marker]:hidden">
-              <dt className="font-display text-lg font-bold md:text-xl">{it.pregunta}</dt>
-              <span
-                aria-hidden="true"
-                className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-amarillo text-amarillo transition-transform duration-200 group-open:rotate-45"
-              >
-                +
-              </span>
-            </summary>
-            <dd className={cn("pb-6 pr-10 leading-relaxed", t.suave)}>{it.respuesta}</dd>
-          </details>
-        ))}
-      </dl>
-    </Bloque>
-  );
-}
-
 export function Cierre({ cierre }: { cierre: C["cierre"] }) {
   return (
     <section className="border-t border-exp-crema/10 pb-10 pt-24 md:pt-32">

@@ -26,13 +26,9 @@
       {
         "href": "#sala",
         "label": "La sala"
-      },
-      {
-        "href": "#preguntas",
-        "label": "Preguntas"
       }
     ],
-    "cta": "Llevarla a mi espacio"
+    "cta": "Vivir la experiencia"
   },
   "hero": {
     "etiqueta": "Experiencia inmersiva · 17 minutos · Sala a oscuras",
@@ -41,7 +37,7 @@
     "bajada": "Para ponerte en el lugar de quien no oye, primero tenés que oír así. Bajá y seguí el camino del sonido hacia adentro.",
     "bajadaCorta": "Bajá y seguí el camino del sonido hacia adentro.",
     "ctaRecorrido": "Empezar el recorrido",
-    "ctaLlevar": "Llevarla a mi espacio"
+    "ctaLlevar": "Vivir la experiencia"
   },
   "viaje": {
     "frase": "¿Pasás a buscarme el sábado a las siete?",
@@ -308,8 +304,8 @@
     "sinSonidoCta": "Anotarme"
   },
   "sumate": {
-    "titulo": "Vivila, llevala o hacela llegar",
-    "intro": "Elegí lo que querés hacer y dejanos tus datos.",
+    "titulo": "Quiero vivir la experiencia",
+    "intro": "Elegí cómo: en tu espacio, cuando llegue a tu ciudad o presentándola en tu trabajo.",
     "modos": [
       {
         "id": "llevar",
@@ -338,30 +334,9 @@
       "email": "Tu email",
       "ciudad": "Tu ciudad",
       "ciudadAyuda": "Así sabemos dónde hay ganas de vivirla.",
-      "tipoEspacio": "¿Qué tipo de espacio es?",
-      "tiposEspacio": [
-        "Empresa",
-        "Escuela privada",
-        "Escuela pública",
-        "Universidad",
-        "Gobierno o institución pública",
-        "Organización social",
-        "Celebración o grupo",
-        "Otro"
-      ],
-      "organizacion": "Nombre de la organización",
+      "organizacion": "Organización (opcional)",
       "emailDestino": "Email del área a la que querés que llegue",
-      "emailDestinoAyuda": "Te armamos un mensaje para que lo envíes desde tu correo.",
-      "vinculo": "¿Cuál es tu vínculo con la hipoacusia? (opcional)",
-      "vinculos": [
-        "Tengo sordera, hipoacusia o pérdida auditiva",
-        "Alguien de mi familia o cercano",
-        "Trabajo en salud o educación",
-        "Ninguno, me interesa el tema",
-        "Prefiero no decirlo"
-      ],
-      "motivo": "¿Por qué querés llevarla? (opcional)",
-      "elegir": "Elegí una opción"
+      "emailDestinoAyuda": "Te armamos un mensaje para que lo envíes desde tu correo."
     },
     "enviando": "Enviando…",
     "cerrar": "Cerrar",
@@ -430,7 +405,7 @@
   },
   "cierre": {
     "frase": "Después de oír así, no escuchás igual.",
-    "cta": "Llevarla a mi espacio",
+    "cta": "Vivir la experiencia",
     "creditos": "Una experiencia de Casacusia, creada por Valentino Fama y Beltrán Bunge.",
     "programaDe": "Una iniciativa de",
     "casacusia": "Fundación Casacusia",

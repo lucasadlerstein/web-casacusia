@@ -47,7 +47,7 @@ export function Cabeza() {
 
   return (
     <div
-      className="absolute right-4 top-28 w-20 md:top-24 md:w-28 lg:left-1/2 lg:right-auto lg:top-1/2 lg:w-[min(20vw,260px)] lg:-translate-x-1/2 lg:-translate-y-1/2"
+      className="absolute right-4 top-28 w-20 md:top-24 md:w-28 lg:right-[9%] lg:top-1/2 lg:w-[min(20vw,260px)] lg:-translate-y-1/2"
       data-efecto={estado.efecto}
     >
       <svg viewBox="0 0 200 220" className="h-auto w-full" fill="none" stroke="rgb(var(--exp-crema-rgb) / 0.8)" strokeWidth={2.5}>

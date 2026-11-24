@@ -288,7 +288,7 @@ export function ViajeFondo() {
           const adentro = Math.min(px - r.left, r.right - px, py - r.top, r.bottom - py);
           tapado = Math.max(tapado, suave(acotar((adentro + 24) / 48)));
         }
-        return 1 - 0.9 * tapado;
+        return 1 - tapado;
       };
       // La frase que manda es la que está más cerca del centro de la pantalla.
       let activa = frases[0];
@@ -348,7 +348,10 @@ export function ViajeFondo() {
         // Mientras está en la espiral no le gana al texto; al salir hacia la frase, sí se ve.
         // La que no logra salir se apaga menos: tiene que notarse que quedó adentro.
         const libre = despejado(casaX, casaY);
-        const opacidad = mezclar(alfaCasa * mezclar(libre, Math.max(libre, 0.5), noSale), destino.alfa, k);
+        // Detrás del texto no se ve ninguna letra suelta: marea al leer.
+        // En vuelo tampoco cruza por encima del texto: solo se ve al llegar a su lugar en la frase.
+        const enVuelo = mezclar(despejado(x, y), 1, suave(acotar((k - 0.85) / 0.15)));
+        const opacidad = mezclar(alfaCasa * libre, destino.alfa, k) * enVuelo;
         if (opacidad < 0.015) return;
 
         const tamano = mezclar(frase.tamano * mezclar(0.46, 0.7, noSale), frase.tamano * destino.escala, k);

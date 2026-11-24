@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getExperiencia } from "@/lib/content";
 import type { Locale } from "@/lib/i18n/config";
 import { Viaje } from "@/components/experiencia/Viaje";
-import { Cierre, Espacios, Facilita, Formato, Muestra, Preguntas, Sala, TopBar, Voces } from "@/components/experiencia/Secciones";
+import { Cierre, Espacios, Facilita, Formato, Muestra, Sala, TopBar, Voces } from "@/components/experiencia/Secciones";
 import { Sumate, SumateDialogo } from "@/components/experiencia/Sumate";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org";
@@ -62,16 +62,16 @@ export default async function ExperienciaPage({ params }: { params: Promise<{ lo
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <TopBar nav={c.nav} />
-      <SumateDialogo sumate={c.sumate} url={`${SITE_URL}/experiencia-inmersiva`} />
+      <SumateDialogo sumate={c.sumate} url={`${SITE_URL}/experiencia-inmersiva`} preguntas={c.preguntas} />
       <Viaje hero={c.hero} viaje={c.viaje} />
       <Muestra muestra={c.muestra} />
       <Voces voces={c.voces} />
       <Formato formato={c.formato} />
       <Espacios espacios={c.espacios} />
-      <Sala sala={c.sala} />
       <Facilita facilita={c.facilita} />
-      <Sumate sumate={c.sumate} url={`${SITE_URL}/experiencia-inmersiva`} />
-      <Preguntas preguntas={c.preguntas} />
+      {/* La sala va pegada al contacto: es lo que hay que saber antes de pedir una función. */}
+      <Sala sala={c.sala} />
+      <Sumate sumate={c.sumate} url={`${SITE_URL}/experiencia-inmersiva`} preguntas={c.preguntas} />
       <Cierre cierre={c.cierre} />
     </>
   );

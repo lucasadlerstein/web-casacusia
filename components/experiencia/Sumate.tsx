@@ -5,6 +5,7 @@ import { useLocale } from "next-intl";
 import { anotarse, type AnotarseState } from "@/app/actions/experiencia";
 import type { ExperienciaContent } from "@/lib/content";
 import { cn } from "@/lib/utils/cn";
+import { Preguntas } from "./Preguntas";
 import { Bloque, botonClases } from "./ui";
 
 /**
@@ -13,6 +14,7 @@ import { Bloque, botonClases } from "./ui";
  */
 
 type Sumate = ExperienciaContent["sumate"];
+type PreguntasC = ExperienciaContent["preguntas"];
 type Modo = Sumate["modos"][number]["id"];
 
 const campo =
@@ -174,19 +176,6 @@ export function SumateFormulario({ sumate, url }: { sumate: Sumate; url: string 
                 {(id) => <input id={id} required autoComplete="address-level2" maxLength={120} {...enlazar("ciudad")} />}
               </Campo>
 
-              {modo === "llevar" && (
-                <Campo etiqueta={c.tipoEspacio}>
-                  {(id) => (
-                    <select id={id} {...enlazar("tipoEspacio")}>
-                      <option value="">{c.elegir}</option>
-                      {c.tiposEspacio.map((t) => (
-                        <option key={t}>{t}</option>
-                      ))}
-                    </select>
-                  )}
-                </Campo>
-              )}
-
               {modo !== "avisar" && (
                 <Campo etiqueta={c.organizacion}>
                   {(id) => <input id={id} autoComplete="organization" maxLength={160} {...enlazar("organizacion")} />}
@@ -199,20 +188,6 @@ export function SumateFormulario({ sumate, url }: { sumate: Sumate; url: string 
                 </Campo>
               )}
 
-              <Campo etiqueta={c.vinculo}>
-                {(id) => (
-                  <select id={id} {...enlazar("vinculo")}>
-                    <option value="">{c.elegir}</option>
-                    {c.vinculos.map((v) => (
-                      <option key={v}>{v}</option>
-                    ))}
-                  </select>
-                )}
-              </Campo>
-
-              {modo !== "avisar" && (
-                <Campo etiqueta={c.motivo}>{(id) => <textarea id={id} rows={3} maxLength={2000} {...enlazar("motivo")} />}</Campo>
-              )}
             </div>
 
             <button type="submit" disabled={pending} className={botonClases("lleno", "mt-7 w-full disabled:opacity-70 sm:w-auto")}>
@@ -229,10 +204,11 @@ export function SumateFormulario({ sumate, url }: { sumate: Sumate; url: string 
 }
 
 /** La sección del final, para quien llega scrolleando (y para Google). */
-export function Sumate({ sumate, url }: { sumate: Sumate; url: string }) {
+export function Sumate({ sumate, url, preguntas }: { sumate: Sumate; url: string; preguntas: PreguntasC }) {
   return (
     <Bloque id="sumate" titulo={sumate.titulo} intro={sumate.intro}>
       <SumateFormulario sumate={sumate} url={url} />
+      <Preguntas preguntas={preguntas} />
     </Bloque>
   );
 }
@@ -243,7 +219,7 @@ export const SUMATE_DIALOGO_ID = "sumate-dialogo";
  * El mismo formulario como pop-up: se abre desde cualquier botón «Llevarla a
  * mi espacio» (ver `BotonSumate`), para darle a ese pedido su propio momento.
  */
-export function SumateDialogo({ sumate, url }: { sumate: Sumate; url: string }) {
+export function SumateDialogo({ sumate, url, preguntas }: { sumate: Sumate; url: string; preguntas: PreguntasC }) {
   const dialogo = useRef<HTMLDialogElement>(null);
   return (
     <dialog
@@ -269,6 +245,7 @@ export function SumateDialogo({ sumate, url }: { sumate: Sumate; url: string }) 
         </button>
       </div>
       <SumateFormulario sumate={sumate} url={url} />
+      <Preguntas preguntas={preguntas} />
     </dialog>
   );
 }
