@@ -678,6 +678,8 @@ const ExperienciaSchema = z.object({
     citas: z.array(z.object({ cita: z.string(), quien: z.string(), papel: z.enum(experienciaPapeles) })).min(1),
     /** Botón que despliega el resto de los post-its en celular. */
     verMas: CtaSchema,
+    /** El interruptor de la pared: apagada, el puntero es una linterna. */
+    luz: z.object({ prender: CtaSchema, apagar: CtaSchema }),
     /** El último post-it: invita a dejar el propio como comentario en Instagram. */
     dejar: z.object({
       titulo: z.string(),

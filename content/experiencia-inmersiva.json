@@ -180,6 +180,10 @@
       }
     ],
     "verMas": "Ver más voces",
+    "luz": {
+      "prender": "Prender la luz",
+      "apagar": "Apagar la luz"
+    },
     "dejar": {
       "titulo": "¿La viviste?",
       "texto": "Dejá tu post-it en esta pared.",
