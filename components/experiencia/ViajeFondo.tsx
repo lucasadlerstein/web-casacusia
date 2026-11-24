@@ -128,6 +128,10 @@ export function ViajeFondo() {
     const aspectos = paneles.map((p) => ASPECTOS[p.dataset.efecto ?? "clara"] ?? CLARA);
 
     const quieto = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // La luz: en computadora, el puntero es una linterna que revela la espiral a su paso.
+    const conPuntero = window.matchMedia("(pointer: fine)");
+    const luz = { x: -9999, y: -9999, fuerza: 0 };
+    const RADIO_LUZ = 240;
     let ancho = 0;
     let alto = 0;
     let dpr = 1;
@@ -222,6 +226,19 @@ export function ViajeFondo() {
       const giro = -viaje * 0.12;
       /** Cuánto apaga la pérdida de un lado a lo que está en x. */
       const sombra = (x: number) => 1 - lado * 0.94 * suave(acotar((x - cx + 60) / 120));
+      // Cuánto ilumina la linterna en un punto: 1 al centro, 0 en el borde del haz.
+      const iluminado = (x: number, y: number) => {
+        if (luz.fuerza <= 0) return 0;
+        const d = Math.hypot(x - luz.x, y - luz.y);
+        return d >= RADIO_LUZ ? 0 : luz.fuerza * suave(1 - d / RADIO_LUZ);
+      };
+      if (luz.fuerza > 0) {
+        const halo = ctx.createRadialGradient(luz.x, luz.y, 0, luz.x, luz.y, RADIO_LUZ);
+        halo.addColorStop(0, `rgba(${color[0]},${color[1]},${color[2]},${(0.07 * luz.fuerza).toFixed(3)})`);
+        halo.addColorStop(1, `rgba(${color[0]},${color[1]},${color[2]},0)`);
+        ctx.fillStyle = halo;
+        ctx.fillRect(luz.x - RADIO_LUZ, luz.y - RADIO_LUZ, RADIO_LUZ * 2, RADIO_LUZ * 2);
+      }
 
       for (let brazo = 0; brazo < brazos; brazo++) {
         for (let i = 0; i < cantidad; i++) {
@@ -242,6 +259,9 @@ export function ViajeFondo() {
           opacidad *= 0.55 + 0.45 * azar(id + 7);
           opacidad *= sombra(x);
           opacidad *= 1 + latido * pulso * 0.5;
+          // Bajo la linterna, el punto se ve aunque la estación lo apague.
+          const haz = iluminado(x, y);
+          if (haz > 0) opacidad = Math.max(opacidad, 0.1 * haz) + opacidad * 1.6 * haz;
           if (opacidad < 0.012) continue;
 
           const tamano = 0.7 + profundidad * 2.3;
@@ -365,8 +385,21 @@ export function ViajeFondo() {
       if (visible) arrancar();
     });
     observador.observe(seccion);
+    const alMover = (e: PointerEvent) => {
+      if (!conPuntero.matches || e.pointerType !== "mouse") return;
+      const caja = lienzo.getBoundingClientRect();
+      luz.x = e.clientX - caja.left;
+      luz.y = e.clientY - caja.top;
+      luz.fuerza = 1;
+      arrancar();
+    };
+    const alSalir = () => {
+      luz.fuerza = 0;
+    };
     window.addEventListener("resize", remedir);
     window.addEventListener("scroll", alScrollear, { passive: true });
+    seccion.addEventListener("pointermove", alMover, { passive: true });
+    seccion.addEventListener("pointerleave", alSalir);
     quieto.addEventListener("change", remedir);
 
     return () => {
@@ -374,6 +407,8 @@ export function ViajeFondo() {
       observador.disconnect();
       window.removeEventListener("resize", remedir);
       window.removeEventListener("scroll", alScrollear);
+      seccion.removeEventListener("pointermove", alMover);
+      seccion.removeEventListener("pointerleave", alSalir);
       quieto.removeEventListener("change", remedir);
       delete seccion.dataset.letras;
     };

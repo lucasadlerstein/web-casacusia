@@ -629,6 +629,8 @@ const ExperienciaSchema = z.object({
     titulo: z.string(),
     subtitulo: z.string(),
     bajada: z.string(),
+    /** La bajada en una línea, para celular. */
+    bajadaCorta: z.string(),
     ctaRecorrido: CtaSchema,
     ctaLlevar: CtaSchema
   }),
@@ -674,6 +676,8 @@ const ExperienciaSchema = z.object({
     tituloResaltado: z.string(),
     intro: z.string(),
     citas: z.array(z.object({ cita: z.string(), quien: z.string(), papel: z.enum(experienciaPapeles) })).min(1),
+    /** Botón que despliega el resto de los post-its en celular. */
+    verMas: CtaSchema,
     /** El último post-it: invita a dejar el propio como comentario en Instagram. */
     dejar: z.object({
       titulo: z.string(),
@@ -730,6 +734,7 @@ const ExperienciaSchema = z.object({
       elegir: z.string()
     }),
     enviando: z.string(),
+    cerrar: z.string(),
     nota: z.string(),
     ok: z.object({ llevar: z.string(), avisar: z.string(), presentar: z.string() }),
     errores: z.object({ validacion: z.string(), email: z.string(), rate: z.string(), generico: z.string() }),
