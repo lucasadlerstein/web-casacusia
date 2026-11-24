@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import type { ExperienciaAcento, ExperienciaContent } from "@/lib/content";
 import { cn } from "@/lib/utils/cn";
+import { BotonSumate } from "./BotonSumate";
+import { Cabeza } from "./Cabeza";
 import { Frase } from "./Frase";
 import { OndasOido } from "./OndasOido";
 import { ViajeFondo } from "./ViajeFondo";
@@ -17,6 +19,8 @@ function Panel({
   id,
   acento,
   efecto,
+  lado = "izq",
+  ancho = "angosto",
   children,
   className
 }: {
@@ -24,6 +28,9 @@ function Panel({
   acento: ExperienciaAcento;
   /** Cómo se ve el fondo en este panel (ver ASPECTOS en ViajeFondo). */
   efecto: string;
+  /** De qué lado va el texto en pantallas grandes: alternan para que el ojo siga el camino. */
+  lado?: "izq" | "der";
+  ancho?: "angosto" | "amplio";
   children: ReactNode;
   className?: string;
 }) {
@@ -33,12 +40,13 @@ function Panel({
       data-estacion=""
       data-acento={acento}
       data-efecto={efecto}
+      data-lado={lado}
       style={estiloAcento(acento)}
-      className={cn("flex min-h-[112svh] scroll-mt-28 items-center py-24 md:scroll-mt-16", className)}
+      className={cn("flex min-h-[78svh] scroll-mt-28 items-center py-14 md:min-h-[70svh] md:scroll-mt-16 md:py-20", className)}
     >
-      <div className="container">
+      <div className={cn("container flex", lado === "der" && "lg:justify-end")}>
         {/* Un velo oscuro detrás del texto para que el fondo nunca le gane a la lectura. */}
-        <div data-lectura="" className="relative max-w-3xl">
+        <div data-lectura="" className={cn("relative w-full", ancho === "amplio" ? "max-w-3xl" : "max-w-3xl lg:max-w-[46%]")}>
           <div
             aria-hidden="true"
             className="absolute -inset-x-6 -inset-y-10 -z-10 rounded-[3rem] bg-exp-noche/70 blur-2xl"
@@ -58,10 +66,11 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
     <section data-viaje="" className="group/viaje relative">
       <div className="pointer-events-none sticky top-0 h-[100svh] overflow-hidden" aria-hidden="true">
         <ViajeFondo />
+        <Cabeza />
       </div>
 
       <div className="relative -mt-[100svh]">
-        <Panel id="inicio" acento="crema" efecto="clara" className="min-h-[100svh] pt-36 md:pt-28">
+        <Panel id="inicio" acento="crema" efecto="clara" ancho="amplio" className="min-h-[100svh] pt-36 md:min-h-[100svh] md:pt-28">
           <Rotulo>{hero.etiqueta}</Rotulo>
           <h1 className="mt-6 font-display font-extrabold tracking-[-0.03em] text-exp-crema">
             <span className="block text-[2.9rem] leading-[0.98] sm:text-7xl md:text-[5.5rem]">{hero.titulo}</span>
@@ -69,20 +78,21 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
               {hero.subtitulo}
             </span>
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-exp-crema/75">{hero.bajada}</p>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-exp-crema/75">
+            <span className="sm:hidden">{hero.bajadaCorta}</span>
+            <span className="max-sm:hidden">{hero.bajada}</span>
+          </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href="#sonido" className={botonClases("lleno")}>
               {hero.ctaRecorrido}
               <span aria-hidden="true">↓</span>
             </a>
-            <a href="#sumate" className={botonClases("borde")}>
-              {hero.ctaLlevar}
-            </a>
+            <BotonSumate variante="borde">{hero.ctaLlevar}</BotonSumate>
           </div>
         </Panel>
 
         {viaje.estaciones.map((e, i) => (
-          <Panel key={e.id} id={e.id} acento={e.acento} efecto={e.efecto}>
+          <Panel key={e.id} id={e.id} acento={e.acento} efecto={e.efecto} lado={i % 2 === 0 ? "der" : "izq"}>
             <Rotulo>
               <span className="text-[color:var(--acento)]">{numero(i + 1)}</span>
               <span className="mx-2 text-exp-crema/30">·</span>
@@ -102,7 +112,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
           </Panel>
         ))}
 
-        <Panel id="por-dentro" acento="crema" efecto="rumia">
+        <Panel id="por-dentro" acento="crema" efecto="rumia" lado={viaje.estaciones.length % 2 === 0 ? "der" : "izq"}>
           <Rotulo>
             <span className="text-exp-crema">{numero(total - 1)}</span>
             <span className="mx-2 text-exp-crema/30">·</span>
@@ -111,7 +121,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
           <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.02em] text-exp-crema sm:text-5xl md:text-6xl">
             {viaje.rumiacion.titulo}
           </h2>
-          <ul className="my-9 flex flex-col gap-3 md:my-11">
+          <ul className="my-7 flex flex-col gap-2 md:my-9">
             {viaje.rumiacion.pensamientos.map((p, i) => (
               <li
                 key={p}
@@ -126,7 +136,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
           <p className="max-w-2xl text-lg leading-relaxed text-exp-crema/80 md:text-xl">{viaje.rumiacion.texto}</p>
         </Panel>
 
-        <Panel id="oirlo" acento="rosa" efecto="latido">
+        <Panel id="oirlo" acento="rosa" efecto="latido" lado={viaje.estaciones.length % 2 === 0 ? "izq" : "der"}>
           <Rotulo>
             <span className="text-[color:var(--acento)]">{numero(total)}</span>
             <span className="mx-2 text-exp-crema/30">·</span>
@@ -136,9 +146,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
             {viaje.llegada.titulo}
           </h2>
           <p className="mt-7 max-w-2xl text-lg leading-relaxed text-exp-crema/80 md:text-xl">{viaje.llegada.texto}</p>
-          <a href="#sumate" className={botonClases("lleno", "mt-9")}>
-            {hero.ctaLlevar}
-          </a>
+          <BotonSumate className="mt-9">{hero.ctaLlevar}</BotonSumate>
         </Panel>
       </div>
 

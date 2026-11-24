@@ -39,6 +39,7 @@
     "titulo": "¿Cómo oye quien no oye?",
     "subtitulo": "Una experiencia inmersiva de Casacusia sobre la sordera e hipoacusia.",
     "bajada": "Para ponerte en el lugar de quien no oye, primero tenés que oír así. Bajá y seguí el camino del sonido hacia adentro.",
+    "bajadaCorta": "Bajá y seguí el camino del sonido hacia adentro.",
     "ctaRecorrido": "Empezar el recorrido",
     "ctaLlevar": "Llevarla a mi espacio"
   },
@@ -178,6 +179,7 @@
         "papel": "verde"
       }
     ],
+    "verMas": "Ver más voces",
     "dejar": {
       "titulo": "¿La viviste?",
       "texto": "Dejá tu post-it en esta pared.",
@@ -350,6 +352,7 @@
       "elegir": "Elegí una opción"
     },
     "enviando": "Enviando…",
+    "cerrar": "Cerrar",
     "nota": "Usamos tus datos solo para contactarte por esta experiencia.",
     "ok": {
       "llevar": "¡Gracias! Recibimos tu pedido. Te vamos a escribir para coordinar los detalles.",

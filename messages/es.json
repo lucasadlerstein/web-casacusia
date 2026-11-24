@@ -264,6 +264,33 @@
       "envio": "Envío a todo el país",
       "cuotas": "{n} cuotas sin interés"
     },
+    "relato": {
+      "label": "Conocé a Soni",
+      "hint": "Deslizá para conocer a Soni",
+      "saltar": "Ir a la tienda",
+      "pasos": {
+        "0": {
+          "titulo": "Hola, soy Soni.",
+          "texto": "Un bebote como cualquier otro, con buzo, remera a rayas y ganas de que lo alcen.",
+          "alt": "Soni de frente, con el buzo rojo de Casacusia cerrado"
+        },
+        "1": {
+          "titulo": "Tengo un implante coclear.",
+          "texto": "Lo uso todos los días, igual que muchas personas de la comunidad de Casacusia. Está acá, detrás de la oreja.",
+          "alt": "Soni de perfil, con remera a rayas y el implante coclear detrás de la oreja"
+        },
+        "2": {
+          "titulo": "Este es el procesador de sonido.",
+          "texto": "La parte de atrás de la oreja capta el sonido. La antena redonda se sostiene con un imán y manda la señal al implante que está adentro. Se puede sacar y poner, como un abrigo.",
+          "alt": "Acercamiento al procesador de sonido del implante de Soni, detrás de la oreja"
+        },
+        "3": {
+          "titulo": "Para que las infancias se vean en sus juguetes.",
+          "texto": "Soni existe para jugar, para explicar y para que el implante sea parte de la vida de todos los días. Y para sostener los programas de la fundación.",
+          "alt": "Una niña con implante coclear sostiene a Soni en brazos"
+        }
+      }
+    },
     "soni": {
       "eyebrow": "Producto destacado",
       "heading": "Soni: un bebote con implante coclear",

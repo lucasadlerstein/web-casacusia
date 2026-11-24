@@ -6,6 +6,7 @@ import { CreditCard, ExternalLink, HandHeart, Sparkles, Store, Truck } from "luc
 import { Section, SectionHeading, Eyebrow } from "@/components/ui/Section";
 import { PageHero } from "@/components/ui/PageHero";
 import { Button } from "@/components/ui/Button";
+import { SoniScroll, type PasoSoni } from "@/components/tienda/SoniScroll";
 import { buildMetadata } from "@/lib/seo";
 import { getTienda, type ProductoTienda } from "@/lib/content";
 import { cn } from "@/lib/utils/cn";
@@ -64,8 +65,14 @@ export default async function TiendaPage({
   setRequestLocale(locale);
 
   const t = await getTranslations("tienda");
-  const { productos, tiendaCompleta } = getTienda();
+  const { productos, tiendaCompleta, relatoSoni } = getTienda();
   const soni = productos.find((p) => p.destacado && p.link);
+  const pasosRelato: PasoSoni[] = relatoSoni.map((paso, i) => ({
+    ...paso,
+    titulo: t(`relato.pasos.${i}.titulo`),
+    texto: t(`relato.pasos.${i}.texto`),
+    alt: t(`relato.pasos.${i}.alt`)
+  }));
   const negua = productos.find((p) => p.slug === "cartas-negua");
   const galeria = soni?.imagenes ?? (soni?.imagen ? [soni.imagen] : []);
   const [fotoPrincipal, ...fotosSecundarias] = galeria;
@@ -138,6 +145,19 @@ export default async function TiendaPage({
           </>
         }
       />
+
+      {/* Soni se presenta al scrollear */}
+      {soni?.link && (
+        <SoniScroll
+          pasos={pasosRelato}
+          label={t("relato.label")}
+          hint={t("relato.hint")}
+          cta={t("soni.cta")}
+          ctaHref={soni.link}
+          saltar={t("relato.saltar")}
+          saltarHref="#productos"
+        />
+      )}
 
       {/* Soni, producto destacado */}
       {soni?.link && (
@@ -221,7 +241,7 @@ export default async function TiendaPage({
       )}
 
       {/* Grilla de productos */}
-      <Section ariaLabel={t("productos.heading")}>
+      <Section id="productos" ariaLabel={t("productos.heading")} className="scroll-mt-16 md:scroll-mt-[4.5rem]">
         <SectionHeading title={t("productos.heading")} />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {productos.map((p) => {

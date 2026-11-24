@@ -428,7 +428,16 @@ const ProductoTiendaSchema = z.object({
 });
 export type ProductoTienda = z.infer<typeof ProductoTiendaSchema>;
 
+const PasoRelatoSchema = z.object({
+  imagen: z.string(),
+  /** Punto de la foto (en %) al que se acerca la cámara y cuánto. */
+  foco: z.object({ x: z.number(), y: z.number(), escala: z.number() }).optional()
+});
+export type PasoRelato = z.infer<typeof PasoRelatoSchema>;
+
 const TiendaSchema = z.object({
+  /** Relato de Soni al scrollear: una foto (o un acercamiento) por paso. */
+  relatoSoni: z.array(PasoRelatoSchema),
   tiendaCompleta: z.string().url(),
   /** Link de compra común a todos los productos (lista solidaria en Mercado Libre). */
   linkCompra: z.string().url(),
@@ -620,6 +629,8 @@ const ExperienciaSchema = z.object({
     titulo: z.string(),
     subtitulo: z.string(),
     bajada: z.string(),
+    /** La bajada en una línea, para celular. */
+    bajadaCorta: z.string(),
     ctaRecorrido: CtaSchema,
     ctaLlevar: CtaSchema
   }),
@@ -665,6 +676,8 @@ const ExperienciaSchema = z.object({
     tituloResaltado: z.string(),
     intro: z.string(),
     citas: z.array(z.object({ cita: z.string(), quien: z.string(), papel: z.enum(experienciaPapeles) })).min(1),
+    /** Botón que despliega el resto de los post-its en celular. */
+    verMas: CtaSchema,
     /** El último post-it: invita a dejar el propio como comentario en Instagram. */
     dejar: z.object({
       titulo: z.string(),
@@ -721,6 +734,7 @@ const ExperienciaSchema = z.object({
       elegir: z.string()
     }),
     enviando: z.string(),
+    cerrar: z.string(),
     nota: z.string(),
     ok: z.object({ llevar: z.string(), avisar: z.string(), presentar: z.string() }),
     errores: z.object({ validacion: z.string(), email: z.string(), rate: z.string(), generico: z.string() }),

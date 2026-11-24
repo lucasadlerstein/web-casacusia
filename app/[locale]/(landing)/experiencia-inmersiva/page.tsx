@@ -6,7 +6,7 @@ import { getExperiencia } from "@/lib/content";
 import type { Locale } from "@/lib/i18n/config";
 import { Viaje } from "@/components/experiencia/Viaje";
 import { Cierre, Espacios, Facilita, Formato, Muestra, Preguntas, Sala, TopBar, Voces } from "@/components/experiencia/Secciones";
-import { Sumate } from "@/components/experiencia/Sumate";
+import { Sumate, SumateDialogo } from "@/components/experiencia/Sumate";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://casacusia.org";
 
@@ -62,6 +62,7 @@ export default async function ExperienciaPage({ params }: { params: Promise<{ lo
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <TopBar nav={c.nav} />
+      <SumateDialogo sumate={c.sumate} url={`${SITE_URL}/experiencia-inmersiva`} />
       <Viaje hero={c.hero} viaje={c.viaje} />
       <Muestra muestra={c.muestra} />
       <Voces voces={c.voces} />

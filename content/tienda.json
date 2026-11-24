@@ -9,7 +9,11 @@
       "descripcion": "Un bebote con implante coclear para que las infancias con hipoacusia se vean en sus juguetes. Viene con buzo, remera y pantalón, y con el implante puesto.",
       "precioARS": 45000,
       "imagen": "/tienda/soni-1.webp",
-      "imagenes": ["/tienda/soni-3.webp", "/tienda/soni-1.webp", "/tienda/soni-2.webp"],
+      "imagenes": [
+        "/tienda/soni-3.webp",
+        "/tienda/soni-1.webp",
+        "/tienda/soni-2.webp"
+      ],
       "link": "https://meli.la/1FSGHAy",
       "color": "verde",
       "destacado": true,
@@ -71,6 +75,25 @@
       "link": "https://meli.la/1FSGHAy",
       "color": "naranja",
       "orden": 6
+    }
+  ],
+  "relatoSoni": [
+    {
+      "imagen": "/tienda/soni-5.webp"
+    },
+    {
+      "imagen": "/tienda/soni-6.webp"
+    },
+    {
+      "imagen": "/tienda/soni-6.webp",
+      "foco": {
+        "x": 24,
+        "y": 25,
+        "escala": 2.8
+      }
+    },
+    {
+      "imagen": "/tienda/soni-3.webp"
     }
   ]
 }
