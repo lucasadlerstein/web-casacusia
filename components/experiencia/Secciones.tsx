@@ -3,6 +3,7 @@ import type { ExperienciaContent, ExperienciaPapel } from "@/lib/content";
 import { Link } from "@/lib/i18n/navigation";
 import { cn } from "@/lib/utils/cn";
 import { BotonSumate } from "./BotonSumate";
+import { CuentaRegresiva } from "./CuentaRegresiva";
 import { DejarVoz } from "./DejarVoz";
 import { VerMas } from "./VerMas";
 import { Icono } from "./Iconos";
@@ -179,12 +180,23 @@ export function Formato({ formato }: { formato: C["formato"] }) {
 export function Espacios({ espacios }: { espacios: C["espacios"] }) {
   return (
     <Bloque id="espacios" tono="luz" titulo={espacios.titulo} intro={espacios.intro}>
-      <ul className="mt-12 grid gap-4 sm:grid-cols-2">
+      {/* Celular: una pantalla partida en cuatro. Computadora: una fila de cuatro, con foto de fondo. */}
+      <ul className="mt-10 grid h-[calc(100svh-9rem)] max-h-[44rem] min-h-[30rem] grid-cols-2 grid-rows-2 gap-2 md:h-[26rem] md:min-h-0 md:grid-cols-4 md:grid-rows-1 md:gap-3">
         {espacios.items.map((it) => (
-          <li key={it.titulo} className={cn("rounded-2xl border p-6 md:p-7", t.linea, t.sup)}>
-            <Icono nombre={it.icono} className="mb-4 h-9 w-9 text-verde-dark" />
-            <h3 className={cn("font-display text-xl font-extrabold", t.tinta)}>{it.titulo}</h3>
-            <p className={cn("mt-2 leading-relaxed", t.suave)}>{it.texto}</p>
+          <li key={it.titulo} className="group relative isolate overflow-hidden rounded-2xl">
+            <Image
+              src={it.foto}
+              alt=""
+              fill
+              sizes="(min-width: 768px) 25vw, 50vw"
+              className="-z-10 object-cover transition-transform duration-700 ease-out motion-safe:group-hover:scale-105"
+            />
+            <span aria-hidden="true" className="absolute inset-0 -z-10 bg-gradient-to-t from-exp-noche via-exp-noche/70 to-exp-noche/10" />
+            <div className="flex h-full flex-col justify-end p-4 md:p-5">
+              <Icono nombre={it.icono} className="mb-2 h-7 w-7 text-amarillo md:h-8 md:w-8" />
+              <h3 className="font-display text-lg font-extrabold leading-tight text-exp-crema md:text-xl">{it.titulo}</h3>
+              <p className="mt-1.5 text-[0.85rem] leading-snug text-exp-crema/85 md:text-[0.95rem] md:leading-relaxed">{it.texto}</p>
+            </div>
           </li>
         ))}
       </ul>
@@ -192,9 +204,14 @@ export function Espacios({ espacios }: { espacios: C["espacios"] }) {
       <h3 className={cn("mt-14 font-mono text-xs uppercase tracking-[0.2em]", t.tenue)}>{espacios.fechasTitulo}</h3>
       <ul className="mt-5 grid gap-3 sm:grid-cols-3 sm:gap-4">
         {espacios.fechas.map((f) => (
-          <li key={f.mes} className="flex items-baseline gap-2 border-t border-amarillo/60 pt-3 sm:block sm:pt-4">
-            <p className={cn("font-display text-xl font-extrabold sm:text-3xl", t.tinta)}>{f.mes}</p>
-            <p className={cn("sm:mt-1", t.suave)}>{f.motivo}</p>
+          <li key={f.mes} className="flex items-end justify-between gap-3 border-t border-amarillo/60 pt-3 sm:block sm:pt-4">
+            <div>
+              <p className={cn("font-display text-xl font-extrabold sm:text-3xl", t.tinta)}>{f.mes}</p>
+              <p className={cn("sm:mt-1", t.suave)}>{f.motivo}</p>
+            </div>
+            <p className={cn("text-sm sm:mt-3", t.tinta)}>
+              <CuentaRegresiva fecha={f.fecha} faltan={espacios.faltan} hoy={espacios.hoy} />
+            </p>
           </li>
         ))}
       </ul>
@@ -262,6 +279,40 @@ export function Facilita({ facilita }: { facilita: C["facilita"] }) {
             </p>
           ))}
         </div>
+      </div>
+      <div className="container mt-16">
+        <Rotulo>{facilita.equipoTitulo}</Rotulo>
+        <ul className="mt-6 grid gap-6 sm:grid-cols-2">
+          {facilita.equipo.map((persona) => (
+            <li key={persona.nombre} className="flex items-center gap-5">
+              {persona.foto ? (
+                <Image
+                  src={persona.foto}
+                  alt={persona.fotoAlt ?? ""}
+                  width={160}
+                  height={160}
+                  className="h-24 w-24 shrink-0 rounded-full object-cover"
+                />
+              ) : (
+                <span
+                  aria-hidden="true"
+                  className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-[color:var(--sup)] font-display text-2xl font-extrabold text-verde-dark ring-2 ring-[color:var(--linea)]"
+                >
+                  {persona.nombre
+                    .split(" ")
+                    .map((p) => p[0])
+                    .slice(0, 2)
+                    .join("")}
+                </span>
+              )}
+              <div>
+                <h3 className={cn("font-display text-xl font-extrabold", t.tinta)}>{persona.nombre}</h3>
+                <p className="font-display text-sm font-bold text-verde-dark">{persona.rol}</p>
+                <p className={cn("mt-1.5 leading-relaxed", t.suave)}>{persona.texto}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

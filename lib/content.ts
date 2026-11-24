@@ -718,9 +718,13 @@ const ExperienciaSchema = z.object({
   espacios: z.object({
     titulo: z.string(),
     intro: z.string(),
-    items: z.array(TituloTextoSchema.extend({ icono: z.enum(experienciaIconos) })).min(1),
+    items: z.array(TituloTextoSchema.extend({ icono: z.enum(experienciaIconos), foto: z.string() })).min(1),
     fechasTitulo: z.string(),
-    fechas: z.array(z.object({ mes: z.string(), motivo: z.string() })).min(1),
+    /** `fecha` es mes-día (MM-DD): la cuenta regresiva va a la próxima vez que llega. */
+    fechas: z.array(z.object({ mes: z.string(), motivo: z.string(), fecha: z.string().regex(/^\d{2}-\d{2}$/) })).min(1),
+    /** «Faltan {n}»: el número lo pone la cuenta regresiva. */
+    faltan: z.string(),
+    hoy: z.string(),
     beneficio: z.string()
   }),
   sala: z.object({
@@ -735,26 +739,19 @@ const ExperienciaSchema = z.object({
     titulo: z.string(),
     intro: z.string(),
     modos: z
-      .array(
-        z.object({
-          id: z.enum(["llevar", "avisar", "presentar"]),
-          titulo: z.string(),
-          /** Parte del título que va a color. */
-          resaltado: z.string(),
-          texto: z.string(),
-          boton: z.string()
-        })
-      )
+      .array(z.object({ id: z.enum(["llevar", "avisar", "presentar"]), titulo: z.string() }))
       .min(1),
     campos: z.object({
+      modo: z.string(),
       nombre: z.string(),
+      apellido: z.string(),
       email: z.string(),
       ciudad: z.string(),
-      ciudadAyuda: z.string(),
+      pais: z.string(),
       organizacion: z.string(),
-      emailDestino: z.string(),
-      emailDestinoAyuda: z.string()
+      motivo: z.string()
     }),
+    boton: CtaSchema,
     enviando: z.string(),
     cerrar: z.string(),
     nota: z.string(),
@@ -769,7 +766,12 @@ const ExperienciaSchema = z.object({
     rol: z.string(),
     parrafos: z.array(z.string()).min(1),
     foto: z.string(),
-    fotoAlt: z.string()
+    fotoAlt: z.string(),
+    equipoTitulo: z.string(),
+    /** Quienes crearon la experiencia. Sin foto, se muestran las iniciales. */
+    equipo: z
+      .array(z.object({ nombre: z.string(), rol: z.string(), texto: z.string(), foto: z.string().optional(), fotoAlt: z.string().optional() }))
+      .min(1)
   }),
   preguntas: z.object({
     titulo: z.string(),
