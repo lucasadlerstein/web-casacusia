@@ -13,6 +13,8 @@ import {
 import { X } from "lucide-react";
 import { useLocale } from "next-intl";
 
+import { useRouter } from "@/lib/i18n/navigation";
+
 import type { AlaParContent } from "@/lib/content";
 import { sumarseAEspera, type EsperaState } from "@/app/actions/alapar";
 import { alaParButtonClasses, type AlaParSize, type AlaParVariant } from "./AlaParButton";
@@ -91,6 +93,12 @@ function ModalBody({ modal, cerrar }: { modal: ModalContent; cerrar: () => void 
   useEffect(() => {
     montadoEn.current = Date.now();
   }, []);
+
+  // Al anotarse, la persona pasa a la página de bienvenida con la invitación a los encuentros.
+  const router = useRouter();
+  useEffect(() => {
+    if (state.ok) router.push("/alapar/gracias");
+  }, [state.ok, router]);
 
   const errorMsg =
     state.error === "undeliverable_email" || state.error === "validation_failed"

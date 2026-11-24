@@ -242,6 +242,27 @@
     },
     "cerrar": "Cerrar"
   },
+  "bienvenida": {
+    "meta": {
+      "title": "Ya estás en la lista de A la Par",
+      "description": "Mientras formamos a los primeros Pares, te invitamos a los encuentros gratuitos de Casacusia."
+    },
+    "etiqueta": "Ya estás en la lista",
+    "titulo": "Gracias por escribirnos.",
+    "parrafos": [
+      "Te queremos contar en qué momento estamos: A la Par todavía no empezó. Hoy estamos formando a las personas que van a acompañar a otras, y hasta que esa formación termine no podemos acompañarte 1 a 1.",
+      "Lo que sí podemos hacer ya es acompañarte en grupo. En los encuentros de Casacusia, presenciales y virtuales, nos juntamos personas con hipoacusia y sus familias para compartir experiencias. Son gratuitos y te invitamos a sumarte.",
+      "Cuando A la Par esté listo, te escribimos."
+    ],
+    "encuentrosTitulo": "Próximos encuentros",
+    "presencial": "Presencial",
+    "virtual": "Virtual",
+    "inscribirme": "Quiero ir",
+    "sinEncuentros": "Estamos armando las próximas fechas. Mirá el calendario para enterarte apenas se publiquen.",
+    "ctaCalendario": "Ver el calendario de encuentros",
+    "hrefCalendario": "/calendario",
+    "volver": "Volver a A la Par"
+  },
   "apoyo": {
     "logoAlt": "Acompaña BA Discapacidad",
     "logo": "/alapar/acompana-ba-blanco.png"
