@@ -780,6 +780,36 @@ const ExperienciaSchema = z.object({
     intro: z.string(),
     items: z.array(z.object({ pregunta: z.string(), respuesta: z.string() })).min(1)
   }),
+  /** La página para empresas: /experiencia-inmersiva/empresas. */
+  empresas: z.object({
+    meta: z.object({ title: z.string(), description: z.string() }),
+    nav: z.array(z.object({ href: z.string(), label: z.string() })).min(1),
+    hero: z.object({
+      etiqueta: z.string(),
+      titulo: z.string(),
+      resaltado: z.string(),
+      bajada: z.string(),
+      datos: z.array(z.object({ valor: z.string(), texto: z.string() })).min(1),
+      cta: CtaSchema,
+      ctaSecundario: CtaSchema
+    }),
+    experiencia: z.object({ rotulo: z.string(), titulo: z.string(), intro: z.string() }),
+    bloques: z
+      .array(
+        z.object({
+          id: z.string(),
+          rotulo: z.string(),
+          titulo: z.string(),
+          intro: z.string().optional(),
+          tono: z.enum(["noche", "panel", "luz"]),
+          estilo: z.enum(["tarjetas", "lista", "pasos"]),
+          items: z.array(z.object({ titulo: z.string(), texto: z.string() })).min(1)
+        })
+      )
+      .min(1),
+    nota: z.object({ titulo: z.string(), texto: z.string() }),
+    linkPrincipal: z.object({ texto: z.string(), href: z.string() })
+  }),
   cierre: z.object({
     frase: z.string(),
     cta: CtaSchema,

@@ -26,6 +26,10 @@
       {
         "href": "#sala",
         "label": "La sala"
+      },
+      {
+        "href": "/experiencia-inmersiva/empresas",
+        "label": "Para empresas"
       }
     ],
     "cta": "Vivir la experiencia"
@@ -429,6 +433,172 @@
         "respuesta": "Queremos que llegue a todo el país. Contanos tu ciudad en el formulario: así sabemos dónde hay ganas de vivirla y organizamos las funciones según la demanda."
       }
     ]
+  },
+  "empresas": {
+    "meta": {
+      "title": "Experiencia inmersiva para empresas: ¿Cómo oye quien no oye? · Casacusia",
+      "description": "Una hora para que tu equipo oiga como oye una persona con hipoacusia y converse sobre lo que no se ve: 17 minutos de experiencia a oscuras y 40 de diálogo facilitado. A beneficio de Fundación Casacusia."
+    },
+    "nav": [
+      {
+        "href": "#escenas",
+        "label": "La experiencia"
+      },
+      {
+        "href": "#por-que",
+        "label": "Por qué"
+      },
+      {
+        "href": "#trabajamos",
+        "label": "Qué trabajamos"
+      },
+      {
+        "href": "#como",
+        "label": "Cómo trabajamos"
+      },
+      {
+        "href": "#sala",
+        "label": "La sala"
+      }
+    ],
+    "hero": {
+      "etiqueta": "Experiencia inmersiva para empresas · 1 hora",
+      "titulo": "Que tu equipo oiga como oye quien no oye",
+      "resaltado": "oiga como oye quien no oye",
+      "bajada": "17 minutos a oscuras oyendo escenas de todos los días como las oye una persona con pérdida auditiva. Después, 40 minutos de conversación para mirar distinto algo que no se ve.",
+      "datos": [
+        {
+          "valor": "1 de cada 5",
+          "texto": "personas en el mundo tiene pérdida auditiva"
+        },
+        {
+          "valor": "1 de cada 20",
+          "texto": "tiene discapacidad auditiva"
+        },
+        {
+          "valor": "17 + 40",
+          "texto": "minutos de experiencia y de conversación"
+        }
+      ],
+      "cta": "Llevarla a mi empresa",
+      "ctaSecundario": "Ver cómo se oye"
+    },
+    "experiencia": {
+      "rotulo": "La experiencia",
+      "titulo": "Cuatro historias, una misma frase",
+      "intro": "La experiencia son cuatro escenas de cuatro personas con distintos tipos y grados de pérdida auditiva. Acá, una muestra: la misma frase, como llega con cada pérdida."
+    },
+    "bloques": [
+      {
+        "id": "por-que",
+        "rotulo": "Por qué",
+        "titulo": "Por qué tu equipo la necesita",
+        "tono": "luz",
+        "estilo": "tarjetas",
+        "intro": "La discapacidad es el ejemplo, no el tema. Lo que se pone en juego es cómo nos escuchamos.",
+        "items": [
+          {
+            "titulo": "Porque no se ve",
+            "texto": "En tu equipo, entre tus clientes o en tu familia hay personas con pérdida auditiva. Casi nunca se nota y casi nunca se cuenta."
+          },
+          {
+            "titulo": "Porque leerlo no alcanza",
+            "texto": "Una capacitación explica. Esta experiencia hace oír: el cuerpo entiende antes que la cabeza."
+          },
+          {
+            "titulo": "Porque abre conversaciones",
+            "texto": "Sobre escucha, comunicación y vínculos: charlas que en el día a día no aparecen."
+          },
+          {
+            "titulo": "Porque la inclusión no es caridad",
+            "texto": "Es sentarnos en la misma mesa y cambiar cómo nos miramos. No hace falta tener hipoacusia para que esto te toque."
+          }
+        ]
+      },
+      {
+        "id": "trabajamos",
+        "rotulo": "Qué trabajamos",
+        "titulo": "Lo que se pone sobre la mesa",
+        "tono": "noche",
+        "estilo": "lista",
+        "items": [
+          {
+            "titulo": "Escucha en equipos",
+            "texto": "Cómo hablamos, cómo nos aseguramos de que el otro entendió y qué hacemos cuando no."
+          },
+          {
+            "titulo": "Comunicación clara",
+            "texto": "Reuniones, llamadas, espacios ruidosos: qué hace que alguien quede afuera sin que nadie lo note."
+          },
+          {
+            "titulo": "Pedir y ofrecer ayuda",
+            "texto": "Por qué cuesta tanto decir «no te escuché» y cómo hacer que pedir sea normal."
+          },
+          {
+            "titulo": "Atención y accesibilidad",
+            "texto": "Para equipos que atienden al público, diseñan productos o arman espacios: mirar con otros oídos lo que ya hacemos."
+          },
+          {
+            "titulo": "Vínculos internos",
+            "texto": "Qué le pasa a un equipo cuando alguien no oye bien, y qué cambia cuando se puede hablar de eso."
+          }
+        ]
+      },
+      {
+        "id": "aprendizajes",
+        "rotulo": "Qué se llevan",
+        "titulo": "Lo que queda después",
+        "tono": "panel",
+        "estilo": "tarjetas",
+        "items": [
+          {
+            "titulo": "Una experiencia en el cuerpo",
+            "texto": "Haber oído, aunque sea 17 minutos, como oye alguien con pérdida auditiva."
+          },
+          {
+            "titulo": "Gestos concretos",
+            "texto": "Acuerdos simples para que nadie quede afuera de la conversación: en reuniones, llamadas y el día a día."
+          },
+          {
+            "titulo": "Una reflexión que queda",
+            "texto": "Cada persona cierra con un compromiso propio, escrito, sobre qué va a hacer distinto."
+          },
+          {
+            "titulo": "Una puerta abierta",
+            "texto": "Un tema que antes no se hablaba, y que después se puede seguir conversando."
+          }
+        ]
+      },
+      {
+        "id": "como",
+        "rotulo": "Cómo trabajamos",
+        "titulo": "De la primera charla al después",
+        "tono": "panel",
+        "estilo": "pasos",
+        "items": [
+          {
+            "titulo": "Alinear",
+            "texto": "Una o dos reuniones para conocer al equipo, el objetivo y el tono. La conversación de después se arma a partir de eso."
+          },
+          {
+            "titulo": "Vivir y conversar",
+            "texto": "La función: 17 minutos de experiencia a oscuras y 40 de diálogo facilitado, donde hablan quienes oyen y quienes no."
+          },
+          {
+            "titulo": "Acompañar",
+            "texto": "Si quieren, unas semanas después volvemos a juntarnos para ver qué se sostuvo y qué se aplicó."
+          }
+        ]
+      }
+    ],
+    "nota": {
+      "titulo": "Diciembre se llena rápido",
+      "texto": "Si la querés para el Mes de la discapacidad, escribinos en septiembre. Para marzo, el Mes de la audición, escribinos antes de febrero."
+    },
+    "linkPrincipal": {
+      "texto": "¿Querés conocer la experiencia sin pensar en tu empresa? Mirá la página de la experiencia.",
+      "href": "/experiencia-inmersiva"
+    }
   },
   "cierre": {
     "frase": "Después de oír así, no escuchás igual.",
