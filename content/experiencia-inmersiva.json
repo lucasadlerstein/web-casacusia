@@ -370,6 +370,18 @@
     ],
     "foto": "/experiencia/lucas-facilita.jpg",
     "fotoAlt": "Lucas Adlerstein hablando con un micrófono frente a una pantalla, durante una charla.",
+    "redes": [
+      {
+        "red": "instagram",
+        "etiqueta": "@hipoacusico · Creador de contenido",
+        "href": "https://instagram.com/hipoacusico"
+      },
+      {
+        "red": "linkedin",
+        "etiqueta": "LinkedIn",
+        "href": "https://www.linkedin.com/in/lucasadlerstein"
+      }
+    ],
     "equipoTitulo": "Quienes la crearon",
     "equipo": [
       {

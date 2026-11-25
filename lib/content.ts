@@ -767,6 +767,8 @@ const ExperienciaSchema = z.object({
     parrafos: z.array(z.string()).min(1),
     foto: z.string(),
     fotoAlt: z.string(),
+    /** Redes de Lucas: Instagram (creación de contenido) y LinkedIn. */
+    redes: z.array(z.object({ red: z.enum(["instagram", "linkedin"]), etiqueta: z.string(), href: z.string().url() })),
     equipoTitulo: z.string(),
     /** Quienes crearon la experiencia. Sin foto, se muestran las iniciales. */
     equipo: z

@@ -278,6 +278,26 @@ export function Facilita({ facilita }: { facilita: C["facilita"] }) {
               {p}
             </p>
           ))}
+          <ul className="mt-7 flex flex-wrap gap-3">
+            {facilita.redes.map((r) => (
+              <li key={r.red}>
+                <a
+                  href={r.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "inline-flex min-h-[44px] items-center gap-2 rounded-full border px-4 font-display text-sm font-bold transition-colors hover:bg-[color:var(--sup)] focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-amarillo",
+                    t.lineaFuerte,
+                    t.tinta
+                  )}
+                >
+                  <RedIcono red={r.red} />
+                  {r.etiqueta}
+                  <span className="sr-only"> (se abre en otra pestaña)</span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className="container mt-16">
@@ -315,6 +335,25 @@ export function Facilita({ facilita }: { facilita: C["facilita"] }) {
         </ul>
       </div>
     </section>
+  );
+}
+
+function RedIcono({ red }: { red: "instagram" | "linkedin" }) {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+      {red === "instagram" ? (
+        <>
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" />
+        </>
+      ) : (
+        <>
+          <rect x="3" y="3" width="18" height="18" rx="3" />
+          <path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" />
+        </>
+      )}
+    </svg>
   );
 }
 
