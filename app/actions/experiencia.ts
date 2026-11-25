@@ -40,8 +40,10 @@ const opcional = (max: number) => z.string().trim().max(max).optional().or(z.lit
 const schema = z.object({
   modo: z.enum(["llevar", "avisar", "presentar"]),
   nombre: z.string().trim().min(1).max(120),
+  apellido: opcional(120),
   email: z.string().trim().email().max(200),
   ciudad: z.string().trim().min(1).max(120),
+  pais: opcional(80),
   tipoEspacio: opcional(80),
   organizacion: opcional(160),
   emailDestino: z.string().trim().email().max(200).optional().or(z.literal("")),
@@ -101,8 +103,10 @@ async function guardar(data: Datos): Promise<boolean> {
       body: JSON.stringify({
         modo: data.modo,
         nombre: data.nombre,
+        apellido: data.apellido || null,
         email: data.email.toLowerCase(),
         ciudad: data.ciudad,
+        pais: data.pais || null,
         tipo_espacio: data.tipoEspacio || null,
         organizacion: data.organizacion || null,
         email_destino: data.emailDestino ? data.emailDestino.toLowerCase() : null,
@@ -133,14 +137,13 @@ async function avisarEquipo(data: Datos): Promise<void> {
   const text = [
     `${MODO_LABEL[data.modo]} — Experiencia inmersiva «¿Cómo oye quien no oye?»`,
     "",
-    `Nombre: ${data.nombre}`,
+    `Nombre: ${data.nombre} ${data.apellido ?? ""}`.trim(),
     `Email: ${data.email}`,
-    `Ciudad: ${data.ciudad}`,
-    ...(data.modo === "llevar" ? [`Tipo de espacio: ${dato(data.tipoEspacio)}`] : []),
-    ...(data.modo !== "avisar" ? [`Organización: ${dato(data.organizacion)}`] : []),
-    ...(data.modo === "presentar" ? [`Email del área a la que quiere que llegue: ${dato(data.emailDestino)}`] : []),
-    `Vínculo con la hipoacusia: ${dato(data.vinculo)}`,
-    ...(data.modo !== "avisar" ? ["", "Por qué quiere llevarla:", dato(data.motivo)] : []),
+    `Ciudad: ${data.ciudad}${data.pais ? `, ${data.pais}` : ""}`,
+    `Organización: ${dato(data.organizacion)}`,
+    "",
+    "Por qué le interesa:",
+    dato(data.motivo),
     "",
     "Todas las anotaciones están en Supabase, tabla experiencia_interesados."
   ].join("\n");
@@ -152,7 +155,7 @@ async function avisarEquipo(data: Datos): Promise<void> {
         from: FROM_EMAIL,
         to: [NOTIFY_TO],
         reply_to: data.email,
-        subject: `[Experiencia inmersiva] ${MODO_LABEL[data.modo]}: ${data.nombre} (${data.ciudad})`,
+        subject: `[Experiencia inmersiva] ${MODO_LABEL[data.modo]}: ${data.nombre} ${data.apellido ?? ""} (${data.ciudad})`,
         text
       })
     });

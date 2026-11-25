@@ -718,9 +718,13 @@ const ExperienciaSchema = z.object({
   espacios: z.object({
     titulo: z.string(),
     intro: z.string(),
-    items: z.array(TituloTextoSchema.extend({ icono: z.enum(experienciaIconos) })).min(1),
+    items: z.array(TituloTextoSchema.extend({ icono: z.enum(experienciaIconos), foto: z.string() })).min(1),
     fechasTitulo: z.string(),
-    fechas: z.array(z.object({ mes: z.string(), motivo: z.string() })).min(1),
+    /** `fecha` es mes-día (MM-DD): la cuenta regresiva va a la próxima vez que llega. */
+    fechas: z.array(z.object({ mes: z.string(), motivo: z.string(), fecha: z.string().regex(/^\d{2}-\d{2}$/) })).min(1),
+    /** «Faltan {n}»: el número lo pone la cuenta regresiva. */
+    faltan: z.string(),
+    hoy: z.string(),
     beneficio: z.string()
   }),
   sala: z.object({
@@ -735,32 +739,19 @@ const ExperienciaSchema = z.object({
     titulo: z.string(),
     intro: z.string(),
     modos: z
-      .array(
-        z.object({
-          id: z.enum(["llevar", "avisar", "presentar"]),
-          titulo: z.string(),
-          /** Parte del título que va a color. */
-          resaltado: z.string(),
-          texto: z.string(),
-          boton: z.string()
-        })
-      )
+      .array(z.object({ id: z.enum(["llevar", "avisar", "presentar"]), titulo: z.string() }))
       .min(1),
     campos: z.object({
+      modo: z.string(),
       nombre: z.string(),
+      apellido: z.string(),
       email: z.string(),
       ciudad: z.string(),
-      ciudadAyuda: z.string(),
-      tipoEspacio: z.string(),
-      tiposEspacio: z.array(z.string()).min(1),
+      pais: z.string(),
       organizacion: z.string(),
-      emailDestino: z.string(),
-      emailDestinoAyuda: z.string(),
-      vinculo: z.string(),
-      vinculos: z.array(z.string()).min(1),
-      motivo: z.string(),
-      elegir: z.string()
+      motivo: z.string()
     }),
+    boton: CtaSchema,
     enviando: z.string(),
     cerrar: z.string(),
     nota: z.string(),
@@ -775,12 +766,49 @@ const ExperienciaSchema = z.object({
     rol: z.string(),
     parrafos: z.array(z.string()).min(1),
     foto: z.string(),
-    fotoAlt: z.string()
+    fotoAlt: z.string(),
+    /** Redes de Lucas: Instagram (creación de contenido) y LinkedIn. */
+    redes: z.array(z.object({ red: z.enum(["instagram", "linkedin"]), etiqueta: z.string(), href: z.string().url() })),
+    equipoTitulo: z.string(),
+    /** Quienes crearon la experiencia. Sin foto, se muestran las iniciales. */
+    equipo: z
+      .array(z.object({ nombre: z.string(), rol: z.string(), texto: z.string(), foto: z.string().optional(), fotoAlt: z.string().optional() }))
+      .min(1)
   }),
   preguntas: z.object({
     titulo: z.string(),
     intro: z.string(),
     items: z.array(z.object({ pregunta: z.string(), respuesta: z.string() })).min(1)
+  }),
+  /** La página para empresas: /experiencia-inmersiva/empresas. */
+  empresas: z.object({
+    meta: z.object({ title: z.string(), description: z.string() }),
+    nav: z.array(z.object({ href: z.string(), label: z.string() })).min(1),
+    hero: z.object({
+      etiqueta: z.string(),
+      titulo: z.string(),
+      resaltado: z.string(),
+      bajada: z.string(),
+      datos: z.array(z.object({ valor: z.string(), texto: z.string() })).min(1),
+      cta: CtaSchema,
+      ctaSecundario: CtaSchema
+    }),
+    experiencia: z.object({ rotulo: z.string(), titulo: z.string(), intro: z.string() }),
+    bloques: z
+      .array(
+        z.object({
+          id: z.string(),
+          rotulo: z.string(),
+          titulo: z.string(),
+          intro: z.string().optional(),
+          tono: z.enum(["noche", "panel", "luz"]),
+          estilo: z.enum(["tarjetas", "lista", "pasos"]),
+          items: z.array(z.object({ titulo: z.string(), texto: z.string() })).min(1)
+        })
+      )
+      .min(1),
+    nota: z.object({ titulo: z.string(), texto: z.string() }),
+    linkPrincipal: z.object({ texto: z.string(), href: z.string() })
   }),
   cierre: z.object({
     frase: z.string(),

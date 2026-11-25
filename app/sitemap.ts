@@ -29,7 +29,8 @@ const staticRoutes: { path: string; priority: number; changefreq: MetadataRoute.
   { path: "/sumate/proyectos-juntos", priority: 0.7, changefreq: "monthly" },
   { path: "/comunidad", priority: 0.9, changefreq: "monthly" },
   { path: "/alapar", priority: 0.9, changefreq: "monthly" },
-  { path: "/experiencia-inmersiva", priority: 0.9, changefreq: "monthly" }
+  { path: "/experiencia-inmersiva", priority: 0.9, changefreq: "monthly" },
+  { path: "/experiencia-inmersiva/empresas", priority: 0.8, changefreq: "monthly" }
 ];
 
 function urlFor(path: string, locale: string) {
