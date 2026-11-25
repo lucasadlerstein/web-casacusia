@@ -5,6 +5,7 @@ import { buildMetadata } from "@/lib/seo";
 import { getExperiencia } from "@/lib/content";
 import type { Locale } from "@/lib/i18n/config";
 import { Viaje } from "@/components/experiencia/Viaje";
+import { EscenaPlaca } from "@/components/experiencia/EscenaPlaca";
 import { Cierre, Espacios, Facilita, Formato, Muestra, Sala, TopBar, Voces } from "@/components/experiencia/Secciones";
 import { Sumate, SumateDialogo } from "@/components/experiencia/Sumate";
 
@@ -63,7 +64,7 @@ export default async function ExperienciaPage({ params }: { params: Promise<{ lo
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <TopBar nav={c.nav} />
       <SumateDialogo sumate={c.sumate} url={`${SITE_URL}/experiencia-inmersiva`} preguntas={c.preguntas} />
-      <Viaje hero={c.hero} viaje={c.viaje} />
+      <Viaje hero={c.hero} viaje={c.viaje} placa={<EscenaPlaca viaje={c.viaje} />} />
       <Muestra muestra={c.muestra} />
       <Voces voces={c.voces} />
       <Formato formato={c.formato} />

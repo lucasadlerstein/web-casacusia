@@ -678,6 +678,15 @@ const ExperienciaSchema = z.object({
         })
       )
       .min(1),
+    /** La placa de la página principal: una frase corta que se pierde y, al final, lo que se entendió. */
+    placa: z.object({
+      frase: z.string(),
+      entendida: z.string(),
+      etiquetaEntendida: z.string(),
+      tituloEntendida: z.string(),
+      textoEntendida: z.string(),
+      descripcionEntendida: z.string()
+    }),
     rumiacion: z.object({
       lugar: z.string(),
       titulo: z.string(),

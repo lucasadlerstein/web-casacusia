@@ -62,15 +62,24 @@ function Panel({
   );
 }
 
-export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje: ExperienciaContent["viaje"] }) {
+export function Viaje({
+  hero,
+  viaje,
+  placa
+}: {
+  hero: ExperienciaContent["hero"];
+  viaje: ExperienciaContent["viaje"];
+  /** Si viene, las estaciones se ven en esta placa en vez de una debajo de la otra. */
+  placa?: ReactNode;
+}) {
   const total = viaje.estaciones.length + 2;
-  const numero = (n: number) => `${String(n).padStart(2, "0")} / ${String(total).padStart(2, "0")}`;
+  const numero = (n: number) => (placa ? "" : `${String(n).padStart(2, "0")} / ${String(total).padStart(2, "0")}`);
 
   return (
     <section data-viaje="" className="group/viaje relative">
       <div className="pointer-events-none sticky top-0 h-[100svh] overflow-hidden" aria-hidden="true">
         <ViajeFondo />
-        <Cabeza />
+        {!placa && <Cabeza />}
       </div>
 
       <div className="relative -mt-[100svh]">
@@ -95,11 +104,17 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
           </div>
         </Panel>
 
-        {viaje.estaciones.map((e, i) => (
+        {placa && (
+          <div id="sonido" data-estacion="" data-acento="crema" data-efecto="rumia" className="scroll-mt-28 py-16 md:scroll-mt-20 md:py-24">
+            <div className="container">{placa}</div>
+          </div>
+        )}
+
+        {!placa && viaje.estaciones.map((e, i) => (
           <Panel key={e.id} id={e.id} acento={e.acento} efecto={e.efecto} cabeza={e.cabeza}>
             <Rotulo>
               <span className="text-[color:var(--acento)]">{numero(i + 1)}</span>
-              <span className="mx-2 text-exp-crema/30">·</span>
+              {!placa && <span className="mx-2 text-exp-crema/30">·</span>}
               {e.lugar}
             </Rotulo>
             <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.02em] text-exp-crema sm:text-5xl md:text-6xl">
@@ -119,7 +134,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
         <Panel id="por-dentro" acento="crema" efecto="rumia">
           <Rotulo>
             <span className="text-exp-crema">{numero(total - 1)}</span>
-            <span className="mx-2 text-exp-crema/30">·</span>
+            {!placa && <span className="mx-2 text-exp-crema/30">·</span>}
             {viaje.rumiacion.lugar}
           </Rotulo>
           <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.02em] text-exp-crema sm:text-5xl md:text-6xl">
@@ -143,7 +158,7 @@ export function Viaje({ hero, viaje }: { hero: ExperienciaContent["hero"]; viaje
         <Panel id="oirlo" acento="rosa" efecto="latido">
           <Rotulo>
             <span className="text-[color:var(--acento)]">{numero(total)}</span>
-            <span className="mx-2 text-exp-crema/30">·</span>
+            {!placa && <span className="mx-2 text-exp-crema/30">·</span>}
             {viaje.llegada.lugar}
           </Rotulo>
           <h2 className="mt-4 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.02em] text-exp-crema sm:text-5xl md:text-6xl">

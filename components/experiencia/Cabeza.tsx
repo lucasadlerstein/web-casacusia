@@ -42,60 +42,69 @@ export function Cabeza() {
     return () => obs.disconnect();
   }, []);
 
-  const o = OREJAS[estado.efecto] ?? OREJAS.clara!;
-  const transicion = "transition-[opacity,transform] duration-700 ease-out";
-
   return (
     <div
       className="absolute right-4 top-28 w-20 md:top-24 md:w-28 lg:right-[9%] lg:top-1/2 lg:w-[min(20vw,260px)] lg:-translate-y-1/2"
       data-efecto={estado.efecto}
     >
-      <svg viewBox="0 0 200 220" className="h-auto w-full" fill="none" stroke="rgb(var(--exp-crema-rgb) / 0.8)" strokeWidth={2.5}>
-        {/* Las ondas que llegan, de los dos lados. */}
-        <g style={{ opacity: o.ondas }} className={transicion}>
-          <g className="motion-safe:animate-exp-onda" style={{ transformOrigin: "0px 110px" }}>
-            <path d="M14 92a30 30 0 0 1 0 36" />
-            <path d="M4 82a46 46 0 0 1 0 56" strokeOpacity={0.5} />
-          </g>
-        </g>
-        {/* La cabeza: contorno simple, de frente. */}
-        <path d="M100 18c-38 0-62 30-62 70 0 44 24 84 62 84s62-40 62-84c0-40-24-70-62-70z" />
-        <path d="M78 176c0 16-4 26-12 34M122 176c0 16 4 26 12 34" strokeOpacity={0.5} />
-        {/* Ojos cerrados: en la sala está oscuro, se escucha. */}
-        <path d="M74 96q10 6 20 0M106 96q10 6 20 0" strokeOpacity={0.7} />
-        {/* Oreja izquierda */}
-        <g style={{ opacity: o.izq }} className={transicion}>
-          <path d="M40 92c-10-2-18 6-18 18s8 22 18 20" fill="rgb(var(--exp-crema-rgb) / 0.25)" />
-          <path d="M28 104c3-4 8-4 10 0s0 10-4 12" strokeOpacity={0.6} />
-          <circle cx="30" cy="110" r="5" fill="rgb(var(--exp-noche-rgb))" style={{ opacity: o.tapon }} className={transicion} />
-        </g>
-        {/* Oreja derecha */}
-        <g style={{ opacity: o.der }} className={transicion}>
-          <path d="M160 92c10-2 18 6 18 18s-8 22-18 20" fill="rgb(var(--exp-crema-rgb) / 0.25)" />
-          <path d="M172 104c-3-4-8-4-10 0s0 10 4 12" strokeOpacity={0.6} />
-          <circle cx="170" cy="110" r="5" fill="rgb(var(--exp-noche-rgb))" style={{ opacity: o.tapon }} className={transicion} />
-        </g>
-        {/* Pensamientos, solo en «por dentro». */}
-        <g style={{ opacity: estado.efecto === "rumia" ? 1 : 0 }} className={transicion} strokeOpacity={0.7}>
-          <circle cx="150" cy="30" r="4" /><circle cx="166" cy="16" r="7" /><circle cx="186" cy="0" r="10" />
-        </g>
-      </svg>
-      {/* Lo que llega a cada oído, sin números: la pérdida auditiva no se mide así de simple. */}
-      <div className="mt-2 hidden lg:block">
-        <div className="flex items-center justify-between gap-3">
-          <Barra nivel={o.izq} recortada={estado.efecto === "recortada"} />
-          <Barra nivel={o.der} recortada={estado.efecto === "recortada"} />
-        </div>
-        <p
-          className={cn(
-            "mt-3 text-center font-mono text-[0.7rem] uppercase tracking-[0.2em] text-exp-crema/60 transition-opacity duration-500",
-            estado.leyenda ? "opacity-100" : "opacity-0"
-          )}
-        >
-          {estado.leyenda || "\u00a0"}
-        </p>
-      </div>
+      <CabezaDibujo efecto={estado.efecto} leyenda={estado.leyenda} />
     </div>
+  );
+}
+
+/** El dibujo de la cabeza, sus orejas y lo que llega a cada oído, según el efecto. */
+export function CabezaDibujo({ efecto, leyenda, siempreBarras = false }: { efecto: string; leyenda: string; siempreBarras?: boolean }) {
+  const estado = { efecto, leyenda };
+  const o = OREJAS[efecto] ?? OREJAS.clara!;
+  const transicion = "transition-[opacity,transform] duration-700 ease-out";
+  return (
+    <>
+      <svg viewBox="0 0 200 220" className="h-auto w-full" fill="none" stroke="rgb(var(--exp-crema-rgb) / 0.8)" strokeWidth={2.5}>
+      {/* Las ondas que llegan, de los dos lados. */}
+      <g style={{ opacity: o.ondas }} className={transicion}>
+        <g className="motion-safe:animate-exp-onda" style={{ transformOrigin: "0px 110px" }}>
+          <path d="M14 92a30 30 0 0 1 0 36" />
+          <path d="M4 82a46 46 0 0 1 0 56" strokeOpacity={0.5} />
+        </g>
+      </g>
+      {/* La cabeza: contorno simple, de frente. */}
+      <path d="M100 18c-38 0-62 30-62 70 0 44 24 84 62 84s62-40 62-84c0-40-24-70-62-70z" />
+      <path d="M78 176c0 16-4 26-12 34M122 176c0 16 4 26 12 34" strokeOpacity={0.5} />
+      {/* Ojos cerrados: en la sala está oscuro, se escucha. */}
+      <path d="M74 96q10 6 20 0M106 96q10 6 20 0" strokeOpacity={0.7} />
+      {/* Oreja izquierda */}
+      <g style={{ opacity: o.izq }} className={transicion}>
+        <path d="M40 92c-10-2-18 6-18 18s8 22 18 20" fill="rgb(var(--exp-crema-rgb) / 0.25)" />
+        <path d="M28 104c3-4 8-4 10 0s0 10-4 12" strokeOpacity={0.6} />
+        <circle cx="30" cy="110" r="5" fill="rgb(var(--exp-noche-rgb))" style={{ opacity: o.tapon }} className={transicion} />
+      </g>
+      {/* Oreja derecha */}
+      <g style={{ opacity: o.der }} className={transicion}>
+        <path d="M160 92c10-2 18 6 18 18s-8 22-18 20" fill="rgb(var(--exp-crema-rgb) / 0.25)" />
+        <path d="M172 104c-3-4-8-4-10 0s0 10 4 12" strokeOpacity={0.6} />
+        <circle cx="170" cy="110" r="5" fill="rgb(var(--exp-noche-rgb))" style={{ opacity: o.tapon }} className={transicion} />
+      </g>
+      {/* Pensamientos, solo en «por dentro». */}
+      <g style={{ opacity: estado.efecto === "rumia" ? 1 : 0 }} className={transicion} strokeOpacity={0.7}>
+        <circle cx="150" cy="30" r="4" /><circle cx="166" cy="16" r="7" /><circle cx="186" cy="0" r="10" />
+      </g>
+    </svg>
+    {/* Lo que llega a cada oído, sin números: la pérdida auditiva no se mide así de simple. */}
+    <div className={cn("mt-2", siempreBarras ? "block" : "hidden lg:block")}>
+      <div className="flex items-center justify-between gap-3">
+        <Barra nivel={o.izq} recortada={estado.efecto === "recortada"} />
+        <Barra nivel={o.der} recortada={estado.efecto === "recortada"} />
+      </div>
+      <p
+        className={cn(
+          "mt-3 text-center font-mono text-[0.7rem] uppercase tracking-[0.2em] text-exp-crema/60 transition-opacity duration-500",
+          estado.leyenda ? "opacity-100" : "opacity-0"
+        )}
+      >
+        {estado.leyenda || "\u00a0"}
+      </p>
+    </div>
+    </>
   );
 }
 

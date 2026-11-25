@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils/cn";
 /** Consonantes agudas, las primeras que se pierden en una pérdida neurosensorial. */
 const AGUDAS = new Set(["p", "t", "k", "c", "q", "f", "s", "z"]);
 
-function esAguda(frase: string, i: number): boolean {
+export function esAguda(frase: string, i: number): boolean {
   const letra = (frase[i] ?? "").toLowerCase();
   if (AGUDAS.has(letra)) return true;
   // La "h" de "ch" y la "u" muda de "qu" se van con su consonante.
@@ -29,16 +29,19 @@ export function Frase({
   frase,
   efecto,
   etiqueta,
-  descripcion
+  descripcion,
+  chica = false
 }: {
   frase: string;
   efecto: ExperienciaEfecto;
   etiqueta: string;
   descripcion: string;
+  /** Versión para tarjetas: letra más chica y sin el margen grande. */
+  chica?: boolean;
 }) {
   const recorta = efecto === "recortada" || efecto === "lejana";
   return (
-    <figure className="my-8 border-l-2 border-[color:var(--acento)] pl-5 md:my-10 md:pl-7">
+    <figure className={cn("border-l-2 border-[color:var(--acento)]", chica ? "my-5 pl-4" : "my-8 pl-5 md:my-10 md:pl-7")}>
       <figcaption className="font-mono text-[0.68rem] uppercase tracking-[0.22em] text-[color:var(--acento)]">
         {etiqueta}
       </figcaption>
@@ -49,7 +52,8 @@ export function Frase({
         data-frase=""
         data-efecto={efecto}
         className={cn(
-          "mt-3 font-display text-[1.7rem] font-bold leading-[1.2] tracking-[-0.01em] text-exp-crema sm:text-4xl md:text-[2.75rem]",
+          "mt-3 font-display font-bold leading-[1.2] tracking-[-0.01em] text-exp-crema",
+          chica ? "text-xl md:text-2xl" : "text-[1.7rem] sm:text-4xl md:text-[2.75rem]",
           "group-data-[letras=on]/viaje:invisible",
           CONTENEDOR[efecto]
         )}

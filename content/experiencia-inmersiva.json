@@ -103,6 +103,14 @@
         "cabeza": "Los dos oyen poco"
       }
     ],
+    "placa": {
+      "frase": "Estoy arruinado.",
+      "entendida": "¿Muero por helado?",
+      "etiquetaEntendida": "Lo que llegó",
+      "tituloEntendida": "No es que no se oye. Se oye otra cosa.",
+      "textoEntendida": "Un amigo le dijo a Lucas «estoy arruinado». Lucas entendió «muero por helado» y le contestó «¡yo también!». El cerebro completa lo que falta con lo que puede, y lo entrega con total seguridad.",
+      "descripcionEntendida": "La frase «Estoy arruinado» se transforma en «¿Muero por helado?»."
+    },
     "rumiacion": {
       "lugar": "La cabeza",
       "titulo": "Y mientras tanto, por dentro",
