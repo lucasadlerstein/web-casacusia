@@ -34,21 +34,7 @@ function estiloLetra(efecto: ExperienciaEfecto, aguda: boolean, posicion: number
 
 /** Prueba: una sola placa grande que va pasando por cada pérdida. */
 export function EscenaPlaca({ viaje }: { viaje: Viaje }) {
-  const placa = viaje.placa;
-  // Las cinco escenas y, al final, lo que se entendió.
-  const escenas = [
-    ...viaje.estaciones,
-    {
-      id: "entendida",
-      lugar: placa.etiquetaEntendida,
-      titulo: placa.tituloEntendida,
-      efecto: "clara" as ExperienciaEfecto,
-      acento: "amarillo" as const,
-      texto: placa.textoEntendida,
-      descripcionAccesible: placa.descripcionEntendida,
-      cabeza: "Se completa con otra cosa"
-    }
-  ];
+  const escenas = viaje.estaciones;
   const [indice, setIndice] = useState(0);
   const [pausa, setPausa] = useState(false);
   const [quieto, setQuieto] = useState(false);
@@ -65,8 +51,7 @@ export function EscenaPlaca({ viaje }: { viaje: Viaje }) {
   }, [indice, pausa, quieto, escenas.length]);
 
   const e = escenas[indice]!;
-  const entendida = e.id === "entendida";
-  const frase = placa.frase;
+  const frase = viaje.frase;
   // Las letras se animan de a una, pero agrupadas por palabra para que ninguna se corte al final de la línea.
   const enPalabras = (texto: string) =>
     texto.split(" ").reduce<{ texto: string; desde: number }[]>((acc, t) => {
@@ -101,23 +86,9 @@ export function EscenaPlaca({ viaje }: { viaje: Viaje }) {
             {e.lugar}
           </p>
 
-          {/* La frase, enorme y quieta: lo que se mueve es cuánto llega de cada letra.
-              Al final, se apaga y en su lugar aparece lo que se entendió. */}
-          <div aria-hidden="true" className="relative mt-6 min-h-[2.5em] font-display text-[2.4rem] font-bold leading-[1.12] tracking-[-0.015em] text-exp-crema sm:text-6xl lg:text-[4.5rem]">
-            <FraseLetras
-              texto={frase}
-              estilo={(i, aguda) =>
-                entendida ? { opacity: 0, filter: "blur(6px)", transform: "translateY(-0.15em)" } : estiloLetra(e.efecto, aguda, i / frase.length)
-              }
-              enPalabras={enPalabras}
-            />
-            <FraseLetras
-              texto={placa.entendida}
-              className="absolute inset-0 text-amarillo"
-              estilo={() => (entendida ? { opacity: 1, filter: "blur(0px)", transform: "none" } : { opacity: 0, filter: "blur(6px)", transform: "translateY(0.15em)" })}
-              enPalabras={enPalabras}
-              demora={entendida ? 500 : 0}
-            />
+          {/* La frase, enorme y quieta: lo que se mueve es cuánto llega de cada letra. */}
+          <div aria-hidden="true" className="mt-6 min-h-[2.5em] font-display text-[2.1rem] font-bold leading-[1.15] tracking-[-0.015em] text-exp-crema sm:text-5xl lg:text-[3.6rem]">
+            <FraseLetras texto={frase} estilo={(i, aguda) => estiloLetra(e.efecto, aguda, i / frase.length)} enPalabras={enPalabras} />
           </div>
           <p className="sr-only" aria-live="polite">
             {e.titulo}. «{frase}» {e.descripcionAccesible}
@@ -128,12 +99,12 @@ export function EscenaPlaca({ viaje }: { viaje: Viaje }) {
         </div>
 
         <div className="mx-auto w-28 sm:w-36 lg:mx-0 lg:w-full lg:self-center" aria-hidden="true">
-          <CabezaDibujo efecto={entendida ? "lejana" : e.efecto} leyenda={e.cabeza ?? ""} siempreBarras />
+          <CabezaDibujo efecto={e.efecto} leyenda={e.cabeza ?? ""} siempreBarras />
         </div>
       </div>
 
       {/* Las escenas como pestañas: la activa se va llenando hasta pasar a la próxima. */}
-      <div role="tablist" aria-label="Escenas" className="relative grid grid-cols-6 border-t border-exp-crema/10">
+      <div role="tablist" aria-label="Escenas" className="relative grid grid-cols-5 border-t border-exp-crema/10">
         {escenas.map((x, i) => {
           const activa = i === indice;
           return (
@@ -152,7 +123,7 @@ export function EscenaPlaca({ viaje }: { viaje: Viaje }) {
             >
               <span className="relative z-10 sm:hidden">{String(i + 1).padStart(2, "0")}</span>
               <span className="relative z-10 max-sm:hidden">
-                {x.id === "entendida" ? "Lo que llegó" : x.efecto === "clara" ? "Sin pérdida" : x.titulo.replace("Sordera ", "")}
+                {x.efecto === "clara" ? "Sin pérdida" : x.titulo.replace("Sordera ", "")}
               </span>
               <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-[3px] bg-exp-crema/10" />
               {activa && (
