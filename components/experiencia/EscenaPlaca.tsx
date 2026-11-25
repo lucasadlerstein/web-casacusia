@@ -11,6 +11,9 @@ type Viaje = ExperienciaContent["viaje"];
 
 const DURACION = 6500;
 
+/** Orden de la placa: de la pérdida que menos deja entender a la frase sin pérdida. */
+const ORDEN: ExperienciaEfecto[] = ["lejana", "recortada", "unLado", "atenuada", "clara"];
+
 /**
  * Cómo queda cada letra con cada pérdida. La frase nunca cambia de lugar:
  * lo que cambia es qué letras llegan, y eso se ve pasar letra por letra.
@@ -34,7 +37,8 @@ function estiloLetra(efecto: ExperienciaEfecto, aguda: boolean, posicion: number
 
 /** Prueba: una sola placa grande que va pasando por cada pérdida. */
 export function EscenaPlaca({ viaje }: { viaje: Viaje }) {
-  const escenas = viaje.estaciones;
+  // De la que menos se entiende a la que más: arranca casi sin frase y termina en la frase entera.
+  const escenas = [...viaje.estaciones].sort((a, b) => ORDEN.indexOf(a.efecto) - ORDEN.indexOf(b.efecto));
   const [indice, setIndice] = useState(0);
   const [pausa, setPausa] = useState(false);
   const [quieto, setQuieto] = useState(false);
